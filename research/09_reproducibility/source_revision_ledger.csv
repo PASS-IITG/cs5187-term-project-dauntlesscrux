@@ -1,0 +1,11 @@
+CVE,Worktree side,Worktree folder,Recorded revision/commit,Note
+CVE-2023-0215,Vulnerable,openssl-cve-2023-0215-vulnerable,cbafa34b5a057794c5c08cd4657038e1f643c1ac,Parent of the fix; verified with git (8818064ce3^)
+CVE-2023-0215,Fixed,openssl-cve-2023-0215-fixed,8818064ce3c3c0f1b740a5aaba2a987e75bfbafd,Fix commit; verified (2022-12-14)
+CVE-2022-4450,Vulnerable,openssl-cve-2022-4450-vulnerable,8e257b86e5812c6e1cfa9e8e5f5660ac7bed899d,Parent of the fix; verified with git (63bcf189be^)
+CVE-2022-4450,Fixed,openssl-cve-2022-4450-fixed,63bcf189be73a9cc1264059bed6f57974be74a83,Fix commit; verified (2022-12-13)
+CVE-2024-4741,Vulnerable,openssl-cve-2024-4741-vulnerable,ec559c2a6cca3fd4cedae5c47f2dfa38e5e24865,CORRECTED 2026-10-30: parent of the primary fix b3f0eb0a29. Part 1 wrongly used b3f0eb0a29 here
+CVE-2024-4741,Fixed,openssl-cve-2024-4741-fixed,b3f0eb0a295f58f16ba43ba99dad70d4ee5c437d,CORRECTED 2026-10-30: primary fix "Only free the read buffers if we're not using them". Part 1 wrongly used 2d05959073 here
+CVE-2024-4741,Hardening (case study),case-studies/cve-2024-4741/2d05959073-hardening,2d05959073c4bf8803401668b9df85931a08e020,Follow-on hardening commit whose parent is b3f0eb0a29; not the advisory root cause
+none (non-CVE),Vulnerable,src/tsck run_scan.sh snapshot kdf_pre,29a27cb2c5c1757831f42117871f8c59058343a9,Parent of d2217c88df; used as an extra real historical pair for Protocol B
+none (non-CVE),Fixed,src/tsck run_scan.sh snapshot kdf_post,d2217c88df6e65c756013417e5ee4f470dd12470,"various kdfs: Always reset buflen after clearing the buffer (2021-11-30)"
+none (non-CVE),Follow-up fix,not checked out,a632bfaa4ee3339749f7a6a07ab4d0abee4eaaef,"pvkkdf: Always reset buflen after clearing the buffer; direct child of d2217c88df (committed 2021-12-01)"

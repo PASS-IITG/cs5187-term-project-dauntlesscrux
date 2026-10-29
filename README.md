@@ -1,59 +1,48 @@
-# CS-5187 — Term Project
+# CS-5187 Term Project: CVE-Guided Typestate Analysis for OpenSSL
 
-This repository is your starting point for the CS-5187 term project. It has two
-parts:
+Public OpenSSL CVE fixes teach us rules about object state, ownership and cleanup. This project writes such a
+rule as data, checks it with a parser and path analysis, and looks for places that break the same convention.
 
-```
-paper/    the report, in FSE (ACM acmsmall) LaTeX format  ← write here
-src/      your code (tool, scripts, experiments, data)     ← code here
-```
+**Status (30 Oct 2026, Progress Meeting 2).** One rule family (Protocol B, output-pointer reset) works end to end on real
+OpenSSL. Protocol A (BIO chain, CVE-2023-0215) is not implemented yet. No new vulnerability has been confirmed.
+See [`reports/progress_meeting_2.md`](reports/progress_meeting_2.md) for the numbers.
 
-Your project can be in **any** area of the course: static analysis, dynamic
-analysis / testing, or software engineering more broadly (empirical studies,
-program repair, refactoring, build systems, …). The template does not assume a
-particular topic.
+## Layout
 
-## What to do
+| Path | Contents |
+|---|---|
+| `src/tsck/` | The method: `cfg.py`, `outparam.py`, `specs/outparam_reset.json`, `run_scan.sh`, `results/`, `triage.md`. See [`src/tsck/README.md`](src/tsck/README.md). |
+| `typestate_check.py`, `tests/` | Part 1 patch matcher and its regression tests. Kept as a **baseline**, not as the method. |
+| `research/` | Candidate register (8 CVEs), CVE notes, rule notes, evaluation notes, reproducibility ledger. |
+| `case-studies/` | Small file copies for case studies (CVE-2024-4741 hardening commit). |
+| `reports/` | Progress reports. |
+| `paper/` | The report in the course LaTeX template. Still to be written. |
+| `CVE-*-evidence.txt`, `CVE-2023-0215-*.txt/md` | Per-CVE evidence, including the AddressSanitizer reproduction for CVE-2023-0215. |
+| `openssl-cve-*-{vulnerable,fixed}/` | Part 1 source checkouts of the three selected CVEs. |
 
-1. **Put your code in `src/`.** Everything that produces a result or a number in
-   your paper goes there, with a note on how to build and run it. See
-   [`src/README.md`](src/README.md).
-2. **Write your report in `paper/`.** Edit the section files in
-   `paper/sections/`. Build the PDF with:
-   ```sh
-   cd paper
-   make          # builds paper/main.pdf
-   make check    # checks for leftover TODOs, banned words, undefined refs, page limit
-   ```
-3. **Address the five graded parts.** In `paper/`, each is flagged with a red
-   `FOCUS` box that says what it must contain. Write the section, then **delete
-   that `\focus{...}` line** (keep the section). The graded parts are:
+## CVEs and revision pairs (checked against OpenSSL git history)
 
-   | Part | Where |
-   |------|-------|
-   | Motivating example | `sections/introduction.tex` |
-   | Workflow | `sections/approach.tex` |
-   | Research questions | `sections/evaluation.tex` |
-   | Related work | `sections/related.tex` |
-   | Threats to validity | `sections/threats.tex` |
+| CVE | Vulnerable | Fixed | Role |
+|---|---|---|---|
+| CVE-2022-4450 (PEM) | `8e257b86e5` | `63bcf189be` | Protocol B: the motivating example |
+| CVE-2023-0215 (BIO_new_NDEF) | `cbafa34b5a` | `8818064ce3` | Protocol A: planned. Has an ASan reproduction |
+| CVE-2024-4741 (SSL_free_buffers) | `ec559c2a6c` | `b3f0eb0a29` | Case study and stated limitation: the fix is a state guard, not a code shape |
 
-4. **Finish clean.** A submittable report has **zero** red `\focus` and **zero**
-   `\todo`, and `make check` passes. Use
-   [`paper/CHECKLIST.md`](paper/CHECKLIST.md) before you submit.
+The CVE-2024-4741 pair was wrong in Part 1 and was corrected on 2026-10-30; see `CVE-2024-4741-evidence.txt`.
 
-## Rules that matter (see `paper/STYLE.md`)
-
-- Every number in the paper comes from a real run of your code in `src/` — never
-  invented or rounded from memory.
-- The motivating example must be **real**, with exact numbers.
-- Cite only papers you have verified; fabricated citations are not accepted.
-- Write in plain, simple English.
-
-## Submitting
-
-Commit both your `src/` code and your `paper/` sources (not the built PDF — it is
-gitignored). Make sure the repository builds from a clean checkout:
+## Reproduce
 
 ```sh
-cd paper && make
+pip install tree-sitter tree-sitter-c
+make check        # baseline tests + engine unit tests + triage cross-check (offline)
+make scan         # rerun the OpenSSL scans (clones github.com/openssl/openssl, writes src/tsck/results/)
 ```
+
+Requirements: Linux or WSL, Python 3, Bash, git 2.25+.
+
+## Limits
+
+- Intraprocedural analysis, release detected by name, two protocols planned (one done).
+- The rule is derived from a single CVE and validated on that pair, one further non-CVE fix, and a whole-tree scan.
+- Triage labels were assigned by the authors; no runtime tests exist for the candidates.
+- The Part 1 benchmark (16 hand-written snippets) is a unit test of the old rules, not an evaluation.

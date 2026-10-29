@@ -1,0 +1,89 @@
+================================================================================
+OPENSSL TYPESTATE ANALYSIS EVALUATION HARNESS (VERSION 2)
+================================================================================
+Executing 16 Labeled Test Cases across 3 Typestate Rules...
+
+[PASS] TC-01: CVE-2023-0215 Vulnerable (bio_ndef.c :: BIO_new_NDEF)
+      File/Func: crypto/asn1/bio_ndef.c :: BIO_new_NDEF
+      Expected: ALERT | Observed: ALERT (True Positive (TP))
+
+[PASS] TC-02: CVE-2023-0215 Fixed (bio_ndef.c :: BIO_new_NDEF)
+      File/Func: crypto/asn1/bio_ndef.c :: BIO_new_NDEF
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-03: CVE-2022-4450 Vulnerable (pem_lib.c :: PEM_read_bio_ex)
+      File/Func: crypto/pem/pem_lib.c :: PEM_read_bio_ex
+      Expected: ALERT | Observed: ALERT (True Positive (TP))
+
+[PASS] TC-04: CVE-2022-4450 Fixed (pem_lib.c :: PEM_read_bio_ex)
+      File/Func: crypto/pem/pem_lib.c :: PEM_read_bio_ex
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-05: CVE-2024-4741 Vulnerable (ssl3_buffer.c :: ssl3_release_read_buffer)
+      File/Func: ssl/record/ssl3_buffer.c :: ssl3_release_read_buffer
+      Expected: ALERT | Observed: ALERT (True Positive (TP))
+
+[PASS] TC-06: CVE-2024-4741 Fixed (ssl3_buffer.c :: ssl3_release_read_buffer)
+      File/Func: ssl/record/ssl3_buffer.c :: ssl3_release_read_buffer
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-07: Safe Control: B64_write_ASN1 (asn_mime.c)
+      File/Func: crypto/asn1/asn_mime.c :: B64_write_ASN1
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-08: Safe Control: PEM_X509_INFO_read_bio (pem_lib.c)
+      File/Func: crypto/pem/pem_lib.c :: PEM_X509_INFO_read_bio
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-09: Safe Control: ssl3_setup_read_buffer (rec_layer_s3.c)
+      File/Func: ssl/record/rec_layer_s3.c :: ssl3_setup_read_buffer
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-10: Safe Control: OSSL_DECODER_from_bio (decoder_lib.c)
+      File/Func: crypto/encode_decode/decoder_lib.c :: OSSL_DECODER_from_bio
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-11: Safe Control: CMS_dataInit (cms_smime.c)
+      File/Func: crypto/cms/cms_smime.c :: CMS_dataInit
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-12: Safe Control: acpt_state (bss_acpt.c)
+      File/Func: crypto/bio/bss_acpt.c :: acpt_state
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-13: Expanded Safe Control: PKCS12_item_decrypt_d2i (p12_decr.c)
+      File/Func: crypto/pkcs12/p12_decr.c :: PKCS12_item_decrypt_d2i
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-14: Expanded Safe Control: cms_EncryptedContent_init_bio (cms_enc.c)
+      File/Func: crypto/cms/cms_enc.c :: cms_EncryptedContent_init_bio
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-15: Non-Typestate Control: EVP_EncryptInit_ex2 (evp_enc.c)
+      File/Func: crypto/evp/evp_enc.c :: EVP_EncryptInit_ex2
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+[PASS] TC-16: Non-Typestate Control: d2i_PKCS7 (pk7_asn1.c)
+      File/Func: crypto/pkcs7/pk7_asn1.c :: d2i_PKCS7
+      Expected: NO_ALERT | Observed: NO_ALERT (True Negative (TN))
+
+================================================================================
+EVALUATION METRICS & CONFUSION MATRIX
+================================================================================
+True Positives  (TP): 3
+True Negatives  (TN): 13
+False Positives (FP): 0
+False Negatives (FN): 0
+Total Test Cases    : 16
+----------------------------------------
+Precision   : 100.0%
+Recall      : 100.0%
+Specificity : 100.0%
+F1 Score    : 100.0000
+================================================================================
+STATISTICAL CAVEAT & SCOPE LIMITATION:
+Note: 100.0% metrics on this benchmark suite represent accurate performance
+on the tested sample dataset and do NOT imply 100% general detection accuracy
+across all unannotated C codebases. Real-world C code with interprocedural
+aliasing or macro expansion requires path-sensitive symbolic analysis.
+================================================================================

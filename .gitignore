@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.bak
+*.before_rule_fix.*
+src/tsck/ossl/
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.toc
+paper/main.pdf
