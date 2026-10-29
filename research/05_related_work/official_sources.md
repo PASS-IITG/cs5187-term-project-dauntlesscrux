@@ -14,7 +14,9 @@ This is the initial primary-source list. Add research papers on typestate, stati
 
 - CVE-2023-0215: <https://github.com/openssl/openssl/commit/8818064ce3c3c0f1b740a5aaba2a987e75bfbafd>
 - CVE-2022-4450: <https://github.com/openssl/openssl/commit/63bcf189be73a9cc1264059bed6f57974be74a83>
-- CVE-2024-4741: <https://github.com/openssl/openssl/commit/2d05959073c4bf8803401668b9df85931a08e020>
+- CVE-2024-4741 (primary fix): <https://github.com/openssl/openssl/commit/b3f0eb0a295f58f16ba43ba99dad70d4ee5c437d>
+- CVE-2024-4741 (follow-on hardening, not the root cause): <https://github.com/openssl/openssl/commit/2d05959073c4bf8803401668b9df85931a08e020>
+- OpenSSL advisory dated 2024-05-28: <https://www.openssl.org/news/secadv/20240528.txt>
 
 ## Source-revision notes
 

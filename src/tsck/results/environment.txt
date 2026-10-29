@@ -1,0 +1,12 @@
+date_utc: 2026-10-29T21:38:16Z
+python: Python 3.13.18
+tree-sitter: 0.26.0 tree-sitter-c 0.24.2
+git: git version 2.43.0
+uname: Linux 6.18.44-fc-v185
+spec_sha256: 97fe5af9b77fc221e83fd3557e35f2911405dfce6678be3e104acc3661ab0fc2
+snapshot cve4450_pre: 8e257b86e5812c6e1cfa9e8e5f5660ac7bed899d c_files=1001
+snapshot cve4450_post: 63bcf189be73a9cc1264059bed6f57974be74a83 c_files=1001
+snapshot kdf_pre: 29a27cb2c5c1757831f42117871f8c59058343a9 c_files=1005
+snapshot kdf_post: d2217c88df6e65c756013417e5ee4f470dd12470 c_files=1005
+snapshot v3_0_0: 89cd17a031e022211684eb7eb41190cf1910f9fa c_files=999
+snapshot master_2026_10_30: 949fe8b5f48c4c82bff6be7fb23de473ab6945a0 c_files=1155
