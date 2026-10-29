@@ -10,3 +10,5 @@ paper/*.bbl
 paper/*.blg
 paper/*.toc
 paper/main.pdf
+
+src/tsck/.venv/

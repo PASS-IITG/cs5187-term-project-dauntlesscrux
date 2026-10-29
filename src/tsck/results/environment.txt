@@ -1,8 +1,8 @@
-date_utc: 2026-10-29T21:38:16Z
-python: Python 3.13.18
+date_utc: 2026-10-29T22:56:26Z
+python: Python 3.12.3
 tree-sitter: 0.26.0 tree-sitter-c 0.24.2
 git: git version 2.43.0
-uname: Linux 6.18.44-fc-v185
+uname: Linux 6.6.87.2-microsoft-standard-WSL2
 spec_sha256: 97fe5af9b77fc221e83fd3557e35f2911405dfce6678be3e104acc3661ab0fc2
 snapshot cve4450_pre: 8e257b86e5812c6e1cfa9e8e5f5660ac7bed899d c_files=1001
 snapshot cve4450_post: 63bcf189be73a9cc1264059bed6f57974be74a83 c_files=1001
