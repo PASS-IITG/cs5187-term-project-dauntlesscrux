@@ -1,0 +1,12 @@
+Candidate ID,Rule ID,Source File,Function,Callee,Pointer,Release Lines,Occurrence Count,Review Status
+R02-00392,02_repeated_release,doc/designs/ddd/ddd-01-conn-blocking.c,new_conn,BIO_free_all,out,63;68;75;81;89,5,pending initial review
+R02-00393,02_repeated_release,doc/designs/ddd/ddd-02-conn-nonblocking-threads.c,new_conn,BIO_free_all,out,82;89;97;105;112;121,6,pending initial review
+R02-00394,02_repeated_release,doc/designs/ddd/ddd-02-conn-nonblocking-threads.c,new_conn,free,conn,77;83;90;98;106;113;122,7,pending initial review
+R02-00395,02_repeated_release,doc/designs/ddd/ddd-02-conn-nonblocking.c,new_conn,BIO_free_all,out,82;102;110;118;125;134,6,pending initial review
+R02-00396,02_repeated_release,doc/designs/ddd/ddd-02-conn-nonblocking.c,new_conn,free,conn,77;83;103;111;119;126,6,pending initial review
+R02-00397,02_repeated_release,doc/designs/ddd/ddd-03-fd-blocking.c,new_conn,SSL_free,ssl,64;69;74;82,4,pending initial review
+R02-00398,02_repeated_release,doc/designs/ddd/ddd-04-fd-nonblocking.c,new_conn,SSL_free,ssl,77;83;89;98,4,pending initial review
+R02-00399,02_repeated_release,doc/designs/ddd/ddd-04-fd-nonblocking.c,new_conn,free,conn,70;78;84;90;99,5,pending initial review
+R02-00400,02_repeated_release,doc/designs/ddd/ddd-06-mem-uv.c,flush_write_buf,free,buf,435;455,2,pending initial review
+R02-00401,02_repeated_release,doc/designs/ddd/ddd-06-mem-uv.c,post_read,free,buf,679;685,2,pending initial review
+R02-00402,02_repeated_release,doc/designs/ddd/ddd-06-mem-uv.c,setup_ssl,SSL_free,ssl,511;516;524;529;537,5,pending initial review

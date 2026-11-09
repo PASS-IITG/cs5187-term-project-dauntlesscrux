@@ -1,0 +1,16 @@
+[01_use_after_release]
+spatch --jobs 4 --very-quiet --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/01_use_after_release.cocci --file-groups /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/files_01_use_after_release.txt
+exit_code=2
+
+[02_repeated_release]
+spatch --jobs 4 --very-quiet --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/02_repeated_release.cocci --file-groups /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/files_02_repeated_release.txt
+exit_code=-11
+
+[03_release_after_transfer]
+spatch --jobs 4 --very-quiet --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/03_release_after_transfer.cocci --file-groups /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/files_03_release_after_transfer.txt
+exit_code=2
+
+[04_acquire_early_return]
+spatch --jobs 4 --very-quiet --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/04_acquire_early_return.cocci --file-groups /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/files_04_acquire_early_return.txt
+exit_code=2
+

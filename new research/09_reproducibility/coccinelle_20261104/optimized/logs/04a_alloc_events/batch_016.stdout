@@ -1,0 +1,8 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/ssl_old_test.c:310:20-34: alloc_event|alpn_selected
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/sslapitest.c:2910:10-24: alloc_event|buf
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/sslapitest.c:2660:15-29: alloc_event|buf_orig
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/sslapitest.c:2661:16-30: alloc_event|buf_retry
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/timing_load_creds.c:161:15-29: alloc_event|contents
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/ssl_old_test.c:263:10-24: alloc_event|out
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/tls13encryptiontest.c:192:13-27: alloc_event|outbuf
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/secmemtest.c:41:8-22: alloc_event|q

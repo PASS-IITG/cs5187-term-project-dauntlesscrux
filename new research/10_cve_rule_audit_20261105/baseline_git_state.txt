@@ -1,0 +1,38 @@
+Git state sampled before checker/test edits (the audit directory itself was being created at sampling time):
+
+Main repository: branch main tracking origin/main.
+
+Pre-existing staged changes reported by `git status --short --branch`:
+ D __pycache__/typestate_check.cpython-311.pyc
+ D openssl
+RM typestate_check.py -> src/typestate_check.py (staged rename; worktree content already differed before this audit)
+ D typestate_check.py.bak
+ D typestate_check.py.before_rule_fix.20261016_102223
+
+Pre-existing unstaged tracked changes:
+ M research/07_evaluation/typestate_checker_eval_v2.py
+ M tests/test_all_cves.sh
+ M tests/test_bio_adversarial.py
+ M tests/test_cve_2022_4450.sh
+ M tests/test_cve_2023_0215.sh
+
+Pre-existing untracked paths:
+ .gitignore
+ research/02_candidate_selection/historical_fix_register.csv
+ research/02_candidate_selection/openssl_fix_commit_candidates_20261103.txt
+ research/02_candidate_selection/openssl_fix_commit_candidates_unique_20261103.tsv
+ research/02_candidate_selection/openssl_fix_commit_patchids_20261103.tsv
+ research/02_candidate_selection/openssl_typestate_fix_shortlist_20261103.tsv
+ research/07_evaluation/eval_v2_stdout_20261103.log
+ research/09_reproducibility/clang_scan_20261103/
+ research/09_reproducibility/coccinelle_20261104/
+ research/09_reproducibility/cppcheck_20261104/
+ tests/test_bio_alias.py
+ tests/test_unknown_state.py
+
+Each of the six vulnerable/fixed OpenSSL worktrees was detached at its recorded pinned revision. `git status --short --branch --untracked-files=no` reported the same pre-existing unstaged modification in each:
+ M test/smime-eml/SignedInvalidMappingFromanyPolicyTest7.eml
+
+No staged changes were reported in the six source worktrees. Untracked files were not enumerated there because the baseline status command explicitly used `--untracked-files=no`; the worktrees remained read-only during this audit.
+
+Changes introduced by this audit are confined to `src/typestate_check.py`, the new `tests/test_pem_ssl_adversarial.py`, and `research/10_cve_rule_audit_20261105/`. Nothing was staged or committed.

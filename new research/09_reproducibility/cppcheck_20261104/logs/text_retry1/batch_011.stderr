@@ -1,0 +1,504 @@
+fuzz/punycode.c:27:10: style: The scope of the variable 'outc' can be reduced. [variableScope]
+    char outc[16];
+         ^
+fuzz/provider.c:649:30: style: Parameter 'evp_md' can be declared as pointer to const [constParameterPointer]
+static int do_evp_md(EVP_MD *evp_md, const OSSL_PARAM params[])
+                             ^
+fuzz/provider.c:719:9: style: Variable 'alg' can be declared as pointer to const [constVariablePointer]
+        EVP_FUZZ(cipher_collection, EVP_CIPHER, do_evp_cipher);
+        ^
+fuzz/slh-dsa.c:494:11: style: struct member 'op_table_entry::name' is never used. [unusedStructMember]
+    char *name;
+          ^
+fuzz/smime.c:38:38: style: Variable 'p7si' can be declared as pointer to const [constVariablePointer]
+        STACK_OF(PKCS7_SIGNER_INFO) *p7si = PKCS7_get_signer_info(p7);
+                                     ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/packet_quic.h:46:65: style: Parameter 'pkt' can be declared as pointer to const [constParameterPointer]
+__owur static ossl_inline int PACKET_peek_quic_vlint_ex(PACKET *pkt,
+                                                                ^
+ms/uplink.c:46:9: style: The scope of the variable 'len' can be reduced. [variableScope]
+    int len;
+        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/dgram_demux.h:119:1: style: Variable 'lh->omega' is reassigned a value before the old one has been used. [redundantAssignment]
+DEFINE_LIST_OF(urxe, DGRAM_URXE);
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/dgram_demux.h:119:1: note: lh->omega is assigned
+DEFINE_LIST_OF(urxe, DGRAM_URXE);
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/dgram_demux.h:119:1: note: lh->omega is overwritten
+DEFINE_LIST_OF(urxe, DGRAM_URXE);
+^
+providers/baseprov.c:99:10: style: inconclusive: Function 'base_query' argument 3 names different: declaration 'no_store' definition 'no_cache'. [funcArgNamesDifferent]
+    int *no_cache)
+         ^
+providers/baseprov.c:30:0: note: Function 'base_query' argument 3 names different: declaration 'no_store' definition 'no_cache'.
+static OSSL_FUNC_provider_query_operation_fn base_query;
+^
+providers/baseprov.c:99:10: note: Function 'base_query' argument 3 names different: declaration 'no_store' definition 'no_cache'.
+    int *no_cache)
+         ^
+providers/common/bio_prov.c:229:17: style: Variable 'corebiometh' can be declared as pointer to const [constVariablePointer]
+    BIO_METHOD *corebiometh = ossl_prov_ctx_get0_core_bio_method(provctx);
+                ^
+fuzz/v3name.c:23:39: style: inconclusive: Function 'FuzzerTestOneInput' argument 1 names different: declaration 'buf' definition 'data'. [funcArgNamesDifferent]
+int FuzzerTestOneInput(const uint8_t *data, size_t size)
+                                      ^
+fuzz/fuzzer.h:14:39: note: Function 'FuzzerTestOneInput' argument 1 names different: declaration 'buf' definition 'data'.
+int FuzzerTestOneInput(const uint8_t *buf, size_t len);
+                                      ^
+fuzz/v3name.c:23:39: note: Function 'FuzzerTestOneInput' argument 1 names different: declaration 'buf' definition 'data'.
+int FuzzerTestOneInput(const uint8_t *data, size_t size)
+                                      ^
+fuzz/v3name.c:23:52: style: inconclusive: Function 'FuzzerTestOneInput' argument 2 names different: declaration 'len' definition 'size'. [funcArgNamesDifferent]
+int FuzzerTestOneInput(const uint8_t *data, size_t size)
+                                                   ^
+fuzz/fuzzer.h:14:51: note: Function 'FuzzerTestOneInput' argument 2 names different: declaration 'len' definition 'size'.
+int FuzzerTestOneInput(const uint8_t *buf, size_t len);
+                                                  ^
+fuzz/v3name.c:23:52: note: Function 'FuzzerTestOneInput' argument 2 names different: declaration 'len' definition 'size'.
+int FuzzerTestOneInput(const uint8_t *data, size_t size)
+                                                   ^
+providers/common/der/der_ml_dsa_key.c:30:78: style: Parameter 'key' can be declared as pointer to const [constParameterPointer]
+int ossl_DER_w_algorithmIdentifier_ML_DSA(WPACKET *pkt, int tag, ML_DSA_KEY *key)
+                                                                             ^
+providers/common/der/der_slh_dsa_key.c:21:80: style: Parameter 'key' can be declared as pointer to const [constParameterPointer]
+int ossl_DER_w_algorithmIdentifier_SLH_DSA(WPACKET *pkt, int tag, SLH_DSA_KEY *key)
+                                                                               ^
+providers/common/der/der_rsa_key.c:395:24: style: Variable 'pss_params' can be declared as pointer to const [constVariablePointer]
+    RSA_PSS_PARAMS_30 *pss_params = ossl_rsa_get0_pss_params_30(rsa);
+                       ^
+providers/common/provider_ctx.c:98:16: style: Condition 'val!=NULL' is always false [knownConditionTrueFalse]
+        && val != NULL)
+               ^
+providers/common/provider_ctx.c:81:17: note: Assignment 'val=NULL', assigned value is 0
+    char *val = NULL;
+                ^
+providers/common/provider_ctx.c:86:9: note: Assuming condition is false
+        || ctx->core_get_params == NULL)
+        ^
+providers/common/provider_ctx.c:98:16: note: Condition 'val!=NULL' is always false
+        && val != NULL)
+               ^
+providers/common/provider_ctx.c:50:51: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+OSSL_LIB_CTX *ossl_prov_ctx_get0_libctx(PROV_CTX *ctx)
+                                                  ^
+providers/common/provider_ctx.c:57:61: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+const OSSL_CORE_HANDLE *ossl_prov_ctx_get0_handle(PROV_CTX *ctx)
+                                                            ^
+providers/common/provider_ctx.c:64:58: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+BIO_METHOD *ossl_prov_ctx_get0_core_bio_method(PROV_CTX *ctx)
+                                                         ^
+providers/common/provider_ctx.c:71:76: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+OSSL_FUNC_core_get_params_fn *ossl_prov_ctx_get0_core_get_params(PROV_CTX *ctx)
+                                                                           ^
+providers/common/provider_util.c:222:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i, j;
+        ^
+providers/common/provider_util.c:222:12: style: The scope of the variable 'j' can be reduced. [variableScope]
+    int i, j;
+           ^
+providers/defltprov.c:746:10: style: inconclusive: Function 'deflt_query' argument 3 names different: declaration 'no_store' definition 'no_cache'. [funcArgNamesDifferent]
+    int *no_cache)
+         ^
+providers/defltprov.c:32:0: note: Function 'deflt_query' argument 3 names different: declaration 'no_store' definition 'no_cache'.
+static OSSL_FUNC_provider_query_operation_fn deflt_query;
+^
+providers/defltprov.c:746:10: note: Function 'deflt_query' argument 3 names different: declaration 'no_store' definition 'no_cache'.
+    int *no_cache)
+         ^
+providers/fips/fipsprov.c:714:10: style: inconclusive: Function 'fips_query' argument 3 names different: declaration 'no_store' definition 'no_cache'. [funcArgNamesDifferent]
+    int *no_cache)
+         ^
+providers/fips/fipsprov.c:48:0: note: Function 'fips_query' argument 3 names different: declaration 'no_store' definition 'no_cache'.
+static OSSL_FUNC_provider_query_operation_fn fips_query;
+^
+providers/fips/fipsprov.c:714:10: note: Function 'fips_query' argument 3 names different: declaration 'no_store' definition 'no_cache'.
+    int *no_cache)
+         ^
+providers/fips/fipsprov.c:749:10: style: inconclusive: Function 'fips_query_internal' argument 3 names different: declaration 'no_store' definition 'no_cache'. [funcArgNamesDifferent]
+    int *no_cache)
+         ^
+providers/fips/fipsprov.c:49:0: note: Function 'fips_query_internal' argument 3 names different: declaration 'no_store' definition 'no_cache'.
+static OSSL_FUNC_provider_query_operation_fn fips_query_internal;
+^
+providers/fips/fipsprov.c:749:10: note: Function 'fips_query_internal' argument 3 names different: declaration 'no_store' definition 'no_cache'.
+    int *no_cache)
+         ^
+providers/fips/fipsprov.c:1126:60: style: inconclusive: Function 'FIPS_get_core_handle' argument 1 names different: declaration 'ctx' definition 'libctx'. [funcArgNamesDifferent]
+const OSSL_CORE_HANDLE *FIPS_get_core_handle(OSSL_LIB_CTX *libctx)
+                                                           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/common/include/prov/providercommon.h:16:60: note: Function 'FIPS_get_core_handle' argument 1 names different: declaration 'ctx' definition 'libctx'.
+const OSSL_CORE_HANDLE *FIPS_get_core_handle(OSSL_LIB_CTX *ctx);
+                                                           ^
+providers/fips/fipsprov.c:1126:60: note: Function 'FIPS_get_core_handle' argument 1 names different: declaration 'ctx' definition 'libctx'.
+const OSSL_CORE_HANDLE *FIPS_get_core_handle(OSSL_LIB_CTX *libctx)
+                                                           ^
+providers/fips/fipsprov.c:1128:18: style: Variable 'fgbl' can be declared as pointer to const [constVariablePointer]
+    FIPS_GLOBAL *fgbl = ossl_lib_ctx_get_data(libctx,
+                 ^
+providers/fips/self_test_kats.c:278:63: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    params = kat_params_to_ossl_params(libctx, t->u.kdf.params, NULL);
+                                                              ^
+providers/fips/self_test_kats.c:429:31: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+        t->u.kas.key_host_data, NULL);
+                              ^
+providers/fips/self_test_kats.c:431:31: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+        t->u.kas.key_peer_data, NULL);
+                              ^
+providers/fips/self_test_kats.c:523:63: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    paramskey = kat_params_to_ossl_params(libctx, t->u.sig.key, NULL);
+                                                              ^
+providers/fips/self_test_kats.c:524:65: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    paramsinit = kat_params_to_ossl_params(libctx, t->u.sig.init, NULL);
+                                                                ^
+providers/fips/self_test_kats.c:525:69: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    paramsverify = kat_params_to_ossl_params(libctx, t->u.sig.verify, NULL);
+                                                                    ^
+providers/fips/self_test_kats.c:640:80: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+        key_params = kat_params_to_ossl_params(libctx, t->u.akgen.keygen_params,
+                                                                               ^
+providers/fips/self_test_kats.c:807:60: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    params = kat_params_to_ossl_params(libctx, t->u.kem.key, NULL);
+                                                           ^
+providers/fips/self_test_kats.c:940:63: portability: Passing NULL after the last typed argument to a variadic function leads to undefined behaviour. [varFuncNullUB]
+    params = kat_params_to_ossl_params(libctx, t->u.mac.params, NULL);
+                                                              ^
+providers/implementations/asymciphers/rsa_enc.c:101:5: error: There is an unknown macro here somewhere. Configuration is required. If OSSL_FIPS_IND_INIT is a macro then please configure it. [unknownMacro]
+    OSSL_FIPS_IND_INIT(prsactx)
+    ^
+providers/implementations/asymciphers/sm2_enc.c:134:31: style: inconclusive: Function 'sm2_dupctx' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'. [funcArgNamesDifferent]
+static void *sm2_dupctx(void *vpsm2ctx)
+                              ^
+providers/implementations/asymciphers/sm2_enc.c:33:0: note: Function 'sm2_dupctx' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'.
+static OSSL_FUNC_asym_cipher_dupctx_fn sm2_dupctx;
+^
+providers/implementations/asymciphers/sm2_enc.c:134:31: note: Function 'sm2_dupctx' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'.
+static void *sm2_dupctx(void *vpsm2ctx)
+                              ^
+providers/implementations/asymciphers/sm2_enc.c:178:68: style: inconclusive: Function 'sm2_gettable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'. [funcArgNamesDifferent]
+static const OSSL_PARAM *sm2_gettable_ctx_params(ossl_unused void *vpsm2ctx,
+                                                                   ^
+providers/implementations/asymciphers/sm2_enc.c:35:0: note: Function 'sm2_gettable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'.
+static OSSL_FUNC_asym_cipher_gettable_ctx_params_fn sm2_gettable_ctx_params;
+^
+providers/implementations/asymciphers/sm2_enc.c:178:68: note: Function 'sm2_gettable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'.
+static const OSSL_PARAM *sm2_gettable_ctx_params(ossl_unused void *vpsm2ctx,
+                                                                   ^
+providers/implementations/asymciphers/sm2_enc.c:199:68: style: inconclusive: Function 'sm2_settable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'. [funcArgNamesDifferent]
+static const OSSL_PARAM *sm2_settable_ctx_params(ossl_unused void *vpsm2ctx,
+                                                                   ^
+providers/implementations/asymciphers/sm2_enc.c:37:0: note: Function 'sm2_settable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'.
+static OSSL_FUNC_asym_cipher_settable_ctx_params_fn sm2_settable_ctx_params;
+^
+providers/implementations/asymciphers/sm2_enc.c:199:68: note: Function 'sm2_settable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'.
+static const OSSL_PARAM *sm2_settable_ctx_params(ossl_unused void *vpsm2ctx,
+                                                                   ^
+providers/implementations/ciphers/cipher_aes.c:37:31: style: inconclusive: Function 'aes_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'. [funcArgNamesDifferent]
+static void *aes_dupctx(void *ctx)
+                              ^
+providers/implementations/ciphers/cipher_aes.c:25:0: note: Function 'aes_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static OSSL_FUNC_cipher_dupctx_fn aes_dupctx;
+^
+providers/implementations/ciphers/cipher_aes.c:37:31: note: Function 'aes_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static void *aes_dupctx(void *ctx)
+                              ^
+providers/implementations/ciphers/cipher_aes_ccm_hw.c:86:20: style: Condition 'aes_ccm_hw!=NULL' is always false [knownConditionTrueFalse]
+    if (aes_ccm_hw != NULL)
+                   ^
+providers/implementations/ciphers/cipher_aes_ccm_hw.c:74:37: note: Assignment 'aes_ccm_hw=NULL', assigned value is 0
+    const PROV_CCM_HW *aes_ccm_hw = NULL;
+                                    ^
+providers/implementations/ciphers/cipher_aes_ccm_hw.c:86:20: note: Condition 'aes_ccm_hw!=NULL' is always false
+    if (aes_ccm_hw != NULL)
+                   ^
+providers/implementations/ciphers/cipher_aes_ccm_hw.c:72:48: style: inconclusive: Function 'ossl_prov_aes_hw_ccm' argument 1 names different: declaration 'keylen' definition 'keybits'. [funcArgNamesDifferent]
+const PROV_CCM_HW *ossl_prov_aes_hw_ccm(size_t keybits)
+                                               ^
+providers/implementations/ciphers/cipher_aes_ccm.h:56:48: note: Function 'ossl_prov_aes_hw_ccm' argument 1 names different: declaration 'keylen' definition 'keybits'.
+const PROV_CCM_HW *ossl_prov_aes_hw_ccm(size_t keylen);
+                                               ^
+providers/implementations/ciphers/cipher_aes_ccm_hw.c:72:48: note: Function 'ossl_prov_aes_hw_ccm' argument 1 names different: declaration 'keylen' definition 'keybits'.
+const PROV_CCM_HW *ossl_prov_aes_hw_ccm(size_t keybits)
+                                               ^
+providers/implementations/ciphers/cipher_aes_ccm.c:36:23: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    PROV_AES_CCM_CTX *ctx = provctx;
+                      ^
+providers/implementations/ciphers/cipher_aes_gcm.c:37:23: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    PROV_AES_GCM_CTX *ctx = provctx;
+                      ^
+providers/implementations/ciphers/cipher_aes_gcm_hw.c:174:20: style: Condition 'aes_gcm_hw==NULL' is always true [knownConditionTrueFalse]
+    if (aes_gcm_hw == NULL)
+                   ^
+providers/implementations/ciphers/cipher_aes_gcm_hw.c:156:37: note: Assignment 'aes_gcm_hw=NULL', assigned value is 0
+    const PROV_GCM_HW *aes_gcm_hw = NULL;
+                                    ^
+providers/implementations/ciphers/cipher_aes_gcm_hw.c:174:20: note: Condition 'aes_gcm_hw==NULL' is always true
+    if (aes_gcm_hw == NULL)
+                   ^
+providers/implementations/ciphers/cipher_aes_gcm_siv.c:178:27: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    PROV_AES_GCM_SIV_CTX *ctx = (PROV_AES_GCM_SIV_CTX *)vctx;
+                          ^
+providers/implementations/ciphers/cipher_aes_gcm_siv_hw.c:147:13: style: The scope of the variable 'padding' can be reduced. [variableScope]
+    uint8_t padding[BLOCK_SIZE];
+            ^
+providers/implementations/ciphers/cipher_aes_gcm_siv_hw.c:366:12: style: The scope of the variable 'todo' can be reduced. [variableScope]
+    size_t todo;
+           ^
+providers/implementations/ciphers/cipher_aes_gcm_siv_hw.c:329:27: style: Variable 'src' can be declared as pointer to const [constVariablePointer]
+    PROV_AES_GCM_SIV_CTX *src = (PROV_AES_GCM_SIV_CTX *)vsrc;
+                          ^
+providers/implementations/ciphers/cipher_aes_gcm_siv_hw.c:371:17: style: union member 'Anonymous10::x8' is never used. [unusedStructMember]
+        uint8_t x8[BLOCK_SIZE];
+                ^
+providers/implementations/ciphers/cipher_aes_hw.c:233:21: style: Condition 'aes_hw_mode==NULL' is always true [knownConditionTrueFalse]
+    if (aes_hw_mode == NULL) {
+                    ^
+providers/implementations/ciphers/cipher_aes_hw.c:217:41: note: Assignment 'aes_hw_mode=NULL', assigned value is 0
+    const PROV_CIPHER_HW *aes_hw_mode = NULL;
+                                        ^
+providers/implementations/ciphers/cipher_aes_hw.c:233:21: note: Condition 'aes_hw_mode==NULL' is always true
+    if (aes_hw_mode == NULL) {
+                    ^
+providers/implementations/ciphers/cipher_aes_hw.c:165:19: style: Variable 'sctx' can be declared as pointer to const [constVariablePointer]
+    PROV_AES_CTX *sctx = (PROV_AES_CTX *)src;
+                  ^
+providers/implementations/ciphers/cipher_aes_ocb.c:338:35: style: inconclusive: Function 'aes_ocb_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'. [funcArgNamesDifferent]
+static void *aes_ocb_dupctx(void *vctx)
+                                  ^
+providers/implementations/ciphers/cipher_aes_ocb.c:39:0: note: Function 'aes_ocb_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'.
+static OSSL_FUNC_cipher_dupctx_fn aes_ocb_dupctx;
+^
+providers/implementations/ciphers/cipher_aes_ocb.c:338:35: note: Function 'aes_ocb_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'.
+static void *aes_ocb_dupctx(void *vctx)
+                                  ^
+providers/implementations/ciphers/cipher_aes_ocb.c:358:23: style: inconclusive: Function 'cipher_ocb_settable_ctx_params' argument 2 names different: declaration 'provctx' definition 'p_ctx'. [funcArgNamesDifferent]
+    ossl_unused void *p_ctx)
+                      ^
+providers/implementations/ciphers/cipher_aes_ocb.c:43:0: note: Function 'cipher_ocb_settable_ctx_params' argument 2 names different: declaration 'provctx' definition 'p_ctx'.
+static OSSL_FUNC_cipher_settable_ctx_params_fn cipher_ocb_settable_ctx_params;
+^
+providers/implementations/ciphers/cipher_aes_ocb.c:358:23: note: Function 'cipher_ocb_settable_ctx_params' argument 2 names different: declaration 'provctx' definition 'p_ctx'.
+    ossl_unused void *p_ctx)
+                      ^
+providers/implementations/ciphers/cipher_aes_ocb.c:427:23: style: inconclusive: Function 'cipher_ocb_gettable_ctx_params' argument 2 names different: declaration 'provctx' definition 'p_ctx'. [funcArgNamesDifferent]
+    ossl_unused void *p_ctx)
+                      ^
+providers/implementations/ciphers/cipher_aes_ocb.c:42:0: note: Function 'cipher_ocb_gettable_ctx_params' argument 2 names different: declaration 'provctx' definition 'p_ctx'.
+static OSSL_FUNC_cipher_gettable_ctx_params_fn cipher_ocb_gettable_ctx_params;
+^
+providers/implementations/ciphers/cipher_aes_ocb.c:427:23: note: Function 'cipher_ocb_gettable_ctx_params' argument 2 names different: declaration 'provctx' definition 'p_ctx'.
+    ossl_unused void *p_ctx)
+                      ^
+providers/implementations/ciphers/cipher_aes_ocb.c:434:23: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    PROV_AES_OCB_CTX *ctx = (PROV_AES_OCB_CTX *)vctx;
+                      ^
+providers/implementations/ciphers/cipher_aes_xts.c:142:35: style: inconclusive: Function 'aes_xts_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'. [funcArgNamesDifferent]
+static void *aes_xts_dupctx(void *vctx)
+                                  ^
+providers/implementations/ciphers/cipher_aes_xts.c:35:0: note: Function 'aes_xts_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'.
+static OSSL_FUNC_cipher_dupctx_fn aes_xts_dupctx;
+^
+providers/implementations/ciphers/cipher_aes_xts.c:142:35: note: Function 'aes_xts_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'.
+static void *aes_xts_dupctx(void *vctx)
+                                  ^
+providers/implementations/ciphers/cipher_aes_xts.c:250:22: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    PROV_CIPHER_CTX *ctx = (PROV_CIPHER_CTX *)vctx;
+                     ^
+providers/implementations/ciphers/cipher_aes_wrp.c:78:10: style: Redundant initialization for 'dctx'. The initialized value is overwritten before it is read. [redundantInitialization]
+    dctx = OPENSSL_memdup(ctx, sizeof(*ctx));
+         ^
+providers/implementations/ciphers/cipher_aes_wrp.c:71:29: note: dctx is initialized
+    PROV_AES_WRAP_CTX *dctx = wctx;
+                            ^
+providers/implementations/ciphers/cipher_aes_wrp.c:78:10: note: dctx is overwritten
+    dctx = OPENSSL_memdup(ctx, sizeof(*ctx));
+         ^
+providers/implementations/ciphers/cipher_aes_wrp.c:282:22: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    PROV_CIPHER_CTX *ctx = (PROV_CIPHER_CTX *)vctx;
+                     ^
+providers/implementations/ciphers/cipher_aes_wrp.c:43:9: style: union member 'Anonymous8::align' is never used. [unusedStructMember]
+        OSSL_UNION_ALIGN;
+        ^
+providers/implementations/ciphers/cipher_aes_wrp.c:43:9: style: union member 'Anonymous8::align_int' is never used. [unusedStructMember]
+        OSSL_UNION_ALIGN;
+        ^
+providers/implementations/ciphers/cipher_aes_wrp.c:43:9: style: union member 'Anonymous8::align_ptr' is never used. [unusedStructMember]
+        OSSL_UNION_ALIGN;
+        ^
+providers/implementations/ciphers/cipher_aes_xts_hw.c:127:20: style: Condition 'aes_xts_hw==NULL' is always true [knownConditionTrueFalse]
+    if (aes_xts_hw == NULL)
+                   ^
+providers/implementations/ciphers/cipher_aes_xts_hw.c:113:40: note: Assignment 'aes_xts_hw=NULL', assigned value is 0
+    const PROV_CIPHER_HW *aes_xts_hw = NULL;
+                                       ^
+providers/implementations/ciphers/cipher_aes_xts_hw.c:127:20: note: Condition 'aes_xts_hw==NULL' is always true
+    if (aes_xts_hw == NULL)
+                   ^
+providers/implementations/ciphers/cipher_aes_xts_hw.c:97:23: style: Variable 'sctx' can be declared as pointer to const [constVariablePointer]
+    PROV_AES_XTS_CTX *sctx = (PROV_AES_XTS_CTX *)src;
+                      ^
+providers/implementations/ciphers/cipher_aria.c:27:32: style: inconclusive: Function 'aria_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'. [funcArgNamesDifferent]
+static void *aria_dupctx(void *ctx)
+                               ^
+providers/implementations/ciphers/cipher_aria.c:17:0: note: Function 'aria_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static OSSL_FUNC_cipher_dupctx_fn aria_dupctx;
+^
+providers/implementations/ciphers/cipher_aria.c:27:32: note: Function 'aria_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static void *aria_dupctx(void *ctx)
+                               ^
+providers/implementations/ciphers/cipher_aria_ccm.c:33:24: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    PROV_ARIA_CCM_CTX *ctx = provctx;
+                       ^
+providers/implementations/ciphers/cipher_aria_ccm_hw.c:38:49: style: inconclusive: Function 'ossl_prov_aria_hw_ccm' argument 1 names different: declaration 'keylen' definition 'keybits'. [funcArgNamesDifferent]
+const PROV_CCM_HW *ossl_prov_aria_hw_ccm(size_t keybits)
+                                                ^
+providers/implementations/ciphers/cipher_aria_ccm.h:25:49: note: Function 'ossl_prov_aria_hw_ccm' argument 1 names different: declaration 'keylen' definition 'keybits'.
+const PROV_CCM_HW *ossl_prov_aria_hw_ccm(size_t keylen);
+                                                ^
+providers/implementations/ciphers/cipher_aria_ccm_hw.c:38:49: note: Function 'ossl_prov_aria_hw_ccm' argument 1 names different: declaration 'keylen' definition 'keybits'.
+const PROV_CCM_HW *ossl_prov_aria_hw_ccm(size_t keybits)
+                                                ^
+providers/implementations/ciphers/cipher_aria_gcm.c:32:24: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    PROV_ARIA_GCM_CTX *ctx = provctx;
+                       ^
+providers/implementations/ciphers/cipher_aria_hw.c:33:1: style: Variable 'sctx' can be declared as pointer to const [constVariablePointer]
+IMPLEMENT_CIPHER_HW_COPYCTX(cipher_hw_aria_copyctx, PROV_ARIA_CTX)
+^
+providers/implementations/ciphers/cipher_blowfish.c:35:36: style: inconclusive: Function 'blowfish_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'. [funcArgNamesDifferent]
+static void *blowfish_dupctx(void *ctx)
+                                   ^
+providers/implementations/ciphers/cipher_blowfish.c:25:0: note: Function 'blowfish_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static OSSL_FUNC_cipher_dupctx_fn blowfish_dupctx;
+^
+providers/implementations/ciphers/cipher_blowfish.c:35:36: note: Function 'blowfish_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static void *blowfish_dupctx(void *ctx)
+                                   ^
+providers/implementations/ciphers/cipher_blowfish.c:37:24: style: Variable 'in' can be declared as pointer to const [constVariablePointer]
+    PROV_BLOWFISH_CTX *in = (PROV_BLOWFISH_CTX *)ctx;
+                       ^
+providers/implementations/ciphers/cipher_ascon_aead128.c:136:19: style: The scope of the variable 'ivcopy' can be reduced. [variableScope]
+    unsigned char ivcopy[ASCON_AEAD_NONCE_LEN];
+                  ^
+providers/implementations/ciphers/cipher_ascon_aead128.c:346:16: style: The scope of the variable 'ret' can be reduced. [variableScope]
+        size_t ret;
+               ^
+providers/implementations/ciphers/cipher_ascon_aead128.c:83:41: style: inconclusive: Function 'ascon_aead128_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'. [funcArgNamesDifferent]
+static void *ascon_aead128_dupctx(void *vctx)
+                                        ^
+providers/implementations/ciphers/cipher_ascon_aead128.c:24:0: note: Function 'ascon_aead128_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'.
+static OSSL_FUNC_cipher_dupctx_fn ascon_aead128_dupctx;
+^
+providers/implementations/ciphers/cipher_ascon_aead128.c:83:41: note: Function 'ascon_aead128_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'.
+static void *ascon_aead128_dupctx(void *vctx)
+                                        ^
+providers/implementations/ciphers/cipher_ascon_aead128.c:390:34: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    struct ascon_aead128_ctx_st *ctx = vctx;
+                                 ^
+providers/implementations/ciphers/cipher_ascon_aead128.c:179:30: error: Uninitialized variable: saved_tag [legacyUninitvar]
+            memcpy(ctx->tag, saved_tag, ASCON_AEAD_TAG_LEN);
+                             ^
+providers/implementations/ciphers/cipher_blowfish_hw.c:39:1: style: Variable 'key' can be declared as pointer to const [constVariablePointer]
+PROV_CIPHER_HW_blowfish_mode(cbc, CBC)
+^
+providers/implementations/ciphers/cipher_blowfish_hw.c:40:5: style: Variable 'key' can be declared as pointer to const [constVariablePointer]
+    PROV_CIPHER_HW_blowfish_mode(ecb, ECB)
+    ^
+providers/implementations/ciphers/cipher_blowfish_hw.c:41:9: style: Variable 'key' can be declared as pointer to const [constVariablePointer]
+        PROV_CIPHER_HW_blowfish_mode(ofb64, OFB)
+        ^
+providers/implementations/ciphers/cipher_blowfish_hw.c:42:13: style: Variable 'key' can be declared as pointer to const [constVariablePointer]
+            PROV_CIPHER_HW_blowfish_mode(cfb64, CFB)
+            ^
+providers/implementations/ciphers/cipher_camellia.c:36:36: style: inconclusive: Function 'camellia_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'. [funcArgNamesDifferent]
+static void *camellia_dupctx(void *ctx)
+                                   ^
+providers/implementations/ciphers/cipher_camellia.c:24:0: note: Function 'camellia_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static OSSL_FUNC_cipher_dupctx_fn camellia_dupctx;
+^
+providers/implementations/ciphers/cipher_camellia.c:36:36: note: Function 'camellia_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static void *camellia_dupctx(void *ctx)
+                                   ^
+providers/implementations/ciphers/cipher_camellia_hw.c:43:1: style: Variable 'sctx' can be declared as pointer to const [constVariablePointer]
+IMPLEMENT_CIPHER_HW_COPYCTX(cipher_hw_camellia_copyctx, PROV_CAMELLIA_CTX)
+^
+providers/implementations/ciphers/cipher_cast5_hw.c:39:1: style: Variable 'key' can be declared as pointer to const [constVariablePointer]
+PROV_CIPHER_HW_cast_mode(cbc, CBC)
+^
+providers/implementations/ciphers/cipher_cast5_hw.c:40:5: style: Variable 'key' can be declared as pointer to const [constVariablePointer]
+    PROV_CIPHER_HW_cast_mode(ecb, ECB)
+    ^
+providers/implementations/ciphers/cipher_cast5_hw.c:41:9: style: Variable 'key' can be declared as pointer to const [constVariablePointer]
+        PROV_CIPHER_HW_cast_mode(ofb64, OFB)
+        ^
+providers/implementations/ciphers/cipher_cast5_hw.c:42:13: style: Variable 'key' can be declared as pointer to const [constVariablePointer]
+            PROV_CIPHER_HW_cast_mode(cfb64, CFB)
+            ^
+providers/implementations/ciphers/cipher_cast5.c:36:33: style: inconclusive: Function 'cast5_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'. [funcArgNamesDifferent]
+static void *cast5_dupctx(void *ctx)
+                                ^
+providers/implementations/ciphers/cipher_cast5.c:26:0: note: Function 'cast5_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static OSSL_FUNC_cipher_dupctx_fn cast5_dupctx;
+^
+providers/implementations/ciphers/cipher_cast5.c:36:33: note: Function 'cast5_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static void *cast5_dupctx(void *ctx)
+                                ^
+providers/implementations/ciphers/cipher_cast5.c:38:20: style: Variable 'in' can be declared as pointer to const [constVariablePointer]
+    PROV_CAST_CTX *in = (PROV_CAST_CTX *)ctx;
+                   ^
+providers/implementations/ciphers/cipher_chacha20.c:105:19: style: The scope of the variable 'ivbuf' can be reduced. [variableScope]
+    unsigned char ivbuf[CHACHA20_IVLEN];
+                  ^
+providers/implementations/ciphers/cipher_chacha20.c:77:36: style: inconclusive: Function 'chacha20_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'. [funcArgNamesDifferent]
+static void *chacha20_dupctx(void *vctx)
+                                   ^
+providers/implementations/ciphers/cipher_chacha20.c:26:0: note: Function 'chacha20_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'.
+static OSSL_FUNC_cipher_dupctx_fn chacha20_dupctx;
+^
+providers/implementations/ciphers/cipher_chacha20.c:77:36: note: Function 'chacha20_dupctx' argument 1 names different: declaration 'cctx' definition 'vctx'.
+static void *chacha20_dupctx(void *vctx)
+                                   ^
+providers/implementations/ciphers/cipher_chacha20.c:142:24: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    PROV_CHACHA20_CTX *ctx = (PROV_CHACHA20_CTX *)vctx;
+                       ^
+providers/implementations/ciphers/cipher_chacha20_hw.c:18:18: style: The scope of the variable 'i' can be reduced. [variableScope]
+    unsigned int i;
+                 ^
+providers/implementations/ciphers/cipher_chacha20_hw.c:31:18: style: The scope of the variable 'i' can be reduced. [variableScope]
+    unsigned int i;
+                 ^
+providers/implementations/ciphers/cipher_chacha20_poly1305.c:63:45: style: inconclusive: Function 'chacha20_poly1305_dupctx' argument 1 names different: declaration 'cctx' definition 'provctx'. [funcArgNamesDifferent]
+static void *chacha20_poly1305_dupctx(void *provctx)
+                                            ^
+providers/implementations/ciphers/cipher_chacha20_poly1305.c:28:0: note: Function 'chacha20_poly1305_dupctx' argument 1 names different: declaration 'cctx' definition 'provctx'.
+static OSSL_FUNC_cipher_dupctx_fn chacha20_poly1305_dupctx;
+^
+providers/implementations/ciphers/cipher_chacha20_poly1305.c:63:45: note: Function 'chacha20_poly1305_dupctx' argument 1 names different: declaration 'cctx' definition 'provctx'.
+static void *chacha20_poly1305_dupctx(void *provctx)
+                                            ^
+providers/implementations/ciphers/cipher_chacha20_poly1305.c:99:33: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    PROV_CHACHA20_POLY1305_CTX *ctx = (PROV_CHACHA20_POLY1305_CTX *)vctx;
+                                ^
+providers/implementations/ciphers/cipher_chacha20_poly1305.c:308:33: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    PROV_CHACHA20_POLY1305_CTX *ctx = (PROV_CHACHA20_POLY1305_CTX *)vctx;
+                                ^
+providers/implementations/ciphers/cipher_cts.c:77:12: style: union member 'aligned_16bytes::align' is never used. [unusedStructMember]
+    size_t align;
+           ^
+providers/implementations/ciphers/cipher_des_hw.c:43:19: style: Variable 'sctx' can be declared as pointer to const [constVariablePointer]
+    PROV_DES_CTX *sctx = (PROV_DES_CTX *)src;
+                  ^
+providers/implementations/ciphers/cipher_desx_hw.c:43:20: style: Variable 'sctx' can be declared as pointer to const [constVariablePointer]
+    PROV_TDES_CTX *sctx = (PROV_TDES_CTX *)src;
+                   ^
+providers/implementations/ciphers/cipher_idea.c:34:32: style: inconclusive: Function 'idea_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'. [funcArgNamesDifferent]
+static void *idea_dupctx(void *ctx)
+                               ^
+providers/implementations/ciphers/cipher_idea.c:24:0: note: Function 'idea_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static OSSL_FUNC_cipher_dupctx_fn idea_dupctx;
+^
+providers/implementations/ciphers/cipher_idea.c:34:32: note: Function 'idea_dupctx' argument 1 names different: declaration 'cctx' definition 'ctx'.
+static void *idea_dupctx(void *ctx)
+                               ^
+providers/implementations/ciphers/cipher_idea.c:36:20: style: Variable 'in' can be declared as pointer to const [constVariablePointer]
+    PROV_IDEA_CTX *in = (PROV_IDEA_CTX *)ctx;
+                   ^

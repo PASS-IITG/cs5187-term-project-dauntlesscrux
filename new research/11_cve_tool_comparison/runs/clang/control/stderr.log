@@ -1,0 +1,19 @@
+/tmp/openssl-cve-tool-comparison/controls/clang_uaf_control.c:2:85: warning: Use of memory after it is freed [unix.Malloc]
+    2 | int main(void) { int *p = malloc(sizeof(*p)); if (p == 0) return 0; free(p); return *p; }
+      |                                                                                     ^~
+/tmp/openssl-cve-tool-comparison/controls/clang_uaf_control.c:2:27: note: Memory is allocated
+    2 | int main(void) { int *p = malloc(sizeof(*p)); if (p == 0) return 0; free(p); return *p; }
+      |                           ^~~~~~~~~~~~~~~~~~
+/tmp/openssl-cve-tool-comparison/controls/clang_uaf_control.c:2:51: note: Assuming 'p' is not equal to null
+    2 | int main(void) { int *p = malloc(sizeof(*p)); if (p == 0) return 0; free(p); return *p; }
+      |                                                   ^~~~~~
+/tmp/openssl-cve-tool-comparison/controls/clang_uaf_control.c:2:47: note: Taking false branch
+    2 | int main(void) { int *p = malloc(sizeof(*p)); if (p == 0) return 0; free(p); return *p; }
+      |                                               ^
+/tmp/openssl-cve-tool-comparison/controls/clang_uaf_control.c:2:69: note: Memory is released
+    2 | int main(void) { int *p = malloc(sizeof(*p)); if (p == 0) return 0; free(p); return *p; }
+      |                                                                     ^~~~~~~
+/tmp/openssl-cve-tool-comparison/controls/clang_uaf_control.c:2:85: note: Use of memory after it is freed
+    2 | int main(void) { int *p = malloc(sizeof(*p)); if (p == 0) return 0; free(p); return *p; }
+      |                                                                                     ^~
+1 warning generated.

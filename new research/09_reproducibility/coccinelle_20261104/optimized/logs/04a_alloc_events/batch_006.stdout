@@ -1,0 +1,17 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/pkcs7/pk7_doit.c:964:11-25: alloc_event|abuf
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/pem/pvkfmt.c:968:10-24: alloc_event|buf
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/pem/pvkfmt.c:347:10-24: alloc_event|buf
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/provider_core.c:2149:15-29: alloc_event|child_cb
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/pem/pem_lib.c:359:11-25: alloc_event|data
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/pkcs7/pk7_doit.c:166:9-23: alloc_event|ek
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/pem/pvkfmt.c:889:17-31: alloc_event|enctmp
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/pkcs12/p12_mutl.c:502:25-39: alloc_event|known_salt
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/pem/pem_sign.c:35:8-22: alloc_event|m
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/objects/o_names.c:194:10-24: alloc_event|onp
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/property/defn_cache.c:120:8-22: alloc_event|p
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/param_build.c:475:13-27: alloc_event|params
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/property/property_parse.c:361:15-29: alloc_event|prop
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/property/property_parse.c:418:15-29: alloc_event|prop
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/property/property_parse.c:548:8-22: alloc_event|r
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/property/property_parse.c:320:8-22: alloc_event|r
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/params.c:1647:10-24: alloc_event|res

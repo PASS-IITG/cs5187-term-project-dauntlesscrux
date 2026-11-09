@@ -1,0 +1,14 @@
+Candidate ID,Rule ID,Source File,Function,Pointer,Allocation Line,Later Return Lines,Later Return Count,Review Status
+R04X-000128,04_acquire_early_return,fuzz/punycode.c,FuzzerTestOneInput,b,29,37,1,pending initial review
+R04X-000129,04_acquire_early_return,fuzz/provider.c,fuzz_params,p_value_double,421,426;474,2,pending initial review
+R04X-000130,04_acquire_early_return,fuzz/provider.c,fuzz_params,p_value_int,317,322;331;340;349;358;374;383;392;401;410;426;474,12,pending initial review
+R04X-000131,04_acquire_early_return,fuzz/provider.c,fuzz_params,p_value_int,326,331;340;349;358;374;383;392;401;410;426;474,11,pending initial review
+R04X-000132,04_acquire_early_return,fuzz/provider.c,fuzz_params,p_value_int,335,340;349;358;374;383;392;401;410;426;474,10,pending initial review
+R04X-000133,04_acquire_early_return,fuzz/provider.c,fuzz_params,p_value_int,344,349;358;374;383;392;401;410;426;474,9,pending initial review
+R04X-000134,04_acquire_early_return,fuzz/provider.c,fuzz_params,p_value_int,353,358;374;383;392;401;410;426;474,8,pending initial review
+R04X-000135,04_acquire_early_return,fuzz/provider.c,fuzz_params,p_value_uint,369,374;383;392;401;410;426;474,7,pending initial review
+R04X-000136,04_acquire_early_return,fuzz/provider.c,fuzz_params,p_value_uint,378,383;392;401;410;426;474,6,pending initial review
+R04X-000137,04_acquire_early_return,fuzz/provider.c,fuzz_params,p_value_uint,387,392;401;410;426;474,5,pending initial review
+R04X-000138,04_acquire_early_return,fuzz/provider.c,fuzz_params,p_value_uint,396,401;410;426;474,4,pending initial review
+R04X-000139,04_acquire_early_return,fuzz/provider.c,fuzz_params,p_value_uint,405,410;426;474,3,pending initial review
+R04X-000153,04_acquire_early_return,fuzz/provider.c,fuzz_params,use_param,305,309;322;331;340;349;358;374;383;392;401;410;426;474,13,pending initial review

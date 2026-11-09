@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.13.0"/>
+    <errors>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ecdh_compute_key&apos; argument 1 names different: declaration &apos;pout&apos; definition &apos;psec&apos;." verbose="Function &apos;ossl_ecdh_compute_key&apos; argument 1 names different: declaration &apos;pout&apos; definition &apos;psec&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdh_ossl.c">
+            <location file="crypto/ec/ecdh_ossl.c" line="28" column="43"/>
+            <location file="crypto/ec/ec_local.h" line="696" column="43"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ecdh_compute_key&apos; argument 2 names different: declaration &apos;poutlen&apos; definition &apos;pseclen&apos;." verbose="Function &apos;ossl_ecdh_compute_key&apos; argument 2 names different: declaration &apos;poutlen&apos; definition &apos;pseclen&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdh_ossl.c">
+            <location file="crypto/ec/ecdh_ossl.c" line="28" column="57"/>
+            <location file="crypto/ec/ec_local.h" line="696" column="57"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ECDSA_do_sign&apos; argument 2 names different: declaration &apos;dgst_len&apos; definition &apos;dlen&apos;." verbose="Function &apos;ECDSA_do_sign&apos; argument 2 names different: declaration &apos;dgst_len&apos; definition &apos;dlen&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdsa_sign.c">
+            <location file="crypto/ec/ecdsa_sign.c" line="20" column="57"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1377" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ECDSA_do_sign_ex&apos; argument 2 names different: declaration &apos;dgstlen&apos; definition &apos;dlen&apos;." verbose="Function &apos;ECDSA_do_sign_ex&apos; argument 2 names different: declaration &apos;dgstlen&apos; definition &apos;dlen&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdsa_sign.c">
+            <location file="crypto/ec/ecdsa_sign.c" line="25" column="60"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1390" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ECDSA_sign&apos; argument 3 names different: declaration &apos;dgstlen&apos; definition &apos;dlen&apos;." verbose="Function &apos;ECDSA_sign&apos; argument 3 names different: declaration &apos;dgstlen&apos; definition &apos;dlen&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdsa_sign.c">
+            <location file="crypto/ec/ecdsa_sign.c" line="35" column="57"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1426" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ECDSA_sign_ex&apos; argument 3 names different: declaration &apos;dgstlen&apos; definition &apos;dlen&apos;." verbose="Function &apos;ECDSA_sign_ex&apos; argument 3 names different: declaration &apos;dgstlen&apos; definition &apos;dlen&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdsa_sign.c">
+            <location file="crypto/ec/ecdsa_sign.c" line="40" column="60"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1443" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ECDSA_sign_ex&apos; argument 7 names different: declaration &apos;rp&apos; definition &apos;r&apos;." verbose="Function &apos;ECDSA_sign_ex&apos; argument 7 names different: declaration &apos;rp&apos; definition &apos;r&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdsa_sign.c">
+            <location file="crypto/ec/ecdsa_sign.c" line="42" column="19"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1445" column="19"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ECDSA_sign_setup&apos; argument 2 names different: declaration &apos;ctx&apos; definition &apos;ctx_in&apos;." verbose="Function &apos;ECDSA_sign_setup&apos; argument 2 names different: declaration &apos;ctx&apos; definition &apos;ctx_in&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdsa_sign.c">
+            <location file="crypto/ec/ecdsa_sign.c" line="50" column="45"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1412" column="67"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ECDSA_sign_setup&apos; argument 3 names different: declaration &apos;kinv&apos; definition &apos;kinvp&apos;." verbose="Function &apos;ECDSA_sign_setup&apos; argument 3 names different: declaration &apos;kinv&apos; definition &apos;kinvp&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdsa_sign.c">
+            <location file="crypto/ec/ecdsa_sign.c" line="50" column="62"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1413" column="14"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ECDSA_verify&apos; argument 3 names different: declaration &apos;dgstlen&apos; definition &apos;dgst_len&apos;." verbose="Function &apos;ECDSA_verify&apos; argument 3 names different: declaration &apos;dgstlen&apos; definition &apos;dgst_len&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdsa_vrf.c">
+            <location file="crypto/ec/ecdsa_vrf.c" line="41" column="59"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1459" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ECDSA_verify&apos; argument 4 names different: declaration &apos;sig&apos; definition &apos;sigbuf&apos;." verbose="Function &apos;ECDSA_verify&apos; argument 4 names different: declaration &apos;sig&apos; definition &apos;sigbuf&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdsa_vrf.c">
+            <location file="crypto/ec/ecdsa_vrf.c" line="42" column="26"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1459" column="39"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ECDSA_verify&apos; argument 5 names different: declaration &apos;siglen&apos; definition &apos;sig_len&apos;." verbose="Function &apos;ECDSA_verify&apos; argument 5 names different: declaration &apos;siglen&apos; definition &apos;sig_len&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecdsa_vrf.c">
+            <location file="crypto/ec/ecdsa_vrf.c" line="42" column="38"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1460" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EC_KEY_print_fp&apos; argument 2 names different: declaration &apos;key&apos; definition &apos;x&apos;." verbose="Function &apos;EC_KEY_print_fp&apos; argument 2 names different: declaration &apos;key&apos; definition &apos;x&apos;." cwe="628" inconclusive="true" file0="crypto/ec/eck_prn.c">
+            <location file="crypto/ec/eck_prn.c" line="36" column="45"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1287" column="67"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ECParameters_print_fp&apos; argument 2 names different: declaration &apos;key&apos; definition &apos;x&apos;." verbose="Function &apos;ECParameters_print_fp&apos; argument 2 names different: declaration &apos;key&apos; definition &apos;x&apos;." cwe="628" inconclusive="true" file0="crypto/ec/eck_prn.c">
+            <location file="crypto/ec/eck_prn.c" line="51" column="51"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="1279" column="73"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;print_bin&apos; argument 2 names different: declaration &apos;str&apos; definition &apos;name&apos;." verbose="Function &apos;print_bin&apos; argument 2 names different: declaration &apos;str&apos; definition &apos;name&apos;." cwe="628" inconclusive="true" file0="crypto/ec/eck_prn.c">
+            <location file="crypto/ec/eck_prn.c" line="223" column="43"/>
+            <location file="crypto/ec/eck_prn.c" line="67" column="43"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;print_bin&apos; argument 3 names different: declaration &apos;num&apos; definition &apos;buf&apos;." verbose="Function &apos;print_bin&apos; argument 3 names different: declaration &apos;num&apos; definition &apos;buf&apos;." cwe="628" inconclusive="true" file0="crypto/ec/eck_prn.c">
+            <location file="crypto/ec/eck_prn.c" line="223" column="70"/>
+            <location file="crypto/ec/eck_prn.c" line="67" column="69"/>
+        </error>
+        <error id="preprocessorErrorDirective" severity="error" msg="#error &quot;Your compiler doesn&apos;t appear to support 128-bit integer types&quot;" verbose="#error &quot;Your compiler doesn&apos;t appear to support 128-bit integer types&quot;">
+            <location file="crypto/ec/ecp_nistp224.c" line="49" column="0"/>
+        </error>
+        <error id="preprocessorErrorDirective" severity="error" msg="#error &quot;Your compiler doesn&apos;t appear to support 128-bit integer types&quot;" verbose="#error &quot;Your compiler doesn&apos;t appear to support 128-bit integer types&quot;">
+            <location file="crypto/ec/ecp_nistp256.c" line="50" column="0"/>
+        </error>
+        <error id="preprocessorErrorDirective" severity="error" msg="#error &quot;Your compiler doesn&apos;t appear to support 128-bit integer types&quot;" verbose="#error &quot;Your compiler doesn&apos;t appear to support 128-bit integer types&quot;">
+            <location file="crypto/ec/ecp_nistp384.c" line="41" column="0"/>
+        </error>
+        <error id="preprocessorErrorDirective" severity="error" msg="#error &quot;Your compiler doesn&apos;t appear to support 128-bit integer types&quot;" verbose="#error &quot;Your compiler doesn&apos;t appear to support 128-bit integer types&quot;">
+            <location file="crypto/ec/ecp_nistp521.c" line="49" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ec_GFp_simple_set_compressed_coordinates&apos; argument 3 names different: declaration &apos;x&apos; definition &apos;x_&apos;." verbose="Function &apos;ossl_ec_GFp_simple_set_compressed_coordinates&apos; argument 3 names different: declaration &apos;x&apos; definition &apos;x_&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecp_oct.c">
+            <location file="crypto/ec/ecp_oct.c" line="24" column="19"/>
+            <location file="crypto/ec/ec_local.h" line="402" column="19"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;dst[4]&apos; accessed at index 4, which is out of bounds." verbose="Array &apos;dst[4]&apos; accessed at index 4, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="176" column="12" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;src[4]&apos; accessed at index 4, which is out of bounds." verbose="Array &apos;src[4]&apos; accessed at index 4, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="176" column="22" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;dst[4]&apos; accessed at index 5, which is out of bounds." verbose="Array &apos;dst[4]&apos; accessed at index 5, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="177" column="12" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;src[4]&apos; accessed at index 5, which is out of bounds." verbose="Array &apos;src[4]&apos; accessed at index 5, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="177" column="22" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;dst[4]&apos; accessed at index 6, which is out of bounds." verbose="Array &apos;dst[4]&apos; accessed at index 6, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="178" column="12" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;src[4]&apos; accessed at index 6, which is out of bounds." verbose="Array &apos;src[4]&apos; accessed at index 6, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="178" column="22" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;dst[4]&apos; accessed at index 7, which is out of bounds." verbose="Array &apos;dst[4]&apos; accessed at index 7, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="179" column="12" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;src[4]&apos; accessed at index 7, which is out of bounds." verbose="Array &apos;src[4]&apos; accessed at index 7, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="179" column="22" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;a[4]&apos; accessed at index 4, which is out of bounds." verbose="Array &apos;a[4]&apos; accessed at index 4, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="201" column="17" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;b[4]&apos; accessed at index 4, which is out of bounds." verbose="Array &apos;b[4]&apos; accessed at index 4, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="201" column="24" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;a[4]&apos; accessed at index 5, which is out of bounds." verbose="Array &apos;a[4]&apos; accessed at index 5, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="202" column="17" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;b[4]&apos; accessed at index 5, which is out of bounds." verbose="Array &apos;b[4]&apos; accessed at index 5, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="202" column="24" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;a[4]&apos; accessed at index 6, which is out of bounds." verbose="Array &apos;a[4]&apos; accessed at index 6, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="203" column="17" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;b[4]&apos; accessed at index 6, which is out of bounds." verbose="Array &apos;b[4]&apos; accessed at index 6, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="203" column="24" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;a[4]&apos; accessed at index 7, which is out of bounds." verbose="Array &apos;a[4]&apos; accessed at index 7, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="204" column="17" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;b[4]&apos; accessed at index 7, which is out of bounds." verbose="Array &apos;b[4]&apos; accessed at index 7, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="204" column="24" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;ONE[4]&apos; accessed at index 4, which is out of bounds." verbose="Array &apos;ONE[4]&apos; accessed at index 4, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="221" column="30" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;ONE[4]&apos; accessed at index 5, which is out of bounds." verbose="Array &apos;ONE[4]&apos; accessed at index 5, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="222" column="30" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;ONE[4]&apos; accessed at index 6, which is out of bounds." verbose="Array &apos;ONE[4]&apos; accessed at index 6, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="223" column="30" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.X[4]&apos; accessed at index 4, which is out of bounds." verbose="Array &apos;p.p.X[4]&apos; accessed at index 4, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1055" column="32" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.X[4]&apos; accessed at index 5, which is out of bounds." verbose="Array &apos;p.p.X[4]&apos; accessed at index 5, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1055" column="43" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.X[4]&apos; accessed at index 6, which is out of bounds." verbose="Array &apos;p.p.X[4]&apos; accessed at index 6, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1055" column="54" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.X[4]&apos; accessed at index 7, which is out of bounds." verbose="Array &apos;p.p.X[4]&apos; accessed at index 7, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1055" column="65" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.Y[4]&apos; accessed at index 4, which is out of bounds." verbose="Array &apos;p.p.Y[4]&apos; accessed at index 4, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1055" column="76" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.Y[4]&apos; accessed at index 5, which is out of bounds." verbose="Array &apos;p.p.Y[4]&apos; accessed at index 5, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1055" column="87" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.Y[4]&apos; accessed at index 6, which is out of bounds." verbose="Array &apos;p.p.Y[4]&apos; accessed at index 6, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1055" column="98" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.Y[4]&apos; accessed at index 7, which is out of bounds." verbose="Array &apos;p.p.Y[4]&apos; accessed at index 7, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1055" column="109" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.Z[4]&apos; accessed at index 4, which is out of bounds." verbose="Array &apos;p.p.Z[4]&apos; accessed at index 4, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1065" column="22" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;ONE[4]&apos; accessed at index 4, which is out of bounds." verbose="Array &apos;ONE[4]&apos; accessed at index 4, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1065" column="31" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.Z[4]&apos; accessed at index 5, which is out of bounds." verbose="Array &apos;p.p.Z[4]&apos; accessed at index 5, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1066" column="22" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;ONE[4]&apos; accessed at index 5, which is out of bounds." verbose="Array &apos;ONE[4]&apos; accessed at index 5, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1066" column="31" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.Z[4]&apos; accessed at index 6, which is out of bounds." verbose="Array &apos;p.p.Z[4]&apos; accessed at index 6, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1067" column="22" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;ONE[4]&apos; accessed at index 6, which is out of bounds." verbose="Array &apos;ONE[4]&apos; accessed at index 6, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1067" column="31" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;p.p.Z[4]&apos; accessed at index 7, which is out of bounds." verbose="Array &apos;p.p.Z[4]&apos; accessed at index 7, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1068" column="22" info="Array index out of bounds"/>
+        </error>
+        <error id="arrayIndexOutOfBounds" severity="error" msg="Array &apos;ONE[4]&apos; accessed at index 7, which is out of bounds." verbose="Array &apos;ONE[4]&apos; accessed at index 7, which is out of bounds." cwe="788" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1068" column="31" info="Array index out of bounds"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;(num+1)==0&apos; is always false" verbose="Condition &apos;(num+1)==0&apos; is always false" cwe="570" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="952" column="19" info="Condition &apos;(num+1)==0&apos; is always false"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;y_aff&apos; can be reduced." verbose="The scope of the variable &apos;y_aff&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1151" column="14"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;x_ret&apos; can be reduced." verbose="The scope of the variable &apos;x_ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1153" column="14"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;y_ret&apos; can be reduced." verbose="The scope of the variable &apos;y_ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="1153" column="33"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;a&apos; can be declared as pointer to const" verbose="Variable &apos;a&apos; can be declared as pointer to const" cwe="398" file0="crypto/ec/ecp_nistz256.c">
+            <location file="crypto/ec/ecp_nistz256.c" line="213" column="15" info="Variable &apos;a&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;order&apos; can be declared as pointer to const" verbose="Variable &apos;order&apos; can be declared as pointer to const" cwe="398" file0="crypto/ec/ecp_smpl.c">
+            <location file="crypto/ec/ecp_smpl.c" line="254" column="21" info="Variable &apos;order&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;(num+1)==0&apos; is always false" verbose="Condition &apos;(num+1)==0&apos; is always false" cwe="570" file0="crypto/ec/ecp_sm2p256.c">
+            <location file="crypto/ec/ecp_sm2p256.c" line="602" column="19" info="Condition &apos;(num+1)==0&apos; is always false"/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;new_generator[0]!=NULL&apos; is redundant or there is possible null pointer dereference: generator." verbose="Either the condition &apos;new_generator[0]!=NULL&apos; is redundant or there is possible null pointer dereference: generator." cwe="476" file0="crypto/ec/ecp_sm2p256.c">
+            <location file="crypto/ec/ecp_sm2p256.c" line="509" column="24" info="Null pointer dereference"/>
+            <location file="crypto/ec/ecp_sm2p256.c" line="628" column="37" info="Calling function &apos;ecp_sm2p256_is_affine_G&apos;, 1st argument &apos;generator&apos; value is 0"/>
+            <location file="crypto/ec/ecp_sm2p256.c" line="637" column="32" info="Assignment to &apos;new_generator[0]=generator&apos;"/>
+            <location file="crypto/ec/ecp_sm2p256.c" line="641" column="39" info="Assuming that condition &apos;new_generator[0]!=NULL&apos; is not redundant"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;tmp&apos; can be reduced." verbose="The scope of the variable &apos;tmp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ec/ecp_sm2p256.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/constant_time.h" line="438" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;mask&apos; can be reduced." verbose="The scope of the variable &apos;mask&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ec/ecp_sm2p256.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/constant_time.h" line="462" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;index&apos; can be reduced." verbose="The scope of the variable &apos;index&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ec/ecp_sm2p256.c">
+            <location file="crypto/ec/ecp_sm2p256.c" line="390" column="24"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;index&apos; can be reduced." verbose="The scope of the variable &apos;index&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ec/ecp_sm2p256.c">
+            <location file="crypto/ec/ecp_sm2p256.c" line="452" column="18"/>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: &amp;sum" verbose="Uninitialized variable: &amp;sum" cwe="457" file0="crypto/ec/ecp_sm2p256.c">
+            <location file="crypto/ec/ecp_sm2p256.c" line="348" column="18"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous5::a&apos; is never used." verbose="union member &apos;Anonymous5::a&apos; is never used." cwe="563" file0="crypto/ec/ecp_sm2p256.c">
+            <location file="crypto/ec/ecp_sm2p256.c" line="599" column="27"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ecx_key_op&apos; argument 4 names different: declaration &apos;pkey_id&apos; definition &apos;id&apos;." verbose="Function &apos;ossl_ecx_key_op&apos; argument 4 names different: declaration &apos;pkey_id&apos; definition &apos;id&apos;." cwe="628" inconclusive="true" file0="crypto/ec/ecx_backend.c">
+            <location file="crypto/ec/ecx_backend.c" line="150" column="9"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/ecx.h" line="137" column="9"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous4::buff&apos; is never used." verbose="union member &apos;Anonymous4::buff&apos; is never used." cwe="563" file0="crypto/ec/ecx_s390x.c">
+            <location file="crypto/ec/ecx_s390x.c" line="87" column="28"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous6::buff&apos; is never used." verbose="union member &apos;Anonymous6::buff&apos; is never used." cwe="563" file0="crypto/ec/ecx_s390x.c">
+            <location file="crypto/ec/ecx_s390x.c" line="120" column="28"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous8::buff&apos; is never used." verbose="union member &apos;Anonymous8::buff&apos; is never used." cwe="563" file0="crypto/ec/ecx_s390x.c">
+            <location file="crypto/ec/ecx_s390x.c" line="160" column="28"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous10::buff&apos; is never used." verbose="union member &apos;Anonymous10::buff&apos; is never used." cwe="563" file0="crypto/ec/ecx_s390x.c">
+            <location file="crypto/ec/ecx_s390x.c" line="194" column="28"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ecx&apos; can be declared as pointer to const" verbose="Variable &apos;ecx&apos; can be declared as pointer to const" cwe="398" file0="crypto/ec/ecx_meth.c">
+            <location file="crypto/ec/ecx_meth.c" line="409" column="14" info="Variable &apos;ecx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DECODER_up_ref&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." verbose="Function &apos;OSSL_DECODER_up_ref&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="68" column="39"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h" line="31" column="39"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DECODER_free&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." verbose="Function &apos;OSSL_DECODER_free&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="87" column="38"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h" line="32" column="38"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DECODER_get0_provider&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." verbose="Function &apos;OSSL_DECODER_get0_provider&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="484" column="69"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h" line="34" column="69"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DECODER_get0_properties&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." verbose="Function &apos;OSSL_DECODER_get0_properties&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="494" column="62"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h" line="35" column="62"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_decoder_get_number&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." verbose="Function &apos;ossl_decoder_get_number&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="515" column="49"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/decoder.h" line="37" column="49"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DECODER_is_a&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." verbose="Function &apos;OSSL_DECODER_is_a&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="535" column="43"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h" line="38" column="43"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DECODER_do_all_provided&apos; argument 3 names different: declaration &apos;arg&apos; definition &apos;user_arg&apos;." verbose="Function &apos;OSSL_DECODER_do_all_provided&apos; argument 3 names different: declaration &apos;arg&apos; definition &apos;user_arg&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="579" column="11"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h" line="42" column="11"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DECODER_names_do_all&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." verbose="Function &apos;OSSL_DECODER_names_do_all&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="596" column="51"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h" line="43" column="51"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DECODER_settable_ctx_params&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." verbose="Function &apos;OSSL_DECODER_settable_ctx_params&apos; argument 1 names different: declaration &apos;encoder&apos; definition &apos;decoder&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="632" column="48"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h" line="49" column="66"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="172" column="23" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="200" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="361" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="539" column="23" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;decoder&apos; can be declared as pointer to const" verbose="Parameter &apos;decoder&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="546" column="39" info="Parameter &apos;decoder&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="549" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_meth.c">
+            <location file="crypto/encode_decode/decoder_meth.c" line="605" column="23" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="467" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;di&apos; can be reduced." verbose="The scope of the variable &apos;di&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="654" column="32"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DECODER_from_fp&apos; argument 2 names different: declaration &apos;in&apos; definition &apos;fp&apos;." verbose="Function &apos;OSSL_DECODER_from_fp&apos; argument 2 names different: declaration &apos;in&apos; definition &apos;fp&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="134" column="55"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h" line="114" column="55"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;check_inst&apos; can be declared as pointer to const" verbose="Variable &apos;check_inst&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="493" column="36" info="Variable &apos;check_inst&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="711" column="57" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="770" column="50" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="777" column="61" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="785" column="48" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;decoder_inst&apos; can be declared as pointer to const" verbose="Parameter &apos;decoder_inst&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="812" column="58" info="Parameter &apos;decoder_inst&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;decoder_inst&apos; can be declared as pointer to const" verbose="Parameter &apos;decoder_inst&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="820" column="62" info="Parameter &apos;decoder_inst&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;decoder_inst&apos; can be declared as pointer to const" verbose="Parameter &apos;decoder_inst&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="828" column="61" info="Parameter &apos;decoder_inst&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;decoder_inst&apos; can be declared as pointer to const" verbose="Parameter &apos;decoder_inst&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_lib.c">
+            <location file="crypto/encode_decode/decoder_lib.c" line="836" column="66" info="Parameter &apos;decoder_inst&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;keymgmt&apos; can be reduced." verbose="The scope of the variable &apos;keymgmt&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/encode_decode/decoder_pkey.c">
+            <location file="crypto/encode_decode/decoder_pkey.c" line="319" column="18"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DECODER_CTX_new_for_pkey&apos; argument 3 names different: declaration &apos;input_struct&apos; definition &apos;input_structure&apos;." verbose="Function &apos;OSSL_DECODER_CTX_new_for_pkey&apos; argument 3 names different: declaration &apos;input_struct&apos; definition &apos;input_structure&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/decoder_pkey.c">
+            <location file="crypto/encode_decode/decoder_pkey.c" line="833" column="17"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h" line="126" column="17"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;keymgmt&apos; can be declared as pointer to const" verbose="Parameter &apos;keymgmt&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_pkey.c">
+            <location file="crypto/encode_decode/decoder_pkey.c" line="235" column="49" info="Parameter &apos;keymgmt&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;keymgmts&apos; can be declared as pointer to const" verbose="Variable &apos;keymgmts&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_pkey.c">
+            <location file="crypto/encode_decode/decoder_pkey.c" line="317" column="28" info="Variable &apos;keymgmts&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_pkey.c">
+            <location file="crypto/encode_decode/decoder_pkey.c" line="374" column="23" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;keymgmt&apos; can be declared as pointer to const" verbose="Parameter &apos;keymgmt&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/decoder_pkey.c">
+            <location file="crypto/encode_decode/decoder_pkey.c" line="366" column="39" info="Parameter &apos;keymgmt&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_lib.c">
+            <location file="crypto/encode_decode/encoder_lib.c" line="360" column="50" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_lib.c">
+            <location file="crypto/encode_decode/encoder_lib.c" line="376" column="57" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;encoder_inst&apos; can be declared as pointer to const" verbose="Parameter &apos;encoder_inst&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_lib.c">
+            <location file="crypto/encode_decode/encoder_lib.c" line="435" column="58" info="Parameter &apos;encoder_inst&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;encoder_inst&apos; can be declared as pointer to const" verbose="Parameter &apos;encoder_inst&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_lib.c">
+            <location file="crypto/encode_decode/encoder_lib.c" line="443" column="62" info="Parameter &apos;encoder_inst&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;encoder_inst&apos; can be declared as pointer to const" verbose="Parameter &apos;encoder_inst&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_lib.c">
+            <location file="crypto/encode_decode/encoder_lib.c" line="451" column="62" info="Parameter &apos;encoder_inst&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;encoder_inst&apos; can be declared as pointer to const" verbose="Parameter &apos;encoder_inst&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_lib.c">
+            <location file="crypto/encode_decode/encoder_lib.c" line="459" column="67" info="Parameter &apos;encoder_inst&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_ENCODER_get0_name&apos; argument 1 names different: declaration &apos;kdf&apos; definition &apos;encoder&apos;." verbose="Function &apos;OSSL_ENCODER_get0_name&apos; argument 1 names different: declaration &apos;kdf&apos; definition &apos;encoder&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/encoder_meth.c">
+            <location file="crypto/encode_decode/encoder_meth.c" line="521" column="56"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/encoder.h" line="36" column="56"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_ENCODER_get0_description&apos; argument 1 names different: declaration &apos;kdf&apos; definition &apos;encoder&apos;." verbose="Function &apos;OSSL_ENCODER_get0_description&apos; argument 1 names different: declaration &apos;kdf&apos; definition &apos;encoder&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/encoder_meth.c">
+            <location file="crypto/encode_decode/encoder_meth.c" line="526" column="63"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/encoder.h" line="37" column="63"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_ENCODER_do_all_provided&apos; argument 3 names different: declaration &apos;arg&apos; definition &apos;user_arg&apos;." verbose="Function &apos;OSSL_ENCODER_do_all_provided&apos; argument 3 names different: declaration &apos;arg&apos; definition &apos;user_arg&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/encoder_meth.c">
+            <location file="crypto/encode_decode/encoder_meth.c" line="557" column="11"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/encoder.h" line="42" column="11"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_ENCODER_CTX_ctrl_string&apos; argument 3 names different: declaration &apos;val&apos; definition &apos;value&apos;." verbose="Function &apos;OSSL_ENCODER_CTX_ctrl_string&apos; argument 3 names different: declaration &apos;val&apos; definition &apos;value&apos;." cwe="628" inconclusive="true" file0="crypto/encode_decode/encoder_meth.c">
+            <location file="crypto/encode_decode/encoder_meth.c" line="661" column="35"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/encoder.h" line="54" column="35"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_meth.c">
+            <location file="crypto/encode_decode/encoder_meth.c" line="165" column="23" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_meth.c">
+            <location file="crypto/encode_decode/encoder_meth.c" line="193" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_meth.c">
+            <location file="crypto/encode_decode/encoder_meth.c" line="360" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_meth.c">
+            <location file="crypto/encode_decode/encoder_meth.c" line="535" column="23" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_meth.c">
+            <location file="crypto/encode_decode/encoder_meth.c" line="583" column="23" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;arg&apos; can be reduced." verbose="The scope of the variable &apos;arg&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/err/err.c">
+            <location file="crypto/err/err.c" line="803" column="17"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_ERR_STATE_free&apos; argument 1 names different: declaration &apos;es&apos; definition &apos;state&apos;." verbose="Function &apos;OSSL_ERR_STATE_free&apos; argument 1 names different: declaration &apos;es&apos; definition &apos;state&apos;." cwe="628" inconclusive="true" file0="crypto/err/err.c">
+            <location file="crypto/err/err.c" line="195" column="37"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/err.h" line="455" column="37"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ERR_error_string&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;ret&apos;." verbose="Function &apos;ERR_error_string&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;ret&apos;." cwe="628" inconclusive="true" file0="crypto/err/err.c">
+            <location file="crypto/err/err.c" line="571" column="47"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/err.h" line="411" column="47"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;arg&apos; can be declared as pointer to const" verbose="Variable &apos;arg&apos; can be declared as pointer to const" cwe="398" file0="crypto/err/err.c">
+            <location file="crypto/err/err.c" line="803" column="17" info="Variable &apos;arg&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;es&apos; can be declared as pointer to const" verbose="Variable &apos;es&apos; can be declared as pointer to const" cwe="398" file0="crypto/err/err_mark.c">
+            <location file="crypto/err/err_mark.c" line="62" column="16" info="Variable &apos;es&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;encoder&apos; can be declared as pointer to const" verbose="Variable &apos;encoder&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_pkey.c">
+            <location file="crypto/encode_decode/encoder_pkey.c" line="182" column="23" info="Variable &apos;encoder&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/encode_decode/encoder_pkey.c">
+            <location file="crypto/encode_decode/encoder_pkey.c" line="236" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ERR_add_error_txt&apos; argument 1 names different: declaration &apos;sepr&apos; definition &apos;separator&apos;." verbose="Function &apos;ERR_add_error_txt&apos; argument 1 names different: declaration &apos;sepr&apos; definition &apos;separator&apos;." cwe="628" inconclusive="true" file0="crypto/err/err_prn.c">
+            <location file="crypto/err/err_prn.c" line="58" column="36"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/err.h" line="428" column="36"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ERR_add_error_mem_bio&apos; argument 1 names different: declaration &apos;sep&apos; definition &apos;separator&apos;." verbose="Function &apos;ERR_add_error_mem_bio&apos; argument 1 names different: declaration &apos;sep&apos; definition &apos;separator&apos;." cwe="628" inconclusive="true" file0="crypto/err/err_prn.c">
+            <location file="crypto/err/err_prn.c" line="145" column="40"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/err.h" line="429" column="40"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ppmd&apos; can be reduced." verbose="The scope of the variable &apos;ppmd&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="135" column="20"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_new&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;bi&apos;." verbose="Function &apos;md_new&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;bi&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="48" column="24"/>
+            <location file="crypto/evp/bio_md.c" line="24" column="24"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_free&apos; argument 1 names different: declaration &apos;data&apos; definition &apos;a&apos;." verbose="Function &apos;md_free&apos; argument 1 names different: declaration &apos;data&apos; definition &apos;a&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="62" column="25"/>
+            <location file="crypto/evp/bio_md.c" line="25" column="25"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_read&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;md_read&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="73" column="25"/>
+            <location file="crypto/evp/bio_md.c" line="21" column="25"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_read&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;out&apos;." verbose="Function &apos;md_read&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;out&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="73" column="34"/>
+            <location file="crypto/evp/bio_md.c" line="21" column="34"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_read&apos; argument 3 names different: declaration &apos;size&apos; definition &apos;outl&apos;." verbose="Function &apos;md_read&apos; argument 3 names different: declaration &apos;size&apos; definition &apos;outl&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="73" column="43"/>
+            <location file="crypto/evp/bio_md.c" line="21" column="43"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_write&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;md_write&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="102" column="26"/>
+            <location file="crypto/evp/bio_md.c" line="20" column="26"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_write&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;in&apos;." verbose="Function &apos;md_write&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;in&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="102" column="41"/>
+            <location file="crypto/evp/bio_md.c" line="20" column="41"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_write&apos; argument 3 names different: declaration &apos;num&apos; definition &apos;inl&apos;." verbose="Function &apos;md_write&apos; argument 3 names different: declaration &apos;num&apos; definition &apos;inl&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="102" column="49"/>
+            <location file="crypto/evp/bio_md.c" line="20" column="50"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;md_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="132" column="26"/>
+            <location file="crypto/evp/bio_md.c" line="23" column="26"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_ctrl&apos; argument 3 names different: declaration &apos;arg1&apos; definition &apos;num&apos;." verbose="Function &apos;md_ctrl&apos; argument 3 names different: declaration &apos;arg1&apos; definition &apos;num&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="132" column="43"/>
+            <location file="crypto/evp/bio_md.c" line="23" column="43"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_ctrl&apos; argument 4 names different: declaration &apos;arg2&apos; definition &apos;ptr&apos;." verbose="Function &apos;md_ctrl&apos; argument 4 names different: declaration &apos;arg2&apos; definition &apos;ptr&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="132" column="54"/>
+            <location file="crypto/evp/bio_md.c" line="23" column="55"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_callback_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;md_callback_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="206" column="35"/>
+            <location file="crypto/evp/bio_md.c" line="26" column="35"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_gets&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;bp&apos;." verbose="Function &apos;md_gets&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;bp&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="218" column="25"/>
+            <location file="crypto/evp/bio_md.c" line="22" column="25"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md_gets&apos; argument 2 names different: declaration &apos;str&apos; definition &apos;buf&apos;." verbose="Function &apos;md_gets&apos; argument 2 names different: declaration &apos;str&apos; definition &apos;buf&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="218" column="35"/>
+            <location file="crypto/evp/bio_md.c" line="22" column="34"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;md&apos; can be declared as pointer to const" verbose="Variable &apos;md&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/bio_md.c">
+            <location file="crypto/evp/bio_md.c" line="136" column="13" info="Variable &apos;md&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;(ctx-&gt;buf_len-ctx-&gt;buf_off)==pend&apos; is always true" verbose="Condition &apos;(ctx-&gt;buf_len-ctx-&gt;buf_off)==pend&apos; is always true" cwe="571" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="361" column="56" info="Condition &apos;(ctx-&gt;buf_len-ctx-&gt;buf_off)==pend&apos; is always true"/>
+            <location file="crypto/evp/bio_enc.c" line="354" column="18" info="pend is assigned &apos;ctx-&gt;buf_len-ctx-&gt;buf_off&apos; here."/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_new&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;bi&apos;." verbose="Function &apos;enc_new&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;bi&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="69" column="25"/>
+            <location file="crypto/evp/bio_enc.c" line="22" column="25"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_free&apos; argument 1 names different: declaration &apos;data&apos; definition &apos;a&apos;." verbose="Function &apos;enc_free&apos; argument 1 names different: declaration &apos;data&apos; definition &apos;a&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="90" column="26"/>
+            <location file="crypto/evp/bio_enc.c" line="23" column="26"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_read&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;enc_read&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="109" column="26"/>
+            <location file="crypto/evp/bio_enc.c" line="20" column="26"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_read&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;out&apos;." verbose="Function &apos;enc_read&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;out&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="109" column="35"/>
+            <location file="crypto/evp/bio_enc.c" line="20" column="35"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_read&apos; argument 3 names different: declaration &apos;size&apos; definition &apos;outl&apos;." verbose="Function &apos;enc_read&apos; argument 3 names different: declaration &apos;size&apos; definition &apos;outl&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="109" column="44"/>
+            <location file="crypto/evp/bio_enc.c" line="20" column="44"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_write&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;enc_write&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="242" column="27"/>
+            <location file="crypto/evp/bio_enc.c" line="19" column="27"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_write&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;in&apos;." verbose="Function &apos;enc_write&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;in&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="242" column="42"/>
+            <location file="crypto/evp/bio_enc.c" line="19" column="42"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_write&apos; argument 3 names different: declaration &apos;num&apos; definition &apos;inl&apos;." verbose="Function &apos;enc_write&apos; argument 3 names different: declaration &apos;num&apos; definition &apos;inl&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="242" column="50"/>
+            <location file="crypto/evp/bio_enc.c" line="19" column="51"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;enc_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="302" column="27"/>
+            <location file="crypto/evp/bio_enc.c" line="21" column="27"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_ctrl&apos; argument 3 names different: declaration &apos;arg1&apos; definition &apos;num&apos;." verbose="Function &apos;enc_ctrl&apos; argument 3 names different: declaration &apos;arg1&apos; definition &apos;num&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="302" column="44"/>
+            <location file="crypto/evp/bio_enc.c" line="21" column="44"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_ctrl&apos; argument 4 names different: declaration &apos;arg2&apos; definition &apos;ptr&apos;." verbose="Function &apos;enc_ctrl&apos; argument 4 names different: declaration &apos;arg2&apos; definition &apos;ptr&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="302" column="55"/>
+            <location file="crypto/evp/bio_enc.c" line="21" column="56"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enc_callback_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;enc_callback_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="410" column="36"/>
+            <location file="crypto/evp/bio_enc.c" line="24" column="36"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;BIO_set_cipher&apos; argument 5 names different: declaration &apos;enc&apos; definition &apos;e&apos;." verbose="Function &apos;BIO_set_cipher&apos; argument 5 names different: declaration &apos;enc&apos; definition &apos;e&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_enc.c">
+            <location file="crypto/evp/bio_enc.c" line="421" column="33"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="931" column="33"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ESS_ISSUER_SERIAL_dup&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;x&apos;." verbose="Function &apos;ESS_ISSUER_SERIAL_dup&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;x&apos;." cwe="628" inconclusive="true" file0="crypto/ess/ess_asn1.c">
+            <location file="crypto/ess/ess_asn1.c" line="25" column="1"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ess.h" line="176" column="1"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ESS_CERT_ID_dup&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;x&apos;." verbose="Function &apos;ESS_CERT_ID_dup&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;x&apos;." cwe="628" inconclusive="true" file0="crypto/ess/ess_asn1.c">
+            <location file="crypto/ess/ess_asn1.c" line="33" column="1"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ess.h" line="180" column="1"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ESS_SIGNING_CERT_dup&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;x&apos;." verbose="Function &apos;ESS_SIGNING_CERT_dup&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;x&apos;." cwe="628" inconclusive="true" file0="crypto/ess/ess_asn1.c">
+            <location file="crypto/ess/ess_asn1.c" line="41" column="1"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ess.h" line="183" column="1"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ESS_CERT_ID_V2_dup&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;x&apos;." verbose="Function &apos;ESS_CERT_ID_V2_dup&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;x&apos;." cwe="628" inconclusive="true" file0="crypto/ess/ess_asn1.c">
+            <location file="crypto/ess/ess_asn1.c" line="50" column="1"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ess.h" line="187" column="1"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ESS_SIGNING_CERT_V2_dup&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;x&apos;." verbose="Function &apos;ESS_SIGNING_CERT_V2_dup&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;x&apos;." cwe="628" inconclusive="true" file0="crypto/ess/ess_asn1.c">
+            <location file="crypto/ess/ess_asn1.c" line="58" column="1"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ess.h" line="190" column="1"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="120" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_new&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;bi&apos;." verbose="Function &apos;b64_new&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;bi&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="71" column="25"/>
+            <location file="crypto/evp/bio_b64.c" line="22" column="25"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_free&apos; argument 1 names different: declaration &apos;data&apos; definition &apos;a&apos;." verbose="Function &apos;b64_free&apos; argument 1 names different: declaration &apos;data&apos; definition &apos;a&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="94" column="26"/>
+            <location file="crypto/evp/bio_b64.c" line="23" column="26"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_read&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;b64_read&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="190" column="26"/>
+            <location file="crypto/evp/bio_b64.c" line="19" column="26"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_read&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;out&apos;." verbose="Function &apos;b64_read&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;out&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="190" column="35"/>
+            <location file="crypto/evp/bio_b64.c" line="19" column="35"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_read&apos; argument 3 names different: declaration &apos;size&apos; definition &apos;outl&apos;." verbose="Function &apos;b64_read&apos; argument 3 names different: declaration &apos;size&apos; definition &apos;outl&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="190" column="44"/>
+            <location file="crypto/evp/bio_b64.c" line="19" column="44"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_write&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;b64_write&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="400" column="27"/>
+            <location file="crypto/evp/bio_b64.c" line="18" column="27"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_write&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;in&apos;." verbose="Function &apos;b64_write&apos; argument 2 names different: declaration &apos;buf&apos; definition &apos;in&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="400" column="42"/>
+            <location file="crypto/evp/bio_b64.c" line="18" column="42"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_write&apos; argument 3 names different: declaration &apos;num&apos; definition &apos;inl&apos;." verbose="Function &apos;b64_write&apos; argument 3 names different: declaration &apos;num&apos; definition &apos;inl&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="400" column="50"/>
+            <location file="crypto/evp/bio_b64.c" line="18" column="51"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;b64_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="510" column="27"/>
+            <location file="crypto/evp/bio_b64.c" line="21" column="27"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_ctrl&apos; argument 3 names different: declaration &apos;arg1&apos; definition &apos;num&apos;." verbose="Function &apos;b64_ctrl&apos; argument 3 names different: declaration &apos;arg1&apos; definition &apos;num&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="510" column="44"/>
+            <location file="crypto/evp/bio_b64.c" line="21" column="44"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_ctrl&apos; argument 4 names different: declaration &apos;arg2&apos; definition &apos;ptr&apos;." verbose="Function &apos;b64_ctrl&apos; argument 4 names different: declaration &apos;arg2&apos; definition &apos;ptr&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="510" column="55"/>
+            <location file="crypto/evp/bio_b64.c" line="21" column="56"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_callback_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;b64_callback_ctrl&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="607" column="36"/>
+            <location file="crypto/evp/bio_b64.c" line="24" column="36"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;b64_puts&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." verbose="Function &apos;b64_puts&apos; argument 1 names different: declaration &apos;h&apos; definition &apos;b&apos;." cwe="628" inconclusive="true" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="617" column="26"/>
+            <location file="crypto/evp/bio_b64.c" line="20" column="26"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="176" column="43" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;p&apos; can be declared as pointer to const" verbose="Variable &apos;p&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/bio_b64.c">
+            <location file="crypto/evp/bio_b64.c" line="194" column="20" info="Variable &apos;p&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_asym_cipher_fetch_from_prov&apos; argument 2 names different: declaration &apos;name&apos; definition &apos;algorithm&apos;." verbose="Function &apos;evp_asym_cipher_fetch_from_prov&apos; argument 2 names different: declaration &apos;name&apos; definition &apos;algorithm&apos;." cwe="628" inconclusive="true" file0="crypto/evp/asymcipher.c">
+            <location file="crypto/evp/asymcipher.c" line="496" column="17"/>
+            <location file="crypto/evp/evp_local.h" line="347" column="17"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_ASYM_CIPHER_gettable_ctx_params&apos; argument 1 names different: declaration &apos;ciph&apos; definition &apos;cip&apos;." verbose="Function &apos;EVP_ASYM_CIPHER_gettable_ctx_params&apos; argument 1 names different: declaration &apos;ciph&apos; definition &apos;cip&apos;." cwe="628" inconclusive="true" file0="crypto/evp/asymcipher.c">
+            <location file="crypto/evp/asymcipher.c" line="552" column="78"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1827" column="78"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_ASYM_CIPHER_settable_ctx_params&apos; argument 1 names different: declaration &apos;ciph&apos; definition &apos;cip&apos;." verbose="Function &apos;EVP_ASYM_CIPHER_settable_ctx_params&apos; argument 1 names different: declaration &apos;ciph&apos; definition &apos;cip&apos;." cwe="628" inconclusive="true" file0="crypto/evp/asymcipher.c">
+            <location file="crypto/evp/asymcipher.c" line="563" column="78"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1828" column="78"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;cert&apos; can be declared as pointer to const" verbose="Variable &apos;cert&apos; can be declared as pointer to const" cwe="398" file0="crypto/ess/ess_lib.c">
+            <location file="crypto/ess/ess_lib.c" line="48" column="15" info="Variable &apos;cert&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;cert&apos; can be declared as pointer to const" verbose="Variable &apos;cert&apos; can be declared as pointer to const" cwe="398" file0="crypto/ess/ess_lib.c">
+            <location file="crypto/ess/ess_lib.c" line="150" column="15" info="Variable &apos;cert&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;issuer&apos; can be declared as pointer to const" verbose="Variable &apos;issuer&apos; can be declared as pointer to const" cwe="398" file0="crypto/ess/ess_lib.c">
+            <location file="crypto/ess/ess_lib.c" line="247" column="19" info="Variable &apos;issuer&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_set_dh_paramgen_subprime_len&apos; argument 2 names different: declaration &apos;qlen&apos; definition &apos;qbits&apos;." verbose="Function &apos;EVP_PKEY_CTX_set_dh_paramgen_subprime_len&apos; argument 2 names different: declaration &apos;qlen&apos; definition &apos;qbits&apos;." cwe="628" inconclusive="true" file0="crypto/evp/dh_ctrl.c">
+            <location file="crypto/evp/dh_ctrl.c" line="104" column="70"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/dh.h" line="44" column="70"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_get_dh_kdf_md&apos; argument 2 names different: declaration &apos;md&apos; definition &apos;pmd&apos;." verbose="Function &apos;EVP_PKEY_CTX_get_dh_kdf_md&apos; argument 2 names different: declaration &apos;md&apos; definition &apos;pmd&apos;." cwe="628" inconclusive="true" file0="crypto/evp/dh_ctrl.c">
+            <location file="crypto/evp/dh_ctrl.c" line="230" column="66"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/dh.h" line="56" column="66"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_set_dh_kdf_outlen&apos; argument 2 names different: declaration &apos;len&apos; definition &apos;outlen&apos;." verbose="Function &apos;EVP_PKEY_CTX_set_dh_kdf_outlen&apos; argument 2 names different: declaration &apos;len&apos; definition &apos;outlen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/dh_ctrl.c">
+            <location file="crypto/evp/dh_ctrl.c" line="236" column="59"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/dh.h" line="57" column="59"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_get_dh_kdf_outlen&apos; argument 2 names different: declaration &apos;len&apos; definition &apos;plen&apos;." verbose="Function &apos;EVP_PKEY_CTX_get_dh_kdf_outlen&apos; argument 2 names different: declaration &apos;len&apos; definition &apos;plen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/dh_ctrl.c">
+            <location file="crypto/evp/dh_ctrl.c" line="265" column="60"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/dh.h" line="58" column="60"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_get0_dh_kdf_ukm&apos; argument 2 names different: declaration &apos;ukm&apos; definition &apos;pukm&apos;." verbose="Function &apos;EVP_PKEY_CTX_get0_dh_kdf_ukm&apos; argument 2 names different: declaration &apos;ukm&apos; definition &apos;pukm&apos;." cwe="628" inconclusive="true" file0="crypto/evp/dh_ctrl.c">
+            <location file="crypto/evp/dh_ctrl.c" line="320" column="69"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/dh.h" line="62" column="69"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/dh_ctrl.c">
+            <location file="crypto/evp/dh_ctrl.c" line="19" column="44" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/dh_ctrl.c">
+            <location file="crypto/evp/dh_ctrl.c" line="34" column="48" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/dsa_ctrl.c">
+            <location file="crypto/evp/dsa_ctrl.c" line="17" column="45" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="autoVariables" severity="error" msg="Address of local auto-variable assigned to a function parameter." verbose="Dangerous assignment - the function parameter is assigned the address of a local auto-variable. Local auto-variables are reserved from the stack which is freed when the function ends. So the pointer to a local variable is invalid after the function ends." cwe="562" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="1183" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_pkey_ctx_ctrl_to_param&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;pctx&apos;." verbose="Function &apos;evp_pkey_ctx_ctrl_to_param&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;pctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="2750" column="46"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="685" column="46"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_pkey_ctx_ctrl_str_to_param&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;pctx&apos;." verbose="Function &apos;evp_pkey_ctx_ctrl_str_to_param&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;pctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="2818" column="50"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="688" column="50"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;cipher&apos; can be declared as pointer to const. However it seems that &apos;get_cipher_name&apos; is a callback function, if &apos;cipher&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;cipher&apos; can be declared as pointer to const. However it seems that &apos;get_cipher_name&apos; is a callback function, if &apos;cipher&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="729" column="42" info="Parameter &apos;cipher&apos; can be declared as pointer to const"/>
+            <location file="crypto/evp/ctrl_params_translate.c" line="810" column="9" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;md&apos; can be declared as pointer to const. However it seems that &apos;get_md_name&apos; is a callback function, if &apos;md&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;md&apos; can be declared as pointer to const. However it seems that &apos;get_md_name&apos; is a callback function, if &apos;md&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="734" column="38" info="Parameter &apos;md&apos; can be declared as pointer to const"/>
+            <location file="crypto/evp/ctrl_params_translate.c" line="818" column="9" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="1542" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="1589" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="1622" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="1686" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="1757" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="1839" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="1867" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ret&apos; is assigned a value that is never used." verbose="Variable &apos;ret&apos; is assigned a value that is never used." cwe="563" file0="crypto/evp/ctrl_params_translate.c">
+            <location file="crypto/evp/ctrl_params_translate.c" line="1519" column="17"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;provctx&apos; can be reduced." verbose="The scope of the variable &apos;provctx&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="621" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;alg&apos; can be reduced." verbose="The scope of the variable &apos;alg&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="633" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;provctx&apos; can be reduced." verbose="The scope of the variable &apos;provctx&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="677" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;provctx&apos; can be reduced." verbose="The scope of the variable &apos;provctx&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="689" column="11"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_md_ctx_clear_digest&apos; argument 3 names different: declaration &apos;keep_digest&apos; definition &apos;keep_fetched&apos;." verbose="Function &apos;evp_md_ctx_clear_digest&apos; argument 3 names different: declaration &apos;keep_digest&apos; definition &apos;keep_fetched&apos;." cwe="628" inconclusive="true" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="28" column="62"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="674" column="62"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_DigestUpdate&apos; argument 2 names different: declaration &apos;d&apos; definition &apos;data&apos;." verbose="Function &apos;EVP_DigestUpdate&apos; argument 2 names different: declaration &apos;d&apos; definition &apos;data&apos;." cwe="628" inconclusive="true" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="245" column="51"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="714" column="58"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_DigestUpdate&apos; argument 3 names different: declaration &apos;cnt&apos; definition &apos;count&apos;." verbose="Function &apos;EVP_DigestUpdate&apos; argument 3 names different: declaration &apos;cnt&apos; definition &apos;count&apos;." cwe="628" inconclusive="true" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="245" column="64"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="715" column="12"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_DigestFinal&apos; argument 3 names different: declaration &apos;s&apos; definition &apos;size&apos;." verbose="Function &apos;EVP_DigestFinal&apos; argument 3 names different: declaration &apos;s&apos; definition &apos;size&apos;." cwe="628" inconclusive="true" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="289" column="71"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="728" column="19"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_DigestFinal_ex&apos; argument 3 names different: declaration &apos;s&apos; definition &apos;isize&apos;." verbose="Function &apos;EVP_DigestFinal_ex&apos; argument 3 names different: declaration &apos;s&apos; definition &apos;isize&apos;." cwe="628" inconclusive="true" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="298" column="74"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="717" column="19"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_DigestFinalXOF&apos; argument 2 names different: declaration &apos;out&apos; definition &apos;md&apos;." verbose="Function &apos;EVP_DigestFinalXOF&apos; argument 2 names different: declaration &apos;out&apos; definition &apos;md&apos;." cwe="628" inconclusive="true" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="343" column="56"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="729" column="63"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_DigestFinalXOF&apos; argument 3 names different: declaration &apos;outlen&apos; definition &apos;size&apos;." verbose="Function &apos;EVP_DigestFinalXOF&apos; argument 3 names different: declaration &apos;outlen&apos; definition &apos;size&apos;." cwe="628" inconclusive="true" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="343" column="67"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="730" column="12"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_DigestSqueeze&apos; argument 2 names different: declaration &apos;out&apos; definition &apos;md&apos;." verbose="Function &apos;EVP_DigestSqueeze&apos; argument 2 names different: declaration &apos;out&apos; definition &apos;md&apos;." cwe="628" inconclusive="true" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="386" column="55"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="731" column="62"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_DigestSqueeze&apos; argument 3 names different: declaration &apos;outlen&apos; definition &apos;size&apos;." verbose="Function &apos;EVP_DigestSqueeze&apos; argument 3 names different: declaration &apos;outlen&apos; definition &apos;size&apos;." cwe="628" inconclusive="true" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="386" column="66"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="732" column="12"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_md2hmacnid&apos; argument 1 names different: declaration &apos;mdnid&apos; definition &apos;md_nid&apos;." verbose="Function &apos;ossl_md2hmacnid&apos; argument 1 names different: declaration &apos;mdnid&apos; definition &apos;md_nid&apos;." cwe="628" inconclusive="true" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="1099" column="25"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="730" column="25"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;impl&apos; can be declared as pointer to const" verbose="Parameter &apos;impl&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="238" column="68" info="Parameter &apos;impl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;impl&apos; can be declared as pointer to const" verbose="Parameter &apos;impl&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/digest.c">
+            <location file="crypto/evp/digest.c" line="548" column="13" info="Parameter &apos;impl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/ec_support.c">
+            <location file="crypto/evp/ec_support.c" line="135" column="12"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;nid&apos; can be reduced." verbose="The scope of the variable &apos;nid&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/ec_support.c">
+            <location file="crypto/evp/ec_support.c" line="136" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_get_ecdh_kdf_md&apos; argument 2 names different: declaration &apos;md&apos; definition &apos;pmd&apos;." verbose="Function &apos;EVP_PKEY_CTX_get_ecdh_kdf_md&apos; argument 2 names different: declaration &apos;md&apos; definition &apos;pmd&apos;." cwe="628" inconclusive="true" file0="crypto/evp/ec_ctrl.c">
+            <location file="crypto/evp/ec_ctrl.c" line="140" column="68"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="40" column="68"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_set_ecdh_kdf_outlen&apos; argument 2 names different: declaration &apos;len&apos; definition &apos;outlen&apos;." verbose="Function &apos;EVP_PKEY_CTX_set_ecdh_kdf_outlen&apos; argument 2 names different: declaration &apos;len&apos; definition &apos;outlen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/ec_ctrl.c">
+            <location file="crypto/evp/ec_ctrl.c" line="146" column="61"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="42" column="61"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_get_ecdh_kdf_outlen&apos; argument 2 names different: declaration &apos;len&apos; definition &apos;plen&apos;." verbose="Function &apos;EVP_PKEY_CTX_get_ecdh_kdf_outlen&apos; argument 2 names different: declaration &apos;len&apos; definition &apos;plen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/ec_ctrl.c">
+            <location file="crypto/evp/ec_ctrl.c" line="175" column="62"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="43" column="62"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_get0_ecdh_kdf_ukm&apos; argument 2 names different: declaration &apos;ukm&apos; definition &apos;pukm&apos;." verbose="Function &apos;EVP_PKEY_CTX_get0_ecdh_kdf_ukm&apos; argument 2 names different: declaration &apos;ukm&apos; definition &apos;pukm&apos;." cwe="628" inconclusive="true" file0="crypto/evp/ec_ctrl.c">
+            <location file="crypto/evp/ec_ctrl.c" line="242" column="71"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h" line="49" column="71"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/enc_b64_scalar.c">
+            <location file="crypto/evp/enc_b64_scalar.c" line="127" column="44" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;wrap_cnt&apos; can be declared as pointer to const" verbose="Parameter &apos;wrap_cnt&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/enc_b64_scalar.c">
+            <location file="crypto/evp/enc_b64_scalar.c" line="128" column="44" info="Parameter &apos;wrap_cnt&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/encode.c">
+            <location file="crypto/evp/encode.c" line="526" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_EncodeBlock&apos; argument 3 names different: declaration &apos;n&apos; definition &apos;dlen&apos;." verbose="Function &apos;EVP_EncodeBlock&apos; argument 3 names different: declaration &apos;n&apos; definition &apos;dlen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/encode.c">
+            <location file="crypto/evp/encode.c" line="228" column="67"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="895" column="67"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/encode.c">
+            <location file="crypto/evp/encode.c" line="122" column="40" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/encode.c">
+            <location file="crypto/evp/encode.c" line="416" column="48" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;len&gt;0&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;len&gt;0&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="647" column="32"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;diff&lt;(unsigned long)len&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" verbose="Boolean expression &apos;diff&lt;(unsigned long)len&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" cwe="398" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="647" column="73"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p&apos; can be reduced." verbose="The scope of the variable &apos;p&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="1147" column="23"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;provctx&apos; can be reduced." verbose="The scope of the variable &apos;provctx&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="1186" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;provctx&apos; can be reduced." verbose="The scope of the variable &apos;provctx&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="1197" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;alg&apos; can be reduced." verbose="The scope of the variable &apos;alg&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="1208" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;provctx&apos; can be reduced." verbose="The scope of the variable &apos;provctx&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="1219" column="11"/>
+        </error>
+        <error id="zerodivcond" severity="warning" msg="Either the condition &apos;b&lt;0&apos; is redundant or there is division by zero at line 26." verbose="Either the condition &apos;b&lt;0&apos; is redundant or there is division by zero at line 26." cwe="369" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Division by zero"/>
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Assignment &apos;y=b&lt;0?-b:b&apos;, assigned value is 0"/>
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Assuming that condition &apos;b&lt;0&apos; is not redundant"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_CIPHER_CTX_reset&apos; argument 1 names different: declaration &apos;c&apos; definition &apos;ctx&apos;." verbose="Function &apos;EVP_CIPHER_CTX_reset&apos; argument 1 names different: declaration &apos;c&apos; definition &apos;ctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="28" column="42"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="908" column="42"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_CIPHER_CTX_free&apos; argument 1 names different: declaration &apos;c&apos; definition &apos;ctx&apos;." verbose="Function &apos;EVP_CIPHER_CTX_free&apos; argument 1 names different: declaration &apos;c&apos; definition &apos;ctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="61" column="42"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="909" column="42"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_CipherFinal_ex&apos; argument 2 names different: declaration &apos;outm&apos; definition &apos;out&apos;." verbose="Function &apos;EVP_CipherFinal_ex&apos; argument 2 names different: declaration &apos;outm&apos; definition &apos;out&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="523" column="60"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="830" column="67"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_CipherFinal&apos; argument 2 names different: declaration &apos;outm&apos; definition &apos;out&apos;." verbose="Function &apos;EVP_CipherFinal&apos; argument 2 names different: declaration &apos;outm&apos; definition &apos;out&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="531" column="57"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="811" column="64"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_CipherPipelineFinal&apos; argument 2 names different: declaration &apos;outm&apos; definition &apos;out&apos;." verbose="Function &apos;EVP_CipherPipelineFinal&apos; argument 2 names different: declaration &apos;outm&apos; definition &apos;out&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="540" column="21"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="828" column="21"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_DecryptFinal&apos; argument 2 names different: declaration &apos;outm&apos; definition &apos;out&apos;." verbose="Function &apos;EVP_DecryptFinal&apos; argument 2 names different: declaration &apos;outm&apos; definition &apos;out&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="818" column="58"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="790" column="65"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_DecryptFinal_ex&apos; argument 2 names different: declaration &apos;outm&apos; definition &apos;out&apos;." verbose="Function &apos;EVP_DecryptFinal_ex&apos; argument 2 names different: declaration &apos;outm&apos; definition &apos;out&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="825" column="61"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="792" column="68"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_CIPHER_CTX_set_key_length&apos; argument 1 names different: declaration &apos;x&apos; definition &apos;c&apos;." verbose="Function &apos;EVP_CIPHER_CTX_set_key_length&apos; argument 1 names different: declaration &apos;x&apos; definition &apos;c&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="875" column="51"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="910" column="51"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_CIPHER_CTX_set_padding&apos; argument 1 names different: declaration &apos;c&apos; definition &apos;ctx&apos;." verbose="Function &apos;EVP_CIPHER_CTX_set_padding&apos; argument 1 names different: declaration &apos;c&apos; definition &apos;ctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="907" column="48"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="911" column="48"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_CIPHER_CTX_settable_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;cctx&apos;." verbose="Function &apos;EVP_CIPHER_CTX_settable_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;cctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="1206" column="66"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="920" column="66"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_CIPHER_CTX_gettable_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;cctx&apos;." verbose="Function &apos;EVP_CIPHER_CTX_gettable_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;cctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="1217" column="66"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="921" column="66"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_cipher_free_int&apos; argument 1 names different: declaration &apos;md&apos; definition &apos;cipher&apos;." verbose="Function &apos;evp_cipher_free_int&apos; argument 1 names different: declaration &apos;md&apos; definition &apos;cipher&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="1594" column="38"/>
+            <location file="crypto/evp/evp_local.h" line="401" column="38"/>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;^&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a^b?c:d&apos;&apos; should be written as either &apos;&apos;(a^b)?c:d&apos;&apos; or &apos;&apos;a^(b?c:d)&apos;&apos;." cwe="783" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="26" column="1"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;skey&apos; can be declared as pointer to const" verbose="Parameter &apos;skey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="388" column="15" info="Parameter &apos;skey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;impl&apos; can be declared as pointer to const" verbose="Parameter &apos;impl&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="411" column="13" info="Parameter &apos;impl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;impl&apos; can be declared as pointer to const" verbose="Parameter &apos;impl&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="579" column="13" info="Parameter &apos;impl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;impl&apos; can be declared as pointer to const" verbose="Parameter &apos;impl&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="601" column="13" info="Parameter &apos;impl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="shiftTooManyBitsSigned" severity="portability" msg="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" verbose="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" cwe="758" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Shift"/>
+        </error>
+        <error id="integerOverflowCond" severity="warning" msg="Either the condition &apos;a&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))-a&apos;." verbose="Either the condition &apos;a&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))-a&apos;." cwe="190" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Integer overflow"/>
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Assuming that condition &apos;a&gt;0&apos; is not redundant"/>
+        </error>
+        <error id="integerOverflowCond" severity="warning" msg="Either the condition &apos;a&lt;0&apos; is redundant or there is signed integer overflow for expression &apos;((int)1&lt;&lt;(sizeof(int)*8-1))-a&apos;." verbose="Either the condition &apos;a&lt;0&apos; is redundant or there is signed integer overflow for expression &apos;((int)1&lt;&lt;(sizeof(int)*8-1))-a&apos;." cwe="190" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Integer overflow"/>
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Assuming that condition &apos;a&lt;0&apos; is not redundant"/>
+        </error>
+        <error id="integerOverflowCond" severity="warning" msg="Either the condition &apos;b&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;((int)1&lt;&lt;(sizeof(int)*8-1))+b&apos;." verbose="Either the condition &apos;b&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;((int)1&lt;&lt;(sizeof(int)*8-1))+b&apos;." cwe="190" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Integer overflow"/>
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Assuming that condition &apos;b&gt;0&apos; is not redundant"/>
+        </error>
+        <error id="integerOverflowCond" severity="warning" msg="Either the condition &apos;b&lt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))+b&apos;." verbose="Either the condition &apos;b&lt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))+b&apos;." cwe="190" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Integer overflow"/>
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Assuming that condition &apos;b&lt;0&apos; is not redundant"/>
+        </error>
+        <error id="integerOverflowCond" severity="warning" msg="Either the condition &apos;b&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))-b&apos;." verbose="Either the condition &apos;b&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))-b&apos;." cwe="190" file0="crypto/evp/evp_enc.c">
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Integer overflow"/>
+            <location file="crypto/evp/evp_enc.c" line="26" column="1" info="Assuming that condition &apos;b&gt;0&apos; is not redundant"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_generic_fetch&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;libctx&apos;." verbose="Function &apos;evp_generic_fetch&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;libctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_fetch.c">
+            <location file="crypto/evp/evp_fetch.c" line="491" column="39"/>
+            <location file="crypto/evp/evp_local.h" line="314" column="39"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_fetch.c">
+            <location file="crypto/evp/evp_fetch.c" line="141" column="23" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_fetch.c">
+            <location file="crypto/evp/evp_fetch.c" line="171" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_fetch.c">
+            <location file="crypto/evp/evp_fetch.c" line="262" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;prov&apos; can be declared as pointer to const" verbose="Parameter &apos;prov&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_fetch.c">
+            <location file="crypto/evp/evp_fetch.c" line="758" column="29" info="Parameter &apos;prov&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_fetch.c">
+            <location file="crypto/evp/evp_fetch.c" line="765" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;prov&apos; can be declared as pointer to const" verbose="Parameter &apos;prov&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_fetch.c">
+            <location file="crypto/evp/evp_fetch.c" line="772" column="37" info="Parameter &apos;prov&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_fetch.c">
+            <location file="crypto/evp/evp_fetch.c" line="777" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;oval&apos; can be reduced." verbose="The scope of the variable &apos;oval&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/evp_cnf.c">
+            <location file="crypto/evp/evp_cnf.c" line="26" column="17"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;md&apos; can be declared as pointer to const. However it seems that &apos;alg_module_init&apos; is a callback function, if &apos;md&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;md&apos; can be declared as pointer to const. However it seems that &apos;alg_module_init&apos; is a callback function, if &apos;md&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="crypto/evp/evp_cnf.c">
+            <location file="crypto/evp/evp_cnf.c" line="21" column="42" info="Parameter &apos;md&apos; can be declared as pointer to const"/>
+            <location file="crypto/evp/evp_cnf.c" line="72" column="36" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sktmp&apos; can be declared as pointer to const" verbose="Variable &apos;sktmp&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_cnf.c">
+            <location file="crypto/evp/evp_cnf.c" line="25" column="27" info="Variable &apos;sktmp&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_read_pw_string&apos; argument 2 names different: declaration &apos;length&apos; definition &apos;len&apos;." verbose="Function &apos;EVP_read_pw_string&apos; argument 2 names different: declaration &apos;length&apos; definition &apos;len&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_key.c">
+            <location file="crypto/evp/evp_key.c" line="47" column="39"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="744" column="39"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_read_pw_string_min&apos; argument 2 names different: declaration &apos;minlen&apos; definition &apos;min&apos;." verbose="Function &apos;EVP_read_pw_string_min&apos; argument 2 names different: declaration &apos;minlen&apos; definition &apos;min&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_key.c">
+            <location file="crypto/evp/evp_key.c" line="52" column="43"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="745" column="43"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_read_pw_string_min&apos; argument 3 names different: declaration &apos;maxlen&apos; definition &apos;len&apos;." verbose="Function &apos;EVP_read_pw_string_min&apos; argument 3 names different: declaration &apos;maxlen&apos; definition &apos;len&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_key.c">
+            <location file="crypto/evp/evp_key.c" line="52" column="52"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="745" column="55"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;l&apos; can be reduced." verbose="The scope of the variable &apos;l&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="48" column="18"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="69" column="18"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;params&apos; can be reduced." verbose="The scope of the variable &apos;params&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="488" column="20"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_CIPHER_get_asn1_iv&apos; argument 1 names different: declaration &apos;c&apos; definition &apos;ctx&apos;." verbose="Function &apos;EVP_CIPHER_get_asn1_iv&apos; argument 1 names different: declaration &apos;c&apos; definition &apos;ctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="45" column="44"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1509" column="44"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_cipher_param_to_asn1_ex&apos; argument 3 names different: declaration &apos;params&apos; definition &apos;asn1_params&apos;." verbose="Function &apos;evp_cipher_param_to_asn1_ex&apos; argument 3 names different: declaration &apos;params&apos; definition &apos;asn1_params&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="82" column="34"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="323" column="34"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_cipher_asn1_to_param_ex&apos; argument 3 names different: declaration &apos;params&apos; definition &apos;asn1_params&apos;." verbose="Function &apos;evp_cipher_asn1_to_param_ex&apos; argument 3 names different: declaration &apos;params&apos; definition &apos;asn1_params&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="146" column="34"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="326" column="34"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_CIPHER_impl_ctx_size&apos; argument 1 names different: declaration &apos;cipher&apos; definition &apos;e&apos;." verbose="Function &apos;EVP_CIPHER_impl_ctx_size&apos; argument 1 names different: declaration &apos;cipher&apos; definition &apos;e&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="370" column="48"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="589" column="48"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_Cipher&apos; argument 1 names different: declaration &apos;c&apos; definition &apos;ctx&apos;." verbose="Function &apos;EVP_Cipher&apos; argument 1 names different: declaration &apos;c&apos; definition &apos;ctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="375" column="32"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="677" column="39"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;type&apos; can be declared as pointer to const" verbose="Parameter &apos;type&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="45" column="60" info="Parameter &apos;type&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;c&apos; can be declared as pointer to const" verbose="Parameter &apos;c&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="66" column="44" info="Parameter &apos;c&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;type&apos; can be declared as pointer to const" verbose="Parameter &apos;type&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="209" column="67" info="Parameter &apos;type&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_lib.c">
+            <location file="crypto/evp/evp_lib.c" line="591" column="59" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/evp_pbe.c">
+            <location file="crypto/evp/evp_pbe.c" line="240" column="9"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pbe_obj&apos; can be declared as pointer to const" verbose="Parameter &apos;pbe_obj&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_pbe.c">
+            <location file="crypto/evp/evp_pbe.c" line="96" column="40" info="Parameter &apos;pbe_obj&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;key&apos; can be declared as pointer to const" verbose="Parameter &apos;key&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_pbe.c">
+            <location file="crypto/evp/evp_pbe.c" line="172" column="1" info="Parameter &apos;key&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_do_ciph_getparams&apos; argument 1 names different: declaration &apos;ciph&apos; definition &apos;obj&apos;." verbose="Function &apos;evp_do_ciph_getparams&apos; argument 1 names different: declaration &apos;ciph&apos; definition &apos;obj&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_utils.c">
+            <location file="crypto/evp/evp_utils.c" line="73" column="1"/>
+            <location file="crypto/evp/evp_local.h" line="387" column="45"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_do_ciph_ctx_getparams&apos; argument 1 names different: declaration &apos;ciph&apos; definition &apos;obj&apos;." verbose="Function &apos;evp_do_ciph_ctx_getparams&apos; argument 1 names different: declaration &apos;ciph&apos; definition &apos;obj&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_utils.c">
+            <location file="crypto/evp/evp_utils.c" line="73" column="1"/>
+            <location file="crypto/evp/evp_local.h" line="388" column="49"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_do_ciph_ctx_getparams&apos; argument 2 names different: declaration &apos;provctx&apos; definition &apos;algctx&apos;." verbose="Function &apos;evp_do_ciph_ctx_getparams&apos; argument 2 names different: declaration &apos;provctx&apos; definition &apos;algctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_utils.c">
+            <location file="crypto/evp/evp_utils.c" line="73" column="1"/>
+            <location file="crypto/evp/evp_local.h" line="388" column="61"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_do_ciph_ctx_setparams&apos; argument 1 names different: declaration &apos;ciph&apos; definition &apos;obj&apos;." verbose="Function &apos;evp_do_ciph_ctx_setparams&apos; argument 1 names different: declaration &apos;ciph&apos; definition &apos;obj&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_utils.c">
+            <location file="crypto/evp/evp_utils.c" line="73" column="1"/>
+            <location file="crypto/evp/evp_local.h" line="390" column="49"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_do_ciph_ctx_setparams&apos; argument 2 names different: declaration &apos;provctx&apos; definition &apos;algctx&apos;." verbose="Function &apos;evp_do_ciph_ctx_setparams&apos; argument 2 names different: declaration &apos;provctx&apos; definition &apos;algctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_utils.c">
+            <location file="crypto/evp/evp_utils.c" line="73" column="1"/>
+            <location file="crypto/evp/evp_local.h" line="390" column="61"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_do_md_getparams&apos; argument 1 names different: declaration &apos;md&apos; definition &apos;obj&apos;." verbose="Function &apos;evp_do_md_getparams&apos; argument 1 names different: declaration &apos;md&apos; definition &apos;obj&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_utils.c">
+            <location file="crypto/evp/evp_utils.c" line="78" column="1"/>
+            <location file="crypto/evp/evp_local.h" line="392" column="39"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_do_md_ctx_getparams&apos; argument 1 names different: declaration &apos;md&apos; definition &apos;obj&apos;." verbose="Function &apos;evp_do_md_ctx_getparams&apos; argument 1 names different: declaration &apos;md&apos; definition &apos;obj&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_utils.c">
+            <location file="crypto/evp/evp_utils.c" line="78" column="1"/>
+            <location file="crypto/evp/evp_local.h" line="393" column="43"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_do_md_ctx_getparams&apos; argument 2 names different: declaration &apos;provctx&apos; definition &apos;algctx&apos;." verbose="Function &apos;evp_do_md_ctx_getparams&apos; argument 2 names different: declaration &apos;provctx&apos; definition &apos;algctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_utils.c">
+            <location file="crypto/evp/evp_utils.c" line="78" column="1"/>
+            <location file="crypto/evp/evp_local.h" line="393" column="53"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_do_md_ctx_setparams&apos; argument 1 names different: declaration &apos;md&apos; definition &apos;obj&apos;." verbose="Function &apos;evp_do_md_ctx_setparams&apos; argument 1 names different: declaration &apos;md&apos; definition &apos;obj&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_utils.c">
+            <location file="crypto/evp/evp_utils.c" line="78" column="1"/>
+            <location file="crypto/evp/evp_local.h" line="395" column="43"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_do_md_ctx_setparams&apos; argument 2 names different: declaration &apos;provctx&apos; definition &apos;algctx&apos;." verbose="Function &apos;evp_do_md_ctx_setparams&apos; argument 2 names different: declaration &apos;provctx&apos; definition &apos;algctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_utils.c">
+            <location file="crypto/evp/evp_utils.c" line="78" column="1"/>
+            <location file="crypto/evp/evp_local.h" line="395" column="53"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_pkcs82pkey_legacy&apos; argument 1 names different: declaration &apos;p8inf&apos; definition &apos;p8&apos;." verbose="Function &apos;evp_pkcs82pkey_legacy&apos; argument 1 names different: declaration &apos;p8inf&apos; definition &apos;p8&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_pkey.c">
+            <location file="crypto/evp/evp_pkey.c" line="25" column="60"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="510" column="60"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_RAND_enable_locking&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;rand&apos;." verbose="Function &apos;EVP_RAND_enable_locking&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;rand&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_rand.c">
+            <location file="crypto/evp/evp_rand.c" line="95" column="43"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1324" column="50"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_RAND_get0_description&apos; argument 1 names different: declaration &apos;md&apos; definition &apos;rand&apos;." verbose="Function &apos;EVP_RAND_get0_description&apos; argument 1 names different: declaration &apos;md&apos; definition &apos;rand&apos;." cwe="628" inconclusive="true" file0="crypto/evp/evp_rand.c">
+            <location file="crypto/evp/evp_rand.c" line="323" column="55"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1287" column="55"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/evp_rand.c">
+            <location file="crypto/evp/evp_rand.c" line="416" column="48" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;check&apos; can be reduced." verbose="The scope of the variable &apos;check&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/exchange.c">
+            <location file="crypto/evp/exchange.c" line="388" column="18"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_keyexch_fetch_from_prov&apos; argument 2 names different: declaration &apos;name&apos; definition &apos;algorithm&apos;." verbose="Function &apos;evp_keyexch_fetch_from_prov&apos; argument 2 names different: declaration &apos;name&apos; definition &apos;algorithm&apos;." cwe="628" inconclusive="true" file0="crypto/evp/exchange.c">
+            <location file="crypto/evp/exchange.c" line="212" column="17"/>
+            <location file="crypto/evp/evp_local.h" line="350" column="17"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_derive&apos; argument 3 names different: declaration &apos;keylen&apos; definition &apos;pkeylen&apos;." verbose="Function &apos;EVP_PKEY_derive&apos; argument 3 names different: declaration &apos;keylen&apos; definition &apos;pkeylen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/exchange.c">
+            <location file="crypto/evp/exchange.c" line="463" column="68"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1895" column="68"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_KEYEXCH_do_all_provided&apos; argument 3 names different: declaration &apos;data&apos; definition &apos;arg&apos;." verbose="Function &apos;EVP_KEYEXCH_do_all_provided&apos; argument 3 names different: declaration &apos;data&apos; definition &apos;arg&apos;." cwe="628" inconclusive="true" file0="crypto/evp/exchange.c">
+            <location file="crypto/evp/exchange.c" line="609" column="11"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1986" column="11"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_encapsulate&apos; argument 2 names different: declaration &apos;wrappedkey&apos; definition &apos;out&apos;." verbose="Function &apos;EVP_PKEY_encapsulate&apos; argument 2 names different: declaration &apos;wrappedkey&apos; definition &apos;out&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="242" column="20"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1904" column="20"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_encapsulate&apos; argument 3 names different: declaration &apos;wrappedkeylen&apos; definition &apos;outlen&apos;." verbose="Function &apos;EVP_PKEY_encapsulate&apos; argument 3 names different: declaration &apos;wrappedkeylen&apos; definition &apos;outlen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="242" column="33"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1904" column="40"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_encapsulate&apos; argument 4 names different: declaration &apos;genkey&apos; definition &apos;secret&apos;." verbose="Function &apos;EVP_PKEY_encapsulate&apos; argument 4 names different: declaration &apos;genkey&apos; definition &apos;secret&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="243" column="20"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1905" column="20"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_encapsulate&apos; argument 5 names different: declaration &apos;genkeylen&apos; definition &apos;secretlen&apos;." verbose="Function &apos;EVP_PKEY_encapsulate&apos; argument 5 names different: declaration &apos;genkeylen&apos; definition &apos;secretlen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="243" column="36"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1905" column="36"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_decapsulate&apos; argument 2 names different: declaration &apos;unwrapped&apos; definition &apos;secret&apos;." verbose="Function &apos;EVP_PKEY_decapsulate&apos; argument 2 names different: declaration &apos;unwrapped&apos; definition &apos;secret&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="279" column="20"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1910" column="20"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_decapsulate&apos; argument 3 names different: declaration &apos;unwrappedlen&apos; definition &apos;secretlen&apos;." verbose="Function &apos;EVP_PKEY_decapsulate&apos; argument 3 names different: declaration &apos;unwrappedlen&apos; definition &apos;secretlen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="279" column="36"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1910" column="39"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_decapsulate&apos; argument 4 names different: declaration &apos;wrapped&apos; definition &apos;in&apos;." verbose="Function &apos;EVP_PKEY_decapsulate&apos; argument 4 names different: declaration &apos;wrapped&apos; definition &apos;in&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="280" column="26"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1911" column="26"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_decapsulate&apos; argument 5 names different: declaration &apos;wrappedlen&apos; definition &apos;inlen&apos;." verbose="Function &apos;EVP_PKEY_decapsulate&apos; argument 5 names different: declaration &apos;wrappedlen&apos; definition &apos;inlen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="280" column="37"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1911" column="42"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_KEM_free&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." verbose="Function &apos;EVP_KEM_free&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="450" column="28"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1830" column="28"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_KEM_up_ref&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." verbose="Function &apos;EVP_KEM_up_ref&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="460" column="29"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1831" column="29"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_KEM_get0_provider&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." verbose="Function &apos;EVP_KEM_get0_provider&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="471" column="53"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1832" column="53"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_kem_fetch_from_prov&apos; argument 2 names different: declaration &apos;name&apos; definition &apos;algorithm&apos;." verbose="Function &apos;evp_kem_fetch_from_prov&apos; argument 2 names different: declaration &apos;name&apos; definition &apos;algorithm&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="485" column="67"/>
+            <location file="crypto/evp/evp_local.h" line="353" column="17"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_KEM_is_a&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." verbose="Function &apos;EVP_KEM_is_a&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="494" column="33"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1835" column="33"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_kem_get_number&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." verbose="Function &apos;evp_kem_get_number&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="499" column="39"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="709" column="39"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_KEM_get0_name&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." verbose="Function &apos;EVP_KEM_get0_name&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="504" column="46"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1836" column="46"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_KEM_get0_description&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." verbose="Function &apos;EVP_KEM_get0_description&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="509" column="53"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1837" column="53"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_KEM_names_do_all&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." verbose="Function &apos;EVP_KEM_names_do_all&apos; argument 1 names different: declaration &apos;wrap&apos; definition &apos;kem&apos;." cwe="628" inconclusive="true" file0="crypto/evp/kem.c">
+            <location file="crypto/evp/kem.c" line="528" column="41"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1840" column="41"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_keymgmt_freedata&apos; argument 2 names different: declaration &apos;keyddata&apos; definition &apos;keydata&apos;." verbose="Function &apos;evp_keymgmt_freedata&apos; argument 2 names different: declaration &apos;keyddata&apos; definition &apos;keydata&apos;." cwe="628" inconclusive="true" file0="crypto/evp/keymgmt_meth.c">
+            <location file="crypto/evp/keymgmt_meth.c" line="407" column="61"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="560" column="61"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_keymgmt_has&apos; argument 2 names different: declaration &apos;keyddata&apos; definition &apos;keydata&apos;." verbose="Function &apos;evp_keymgmt_has&apos; argument 2 names different: declaration &apos;keyddata&apos; definition &apos;keydata&apos;." cwe="628" inconclusive="true" file0="crypto/evp/keymgmt_meth.c">
+            <location file="crypto/evp/keymgmt_meth.c" line="545" column="55"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="581" column="55"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p&apos; can be reduced." verbose="The scope of the variable &apos;p&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/keymgmt_lib.c">
+            <location file="crypto/evp/keymgmt_lib.c" line="236" column="20"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pk&apos; can be declared as pointer to const" verbose="Parameter &apos;pk&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/keymgmt_lib.c">
+            <location file="crypto/evp/keymgmt_lib.c" line="231" column="64" info="Parameter &apos;pk&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;keymgmt&apos; can be declared as pointer to const" verbose="Parameter &apos;keymgmt&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/keymgmt_lib.c">
+            <location file="crypto/evp/keymgmt_lib.c" line="232" column="18" info="Parameter &apos;keymgmt&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;keydata1&apos; can be declared as pointer to const" verbose="Variable &apos;keydata1&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/keymgmt_lib.c">
+            <location file="crypto/evp/keymgmt_lib.c" line="357" column="11" info="Variable &apos;keydata1&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;keydata2&apos; can be declared as pointer to const" verbose="Variable &apos;keydata2&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/keymgmt_lib.c">
+            <location file="crypto/evp/keymgmt_lib.c" line="357" column="29" info="Variable &apos;keydata2&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;result&apos; can be declared as pointer to const" verbose="Variable &apos;result&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/keymgmt_lib.c">
+            <location file="crypto/evp/keymgmt_lib.c" line="541" column="11" info="Variable &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;keymgmt&apos; can be declared as pointer to const" verbose="Parameter &apos;keymgmt&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/keymgmt_lib.c">
+            <location file="crypto/evp/keymgmt_lib.c" line="534" column="57" info="Parameter &apos;keymgmt&apos; can be declared as pointer to const"/>
+        </error>
+    </errors>
+</results>

@@ -1,0 +1,20 @@
+Pinned source: /mnt/d/CVE-Typestate-Project-clang-analysis
+Revision: ed57129cd43b77e077c68fd5f7ea951976766f38
+Coccinelle: spatch version 1.1.1
+
+Completed rule 01 command (exit 0; 910 files; 2026-11-04 04:41:46-04:44:07 UTC):
+spatch --jobs 4 --tmp-dir /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/tmp --very-quiet --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/01_use_after_release.cocci --file-groups /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/files_01_use_after_release.txt
+
+Rule 02 attempted command (prolonged no-output run, manually interrupted; exit 130; 430 files):
+spatch --jobs 4 --tmp-dir /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/tmp --very-quiet --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/02_repeated_release.cocci --file-groups /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/files_02_repeated_release.txt
+
+Completed rule 03 command (exit 0; 10 files; 2026-11-04 05:08:30-05:08:36 UTC):
+spatch --jobs 4 --tmp-dir /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/tmp --very-quiet --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/03_release_after_transfer.cocci --file-groups /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/files_03_release_after_transfer.txt
+
+Rule 04 attempt 1 (timed out, exit 124 at 180 seconds; 332 files):
+timeout 180 spatch --jobs 4 --tmp-dir /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/tmp --very-quiet --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/04_acquire_early_return.cocci --file-groups /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/files_04_acquire_early_return.txt
+
+Rule 04 attempt 2 (manually interrupted after prolonged no-output; exit 130):
+timeout 600 spatch --jobs 8 --tmp-dir /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/tmp --very-quiet --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/04_acquire_early_return.cocci --file-groups /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/files_04_acquire_early_return.txt
+
+All commands redirected stdout and stderr to the corresponding logs/final_<rule>.stdout and .stderr. Full attempted command history: logs/scan_commands.log, logs/sample_commands.log.

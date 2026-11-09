@@ -1,0 +1,15 @@
+Rule ID,Source File,Trigger Line,Column,Function,Description,Related Line
+03_release_after_transfer,test/dtlsv1listentest.c,645,4-17,create_cookie_clienthello,possible BIO free after SSL ownership transfer of rbio in create_cookie_clienthello; free at line 698,698
+03_release_after_transfer,test/dtlsv1listentest.c,646,4-17,create_cookie_clienthello,possible BIO free after SSL ownership transfer of wbio in create_cookie_clienthello; free at line 699,699
+03_release_after_transfer,test/dtlsv1listentest.c,740,4-17,dtls_listen_write_seq_test,possible BIO free after SSL ownership transfer of inbio in dtls_listen_write_seq_test; free at line 797,797
+03_release_after_transfer,test/sslapitest.c,12613,4-17,test_async_shutdown,possible BIO free after SSL ownership transfer of bretry in test_async_shutdown; free at line 12647,12647
+03_release_after_transfer,test/sslapitest.c,12626,4-17,test_async_shutdown,possible BIO free after SSL ownership transfer of tmp in test_async_shutdown; free at line 12648,12648
+03_release_after_transfer,test/dtlsssllistenertest.c,504,4-17,test_dtls_listener_bio,possible BIO free after SSL ownership transfer of bio in test_dtls_listener_bio; free at line 525,525
+03_release_after_transfer,test/dtlsssllistenertest.c,512,4-17,test_dtls_listener_bio,possible BIO free after SSL ownership transfer of bio2 in test_dtls_listener_bio; free at line 526,526
+03_release_after_transfer,test/sslapitest.c,16712,4-17,test_handshake_retry,possible BIO free after SSL ownership transfer of bretry in test_handshake_retry; free at line 16735,16735
+03_release_after_transfer,test/sslapitest.c,16723,4-17,test_handshake_retry,possible BIO free after SSL ownership transfer of tmp in test_handshake_retry; free at line 16736,16736
+03_release_after_transfer,test/dtlstest.c,706,4-17,test_just_finished,possible BIO free after SSL ownership transfer of rbio in test_just_finished; free at line 727,727
+03_release_after_transfer,test/dtlstest.c,707,4-17,test_just_finished,possible BIO free after SSL ownership transfer of wbio in test_just_finished; free at line 728,728
+03_release_after_transfer,test/dtlsssllistenertest.c,2874,4-17,test_ssl_ownership_set_rbio_incoming_leak,possible BIO free after SSL ownership transfer of new_server_bio in test_ssl_ownership_set_rbio_incoming_leak; free at line 2883,2883
+03_release_after_transfer,test/dtlsssllistenertest.c,2778,4-17,test_ssl_ownership_set_rbio_pending_leak,possible BIO free after SSL ownership transfer of new_server_bio in test_ssl_ownership_set_rbio_pending_leak; free at line 2786,2786
+03_release_after_transfer,test/sslapitest.c,5098,4-17,test_ssl_set_wbio_chain_no_leak,possible BIO free after SSL ownership transfer of chain1 in test_ssl_set_wbio_chain_no_leak; free at line 5107,5107

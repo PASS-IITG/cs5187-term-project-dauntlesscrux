@@ -1,0 +1,10 @@
+OpenSSL Coccinelle whole-tree experiment
+Date: 2026-11-04 (client local date)
+Source tree: /mnt/d/CVE-Typestate-Project-clang-analysis
+Source Git revision: ed57129cd43b77e077c68fd5f7ea951976766f38
+Project root: /mnt/d/CVE-Typestate-Project
+Coccinelle executable: /usr/bin/spatch
+Coccinelle: 1.1.1, compiled with OCaml 4.14.1; Python scripting support enabled
+Tracked C translation units at pinned revision: 1695
+Scan file selection: Git-tracked *.c paths only; rule-specific API spelling prefilters recorded in files_*.txt.
+The main repository already had staged changes in unrelated files. No Git index operations are used by this experiment.

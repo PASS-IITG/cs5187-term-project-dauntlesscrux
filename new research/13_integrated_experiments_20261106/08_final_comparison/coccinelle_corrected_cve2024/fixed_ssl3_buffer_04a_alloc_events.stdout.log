@@ -1,0 +1,1 @@
+/tmp/openssl-integrated-validation/cve2024_fixed/ssl/record/ssl3_buffer.c:129:20-34: alloc_event|p

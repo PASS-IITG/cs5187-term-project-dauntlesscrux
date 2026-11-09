@@ -1,0 +1,2 @@
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/transfer.c:11:4-17: possible BIO free after SSL ownership transfer of b in safe_reacquire_reference; free at line 12
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/transfer.c:6:4-17: possible BIO free after SSL ownership transfer of b in suspect; free at line 7

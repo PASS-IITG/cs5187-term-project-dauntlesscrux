@@ -1,0 +1,53 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 32737956
+INFO: Loaded 1 modules   (52 inline 8-bit counters): 52 [0x58fb472239a0, 0x58fb472239d4), 
+INFO: Loaded 1 PC tables (52 PCs): 52 [0x58fb472239d8,0x58fb47223d18), 
+INFO:        1 files found in /mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/05_fuzzing/corpora/x509
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 1 min: 1265b max: 1265b total: 1265b rss: 39Mb
+#3	INITED cov: 3 ft: 3 corp: 1/1265b exec/s: 0 rss: 39Mb
+#5	REDUCE cov: 3 ft: 3 corp: 1/578b lim: 1265 exec/s: 0 rss: 39Mb L: 578/578 MS: 2 ChangeBit-CrossOver-
+#23	REDUCE cov: 3 ft: 3 corp: 1/572b lim: 1265 exec/s: 0 rss: 39Mb L: 572/572 MS: 3 CMP-ChangeByte-EraseBytes- DE: "\377\377\377\377\377\377\377\377"-
+#31	REDUCE cov: 3 ft: 3 corp: 1/521b lim: 1265 exec/s: 0 rss: 39Mb L: 521/521 MS: 3 ChangeBit-PersAutoDict-EraseBytes- DE: "\377\377\377\377\377\377\377\377"-
+#40	REDUCE cov: 3 ft: 3 corp: 1/326b lim: 1265 exec/s: 0 rss: 40Mb L: 326/326 MS: 4 ChangeByte-ChangeBit-ChangeBit-EraseBytes-
+#65	REDUCE cov: 3 ft: 3 corp: 1/201b lim: 1265 exec/s: 0 rss: 40Mb L: 201/201 MS: 5 ChangeByte-InsertByte-ChangeBit-CopyPart-EraseBytes-
+#68	REDUCE cov: 3 ft: 3 corp: 1/162b lim: 1265 exec/s: 68 rss: 40Mb L: 162/162 MS: 3 ChangeBinInt-ChangeBit-EraseBytes-
+#115	REDUCE cov: 3 ft: 3 corp: 1/97b lim: 1265 exec/s: 115 rss: 40Mb L: 97/97 MS: 2 ChangeASCIIInt-EraseBytes-
+#154	REDUCE cov: 3 ft: 3 corp: 1/60b lim: 1265 exec/s: 154 rss: 40Mb L: 60/60 MS: 1 EraseBytes-
+#159	REDUCE cov: 3 ft: 3 corp: 1/55b lim: 1265 exec/s: 159 rss: 40Mb L: 55/55 MS: 5 ChangeByte-ShuffleBytes-InsertByte-ShuffleBytes-EraseBytes-
+#183	REDUCE cov: 3 ft: 3 corp: 1/32b lim: 1265 exec/s: 91 rss: 40Mb L: 32/32 MS: 4 ChangeBinInt-ChangeBit-ChangeByte-EraseBytes-
+#189	REDUCE cov: 3 ft: 3 corp: 1/29b lim: 1265 exec/s: 94 rss: 40Mb L: 29/29 MS: 1 EraseBytes-
+#208	REDUCE cov: 3 ft: 3 corp: 1/21b lim: 1265 exec/s: 104 rss: 40Mb L: 21/21 MS: 4 ShuffleBytes-ChangeByte-ShuffleBytes-EraseBytes-
+#222	REDUCE cov: 3 ft: 3 corp: 1/20b lim: 1265 exec/s: 111 rss: 40Mb L: 20/20 MS: 4 ShuffleBytes-InsertByte-PersAutoDict-EraseBytes- DE: "\377\377\377\377\377\377\377\377"-
+#255	REDUCE cov: 3 ft: 3 corp: 1/17b lim: 1265 exec/s: 85 rss: 41Mb L: 17/17 MS: 2 PersAutoDict-EraseBytes- DE: "\377\377\377\377\377\377\377\377"-
+#256	pulse  cov: 3 ft: 3 corp: 1/17b lim: 1265 exec/s: 85 rss: 41Mb
+#258	REDUCE cov: 3 ft: 3 corp: 1/13b lim: 1265 exec/s: 86 rss: 41Mb L: 13/13 MS: 3 ChangeBit-ChangeByte-EraseBytes-
+#279	REDUCE cov: 3 ft: 3 corp: 1/7b lim: 1265 exec/s: 93 rss: 41Mb L: 7/7 MS: 1 EraseBytes-
+#301	REDUCE cov: 3 ft: 3 corp: 1/5b lim: 1265 exec/s: 100 rss: 41Mb L: 5/5 MS: 2 InsertByte-EraseBytes-
+#312	REDUCE cov: 3 ft: 3 corp: 1/4b lim: 1265 exec/s: 104 rss: 41Mb L: 4/4 MS: 1 EraseBytes-
+#329	REDUCE cov: 3 ft: 3 corp: 1/3b lim: 1265 exec/s: 109 rss: 41Mb L: 3/3 MS: 2 CopyPart-EraseBytes-
+#337	REDUCE cov: 3 ft: 3 corp: 1/2b lim: 1265 exec/s: 112 rss: 41Mb L: 2/2 MS: 3 ShuffleBytes-ChangeByte-EraseBytes-
+#358	REDUCE cov: 3 ft: 3 corp: 1/1b lim: 1265 exec/s: 119 rss: 41Mb L: 1/1 MS: 1 EraseBytes-
+#512	pulse  cov: 3 ft: 3 corp: 1/1b lim: 1265 exec/s: 170 rss: 41Mb
+#1024	pulse  cov: 3 ft: 3 corp: 1/1b lim: 1265 exec/s: 341 rss: 43Mb
+#2048	pulse  cov: 3 ft: 3 corp: 1/1b lim: 1275 exec/s: 682 rss: 44Mb
+#4096	pulse  cov: 3 ft: 3 corp: 1/1b lim: 1295 exec/s: 1365 rss: 45Mb
+#8192	pulse  cov: 3 ft: 3 corp: 1/1b lim: 1335 exec/s: 2730 rss: 48Mb
+#16384	pulse  cov: 3 ft: 3 corp: 1/1b lim: 1415 exec/s: 5461 rss: 52Mb
+#32768	pulse  cov: 3 ft: 3 corp: 1/1b lim: 1585 exec/s: 10922 rss: 61Mb
+#65536	pulse  cov: 3 ft: 3 corp: 1/1b lim: 1905 exec/s: 21845 rss: 78Mb
+#131072	pulse  cov: 3 ft: 3 corp: 1/1b lim: 2561 exec/s: 32768 rss: 113Mb
+#262144	pulse  cov: 3 ft: 3 corp: 1/1b lim: 3870 exec/s: 65536 rss: 183Mb
+#524288	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 87381 rss: 322Mb
+#1048576	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 131072 rss: 547Mb
+#1244704	DONE   cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 138300 rss: 547Mb
+###### Recommended dictionary. ######
+"\377\377\377\377\377\377\377\377" # Uses: 86763
+###### End of recommended dictionary. ######
+Done 1244704 runs in 9 second(s)
+stat::number_of_executed_units: 1244704
+stat::average_exec_per_sec:     138300
+stat::new_units_added:          21
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              547
+run_exit=0

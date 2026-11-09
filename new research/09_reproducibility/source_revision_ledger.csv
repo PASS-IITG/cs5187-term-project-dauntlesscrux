@@ -1,0 +1,7 @@
+CVE,Worktree side,Worktree folder,Recorded revision/commit,Note
+CVE-2023-0215,Vulnerable,openssl-cve-2023-0215-vulnerable,cbafa34b5a057794c5c08cd4657038e1f643c1ac,Recorded vulnerable revision; verify git HEAD locally
+CVE-2023-0215,Fixed,openssl-cve-2023-0215-fixed,8818064ce3c3c0f1b740a5aaba2a987e75bfbafd,Recorded fix commit
+CVE-2022-4450,Vulnerable,openssl-cve-2022-4450-vulnerable,8e257b86e5812c6e1cfa9e8e5f5660ac7bed899d,Recorded vulnerable parent; verify git HEAD locally
+CVE-2022-4450,Fixed,openssl-cve-2022-4450-fixed,63bcf189be73a9cc1264059bed6f57974be74a83,Recorded fix commit
+CVE-2024-4741,Vulnerable,openssl-cve-2024-4741-vulnerable,b3f0eb0a295f58f16ba43ba99dad70d4ee5c437d,Later project ledger identifies as vulnerable-side revision; an earlier CSV mislabeled this as the fix
+CVE-2024-4741,Fixed,openssl-cve-2024-4741-fixed,2d05959073c4bf8803401668b9df85931a08e020,Recorded fix commit

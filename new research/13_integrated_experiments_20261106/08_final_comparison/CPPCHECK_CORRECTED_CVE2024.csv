@@ -1,0 +1,3 @@
+CVE,Side,File,Exit,Status,Mechanism_Result,Diagnostic_Count,Log
+CVE-2024-4741,vulnerable,ssl/ssl_lib.c,0,completed,no CVE mechanism reported,43,research/13_integrated_experiments_20261106/08_final_comparison/cppcheck_cve2024_vulnerable_ssl_lib.log
+CVE-2024-4741,fixed,ssl/ssl_lib.c,0,completed,no CVE mechanism reported,43,research/13_integrated_experiments_20261106/08_final_comparison/cppcheck_cve2024_fixed_ssl_lib.log

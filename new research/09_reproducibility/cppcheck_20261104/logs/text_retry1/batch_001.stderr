@@ -1,0 +1,1203 @@
+apps/configutl.c:75:27: style: Variable 'values' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(CONF_VALUE) *values = NCONF_get_section(cnf, section_name);
+                          ^
+apps/asn1parse.c:78:27: style: Variable 'genconf' can be declared as pointer to const [constVariablePointer]
+    char *genstr = NULL, *genconf = NULL;
+                          ^
+apps/asn1parse.c:338:30: style: Parameter 'genstr' can be declared as pointer to const [constParameterPointer]
+static int do_generate(char *genstr, const char *genconf, BUF_MEM *buf)
+                             ^
+apps/ciphers.c:102:11: style: Variable 'ciphers' can be declared as pointer to const [constVariablePointer]
+    char *ciphers = NULL, *prog, *convert = NULL, *ciphersuites = NULL;
+          ^
+apps/ciphers.c:102:35: style: Variable 'convert' can be declared as pointer to const [constVariablePointer]
+    char *ciphers = NULL, *prog, *convert = NULL, *ciphersuites = NULL;
+                                  ^
+apps/ciphers.c:102:52: style: Variable 'ciphersuites' can be declared as pointer to const [constVariablePointer]
+    char *ciphers = NULL, *prog, *convert = NULL, *ciphersuites = NULL;
+                                                   ^
+apps/ca.c:1735:20: style: Condition 'ext_sect' is always true [knownConditionTrueFalse]
+        } else if (ext_sect) {
+                   ^
+apps/ca.c:1072:19: style: Variable 'outdirlen' is reassigned a value before the old one has been used. [redundantAssignment]
+        outdirlen = OPENSSL_strlcat(new_cert, "/", sizeof(new_cert));
+                  ^
+apps/ca.c:1070:19: note: outdirlen is assigned
+        outdirlen = OPENSSL_strlcpy(new_cert, outdir, sizeof(new_cert));
+                  ^
+apps/ca.c:1072:19: note: outdirlen is overwritten
+        outdirlen = OPENSSL_strlcat(new_cert, "/", sizeof(new_cert));
+                  ^
+apps/ca.c:2289:12: style: The scope of the variable 'rrow' can be reduced. [variableScope]
+    char **rrow;
+           ^
+apps/ca.c:1340:56: style: inconclusive: Function 'lookup_conf' argument 2 names different: declaration 'group' definition 'section'. [funcArgNamesDifferent]
+static char *lookup_conf(const CONF *conf, const char *section, const char *tag)
+                                                       ^
+apps/ca.c:92:56: note: Function 'lookup_conf' argument 2 names different: declaration 'group' definition 'section'.
+static char *lookup_conf(const CONF *conf, const char *group, const char *tag);
+                                                       ^
+apps/ca.c:1340:56: note: Function 'lookup_conf' argument 2 names different: declaration 'group' definition 'section'.
+static char *lookup_conf(const CONF *conf, const char *section, const char *tag)
+                                                       ^
+apps/ca.c:1357:55: style: inconclusive: Function 'certify' argument 21 names different: declaration 'conf' definition 'lconf'. [funcArgNamesDifferent]
+    long days, int batch, const char *ext_sect, CONF *lconf,
+                                                      ^
+apps/ca.c:103:55: note: Function 'certify' argument 21 names different: declaration 'conf' definition 'lconf'.
+    long days, int batch, const char *ext_sect, CONF *conf,
+                                                      ^
+apps/ca.c:1357:55: note: Function 'certify' argument 21 names different: declaration 'conf' definition 'lconf'.
+    long days, int batch, const char *ext_sect, CONF *lconf,
+                                                      ^
+apps/ca.c:1415:11: style: inconclusive: Function 'certify_cert' argument 22 names different: declaration 'conf' definition 'lconf'. [funcArgNamesDifferent]
+    CONF *lconf, int verbose, unsigned long certopt,
+          ^
+apps/ca.c:115:11: note: Function 'certify_cert' argument 22 names different: declaration 'conf' definition 'lconf'.
+    CONF *conf, int verbose, unsigned long certopt,
+          ^
+apps/ca.c:1415:11: note: Function 'certify_cert' argument 22 names different: declaration 'conf' definition 'lconf'.
+    CONF *lconf, int verbose, unsigned long certopt,
+          ^
+apps/ca.c:1470:11: style: inconclusive: Function 'do_body' argument 20 names different: declaration 'conf' definition 'lconf'. [funcArgNamesDifferent]
+    CONF *lconf, unsigned long certopt, unsigned long nameopt,
+          ^
+apps/ca.c:132:11: note: Function 'do_body' argument 20 names different: declaration 'conf' definition 'lconf'.
+    CONF *conf, unsigned long certopt, unsigned long nameopt,
+          ^
+apps/ca.c:1470:11: note: Function 'do_body' argument 20 names different: declaration 'conf' definition 'lconf'.
+    CONF *lconf, unsigned long certopt, unsigned long nameopt,
+          ^
+apps/ca.c:1976:11: style: inconclusive: Function 'certify_spkac' argument 18 names different: declaration 'conf' definition 'lconf'. [funcArgNamesDifferent]
+    CONF *lconf, int verbose, unsigned long certopt,
+          ^
+apps/ca.c:123:65: note: Function 'certify_spkac' argument 18 names different: declaration 'conf' definition 'lconf'.
+    const char *enddate, long days, const char *ext_sect, CONF *conf,
+                                                                ^
+apps/ca.c:1976:11: note: Function 'certify_spkac' argument 18 names different: declaration 'conf' definition 'lconf'.
+    CONF *lconf, int verbose, unsigned long certopt,
+          ^
+apps/ca.c:2112:17: style: inconclusive: Function 'do_revoke' argument 4 names different: declaration 'extval' definition 'value'. [funcArgNamesDifferent]
+    const char *value)
+                ^
+apps/ca.c:137:17: note: Function 'do_revoke' argument 4 names different: declaration 'extval' definition 'value'.
+    const char *extval);
+                ^
+apps/ca.c:2112:17: note: Function 'do_revoke' argument 4 names different: declaration 'extval' definition 'value'.
+    const char *value)
+                ^
+apps/ca.c:2218:47: style: inconclusive: Function 'get_certificate_status' argument 1 names different: declaration 'ser_status' definition 'serial'. [funcArgNamesDifferent]
+static int get_certificate_status(const char *serial, CA_DB *db)
+                                              ^
+apps/ca.c:134:47: note: Function 'get_certificate_status' argument 1 names different: declaration 'ser_status' definition 'serial'.
+static int get_certificate_status(const char *ser_status, CA_DB *db);
+                                              ^
+apps/ca.c:2218:47: note: Function 'get_certificate_status' argument 1 names different: declaration 'ser_status' definition 'serial'.
+static int get_certificate_status(const char *serial, CA_DB *db)
+                                              ^
+apps/ca.c:849:19: style: Variable 'tmp_email_dn' can be declared as pointer to const [constVariablePointer]
+            char *tmp_email_dn = NULL;
+                  ^
+apps/ca.c:1957:50: style: Parameter 'x' can be declared as pointer to const [constParameterPointer]
+static void write_new_certificate(BIO *bp, X509 *x, int output_der, int notext)
+                                                 ^
+apps/ca.c:1979:27: style: Variable 'sk' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(CONF_VALUE) *sk = NULL;
+                          ^
+apps/ca.c:1984:11: style: Variable 'type' can be declared as pointer to const [constVariablePointer]
+    char *type, *buf;
+          ^
+apps/ca.c:2285:24: style: Parameter 'db' can be declared as pointer to const [constParameterPointer]
+int do_updatedb(CA_DB *db, const time_t *now)
+                       ^
+apps/cms.c:1604:21: style: The scope of the variable 'si' can be reduced. [variableScope]
+    CMS_SignerInfo *si;
+                    ^
+apps/cms.c:1609:12: style: The scope of the variable 'rv' can be reduced. [variableScope]
+    int i, rv;
+           ^
+apps/cms.c:1713:11: style: The scope of the variable 'keyopt' can be reduced. [variableScope]
+    char *keyopt;
+          ^
+apps/cms.c:325:28: style: Variable 'ci' can be declared as pointer to const [constVariablePointer]
+    CMS_ContentInfo *ret, *ci;
+                           ^
+apps/cms.c:1087:15: style: Variable 'rctmode' can be declared as pointer to const [constVariablePointer]
+        char *rctmode = (rctformat == FORMAT_ASN1) ? "rb" : "r";
+              ^
+apps/cms.c:1238:35: style: Variable 'sis' can be declared as pointer to const [constVariablePointer]
+        STACK_OF(CMS_SignerInfo) *sis;
+                                  ^
+apps/cms.c:1406:39: style: Variable 'sinfos' can be declared as pointer to const [constVariablePointer]
+            STACK_OF(CMS_SignerInfo) *sinfos = CMS_get0_SignerInfos(cms);
+                                      ^
+apps/cms.c:1409:33: style: Variable 'si' can be declared as pointer to const [constVariablePointer]
+                CMS_SignerInfo *si = sk_CMS_SignerInfo_value(sinfos, i);
+                                ^
+apps/cms.c:1410:23: style: Variable 'si_signer' can be declared as pointer to const [constVariablePointer]
+                X509 *si_signer = CMS_SignerInfo_get0_signer_cert(si);
+                      ^
+apps/cms.c:1549:29: style: Parameter 'signerfile' can be declared as pointer to const [constParameterPointer]
+static int save_certs(char *signerfile, STACK_OF(X509) *signers)
+                            ^
+apps/cms.c:1549:57: style: Parameter 'signers' can be declared as pointer to const [constParameterPointer]
+static int save_certs(char *signerfile, STACK_OF(X509) *signers)
+                                                        ^
+apps/cms.c:1583:57: style: Parameter 'gns' can be declared as pointer to const [constParameterPointer]
+static void gnames_stack_print(STACK_OF(GENERAL_NAMES) *gns)
+                                                        ^
+apps/cms.c:1585:29: style: Variable 'gens' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(GENERAL_NAME) *gens;
+                            ^
+apps/cms.c:1603:31: style: Variable 'sis' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(CMS_SignerInfo) *sis;
+                              ^
+apps/cms.c:1649:76: style: Parameter 'ns' can be declared as pointer to const [constParameterPointer]
+static STACK_OF(GENERAL_NAMES) *make_names_stack(STACK_OF(OPENSSL_STRING) *ns)
+                                                                           ^
+apps/cms.c:1659:15: style: Variable 'str' can be declared as pointer to const [constVariablePointer]
+        char *str = sk_OPENSSL_STRING_value(ns, i);
+              ^
+apps/cms.c:1711:31: style: Parameter 'param' can be declared as pointer to const [constParameterPointer]
+    STACK_OF(OPENSSL_STRING) *param)
+                              ^
+apps/dgst.c:743:9: style: The scope of the variable 'res' can be reduced. [variableScope]
+    int res;
+        ^
+apps/dgst.c:541:54: style: inconclusive: Function 'show_digests' argument 2 names different: declaration 'bio_' definition 'arg'. [funcArgNamesDifferent]
+static void show_digests(const OBJ_NAME *name, void *arg)
+                                                     ^
+apps/dgst.c:35:54: note: Function 'show_digests' argument 2 names different: declaration 'bio_' definition 'arg'.
+static void show_digests(const OBJ_NAME *name, void *bio_);
+                                                     ^
+apps/dgst.c:541:54: note: Function 'show_digests' argument 2 names different: declaration 'bio_' definition 'arg'.
+static void show_digests(const OBJ_NAME *name, void *arg)
+                                                     ^
+apps/dgst.c:661:35: style: Parameter 'sigin' can be declared as pointer to const [constParameterPointer]
+    EVP_PKEY *key, unsigned char *sigin, int siglen,
+                                  ^
+apps/dgst.c:661:15: style: Parameter 'key' can be declared as pointer to const [constParameterPointer]
+    EVP_PKEY *key, unsigned char *sigin, int siglen,
+              ^
+apps/dgst.c:739:20: style: Parameter 'sigin' can be declared as pointer to const [constParameterPointer]
+    unsigned char *sigin, int siglen, EVP_PKEY *key,
+                   ^
+apps/dgst.c:739:49: style: Parameter 'key' can be declared as pointer to const [constParameterPointer]
+    unsigned char *sigin, int siglen, EVP_PKEY *key,
+                                                ^
+apps/dhparam.c:379:38: style: Parameter 'dh' can be declared as pointer to const [constParameterPointer]
+static EVP_PKEY *dsa_to_dh(EVP_PKEY *dh)
+                                     ^
+apps/ecparam.c:200:32: style: Condition 'list_builtin_curves(out)' is always true [knownConditionTrueFalse]
+        if (list_builtin_curves(out))
+                               ^
+apps/ecparam.c:200:32: note: Calling function 'list_builtin_curves' returns 1
+        if (list_builtin_curves(out))
+                               ^
+apps/ecparam.c:200:32: note: Condition 'list_builtin_curves(out)' is always true
+        if (list_builtin_curves(out))
+                               ^
+apps/cmp.c:3977:25: style: Condition 'newcert!=NULL' is always true [knownConditionTrueFalse]
+            if (newcert != NULL && newchain != NULL /* NULL is on error only */
+                        ^
+apps/cmp.c:1667:13: style: The scope of the variable 'res' can be reduced. [variableScope]
+        int res;
+            ^
+apps/cmp.c:3660:24: style: The scope of the variable 'req' can be reduced. [variableScope]
+        OSSL_CMP_ITAV *req;
+                       ^
+apps/cmp.c:875:48: style: Parameter 'ts' can be declared as pointer to const [constParameterPointer]
+static int truststore_set_host_etc(X509_STORE *ts, const char *host)
+                                               ^
+apps/cmp.c:1017:28: style: Variable 'nonce' can be declared as pointer to const [constVariablePointer]
+        ASN1_OCTET_STRING *nonce;
+                           ^
+apps/cmp.c:1018:28: style: Variable 'tid' can be declared as pointer to const [constVariablePointer]
+        ASN1_OCTET_STRING *tid;
+                           ^
+apps/cmp.c:2474:39: style: Parameter 'cert' can be declared as pointer to const [constParameterPointer]
+static int write_cert(BIO *bio, X509 *cert)
+                                      ^
+apps/cmp.c:2486:42: style: Parameter 'crl' can be declared as pointer to const [constParameterPointer]
+static int write_crl(BIO *bio, X509_CRL *crl)
+                                         ^
+apps/cmp.c:2585:38: style: Parameter 'cert' can be declared as pointer to const [constParameterPointer]
+static int save_cert_or_delete(X509 *cert, const char *file, const char *desc)
+                                     ^
+apps/cmp.c:2745:11: style: Variable 'str' can be declared as pointer to const [constVariablePointer]
+    char *str = conf_get_string(conf_, groups, name);
+          ^
+apps/cmp.c:3429:24: style: Variable 'atav' can be declared as pointer to const [constVariablePointer]
+        OSSL_CMP_ATAV *atav = sk_OSSL_CMP_ATAV_value(keySpec, i);
+                       ^
+apps/cmp.c:3430:22: style: Variable 'type' can be declared as pointer to const [constVariablePointer]
+        ASN1_OBJECT *type = OSSL_CMP_ATAV_get0_type(atav /* may be NULL */);
+                     ^
+apps/ech.c:75:33: style: Parameter 'arg' can be declared as pointer to const [constParameterPointer]
+static uint16_t verstr2us(char *arg)
+                                ^
+apps/ech.c:93:11: style: Variable 'public_name' can be declared as pointer to const [constVariablePointer]
+    char *public_name = NULL, *suitestr = NULL;
+          ^
+apps/enc.c:436:9: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (do_zstd)
+        ^
+apps/enc.c:206:21: note: 'do_brotli' is assigned value '0' here.
+    int do_brotli = 0;
+                    ^
+apps/enc.c:208:19: note: 'do_zstd' is assigned value '0' here.
+    int do_zstd = 0;
+                  ^
+apps/enc.c:434:9: note: First condition
+    if (do_brotli)
+        ^
+apps/enc.c:436:9: note: Second condition
+    if (do_zstd)
+        ^
+apps/enc.c:544:9: style: The if condition is the same as the previous if condition [duplicateCondition]
+    if (do_zstd) {
+        ^
+apps/enc.c:206:21: note: 'do_brotli' is assigned value '0' here.
+    int do_brotli = 0;
+                    ^
+apps/enc.c:208:19: note: 'do_zstd' is assigned value '0' here.
+    int do_zstd = 0;
+                  ^
+apps/enc.c:531:9: note: First condition
+    if (do_brotli) {
+        ^
+apps/enc.c:544:9: note: Second condition
+    if (do_zstd) {
+        ^
+apps/enc.c:886:19: style: The scope of the variable 'j' can be reduced. [variableScope]
+    unsigned char j;
+                  ^
+apps/enc.c:855:54: style: inconclusive: Function 'show_ciphers' argument 2 names different: declaration 'bio_' definition 'arg'. [funcArgNamesDifferent]
+static void show_ciphers(const OBJ_NAME *name, void *arg)
+                                                     ^
+apps/enc.c:39:54: note: Function 'show_ciphers' argument 2 names different: declaration 'bio_' definition 'arg'.
+static void show_ciphers(const OBJ_NAME *name, void *bio_);
+                                                     ^
+apps/enc.c:855:54: note: Function 'show_ciphers' argument 2 names different: declaration 'bio_' definition 'arg'.
+static void show_ciphers(const OBJ_NAME *name, void *arg)
+                                                     ^
+apps/enc.c:181:25: style: Variable 'hiv' can be declared as pointer to const [constVariablePointer]
+    char *hkey = NULL, *hiv = NULL, *hsalt = NULL, *p;
+                        ^
+apps/enc.c:181:38: style: Variable 'hsalt' can be declared as pointer to const [constVariablePointer]
+    char *hkey = NULL, *hiv = NULL, *hsalt = NULL, *p;
+                                     ^
+apps/enc.c:580:28: style: Variable 'sptr' can be declared as pointer to const [constVariablePointer]
+            unsigned char *sptr;
+                           ^
+apps/lib/app_params.c:74:9: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+        bufsz -= printed_len;
+        ^
+apps/lib/app_params.c:74:15: style: Variable 'bufsz' is assigned a value that is never used. [unreadVariable]
+        bufsz -= printed_len;
+              ^
+apps/fipsinstall.c:388:20: style: Parameter 'module_mac' can be declared as pointer to const [constParameterPointer]
+    unsigned char *module_mac,
+                   ^
+apps/fipsinstall.c:391:20: style: Parameter 'install_mac' can be declared as pointer to const [constParameterPointer]
+    unsigned char *install_mac,
+                   ^
+apps/fipsinstall.c:536:11: style: Variable 's' can be declared as pointer to const [constVariablePointer]
+    char *s = NULL;
+          ^
+apps/fipsinstall.c:532:20: style: Parameter 'module_mac' can be declared as pointer to const [constParameterPointer]
+    unsigned char *module_mac, size_t module_mac_len,
+                   ^
+apps/fipsinstall.c:533:20: style: Parameter 'install_mac' can be declared as pointer to const [constParameterPointer]
+    unsigned char *install_mac, size_t install_mac_len)
+                   ^
+apps/fipsinstall.c:598:11: style: Variable 'in_fname' can be declared as pointer to const [constVariablePointer]
+    char *in_fname = NULL, *out_fname = NULL, *prog;
+          ^
+apps/fipsinstall.c:599:33: style: Variable 'parent_config' can be declared as pointer to const [constVariablePointer]
+    char *module_fname = NULL, *parent_config = NULL, *module_path = NULL;
+                                ^
+apps/lib/app_rand.c:48:13: style: 'continue' is redundant since it is the last statement in a loop. [redundantContinue]
+            continue;
+            ^
+apps/lib/app_rand.c:43:9: style: The scope of the variable 'last' can be reduced. [variableScope]
+    int last, ret = 1;
+        ^
+apps/lib/app_rand.c:68:11: style: The scope of the variable 'p' can be reduced. [variableScope]
+    char *p;
+          ^
+apps/lib/http_server.c:418:15: style: Variable 'key' can be declared as pointer to const [constVariablePointer]
+        char *key, *value;
+              ^
+apps/lib/http_server.c:509:21: style: Variable 'p' can be declared as pointer to const [constVariablePointer]
+    char buf[200], *p;
+                    ^
+apps/lib/s_socket.c:470:19: style: Variable 'asock' is assigned a value that is never used. [unreadVariable]
+            asock = INVALID_SOCKET;
+                  ^
+apps/lib/cmp_mock_srv.c:347:25: style: The scope of the variable 'data' can be reduced. [variableScope]
+            const char *data;
+                        ^
+apps/lib/cmp_mock_srv.c:348:20: style: The scope of the variable 'len' can be reduced. [variableScope]
+            size_t len;
+                   ^
+apps/lib/cmp_mock_srv.c:628:11: style: The scope of the variable 'sibuf' can be reduced. [variableScope]
+    char *sibuf;
+          ^
+apps/lib/cmp_mock_srv.c:629:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+apps/lib/opt.c:1058:9: style: 'continue' is redundant since it is the last statement in a loop. [redundantContinue]
+        continue;
+        ^
+apps/lib/opt.c:430:9: style: The scope of the variable 'mode' can be reduced. [variableScope]
+    int mode, ret = 0;
+        ^
+apps/lib/opt.c:431:23: style: The scope of the variable 'flags' can be reduced. [variableScope]
+    unsigned long int flags;
+                      ^
+apps/lib/cmp_mock_srv.c:91:1: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+DEFINE_OSSL_SET1_CERT(refCert)
+^
+apps/lib/cmp_mock_srv.c:92:1: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+DEFINE_OSSL_SET1_CERT(certOut)
+^
+apps/lib/opt.c:713:19: style: Variable 'xptmp' can be declared as pointer to const [constVariablePointer]
+    X509_PURPOSE *xptmp;
+                  ^
+apps/lib/cmp_mock_srv.c:94:53: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+int ossl_cmp_mock_srv_set1_keyOut(OSSL_CMP_SRV_CTX *srv_ctx, EVP_PKEY *pkey)
+                                                    ^
+apps/lib/cmp_mock_srv.c:109:53: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+int ossl_cmp_mock_srv_set1_crlOut(OSSL_CMP_SRV_CTX *srv_ctx,
+                                                    ^
+apps/lib/cmp_mock_srv.c:125:55: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+int ossl_cmp_mock_srv_set1_chainOut(OSSL_CMP_SRV_CTX *srv_ctx,
+                                                      ^
+apps/lib/cmp_mock_srv.c:142:56: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+int ossl_cmp_mock_srv_set1_caPubsOut(OSSL_CMP_SRV_CTX *srv_ctx,
+                                                       ^
+apps/lib/cmp_mock_srv.c:159:1: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+DEFINE_OSSL_SET1_CERT(newWithNew)
+^
+apps/lib/cmp_mock_srv.c:160:1: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+DEFINE_OSSL_SET1_CERT(newWithOld)
+^
+apps/lib/cmp_mock_srv.c:161:1: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+DEFINE_OSSL_SET1_CERT(oldWithNew)
+^
+apps/lib/cmp_mock_srv.c:163:56: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+int ossl_cmp_mock_srv_set_statusInfo(OSSL_CMP_SRV_CTX *srv_ctx, int status,
+                                                       ^
+apps/lib/cmp_mock_srv.c:180:55: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+int ossl_cmp_mock_srv_set_sendError(OSSL_CMP_SRV_CTX *srv_ctx, int bodytype)
+                                                      ^
+apps/lib/cmp_mock_srv.c:193:62: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+int ossl_cmp_mock_srv_set_useBadProtection(OSSL_CMP_SRV_CTX *srv_ctx, int bodytype)
+                                                             ^
+apps/lib/cmp_mock_srv.c:206:55: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+int ossl_cmp_mock_srv_set_pollCount(OSSL_CMP_SRV_CTX *srv_ctx, int count)
+                                                      ^
+apps/lib/cmp_mock_srv.c:222:60: style: Parameter 'srv_ctx' can be declared as pointer to const [constParameterPointer]
+int ossl_cmp_mock_srv_set_checkAfterTime(OSSL_CMP_SRV_CTX *srv_ctx, int sec)
+                                                           ^
+apps/lib/cmp_mock_srv.c:235:47: style: Parameter 'srv_ctx' can be declared as pointer to const. However it seems that 'delayed_delivery' is a callback function, if 'srv_ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int delayed_delivery(OSSL_CMP_SRV_CTX *srv_ctx, const OSSL_CMP_MSG *req)
+                                              ^
+apps/lib/cmp_mock_srv.c:763:13: note: You might need to cast the function pointer here
+            delayed_delivery, clean_transaction))
+            ^
+apps/lib/cmp_mock_srv.c:235:47: note: Parameter 'srv_ctx' can be declared as pointer to const
+static int delayed_delivery(OSSL_CMP_SRV_CTX *srv_ctx, const OSSL_CMP_MSG *req)
+                                              ^
+apps/lib/cmp_mock_srv.c:282:48: style: Parameter 'srv_ctx' can be declared as pointer to const. However it seems that 'clean_transaction' is a callback function, if 'srv_ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int clean_transaction(OSSL_CMP_SRV_CTX *srv_ctx,
+                                               ^
+apps/lib/cmp_mock_srv.c:763:31: note: You might need to cast the function pointer here
+            delayed_delivery, clean_transaction))
+                              ^
+apps/lib/cmp_mock_srv.c:282:48: note: Parameter 'srv_ctx' can be declared as pointer to const
+static int clean_transaction(OSSL_CMP_SRV_CTX *srv_ctx,
+                                               ^
+apps/lib/cmp_mock_srv.c:298:63: style: Parameter 'srv_ctx' can be declared as pointer to const. However it seems that 'process_cert_request' is a callback function, if 'srv_ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static OSSL_CMP_PKISI *process_cert_request(OSSL_CMP_SRV_CTX *srv_ctx,
+                                                              ^
+apps/lib/cmp_mock_srv.c:759:48: note: You might need to cast the function pointer here
+        && OSSL_CMP_SRV_CTX_init(srv_ctx, ctx, process_cert_request,
+                                               ^
+apps/lib/cmp_mock_srv.c:298:63: note: Parameter 'srv_ctx' can be declared as pointer to const
+static OSSL_CMP_PKISI *process_cert_request(OSSL_CMP_SRV_CTX *srv_ctx,
+                                                              ^
+apps/lib/cmp_mock_srv.c:339:34: style: Variable 'itavs' can be declared as pointer to const [constVariablePointer]
+        STACK_OF(OSSL_CMP_ITAV) *itavs = OSSL_CMP_HDR_get0_geninfo_ITAVs(OSSL_CMP_MSG_get0_header(cert_req));
+                                 ^
+apps/lib/cmp_mock_srv.c:343:28: style: Variable 'itav' can be declared as pointer to const [constVariablePointer]
+            OSSL_CMP_ITAV *itav = sk_OSSL_CMP_ITAV_value(itavs, i);
+                           ^
+apps/lib/cmp_mock_srv.c:344:26: style: Variable 'obj' can be declared as pointer to const [constVariablePointer]
+            ASN1_OBJECT *obj = OSSL_CMP_ITAV_get0_type(itav);
+                         ^
+apps/lib/cmp_mock_srv.c:346:30: style: Variable 'str' can be declared as pointer to const [constVariablePointer]
+            ASN1_UTF8STRING *str;
+                             ^
+apps/lib/cmp_mock_srv.c:437:19: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    mock_srv_ctx *ctx = OSSL_CMP_SRV_CTX_get0_custom_ctx(srv_ctx);
+                  ^
+apps/lib/cmp_mock_srv.c:432:53: style: Parameter 'srv_ctx' can be declared as pointer to const. However it seems that 'process_rr' is a callback function, if 'srv_ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static OSSL_CMP_PKISI *process_rr(OSSL_CMP_SRV_CTX *srv_ctx,
+                                                    ^
+apps/lib/cmp_mock_srv.c:760:13: note: You might need to cast the function pointer here
+            process_rr, process_genm, process_error,
+            ^
+apps/lib/cmp_mock_srv.c:432:53: note: Parameter 'srv_ctx' can be declared as pointer to const
+static OSSL_CMP_PKISI *process_rr(OSSL_CMP_SRV_CTX *srv_ctx,
+                                                    ^
+apps/lib/cmp_mock_srv.c:464:25: style: Variable 'crlstatus' can be declared as pointer to const [constVariablePointer]
+    OSSL_CMP_CRLSTATUS *crlstatus;
+                        ^
+apps/lib/cmp_mock_srv.c:484:24: style: Variable 'gen_name' can be declared as pointer to const [constVariablePointer]
+            X509_NAME *gen_name = gn->d.dirn;
+                       ^
+apps/lib/cmp_mock_srv.c:500:55: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+static OSSL_CMP_ITAV *process_genm_itav(mock_srv_ctx *ctx, int req_nid,
+                                                      ^
+apps/lib/cmp_mock_srv.c:585:43: style: Parameter 'srv_ctx' can be declared as pointer to const. However it seems that 'process_genm' is a callback function, if 'srv_ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int process_genm(OSSL_CMP_SRV_CTX *srv_ctx,
+                                          ^
+apps/lib/cmp_mock_srv.c:760:25: note: You might need to cast the function pointer here
+            process_rr, process_genm, process_error,
+                        ^
+apps/lib/cmp_mock_srv.c:585:43: note: Parameter 'srv_ctx' can be declared as pointer to const
+static int process_genm(OSSL_CMP_SRV_CTX *srv_ctx,
+                                          ^
+apps/lib/cmp_mock_srv.c:603:24: style: Variable 'req' can be declared as pointer to const [constVariablePointer]
+        OSSL_CMP_ITAV *req = sk_OSSL_CMP_ITAV_value(in, 0), *rsp;
+                       ^
+apps/lib/cmp_mock_srv.c:604:22: style: Variable 'obj' can be declared as pointer to const [constVariablePointer]
+        ASN1_OBJECT *obj = OSSL_CMP_ITAV_get0_type(req);
+                     ^
+apps/lib/cmp_mock_srv.c:672:19: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    mock_srv_ctx *ctx = OSSL_CMP_SRV_CTX_get0_custom_ctx(srv_ctx);
+                  ^
+apps/lib/cmp_mock_srv.c:666:47: style: Parameter 'srv_ctx' can be declared as pointer to const. However it seems that 'process_certConf' is a callback function, if 'srv_ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int process_certConf(OSSL_CMP_SRV_CTX *srv_ctx,
+                                              ^
+apps/lib/cmp_mock_srv.c:761:13: note: You might need to cast the function pointer here
+            process_certConf, process_pollReq)
+            ^
+apps/lib/cmp_mock_srv.c:666:47: note: Parameter 'srv_ctx' can be declared as pointer to const
+static int process_certConf(OSSL_CMP_SRV_CTX *srv_ctx,
+                                              ^
+apps/lib/cmp_mock_srv.c:698:46: style: Parameter 'srv_ctx' can be declared as pointer to const. However it seems that 'process_pollReq' is a callback function, if 'srv_ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int process_pollReq(OSSL_CMP_SRV_CTX *srv_ctx,
+                                             ^
+apps/lib/cmp_mock_srv.c:761:31: note: You might need to cast the function pointer here
+            process_certConf, process_pollReq)
+                              ^
+apps/lib/cmp_mock_srv.c:698:46: note: Parameter 'srv_ctx' can be declared as pointer to const
+static int process_pollReq(OSSL_CMP_SRV_CTX *srv_ctx,
+                                             ^
+apps/lib/cmp_mock_srv.c:737:23: style: Variable 'srv_ctx' can be declared as pointer to const [constVariablePointer]
+    OSSL_CMP_SRV_CTX *srv_ctx = OSSL_CMP_CTX_get_transfer_cb_arg(ctx);
+                      ^
+apps/lib/cmp_mock_srv.c:741:23: style: Variable 'mock_ctx' can be declared as pointer to const [constVariablePointer]
+        mock_srv_ctx *mock_ctx = OSSL_CMP_SRV_CTX_get0_custom_ctx(srv_ctx);
+                      ^
+apps/lib/apps.c:92:13: style: The scope of the variable 'args' can be reduced. [variableScope]
+    va_list args;
+            ^
+apps/lib/apps.c:412:17: style: The scope of the variable 'cnf' can be reduced. [variableScope]
+    CONF_VALUE *cnf;
+                ^
+apps/lib/apps.c:1467:17: style: The scope of the variable 'val' can be reduced. [variableScope]
+    CONF_VALUE *val;
+                ^
+apps/lib/apps.c:1514:11: style: The scope of the variable 'buf' can be reduced. [variableScope]
+    char *buf;
+          ^
+apps/lib/apps.c:2233:9: style: The scope of the variable 'len' can be reduced. [variableScope]
+    int len;
+        ^
+apps/lib/apps.c:2413:23: style: The scope of the variable 'node' can be reduced. [variableScope]
+    X509_POLICY_NODE *node;
+                      ^
+apps/lib/apps.c:2414:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+apps/lib/apps.c:3889:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+apps/lib/apps.c:3945:17: style: The scope of the variable 'keybio' can be reduced. [variableScope]
+    static BIO *keybio = NULL;
+                ^
+apps/lib/apps.c:3947:9: style: The scope of the variable 'total_read' can be reduced. [variableScope]
+    int total_read = 0;
+        ^
+apps/lib/apps.c:3948:9: style: The scope of the variable 'n' can be reduced. [variableScope]
+    int n;
+        ^
+apps/lib/apps.c:3950:9: style: The scope of the variable 'too_long' can be reduced. [variableScope]
+    int too_long;
+        ^
+apps/lib/apps.c:161:37: style: Parameter 'x' can be declared as pointer to const [constParameterPointer]
+void dump_cert_text(BIO *out, X509 *x)
+                                    ^
+apps/lib/apps.c:408:27: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+int add_oid_section(CONF *conf)
+                          ^
+apps/lib/apps.c:411:27: style: Variable 'sktmp' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(CONF_VALUE) *sktmp;
+                          ^
+apps/lib/apps.c:716:50: style: Parameter 'cert' can be declared as pointer to const [constParameterPointer]
+static void warn_cert_msg(const char *uri, X509 *cert, const char *msg)
+                                                 ^
+apps/lib/apps.c:726:24: style: Parameter 'vpm' can be declared as pointer to const [constParameterPointer]
+    X509_VERIFY_PARAM *vpm)
+                       ^
+apps/lib/apps.c:738:57: style: Parameter 'certs' can be declared as pointer to const [constParameterPointer]
+static void warn_certs(const char *uri, STACK_OF(X509) *certs, int warn_EE,
+                                                        ^
+apps/lib/apps.c:1426:40: style: Parameter 'req' can be declared as pointer to const [constParameterPointer]
+int copy_extensions(X509 *x, X509_REQ *req, int copy_type)
+                                       ^
+apps/lib/apps.c:1467:17: style: Variable 'val' can be declared as pointer to const [constVariablePointer]
+    CONF_VALUE *val;
+                ^
+apps/lib/apps.c:1859:48: style: Parameter 'db_attr' can be declared as pointer to const [constParameterPointer]
+CA_DB *load_index(const char *dbfile, DB_ATTR *db_attr)
+                                               ^
+apps/lib/apps.c:1906:15: style: Variable 'p' can be declared as pointer to const [constVariablePointer]
+        char *p = app_conf_try_string(dbattr_conf, NULL, "unique_subject");
+              ^
+apps/lib/apps.c:2411:71: style: Parameter 'nodes' can be declared as pointer to const [constParameterPointer]
+static void nodes_print(const char *name, STACK_OF(X509_POLICY_NODE) *nodes)
+                                                                      ^
+apps/lib/apps.c:2430:23: style: Variable 'tree' can be declared as pointer to const [constVariablePointer]
+    X509_POLICY_TREE *tree;
+                      ^
+apps/lib/apps.c:2428:37: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+void policies_print(X509_STORE_CTX *ctx)
+                                    ^
+apps/lib/apps.c:2500:59: style: Parameter 'x' can be declared as pointer to const [constParameterPointer]
+int check_cert_might_be_valid(BIO *bio, BIO *b_err, X509 *x, const char *checkhost,
+                                                          ^
+apps/lib/apps.c:2628:76: style: Parameter 'opts' can be declared as pointer to const [constParameterPointer]
+static int do_pkey_ctx_init(EVP_PKEY_CTX *pkctx, STACK_OF(OPENSSL_STRING) *opts)
+                                                                           ^
+apps/lib/apps.c:2648:60: style: Parameter 'opts' can be declared as pointer to const [constParameterPointer]
+static int do_x509_init(X509 *x, STACK_OF(OPENSSL_STRING) *opts)
+                                                           ^
+apps/lib/apps.c:2668:68: style: Parameter 'opts' can be declared as pointer to const [constParameterPointer]
+static int do_x509_req_init(X509_REQ *x, STACK_OF(OPENSSL_STRING) *opts)
+                                                                   ^
+apps/lib/apps.c:2818:20: style: Variable 'gens' can be declared as pointer to const [constVariablePointer]
+    GENERAL_NAMES *gens;
+                   ^
+apps/lib/apps.c:2819:19: style: Variable 'gen' can be declared as pointer to const [constVariablePointer]
+    GENERAL_NAME *gen;
+                  ^
+apps/lib/apps.c:2821:18: style: Variable 'uri' can be declared as pointer to const [constVariablePointer]
+    ASN1_STRING *uri;
+                 ^
+apps/lib/apps.c:2846:55: style: Parameter 'crldp' can be declared as pointer to const [constParameterPointer]
+static X509_CRL *load_crl_crldp(STACK_OF(DIST_POINT) *crldp)
+                                                      ^
+apps/lib/apps.c:3092:17: style: Parameter 'req' can be declared as pointer to const [constParameterPointer]
+    ASN1_VALUE *req, const ASN1_ITEM *req_it,
+                ^
+apps/lib/apps.c:3846:64: style: Parameter 'opts' can be declared as pointer to const [constParameterPointer]
+OSSL_PARAM *app_params_new_from_opts(STACK_OF(OPENSSL_STRING) *opts,
+                                                               ^
+apps/lib/apps.c:3946:11: style: Variable 'val' can be declared as pointer to const [constVariablePointer]
+    char *val = NULL, *inbuf = NULL, *outbuf = NULL;
+          ^
+apps/lib/apps.c:1240:23: style: Variable 'pkey_type' is assigned a value that is never used. [unreadVariable]
+        int pkey_type = NID_undef;
+                      ^
+apps/lib/apps.c:3852:15: style: Variable 'opt' is assigned a value that is never used. [unreadVariable]
+    char *opt = "", *stmp, *vtmp = NULL;
+              ^
+apps/lib/s_cb.c:1203:13: style: Condition '!ssl_excert_prepend(&exc)' is always false [knownConditionTrueFalse]
+        if (!ssl_excert_prepend(&exc)) {
+            ^
+apps/lib/s_cb.c:1203:32: note: Calling function 'ssl_excert_prepend' returns 1
+        if (!ssl_excert_prepend(&exc)) {
+                               ^
+apps/lib/s_cb.c:1203:13: note: Condition '!ssl_excert_prepend(&exc)' is always false
+        if (!ssl_excert_prepend(&exc)) {
+            ^
+apps/lib/s_cb.c:1216:38: style: Condition '!ssl_excert_prepend(&exc)' is always false [knownConditionTrueFalse]
+        if (exc->certfile != NULL && !ssl_excert_prepend(&exc)) {
+                                     ^
+apps/lib/s_cb.c:1216:57: note: Calling function 'ssl_excert_prepend' returns 1
+        if (exc->certfile != NULL && !ssl_excert_prepend(&exc)) {
+                                                        ^
+apps/lib/s_cb.c:1216:38: note: Condition '!ssl_excert_prepend(&exc)' is always false
+        if (exc->certfile != NULL && !ssl_excert_prepend(&exc)) {
+                                     ^
+apps/lib/s_cb.c:1300:30: style: Condition 'ilen<0' is always false [knownConditionTrueFalse]
+    if (outlen < len || ilen < 0 || outlen != (size_t)ilen) {
+                             ^
+apps/lib/s_cb.c:1297:29: note: Assignment 'outlen=2*len+1', assigned value is greater than 0
+    size_t outlen = 2 * len + 1;
+                            ^
+apps/lib/s_cb.c:1298:16: note: Assignment 'ilen=(int)outlen', assigned value is greater than 0
+    int ilen = (int)outlen;
+               ^
+apps/lib/s_cb.c:1300:30: note: Condition 'ilen<0' is always false
+    if (outlen < len || ilen < 0 || outlen != (size_t)ilen) {
+                             ^
+apps/lib/s_cb.c:1141:17: style: The scope of the variable 'curr' can be reduced. [variableScope]
+    SSL_EXCERT *curr;
+                ^
+apps/lib/s_cb.c:1437:15: style: The scope of the variable 'crl' can be reduced. [variableScope]
+    X509_CRL *crl;
+              ^
+apps/lib/s_cb.c:903:45: style: Parameter 'ssl' can be declared as pointer to const [constParameterPointer]
+int generate_stateless_cookie_callback(SSL *ssl, unsigned char *cookie,
+                                            ^
+apps/lib/s_cb.c:1410:62: style: Parameter 'str' can be declared as pointer to const [constParameterPointer]
+int config_ctx(SSL_CONF_CTX *cctx, STACK_OF(OPENSSL_STRING) *str,
+                                                             ^
+apps/lib/s_cb.c:1435:63: style: Parameter 'crls' can be declared as pointer to const [constParameterPointer]
+static int add_crls_store(X509_STORE *st, STACK_OF(X509_CRL) *crls)
+                                                              ^
+apps/lib/s_cb.c:1448:31: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+int ssl_ctx_add_crls(SSL_CTX *ctx, STACK_OF(X509_CRL) *crls, int crl_download)
+                              ^
+apps/lib/s_cb.c:1609:23: style: Variable 'pkey' can be declared as pointer to const [constVariablePointer]
+            EVP_PKEY *pkey = X509_get0_pubkey(other);
+                      ^
+apps/lib/s_cb.c:1713:36: style: Parameter 's' can be declared as pointer to const [constParameterPointer]
+void print_ca_names(BIO *bio, SSL *s)
+                                   ^
+apps/lib/s_cb.c:1333:16: style: Variable 'mdpth' is assigned a value that is never used. [unreadVariable]
+    if ((mdpth = SSL_get0_dane_authority(s, NULL, &mspki)) >= 0) {
+               ^
+apps/lib/tlssrp_depr.c:62:14: style: Variable 'srp_arg' can be declared as pointer to const [constVariablePointer]
+    SRP_ARG *srp_arg = (SRP_ARG *)arg;
+             ^
+apps/lib/tlssrp_depr.c:63:13: style: Variable 'N' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *N = NULL, *g = NULL;
+            ^
+apps/lib/tlssrp_depr.c:63:24: style: Variable 'g' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *N = NULL, *g = NULL;
+                       ^
+apps/passwd.c:251:20: style: Condition 'in==NULL' is always true [knownConditionTrueFalse]
+            if (in == NULL) {
+                   ^
+apps/passwd.c:239:13: note: Assuming that condition 'in==NULL' is not redundant
+    if ((in == NULL) && (passwds == NULL)) {
+            ^
+apps/passwd.c:251:20: note: Condition 'in==NULL' is always true
+            if (in == NULL) {
+                   ^
+apps/list.c:460:17: style: The scope of the variable 'p' can be reduced. [variableScope]
+    const char *p;
+                ^
+apps/list.c:462:16: style: The scope of the variable 'params' can be reduced. [variableScope]
+    OSSL_PARAM params[2] = { OSSL_PARAM_END, OSSL_PARAM_END };
+               ^
+apps/list.c:458:15: style: Variable 'rand' can be declared as pointer to const [constVariablePointer]
+    EVP_RAND *rand;
+              ^
+apps/list.c:683:22: style: Variable 'k' can be declared as pointer to const [constVariablePointer]
+        EVP_KEYMGMT *k = sk_EVP_KEYMGMT_value(km_stack, i);
+                     ^
+apps/list.c:746:23: style: Variable 'k' can be declared as pointer to const [constVariablePointer]
+        EVP_SKEYMGMT *k = sk_EVP_SKEYMGMT_value(km_stack, i);
+                      ^
+apps/list.c:801:24: style: Variable 'k' can be declared as pointer to const [constVariablePointer]
+        EVP_SIGNATURE *k = sk_EVP_SIGNATURE_value(sig_stack, i);
+                       ^
+apps/list.c:851:48: style: Parameter 'provider' can be declared as pointer to const. However it seems that 'list_tls_sigalg_caps' is a callback function, if 'provider' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int list_tls_sigalg_caps(OSSL_PROVIDER *provider, void *cbdata)
+                                               ^
+apps/list.c:909:37: note: You might need to cast the function pointer here
+    if (!OSSL_PROVIDER_do_all(NULL, list_tls_sigalg_caps, &tls_sigalg_listed))
+                                    ^
+apps/list.c:851:48: note: Parameter 'provider' can be declared as pointer to const
+static int list_tls_sigalg_caps(OSSL_PROVIDER *provider, void *cbdata)
+                                               ^
+apps/list.c:945:18: style: Variable 'k' can be declared as pointer to const [constVariablePointer]
+        EVP_KEM *k = sk_EVP_KEM_value(kem_stack, i);
+                 ^
+apps/list.c:1006:26: style: Variable 'k' can be declared as pointer to const [constVariablePointer]
+        EVP_ASYM_CIPHER *k = sk_EVP_ASYM_CIPHER_value(asymciph_stack, i);
+                         ^
+apps/list.c:1067:22: style: Variable 'k' can be declared as pointer to const [constVariablePointer]
+        EVP_KEYEXCH *k = sk_EVP_KEYEXCH_value(kex_stack, i);
+                     ^
+apps/list.c:1584:22: style: struct member 'Anonymous5::options' is never used. [unusedStructMember]
+        unsigned int options : 1;
+                     ^
+apps/pkcs12.c:1379:15: style: The scope of the variable 'attr_nid' can be reduced. [variableScope]
+    int i, j, attr_nid;
+              ^
+apps/openssl.c:433:12: style: The scope of the variable 'nl' can be reduced. [variableScope]
+    int i, nl;
+           ^
+apps/openssl.c:438:11: style: The scope of the variable 'new_argv' can be reduced. [variableScope]
+    char *new_argv[3];
+          ^
+apps/pkcs12.c:1084:58: style: inconclusive: Function 'dump_certs_pkeys_bag' argument 2 names different: declaration 'bags' definition 'bag'. [funcArgNamesDifferent]
+int dump_certs_pkeys_bag(BIO *out, const PKCS12_SAFEBAG *bag,
+                                                         ^
+apps/pkcs12.c:48:58: note: Function 'dump_certs_pkeys_bag' argument 2 names different: declaration 'bags' definition 'bag'.
+int dump_certs_pkeys_bag(BIO *out, const PKCS12_SAFEBAG *bags,
+                                                         ^
+apps/pkcs12.c:1084:58: note: Function 'dump_certs_pkeys_bag' argument 2 names different: declaration 'bags' definition 'bag'.
+int dump_certs_pkeys_bag(BIO *out, const PKCS12_SAFEBAG *bag,
+                                                         ^
+apps/pkcs12.c:1189:33: style: Parameter 'cert' can be declared as pointer to const [constParameterPointer]
+static int get_cert_chain(X509 *cert, X509_STORE *store,
+                                ^
+apps/pkcs12.c:1377:21: style: Variable 'attr' can be declared as pointer to const [constVariablePointer]
+    X509_ATTRIBUTE *attr;
+                    ^
+apps/openssl.c:253:11: style: Variable 'sec_mem_char' can be declared as pointer to const [constVariablePointer]
+    char *sec_mem_char = NULL;
+          ^
+apps/openssl.c:245:18: style: Variable 'fp' can be declared as pointer to const [constVariablePointer]
+    FUNCTION f, *fp;
+                 ^
+apps/pkcs7.c:173:19: style: The scope of the variable 'x' can be reduced. [variableScope]
+            X509 *x;
+                  ^
+apps/pkcs7.c:188:23: style: The scope of the variable 'crl' can be reduced. [variableScope]
+            X509_CRL *crl;
+                      ^
+apps/pkcs7.c:62:24: style: Variable 'p7i' can be declared as pointer to const [constVariablePointer]
+    PKCS7 *p7 = NULL, *p7i;
+                       ^
+apps/pkcs7.c:151:25: style: Variable 'certs' can be declared as pointer to const [constVariablePointer]
+        STACK_OF(X509) *certs = NULL;
+                        ^
+apps/pkcs7.c:152:29: style: Variable 'crls' can be declared as pointer to const [constVariablePointer]
+        STACK_OF(X509_CRL) *crls = NULL;
+                            ^
+apps/pkcs7.c:188:23: style: Variable 'crl' can be declared as pointer to const [constVariablePointer]
+            X509_CRL *crl;
+                      ^
+apps/ocsp.c:1031:18: style: The scope of the variable 'id' can be reduced. [variableScope]
+    OCSP_CERTID *id;
+                 ^
+apps/ocsp.c:1032:17: style: The scope of the variable 'name' can be reduced. [variableScope]
+    const char *name;
+                ^
+apps/ocsp.c:1091:35: style: inconclusive: Function 'make_ocsp_response' argument 8 names different: declaration 'md' definition 'rmd'. [funcArgNamesDifferent]
+    EVP_PKEY *rkey, const EVP_MD *rmd,
+                                  ^
+apps/ocsp.c:65:35: note: Function 'make_ocsp_response' argument 8 names different: declaration 'md' definition 'rmd'.
+    EVP_PKEY *rkey, const EVP_MD *md,
+                                  ^
+apps/ocsp.c:1091:35: note: Function 'make_ocsp_response' argument 8 names different: declaration 'md' definition 'rmd'.
+    EVP_PKEY *rkey, const EVP_MD *rmd,
+                                  ^
+apps/ocsp.c:280:11: style: Variable 'opt_proxy' can be declared as pointer to const [constVariablePointer]
+    char *opt_proxy = NULL;
+          ^
+apps/ocsp.c:281:11: style: Variable 'opt_no_proxy' can be declared as pointer to const [constVariablePointer]
+    char *opt_no_proxy = NULL;
+          ^
+apps/ocsp.c:277:11: style: Variable 'header' can be declared as pointer to const [constVariablePointer]
+    char *header, *value, *respdigname = NULL;
+          ^
+apps/ocsp.c:987:37: style: Parameter 'issuer' can be declared as pointer to const [constParameterPointer]
+    const EVP_MD *cert_id_md, X509 *issuer,
+                                    ^
+apps/ocsp.c:1026:75: style: Parameter 'req' can be declared as pointer to const [constParameterPointer]
+static int print_ocsp_summary(BIO *out, OCSP_BASICRESP *bs, OCSP_REQUEST *req,
+                                                                          ^
+apps/ocsp.c:1027:31: style: Parameter 'names' can be declared as pointer to const [constParameterPointer]
+    STACK_OF(OPENSSL_STRING) *names,
+                              ^
+apps/ocsp.c:1090:32: style: Parameter 'ca' can be declared as pointer to const [constParameterPointer]
+    CA_DB *db, STACK_OF(X509) *ca, X509 *rcert,
+                               ^
+apps/ocsp.c:1092:31: style: Parameter 'sigopts' can be declared as pointer to const [constParameterPointer]
+    STACK_OF(OPENSSL_STRING) *sigopts,
+                              ^
+apps/ocsp.c:1251:54: style: Parameter 'ser' can be declared as pointer to const [constParameterPointer]
+static char **lookup_serial(CA_DB *db, ASN1_INTEGER *ser)
+                                                     ^
+apps/prime.c:182:17: style: The scope of the variable 'bytes_read' can be reduced. [variableScope]
+            int bytes_read = 0;
+                ^
+apps/pkeyutl.c:522:27: style: The scope of the variable 'ctmp' can be reduced. [variableScope]
+            unsigned char ctmp;
+                          ^
+apps/pkeyutl.c:790:36: style: inconclusive: Function 'do_keyop' argument 8 names different: declaration 'psecretlen' definition 'pseclen'. [funcArgNamesDifferent]
+    unsigned char *secret, size_t *pseclen)
+                                   ^
+apps/pkeyutl.c:39:36: note: Function 'do_keyop' argument 8 names different: declaration 'psecretlen' definition 'pseclen'.
+    unsigned char *secret, size_t *psecretlen);
+                                   ^
+apps/pkeyutl.c:790:36: note: Function 'do_keyop' argument 8 names different: declaration 'psecretlen' definition 'pseclen'.
+    unsigned char *secret, size_t *pseclen)
+                                   ^
+apps/pkeyutl.c:765:15: style: Variable 'pkey' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *pkey = EVP_PKEY_CTX_get0_pkey(ctx);
+              ^
+apps/pkeyutl.c:830:37: style: Parameter 'sig' can be declared as pointer to const [constParameterPointer]
+    size_t filesize, unsigned char *sig, size_t siglen,
+                                    ^
+apps/rehash.c:124:19: style: The scope of the variable 'nilbucket' can be reduced. [variableScope]
+    static BUCKET nilbucket;
+                  ^
+apps/rehash.c:125:19: style: The scope of the variable 'nilhentry' can be reduced. [variableScope]
+    static HENTRY nilhentry;
+                  ^
+apps/rehash.c:199:19: style: The scope of the variable 'ch' can be reduced. [variableScope]
+    unsigned char ch;
+                  ^
+apps/rehash.c:112:37: style: Parameter 'set' can be declared as pointer to const [constParameterPointer]
+static int bit_isset(unsigned char *set, unsigned int bit)
+                                    ^
+apps/rehash.c:238:16: style: Variable 'x' can be declared as pointer to const [constVariablePointer]
+    X509_INFO *x = NULL, *tmp;
+               ^
+apps/rehash.c:526:11: style: Variable 'e' can be declared as pointer to const [constVariablePointer]
+    char *e, *m;
+          ^
+apps/rehash.c:573:14: style: Variable 'lsc' can be declared as const array [constVariable]
+        char lsc[2] = { LIST_SEPARATOR_CHAR, '\0' };
+             ^
+apps/rsa.c:103:42: style: Parameter 'pkey' can be declared as pointer to const [constParameterPointer]
+static int try_legacy_encoding(EVP_PKEY *pkey, int outformat, int pubout,
+                                         ^
+apps/rsautl.c:239:23: style: The scope of the variable 'ctmp' can be reduced. [variableScope]
+        unsigned char ctmp;
+                      ^
+apps/req.c:1077:9: style: inconclusive: Function 'make_REQ' argument 4 names different: declaration 'mutlirdn' definition 'multirdn'. [funcArgNamesDifferent]
+    int multirdn, int attribs, unsigned long chtype)
+        ^
+apps/req.c:52:9: note: Function 'make_REQ' argument 4 names different: declaration 'mutlirdn' definition 'multirdn'.
+    int mutlirdn, int attribs, unsigned long chtype);
+        ^
+apps/req.c:1077:9: note: Function 'make_REQ' argument 4 names different: declaration 'mutlirdn' definition 'multirdn'.
+    int multirdn, int attribs, unsigned long chtype)
+        ^
+apps/req.c:1286:59: style: inconclusive: Function 'auto_info' argument 2 names different: declaration 'sk' definition 'dn_sk'. [funcArgNamesDifferent]
+static int auto_info(X509_REQ *req, STACK_OF(CONF_VALUE) *dn_sk,
+                                                          ^
+apps/req.c:57:59: note: Function 'auto_info' argument 2 names different: declaration 'sk' definition 'dn_sk'.
+static int auto_info(X509_REQ *req, STACK_OF(CONF_VALUE) *sk,
+                                                          ^
+apps/req.c:1286:59: note: Function 'auto_info' argument 2 names different: declaration 'sk' definition 'dn_sk'.
+static int auto_info(X509_REQ *req, STACK_OF(CONF_VALUE) *dn_sk,
+                                                          ^
+apps/req.c:1287:27: style: inconclusive: Function 'auto_info' argument 3 names different: declaration 'attr' definition 'attr_sk'. [funcArgNamesDifferent]
+    STACK_OF(CONF_VALUE) *attr_sk, int attribs,
+                          ^
+apps/req.c:58:27: note: Function 'auto_info' argument 3 names different: declaration 'attr' definition 'attr_sk'.
+    STACK_OF(CONF_VALUE) *attr, int attribs,
+                          ^
+apps/req.c:1287:27: note: Function 'auto_info' argument 3 names different: declaration 'attr' definition 'attr_sk'.
+    STACK_OF(CONF_VALUE) *attr_sk, int attribs,
+                          ^
+apps/req.c:971:19: style: Variable 'tpubkey' can be declared as pointer to const [constVariablePointer]
+        EVP_PKEY *tpubkey = X509_REQ_get0_pubkey(req);
+                  ^
+apps/req.c:1000:19: style: Variable 'tpubkey' can be declared as pointer to const [constVariablePointer]
+        EVP_PKEY *tpubkey;
+                  ^
+apps/req.c:1082:11: style: Variable 'tmp' can be declared as pointer to const [constVariablePointer]
+    char *tmp, *dn_sect, *attr_sect;
+          ^
+apps/req.c:1129:27: style: Parameter 'dn_sk' can be declared as pointer to const [constParameterPointer]
+    STACK_OF(CONF_VALUE) *dn_sk, const char *dn_sect,
+                          ^
+apps/req.c:1134:15: style: Variable 'q' can be declared as pointer to const [constVariablePointer]
+    char *p, *q;
+              ^
+apps/req.c:1130:27: style: Parameter 'attr_sk' can be declared as pointer to const [constParameterPointer]
+    STACK_OF(CONF_VALUE) *attr_sk, const char *attr_sect,
+                          ^
+apps/req.c:1286:59: style: Parameter 'dn_sk' can be declared as pointer to const [constParameterPointer]
+static int auto_info(X509_REQ *req, STACK_OF(CONF_VALUE) *dn_sk,
+                                                          ^
+apps/req.c:1291:15: style: Variable 'q' can be declared as pointer to const [constVariablePointer]
+    char *p, *q;
+              ^
+apps/req.c:1287:27: style: Parameter 'attr_sk' can be declared as pointer to const [constParameterPointer]
+    STACK_OF(CONF_VALUE) *attr_sk, int attribs,
+                          ^
+apps/sess_id.c:182:40: style: inconclusive: Function 'load_sess_id' argument 1 names different: declaration 'file' definition 'infile'. [funcArgNamesDifferent]
+static SSL_SESSION *load_sess_id(char *infile, int format)
+                                       ^
+apps/sess_id.c:52:40: note: Function 'load_sess_id' argument 1 names different: declaration 'file' definition 'infile'.
+static SSL_SESSION *load_sess_id(char *file, int format);
+                                       ^
+apps/sess_id.c:182:40: note: Function 'load_sess_id' argument 1 names different: declaration 'file' definition 'infile'.
+static SSL_SESSION *load_sess_id(char *infile, int format)
+                                       ^
+apps/s_client.c:656:46: error: There is an unknown macro here somewhere. Configuration is required. If PORT is a macro then please configure it. [unknownMacro]
+        "TCP/IP where to connect; default: " PORT ")" },
+                                             ^
+apps/s_server.c:1328:65: error: There is an unknown macro here somewhere. Configuration is required. If PORT is a macro then please configure it. [unknownMacro]
+        "TCP/IP port to listen on for connections (default is " PORT ")" },
+                                                                ^
+apps/s_time.c:369:13: style: 'continue' is redundant since it is the last statement in a loop. [redundantContinue]
+            continue;
+            ^
+apps/s_time.c:138:11: style: Variable 'cipher' can be declared as pointer to const [constVariablePointer]
+    char *cipher = NULL, *ciphersuites = NULL;
+          ^
+apps/s_time.c:138:27: style: Variable 'ciphersuites' can be declared as pointer to const [constVariablePointer]
+    char *cipher = NULL, *ciphersuites = NULL;
+                          ^
+apps/s_time.c:139:11: style: Variable 'www_path' can be declared as pointer to const [constVariablePointer]
+    char *www_path = NULL;
+          ^
+apps/s_time.c:140:11: style: Variable 'host' can be declared as pointer to const [constVariablePointer]
+    char *host = SSL_CONNECT_NAME, *certfile = NULL, *keyfile = NULL, *prog;
+          ^
+apps/smime.c:559:16: style: Variable 'p7_in' can be declared as pointer to const [constVariablePointer]
+        PKCS7 *p7_in = NULL;
+               ^
+apps/smime.c:739:29: style: Parameter 'signerfile' can be declared as pointer to const [constParameterPointer]
+static int save_certs(char *signerfile, STACK_OF(X509) *signers)
+                            ^
+apps/smime.c:739:57: style: Parameter 'signers' can be declared as pointer to const [constParameterPointer]
+static int save_certs(char *signerfile, STACK_OF(X509) *signers)
+                                                        ^
+apps/srp.c:37:39: style: Parameter 'id' can be declared as pointer to const [constParameterPointer]
+static int get_index(CA_DB *db, char *id, char type)
+                                      ^
+apps/srp.c:37:29: style: Parameter 'db' can be declared as pointer to const [constParameterPointer]
+static int get_index(CA_DB *db, char *id, char type)
+                            ^
+apps/srp.c:63:32: style: Parameter 'db' can be declared as pointer to const [constParameterPointer]
+static void print_entry(CA_DB *db, int indx, int verbose, char *s)
+                               ^
+crypto/LPdir_nyi.c:44:11: style: struct member 'LP_dir_context_st::dummy' is never used. [unusedStructMember]
+    void *dummy;
+          ^
+apps/speed.c:209:0: error: #error "SIGALRM not defined and the platform is not Windows" [preprocessorErrorDirective]
+#error "SIGALRM not defined and the platform is not Windows"
+^
+crypto/LPdir_vms.c:97:15: style: Variable 'filespec' can be declared as pointer to const [constVariablePointer]
+        char *filespec = NULL;
+              ^
+crypto/LPdir_vms.c:72:15: style: Variable 'r' can be declared as pointer to const [constVariablePointer]
+    char *p, *r;
+              ^
+crypto/LPdir_vms.c:97:15: style: Variable 'filespec' is assigned a value that is never used. [unreadVariable]
+        char *filespec = NULL;
+              ^
+crypto/aes/aes_cbc.c:21:12: style: inconclusive: Function 'AES_cbc_encrypt' argument 3 names different: declaration 'length' definition 'len'. [funcArgNamesDifferent]
+    size_t len, const AES_KEY *key,
+           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/aes.h:66:12: note: Function 'AES_cbc_encrypt' argument 3 names different: declaration 'length' definition 'len'.
+    size_t length, const AES_KEY *key,
+           ^
+crypto/aes/aes_cbc.c:21:12: note: Function 'AES_cbc_encrypt' argument 3 names different: declaration 'length' definition 'len'.
+    size_t len, const AES_KEY *key,
+           ^
+crypto/LPdir_win.c:173:20: style: Array index 'len_0' is used before limits check. [arrayIndexThenCheck]
+        while (wdir[len_0] && len_0 < (sizeof((*ctx)->entry_name) - 1))
+                   ^
+crypto/LPdir_win.c:88:26: style: Variable 'index' is assigned a value that is never used. [unreadVariable]
+            size_t index = 0, len_0 = dirlen + 1;
+                         ^
+apps/storeutl.c:83:11: style: Variable 'outfile' can be declared as pointer to const [constVariablePointer]
+    char *outfile = NULL, *passin = NULL, *passinarg = NULL;
+          ^
+crypto/aes/aes_core.c:1368:14: style: The scope of the variable 'temp' can be reduced. [variableScope]
+    uint32_t temp;
+             ^
+apps/ts.c:652:20: style: Variable 'token' can be declared as pointer to const [constVariablePointer]
+            PKCS7 *token = TS_RESP_get_token(response);
+                   ^
+apps/ts.c:837:65: style: Parameter 'serial' can be declared as pointer to const [constParameterPointer]
+static int save_ts_serial(const char *serialfile, ASN1_INTEGER *serial)
+                                                                ^
+apps/ts.c:985:45: style: Parameter 'vpm' can be declared as pointer to const [constParameterPointer]
+    const char *CAstore, X509_VERIFY_PARAM *vpm)
+                                            ^
+crypto/aria/aria.c:608:14: style: The scope of the variable 's0' can be reduced. [variableScope]
+    uint32_t s0, s1, s2, s3;
+             ^
+crypto/aria/aria.c:608:18: style: The scope of the variable 's1' can be reduced. [variableScope]
+    uint32_t s0, s1, s2, s3;
+                 ^
+crypto/aria/aria.c:608:22: style: The scope of the variable 's2' can be reduced. [variableScope]
+    uint32_t s0, s1, s2, s3;
+                     ^
+crypto/aria/aria.c:608:26: style: The scope of the variable 's3' can be reduced. [variableScope]
+    uint32_t s0, s1, s2, s3;
+                         ^
+apps/verify.c:113:31: style: Variable 'ptmp' can be declared as pointer to const [constVariablePointer]
+                X509_PURPOSE *ptmp = X509_PURPOSE_get0(i);
+                              ^
+apps/verify.c:250:31: style: Parameter 'opts' can be declared as pointer to const [constParameterPointer]
+    STACK_OF(OPENSSL_STRING) *opts)
+                              ^
+apps/verify.c:304:23: style: Variable 'cert' can be declared as pointer to const [constVariablePointer]
+                X509 *cert = sk_X509_value(chain, j);
+                      ^
+crypto/aes/aes_ige.c:136:30: style: The scope of the variable 'tmp2' can be reduced. [variableScope]
+            aes_block_t tmp, tmp2;
+                             ^
+crypto/aes/aes_ige.c:188:19: style: The scope of the variable 'tmp2' can be reduced. [variableScope]
+    unsigned char tmp2[AES_BLOCK_SIZE];
+                  ^
+crypto/aes/aes_ige.c:291:16: style: Variable 'in' is assigned a value that is never used. [unreadVariable]
+            in += AES_BLOCK_SIZE;
+               ^
+apps/x509.c:1374:16: style: The scope of the variable 'idret' can be reduced. [variableScope]
+    int id, i, idret;
+               ^
+apps/x509.c:245:39: style: Parameter 'excluded' can be declared as pointer to const [constParameterPointer]
+static void warn_copying(ASN1_OBJECT *excluded, const char *names)
+                                      ^
+apps/x509.c:255:36: style: Parameter 'cert' can be declared as pointer to const [constParameterPointer]
+static X509_REQ *x509_to_req(X509 *cert, int ext_copy, const char *names)
+                                   ^
+apps/x509.c:300:47: style: Parameter 'cert' can be declared as pointer to const [constParameterPointer]
+static int self_signed(X509_STORE *ctx, X509 *cert)
+                                              ^
+apps/x509.c:1346:42: style: Parameter 'ctx' can be declared as pointer to const. However it seems that 'callb' is a callback function, if 'ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int callb(int ok, X509_STORE_CTX *ctx)
+                                         ^
+apps/x509.c:416:35: note: You might need to cast the function pointer here
+    X509_STORE_set_verify_cb(ctx, callb);
+                                  ^
+apps/x509.c:1346:42: note: Parameter 'ctx' can be declared as pointer to const
+static int callb(int ok, X509_STORE_CTX *ctx)
+                                         ^
+apps/x509.c:1372:62: style: Parameter 'pt' can be declared as pointer to const [constParameterPointer]
+static int purpose_print(BIO *bio, X509 *cert, X509_PURPOSE *pt)
+                                                             ^
+apps/x509.c:1372:42: style: Parameter 'cert' can be declared as pointer to const [constParameterPointer]
+static int purpose_print(BIO *bio, X509 *cert, X509_PURPOSE *pt)
+                                         ^
+apps/x509.c:1418:46: style: Parameter 'x' can be declared as pointer to const [constParameterPointer]
+static int print_x509v3_exts(BIO *bio, X509 *x, const char *ext_names)
+                                             ^
+crypto/ascon/ascon_aead128.c:106:34: style: The scope of the variable 'flags' can be reduced. [variableScope]
+    uint64_t s0, s1, s2, s3, s4, flags;
+                                 ^
+crypto/ascon/ascon_aead128.c:269:20: style: Parameter 'out' can be declared as pointer to const [constParameterPointer]
+    unsigned char *out,
+                   ^
+crypto/asn1/a_bitstr.c:19:42: style: inconclusive: Function 'ASN1_BIT_STRING_set' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+int ASN1_BIT_STRING_set(ASN1_BIT_STRING *x, unsigned char *d, int len)
+                                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/asn1.h:809:42: note: Function 'ASN1_BIT_STRING_set' argument 1 names different: declaration 'a' definition 'x'.
+int ASN1_BIT_STRING_set(ASN1_BIT_STRING *a,
+                                         ^
+crypto/asn1/a_bitstr.c:19:42: note: Function 'ASN1_BIT_STRING_set' argument 1 names different: declaration 'a' definition 'x'.
+int ASN1_BIT_STRING_set(ASN1_BIT_STRING *x, unsigned char *d, int len)
+                                         ^
+crypto/asn1/a_bitstr.c:19:67: style: inconclusive: Function 'ASN1_BIT_STRING_set' argument 3 names different: declaration 'length' definition 'len'. [funcArgNamesDifferent]
+int ASN1_BIT_STRING_set(ASN1_BIT_STRING *x, unsigned char *d, int len)
+                                                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/asn1.h:810:27: note: Function 'ASN1_BIT_STRING_set' argument 3 names different: declaration 'length' definition 'len'.
+    unsigned char *d, int length);
+                          ^
+crypto/asn1/a_bitstr.c:19:67: note: Function 'ASN1_BIT_STRING_set' argument 3 names different: declaration 'length' definition 'len'.
+int ASN1_BIT_STRING_set(ASN1_BIT_STRING *x, unsigned char *d, int len)
+                                                                  ^
+crypto/asn1/a_bitstr.c:63:36: style: inconclusive: Function 'ossl_c2i_ASN1_BIT_STRING' argument 3 names different: declaration 'length' definition 'len'. [funcArgNamesDifferent]
+    const unsigned char **pp, long len)
+                                   ^
+crypto/asn1/asn1_local.h:89:36: note: Function 'ossl_c2i_ASN1_BIT_STRING' argument 3 names different: declaration 'length' definition 'len'.
+    const unsigned char **pp, long length);
+                                   ^
+crypto/asn1/a_bitstr.c:63:36: note: Function 'ossl_c2i_ASN1_BIT_STRING' argument 3 names different: declaration 'length' definition 'len'.
+    const unsigned char **pp, long len)
+                                   ^
+crypto/asn1/a_bitstr.c:218:68: style: inconclusive: Function 'ASN1_BIT_STRING_get_length' argument 2 names different: declaration 'length' definition 'out_length'. [funcArgNamesDifferent]
+int ASN1_BIT_STRING_get_length(const ASN1_BIT_STRING *abs, size_t *out_length,
+                                                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/asn1.h:824:68: note: Function 'ASN1_BIT_STRING_get_length' argument 2 names different: declaration 'length' definition 'out_length'.
+int ASN1_BIT_STRING_get_length(const ASN1_BIT_STRING *abs, size_t *length,
+                                                                   ^
+crypto/asn1/a_bitstr.c:218:68: note: Function 'ASN1_BIT_STRING_get_length' argument 2 names different: declaration 'length' definition 'out_length'.
+int ASN1_BIT_STRING_get_length(const ASN1_BIT_STRING *abs, size_t *out_length,
+                                                                   ^
+crypto/asn1/a_bitstr.c:219:10: style: inconclusive: Function 'ASN1_BIT_STRING_get_length' argument 3 names different: declaration 'unused_bits' definition 'out_unused_bits'. [funcArgNamesDifferent]
+    int *out_unused_bits)
+         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/asn1.h:825:10: note: Function 'ASN1_BIT_STRING_get_length' argument 3 names different: declaration 'unused_bits' definition 'out_unused_bits'.
+    int *unused_bits);
+         ^
+crypto/asn1/a_bitstr.c:219:10: note: Function 'ASN1_BIT_STRING_get_length' argument 3 names different: declaration 'unused_bits' definition 'out_unused_bits'.
+    int *out_unused_bits)
+         ^
+crypto/asn1/a_bitstr.c:19:60: style: Parameter 'd' can be declared as pointer to const [constParameterPointer]
+int ASN1_BIT_STRING_set(ASN1_BIT_STRING *x, unsigned char *d, int len)
+                                                           ^
+crypto/asn1/a_bitstr.c:28:24: style: Variable 'd' can be declared as pointer to const [constVariablePointer]
+    unsigned char *p, *d;
+                       ^
+crypto/asn1/a_d2i_fp.c:53:12: error: Returning pointer to local variable 'p' that will be invalid when returning. [returnDanglingLifetime]
+    return ret;
+           ^
+crypto/asn1/a_d2i_fp.c:50:18: note: Address of variable taken here.
+    ret = d2i(x, &p, len);
+                 ^
+crypto/asn1/a_d2i_fp.c:50:18: note: Passed to initializer list.
+    ret = d2i(x, &p, len);
+                 ^
+crypto/asn1/a_d2i_fp.c:41:26: note: Variable created here.
+    const unsigned char *p;
+                         ^
+crypto/asn1/a_d2i_fp.c:53:12: note: Returning pointer to local variable 'p' that will be invalid when returning.
+    return ret;
+           ^
+crypto/asn1/a_d2i_fp.c:58:64: style: inconclusive: Function 'ASN1_item_d2i_bio_ex' argument 3 names different: declaration 'pval' definition 'x'. [funcArgNamesDifferent]
+void *ASN1_item_d2i_bio_ex(const ASN1_ITEM *it, BIO *in, void *x,
+                                                               ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/asn1.h:1213:64: note: Function 'ASN1_item_d2i_bio_ex' argument 3 names different: declaration 'pval' definition 'x'.
+void *ASN1_item_d2i_bio_ex(const ASN1_ITEM *it, BIO *in, void *pval,
+                                                               ^
+crypto/asn1/a_d2i_fp.c:58:64: note: Function 'ASN1_item_d2i_bio_ex' argument 3 names different: declaration 'pval' definition 'x'.
+void *ASN1_item_d2i_bio_ex(const ASN1_ITEM *it, BIO *in, void *x,
+                                                               ^
+crypto/asn1/a_d2i_fp.c:79:61: style: inconclusive: Function 'ASN1_item_d2i_bio' argument 3 names different: declaration 'pval' definition 'x'. [funcArgNamesDifferent]
+void *ASN1_item_d2i_bio(const ASN1_ITEM *it, BIO *in, void *x)
+                                                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/asn1.h:1215:61: note: Function 'ASN1_item_d2i_bio' argument 3 names different: declaration 'pval' definition 'x'.
+void *ASN1_item_d2i_bio(const ASN1_ITEM *it, BIO *in, void *pval);
+                                                            ^
+crypto/asn1/a_d2i_fp.c:79:61: note: Function 'ASN1_item_d2i_bio' argument 3 names different: declaration 'pval' definition 'x'.
+void *ASN1_item_d2i_bio(const ASN1_ITEM *it, BIO *in, void *x)
+                                                            ^
+crypto/asn1/a_dup.c:38:12: error: Returning pointer to local variable 'p2' that will be invalid when returning. [returnDanglingLifetime]
+    return ret;
+           ^
+crypto/asn1/a_dup.c:36:21: note: Address of variable taken here.
+    ret = d2i(NULL, &p2, i);
+                    ^
+crypto/asn1/a_dup.c:36:21: note: Passed to initializer list.
+    ret = d2i(NULL, &p2, i);
+                    ^
+crypto/asn1/a_dup.c:19:26: note: Variable created here.
+    const unsigned char *p2;
+                         ^
+crypto/asn1/a_dup.c:38:12: note: Returning pointer to local variable 'p2' that will be invalid when returning.
+    return ret;
+           ^
+crypto/asn1/a_digest.c:50:47: warning: Function 'ossl_asn1_item_digest_ex' argument order different: declaration 'it, type, data, md, len, libctx, propq' definition 'it, md, asn, data, len, libctx, propq' [funcArgOrderDifferent]
+int ossl_asn1_item_digest_ex(const ASN1_ITEM *it, const EVP_MD *md, void *asn,
+                                              ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/x509.h:375:47: note: Function 'ossl_asn1_item_digest_ex' argument order different: declaration 'it, type, data, md, len, libctx, propq' definition 'it, md, asn, data, len, libctx, propq'
+int ossl_asn1_item_digest_ex(const ASN1_ITEM *it, const EVP_MD *type,
+                                              ^
+crypto/asn1/a_digest.c:50:47: note: Function 'ossl_asn1_item_digest_ex' argument order different: declaration 'it, type, data, md, len, libctx, propq' definition 'it, md, asn, data, len, libctx, propq'
+int ossl_asn1_item_digest_ex(const ASN1_ITEM *it, const EVP_MD *md, void *asn,
+                                              ^
+crypto/asn1/a_digest.c:75:39: warning: Function 'ASN1_item_digest' argument order different: declaration 'it, type, data, md, len' definition 'it, md, asn, data, len' [funcArgOrderDifferent]
+int ASN1_item_digest(const ASN1_ITEM *it, const EVP_MD *md, void *asn,
+                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/x509.h:1139:39: note: Function 'ASN1_item_digest' argument order different: declaration 'it, type, data, md, len' definition 'it, md, asn, data, len'
+int ASN1_item_digest(const ASN1_ITEM *it, const EVP_MD *type, void *data,
+                                      ^
+crypto/asn1/a_digest.c:75:39: note: Function 'ASN1_item_digest' argument order different: declaration 'it, type, data, md, len' definition 'it, md, asn, data, len'
+int ASN1_item_digest(const ASN1_ITEM *it, const EVP_MD *md, void *asn,
+                                      ^
+crypto/asn1/a_digest.c:50:75: style: Parameter 'asn' can be declared as pointer to const [constParameterPointer]
+int ossl_asn1_item_digest_ex(const ASN1_ITEM *it, const EVP_MD *md, void *asn,
+                                                                          ^

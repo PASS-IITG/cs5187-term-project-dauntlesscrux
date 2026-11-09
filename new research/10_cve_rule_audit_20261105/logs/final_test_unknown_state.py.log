@@ -1,0 +1,3 @@
+PASS: unsupported source classified as UNKNOWN
+SKIP: no supported target function found in /tmp/tmp8ki0es6w/unsupported.c
+  STATE: UNKNOWN

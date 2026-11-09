@@ -1,0 +1,25 @@
+## main...origin/main
+D  __pycache__/typestate_check.cpython-311.pyc
+D  openssl
+ M research/07_evaluation/typestate_checker_eval_v2.py
+RM typestate_check.py -> src/typestate_check.py
+ M tests/test_all_cves.sh
+ M tests/test_bio_adversarial.py
+ M tests/test_cve_2022_4450.sh
+ M tests/test_cve_2023_0215.sh
+D  typestate_check.py.bak
+D  typestate_check.py.before_rule_fix.20261016_102223
+?? .gitignore
+?? research/02_candidate_selection/historical_fix_register.csv
+?? research/02_candidate_selection/openssl_fix_commit_candidates_20261103.txt
+?? research/02_candidate_selection/openssl_fix_commit_candidates_unique_20261103.tsv
+?? research/02_candidate_selection/openssl_fix_commit_patchids_20261103.tsv
+?? research/02_candidate_selection/openssl_typestate_fix_shortlist_20261103.tsv
+?? research/07_evaluation/eval_v2_stdout_20261103.log
+?? research/09_reproducibility/clang_scan_20261103/
+?? research/09_reproducibility/coccinelle_20261104/
+?? research/09_reproducibility/cppcheck_20261104/
+?? research/10_cve_rule_audit_20261105/
+?? tests/test_bio_alias.py
+?? tests/test_pem_ssl_adversarial.py
+?? tests/test_unknown_state.py

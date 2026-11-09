@@ -1,0 +1,11 @@
+Testing vulnerable CVE-2022-4450 source...
+ALERT [CVE-2022-4450]: /mnt/d/cve-typestate-project/openssl-cve-2022-4450-vulnerable/crypto/pem/pem_lib.c
+  Failure cleanup frees output buffers but does not
+  clear both caller-visible output pointers.
+  STATE: VIOLATION
+
+Testing fixed CVE-2022-4450 source...
+NO ALERT [CVE-2022-4450]: /mnt/d/cve-typestate-project/openssl-cve-2022-4450-fixed/crypto/pem/pem_lib.c
+  STATE: CONFORMING
+
+PASS: vulnerable and fixed versions were distinguished.

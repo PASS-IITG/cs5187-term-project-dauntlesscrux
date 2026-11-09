@@ -1,0 +1,13 @@
+CVE,Side,HEAD,Status
+CVE-2023-0215,Vulnerable,cbafa34b5a057794c5c08cd4657038e1f643c1ac,"## HEAD (no branch)
+ M test/smime-eml/SignedInvalidMappingFromanyPolicyTest7.eml"
+CVE-2023-0215,Fixed,8818064ce3c3c0f1b740a5aaba2a987e75bfbafd,"## HEAD (no branch)
+ M test/smime-eml/SignedInvalidMappingFromanyPolicyTest7.eml"
+CVE-2022-4450,Vulnerable,8e257b86e5812c6e1cfa9e8e5f5660ac7bed899d,"## HEAD (no branch)
+ M test/smime-eml/SignedInvalidMappingFromanyPolicyTest7.eml"
+CVE-2022-4450,Fixed,63bcf189be73a9cc1264059bed6f57974be74a83,"## HEAD (no branch)
+ M test/smime-eml/SignedInvalidMappingFromanyPolicyTest7.eml"
+CVE-2024-4741,Vulnerable,b3f0eb0a295f58f16ba43ba99dad70d4ee5c437d,"## HEAD (no branch)
+ M test/smime-eml/SignedInvalidMappingFromanyPolicyTest7.eml"
+CVE-2024-4741,Fixed,2d05959073c4bf8803401668b9df85931a08e020,"## HEAD (no branch)
+ M test/smime-eml/SignedInvalidMappingFromanyPolicyTest7.eml"

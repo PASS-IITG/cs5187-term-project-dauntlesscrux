@@ -1,0 +1,9 @@
+/tmp/openssl-integrated-validation/cve2024_vulnerable/ssl/record/ssl3_buffer.c:194:4-10: return_event
+/tmp/openssl-integrated-validation/cve2024_vulnerable/ssl/record/ssl3_buffer.c:182:4-10: return_event
+/tmp/openssl-integrated-validation/cve2024_vulnerable/ssl/record/ssl3_buffer.c:156:8-14: return_event
+/tmp/openssl-integrated-validation/cve2024_vulnerable/ssl/record/ssl3_buffer.c:160:8-14: return_event
+/tmp/openssl-integrated-validation/cve2024_vulnerable/ssl/record/ssl3_buffer.c:162:4-10: return_event
+/tmp/openssl-integrated-validation/cve2024_vulnerable/ssl/record/ssl3_buffer.c:75:12-18: return_event
+/tmp/openssl-integrated-validation/cve2024_vulnerable/ssl/record/ssl3_buffer.c:81:4-10: return_event
+/tmp/openssl-integrated-validation/cve2024_vulnerable/ssl/record/ssl3_buffer.c:138:20-26: return_event
+/tmp/openssl-integrated-validation/cve2024_vulnerable/ssl/record/ssl3_buffer.c:149:4-10: return_event

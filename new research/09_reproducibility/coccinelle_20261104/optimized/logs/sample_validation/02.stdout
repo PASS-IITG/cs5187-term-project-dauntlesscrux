@@ -1,0 +1,8 @@
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:26:4-16: release_event|OPENSSL_free|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:9:11-23: release_event|OPENSSL_free|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:10:9-21: release_event|OPENSSL_free|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:16:4-16: release_event|OPENSSL_free|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:18:4-16: release_event|OPENSSL_free|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:5:4-16: release_event|OPENSSL_free|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:6:4-16: release_event|OPENSSL_free|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:13:4-16: release_event|OPENSSL_free|p

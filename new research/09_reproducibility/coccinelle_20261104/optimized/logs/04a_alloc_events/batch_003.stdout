@@ -1,0 +1,10 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/dso/dso_lib.c:311:15-29: alloc_event|filename
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/ct/ct_sct_ctx.c:229:13-27: alloc_event|md
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/dso/dso_vms.c:458:13-27: alloc_event|merged
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/ec/ec_print.c:63:14-28: alloc_event|oct_buf
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/ct/ct_b64.c:36:13-27: alloc_event|outbuf
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/dso/dso_win32.c:73:8-22: alloc_event|p
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/dh/dh_key.c:441:19-33: alloc_event|pbuf
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/ec/ec_ameth.c:84:11-25: alloc_event|penc
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/dso/dso_win32.c:293:13-27: alloc_event|result
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/ec/ec_print.c:29:10-24: alloc_event|ret

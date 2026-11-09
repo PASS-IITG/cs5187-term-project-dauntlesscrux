@@ -1,0 +1,22 @@
+OpenSSL BN_mod_add_quick MSan runtime validation
+
+Source revision: ed57129cd43b77e077c68fd5f7ea951976766f38
+Source used: git archive of the Clang worktree HEAD at that revision, extracted under /tmp/openssl-bn-modadd-msan/src
+Source file SHA-256 (original and archived): c1bea100c5ce0d09fd04cdb62d906e65382112dd8fa7bcc5d4834b6ae98c1cfe
+Build: clang-18, -O1 -g -fsanitize=memory -fsanitize-memory-track-origins=2 -fno-omit-frame-pointer -fPIE; no-shared; make -j4 build_libs
+Harness source: /tmp/openssl-bn-modadd-msan/bn_modadd_repro.c
+Harness binary: /tmp/openssl-bn-modadd-msan/bn_modadd_repro, linked against the instrumented libcrypto.a from the archived source.
+
+Execution 1: MSAN_OPTIONS=halt_on_error=1:exit_code=86 bn_modadd_repro a
+Input: a=0, b=0, m=17; exit 0; output: mode=a ok=1 result=0; no MSan report.
+
+Execution 2: MSAN_OPTIONS=halt_on_error=1:exit_code=86 bn_modadd_repro b
+Input: a=1, b=0, m=17; exit 0; output: mode=b ok=1 result=1; no MSan report.
+
+MSan negative control: compiled and ran a standalone uninitialized stack read; exit 86 with a MemorySanitizer use-of-uninitialized-value report. This confirms the sanitizer runtime works in this environment.
+
+Valgrind/Memcheck: unavailable (command not found). No package was installed.
+
+Coverage search: no direct references to BN_mod_add_quick or bn_mod_add_fixed_top were found under test/. Existing DSA/EC production paths call BN_mod_add_quick; ECDSA/RSA paths call bn_mod_add_fixed_top directly.
+
+Interpretation: Both actual source paths are exercised, but MSan did not report because the uninitialized word is ANDed with a zero mask for a zero BIGNUM. Runtime evidence therefore does not confirm the analyzer warning. This does not disprove the source-level read-before-initialization; no Valgrind result is available.

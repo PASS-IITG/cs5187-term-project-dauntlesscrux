@@ -1,0 +1,21 @@
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 3553009762
+INFO: Loaded 1 modules   (9 inline 8-bit counters): 9 [0x59e97d9329a0, 0x59e97d9329a9), 
+INFO: Loaded 1 PC tables (9 PCs): 9 [0x59e97d9329b0,0x59e97d932a40), 
+INFO:       10 files found in /mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/05_fuzzing/corpora/cms
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 10 min: 3b max: 1007b total: 1121b rss: 36Mb
+#13	INITED cov: 3 ft: 3 corp: 1/3b exec/s: 0 rss: 38Mb
+#31	REDUCE cov: 3 ft: 3 corp: 1/2b lim: 4 exec/s: 0 rss: 38Mb L: 2/2 MS: 3 CopyPart-ShuffleBytes-EraseBytes-
+#34	REDUCE cov: 3 ft: 3 corp: 1/1b lim: 4 exec/s: 0 rss: 38Mb L: 1/1 MS: 3 CopyPart-ChangeByte-EraseBytes-
+#262144	pulse  cov: 3 ft: 3 corp: 1/1b lim: 2600 exec/s: 131072 rss: 314Mb
+#524288	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 131072 rss: 504Mb
+#1048576	pulse  cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 149796 rss: 507Mb
+#1344555	DONE   cov: 3 ft: 3 corp: 1/1b lim: 4096 exec/s: 149395 rss: 508Mb
+Done 1344555 runs in 9 second(s)
+stat::number_of_executed_units: 1344555
+stat::average_exec_per_sec:     149395
+stat::new_units_added:          2
+stat::slowest_unit_time_sec:    0
+stat::peak_rss_mb:              508
+run_exit=0

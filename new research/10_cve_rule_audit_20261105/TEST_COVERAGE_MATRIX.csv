@@ -1,0 +1,8 @@
+Test,Scope,Expected result,Observed result,Status,Evidence log
+test_all_cves.sh,All three vulnerable/fixed pairs,Vulnerable VIOLATION and fixed CONFORMING for each,All pairs distinguished; exit 0,PASS,logs/final_test_all_cves.sh.log
+test_cve_2022_4450.sh,CVE-2022-4450 real pair,Vulnerable VIOLATION; fixed CONFORMING,Pair distinguished; exit 0,PASS,logs/final_test_cve_2022_4450.sh.log
+test_cve_2023_0215.sh,CVE-2023-0215 real pair,Vulnerable VIOLATION; fixed CONFORMING,Pair distinguished; exit 0,PASS,logs/final_test_cve_2023_0215.sh.log
+test_bio_adversarial.py,BIO real pair; unreachable pop; commented push,Existing expected outcomes,4/4; exit 0,PASS,logs/final_test_bio_adversarial.py.log
+test_bio_alias.py,BIO direct alias; conditional pop; reassigned alias,Existing expected outcomes,3/3; exit 0,PASS,logs/final_test_bio_alias.py.log
+test_unknown_state.py,Unsupported source,UNKNOWN / exit 2,UNKNOWN / exit 2,PASS,logs/final_test_unknown_state.py.log
+test_pem_ssl_adversarial.py,All real pairs; PEM missing/conditional/dead/reordered resets and alias; SSL missing/conditional/dead/reordered resets; BIO dead/alias push,"17 outcomes including VIOLATION, CONFORMING and UNKNOWN",17/17; exit 0,PASS,logs/final_test_pem_ssl_adversarial.py.log

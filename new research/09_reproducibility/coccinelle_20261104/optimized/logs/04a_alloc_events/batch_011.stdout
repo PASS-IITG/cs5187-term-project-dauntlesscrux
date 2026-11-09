@@ -1,0 +1,15 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/kdfs/pkcs12kdf.c:77:9-23: alloc_event|Ai
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/kdfs/pkcs12kdf.c:78:8-22: alloc_event|B
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/kdfs/scrypt.c:510:8-22: alloc_event|B
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/kdfs/pkcs12kdf.c:76:8-22: alloc_event|D
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/kdfs/pkcs12kdf.c:85:8-22: alloc_event|I
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/encode_decode/decode_msblob2key.c:133:10-24: alloc_event|buf
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/kdfs/ikev2kdf.c:712:11-25: alloc_event|hmac
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/kdfs/ikev2kdf.c:570:12-26: alloc_event|nonce
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/ciphers/cipher_rc2.c:70:10-24: alloc_event|ret
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/ciphers/cipher_rc4.c:45:10-24: alloc_event|ret
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/ciphers/cipher_rc5.c:64:10-24: alloc_event|ret
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/ciphers/cipher_seed.c:41:10-24: alloc_event|ret
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/ciphers/cipher_sm4.c:35:10-24: alloc_event|ret
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/ciphers/cipher_sm4_xts.c:114:10-24: alloc_event|ret
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/ciphers/cipher_tdes_common.c:73:10-24: alloc_event|ret

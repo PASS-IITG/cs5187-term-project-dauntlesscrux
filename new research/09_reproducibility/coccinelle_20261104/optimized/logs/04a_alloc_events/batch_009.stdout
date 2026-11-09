@@ -1,0 +1,13 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/digest/EVP_MD_xof.c:106:13-27: alloc_event|digest
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/digest/BIO_f_md.c:80:19-33: alloc_event|digest_value
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/digest/EVP_MD_demo.c:111:19-33: alloc_event|digest_value
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/digest/EVP_MD_stdin.c:72:19-33: alloc_event|digest_value
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/mac/cmac-aes256.c:117:10-24: alloc_event|out
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/mac/hmac-sha512.c:126:10-24: alloc_event|out
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/quic/poll-server/quic-server-ssl-poll-http.c:1133:12-26: alloc_event|peccx
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/http3/ossl-nghttp3.c:711:14-28: alloc_event|pollist
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/quic/poll-server/quic-server-ssl-poll-http.c:591:10-24: alloc_event|rtf
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/quic/poll-server/quic-server-ssl-poll-http.c:496:10-24: alloc_event|rts
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/signature/EVP_DSA_Signature_demo.c:197:16-30: alloc_event|sig_value
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/signature/EVP_EC_Signature_demo.c:121:16-30: alloc_event|sig_value
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/signature/EVP_ED_Signature_demo.c:63:16-30: alloc_event|sig_value

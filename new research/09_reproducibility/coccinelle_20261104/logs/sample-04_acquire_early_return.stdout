@@ -1,0 +1,2 @@
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/acquire_return.c:5:8-22: allocation assigned to p in candidate precedes a return at line 6; review cleanup/ownership
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/acquire_return.c:13:8-22: allocation assigned to p in safe precedes a return at line 14; review cleanup/ownership

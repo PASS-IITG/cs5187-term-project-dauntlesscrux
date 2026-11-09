@@ -1,0 +1,342 @@
+31494f4f65be6d46bee4c5123dfc5c276429d8e0	0903a45c0aff8291349830655ebbb55caa7c386a	2026-09-19	Fix a memory leak in quicapitest.c
+20f2609027da82f7082d3f0cf3762a919cddb961	104397b78604177fad157e625b9949dde9385faf	2026-09-12	Fix a memory leak in apps/ocsp.c issuer
+628f5dccf05954ac4e2b488cb48772a9bb934e88	9016a52a5ec4766e4cd8c4fa6f432b46eff54dfd	2026-09-10	Fix memory leaks from duplicate X509v3 section fields
+659f1c683a00cc3200694267e628b7f6a7f1b275	774015ad0bd6bdd665253d0cb5e51427edef7aea	2026-09-09	Fix memory leak on error on OSSL_PROVIDER_available()
+07e35ffd598dfefa6ddabb66dd4a0f5a4f96fe14	0589d32df73c598e04b97f703108718d32d617f1	2026-09-08	Fix memory leaks in rsa_multiprime_keygen() on error
+6e359662d0ae39d1e040421bb4f85e2a168b26c9	2ba22b9e0a45b64c1fc31eabc2a955afeb85ad18	2026-09-08	Fix memory leak of der_buf on error in x942_encode_otherinfo()
+acfe3b4e34731dfb94bae2d986a60efef3873afe	e373d6cada762849abc510167173c413f883d10c	2026-09-08	Fix memory leak of der_buf on error in x942_encode_otherinfo()
+85fa3f1a8517612427ad2399c5f068fbc3e690eb	386bd8408274351d3ea763214c3df2b58b351f86	2026-09-03	Fix NULL dereference and memory leak in ASN1_item_dup()
+aea6df7e1fb0676977765744a0238512c0240247	6e31e19bf226b49bd13fcd425200fbbe4d005667	2026-09-01	Fix double free in server client-certificate parse error path
+6f7b564e919851d6ac9fea08a2aad3f857c356ab	c8ba7c89289074ca38b997b6559b664f52cd2387	2026-08-18	Free connections before listeners in the radix test cleanup
+60d4639ef8185153cc093019d6cc4c292c00963f	f666172c4651d5a0a5f6425f899b3ef1a1b2eaac	2026-08-13	Fix memory leak in ossl_decoder_instance_new_forprov()
+fb84b2a36a4e65569b1625351c04edbe6dca4bed	5f61ae81549a6872869469bcb2784cdc08be9271	2026-08-13	Fix memory leak in PKCS12_parse
+8512f393b3c250e9208617febeebf5c071c18cb2	db1b675c0472dcea7372b6b523fc2ffb2ec2d1f9	2026-08-12	Add test for ASN1_TYPE memory leak in asn1_multi()
+b5a711bf43e88d636bcb7c95298312dd168bc315	5f1c7bb0cc37d18b2fc656e1148977e3e17fe3fe	2026-08-06	Fix ASN1_TYPE memory leak in asn1_multi()
+452c27ea25a9fab51fc3b8621e106858fe3e9af2	70cebd74d3592f5272945501b58a60374c4e13af	2026-08-05	Avoid double free of qrx in port_default_packet_handler()
+e3fc70020d5e73bf9dcc79c7e4c1cbd68ea483c3	a14a1deac403522fbeafabcb198503cf6caa7dc4	2026-08-05	Avoid double free of qrx in port_default_packet_handler()
+e26b873edb149a2548c36c48971aa33e1dd0807b	6fbc443ad53299972c5eb71ea78f6422de23d3d1	2026-08-04	Fix memory leaks in x509v3 config handling
+522da09bdb3c395181d4b95c4bc5e3fa8acae1d5	77f492f29f882e07d57e16920138d991dc9af018	2026-07-25	oqs noted a double free recently:
+0f44f7ccaafea8f6a1abb953fde7426292f6924c	64f09bd826e8fdefae67aea68ec1bfacefa1d5f4	2026-06-30	crypto/x509/x509_lu.c: fix memory leak in obj_ht_foreach_object()
+a7f7d3a9ffc1b40c410346d986ef7594ce303710	12f67950a7f45abce5007e212636ad5078afd846	2026-06-30	crypto/x509/x509_lu.c: fix memory leak in obj_ht_foreach_object()
+77eb1411df9892162b39aa388b0a8558a7be7ea8	9d0dfef70d52d0ea9abfd27699f322ca0f9c6d5b	2026-06-10	ssl/quic/quic_ackm.c: fix use after free for apkt in ackm_on_pkts_acked()
+594a08cb6d0e6f27e3c1098217255b526e953319	11fb223813931724096c1b3f704c290b5231ef31	2026-06-09	Fix use-after-free issue in radix test framework for QUIC.
+6b84628c4a94b88cf2bd6247a5ebcb68a1e6e810	e70c79415c0a49b700158e8f4307ea55bb50a8bd	2026-05-27	crypto/evp: fix double free of tmp_keymgmt in sig/kem/asym init
+205dc45f8787555d30be6edeb9446cd7b3bd0d5c	b59c04885bbcebc9a72a10766e779de59d05643b	2026-05-23	providers: Nullify BIO pointer after free to prevent double free
+57e4612de637fa47c0c96bcf95dba0860886145e	f14ac9578575078220737374b833e5318bb27c91	2026-05-23	slh_dsa: Remove redundant cleanup to prevent double free
+7d9754b5c957f3bb8a8b78a836a113c13f099a2c	2369170b6b9ea5a9e1338b9f956ebff988639351	2026-05-23	slh_dsa: Remove redundant cleanup to prevent double free
+d18e5268ab484989c00564697f53af657758ed14	031170806f73be470df24c484d7a41c289a2c0e1	2026-05-23	crypto/evp/m_sigver.c: fix potential double free on error path in do_sigver_init
+138739252c2ff1a96092ff9284054d83792bc340	9dfd688ad2290fc5075cacbc9bf0c9a93eefed54	2026-05-16	Fix possible use-after-free in OpenSSL PKCS7_verify()
+e6f04d8ff949d9dbcd6c065ac0d79477383f2f92	f4129fbe3cde786d363510069fe297234f99be8f	2026-05-16	Fix possible use-after-free in OpenSSL PKCS7_verify()
+4ea015237e8e0a51c215a60ae1cc6c63c6962747	fcc651b8096c61c5b0d1a5255a059425ffc0950d	2026-04-29	Fix memory leak in asn_mime multi_split
+dd377ffa8ab67f27611155cbb6b0dd62f576adee	24f14cdf553cd3209914e7f67e3f7a929784d4a8	2026-04-29	Fix memory leak in asn_mime multi_split
+9041636765c37f50017ddd3d78f48e8859a7dad1	2764aa822347e6683eefc0f9216cf6b9106dc26c	2026-04-22	Fix memory leak in load_key_certs_crls() and backport memfail test
+9ba39a8e11216850f4b18629a5f6ca2bd7ca6609	628c42925d2a4353e1cf7b922767f1be8fd780e3	2026-04-21	Fix memory leak in load_key_certs_crls() when add/push fails
+ee50d1cd3ac37de3a697b1298f3dbb11c16cc4bf	4c7da17006f9bc643b2307b1a2c9eb55c2f70d30	2026-04-21	Fix memory leak in load_key_certs_crls() when add/push fails
+ff8b7eb95c65ff7b9a79a284fd3f1cceb5b5e3d6	6000ce924519ed48d6ee39f812cd212e24c6733e	2026-04-09	quic_channel.c: fix potential memory leak on failure in ossl_quic_channel_alloc
+066ec9114c242f3f0483a9dba2068a43ac58db4c	310e2f160db4169287592fb084911552f589d7f8	2026-04-08	Fix memory leak in ossl_uint_set_insert()
+bdc6723350ea247d3b10daab77bbc690c4067536	9a5fe65ae63c7ef9bab063ba8a5ae88c47db6316	2026-04-01	s_lib.c: Fix refcount leak in EVP_SKEY_to_provider
+d50159228553b9caeccd3a0f274f1dd2445bd013	5e8b989b51246a66a1b764e298c116f15ef38a82	2026-03-23	CMS_verify(): Fix leak of tmpin in an error path
+7ac28096139e4abb3a596a42158a4b3a51e410fe	f3dbf6aa79c37f6fd280b1a96c081e3194c3f454	2026-03-19	Fix a Use-After-Free bug in the DTLS code
+0b26b63cccf46db2f5856b3f2c8e1901ba2ff928	0d220e8023aa8edc0360d1700e2651502a6f86ea	2026-03-17	Fix OCSP_BASICRESP memory leak in ossl_get_ocsp_response()
+f5c61b514b5efff2776ecf0f85a7e591bd0c8f51	bcf2e028c5646184902ffc3fb805193a2a6a56be	2026-03-17	Fix SSL_SESSION leak in tls_parse_ctos_psk() on ticket error paths
+8b9ead5f310b37f4e03445e89b43377b2ff6b16b	2e87bf8ce247b771fe8b3e6f7378c2b52dc81f6e	2026-03-16	Fix memory leak in load_key_certs_crls() when add/push fails
+2c2f20a4fd6edf20fd06f187035533e12d641a13	7b31bbc99c13f729ec22d85d622692c03cbfd048	2026-03-12	DTLS 1.3 remove the last TODO in Proxy.pm and Clean up Double Free
+dae83cde635d81d13b061f8e5e2ab31c6622463e	087df054049f3a84f81e69aa04871752c4dc9eb5	2026-03-12	crypto/evp/exchange.c: fix memory leak in EVP_PKEY_derive_SKEY()
+7943222f9525fa94ab0ff55af8fa44c5192aa7a9	1d53439b176ad4e083e5519ff73ee830f679a3b0	2026-03-11	Fix memory leak in get_str_from_file()
+269c1a32d6a14ec1975e3cbaa0fce56737f31d89	da1c29ff12f7c8210be81f687b7089a4603691ea	2026-03-10	pkcs12: fix PKCS12_set_pbmac1_pbkdf2 error-path leaks
+f51d8fa5b4655829fa0c55a57d35159b87cca2a8	3c515d48ba2103caa20f0fb207d0df734e5742a4	2026-03-10	pkcs12: fix PKCS12_set_pbmac1_pbkdf2 error-path leaks
+0093394e9e7526a98ba808669abcf458ce8e5128	5f72c95258282a5bff535c519c76a1fa9fa134ed	2026-03-09	Fix memory leak in `EC_GROUP_copy()`
+07920d4c46305b97101abc8e9703eef973c69bc8	4ae9263ea4e100eb7a8e2a45297fb64e40976c3d	2026-03-09	Fix Memory leak in app_passwd
+2de4677000a91b6c9a382ba5b2ed2d00b3c7dea0	9415493b1d57771825c9d3922b3fc22cd8f9a15e	2026-03-08	Fix use after free in quic_connection freeing if up ref fails
+b689b6fc4448f9aa6b41bd939d82923cae290dad	179ca25f94a0e07798921688be2a81ed05697e67	2026-03-08	Fix use after free in quic_connection freeing if up ref fails
+0eb79e377a4a771198e954d8bd72acd91ceb6859	fe8943f49d5dfa446b237183ac36417ed26f6363	2026-03-06	Fix memory leak of p and q in ossl_rsa_fromdata error path
+6d60322badb06b662b9ea361f6ef43f06a59de9f	e78e141f22023a2964283209b573c7b185cd867b	2026-03-04	CSHAKE: Fix memory leak related to propq.
+12ccb67363747d73e81b3b743f6380d38c50bc49	89e9bd3fa66a62547c38f97e73eec402e36665ac	2026-02-25	Fix potential use after free in buffer_from_bytes()
+31ed956eb5047f1d02c2e598d337388c7e45571c	e77def380a0395ae021ebed1be4fb3815f7b4256	2026-02-24	evp: fix refcount leak in frozen digest/cipher dup error paths
+17c42448b3566008d2fe62468ee925bd3443799e	f6c9ce7e671257dc9663ef02b2ab28edc19b4c5d	2026-02-23	test/ech_test.c: avoid memory leaks in ech_api_basic_calls()
+6cbda717bdf110d7adcec95f8226f0baa596706d	5366d8c9420b3d266cf07fdcebf0789867da0928	2026-02-23	ssl/ech/ech_store.c: avoid memory leak on error path in OSSL_ECHSTORE_new
+a38cccefc611075c13b43117ad366aafe84a5035	3a0a16fa2786cc6498039647824ead57b1d809da	2026-02-23	ssl/ech/ech_internal.c: avoid memory leak on ech_decode_inbound_ech() error path
+ab7096610964e2b78a548e6c307c3dc33d541636	3dc9834fb0da094a0f71d82f404f07d6bcc6a3b4	2026-02-23	ssl/ech/ech_internal.c: avoid memory leak in ossl_ech_get_retry_configs()
+ee2334fcea18ede1217c1cb97281be9cc7fecd75	2f4ef4a912f2fd0548ebb46d2c274a908acd0a72	2026-02-23	test/ech_corrupt_test.c: avoid memory leak in tls_corrupt_write()
+d0bce8f42f11e102800e5c54d4fb65ed90c1af89	2b0dbbdd36641ef7a7fae6e880e3b6b51c375799	2026-02-03	doc: clarify SSL_SESSION ownership in PSK use session callback
+2ae003ea1ffcc6b5b5cdaa72f7b5d041e288075b	4eb8a222c9ecac52556060c645c3b7eb3178968d	2026-01-16	Add test for EVP_KEYMGMT leak in evp_pkey_signature_init() error paths
+bf9e7a294bda076b23525609b3fc72c5c386747d	60b0bbc5db752f02eee4555b358ec6a39a0ef3a9	2026-01-15	Fix `EVP_KEYMGMT` leak in `evp_pkey_signature_init()` error paths
+076a7ad01897637992598ed305439a309be2143e	0a864e0a2baae68f8a547bf7c87a38adc4771565	2026-01-04	Fix a memory leak in sctp code
+650e151a5b867fc810d0b5065512890cf2d44f25	5b6d759886e84f598f8e2142a6609085f77feebb	2025-12-08	Fix memory leak in error path of ec_gen_init()
+bb099e658163d39fc6b81866947bf191f56fddb7	4044036438aa9ca148009e49968c2df8dc0fc029	2025-12-08	Fix memory leak in error path of ec_gen_init()
+1d9f04814a6374b8fecca1c860c3b85de6ba9f16	dff307038ab7eb07084a8b2230a7dce968669e18	2025-12-05	Fix memory leak in abnormal branch of mlx_kem_dup function
+ab5e51c8a3d61040f2bf2d42fca400728566217b	bd865b94287d6794c21fe4af4c7c408781dacf76	2025-12-05	Fix memory leak in abnormal branch of mlx_kem_dup function
+5590dc52397d5b7eb89b2b9141365ea4c6557e52	88c79c0b96003aab35feef4363f4803966242b6f	2025-10-11	CMP client: fix three memory leaks in error handling of the polling mechanism added in 3.3
+8bb7ae1cc01eff3d439f5541325f60db56b46096	7c168f55b1ece8ed06a16942eac2d4d1e3d42301	2025-10-10	APPS/ocsp: avoid memory leaks on error
+f93e499296a6ecedf71921cee01680f1139b8f38	04db78248bebe7555d24981cf6615d326601d305	2025-09-29	ts_conf: fix memory leak in TS_CONF_set_policies
+7aeff9c2e4583a5627e2ddbb94ae5469b99d728a	74672c27c8e7909a94b847e00bc15cb04f12811a	2025-09-25	Fix Memory leak in CMS_EncryptedData_set1_key
+a7bfae983584236951fa6091b5dc843d5c755e5c	b5ab449e26a0c716b48255c3f0e2d054fb441ad6	2025-09-25	Fix Memory leak in CMS_EncryptedData_set1_key
+f73e8ae3e1f679fee53ea73d32bea0c639c75185	a6d7417f0ca6ac262493c76084fe5f2dafc936e9	2025-09-22	x509: fix mem leak on error path
+0e8b72834392b76301d4bd20b45021122cd139fc	759dde226cad280d2dd678fc1ffcfccd93e92842	2025-09-19	Fix the abnormal branch memory leak in ssl_set_cert_and_key function
+b773589322bf67000766b82c87e730500444bf46	676b8d84d9fb371de428dd872d53d3b2d6cb22d5	2025-09-18	ech_store.c: Fix casts and avoid leaks on error return
+9caca188eebab43eea5d3fad482a64a58e91d55e	08f9797a89249bc49412c0bec9cb479b21f1e477	2025-09-01	crypto/x509/t_req.c: avoid exts leaking on error paths
+569bd10b73cdd54ac8a4ac501dd0cd4a37d32211	53a7773b5d7b458af0e6ca9b64e3d2eead3d771b	2025-08-17	Fix: Add free to avoid memory leak.
+c72e1ce56ec6d64335cf81c02a82aa59a818e4eb	eea39c1a81162189c12f92af9c86cf5cfe052ce0	2025-08-11	test/ml_kem_internal_test.c: Add EVP_MD_free() in the error path to avoid memory leak
+95b43b1b8a1f030db07e7b71e7ad4ae8aa1bbcd4	7a63362eacfbe5e8f4d667c02538b913aa50f69e	2025-07-30	Fix memory leak on EVP_CIPHER_param_to_asn1 failure
+ddc10e372fab3bc0d5c92089b1618a90fb9baf12	3aea6c37f68a2fda6d8def3fbc6013886cde7211	2025-07-09	APPS/load_key_certs_crls(): prevent mem leaks on error w.r.t. any leftover credentials
+449e80b5a14a2d8b3f6773042c8a98109f2e5ef8	fbcd48562199104209ffc77f5deb35ad2089c9a1	2025-07-08	test/quic-openssl-docker/hq-interop/quic-hq-interop.c: Move BIO_free() to err label to avoid memory leak
+89a6c53cc14a193a4a448b351233174fbf5f59f1	b63b019f6605ffbdf7cfedb7f9ad7d3ad37686a8	2025-06-26	test/quic_multistream_test.c: Add OPENSSL_free() to avoid memory leak
+e02c03ee77a0613eea2d97448d5e4d02909cd244	b2e7c4e2baa92255c57413113e96d67c23b39a34	2025-06-26	apps/openssl.c: Add OPENSSL_free() to avoid memory leak
+ce2eeb8ba58e11490ef7544f46d43962305f3135	2ad09ef41396c22ade94a2cd3257843f0439b044	2025-06-25	test/bio_pw_callback_test.c: Add BIO_free() to avoid memory leak
+8ca012940e6286e2118c449c997cc1c6ea4c192b	d9b02304602d61e35570bd990faad89ee0ae7140	2025-06-17	test/evp_extra_test.c: Add OPENSSL_free() to avoid memory leak if EVP_PKEY_CTX_set0_rsa_oaep_label() fails
+a93c5d2fbfee9f743400c1b7a3f44362f9d19ec7	8340ddb536269e534009eea800b0c0e3298f4d33	2025-06-16	test/enginetest.c: Free eid and ename to avoid memory leak if error occurs
+8dda1ff3aa3111a20cac43da875b861847ca72cf	f551f9da8756a4c9ac5902adacc25adf39a96958	2025-05-28	sslapitest: Add failing test for quic double free
+eff587d9d566afc9b52572e5064b801850c236a6	17dcf0087af89c899ef4918ae5ce6d32860a30c9	2025-05-28	quic_tls.c: Precede double free on EVP_MD variable
+be8774cce915b2b85ffb24f41050ba8d9c16d873	52a2b3d82f37c87b5b2cff68abbc93861978a853	2025-05-22	Avoid leaking duplicated EVP_PKEY_CTX in case of error
+451490c5bd94ebac7261611c0ffa9c834118b075	128d908f9474ace20b5326cf5c4481c7be454414	2025-05-21	crypto/pkcs7/pk7_smime.c: Add BIO_free() to avoid memory leak
+fce48ba139a378ff26e23581ed98167c97c3f9c1	a38169137776cffc1d3d681b81deb4d712fc6678	2025-05-21	crypto/pkcs7/pk7_smime.c: Add BIO_free() to avoid memory leak
+2a98dea09d632dd1927ccd51b1cabb3ec9066658	d9a7a8e200e80c875fd54c746e7a67b3f23ee03c	2025-05-20	Fix memory leaks after failure of PKCS7_add_signed_attribute()
+05b6ec68f380cd0c1c0dc3080a4a3c13f4815b8d	d596982c215dfc36f1756f2b556d0480ce8002df	2025-05-16	test/evp_test.c: Free fetched_digest on error to avoid memory leak
+5a37ee45efab3458feb78722cee35060589ac211	55f87f609c79cc171b341b00f325528f0067d507	2025-05-16	crypto/property/property.c: Free impl->method to avoid memory leak
+7447bf4e3826767b12f266c903aa8c19838a3cf9	9647fbad35c983e0833c6247c0c6da0259ec5bd6	2025-05-16	test/evp_test.c: Free fetched_digest on error to avoid memory leak
+8182c159ec100a2d5cf9e633031899a269b80170	ed407b44e235957d2dd6c7b1e13d4979ae677d69	2025-05-16	demos/bio/sconnect.c: Free ssl_bio on error to avoid memory leak
+9e05f662360fe3cbb39ea040f62481e66dd95513	431937cf1af31107e70c0af2aa805267950d7404	2025-05-16	crypto/property/property.c: Free impl->method to avoid memory leak
+e51887d637209608769a6837b1b9e664b1959ed8	612f2b0fa4e7dc4105be6be106ad85a8f13de6da	2025-05-16	apps/cmp.c: Free bio on error to avoid memory leak
+0658d18c1ab242abfe4ce1cc51308585819beef7	71a48fd39c8c7e78eaad6ccdcadd751944e26394	2025-05-12	test/helpers/quictestlib.c: Use goto instead of return to avoid memory leak
+a3e1d906050898e1120dab3e1a02a1c6fd8117b0	737bfb463f570debf57824726889b7b7432ac8bf	2025-05-12	test/testutil/testutil_init.c: Add OPENSSL_free() to avoid memory leak
+e18d56a397982c4e423df8039ab561bd752f13fe	654bae104045cb96937d9e7bbc0e731b63158a2b	2025-05-12	test/helpers/quictestlib.c: Use goto instead of return to avoid memory leak
+aad0401d55bf9c64dfd6b32a47f5ccfd0111bbe4	c0f3864306f8f1eb40ebbaf4c3bbcf58b3578932	2025-05-05	crypto/x509/v3_lib.c: Free tmpext if X509V3_EXT_add() fails to avoid memory leak
+ad172cfe555b4859a44fcc02f8285282cd4af6d4	3e78fead7186210a433a8dc2c9a52b16740f0f55	2025-05-05	ssl/t1_lib.c: Free gix if sk_TLS_GROUP_IX_push() fails to avoid memory leak
+b9c2cc1dfd91a10ae019b88a20b357074116ec38	f4d9904763e59db031007f4a938f1f8b96fdcee7	2025-05-05	test/timing_load_creds.c: Free contents in error handling to avoid memory leak
+5cee0d3121df8135bbb569ec817e0b958d9d0c76	5feea2be6141f0bb86644bb7ca29a94efa0eb99e	2025-05-04	crypto/provider_conf.c: Fix possible memory leak
+eb48034874f37ec085417a1fcecacfd24cbd767c	573db120795ced4750c8de2a7dccb1346dded6ff	2025-04-29	apps/prime.c: Fix memory leak of a BIGNUM
+5f095d6eb93b54771a2f5dd724fa937a672dbd71	0fc85f7494b6951efe0c22fce45547500b3624af	2025-04-22	apps/pkeyutl.c: Add OPENSSL_free() to avoid a memory leak
+a27b6627837f92faa389c085247c85cf979ba41f	50b6457cedf11c3c5d4fabaa40e7ea6940f1b95b	2025-04-17	Fix use after free bugs for public_keys and private_keys in evp_test
+a36ae696d7df0d581e4bbd1621f4636414225b46	be3fcc3c3a4f117ff1ab20474ae4c03e5a15eafc	2025-04-10	Fix memory leak in x509_pubkey_ex_d2i_ex()
+c15ca57198bc6a212af7d34dc3916ca54b98c8eb	e14d9743334fa6524740c32692f0370daa91229b	2025-04-10	Fix memory leak in x509_pubkey_ex_d2i_ex()
+df7367b49df71472dd1b3fc61742b80f2882dd04	19984281cc3d9a091eb1b1afb95828a0e523d184	2025-04-10	Fix memory leak in x509_pubkey_ex_d2i_ex()
+0690d46cf4975329d1ea73afca279614307c124f	78882cc96511822a7abce3cf2d7d8d268bfc4029	2025-03-31	crypto/ui/ui_lib.c: Add OPENSSL_free to avoid memory leaks
+ffc1a7b6e2de27513a817332038e434e725c32d6	743b460e876775cca16c69e0d70b0b71c62605cc	2025-03-31	crypto/ui/ui_lib.c: Add OPENSSL_free to avoid memory leaks
+92408744af25d59fd2e63192989a3d0c8ca08dc4	00af1ac1fa88022945803decfe8880612187c4b8	2025-03-21	Memory leak fix ktls_meth.c
+039b026e640e590c31bffd44cb43e873b188da43	0cfbeba8ed5fea4e5a85e03c5ce33fe3e6cb07ab	2025-03-07	Fix a few erroneous double frees in quic-hq-interop
+fb7beece32b3b519b2c112934451e180415c7b7f	bdce0426495d379c29c6e4fdb272c14b9a2f4d27	2025-02-17	Fix memory leak in ecdsa_keygen_knownanswer_test
+f8cd205ed8c101e81db6608f5c38a60f1ee06b54	4f11f520d730d5df986f300b8379f5cc6d4a5a1c	2025-01-28	Fix a memory leak on free
+1636d93e88174647d7e7dde1db607b6a4194271f	ed853b2a2cdee641029f8073d755d82e84de0e2d	2025-01-22	Fix potential memory leaks in error paths in ossl_rsa_multiprime_derive()
+3f8b8412f3ceaded1ac3494d4dfb06e78311242d	0edc5b05ece339d0ce403e6e85f5ee826cdf2185	2025-01-22	Fix potential leak in error path in cert_response()
+6c1012c6412da0d101d93ccadcac8a685cdf1801	6b95c2cb9e960e24e2ba8ac181d16318ca0e0e70	2025-01-22	add_uris_recursive(): Avoid OSSL_STORE_INFO leak on error
+0a48f170ead12a2c7a151db8dc790319715ca315	b5cc61564a21edb838340f9026e122029e8724b1	2025-01-21	mac_legacy_kmgmt.c: Avoid possible memory leak on error
+2374f536d325535c74e87b056f9275db0b238611	32a7848e1b6475f48d2f4a84024ec2699991ca97	2025-01-21	eddsa_signverify_init(): Avoid memory leak on error
+40d795e14b2fa4b836f7dff1420f1827bc5c66e9	78247a46baf94dfafd422ecce25c85c31845ffa1	2025-01-21	Fix potential memory leak in policy_section()
+89acff9d58cc175491247162c6d73b75b640bdb9	56b6ab094ee7353e86ce13793ce44d3ed5d87cc8	2025-01-21	Attempt to use NULL listeners to avoid use after free
+d61cff83e8189672860f66c14335ed9bf2b42c31	4e6bf40bee715a70f2b859e4dd0ca0c2ff6453ee	2025-01-21	eddsa_signverify_init(): Avoid memory leak on error
+3721bde3525632c39a8481530d4f4b7c9b6d3481	6f38c59850105f5bf6f6780c73da6f0333f87582	2025-01-14	Fix memory leak in pre-allocated listeners
+0168e5768e941750cd8611325d3436a3d7c7ebb4	35b97122ea59fdaa56105482caf12f3ca594a2f4	2024-12-21	Fixes some memory leaks when errors occur in ossl_cmp_rp_new().
+8a8dec3eae7a7a70a0639aa861f804d86bab047f	a91ef0fb6416ea2efafa1cf2c75472269c5cb52f	2024-12-21	Fix memory leaks from missing checks of return value from sk_OPENSSL_STRING_push()
+da1bd8b0c2dfd40806c590937e6b28f42ceba38c	009fa4f924d0c89fa16ac487fa2d3f5ba60adc1c	2024-12-18	test_evp_cipher_pipeline(): Fix memory leaks on errors
+0b2079175e057a5d6033cc5afc4e9e57a7f72fb0	c5257fd8d0b37a615484e937289b28ebe2c87ac9	2024-12-11	Fix leak of a RAND_POOL in error condition
+233244a525eef6f2f5671dff1d9af9de57527cfa	69648c46eab8cff7a3bc7d5a24f8780b52c46fba	2024-11-20	Fix potential memory leak on failure of ecx_gen_init()
+95429343c3c93fe7906920a2709eb3bdcc413b03	6167aac6710b8dda23eee998bd224a8b673929bc	2024-11-20	Fix potential memory leak on failure of dsa_gen_init()
+d6c2ff1c8f07a5ac74352a21fbd15e86a0ddb37a	f6c2a3717a87529d429c38d19ed9b4204d057353	2024-11-20	Fix potential memory leak on failure of dsa_gen_init()
+defcecffc65af0508a113637239d44052fa07088	053bef946396e6ad0c8ef7f959ca58fbb531a62e	2024-11-20	Fix potential memory leak on failure of ecx_gen_init()
+9f7120c6a80cf8e0986b73eb80d435aab0d1c513	8a690ad496df081bcfad3d69b5646fda705a364c	2024-11-05	Fix memory leak on failure in copy_issuer()
+2474dcb211e3baedefefcb4ae657c015d4f5fcc7	c6e463dac938a17c489dc0198f50124c4cabbf67	2024-10-28	Fix potential memory leak in BIO_get_accept_socket()
+5450c51609878f15dfd4f5fda3cf37e19a49bf8a	0f4dfff7840950f15f2339609ca180072a4ebe32	2024-10-28	Fix potential memory leak in PKCS12_add_key_ex()
+59d8fdb7d83f3c303ef2e1ccf43c7508be3d7ee9	add0facc81261f2de97a6a4b487a7d0d6a1737bf	2024-10-28	Fix potential memory leak in BIO_get_accept_socket()
+4f260dcb051638fda81ef97f1f03ba62f82ed652	a5be9d65987daa219d9663330ad1ecc53448be4d	2024-10-27	Fix potential memory leak in OSSL_HPKE_CTX_new()
+d17b3be7de9657afa3f6ab08e1d80ee08f815b4b	4e581b03189cb2da1948b50d242f1d00623ca3c7	2024-10-16	Fix potential use-after-free in REF_PRINT_COUNT
+166703819954895885a11f060342634439250239	b00a6f09c524e4ff136c967592430a86cbad8136	2024-10-09	Fix memory leak in tls_parse_ctos_psk()
+cbfbd0aa6139fc772711d01ab02dd99ae5f8bb5c	3451b13b6f131fed8aeede095e1ff7e59ee3f7d9	2024-10-09	Fix potential double free through SRP_user_pwd_set1_ids()
+359dd80e6b9a12e84e76d0f9836b7abeb55cb818	78ef2bcb0dc978a076e7f9aa101d191ef4e98e98	2024-10-08	Fix memory leaks in ossl_quic_calculate_retry_integrity_tag()
+a5ebfb54e8c6d5303ea2e8b3fb585c378ba4e9eb	cb2863734392d90b5978bfd07fc0128545b7d894	2024-10-03	Fix potential memory leak in save_statusInfo()
+e15abc146fd49884b7639de95850cf47501f8bd5	f27af2898d892839d8ff6f7ceaf74299032ca6fb	2024-10-02	Fix potential memory leak in PKCS7_signatureVerify()
+b82234d1922189c4bf932ec9cd2fbb3a84991276	19b87d2d2b022c20dd9043c3b6d021315011b45f	2024-08-20	s390x: Fix memory leak in s390x_HMAC_CTX_copy()
+83ba93369a3bcb449bfc1268d3d1f8613d0334b8	223e0020e47e6e8eb6079258ea9d563d1d115132	2024-08-15	x_attrib: fix a memory leak
+cbfcd78a9efdc0bec236a030f0a8b671116fa995	8e82304adb8f51ed243ab1e57d8a4006bdbc0336	2024-08-12	Fix a memory leak in the speed app
+6eae3c274e7e5c154d9f486811dadc24235e2cce	19f32259f7db61cf917a4b67e7449125572777d7	2024-08-06	test/provider_test.c: Add OSSL_PROVIDER_unload() to avoid memory leak
+9ef28efab0ebd8db0268cc855a59fd91562d819c	c45b70f7bdf7c9216b2219b30ff1e221c3dd3fe8	2024-08-06	test/provider_fallback_test.c: Add OSSL_PROVIDER_unload() to avoid memory leak
+dc222ea54650e0d6b5a20ab654505df5d9d725a5	d0ee8ada4dd12c17f7990feac17493ec1f931849	2024-07-12	Fix memleak in rsa_cms_sign error path
+62ffe32b0df80e7c5514f66a7d29e4391913bbab	a9064366e8dcff56c722d0c8f1306d84d6c3f255	2024-06-24	Fix memory leak in x509_req_test
+554f7459d9903d259f90e6dd0f574b551bdc7d44	45e856247bb4b4c0c347842906ca67bea378ad22	2024-06-05	Fix memory leak in quic_trace.c
+98c62c254a9e0ac2377d41eab69b093f594d6e98	8dfb1477f96902de92a1347bbfc9f84fc2e65629	2024-05-27	cmp_hdr_test.c: Fix leaks in error cases
+1527d9d96fd34c1531bebd1cb1d49c50b5c1f92d	d74704317dfe3a27a2175095ad1118152bc8ffa5	2024-05-24	ecstresstest.c: Fix memory leak on error
+5168161fdbddabce28c9d808e44b858fc1248a57	dabefe2b3aeefb041d4f08bd45ec5fc64909edf4	2024-05-22	fix potential memory leak in PKCS12_add_key_ex()
+9342d99a0b3be10296455a455b2e073c43fcdbdb	cfaa79f837968cdf1b988e0f39cf2c31179c5740	2024-05-22	Fix potential memory leak in OSSL_IETF_ATTR_SYNTAX_add1_value()
+aa46f79f2a01e079a1084cd8c2b51ea3ece626b4	0bd7b9e2281a2a541c22a4ef91da5e95f8cf58f5	2024-05-22	Fix potential memory leak in test_bad_dtls
+0a7cd1c7a108d87e4e566d4f21200da4d862dcfa	026b0d3e1e7667ccc5a9d67bd9bd99a404563369	2024-04-11	Fix memory leak on error in crypto/conf/conf_mod.c
+5a6b74e14e3146a7e9a9d7ac9e5994c5b91e910b	8f683d6cb18aed51c9416aff65e9a47eb5eadc63	2024-04-11	tls_provider_init(): Fix leaks in error cases
+8f149906d1912224d6c1b03e786758319c7e5d30	0f7276865c54af41e99d1cc9f38b52a72b081b27	2024-04-11	make_addressPrefix(): Fix a memory leak in error case
+ce1605e5dcff8a08dd989bea1cc30485d5b0369a	5e63050602e00640a3ff114b9cfddbc2189ff166	2024-04-11	list_provider_info(): Fix leak on error
+f089ae79969b38ad8621ba143c2fcc563f86adcc	51caffb5c187bb2c633e0da9f5928fced4fae7ed	2024-04-11	ossl_provider_new(): Fix memory leak on error
+3b663098f6e9c1ecd8f5c797042065e7ab99a7be	fc6c3a9e22efd396f2ec84f48da6c4f38439084b	2024-03-27	Avoid memory leak in x509_test error path
+837e99b1d739366fb414e03c9c222bce8c0a12f6	707b54bee2abbfe94a80361ab97cf77e1e4746bb	2024-03-14	plug potential memory leak in error code path
+0d86c8316c9148799e16a27c19b4084c4ca70c28	6134e8e6ddc25c403fd1fab3f510a850a8843e62	2024-02-27	Fix a memory leak on successful load of CRL
+ad94bbd02a89fc49d93c6d08fd6351985a70291c	ed548a183e127c4661cb3faa8e6d34472b55a5c8	2024-02-27	Fix a memory leak on successful load of CRL
+64a512317dc2df870e5debd286f35932f4aede01	3732a8963d7aacde04f138204e235478609cba8a	2024-02-07	Fix memory leaks on error cases during drbg initializations
+7c0c01ae1c8d922a16290c03d332a4ecf491381f	6c70934a46eaa1734c2efbe9d7baac51c607062e	2024-01-22	Fix a possible memory leak in req_main
+67800c2d5434817faa1e0ed8ae7e19711fb9d299	e751c109d68602b75cc6b8e0f9f3a128354aaad5	2024-01-09	Fix a similar memory leak in SXNET_add_id_INTEGER
+e9b3e695e50a3264acf201a177213e0ece9450fb	490dfc04479b89f247a12087e90e44aafc0d1b89	2024-01-09	Fix a similar memory leak in SXNET_add_id_INTEGER
+ea5fbd841a13548e89a0412742e044b89f1ec61c	267ffc061ed03a06e7a6fe5d91449c5fed21d7bf	2024-01-08	Fix a possible memory leak in sxnet_v2i
+f63d52f5a2ce8982ba3c0510c7ace4406a3dfac6	1c75ba909967adeac960eddae32297acc463c8d6	2024-01-05	Avoid memory leak if SXNET_add_id_INTEGER() fails
+8105f342dc1561056b449ff2ff39f8b781500092	31c695c3876b00a26d5caef5e0735329c36ff7b1	2023-12-10	Fix a possible memory leak in do_othername
+966fe1d846161d343fde2282ba91b498f591aea1	7b71e83155269802220daf93381d4ecafcc8cfa4	2023-12-10	Fix a possible memory leak in dh_cms_encrypt
+bd2488f3151271a0153fb2e490de6f1289382b8e	ade7b081e565f46526d95c25be43927c2f988ae2	2023-12-10	Fix a possible memory leak in do_othername
+c547eb07b60ae526f725d2140446526dc0c4bc5b	dbc819bd36c2dccde58ece3330a6f47434590c57	2023-12-10	Fix a possible memory leak in ossl_x509_algor_md_to_mgf1
+1fe60eb6df89c9d32787bef1cd393014d06734dd	8ec42248efb19330094dd1611cd32f258011fdcd	2023-11-22	Fix a possible memory leak in SM2 provider
+bafcc02b0677d9cb7b687279213b73e7cf30e1fd	92889328fbbb2344339f7c90afc449f6eb9b11a6	2023-11-20	Fix a possible use-after-free in custom_exts_free
+a8abb9ce963e5928eaea5034bc89f41da635acd5	c10e911cba74f0e2ae7638f753286668a131469d	2023-11-17	Fix a possible memory leak in ct_move_scts
+1e5ad2e51e6edf7d0bfd1d0c25b045818b803829	a72abc4ae90832dce69e72bd75e36078fe676612	2023-11-15	Fix a possible memory leak in CMS_add_simple_smimecap
+67ed1ef7b048d1b56a9165a133ab65d234db64b8	31595e5c5782aa7d2454c34e3ca9b47d4ab5e532	2023-11-15	Fix a possible memory leak in dane_tlsa_add
+c620381ea82b6c1d8641db9f23178cc50138ea07	c24cb3f5bcec41284419812272dd6be2a0294683	2023-11-15	Fix a possible use after free in X509v3_asid_add_id_or_range
+ec4aab2e910ea4f8229b8b9c92232ad0574a12e1	4ffa17248736300dcbca58ba57aa0badac80c388	2023-11-15	Fix a possible memory leak in make_receipt_request
+565d76148cceb7d9df4523786ac11ba37b324cfd	9f9dc855adf7e9a65b4a0de7fa1ea19d0a55094f	2023-11-06	Fix a possible memory leak in custom_ext_add
+6511e41fb143fe60bb402bdb995de4e4881a88aa	e5b6a6b56473c8ffc65d5d7b4b5b6de21be1c7bc	2023-11-06	Fix a possible memory leak of ssl->s3.tmp.psk
+6876a400b879f4458336cbdfae231d77411a1834	0fdf6e0a1b16c9f359c63fd94aaa7648dc8ef24c	2023-11-06	Fix a possible memory leak of ssl->s3.tmp.psk
+e376053434be2463e350e4a0bca796c0fa690c5a	eea4688578e3cb2f342038c4beaf092714584940	2023-11-06	Fix a possible memory leak in custom_ext_add
+3a1641ae4aa486aa6662b83f129d8decbf57fe50	478d14cc3fde378fe722374bc1023c1e0cf00bec	2023-11-02	ossl_qrl_enc_level_set_provide_secret(): Avoid leaking keyslot in error condition
+60c162599d2a47bed5befe87d8429dee9ab11fa1	21f1c2d9d513010f3585d5215b373ac4bef67c29	2023-11-01	Fix a possible memory leak in load_builtin_compressions
+3a655cb0dcf64cab425e28eeeea22ede83fc9539	b45d053fcd124854ea5bb7a24bea6a67d31489b0	2023-10-31	ossl_quic_new(): Fix a leak found by error injection
+7356f254abdf24f5cd933afe6ff590a5505e7bf3	4e09305ee092dea14b7d4feb3fac2889b41428f3	2023-10-16	speed: Fix memory leaks
+e849e3cf0779be399243e3c56940cdd8dcb70954	1f8a8c1de90ebdb4f3c9dbbf3d1329e3f025e946	2023-10-12	Fix a use-after-free in qrx_proces_pkt
+414c8366fc2061b08507b73ea470dd8f03b698f9	eda5e112b1d52cec545c8a699295afaafda0209a	2023-09-28	Coverity 1545175: use after free
+07a6a97615ac058ae5c3a5b8fca0f27d99c95e7f	8c040c086ca11a519975c58961a5dc933aa6524a	2023-09-11	Fix some memory leaks in the openssl app
+709b82ceee793758fee994471dddc174ae7da791	1362474d1a58ba55adb0dd6204d66b743f8af137	2023-09-11	Fix memory leaks in ssl_old_test.c
+b86697ad1a43712f1fc4d4d1e95bac2e060cc59f	296fc3ca5011cf6c9e332f5da46e6b80e9bc60ac	2023-09-11	Fix some memory leaks in the openssl app
+6ef9a0d719b15091f5b4b7c8fcadb3aeb1182f47	7c14ec86fefeb3dc92e56e7937d10cbe60f13e67	2023-09-04	Fix internal memory leaks from OPENSSL_MALLOC_FAILURES
+a59c5e7eac07b6c096128fa12c200ce928cd11bf	0577dbad0709f1b3717297420069c6160245e74d	2023-08-16	Fix a memory leak in tls_new_record_layer
+edf36b2d29a7d8784d8efcd35a4a509b85d29461	e16c0103083af676af8c5564bb21585d4574f992	2023-08-15	Fix a leak in an error path when duplicating an OSSL_DECODER_CTX.
+bcbb154009b92ab93657e39be7ed40b260cf7920	3d254b31344e82b8f10fda8bab196757a377eb63	2023-08-11	Fix a leak in an error path in OSSL_DECODER_CTX_new_for_pkey()
+87548c574c27ba6bc9233a7913048357b3dc4cff	643f542a89bee93e043d0899b2a1ca700d1cc418	2023-08-08	Fix a use-after-free in quic_tls.c
+ce20d5edffb0339d8fa405f2a0849ff4938e07db	77a66117ab0c5bdd885d13dc302ace7010aca826	2023-07-27	EVENT QUEUE: Fix memory leak (coverity)
+f49a8e865a7ed8809c69fe24625472ae0756b5be	3887546dcf98f1369d5a03eae9772a7deb0c9b89	2023-07-27	QUIC CC TEST: Fix memory leak
+65a2706f35f1c52c5409113f442fb38b8f21dbb8	cc7e2b20de02959c328f96e464e5fb8b256a00e0	2023-07-19	speed: Fix memory leak
+77120455384c8a5b36c227c6a1cb0ab6f2a3546a	a33842efa51ca3f021310e10f444afef1e779fee	2023-06-07	Coverity 1528492: Fix possible memory leak if t == NULL
+63f3150f695e5b26e5774061884527b26387385c	b1cc84e82d41ab669bf804ea519f5332c48a3d77	2023-05-24	x509: Fix possible use-after-free when OOM
+bb5b8c2bbcdb7288e4c4ff26236c2526aab31092	de53817ec386ea9e943d8f33716945dd9dbe1f31	2023-05-24	x509: Fix possible use-after-free when OOM
+d768ce3e374601385f793f3285ff5e944e90337e	cebcb914d46825e9b7aa9305819c36ea3da277b7	2023-05-24	x509: Fix possible use-after-free when OOM
+034ba7b78bfc1eacf231d3388e8282ecb2ed4b18	ca9ef8ebf5908a6115990967df648d8f29e66f42	2023-05-08	Fix stack use-after-free in QUIC
+e81453a29923502c9e87c29ea7d91207f1afa924	b4033367b47e9e1358cf8dff1af6f57ecf21065a	2023-05-04	Fix memory leak in engine_cleanup_add_first()
+3a19b86ef7a30c10ab65b72a364fd2cd329c2f8d	7c45b7cbb04e297c3342fcc50bf7b0a9e36df1dd	2023-03-17	Coverity 1522032: use after free
+bc9426fab8663cd574dec44820bfa097a8373597	849586c7db4740be3c12b320b66c57b2a4527ab9	2023-02-21	Fixes #20278: Fixed double free bug in crypto/http/http_client.c
+289b21b6d99ad22607ed15a45d9742c280c8a970	c4a44e7b84c5371e6f1ac1e0a80d5fc737b2dc1c	2023-02-16	openssl#20299: Fixed use after free bug
+72a87ef5898ea015d28ac4fcd469e7506d245500	c10ded8c2c862992c98b83909a679aa0bb448a55	2023-02-16	Fix possible memory leak on error
+92227282d71a061cdb68106af3ede27155472774	913020e7aba21cb6c5646f26460f05923f7a6d46	2023-02-10	CMS_add1_crl(): prevent double free on failure of CMS_add0_crl()
+0c8c55d2d1a0e432743377065114a0993400ce47	82d4f9378072947dfadaedb336f790c21d34bf93	2023-02-05	Fix a potential memory leak in apps/s_server.c
+294d6c74d033760b9a2c0a30eee813aab46042bb	0f67990573fc2e556487d84878d6b71bf0b036a7	2023-01-28	Fix a potential memory leak in crypto/provider_child.c
+3eea06a965498b33196086bca8bb71a7a5149e2f	a478dd11e9e827445e472c87288dfb77790d2d8e	2022-12-22	set_trace_data(): prevent double free on OPENSSL_strdup() failure
+a421749c06cddf77efc877a4478026ccc875c6cc	68cec7e9d31fdf05b82a627a82398d8cfb0b915c	2022-11-16	Fix a memory leak in rsa_priv_encode
+00d5099f8393b441467296a97d06a27537fe2c6d	20c7febc860ae8e67f52912ee205d2e324e7beed	2022-11-07	Fix memory leak when freeing the DTLS record layer
+bf8c538dfebaded25941b5c09735105567e979ea	60d391b6f0178e1f1afac242db460a14590bc03e	2022-10-29	pem: fix a memory leak in PEM_write_bio_PrivateKey_traditional
+8616b0e1153a47fea33d77a1e0b986a1ac955ba6	6b5c7ef7713d913002f94068a3ef1f41b22eafdb	2022-08-19	Fix memory leak with TLS1.2 compression
+83a1a9ee6b5c8c535e139665f0bb46cad2cee12e	682d4a1204bc0a4c19ad3dd23f09d1e76959f8cf	2022-08-11	Fix memory leak in BN_rand_range()
+7c97a186bf52a4843adf62936fb47a3cdc1c2cbd	c340dfa1c0bc9d9e60e4fcbe2ac6aa3d762261e4	2022-07-07	Fix memory leak in X509V3_add1_i2d when flag is X509V3_ADD_DELETE
+9e75bffdc555a36df2b45325babfa739f7c22f76	f6b6356fdbee336fa2169643ca3e9ad3db19caea	2022-07-07	Fix memory leak in EVP_PKEY_get1_encoded_public_key.
+a092e623028e157f603ab65b6a6c720f9871767e	c3efe5c96128d699f0884128ce905906bc28ed34	2022-07-07	Fix memory leak in X509V3_add1_i2d when flag is X509V3_ADD_DELETE
+02347dabab32fdba5a1779420df7242c51818ed8	a937806043bda5775091844050e8c632a41922ac	2022-07-05	Fix a memory leak in tls13_generate_secret
+174ab0541e70e51ac170f7fd988c8af3beb1c21f	bf2f9e8b3117bbc2f4528bc91cf23b7ae689324c	2022-06-28	Fix memory leak in cmp_calc_protection()
+575443805214b678246ef69a886e3129fb3f25a2	a99b372157561560da526e212a5c6a74e1cd2d82	2022-06-24	Fix memory leak in ossl_rsa_fromdata.
+26ce6882e70994e11275bf0e5980fc0c62d4f78a	cc7c127d697aba4f9630f5516d6f0e680f20332a	2022-06-22	Fix a memory leak in EC_GROUP_new_from_ecparameters
+883cb421091b58140adade270a54b397742715ee	6c8879c8bf6030666c851623f93fff03c1266715	2022-06-22	Fix a memory leak in EC_GROUP_new_from_ecparameters
+589adac0c2b16e388b9701268db18942ef6eda04	4650cf23c84f33354e5284fbcf56f131aa83343b	2022-06-08	Fix a use after free in error handling of hmac_dup
+8c45469247edd8ff159f3d39099dbb59cd09bb89	cf3bf39f142369f2a8000f33f18b7d9b599fcddb	2022-06-08	sm2_dupctx: Avoid potential use after free of the md
+33041e7c222a4a90f4ad35d8e5cd4484a656a6d7	17703a0e65618795d01c67ddaf0bd28b08dd3955	2022-06-02	Fix a memory leak in ossl_method_store_add()
+50ac51899be37646fb8b4a80e9ab991ea4efde15	6a1216d128af920bcc7aead96bd26aee608e7c3f	2022-05-26	Fix another decoder mem leak on an error path
+755618ebd5c73df9507a84de367e7776bb8ddb29	cf022e7dc19a058c9674525a710038b0a2254653	2022-05-26	Fix a memory leak is ossl_provider_doall_activated
+b6d8fdbf50f7d8784f6c71d0555aaa04c9ee55ae	e3754495d9fec27c1e765db81be0563b29c1679d	2022-05-26	Fix a decoder mem leak on an error path
+14b911cfaeba5c5d97a2c5461064181499c12a7d	8754fa5f60ac4fdb5127f2eded9c7bbe0651c880	2022-05-21	Fix a memory leak in crl_set_issuers
+42eb0d9492de2a4b4d8638d558122ff467e02244	97c29c0fdaab24898e449a3445609993b1c22e69	2022-05-21	Fix a memory leak in X509_issuer_and_serial_hash
+b3cd2c090940d26f4fe34914aaf40b1f2bd38160	59b8eca400d9ea7b77dc98fe08a91bbfe35d025a	2022-05-21	Fix a memory leak in X509_issuer_and_serial_hash
+672d720b9902e0b0de22e6eea41632db911db25c	8e1ece20cdb4a584be5311370256c4e813c09826	2022-05-20	Fix a memory leak in ec_key_simple_oct2priv
+f6786353e31c075747d6519ad1496b3eaa0c3c45	b8e87e8ff33ed5c0325101ce6b1a6a01c80611f7	2022-05-20	Fix a memory leak in ec_key_simple_oct2priv
+497744745d439b208346b1abd7d41167c3a2afe9	588080cbf8e254ca2c033224146bc29fddea75a7	2022-04-01	Fix coverity 1503330 use after free
+5e553f2455bb23c606a9215bad49059562b61a03	66cb4fcdc5039fe5b1476ed48a936137a307a58b	2022-04-01	Fix Coverity 1503329 use after free
+f5a4f6801462c795a8d4c050ead974f9fe2a7686	71b7f34978c7332562300487af497559b67f600a	2022-04-01	Fix Coverity 1503325 use after free
+053b9be5981846cc1f271b867e642fcb8661f7e8	c02fff5aecd4d002143a0e901f3dde3d14934a18	2022-03-07	Avoid potential memory leak
+dcdc2e1602c69a2d13108b2f952c35004e191489	b1d856597804559ca77600f39f38185b841c2b0b	2022-03-07	Avoid potential memory leak
+cb10d3397fa5324096c0814e0f1d56a449d7d961	c526c510fadc0e25a93c1069b7362f1feab5ab28	2021-12-16	ossl_provider_add_to_store: Avoid use-after-free
+acda59fad93a18e0313c242cd742011ea4b1b165	699dcc50ae0ef64815b00cb0b6d0b5f2d77ed530	2021-12-14	Add test case to verify that the use after free issue is fixed.
+2a0514a044351884af77b1938677f2af1f1882ac	9a4e7d863fa5a65b0efef96c1c4891864aac036f	2021-12-13	evp: address a use after free state when using HMAC and MD copy.
+4f6c14e6e325498224a571c90bfc4a8853ee3d3a	4ed2db591a42fb99401f9b0ff17f6644797ae743	2021-12-07	OSSL_CMP_MSG_read(): Fix mem leak on file read error
+503aabf3310c726576bc9102e285c46688440533	145d5d18b5790ee8ff16d11dd1aea5a105eee0ec	2021-11-03	Fix a memory leak in tls_parse_stoc_key_share
+963cefee3e63b0ca4920a687b70ba3fb38923bc2	80e52bb852673cf6f1908549ff9960d02a644d51	2021-11-03	Fix a memory leak in ssl_create_cipher_list
+d1eb33314e9b595689ef8690dac8c0d5b0e3471c	bdaf55d0850056fcf3362e5dc1c868f2c8324f25	2021-11-03	Fix a memory leak in tls_parse_stoc_key_share
+efaf746f7e8bed1f0b46da0b61cdf88b08ddeac8	7aa5f7439fe045527db63d2b3ad99135b15f467c	2021-11-03	Fix a memory leak in ssl_create_cipher_list
+69b8ea53860dfcd9ebaaecb0f2d3a4e6c39f3584	09fc3420b5eb2efe90c01e03715e00b361b9e6ab	2021-10-13	Fix another memory leak reported in CIFuzz
+a614b42770545ef0b0e1b4f4b3ea03051a4b5743	7c8826032a5fedcaef9bc4a5e37eebad27599e08	2021-10-12	Fix a memory leak reported in CIFuzz
+c7ea29096fa39358dc28a3d8842d2fa741c9ef04	503eb0e108ca5819dacd5ae171aedd37268654d9	2021-10-06	Fix some possible memory leaks in EVP_CipherInit_ex
+d0760cf5ba6e5516fb7818167712657ff745fef6	2fd9c433712a08474af071cef538ffcd94dc4b57	2021-10-04	Fix a memory leak in the afalg engine
+7a9a2ccedd35749883813bd50f7a82032dd8732a	7c05215b872a78c48326bf6d646410bb7d30db40	2021-09-28	test: Fix memory leak of asynctest
+ff42022fcded7257c16859d0655b161f84adbd36	9d924c4fd4d901d5e698f221afc4c9fc6761940f	2021-09-02	Fix double free in EVP_PKEY_CTX_dup()
+1f9726d0e53eae7440a7b6f1dc65fc2961e39002	ba4c89a9700ff07cecde90248707056292bf36d1	2021-07-21	DSA/RSA_print(): Fix potential memory leak
+269c66b99e07920f789e170eb753d668c1d9dee0	981a5b7ce3bcdf4748162073c3dbd096c82d3c69	2021-07-20	OSSL_HTTP_open(): Fix memory leak on TLS connect failure via proxy
+4ba2041e82f3109f12ff34c8370ff92521a7088b	ce50fd96dc542fe22a42265019e556272fd060ba	2021-07-05	Fix memory leak in i2d_ASN1_bio_stream
+203fff465db69f0cb9ed8c38f66fa56ab9d57ace	a52d20c82a82a0c1d5ecf9f1337906c6783f0971	2021-06-25	ui: address potential memory leak
+607207654fe7e35a6eab9b4bb1686af06920696c	150251904c2b4c2cffd7429af90cd0486e3682d7	2021-06-25	x509: address NULL dereference and memory leaks
+91946517753a752ef4e65bd4e8d05b9419b05993	711d5a2fc0d611d5574c6d81b9cc0aa1564d2d2a	2021-06-25	test: avoid memory leaks on errors
+b1f34fdfd56fc0b4bc6882e081ae75fe6829dd1e	1f3f8a3d016ac1c659f7201e152c291d03437b72	2021-06-25	apps: address potential memory leaks
+ba60a3765aef7be4b8d0fc86f114805fd157dee3	de5a0198b22c36884fd36021d9e4f589b939674f	2021-06-07	Fix use after free in OSSL_HTTP_REQ_CTX_set1_req()
+a2cc8cc97c02e995f06a0bfc6dd466f5ed7c66ca	32075a17249636b3e2986a0ac422b1803663ccaa	2021-05-25	Fix memory leak in OSSL_CMP_CTX
+0e783a7fc7b70e1bb1c352d06ef030b4b188c3fc	a227ff336fc934b4a52c4659ae423dfa10efd5f3	2021-05-14	Fix a use-after-free in the child provider code
+e6ddaaa797a991cc03f3f149a3c969c20516947b	a113826eac59a1e897c679beaa5934542c46952d	2021-05-13	Fix a memleak on an error path in the pkcs12 test helpers
+9436a8cd04be81580c6ba7c58b867ec2d1694e6b	b1423d04cdcad9dbbe2da6e4751f0895112cc977	2021-05-12	e_loader_attic: fix a use after free issue
+3bf6554503abca28f8d307186bd57620511b1446	11efa7d45ba08fe4d8a11332680b1021934733cf	2021-05-05	BIO_new_from_core_bio: Fix heap-use-after-free after attach
+984d089d4e0eca56a819b40b53d326cd397881c8	bfe2fcc840e92df5a5875e55c6aed79891d2612f	2021-05-04	evp_extra_test: Avoid potential double free of params
+503d503077a132b570061d14f99e352534215bc7	857c223bf73f6d3ec91567cf341c5267392a3e66	2021-04-28	Fix memory leak in load_key_certs_crls() when using stdin.
+15a8e73743fe3a0a23148c61381d57e527baa018	e466dc3646bc15fa928366a2c64ed987daab5b2c	2021-04-21	Test that we don't have a memory leak in d2i_ASN1_OBJECT.
+536ed6ae0efac6d2fd3168cafe25ef2f9839a78b	7c65179ad95d0f6f598ee82e763fce2567fe5802	2021-04-21	Test that we don't have a memory leak in d2i_ASN1_OBJECT.
+68b101c00c3517ca2fe5447d78a3596e4322533e	ef203432f7b551382216e9aa7de00039e6d45ac0	2021-04-21	apps/cmp.c and APP_HTTP_TLS_INFO: Fix use-after-free and add proper free() function
+33f12a8dd14a682ad5230edefaf62b69e3140ffd	7f424d16c5358a2c5c652cd23b841e44550d1027	2021-04-19	srp: fix double free,
+8db0f22f533783dd0a23c9911ba3c6a2a5adb99b	a3dea76f742896b7d75a0c0529c0af1e628bd853	2021-04-19	ts: fix double free on error path.
+920f6d1d254d6a4d9addc0fe40867442fb5f3d15	efe8d69daa1a68be0a7f0f73220947c848e7ed1d	2021-04-19	engine: fix double free on error path.
+96d3e7432d51ca924f0adcdb823897f975af16a9	e41290cfc007b833b393864cf12e0d8d815b7081	2021-04-19	engine: fix double free on error path.
+cd8423d1692911039a4f720b947201c56a81a9c4	b06450bcf763735a89b65ca3ec176600fe7fceed	2021-04-19	srp: fix double free,
+de77ca1ac9dadbd811c77d9f1164d57041d4885d	6bcbc3698557739da03495920a57be4ffe219fa4	2021-04-19	test: fix double free problems.
+e840c0496299c6f5083c23794fc7e8b83f0083e0	4e030ed45dbf56be2f09d86f76f697ae6a0c567f	2021-04-19	apps/cmp.c: Fix double free on OSSL_CMP_CTX_set1_p10CSR() failure
+1bf3ad723bf84a5277658b17d150bbb61150c547	a2502862f679c82b794869ac88ed0d8ca7bc291c	2021-04-17	Fix memory leak in X509_REQ
+656206be3c9d4d49f6c95005a7b9ba260b1ac1c3	3a1d2b59522163ebb83bb68e13c896188dc222c6	2021-04-12	Fix memory leak in i2d_ASN1_bio_stream
+5257afe7286691702db09f73e715e6e5ba53f455	b84c0eaeda471affdb4771fd9ea655b701a44217	2021-04-01	Fix potential double free in sslapitest.c
+dc462bb53141426aa25272ce80a61178fd90707f	39f6bf33e5852be55b126c3fcc56e3ef5ab1a584	2021-03-18	test: fix Coverity 1454818: use after free
+b4062f49c735869fdae9c3801b9734555eac4a3a	558f2a014646bb057f3876b28e32b13d8178400e	2021-03-04	X509 build_chain(): Fix two potential memory leaks on issuer variable
+2564283b092131b86c69ef27ea9fd98b63d7a25e	adc11e1b9cf12df3c67de165a2b42ac72266cbca	2021-02-15	x509_vfy: fix mem leaks in chain_build() on malloc error Coverify CID 1473068
+fbcbee54dcb538162cbc197ff700cff320de2db4	8549b97214ce1b4ba61eae893c80d9b0ed7e35f0	2021-02-03	Fix a use after free issue when a provider context is being used and isn't cached
+5d0703e84fea6a3b83ee640e139f766fea7cf5ac	bcb61b39b47419b9de1dbc37cd2f67b71eeb23ea	2021-01-21	Add deep copy of propq field in mac_dupctx to avoid double free
+06a1dcb07d652558296f94ca20e6781f293e8650	47b784a41b729d5df9ad47c99355db2f2026a709	2020-12-17	Fix memory leak in mac_newctx() on error
+687dd0dbf61196c24965269d06ca4cf21f35b6d4	74cd923a78b490d46af9c3dc5c8dc7a741c5e576	2020-12-16	EVP: Fix memory leak in EVP_PKEY_CTX_dup()
+b68cb75673154d119eed258dd96bd6a27c2bb56d	ab8af35aa2abf570d2042498751e9ac1261f26f0	2020-12-11	X509V3_EXT_CRL_add_nconf(): Fix mem leak on error and simplify it
+4504ff520c9beef1174bf8e1447aad23d47042ae	908cf7cefbb2a4c2a8ea1dd4798d1e689db6e3ed	2020-10-29	Patch leak in EVP_PKEY2PKCS8() error path
+1049775b686d49f07c37e64572cf6982e68155ac	7455f247e6f9d621fa79ae3af1588df23078fb11	2020-10-02	Avoid memory leak of parent on allocation failure for child structure
+3f070da677f940ce1b5e5dd1029788f8b64c8099	7d80985e178d77226392f9c35c36f3f885b884d7	2020-09-28	Fix memory leak in req_cb() of x_req.c - handle distinguishing_id also with NO_SM2
+b0dcd9592a212d4793b50e2d16b4d7ba70c34f1c	526cf60408e1a356ec712b6c88a88864fdbe73af	2020-09-07	Fix memory leaks in conf_def.c
+41d87cf82e063e19761ccf9a9054e0b26ca73193	c4adc5ba5b4a7b5f999732fc565d0d6e3f8222e9	2020-08-30	apps.c: Fix mem leaks on error in load_certs() and load_crls()
+3505546770c0971e77e45a78d210e8214c2cfa80	7a3068109568cefdb0d63be1d0c83251c621156e	2020-08-26	STORE: Fix potential memory leak
+b154cc5f7b568abc0d95b16a6e9a079a9a95ea04	ed4faae00cdab23244704660c099e41ec64f5dc0	2020-08-12	Fix mem leaks on PKCS#12 read error in PKCS12_key_gen_{asc,utf8}
+9fdaba746c97b3156b22bec8cca4194a8d632ad2	fdf6118b1552bc723aeba726174b14ca07b5170a	2020-08-11	Fix coverity CID #1458647 - Use after free in clean_tbuf() which uses ctx->rsa
+cef5e0985224d5af5cfee49fc1f603c21da9b651	c23add3676634ced6662929d60f266a9f5062e7b	2020-08-09	Fix memory leak in drbgtest
+6dbbd2fbcfba42558f0afb58164573a79185fed7	64827f407b0b603f585d7fadfd7e61a60ed7a45b	2020-08-06	drbgtest: avoid a memory leak
+2f9637f549e6bf0e855e6ae75472f95084899f9e	c4d02214053d34990ce28598691f3dddef6f3868	2020-06-29	coverity: CID 1464987: USE AFTER FREE
+e37ccc5db52701e8c929b68cf41ff9f7244548f8	587e4e53f886cd4d7a8b0eb063b823409e2ed4b9	2020-06-28	Fix memory leaks on OSSL_SERIALIZER_CTX_new_by_EVP_PKEY
+aa096d184f6eeefa4c186f0d11a1d420e3b20901	33c41876edbb8e63b2f6633db894726f48044932	2020-06-22	apps/cmp.c: Fix memory leaks in handle_opt_geninfo() found by Coverity
+02d0fb0ec876b4ac795b08fe27fd1d1cef255a06	7905806c94b17b1907d5352ceb047dd8d859288c	2020-06-17	Fix potential double free in rsa_keygen pairwise test.
+8a930416ab2e164bd1c593fd4f818c99b23dcb65	5606922c3d2e8c3d3ffda4347cb9fe3992d75f89	2020-05-23	PROV: Fix RSA-OAEP memory leak
+6532cf65fbb7a5ba03e240ed0554079027ea02ee	e512efe0894481679a5d3c57d10bf4ea97046c2a	2020-05-21	Prevent use after free of global_engine_lock
+3006f9024eb75d91dec98c22de1ff387c5cd7a22	3c38fa4b797848a76b83f91e423de470adbb3b61	2020-05-12	Preliminary fix of memory leak in try_decode_PKCS12() - full fix is in #11733
+090aae791f5688fcfe5f84edcfbbc643f775de32	d07e8b0ae66e96cda9c803de36e977fb7dfe941a	2020-05-06	Fix use-after-free in BIO_C_SET_SSL callback
+036e9d372ade7bf939e7b676dda40b570ee54c23	15dd075f708c58bbbbd18f98608fecfcb97f693a	2020-05-01	Fix a memory leak in CONF .include handling
+c570ba22dc73655fe4553a87a8cf6174c6c1b2d6	fe56d5951f0b42fd3ff1cf42a96d07f06f9692bc	2020-03-30	Don't double free a DH object
+31227df3dfac82a859031919a7159b312ce59ce1	a076951b71a1837e68eaf6bfd92e6a4d40b0940a	2020-02-07	X509_PUBKEY_set(): Fix memory leak
+070e7ce03e510c82b5a934162e8c8f175f03e826	6527714c25a4266504e323395fd9ffd1bccb2041	2020-01-12	Avoid leak in error path of PKCS5_PBE_keyivgen
+6bdf2ab46c51b3c091d2ed18b8e15799818736e9	902a97b5869e29175292324ec7c390401c453452	2020-01-09	Avoid leak in error path of asn1_parse2
+1209f3caf7654fb10bae8ac3244bb18816806b65	defd3ed820e413d418e408c5a5ea92c889c83727	2019-11-24	Property: fix memory leak.
+afded195bffe6f0082a1ff2a591fcf0c6aca18b9	f75abcc0f073b1c3e2d81df3fcde8fe45dd1e61f	2019-11-18	Fix Use after free when copying cipher ctx
+64f8bc6da0f8f8154cad68376bad96773ccfb7d0	c38761171f428d80cd7906b12a0cdac6d1285a7d	2019-10-31	Fix potential memory leak in dh_ameth.c
+8d516e0d2fc812fc0d3728d9091a46d81ac2afdc	dbb72124cdf1ad0dc223cfd570219e9af043ce7f	2019-09-21	Fix a double free issue when signing SM2 cert
+509ed0da9dd4e76e89bdaa1dc91e28c3292dc523	515c728dbaa92211d2eafb0041ab9fcd258fdc41	2019-09-09	Fix potential memory leaks with BN_to_ASN1_INTEGER
+f917ff923fbaf09e858316a1b66ce8fef9c207e7	f28bc7d386b25fb75625d0c62c6b2e6d21de0d09	2019-09-09	Fix potential memory leaks with BN_to_ASN1_INTEGER
+2fad02aa40fc85547aaf7093d4b11b2e3832c57a	22c22369bc09988eb8c6fdf4f543581a78fd3eb1	2019-07-02	Use leak sanitizer instead of internal mdebug to check for memory leaks
+51a5e73ead0d0fdd7ca884ae50f306ce32121af9	9f084451a33d60c3da6833739f6e26f203ca85d2	2019-05-20	OCSP: fix memory leak in OCSP_url_svcloc_new method. Add a few coverage test case.
+af86e528ebb5a094196645414a7576ad89998aad	5b3accde606ffe01466426bd59407ffca0690d23	2019-05-20	OCSP: fix memory leak in OCSP_url_svcloc_new method. Add a few coverage test case.
+3cd13b089158fa4eaf354a2782b5ecfb201bd6da	18111b130abc0f53b41abbbf82b27d7232ec99f2	2019-04-15	asn1parse: avoid double free
+9be358f7aaa6083e74b42c111227ddd96a8c9cc2	e7a621d57b69014490574ffb3f9ba5bb9b0a61fc	2019-03-26	Fix a memory leak in ARIA GCM
+a99f324459eaf233fdc824585b7e184fd370c135	5d677186e9e50ac9ed1e48d535044d4927775c28	2019-03-17	Fix resource leak coverity 1443711. Free the allocated pointer on error.
+c16cfa087d0f4b54c31bbdbbb79f8708f9f99dd2	a383083194b882a904ae66fcf74ebc348602407c	2019-03-14	Replumbing: better reference counter control in ossl_method_construct()
+cbd34dafb9f00732f5b46f6b7bf17df6d77f4f7d	45956011b9a5b0e7a2170d4c4f5f866d00702450	2019-03-13	Fix memory leak in ectest
+c34f3e46729b8b8bca02acaf21d65a8f6dee88c7	cd61ad38b54d22a3d17db9d679c24d9a602cb5d8	2019-03-12	Fix memory leaks in pkread.c demo file
+f1dbc4426dc69fc6adb724f6acdb17ca9629cf95	4c3941c2eb22c44398bccb50dbd019530bb01c7d	2019-02-17	Don't leak EVP_KDF_CTX on error
+366ae9f394deb00e21f36353dc5e39b2f87b9508	18e1e302452e6dea4500b6f981cee7e151294dea	2019-02-10	apps/openssl.c: avoid memory leaks
+e65832094b5510a6fb3c82a482d9db7fafc13a53	7193394aeea6422694bff5bb0c4f9e101f5ce44f	2019-01-29	Fix a memory leak with di2_X509_CRL reuse
+6616738099c6b02a66a791cf8f7a39c90492aa8b	9ed9875f0599babfb34bc52c17455765dfc0ac42	2019-01-28	Don't leak memory from ERR_add_error_vdata()
+7528c3245b5d5ed55064f2303e09d46a0fdf5b6a	492f70645ca912d82af02b9bc06e9472bf0730a0	2019-01-21	Fix a memory leak in the mem bio

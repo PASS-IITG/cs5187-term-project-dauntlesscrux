@@ -1,0 +1,12 @@
+Testing vulnerable version...
+ALERT [CVE-2023-0215]: /mnt/d/cve-typestate-project/openssl-cve-2023-0215-vulnerable/crypto/asn1/bio_ndef.c
+  BIO chain is pushed, then freed in error cleanup
+  without an unconditional BIO_pop() of the tracked BIO
+  before BIO_free().
+  STATE: VIOLATION
+
+Testing fixed version...
+NO ALERT [CVE-2023-0215]: /mnt/d/cve-typestate-project/openssl-cve-2023-0215-fixed/crypto/asn1/bio_ndef.c
+  STATE: CONFORMING
+
+PASS: vulnerable and fixed versions were distinguished.

@@ -1,0 +1,43 @@
+CSV files checked: 20
+All rows have consistent column counts: yes
+Manifest rows: 1695
+Both full-pass file coverage: 1695/1695 each
+Batch records completed with exit code 0: 34/34
+XML diagnostics: 6897
+Text parsed diagnostics: 6897
+Raw diagnostics CSV: 6897
+Zero-byte batch log files (quiet mode may produce these): 34
+logs/text_retry1/batch_001.stdout
+logs/text_retry1/batch_002.stdout
+logs/text_retry1/batch_003.stdout
+logs/text_retry1/batch_004.stdout
+logs/text_retry1/batch_005.stdout
+logs/text_retry1/batch_006.stdout
+logs/text_retry1/batch_007.stdout
+logs/text_retry1/batch_008.stdout
+logs/text_retry1/batch_009.stdout
+logs/text_retry1/batch_010.stdout
+logs/text_retry1/batch_011.stdout
+logs/text_retry1/batch_012.stdout
+logs/text_retry1/batch_013.stdout
+logs/text_retry1/batch_014.stdout
+logs/text_retry1/batch_015.stdout
+logs/text_retry1/batch_016.stdout
+logs/text_retry1/batch_017.stdout
+logs/xml_first/batch_001.stdout
+logs/xml_first/batch_002.stdout
+logs/xml_first/batch_003.stdout
+logs/xml_first/batch_004.stdout
+logs/xml_first/batch_005.stdout
+logs/xml_first/batch_006.stdout
+logs/xml_first/batch_007.stdout
+logs/xml_first/batch_008.stdout
+logs/xml_first/batch_009.stdout
+logs/xml_first/batch_010.stdout
+logs/xml_first/batch_011.stdout
+logs/xml_first/batch_012.stdout
+logs/xml_first/batch_013.stdout
+logs/xml_first/batch_014.stdout
+logs/xml_first/batch_015.stdout
+logs/xml_first/batch_016.stdout
+logs/xml_first/batch_017.stdout

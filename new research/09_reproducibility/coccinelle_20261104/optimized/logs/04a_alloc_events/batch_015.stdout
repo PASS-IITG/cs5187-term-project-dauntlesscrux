@@ -1,0 +1,14 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/property_test.c:942:10-24: alloc_event|buf
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/quic_stream_test.c:3314:10-24: alloc_event|buf
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/radix/quic_ops.c:604:18-32: alloc_event|buf
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/radix/quic_ops.c:1508:10-24: alloc_event|buf
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/ml_kem_internal_test.c:277:17-31: alloc_event|ciphertext
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/ml_kem_internal_test.c:130:21-35: alloc_event|ciphertext
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/quic_stream_test.c:3310:11-25: alloc_event|data
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/ml_kem_internal_test.c:276:25-39: alloc_event|encoded_public_key
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/ml_kem_internal_test.c:129:29-43: alloc_event|encoded_public_key
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/quic_record_test.c:3043:19-33: alloc_event|hbuf
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/memleaktest.c:49:11-25: alloc_event|lost
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/quicapitest.c:1162:10-24: alloc_event|msg
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/lhash_test.c:518:12-26: alloc_event|p
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/mem_alloc_test.c:830:8-22: alloc_event|p

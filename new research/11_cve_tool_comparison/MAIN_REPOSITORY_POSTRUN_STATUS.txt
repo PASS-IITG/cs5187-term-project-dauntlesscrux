@@ -1,0 +1,23 @@
+## main...origin/main
+D  __pycache__/typestate_check.cpython-311.pyc
+D  openssl
+ M research/07_evaluation/typestate_checker_eval_v2.py
+RM typestate_check.py -> src/typestate_check.py
+ M tests/test_all_cves.sh
+ M tests/test_bio_adversarial.py
+ M tests/test_cve_2022_4450.sh
+ M tests/test_cve_2023_0215.sh
+D  typestate_check.py.bak
+D  typestate_check.py.before_rule_fix.20261016_102223
+
+Staged name-status:
+D	__pycache__/typestate_check.cpython-311.pyc
+D	openssl
+R100	typestate_check.py	src/typestate_check.py
+D	typestate_check.py.bak
+D	typestate_check.py.before_rule_fix.20261016_102223
+
+Untracked path intentionally created by this comparison:
+?? research/11_cve_tool_comparison/
+
+Full untracked enumeration was not requested by the tracked-only status command; all earlier untracked paths from the saved project status were left untouched.

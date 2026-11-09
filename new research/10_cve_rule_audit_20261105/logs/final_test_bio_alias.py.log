@@ -1,0 +1,23 @@
+PASS: Arbitrary direct alias
+  Expected exit: 0
+  Actual exit:   0
+  Output: NO ALERT [CVE-2023-0215]: /tmp/tmp3azrbzfh/alias_case_0.c
+  STATE: CONFORMING
+PASS: Conditional BIO_pop through alias
+  Expected exit: 1
+  Actual exit:   1
+  Output: ALERT [CVE-2023-0215]: /tmp/tmp3azrbzfh/alias_case_1.c
+  BIO chain is pushed, then freed in error cleanup
+  without an unconditional BIO_pop() of the tracked BIO
+  before BIO_free().
+  STATE: VIOLATION
+PASS: Reassigned alias before BIO_pop
+  Expected exit: 1
+  Actual exit:   1
+  Output: ALERT [CVE-2023-0215]: /tmp/tmp3azrbzfh/alias_case_2.c
+  BIO chain is pushed, then freed in error cleanup
+  without an unconditional BIO_pop() of the tracked BIO
+  before BIO_free().
+  STATE: VIOLATION
+
+Result: 3/3 tests passed.

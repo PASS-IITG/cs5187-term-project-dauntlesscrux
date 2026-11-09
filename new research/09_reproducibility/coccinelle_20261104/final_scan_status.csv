@@ -1,0 +1,5 @@
+Rule ID,Inputs,Start UTC,End UTC,Exit Code,Status,Raw Matches,Stdout,Stderr
+01_use_after_release,910,2026-11-04T04:41:46.903954+00:00,2026-11-04T04:44:07.534153+00:00,0,completed,0,logs/final_01_use_after_release.stdout,logs/final_01_use_after_release.stderr
+02_repeated_release,430,2026-11-04T04:57:40+00:00,not captured; stopped after prolonged no-output run,130,incomplete; interrupted; no findings may be inferred,NA,logs/final_02_repeated_release.stdout,logs/final_02_repeated_release.stderr
+03_release_after_transfer,10,2026-11-04T05:08:30+00:00,2026-11-04T05:08:36+00:00,0,completed,14,logs/final_03_release_after_transfer.stdout,logs/final_03_release_after_transfer.stderr
+04_acquire_early_return,332,2026-11-04T05:08:36+00:00,2026-11-04T05:11:36+00:00,124,timed out at 180 seconds; retry later interrupted after prolonged no-output,NA,logs/final_04_acquire_early_return.stdout,logs/final_04_acquire_early_return.stderr

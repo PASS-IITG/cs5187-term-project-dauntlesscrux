@@ -1,0 +1,89 @@
+PASS: pem real vulnerable
+  expected exit=1; actual exit=1
+  ALERT [CVE-2022-4450]: /mnt/d/cve-typestate-project/openssl-CVE-2022-4450-vulnerable/crypto/pem/pem_lib.c
+  Failure cleanup frees output buffers but does not
+  clear both caller-visible output pointers.
+  STATE: VIOLATION
+PASS: pem real fixed
+  expected exit=0; actual exit=0
+  NO ALERT [CVE-2022-4450]: /mnt/d/cve-typestate-project/openssl-CVE-2022-4450-fixed/crypto/pem/pem_lib.c
+  STATE: CONFORMING
+PASS: ssl real vulnerable
+  expected exit=1; actual exit=1
+  ALERT [CVE-2024-4741]: /mnt/d/cve-typestate-project/openssl-CVE-2024-4741-vulnerable/ssl/record/ssl3_buffer.c
+  Read buffer is released, but one or more
+  associated pointers or lengths are not reset.
+  STATE: VIOLATION
+PASS: ssl real fixed
+  expected exit=0; actual exit=0
+  NO ALERT [CVE-2024-4741]: /mnt/d/cve-typestate-project/openssl-CVE-2024-4741-fixed/ssl/record/ssl3_buffer.c
+  STATE: CONFORMING
+PASS: bio real vulnerable
+  expected exit=1; actual exit=1
+  ALERT [CVE-2023-0215]: /mnt/d/cve-typestate-project/openssl-CVE-2023-0215-vulnerable/crypto/asn1/bio_ndef.c
+  BIO chain is pushed, then freed in error cleanup
+  without an unconditional BIO_pop() of the tracked BIO
+  before BIO_free().
+  STATE: VIOLATION
+PASS: bio real fixed
+  expected exit=0; actual exit=0
+  NO ALERT [CVE-2023-0215]: /mnt/d/cve-typestate-project/openssl-CVE-2023-0215-fixed/crypto/asn1/bio_ndef.c
+  STATE: CONFORMING
+PASS: PEM one freed output not reset
+  expected exit=1; actual exit=1
+  ALERT [CVE-2022-4450]: /tmp/typestate_audit_xd3we4um/pem_missing_data.c
+  Failure cleanup frees output buffers but does not
+  clear both caller-visible output pointers.
+  STATE: VIOLATION
+PASS: PEM conditional output reset
+  expected exit=2; actual exit=2
+  SKIP: conditional PEM output reset in /tmp/typestate_audit_xd3we4um/pem_conditional.c
+  STATE: UNKNOWN
+SKIP: no supported target function found in /tmp/typestate_audit_xd3we4um/pem_conditional.c
+  STATE: UNKNOWN
+PASS: PEM unreachable cleanup pair
+  expected exit=2; actual exit=2
+  SKIP: no supported target function found in /tmp/typestate_audit_xd3we4um/pem_dead_cleanup.c
+  STATE: UNKNOWN
+PASS: PEM output reset before free
+  expected exit=2; actual exit=2
+  SKIP: PEM output cleanup ordering is unsupported in /tmp/typestate_audit_xd3we4um/pem_reordered.c
+  STATE: UNKNOWN
+SKIP: no supported target function found in /tmp/typestate_audit_xd3we4um/pem_reordered.c
+  STATE: UNKNOWN
+PASS: PEM aliased output cleanup unsupported
+  expected exit=2; actual exit=2
+  SKIP: no supported target function found in /tmp/typestate_audit_xd3we4um/pem_alias.c
+  STATE: UNKNOWN
+PASS: SSL packet length not reset
+  expected exit=1; actual exit=1
+  ALERT [CVE-2024-4741]: /tmp/typestate_audit_xd3we4um/ssl_missing_length.c
+  Read buffer is released, but one or more
+  associated pointers or lengths are not reset.
+  STATE: VIOLATION
+PASS: SSL conditional packet reset
+  expected exit=2; actual exit=2
+  SKIP: conditional SSL buffer-state reset in /tmp/typestate_audit_xd3we4um/ssl_conditional.c
+  STATE: UNKNOWN
+SKIP: no supported target function found in /tmp/typestate_audit_xd3we4um/ssl_conditional.c
+  STATE: UNKNOWN
+PASS: SSL unreachable state reset
+  expected exit=2; actual exit=2
+  SKIP: conditional SSL buffer-state reset in /tmp/typestate_audit_xd3we4um/ssl_dead_reset.c
+  STATE: UNKNOWN
+SKIP: no supported target function found in /tmp/typestate_audit_xd3we4um/ssl_dead_reset.c
+  STATE: UNKNOWN
+PASS: SSL state reset before release unsupported
+  expected exit=2; actual exit=2
+  SKIP: SSL buffer reset ordering is unsupported in /tmp/typestate_audit_xd3we4um/ssl_order.c
+  STATE: UNKNOWN
+SKIP: no supported target function found in /tmp/typestate_audit_xd3we4um/ssl_order.c
+  STATE: UNKNOWN
+PASS: BIO insertion only in unreachable branch
+  expected exit=2; actual exit=2
+  SKIP: BIO_push() is conditional or nested in /tmp/typestate_audit_xd3we4um/bio_dead_push.c
+  STATE: UNKNOWN
+SKIP: no supported target function found in /tmp/typestate_audit_xd3we4um/bio_dead_push.c
+  STATE: UNKNOWN
+
+Result: 16/16 tests passed.

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.13.0"/>
+    <errors>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;port&apos; can be declared as pointer to const" verbose="Variable &apos;port&apos; can be declared as pointer to const" cwe="398" file0="demos/bio/server-cmod.c">
+            <location file="demos/bio/server-cmod.c" line="25" column="11" info="Variable &apos;port&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;port&apos; can be declared as pointer to const" verbose="Variable &apos;port&apos; can be declared as pointer to const" cwe="398" file0="demos/bio/server-conf.c">
+            <location file="demos/bio/server-conf.c" line="26" column="11" info="Variable &apos;port&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sect&apos; can be declared as pointer to const" verbose="Variable &apos;sect&apos; can be declared as pointer to const" cwe="398" file0="demos/bio/server-conf.c">
+            <location file="demos/bio/server-conf.c" line="33" column="27" info="Variable &apos;sect&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;loc&apos; can be reduced." verbose="The scope of the variable &apos;loc&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="demos/cms/cms_ver.c">
+            <location file="demos/cms/cms_ver.c" line="28" column="12"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sis&apos; can be declared as pointer to const" verbose="Variable &apos;sis&apos; can be declared as pointer to const" cwe="398" file0="demos/cms/cms_ver.c">
+            <location file="demos/cms/cms_ver.c" line="21" column="31" info="Variable &apos;sis&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;si&apos; can be declared as pointer to const" verbose="Variable &apos;si&apos; can be declared as pointer to const" cwe="398" file0="demos/cms/cms_ver.c">
+            <location file="demos/cms/cms_ver.c" line="22" column="21" info="Variable &apos;si&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;attr&apos; can be declared as pointer to const" verbose="Variable &apos;attr&apos; can be declared as pointer to const" cwe="398" file0="demos/cms/cms_ver.c">
+            <location file="demos/cms/cms_ver.c" line="23" column="21" info="Variable &apos;attr&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;utctime&apos; can be declared as pointer to const" verbose="Variable &apos;utctime&apos; can be declared as pointer to const" cwe="398" file0="demos/cms/cms_ver.c">
+            <location file="demos/cms/cms_ver.c" line="25" column="19" info="Variable &apos;utctime&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;gtime&apos; can be declared as pointer to const" verbose="Variable &apos;gtime&apos; can be declared as pointer to const" cwe="398" file0="demos/cms/cms_ver.c">
+            <location file="demos/cms/cms_ver.c" line="26" column="27" info="Variable &apos;gtime&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;digest_length&apos; is less than zero." verbose="The unsigned expression &apos;digest_length&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570" file0="demos/digest/EVP_MD_stdin.c">
+            <location file="demos/digest/EVP_MD_stdin.c" line="67" column="23" info="Unsigned less than zero"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pkey&apos; can be declared as pointer to const" verbose="Parameter &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="demos/encode/ec_encode.c">
+            <location file="demos/encode/ec_encode.c" line="102" column="32" info="Parameter &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pkey&apos; can be declared as pointer to const" verbose="Parameter &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="demos/encode/rsa_encode.c">
+            <location file="demos/encode/rsa_encode.c" line="102" column="32" info="Parameter &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ssl&apos; can be declared as pointer to const" verbose="Parameter &apos;ssl&apos; can be declared as pointer to const" cwe="398" file0="demos/dtlsecho/main.c">
+            <location file="demos/dtlsecho/main.c" line="123" column="29" info="Parameter &apos;ssl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;rem_server_name&apos; can be declared as pointer to const" verbose="Variable &apos;rem_server_name&apos; can be declared as pointer to const" cwe="398" file0="demos/dtlsecho/main.c">
+            <location file="demos/dtlsecho/main.c" line="228" column="11" info="Variable &apos;rem_server_name&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;txbuf&apos; can be declared as pointer to const" verbose="Variable &apos;txbuf&apos; can be declared as pointer to const" cwe="398" file0="demos/dtlsecho/main.c">
+            <location file="demos/dtlsecho/main.c" line="222" column="11" info="Variable &apos;txbuf&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;result&apos; is assigned a value that is never used." verbose="Variable &apos;result&apos; is assigned a value that is never used." cwe="563" file0="demos/dtlsecho/main.c">
+            <location file="demos/dtlsecho/main.c" line="427" column="29"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;err&apos; can be reduced." verbose="The scope of the variable &apos;err&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="demos/dtlslistenerecho/main.c">
+            <location file="demos/dtlslistenerecho/main.c" line="737" column="14"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;threads&apos; can be declared as pointer to const" verbose="Parameter &apos;threads&apos; can be declared as pointer to const" cwe="398" file0="demos/dtlslistenerecho/main.c">
+            <location file="demos/dtlslistenerecho/main.c" line="430" column="65" info="Parameter &apos;threads&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;rem_server_name&apos; can be declared as pointer to const" verbose="Parameter &apos;rem_server_name&apos; can be declared as pointer to const" cwe="398" file0="demos/dtlslistenerecho/main.c">
+            <location file="demos/dtlslistenerecho/main.c" line="810" column="30" info="Parameter &apos;rem_server_name&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;nl&apos; can be declared as pointer to const" verbose="Variable &apos;nl&apos; can be declared as pointer to const" cwe="398" file0="demos/dtlslistenerecho/main.c">
+            <location file="demos/dtlslistenerecho/main.c" line="828" column="11" info="Variable &apos;nl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;port&apos; can be declared as pointer to const" verbose="Variable &apos;port&apos; can be declared as pointer to const" cwe="398" file0="demos/guide/quic-client-block.c">
+            <location file="demos/guide/quic-client-block.c" line="130" column="22" info="Variable &apos;port&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;port&apos; can be declared as pointer to const" verbose="Variable &apos;port&apos; can be declared as pointer to const" cwe="398" file0="demos/guide/quic-client-non-block.c">
+            <location file="demos/guide/quic-client-non-block.c" line="238" column="22" info="Variable &apos;port&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;port&apos; can be declared as pointer to const" verbose="Variable &apos;port&apos; can be declared as pointer to const" cwe="398" file0="demos/guide/quic-multi-stream.c">
+            <location file="demos/guide/quic-multi-stream.c" line="148" column="22" info="Variable &apos;port&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="redundantContinue" severity="style" msg="&apos;continue&apos; is redundant since it is the last statement in a loop." verbose="&apos;continue&apos; is redundant since it is the last statement in a loop." cwe="561" file0="demos/guide/quic-server-block.c">
+            <location file="demos/guide/quic-server-block.c" line="261" column="13"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;port&apos; can be declared as pointer to const" verbose="Variable &apos;port&apos; can be declared as pointer to const" cwe="398" file0="demos/guide/tls-client-block.c">
+            <location file="demos/guide/tls-client-block.c" line="111" column="22" info="Variable &apos;port&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ssl&apos; can be declared as pointer to const" verbose="Parameter &apos;ssl&apos; can be declared as pointer to const" cwe="398" file0="demos/guide/tls-client-non-block.c">
+            <location file="demos/guide/tls-client-non-block.c" line="103" column="36" info="Parameter &apos;ssl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;port&apos; can be declared as pointer to const" verbose="Variable &apos;port&apos; can be declared as pointer to const" cwe="398" file0="demos/guide/tls-client-non-block.c">
+            <location file="demos/guide/tls-client-non-block.c" line="189" column="22" info="Variable &apos;port&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%lld in format string (no. 1) requires &apos;long long&apos; but the argument type is &apos;unsigned long long&apos;." verbose="%lld in format string (no. 1) requires &apos;long long&apos; but the argument type is &apos;unsigned long long&apos;." cwe="686" file0="demos/http3/ossl-nghttp3-demo-server.c">
+            <location file="demos/http3/ossl-nghttp3-demo-server.c" line="586" column="13"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 2) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686" file0="demos/http3/ossl-nghttp3-demo-server.c">
+            <location file="demos/http3/ossl-nghttp3-demo-server.c" line="739" column="13"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%lld in format string (no. 2) requires &apos;long long&apos; but the argument type is &apos;unsigned long long&apos;." verbose="%lld in format string (no. 2) requires &apos;long long&apos; but the argument type is &apos;unsigned long long&apos;." cwe="686" file0="demos/http3/ossl-nghttp3-demo-server.c">
+            <location file="demos/http3/ossl-nghttp3-demo-server.c" line="782" column="13"/>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;ssl_ids&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;ssl_ids&apos;. The initialized value is overwritten before it is read." cwe="563" file0="demos/http3/ossl-nghttp3-demo-server.c">
+            <location file="demos/http3/ossl-nghttp3-demo-server.c" line="756" column="13" info="ssl_ids is overwritten"/>
+            <location file="demos/http3/ossl-nghttp3-demo-server.c" line="753" column="28" info="ssl_ids is initialized"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;hassomething&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;hassomething&apos; is reassigned a value before the old one has been used." cwe="563" file0="demos/http3/ossl-nghttp3-demo-server.c">
+            <location file="demos/http3/ossl-nghttp3-demo-server.c" line="1324" column="22" info="hassomething is overwritten"/>
+            <location file="demos/http3/ossl-nghttp3-demo-server.c" line="1293" column="34" info="hassomething is assigned"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686" file0="demos/http3/ossl-nghttp3-demo.c">
+            <location file="demos/http3/ossl-nghttp3-demo.c" line="90" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." verbose="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;size_t {aka unsigned long}&apos;." cwe="686" file0="demos/http3/ossl-nghttp3-demo.c">
+            <location file="demos/http3/ossl-nghttp3-demo.c" line="209" column="17"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="fscanf() without field width limits can crash with huge input data." verbose="fscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119" file0="demos/http3/ossl-nghttp3-demo.c">
+            <location file="demos/http3/ossl-nghttp3-demo.c" line="205" column="17"/>
+        </error>
+        <error id="memleakOnRealloc" severity="error" msg="Common realloc mistake: &apos;req_array&apos; nulled but not freed upon failure" verbose="Common realloc mistake: &apos;req_array&apos; nulled but not freed upon failure" cwe="401" file0="demos/http3/ossl-nghttp3-demo.c">
+            <location file="demos/http3/ossl-nghttp3-demo.c" line="203" column="13"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wr&apos; can be reduced." verbose="The scope of the variable &apos;wr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="demos/http3/ossl-nghttp3-demo.c">
+            <location file="demos/http3/ossl-nghttp3-demo.c" line="73" column="12"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;oldstream&apos; can be declared as pointer to const" verbose="Parameter &apos;oldstream&apos; can be declared as pointer to const" cwe="398" file0="demos/http3/ossl-nghttp3-demo-server.c">
+            <location file="demos/http3/ossl-nghttp3-demo-server.c" line="164" column="62" info="Parameter &apos;oldstream&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;h3ssl&apos; can be declared as pointer to const" verbose="Parameter &apos;h3ssl&apos; can be declared as pointer to const" cwe="398" file0="demos/http3/ossl-nghttp3-demo-server.c">
+            <location file="demos/http3/ossl-nghttp3-demo-server.c" line="765" column="45" info="Parameter &apos;h3ssl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;buff&apos; can be declared as pointer to const" verbose="Parameter &apos;buff&apos; can be declared as pointer to const" cwe="398" file0="demos/http3/ossl-nghttp3-demo-server.c">
+            <location file="demos/http3/ossl-nghttp3-demo-server.c" line="851" column="14" info="Parameter &apos;buff&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DEMO_H3_STREAM_get_user_data&apos; argument 1 names different: declaration &apos;stream&apos; definition &apos;s&apos;." verbose="Function &apos;OSSL_DEMO_H3_STREAM_get_user_data&apos; argument 1 names different: declaration &apos;stream&apos; definition &apos;s&apos;." cwe="628" inconclusive="true" file0="demos/http3/ossl-nghttp3.c">
+            <location file="demos/http3/ossl-nghttp3.c" line="62" column="68"/>
+            <location file="demos/http3/ossl-nghttp3.h" line="110" column="68"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DEMO_H3_CONN_new_for_addr&apos; argument 2 names different: declaration &apos;addr&apos; definition &apos;bai&apos;." verbose="Function &apos;OSSL_DEMO_H3_CONN_new_for_addr&apos; argument 2 names different: declaration &apos;addr&apos; definition &apos;bai&apos;." cwe="628" inconclusive="true" file0="demos/http3/ossl-nghttp3.c">
+            <location file="demos/http3/ossl-nghttp3.c" line="398" column="85"/>
+            <location file="demos/http3/ossl-nghttp3.h" line="64" column="25"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DEMO_H3_CONN_submit_request&apos; argument 2 names different: declaration &apos;hdr&apos; definition &apos;nva&apos;." verbose="Function &apos;OSSL_DEMO_H3_CONN_submit_request&apos; argument 2 names different: declaration &apos;hdr&apos; definition &apos;nva&apos;." cwe="628" inconclusive="true" file0="demos/http3/ossl-nghttp3.c">
+            <location file="demos/http3/ossl-nghttp3.c" line="745" column="23"/>
+            <location file="demos/http3/ossl-nghttp3.h" line="102" column="23"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DEMO_H3_CONN_submit_request&apos; argument 3 names different: declaration &apos;hdrlen&apos; definition &apos;nvlen&apos;." verbose="Function &apos;OSSL_DEMO_H3_CONN_submit_request&apos; argument 3 names different: declaration &apos;hdrlen&apos; definition &apos;nvlen&apos;." cwe="628" inconclusive="true" file0="demos/http3/ossl-nghttp3.c">
+            <location file="demos/http3/ossl-nghttp3.c" line="745" column="35"/>
+            <location file="demos/http3/ossl-nghttp3.h" line="102" column="35"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_DEMO_H3_CONN_submit_request&apos; argument 5 names different: declaration &apos;stream_user_data&apos; definition &apos;user_data&apos;." verbose="Function &apos;OSSL_DEMO_H3_CONN_submit_request&apos; argument 5 names different: declaration &apos;stream_user_data&apos; definition &apos;user_data&apos;." cwe="628" inconclusive="true" file0="demos/http3/ossl-nghttp3.c">
+            <location file="demos/http3/ossl-nghttp3.c" line="747" column="11"/>
+            <location file="demos/http3/ossl-nghttp3.h" line="104" column="11"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;snew&apos; can be declared as pointer to const" verbose="Variable &apos;snew&apos; can be declared as pointer to const" cwe="398" file0="demos/http3/ossl-nghttp3.c">
+            <location file="demos/http3/ossl-nghttp3.c" line="586" column="10" info="Variable &apos;snew&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;p12&apos; can be declared as pointer to const" verbose="Parameter &apos;p12&apos; can be declared as pointer to const" cwe="398" file0="demos/pkcs12/pkread.c">
+            <location file="demos/pkcs12/pkread.c" line="18" column="41" info="Parameter &apos;p12&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;out_privkey_len&apos; is less than zero." verbose="The unsigned expression &apos;out_privkey_len&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570" file0="demos/pkey/EVP_PKEY_EC_keygen.c">
+            <location file="demos/pkey/EVP_PKEY_EC_keygen.c" line="114" column="25" info="Unsigned less than zero"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pkey&apos; can be declared as pointer to const" verbose="Parameter &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="demos/pkey/EVP_PKEY_EC_keygen.c">
+            <location file="demos/pkey/EVP_PKEY_EC_keygen.c" line="85" column="37" info="Parameter &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;gindex&apos; shadows outer variable" verbose="Local variable &apos;gindex&apos; shadows outer variable" cwe="398" file0="demos/pkey/EVP_PKEY_DSA_paramvalidate.c">
+            <location file="demos/pkey/dsa.inc" line="115" column="17" info="Shadow variable"/>
+            <location file="demos/pkey/EVP_PKEY_DSA_paramvalidate.c" line="48" column="18" info="Shadowed declaration"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;dsaparams&apos; can be declared as pointer to const" verbose="Parameter &apos;dsaparams&apos; can be declared as pointer to const" cwe="398" file0="demos/pkey/EVP_PKEY_DSA_paramvalidate.c">
+            <location file="demos/pkey/EVP_PKEY_DSA_paramvalidate.c" line="56" column="50" info="Parameter &apos;dsaparams&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;sig_value&apos; can be declared as pointer to const" verbose="Parameter &apos;sig_value&apos; can be declared as pointer to const" cwe="398" file0="demos/signature/EVP_DSA_Signature_demo.c">
+            <location file="demos/signature/EVP_DSA_Signature_demo.c" line="225" column="36" info="Parameter &apos;sig_value&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;sig_len&apos; is less than zero." verbose="The unsigned expression &apos;sig_len&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570" file0="demos/signature/EVP_EC_Signature_demo.c">
+            <location file="demos/signature/EVP_EC_Signature_demo.c" line="117" column="17" info="Unsigned less than zero"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;sig_value&apos; can be declared as pointer to const" verbose="Parameter &apos;sig_value&apos; can be declared as pointer to const" cwe="398" file0="demos/signature/EVP_EC_Signature_demo.c">
+            <location file="demos/signature/EVP_EC_Signature_demo.c" line="147" column="36" info="Parameter &apos;sig_value&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;rc==0&apos; is always false" verbose="Condition &apos;rc==0&apos; is always false" cwe="570" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="837" column="19" info="Condition &apos;rc==0&apos; is always false"/>
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="821" column="12" info="Assuming that condition &apos;rc&lt;=0&apos; is not redundant"/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;qconn_pe!=NULL&apos; is redundant or there is possible null pointer dereference: qconn_pe." verbose="Either the condition &apos;qconn_pe!=NULL&apos; is redundant or there is possible null pointer dereference: qconn_pe." cwe="476" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="1471" column="12" info="Null pointer dereference"/>
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="1486" column="18" info="Assuming that condition &apos;qconn_pe!=NULL&apos; is not redundant"/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;qconn_pe!=NULL&apos; is redundant or there is possible null pointer dereference: qconn_pe." verbose="Either the condition &apos;qconn_pe!=NULL&apos; is redundant or there is possible null pointer dereference: qconn_pe." cwe="476" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="1477" column="9" info="Null pointer dereference"/>
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="1486" column="18" info="Assuming that condition &apos;qconn_pe!=NULL&apos; is not redundant"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;lh-&gt;omega&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;lh-&gt;omega&apos; is reassigned a value before the old one has been used." cwe="563" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="180" column="1" info="lh-&gt;omega is overwritten"/>
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="180" column="1" info="lh-&gt;omega is assigned"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;lh-&gt;omega&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;lh-&gt;omega&apos; is reassigned a value before the old one has been used." cwe="563" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="182" column="1" info="lh-&gt;omega is overwritten"/>
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="182" column="1" info="lh-&gt;omega is assigned"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;rv&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;rv&apos; is reassigned a value before the old one has been used." cwe="563" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="1261" column="12" info="rv is overwritten"/>
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="1248" column="12" info="rv is assigned"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;rts&apos; can be declared as pointer to const" verbose="Variable &apos;rts&apos; can be declared as pointer to const" cwe="398" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="436" column="33" info="Variable &apos;rts&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;rts&apos; can be declared as pointer to const" verbose="Variable &apos;rts&apos; can be declared as pointer to const" cwe="398" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="481" column="33" info="Variable &apos;rts&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;rtf&apos; can be declared as pointer to const" verbose="Variable &apos;rtf&apos; can be declared as pointer to const" cwe="398" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="521" column="31" info="Variable &apos;rtf&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;rtf&apos; can be declared as pointer to const" verbose="Variable &apos;rtf&apos; can be declared as pointer to const" cwe="398" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="573" column="31" info="Variable &apos;rtf&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ssl&apos; can be declared as pointer to const" verbose="Variable &apos;ssl&apos; can be declared as pointer to const" cwe="398" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="813" column="10" info="Variable &apos;ssl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="1328" column="11" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;file_name&apos; can be declared as pointer to const" verbose="Variable &apos;file_name&apos; can be declared as pointer to const" cwe="398" file0="demos/quic/poll-server/quic-server-ssl-poll-http.c">
+            <location file="demos/quic/poll-server/quic-server-ssl-poll-http.c" line="1329" column="11" info="Variable &apos;file_name&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="The comparison &apos;txcap &gt; 0&apos; is always false." verbose="Finding the same expression on both sides of an operator is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398" file0="demos/sslecho/echecho.c">
+            <location file="demos/sslecho/echecho.c" line="436" column="32"/>
+            <location file="demos/sslecho/echecho.c" line="200" column="20" info="&apos;txcap&apos; is assigned value &apos;0&apos; here."/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;buf&apos; can be declared as pointer to const" verbose="Parameter &apos;buf&apos; can be declared as pointer to const" cwe="398" file0="demos/sslecho/echecho.c">
+            <location file="demos/sslecho/echecho.c" line="108" column="20" info="Parameter &apos;buf&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;result&apos; is assigned a value that is never used." verbose="Variable &apos;result&apos; is assigned a value that is never used." cwe="563" file0="demos/sslecho/echecho.c">
+            <location file="demos/sslecho/echecho.c" line="397" column="29"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;txbuf&apos; can be declared as pointer to const" verbose="Variable &apos;txbuf&apos; can be declared as pointer to const" cwe="398" file0="demos/sslecho/main.c">
+            <location file="demos/sslecho/main.c" line="155" column="11" info="Variable &apos;txbuf&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;result&apos; is assigned a value that is never used." verbose="Variable &apos;result&apos; is assigned a value that is never used." cwe="563" file0="demos/sslecho/main.c">
+            <location file="demos/sslecho/main.c" line="338" column="29"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;rc&apos; can be reduced." verbose="The scope of the variable &apos;rc&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="doc/designs/ddd/ddd-04-fd-nonblocking.c">
+            <location file="doc/designs/ddd/ddd-04-fd-nonblocking.c" line="116" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;rc&apos; can be reduced." verbose="The scope of the variable &apos;rc&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="doc/designs/ddd/ddd-04-fd-nonblocking.c">
+            <location file="doc/designs/ddd/ddd-04-fd-nonblocking.c" line="145" column="9"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;conn&apos; can be declared as pointer to const" verbose="Parameter &apos;conn&apos; can be declared as pointer to const" cwe="398" file0="doc/designs/ddd/ddd-04-fd-nonblocking.c">
+            <location file="doc/designs/ddd/ddd-04-fd-nonblocking.c" line="180" column="27" info="Parameter &apos;conn&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="memleak" severity="error" msg="Memory leak: conn" verbose="Memory leak: conn" cwe="401" file0="doc/designs/ddd/ddd-05-mem-nonblocking.c">
+            <location file="doc/designs/ddd/ddd-05-mem-nonblocking.c" line="115" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;rc&apos; can be reduced." verbose="The scope of the variable &apos;rc&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="doc/designs/ddd/ddd-05-mem-nonblocking.c">
+            <location file="doc/designs/ddd/ddd-05-mem-nonblocking.c" line="141" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;rc&apos; can be reduced." verbose="The scope of the variable &apos;rc&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="doc/designs/ddd/ddd-05-mem-nonblocking.c">
+            <location file="doc/designs/ddd/ddd-05-mem-nonblocking.c" line="170" column="9"/>
+        </error>
+        <error id="autoVariables" severity="error" msg="Address of local auto-variable assigned to a function parameter." verbose="Dangerous assignment - the function parameter is assigned the address of a local auto-variable. Local auto-variables are reserved from the stack which is freed when the function ends. So the pointer to a local variable is invalid after the function ends." cwe="562" file0="doc/designs/ddd/ddd-06-mem-uv.c">
+            <location file="doc/designs/ddd/ddd-06-mem-uv.c" line="227" column="5"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!teardown_done&apos; is always true" verbose="Condition &apos;!teardown_done&apos; is always true" cwe="571" file0="doc/designs/ddd/ddd-06-mem-uv.c">
+            <location file="doc/designs/ddd/ddd-06-mem-uv.c" line="239" column="12" info="Condition &apos;!teardown_done&apos; is always true"/>
+            <location file="doc/designs/ddd/ddd-06-mem-uv.c" line="217" column="14" info="Assuming condition is false"/>
+            <location file="doc/designs/ddd/ddd-06-mem-uv.c" line="215" column="26" info="Assignment &apos;teardown_done=0&apos;, assigned value is 0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;rc&apos; can be reduced." verbose="The scope of the variable &apos;rc&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="doc/designs/ddd/ddd-06-mem-uv.c">
+            <location file="doc/designs/ddd/ddd-06-mem-uv.c" line="332" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;rc&apos; can be reduced." verbose="The scope of the variable &apos;rc&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="doc/designs/ddd/ddd-06-mem-uv.c">
+            <location file="doc/designs/ddd/ddd-06-mem-uv.c" line="357" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;rc&apos; can be reduced." verbose="The scope of the variable &apos;rc&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="doc/designs/ddd/ddd-06-mem-uv.c">
+            <location file="doc/designs/ddd/ddd-06-mem-uv.c" line="604" column="9"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;rc&apos; is assigned a value that is never used." verbose="Variable &apos;rc&apos; is assigned a value that is never used." cwe="563" file0="doc/designs/ddd/ddd-06-mem-uv.c">
+            <location file="doc/designs/ddd/ddd-06-mem-uv.c" line="752" column="8"/>
+        </error>
+        <error id="preprocessorErrorDirective" severity="error" msg="#error &quot;Unsupported fuzzer&quot;" verbose="#error &quot;Unsupported fuzzer&quot;">
+            <location file="fuzz/driver.c" line="53" column="0"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const. However it seems that &apos;transfer_cb&apos; is a callback function, if &apos;ctx&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;ctx&apos; can be declared as pointer to const. However it seems that &apos;transfer_cb&apos; is a callback function, if &apos;ctx&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="fuzz/cmp.c">
+            <location file="fuzz/cmp.c" line="31" column="48" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+            <location file="fuzz/cmp.c" line="67" column="45" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;fuzz_rand_newctx&apos; argument 3 names different: declaration &apos;parent_calls&apos; definition &apos;parent_dispatch&apos;." verbose="Function &apos;fuzz_rand_newctx&apos; argument 3 names different: declaration &apos;parent_calls&apos; definition &apos;parent_dispatch&apos;." cwe="628" inconclusive="true" file0="fuzz/fuzz_rand.c">
+            <location file="fuzz/fuzz_rand.c" line="26" column="55"/>
+            <location file="fuzz/fuzz_rand.c" line="16" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;fuzz_rand_gettable_ctx_params&apos; argument 1 names different: declaration &apos;vctx&apos; definition &apos;vrng&apos;." verbose="Function &apos;fuzz_rand_gettable_ctx_params&apos; argument 1 names different: declaration &apos;vctx&apos; definition &apos;vrng&apos;." cwe="628" inconclusive="true" file0="fuzz/fuzz_rand.c">
+            <location file="fuzz/fuzz_rand.c" line="95" column="74"/>
+            <location file="fuzz/fuzz_rand.c" line="21" column="0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="fuzz/hashtable.c">
+            <location file="fuzz/hashtable.c" line="125" column="12"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;key&apos; can be declared as pointer to const" verbose="Parameter &apos;key&apos; can be declared as pointer to const" cwe="398" file0="fuzz/hashtable.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h" line="340" column="61" info="Parameter &apos;key&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;expect_type&apos; can be declared as pointer to const" verbose="Variable &apos;expect_type&apos; can be declared as pointer to const" cwe="398" file0="fuzz/hashtable.c">
+            <location file="fuzz/hashtable.c" line="38" column="1" info="Variable &apos;expect_type&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;h&apos; can be declared as pointer to const" verbose="Parameter &apos;h&apos; can be declared as pointer to const" cwe="398" file0="fuzz/hashtable.c">
+            <location file="fuzz/hashtable.c" line="38" column="1" info="Parameter &apos;h&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;f&apos; can be declared as pointer to const" verbose="Variable &apos;f&apos; can be declared as pointer to const" cwe="398" file0="fuzz/hashtable.c">
+            <location file="fuzz/hashtable.c" line="72" column="19" info="Variable &apos;f&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;f&apos; can be declared as pointer to const" verbose="Variable &apos;f&apos; can be declared as pointer to const" cwe="398" file0="fuzz/hashtable.c">
+            <location file="fuzz/hashtable.c" line="85" column="19" info="Variable &apos;f&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;valptr&apos; is assigned a value that is never used." verbose="Variable &apos;valptr&apos; is assigned a value that is never used." cwe="563" file0="fuzz/hashtable.c">
+            <location file="fuzz/hashtable.c" line="196" column="16"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;alice&apos; can be declared as pointer to const" verbose="Variable &apos;alice&apos; can be declared as pointer to const" cwe="398" file0="fuzz/ml-dsa.c">
+            <location file="fuzz/ml-dsa.c" line="511" column="15" info="Variable &apos;alice&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;bob&apos; can be declared as pointer to const" verbose="Variable &apos;bob&apos; can be declared as pointer to const" cwe="398" file0="fuzz/ml-dsa.c">
+            <location file="fuzz/ml-dsa.c" line="512" column="15" info="Variable &apos;bob&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;op_table_entry::name&apos; is never used." verbose="struct member &apos;op_table_entry::name&apos; is never used." cwe="563" file0="fuzz/ml-dsa.c">
+            <location file="fuzz/ml-dsa.c" line="552" column="11"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;op_table_entry::desc&apos; is never used." verbose="struct member &apos;op_table_entry::desc&apos; is never used." cwe="563" file0="fuzz/ml-dsa.c">
+            <location file="fuzz/ml-dsa.c" line="555" column="11"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;alice&apos; can be declared as pointer to const" verbose="Variable &apos;alice&apos; can be declared as pointer to const" cwe="398" file0="fuzz/ml-kem.c">
+            <location file="fuzz/ml-kem.c" line="491" column="15" info="Variable &apos;alice&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;bob&apos; can be declared as pointer to const" verbose="Variable &apos;bob&apos; can be declared as pointer to const" cwe="398" file0="fuzz/ml-kem.c">
+            <location file="fuzz/ml-kem.c" line="492" column="15" info="Variable &apos;bob&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;op_table_entry::name&apos; is never used." verbose="struct member &apos;op_table_entry::name&apos; is never used." cwe="563" file0="fuzz/ml-kem.c">
+            <location file="fuzz/ml-kem.c" line="533" column="11"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;op_table_entry::desc&apos; is never used." verbose="struct member &apos;op_table_entry::desc&apos; is never used." cwe="563" file0="fuzz/ml-kem.c">
+            <location file="fuzz/ml-kem.c" line="536" column="11"/>
+        </error>
+    </errors>
+</results>
