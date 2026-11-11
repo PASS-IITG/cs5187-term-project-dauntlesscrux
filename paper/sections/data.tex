@@ -1,16 +1,83 @@
 \section*{Data Availability}
 \label{sec:data}
-%% Most SE venues require this (ISEC: "Artifact Availability"; FSE/ICSE:
-%% "Data Availability", after the Conclusion). While anonymous: export
-%% WITHOUT git history, scrub absolute paths (/Users/<name>/...) from JSON
-%% and logs, use an anonymous mirror (anonymous.4open.science).
-The replication package is available at \todo{anonymous URL}. It contains
-\todo{source of \tool with tests, subject list with exact commits, scripts,
-raw data, container definition}.
+\todo{Anonymous URL. The real repo is public under the authors' names
+(commit history, \texttt{README.md}), so it cannot be linked here
+as-is under double-anonymous review. Before submission: push an
+anonymized mirror (for example \texttt{anonymous.4open.science}) with git
+history removed, local paths scrubbed from \texttt{src/tsck/results/}
+and \texttt{research/}, and author names stripped; link that instead.}
+
+The replication package contains \tool's source
+(\texttt{src/tsck/\allowbreak\{cfg.py, outparam.py, compare.py\}}) and its 19
+engine unit tests; the rule as data for Protocol B
+(\texttt{specs/outparam\_reset.json}) and Protocol A
+(\texttt{specs/bio\_chain\_pop.json}, \texttt{protocol\_a.py}, with its
+own regression tests in \texttt{test\_protocol\_a\_logic.py}); the
+pinned OpenSSL commit SHAs for every snapshot in
+Table~\ref{tab:rq1-wholetree} (\texttt{run\_scan.sh},
+\texttt{run\_protocol\_a.sh}); the unedited logs, JSON results, and an
+\texttt{environment.txt} recording tool versions behind this paper's
+numbers (\texttt{src/tsck/results/}), including an independent timing
+rerun's log; the manual triage labels and evidence behind every claim in
+Section~\ref{sec:eval} (\texttt{triage.csv}/\texttt{triage.md} for
+Protocol B, \texttt{protocol\_a\_triage.md} for Protocol A, with source
+excerpts for all 11 whole-tree sites, and
+\texttt{reachability\_rq1\_candidates.md} for the corrected reachability
+derivation behind the 2 potential-recurrence sites,
+\texttt{unclear\_sites\_recheck.md} for the caller read that reclassifies
+the 2 formerly-unclear \texttt{OSSL\_CMP\_get1\_rootCaKeyUpdate} sites as
+convention deviation, and
+\texttt{historical\_recurrence\_search.md} for 10 independently-authored
+OpenSSL fixes of the same release-without-reset shape found by a
+commit-history search); and the tool-comparison evidence behind
+Table~\ref{tab:rq2-comparison}. \texttt{make check} reruns the
+offline checks; \texttt{make scan} reruns every OpenSSL scan from a
+clean checkout.
 
 \section*{Use of Generative AI}
-%% ACM/IEEE authorship policies require disclosure. Confirm every word.
-\todo{Confirm and finalise.} A generative AI assistant (\todo{name, version})
-was used to \todo{what}. The authors checked every statement, every citation
-and every number. All numbers reported here were produced by running the
-tool and scripts.
+\todo{Confirm and finalize before submission. This draft reflects what
+one assistant was asked to do in one work session. Check it against what
+both authors actually used across the whole project. Only then treat it
+as a true statement of record.}
+
+A generative AI assistant (\todo{name and version}) was used to draft
+prose in several sections from material the authors had already
+produced and verified: experiment logs, triage spreadsheets, and tool
+output under \texttt{src/tsck/results/} and \texttt{research/}. It also
+searched for and verified the five related-work citations in
+Section~\ref{sec:related} against publisher pages and DOIs. For
+Protocol~B, it did not run OpenSSL builds, design the rule, or produce
+any underlying experimental data: all Protocol~B numbers were produced
+by the authors running \tool and the comparison scripts.
+
+Protocol~A (Section~\ref{sec:rq5}) is an exception needing closer
+verification. The assistant designed its rule and
+\texttt{specs/bio\_chain\_pop.json} from the authors' existing
+CVE-2023-0215 recurrence notes; ran it directly against a real,
+independently-cloned copy of the pinned OpenSSL source in its own
+sandboxed environment (\texttt{results/protocol\_a\_run\_environment.txt}
+discloses a slightly different \texttt{tree-sitter} version than the
+project's prior pin); and wrote the false-positive classification for
+all 11 whole-tree findings in \texttt{results/protocol\_a\_triage.md}
+after reading the real source at the pinned commit. Authors reproduced
+that run on a separate machine (Section~\ref{sec:setup}), but it was the
+assistant who performed the first read of the flagged sites and wrote
+the reasoning. The same caveat applies to three further pieces of primary
+analysis the assistant produced and wrote up itself, not from
+author-supplied material: the corrected reachability argument for the 2
+potential-recurrence sites in
+\texttt{results/reachability\_rq1\_candidates.md} (which also corrects a
+factual error in the authors' own original triage note), the
+reclassification of the 2 previously-unclear
+\texttt{OSSL\_CMP\_get1\_rootCaKeyUpdate} sites in
+\texttt{results/unclear\_sites\_recheck.md} (performed by reading the
+function's one real in-tree caller, \texttt{apps/cmp.c}, for the first
+time), and the commit-history search behind
+\texttt{results/historical\_recurrence\_search.md}. \todo{Authors must
+independently re-check the Reason~A/B/C classification for each of the
+11 Protocol A sites, the reachability argument for all 4
+potential-recurrence/formerly-unclear sites, and a sample of the ten
+historical commits cited, each against its own source before submission,
+and confirm here, as fact not assumption, that they did -- in all four
+cases the assistant produced the primary
+analysis, not just prose describing already-verified work.}

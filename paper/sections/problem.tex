@@ -1,11 +1,36 @@
 \section{Problem Statement}
 \label{sec:problem}
-%% "We now state the problem precisely." Define every set/symbol (macros in
-%% macros.tex). \paragraph{Goal.} with the formula. Say why it is hard
-%% (cite the known complexity result). End with a question-paragraph that
-%% answers the obvious objection: \paragraph{Why not ...?}
-\todo{Definitions.}
 
-\paragraph{Goal.} \todo{Formula and the one or two things we look for.}
+We now state the problem precisely. Let $f$ be a C function with a
+parameter $P$ of pointer-to-pointer type or deeper. Let $r$ be a
+\emph{release site} inside $f$: a call that frees the object $*P$ points
+to (Section~\ref{sec:background}). A \emph{reset} of $*P$ is an assignment
+to $*P$, or, when the rule allows it, passing $P$ itself to a call that
+may reassign it. Let $\mathrm{paths}(r)$ be the set of control-flow paths
+from $r$ to the exit of $f$, built from $f$'s real parse tree
+(Section~\ref{sec:step1}).
 
-\paragraph{Why not \todo{the obvious alternative}?} \todo{Answer.}
+\paragraph{Goal.} $r$ is \emph{conforming} if every path in
+$\mathrm{paths}(r)$ passes a reset of $*P$ before reaching exit. $r$ is a
+\emph{violation} if some path in $\mathrm{paths}(r)$ reaches exit without
+passing a reset. Given a rule (Section~\ref{sec:rule}) and a C source
+tree, our goal is to compute this conforming/violation label, with a
+witness path, for every release site whose parameter matches the rule.
+
+This is hard for two reasons that a string-matching checker, such as the
+Part~1 baseline in this project, sidesteps by only looking at one named
+function. First, $\mathrm{paths}(r)$ can branch and loop arbitrarily, so
+checking every path by hand does not scale past a handful of functions.
+Second, a reset on one branch and none on a sibling branch is
+indistinguishable from a reset in comments or dead code to a tool that
+only searches for a matching substring; only a parse tree and a
+control-flow graph can tell them apart.
+
+\paragraph{Why not just grep for the release/reset pair?} A regular
+expression can check whether a function's text contains both a release
+call and a reset assignment, which is what \texttt{typestate\_check.py}
+does for three named functions. It cannot tell whether the reset lies on
+every path from the release to exit, or only on one branch that a bug
+report's own failure path never takes; Section~\ref{sec:eval} needs that
+distinction to call a site conforming or a violation, so we build the
+control-flow graph instead of matching text.

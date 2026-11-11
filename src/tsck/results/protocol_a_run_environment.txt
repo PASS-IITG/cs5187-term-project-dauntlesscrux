@@ -1,0 +1,4 @@
+date_utc: 2026-11-10T07:13:35Z
+tree-sitter: 0.26.1 tree-sitter-c 0.24.2
+git version 2.43.0
+independently reproduced by Claude (this session), not the original author's machine

@@ -1,0 +1,2 @@
+VIOLATION /mnt/d/CVE-Typestate-Project/openssl-cve-2023-0215-vulnerable/crypto/asn1/bio_ndef.c:100 BIO_new_NDEF(): asn_bio is freed after BIO_push without a preceding BIO_pop on this path; witness lines=[55, 56, 57, 58, 60, 64, 65, 66, 70, 71, 74, 75, 82, 83, 84, 86, 87, 100]
+files=1 functions=5 BIO-chain violations=1

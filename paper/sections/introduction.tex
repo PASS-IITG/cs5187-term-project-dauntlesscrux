@@ -1,44 +1,125 @@
 \section{Introduction}
 \label{sec:intro}
-%% Paragraph plan (each paragraph = one job; keep to this order):
-%%  P1  Concrete scenario the reader knows: "Suppose you want to ...".
-%%      State what existing tools need or do, with citations.
-%%  P2  The first/known problem and who already works on it (cite).
-%%      End with where they stop: "These tools stop when ...".
-%%  P3  OUR problem, in plain words: "We focus on a second problem that
-%%      starts where they stop: ...". Why it is silent/dangerous.
-%%  P4  A real example with exact numbers, pointing to a figure
-%%      (Figure~\ref{fig:motivating}). Then "This is not a single case." + count.
-%%  P5  Prior work on the closest idea and its precise gap
-%%      ("However, they need ...", "Their method depends on ...").
-%%  P6  "We bring/We present \tool ..." + numbered steps (enumerate), each
-%%      step one sentence, each pointing to its section. Then list outputs.
-%%  P7  First results with numbers, and one lesson learned.
-%%  Contributions (itemize), each item ending in (Section~\ref{...}).
 
-\todo{P1: scenario.}
+Suppose you have just read a public vulnerability fix for a C library you
+depend on: a one-line patch that frees a buffer and then clears the
+pointer to it, because the code path that frees it can be reached again
+before the function returns. You trust the fix. The natural next question
+is whether the same mistake, the same missing reset after the same kind
+of release, sits somewhere else in the same codebase, in a function the
+patch never touched.
 
-\focus{\textbf{Motivating example.} Give one \emph{real} case (a bug report,
-  a CVE, a failing test, a slow build, a measured number) that shows the
-  problem is real and worth solving. Point to Figure~\ref{fig:motivating},
-  use exact numbers, then add one sentence proving it is not a one-off
-  (``This is not a single case.'' + a count). This is graded: no toy or
-  imaginary example.}
+Static analyzers already look for memory-safety bugs in C, and some are
+free and widely used: Clang Static Analyzer, Cppcheck, and Coccinelle
+semantic patches, among others. These tools ship with general rule sets
+built from common bug patterns across many projects. They stop short of
+one thing: a rule derived from a single project's own patch history, for
+the exact ownership or reset convention that patch teaches, checked
+everywhere that convention should hold in that project's current source.
+
+We focus on a second problem that starts where general-purpose rule sets
+stop. Given one historical fix, can a rule extracted from it, with no
+function names baked in, be checked against a project's whole source
+tree? We ask three things of such a rule: (i)~flag the function the fix
+came from before the fix, and clear it after; (ii)~do the same for an
+unrelated fix nobody built the rule from; and (iii)~say, for every site it
+flags on the project's current source, whether that site is conforming, a
+real violation, or explainable, with a witness a human can check by hand.
+
+CVE-2022-4450 is a real case. \texttt{PEM\_read\_bio\_ex} in OpenSSL's
+\texttt{crypto/pem/pem\_lib.c} frees two output buffers on one failure
+path (Figure~\ref{fig:motivating}) without clearing the caller-visible
+pointers to them; a caller that frees these outputs again after failure
+can double-free. The fix, commit \texttt{63bcf189be}, adds exactly two
+assignments. This is not a single case: applying the same rule, unchanged,
+to OpenSSL's current source tree (1{,}155 C files across
+\texttt{crypto/}, \texttt{ssl/}, and \texttt{providers/}) flags 10
+release sites with the same shape (Section~\ref{sec:eval}).
+
+Closest to our rule-as-data approach is VulPA~\cite{cao2025vulpa}, which
+also derives a checkable rule from a known bug, but compiles it to an
+automaton checked by an interprocedural analysis with aliasing, on Java.
+Our rule is intraprocedural, has no alias analysis, and is checked on one
+rule family; Section~\ref{sec:related} states this gap, and three others,
+in full.
+
+We present \tool, a checker that reads a lifecycle rule from a data file
+and applies it to real C source through a parser and a per-function
+control-flow graph, rather than matching one patch's text.
+\begin{enumerate}
+  \item It builds a control-flow graph for every function with
+    \texttt{tree-sitter} (Section~\ref{sec:step1}).
+  \item For every output parameter a function releases, it searches the
+    graph for a path to function exit that never resets it
+    (Section~\ref{sec:step2}).
+  \item It classifies each release site as conforming, a violation, or
+    suppressed, with a witness path for every flagged site
+    (Section~\ref{sec:step3}).
+\end{enumerate}
+This paper implements two such rules against the same parser and CFG
+builder: Protocol~B, for the output-pointer reset convention behind
+CVE-2022-4450, and Protocol~A, for the detach-before-release BIO-chain
+convention behind CVE-2023-0215 (\rqref{5}, Section~\ref{sec:rq5}).
+
+On OpenSSL, \tool flags \texttt{PEM\_read\_bio\_ex}'s two output
+parameters before the fix and clears both after it. It also reproduces an
+unrelated non-CVE fix the rule was never shown, and flags one site a
+later OpenSSL commit went on to fix independently
+(Section~\ref{sec:eval}). On the current source tree it flags 10 sites.
+Manual triage finds 2 potential recurrences whose failure branch is not
+reachable in normal builds, 8 harmless deviations, and 0
+confirmed new vulnerabilities. The lesson we did not expect going in:
+none of three general-purpose open-source static analyzers, run with
+their stock configuration, distinguishes any of the three CVEs we
+checked from its own fix (Section~\ref{sec:rq2}). A project-specific
+rule, not a sharper general one, is what closed the gap here. Protocol~A
+also distinguishes its own motivating fix, but its whole-tree run finds
+0 confirmed recurrences out of 11 flagged sites, all false positives from
+the rule's missing notion of object ownership: the rule-as-data
+architecture generalizes across invariant shapes even where a given
+rule's detection does not generalize across a whole codebase
+(Section~\ref{sec:rq5}).
 
 \paragraph{Contributions.}
 \begin{itemize}
-  \item We define \todo{concept} (Section~\ref{sec:problem}).
-  \item We present \tool, which \todo{what} (Section~\ref{sec:approach}).
-  \item We evaluate \tool on \todo{n} \todo{subjects} (Section~\ref{sec:eval}).
+  \item We define a rule-as-data lifecycle invariant for output-pointer
+    reset after release, independent of any function name
+    (Section~\ref{sec:problem}).
+  \item We present \tool, which checks this rule against a real
+    \texttt{tree-sitter} control-flow graph instead of patch text
+    (Section~\ref{sec:approach}).
+  \item We evaluate \tool on six pinned OpenSSL snapshots and compare
+    four tools, including \tool's own Part~1 baseline, against three
+    historical CVEs (Section~\ref{sec:eval}).
+  \item We implement a second, differently-shaped rule, Protocol~A, for
+    the BIO-chain invariant behind CVE-2023-0215, and show where a
+    single-object rule's generalization breaks down even under the same
+    rule-as-data architecture (Section~\ref{sec:rq5}).
   \item We release the tool and all data (Section~\ref{sec:data}).
 \end{itemize}
 
 \begin{figure}[t]
 \begin{lstlisting}[numbers=none,escapechar=@]
-// the real code / input that shows the problem, trimmed with ...
+headerlen = BIO_get_mem_data(headerB, NULL);
+*header = pem_malloc(headerlen + 1, flags);
+*data = pem_malloc(len, flags);
+if (*header == NULL || *data == NULL)
+    goto out_free;
+...
+out_free: @\textcolor{red}{// *header, *data freed, never reset}@
+    pem_free(*header, flags, 0);
+    pem_free(*data, flags, 0);
+end:
+    ...
+    return ret; @\textcolor{red}{// caller sees stale *header, *data}@
 \end{lstlisting}
-\caption{\textcolor{red}{[Motivating example --- graded]} A real case of the
-  problem. \todo{The caption states the lesson, with the exact number, so a
-  reader who reads only captions gets it.}}
+\caption{\texttt{PEM\_read\_bio\_ex} in OpenSSL \texttt{8e257b86e5}
+  (\texttt{crypto/pem/pem\_lib.c}, trimmed). The \texttt{out\_free} path
+  frees \texttt{*header} and \texttt{*data} but never resets either
+  pointer before \texttt{return}. The fix, commit \texttt{63bcf189be},
+  adds \texttt{*header = NULL;} and \texttt{*data = NULL;} to this path;
+  the same rule, applied unchanged to OpenSSL's current 1{,}155-file
+  \texttt{crypto/ssl/providers} tree, flags 10 sites with this shape
+  (Section~\ref{sec:eval}).}
 \label{fig:motivating}
 \end{figure}

@@ -1,0 +1,2 @@
+VIOLATION /home/claude/pass-iitg/cs5187-term-project-dauntlesscrux/openssl-cve-2023-0215-vulnerable/crypto/asn1/bio_ndef.c:100 BIO_new_NDEF() releases asn_bio via BIO_free without a prior BIO_pop on this path (path lines [70, 71, 72, 100])
+files=1 release-sites: conforming=0 violation=1 errors=0 parse_error_files=0 sites_in_functions_with_parse_errors=0

@@ -1,8 +1,48 @@
 \section{Background}
 \label{sec:background}
-%% Only what a reader needs for the rest of the paper. One \paragraph{} per
-%% concept. Define each term once with \emph{term} and use it the same way
-%% afterwards (no synonyms). Walk through the motivating example in detail
-%% here if the introduction was brief (label it sec:example).
 
-\paragraph{\todo{Concept}.} \todo{Plain definition, then a small example.}
+\paragraph{Output parameter.} A C function can return a value through a
+parameter of pointer-to-pointer type, written \texttt{T **P}. The caller
+passes the address of its own pointer variable; the function writes a
+value into \texttt{*P} for the caller to read after the call returns. We
+write \texttt{*P} for the object the caller's pointer refers to, not for
+\texttt{P} itself.
+
+\paragraph{Release and reset.} A \emph{release} of \texttt{*P} is a call
+that frees the object \texttt{*P} points to, for example
+\texttt{OPENSSL\_free(*P)}. After a release, \texttt{*P} still holds the
+freed address unless something changes it. A \emph{reset} of \texttt{*P}
+is an assignment that gives it a new value, most often \texttt{*P = NULL}.
+A dangling \texttt{*P}, one that still holds a freed address after a
+release and before any reset, is dangerous exactly when the caller can
+read or free it again: a double free, or a use of freed memory if the
+caller dereferences it.
+
+\paragraph{Typestate.} \emph{Typestate analysis} tracks not just an
+object's type but which operations are currently valid on it, as a small
+state machine. \todo{Cite the originating typestate paper once its
+author list and venue are verified directly (for example on IEEE Xplore);
+automated search returned conflicting author lists for this title across
+mirrors and we do not cite it unverified.} For the invariant in this paper,
+\texttt{*P} moves through three states: \emph{Valid} before any release,
+\emph{Released} after a release and before a reset, and back to
+\emph{Valid} (we call it \emph{Reset}, to keep the release that caused it
+visible in our output) once a reset occurs. A \emph{violation} is a
+program path on which \texttt{*P} can reach function exit while still in
+the \emph{Released} state. CVE-2022-4450 (Section~\ref{sec:rq1}) is
+exactly this: \texttt{PEM\_read\_bio\_ex} frees \texttt{*header} and
+\texttt{*data} on one failure path and returns without resetting either.
+
+\paragraph{Release site.} We call the specific call expression that
+performs a release, together with its source location and the parameter
+\texttt{P} it releases, a \emph{release site}. Section~\ref{sec:eval}
+reports counts of release sites, not of functions: one function can
+contain several release sites, one per output parameter it releases.
+
+\paragraph{Rule as data.} Existing patch-matching checkers, including the
+Part~1 baseline in this project (\texttt{typestate\_check.py}), encode a
+rule as a sequence of string or syntax checks written for one named
+function. We instead write the rule once as data
+(Section~\ref{sec:rule}), independent of any function name, and apply it
+to every function in a source tree that has a parameter of the tracked
+shape.
