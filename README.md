@@ -3,9 +3,15 @@
 Public OpenSSL CVE fixes teach us rules about object state, ownership and cleanup. This project writes such a
 rule as data, checks it with a parser and path analysis, and looks for places that break the same convention.
 
-**Status (30 Oct 2026, Progress Meeting 2).** One rule family (Protocol B, output-pointer reset) works end to end on real
-OpenSSL. Protocol A (BIO chain, CVE-2023-0215) is not implemented yet. No new vulnerability has been confirmed.
-See [`reports/progress_meeting_2.md`](reports/progress_meeting_2.md) for the numbers.
+**Status (13 Nov 2026, submission).** Two rule families are implemented and integrated into the paper: Protocol B
+(output-pointer reset, from CVE-2022-4450) works end to end on real OpenSSL; Protocol A (BIO-chain detach-before-release,
+from CVE-2023-0215) is implemented and independently triaged. A third, exploratory rule, Protocol C (struct-field
+release/reset), was built this week and is validated on 4 historical pairs but is not part of the paper's results.
+One new-bug candidate (`rsa_ossl_finish`, a double-free shaped like the already-fixed `dh_finish`/`dsa_finish`) is
+written up in `src/tsck/results/rsa_finish_candidate.md`; it is **not compiled, not run, and not reported upstream** --
+no new vulnerability has been confirmed by an upstream maintainer. See [`paper/HANDOFF.md`](paper/HANDOFF.md) for the
+full current state and open decisions, and [`reports/progress_meeting_2.md`](reports/progress_meeting_2.md) for the
+30 Oct numbers (since superseded).
 
 ## Layout
 
@@ -13,10 +19,10 @@ See [`reports/progress_meeting_2.md`](reports/progress_meeting_2.md) for the num
 |---|---|
 | `src/tsck/` | The method: `cfg.py`, `outparam.py`, `specs/outparam_reset.json`, `run_scan.sh`, `results/`, `triage.md`. See [`src/tsck/README.md`](src/tsck/README.md). |
 | `typestate_check.py`, `tests/` | Part 1 patch matcher and its regression tests. Kept as a **baseline**, not as the method. |
-| `research/` | Candidate register (8 CVEs), CVE notes, rule notes, evaluation notes, reproducibility ledger. |
+| `research/`, `new research/` | Candidate register (8 CVEs), CVE notes, rule notes, evaluation notes, reproducibility ledger. `new research/` is a later, independent bounded tool-comparison (Clang/Coccinelle/Cppcheck + ASan) against all 3 CVEs; it finds no new candidate (`NEW_CANDIDATE_REGISTER.csv` is empty) and is not cited by the paper, but documents the same CVE-2024-4741 pair correction noted below. |
 | `case-studies/` | Small file copies for case studies (CVE-2024-4741 hardening commit). |
 | `reports/` | Progress reports. |
-| `paper/` | The report in the course LaTeX template. Still to be written. |
+| `paper/` | The report, named submission (see `paper/HANDOFF.md`). |
 | `CVE-*-evidence.txt`, `CVE-2023-0215-*.txt/md` | Per-CVE evidence, including the AddressSanitizer reproduction for CVE-2023-0215. |
 | `openssl-cve-*-{vulnerable,fixed}/` | Part 1 source checkouts of the three selected CVEs. |
 
