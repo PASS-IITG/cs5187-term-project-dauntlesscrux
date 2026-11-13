@@ -14,9 +14,9 @@ We presented \tool, which reads a lifecycle rule from a data file and
 checks it against a real \texttt{tree-sitter} control-flow graph, rather
 than matching one patch's text. Protocol B, a release/reset rule for
 CVE-2022-4450, flags \texttt{PEM\_read\_bio\_ex}'s two outputs before the
-fix and clears both after it, reproduces the unrelated KDF fix without
-the rule being shown it, and flags a sibling site OpenSSL went on to fix
-independently. On OpenSSL's current 1{,}155-file tree it flags 10 sites,
+fix and clears both after it. It also reproduces the unrelated KDF fix
+without the rule being shown it, and flags a sibling site OpenSSL went on
+to fix independently. On OpenSSL's current 1{,}155-file tree it flags 10 sites,
 of which manual triage confirms 0 new vulnerabilities, 2 potential
 recurrences needing reachability review, and 8 harmless deviations.
 Protocol A, a differently-shaped rule for the BIO-chain

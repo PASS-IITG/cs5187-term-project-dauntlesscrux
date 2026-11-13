@@ -22,8 +22,8 @@ configuration, distinguishes any of three historical CVEs from their own
 fix; a project-specific rule, not a sharper general one, closed that gap.
 A second, differently-shaped rule for the detach-before-release BIO-chain
 invariant behind CVE-2023-0215 reuses the same parser and control-flow
-graph and also distinguishes its own motivating fix, but its whole-tree
-run flags 11 sites that are all false positives, because the rule has no
-notion of which released object is externally owned -- a concrete limit
-on how far a single-object rule generalizes, even under the same
-architecture that generalized cleanly for the first rule.
+graph and also distinguishes its own motivating fix. Its whole-tree run,
+though, flags 11 sites that are all false positives, because the rule has
+no notion of which released object is externally owned. That is a
+concrete limit on how far a single-object rule generalizes, even under
+the same architecture that generalized cleanly for the first rule.

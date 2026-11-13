@@ -12,9 +12,9 @@ failure in \texttt{EVP\_PKEY\_up\_ref}, but every platform variant of
 \texttt{CRYPTO\_UP\_REF} in this codebase always returns \texttt{true} --
 that failure mode is dead code. The real trigger for both sites is the same
 in shape: the tracked object's state (a reference count, a key's public-key
-field) must already have changed between two reads that, in a single
-straight-line call, are provably equal -- which only a second thread
-racing the same object, unsynchronized, can cause. We checked every
+field) must already have changed between two reads that a single
+straight-line call provably treats as equal. Only a second thread
+racing the same object, unsynchronized, can cause that change. We checked every
 in-tree caller of both functions and found none that creates this
 precondition internally; it requires a pre-existing bug or data race one
 level up the call stack. We did not build a multithreaded fault-injection
@@ -32,19 +32,19 @@ than a rewrite of one patch, but it is two data points, not a rate
 \emph{convention} itself a recurring problem in this codebase, independent
 of our tool? A commit-message search of \texttt{openssl/openssl}'s real
 history (\texttt{results/historical\_recurrence\_search.md}) turned up ten
-further, independently-authored fixes of this exact shape across nine
-files in \texttt{crypto/}, \texttt{providers/}, and \texttt{ssl/} from
-2023 to six weeks before our pinned snapshot -- none a parameter or
+further, independently-authored fixes of this exact shape. They span
+nine files in \texttt{crypto/}, \texttt{providers/}, and \texttt{ssl/},
+from 2023 to six weeks before our pinned snapshot. None is a parameter or
 BIO-chain shape either engine currently tracks (mostly struct-field and
 bare local-variable resets), so this corroborates the convention's
 generality without being a tool finding.
 
 \paragraph{Why build a custom engine instead of using an existing
 framework such as CodeQL or Semgrep directly?} Table~\ref{tab:rq2-comparison}
-is exactly that attempt, run with each tool's stock configuration: none
+is exactly that attempt, run with each tool's stock configuration. None
 of three general-purpose open-source tools distinguishes the vulnerable
 revision from the fixed one for any of the three CVEs we checked
-(Observation~\ref{obs:rq2-generic-miss}), since their rule and query sets
+(Observation~\ref{obs:rq2-generic-miss}); their rule and query sets simply
 do not encode this project's specific conventions. We instead write the
 rule once, as data, over our own control-flow graph
 (Section~\ref{sec:rule}), so we can inspect exactly how it was evaluated.
@@ -63,11 +63,11 @@ rule.
 two CVEs in Table~\ref{tab:rq2-comparison} comes from the Part~1 pattern
 baseline, not \tool. Protocol A (\rqref{5}, Section~\ref{sec:rq5})
 implements CVE-2023-0215's BIO-chain invariant and distinguishes its own
-motivating pair, but its whole-tree run finds 0 confirmed recurrences of
-11 flags, all false positives from missing ownership tracking -- a clean
-run elsewhere would not be strong evidence either, for the same reason.
-CVE-2024-4741 needs a state-guard rule neither shape expresses; future
-work.
+motivating pair. But its whole-tree run finds 0 confirmed recurrences of
+11 flags, all false positives from missing ownership tracking -- so a
+clean run elsewhere would not be strong evidence either, for the same
+reason. CVE-2024-4741 needs a state-guard rule neither shape expresses;
+future work.
 
 \paragraph{Is the whole-tree conformance rate (91.7\% on master) a
 precision number?} No. It is the fraction of release sites that are

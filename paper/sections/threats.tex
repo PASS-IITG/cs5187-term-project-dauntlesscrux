@@ -28,18 +28,18 @@ are correct.
   \item \emph{Our own triage.} The labels behind
     Observation~\ref{obs:rq1-mastertriage} (2 potential recurrence, 8
     convention deviation) were assigned by the people who built
-    \tool. We had one independent party (a generative AI assistant, not
-    involved in building the rule or running the original scan)
-    re-derive the reachability argument for the 2 potential-recurrence
-    sites from scratch against real source
-    (\texttt{results/reachability\_rq1\_candidates.md}); it found and
+    \tool. We had one independent party re-derive the reachability
+    argument for the 2 potential-recurrence sites from scratch against
+    real source. (The party was a generative AI assistant, not involved
+    in building the rule or running the original scan; see
+    \texttt{results/reachability\_rq1\_candidates.md}.) It found and
     corrected a factual error in our original note (Section~\ref{sec:threats}
     construct threats, below). The same party also re-checked the 2
     sites we had labelled "unclear" pending a caller read
-    (\texttt{results/unclear\_sites\_recheck.md}): both reclassify as
+    (\texttt{results/unclear\_sites\_recheck.md}). Both reclassify as
     convention deviation once the one real in-tree caller
     (\texttt{apps/cmp.c}) is read, since it discards the dangling output
-    on every failure path rather than acting on it, and the failure
+    on every failure path rather than acting on it; the failure
     branch itself needs the same unreachable-without-a-race precondition
     as the two potential-recurrence sites. Every one of the 10
     whole-tree flags now has an independently re-derived reason, not
@@ -58,15 +58,15 @@ generalize past our six snapshots and three CVEs.
     invariant shapes.} Protocol B, derived from CVE-2022-4450
     (Observation~\ref{obs:rq1-conformance},
     Observation~\ref{obs:rq3-timetravel}), also reproduces an unrelated
-    fix and flags a site a later commit fixed -- two data points, not a
-    sample large enough for a detection rate. Protocol A, a
+    fix and flags a site a later commit fixed. That is two data points,
+    though, not a sample large enough for a detection rate. Protocol A, a
     differently-shaped rule for CVE-2023-0215 (Section~\ref{sec:rq5}),
     distinguishes its own motivating fix, but its whole-tree run
-    (Observation~\ref{obs:rq5-protocola-master}) is 0 for 11: every
+    (Observation~\ref{obs:rq5-protocola-master}) is 0 for 11. Every
     flagged site is a false positive, because the rule has no notion of
-    which released object is externally owned -- a real negative result, not
-    a bug to patch away, showing a single-object release/detach rule does
-    not, by itself, generalize the way Protocol B's did.
+    which released object is externally owned. That is a real negative
+    result, not a bug to patch away: a single-object release/detach rule
+    does not, by itself, generalize the way Protocol B's did.
   \item \emph{Non-independent snapshots.} The six snapshots in
     Table~\ref{tab:rq1-wholetree} share most of their long-lived
     functions across revisions, so the effective sample is closer to 20

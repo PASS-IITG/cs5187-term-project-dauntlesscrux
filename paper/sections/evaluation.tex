@@ -275,6 +275,27 @@ On the same 1{,}155-file master snapshot as Table~\ref{tab:rq1-wholetree},
 Protocol A flags 11 sites. We manually checked every one against the real
 source at the pinned commit, not a sample.
 
+\begin{table}[t]
+  \centering
+  \caption{Manual triage of all 11 Protocol A whole-tree flags on the
+    same master snapshot as Table~\ref{tab:rq1-wholetree}. Every site is
+    a false positive; the breakdown is by \emph{why}, not by severity.
+    Full source excerpts and reasoning per site are in
+    \texttt{results/protocol\_a\_triage.md} (Section~\ref{sec:data}).}
+  \label{tab:rq5-protocola-triage}
+  \begin{tabular}{lr}
+    \toprule
+    Reason & Sites \\
+    \midrule
+    Confirmed or plausible recurrence & 0 \\
+    Tool limitation (flag-guarded \texttt{BIO\_pop} the path search cannot correlate) & 1 \\
+    No externally-owned BIO spliced in (freshly-allocated chain only) & 10 \\
+    \midrule
+    Total flagged & 11 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
 \begin{observation}
 \label{obs:rq5-protocola-master}
 0 of the 11 whole-tree violations are confirmed or plausible recurrences.
@@ -283,17 +304,17 @@ guarded by a boolean flag the path search cannot correlate with the
 earlier branch that set it. The other 10 release a BIO chain built
 entirely from freshly-allocated local objects (two of them behind a push
 call whose failure branch cannot be reached once its first argument is
-already proven non-\texttt{NULL}), never an externally-owned BIO spliced
-in before the release -- which is what makes CVE-2023-0215's shape
-dangerous in the first place. Protocol A's rule has no notion of which
+already proven non-\texttt{NULL}). None ever splices in an
+externally-owned BIO before the release -- which is what makes
+CVE-2023-0215's shape dangerous in the first place. Protocol A's rule has no notion of which
 released object is externally owned, so it cannot tell these apart from
 the real danger shape. Full per-site source excerpts and reasoning are in
 the replication package (\texttt{results/protocol\_a\_triage.md},
 Section~\ref{sec:data}).
 \end{observation}
 
-This is a real result, not a shortfall we are hiding: it confirms,
-rather than merely predicts, the gap named in Section~\ref{sec:related}
--- a single-object rule with no ownership or escape tracking cannot
+This is a real result, not a shortfall we are hiding: it confirms, rather
+than merely predicts, the gap named in Section~\ref{sec:related}. A
+single-object rule with no ownership or escape tracking cannot
 generalize a BIO-chain invariant across a codebase, even though the same
 architecture generalized a release/reset invariant cleanly in \rqref{1}.

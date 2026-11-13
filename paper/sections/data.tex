@@ -13,22 +13,24 @@ engine unit tests; the rule as data for Protocol B
 own regression tests in \texttt{test\_protocol\_a\_logic.py}); the
 pinned OpenSSL commit SHAs for every snapshot in
 Table~\ref{tab:rq1-wholetree} (\texttt{run\_scan.sh},
-\texttt{run\_protocol\_a.sh}); the unedited logs, JSON results, and an
+\texttt{run\_protocol\_a.sh}); and the unedited logs, JSON results, and an
 \texttt{environment.txt} recording tool versions behind this paper's
 numbers (\texttt{src/tsck/results/}), including an independent timing
-rerun's log; the manual triage labels and evidence behind every claim in
-Section~\ref{sec:eval} (\texttt{triage.csv}/\texttt{triage.md} for
-Protocol B, \texttt{protocol\_a\_triage.md} for Protocol A, with source
-excerpts for all 11 whole-tree sites, and
+rerun's log.
+
+It also contains the manual triage labels and evidence behind every claim
+in Section~\ref{sec:eval}: \texttt{triage.csv}/\texttt{triage.md} for
+Protocol B; \texttt{protocol\_a\_triage.md} for Protocol A, with source
+excerpts for all 11 whole-tree sites;
 \texttt{reachability\_rq1\_candidates.md} for the corrected reachability
-derivation behind the 2 potential-recurrence sites,
+derivation behind the 2 potential-recurrence sites;
 \texttt{unclear\_sites\_recheck.md} for the caller read that reclassifies
 the 2 formerly-unclear \texttt{OSSL\_CMP\_get1\_rootCaKeyUpdate} sites as
-convention deviation, and
+convention deviation; and
 \texttt{historical\_recurrence\_search.md} for 10 independently-authored
 OpenSSL fixes of the same release-without-reset shape found by a
-commit-history search); and the tool-comparison evidence behind
-Table~\ref{tab:rq2-comparison}. \texttt{make check} reruns the
+commit-history search. Finally, it includes the tool-comparison evidence
+behind Table~\ref{tab:rq2-comparison}. \texttt{make check} reruns the
 offline checks; \texttt{make scan} reruns every OpenSSL scan from a
 clean checkout.
 
@@ -75,15 +77,15 @@ that run on a separate machine (Section~\ref{sec:setup}), but it was the
 assistant who performed the first read of the flagged sites and wrote
 the reasoning. The same caveat applies to three further pieces of primary
 analysis the assistant produced and wrote up itself, not from
-author-supplied material: the corrected reachability argument for the 2
-potential-recurrence sites in
-\texttt{results/reachability\_rq1\_candidates.md} (which also corrects a
-factual error in the authors' own original triage note), the
+author-supplied material. The first is the corrected reachability
+argument for the 2 potential-recurrence sites in
+\texttt{results/reachability\_rq1\_candidates.md}, which also corrects a
+factual error in the authors' own original triage note. The second is the
 reclassification of the 2 previously-unclear
 \texttt{OSSL\_CMP\_get1\_rootCaKeyUpdate} sites in
-\texttt{results/unclear\_sites\_recheck.md} (performed by reading the
+\texttt{results/unclear\_sites\_recheck.md}, performed by reading the
 function's one real in-tree caller, \texttt{apps/cmp.c}, for the first
-time), and the commit-history search behind
+time. The third is the commit-history search behind
 \texttt{results/historical\_recurrence\_search.md}. \todo{Authors must
 independently re-check the Reason~A/B/C classification for each of the
 11 Protocol A sites, the reachability argument for all 4
