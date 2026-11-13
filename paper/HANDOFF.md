@@ -62,7 +62,7 @@ kept as a baseline, not the method.
 
 | Claim | Value | Source file |
 |---|---|---|
-| Protocol B whole-tree (master) | 10 sites: 7 upstream-confirmed... wait, see below | `src/tsck/triage.csv`, `triage.md` |
+| Protocol B whole-tree (master) | 10 flagged sites: 2 potential recurrence, 8 convention deviation, 0 confirmed new vulnerabilities | `src/tsck/triage.csv`, `triage.md` |
 | Protocol B master triage breakdown | 2 potential recurrence, 8 convention deviation, 0 unclear (reclassified from 6+2 this week), plus 7 confirmed-by-upstream-fix and 1 false positive and 2 suppressed across all snapshots combined -- read `triage.md`'s own summary table, don't recompute by hand | `src/tsck/triage.md` |
 | Protocol A whole-tree (master) | 11 flagged sites, 0 confirmed, all false positives (no ownership tracking) | `src/tsck/results/protocol_a_triage.md` |
 | 2 potential-recurrence sites | both need an unsynchronized-race precondition; `CRYPTO_UP_REF`/`X509_up_ref`/`EVP_PKEY_up_ref` dead-code correction documented | `src/tsck/results/reachability_rq1_candidates.md` |
@@ -95,19 +95,19 @@ for Automated static analysis and Software and application security. The
 BibTeX recipe no longer ignores a failed bibliography run. A clean build has
 been completed in the current environment and the rendered PDF was inspected.
 
-Still requires author action before submission:
-1. Both authors must independently review the AI-assisted source triage,
-   reachability arguments, and historical commit examples. The disclosure
-   states explicitly that independent human re-verification is not yet
-   established by the available project records.
-2. Both authors must confirm that the Author Contributions and AI-use
-   disclosures are factually accurate.
-3. The configured page limit is 12; the current build is 15 pages, with
-   references beginning on page 15. Reduce the main text with author approval.
-4. Inspect the final PDF after page reduction, including fonts, grayscale
-   legibility, and all remaining layout warnings.
-5. Fill in an author email only if the course format requires it; there is no
-   longer an active placeholder requiring an invented email address.
+Final state at submission (2026-11-13): the paper is 11 pages in the
+unmodified acmart template (limit 12), reached by condensing text and
+removing the RQ5 triage table (its numbers remain in Observation 7); no
+results changed. The Generative AI section was rewritten as one paragraph
+listing the assistance used; it makes no claim about independent human
+re-verification either way.
+
+Still open:
+1. Both authors to independently re-check the AI-assisted Protocol A
+   triage, reachability arguments, and historical commit examples before
+   the final presentation.
+2. Both authors to confirm the Author Contributions and AI-use disclosures.
+3. Check grayscale legibility of the final PDF.
 
 ## 7. Lessons / pitfalls
 

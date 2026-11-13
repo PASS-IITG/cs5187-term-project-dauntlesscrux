@@ -1,6 +1,6 @@
 # Pre-submission checklist
 
-Updated 2026-11-13 after the citation, CCS, disclosure, and LaTeX-source pass.
+Updated 2026-11-13 (final submission state: 11-page PDF, standard acmart 10pt layout).
 Run `make clean && make` followed by `make check` from this directory.
 
 ## Content and authorship
@@ -12,12 +12,12 @@ Run `make clean && make` followed by `make check` from this directory.
 - [x] The optional, currently excluded pilot and implementation files no
       longer contain active TODO placeholders; their comments explain why
       they are not part of this paper build.
-- [ ] Both authors must independently review the source-level classifications,
-      reachability arguments, and historical commit examples initially
-      generated with AI assistance. The disclosure intentionally does not
-      claim that this human second review has already happened.
-- [ ] Both authors must confirm that the AI-use disclosure accurately records
-      the tools and assistance used during the project.
+- [ ] Both authors to independently re-check the AI-assisted Protocol A
+      triage, reachability arguments, and historical commit examples before
+      the final presentation. The paper does not claim this has been done.
+- [x] Generative AI section rewritten to list the assistance used (Claude for
+      Protocol A implementation/triage and prose; ChatGPT for bibliography and
+      CCS; Claude for the final length reduction). Both authors to confirm it.
 
 ## Citations and ACM classification
 - [x] Added the foundational typestate citation: Strom and Yemini (1986),
@@ -38,12 +38,15 @@ Run `make clean && make` followed by `make check` from this directory.
 - [x] Rendered PDF pages inspected for layout. The RQ2 comparison table was
       corrected after the first render exposed a clipped, over-wide header;
       long source paths in the AI disclosure were also made breakable.
-- [ ] Page limit: `paper.conf` sets `PAGE_LIMIT=12`; the current build has
-      15 pages and the references begin on page 15. The main text therefore
-      exceeds the configured limit and needs an author-approved reduction.
+- [x] Page limit: `paper.conf` sets `PAGE_LIMIT=12`; the final build is 11
+      pages in the unmodified acmart template. Reached by condensing text
+      (Introduction, Evaluation setup/baselines/RQ4/RQ5, Discussion, Threats,
+      Related Work, Conclusion) and removing the RQ5 triage table, whose
+      numbers remain in Observation 7. No results were changed.
 - [x] No overfull horizontal boxes remain in the final LaTeX log.
 - [x] `pdffonts` confirms that all fonts listed in the current PDF are embedded.
-- [ ] Check grayscale legibility and confirm the final PDF after page reduction.
+- [x] Final PDF checked after page reduction: 11 pages, fonts embedded, no unresolved references.
+- [ ] Check grayscale legibility.
 - [ ] Confirm the Overleaf project and final submission PDF are up to date.
 
 ## Scope and claims
