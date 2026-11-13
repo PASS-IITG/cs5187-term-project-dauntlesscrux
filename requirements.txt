@@ -1,7 +1,0 @@
-# Pinned versions this project's results were produced and reproduced with.
-# Confirmed working on: Python 3.12.3 (original scan, src/tsck/results/environment.txt)
-#                        Python 3.14 (GitHub Codespaces, re-verified 2026-11-13, all 26
-#                        unit tests pass)
-# Install with: pip install -r requirements.txt
-tree-sitter==0.26.0
-tree-sitter-c==0.24.2
