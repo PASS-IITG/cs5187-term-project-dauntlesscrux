@@ -130,7 +130,7 @@ bug.
     \toprule
     Tool & \shortstack{2022\\4450} & \shortstack{2023\\0215} & \shortstack{2024\\4741} \\
     \midrule
-    Part 1 pattern baseline & \cmark & \cmark & \cmark \\
+    Part 1 pattern baseline & \cmark & \cmark & \xmark$^{a}$ \\
     Clang Static Analyzer~18 & \xmark & \xmark & \xmark \\
     Coccinelle~1.1.1 & \xmark & \xmark & \xmark \\
     Cppcheck~2.13.0 & \xmark & \xmark & \xmark \\
@@ -140,7 +140,11 @@ bug.
 
 The columns correspond to CVE-2022-4450~\cite{nvd2022cve4450},
 CVE-2023-0215~\cite{nvd2023cve0215}, and
-CVE-2024-4741~\cite{nvd2024cve4741}, respectively.
+CVE-2024-4741~\cite{nvd2024cve4741}, respectively. $^{a}$On the
+corrected CVE-2024-4741 pair (\texttt{ec559c2a6c}/\texttt{b3f0eb0a29}) the
+Part~1 baseline alerts on both sides; it is quiet only on the later hardening
+commit \texttt{2d05959073}, so it matches that pattern, not the advisory's
+state-guard fix.
 Table~\ref{tab:rq2-comparison} compares four tools on six pinned revisions
 (three CVEs, vulnerable and fixed side). A Clang positive control, run on a
 synthetic use-after-free, produced the expected diagnostic with the same
