@@ -1,0 +1,3 @@
+Target,Harness,Revision,Seed_Set,Duration_s,Executions,Exit,Result_Limitations,Log
+CMS DER parser,existing fuzz/cms.c + adapter,b3f0eb0a295f58f16ba43ba99dad70d4ee5c437d,10 OpenSSL d2i DER test seeds,9,1344555,0,Bounded exploratory run; CMS parser does not exercise BIO_new_NDEF streaming path.,05_fuzzing/logs/fuzz_cms_run.log
+X.509 parser,existing fuzz/x509.c + fuzz_rand.c + adapter,b3f0eb0a295f58f16ba43ba99dad70d4ee5c437d,single PEM certificate seed (not DER-specific corpus),9,1244704,0,Bounded exploratory run; not a targeted CVE regression and no claim of exhaustive coverage.,05_fuzzing/logs/fuzz_x509_run.log

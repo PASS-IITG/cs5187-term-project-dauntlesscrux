@@ -1,0 +1,2 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/rsa/rsa_sign.c:275:15-29: allocation assigned to dig_info in encode_pkcs1 precedes a return at line 277; review cleanup/ownership
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/rsa/rsa_sign.c:358:18-32: allocation assigned to decrypt_buf in ossl_rsa_verify precedes a return at line 457; review cleanup/ownership

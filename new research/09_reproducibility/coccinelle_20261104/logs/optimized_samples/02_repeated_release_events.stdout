@@ -1,0 +1,4 @@
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/repeated_release.c:7:11-23: release_event|OPENSSL_free|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/repeated_release.c:8:9-21: release_event|OPENSSL_free|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/repeated_release.c:3:4-16: release_event|OPENSSL_free|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/repeated_release.c:4:4-16: release_event|OPENSSL_free|p

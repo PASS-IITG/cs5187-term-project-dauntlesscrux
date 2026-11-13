@@ -1,0 +1,15 @@
+Protocol A - CVE-2023-0215 validation
+Date: 2026-11-10T06:21:17+00:00
+Repository HEAD: 5700aead0e201ec92704f1aa2a847d5c116b8365
+Python: Python 3.11.6
+
+Checker and source checksums:
+e7eec6506c580ca84fd100cc823db79c08b23150ce1b406eed10c74e5f415ace  /mnt/d/CVE-Typestate-Project/src/tsck/biochain.py
+7dd1330805a2dfd3c429dfa03a0ebf3d2fe87a3c862cf19fb7e2ca715745dea2  /mnt/d/CVE-Typestate-Project/openssl-cve-2023-0215-vulnerable/crypto/asn1/bio_ndef.c
+0f9dff4c66855ed81cde100af1566b31ca5f0e4d808283e1d3c19df0fe5fe482  /mnt/d/CVE-Typestate-Project/openssl-cve-2023-0215-fixed/crypto/asn1/bio_ndef.c
+
+Vulnerable exit status: 1 (expected 1)
+Fixed exit status: 0 (expected 0)
+
+Vulnerable log: biochain_cve2023_vulnerable.log
+Fixed log: biochain_cve2023_fixed.log

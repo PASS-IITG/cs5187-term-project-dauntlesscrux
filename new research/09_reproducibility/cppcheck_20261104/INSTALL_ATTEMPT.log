@@ -1,0 +1,7 @@
+Command: sudo apt-get install -y cppcheck=2.13.0-2ubuntu3
+Approval: User approved installing cppcheck=2.13.0-2ubuntu3 and its required dependencies.
+Execution: sandbox escalation request made with user-facing justification.
+Exit code: 1
+stderr: sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+        sudo: a password is required
+Result: apt did not run; package was not installed. No alternate privilege path was attempted.

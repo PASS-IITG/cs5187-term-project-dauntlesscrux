@@ -1,0 +1,29 @@
+PASS: Real vulnerable OpenSSL source
+  Expected exit code: 1
+  Actual exit code:   1
+  Output: ALERT [CVE-2023-0215]: /mnt/d/cve-typestate-project/openssl-cve-2023-0215-vulnerable/crypto/asn1/bio_ndef.c
+  BIO chain is pushed, then freed in error cleanup
+  without an unconditional BIO_pop() of the tracked BIO
+  before BIO_free().
+  STATE: VIOLATION
+PASS: Real fixed OpenSSL source
+  Expected exit code: 0
+  Actual exit code:   0
+  Output: NO ALERT [CVE-2023-0215]: /mnt/d/cve-typestate-project/openssl-cve-2023-0215-fixed/crypto/asn1/bio_ndef.c
+  STATE: CONFORMING
+PASS: BIO_pop inside unreachable if (0)
+  Expected exit code: 1
+  Actual exit code:   1
+  Output: ALERT [CVE-2023-0215]: /tmp/bio_typestate_test_84zdiaae/unreachable_pop.c
+  BIO chain is pushed, then freed in error cleanup
+  without an unconditional BIO_pop() of the tracked BIO
+  before BIO_free().
+  STATE: VIOLATION
+PASS: BIO_push appearing only in a comment
+  Expected exit code: 0
+  Actual exit code:   0
+  Output: NO ALERT [CVE-2023-0215]: /tmp/bio_typestate_test_84zdiaae/commented_push.c
+  No BIO_push() ownership transfer was found.
+  STATE: CONFORMING
+
+Result: 4/4 tests passed.

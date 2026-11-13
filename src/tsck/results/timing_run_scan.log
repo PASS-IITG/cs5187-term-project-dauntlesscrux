@@ -1,0 +1,76 @@
+⦗OSS CAD Suite⦘ rutvij@Rutvij:/mnt/d/CVE-Typestate-Project$ cd src/tsck
+/usr/bin/time -v bash run_scan.sh 2>&1 | tee timing.log
+Cloning into '/mnt/d/CVE-Typestate-Project/src/tsck/ossl/repo'...
+== environment
+date_utc: 2026-11-09T12:47:35Z
+python: Python 3.11.6
+tree-sitter: 0.26.0 tree-sitter-c 0.24.2
+git: git version 2.43.0
+uname: Linux 6.18.54.1-microsoft-standard-WSL2
+spec_sha256: 97fe5af9b77fc221e83fd3557e35f2911405dfce6678be3e104acc3661ab0fc2
+snapshot cve4450_pre: 8e257b86e5812c6e1cfa9e8e5f5660ac7bed899d c_files=1001
+snapshot cve4450_post: 63bcf189be73a9cc1264059bed6f57974be74a83 c_files=1001
+snapshot kdf_pre: 29a27cb2c5c1757831f42117871f8c59058343a9 c_files=1005
+snapshot kdf_post: d2217c88df6e65c756013417e5ee4f470dd12470 c_files=1005
+snapshot v3_0_0: 89cd17a031e022211684eb7eb41190cf1910f9fa c_files=999
+snapshot master_2026_10_30: 949fe8b5f48c4c82bff6be7fb23de473ab6945a0 c_files=1155
+
+== PEM_read_bio_ex @ pre-fix
+VIOLATION snap_cve4450_pre/crypto/pem/pem_lib.c:991 PEM_read_bio_ex() releases *header via pem_free; exit reachable without reset (path lines [991, 992, 994, 995, 996, 997, 998])
+VIOLATION snap_cve4450_pre/crypto/pem/pem_lib.c:992 PEM_read_bio_ex() releases *data via pem_free; exit reachable without reset (path lines [992, 994, 995, 996, 997, 998])
+files=1 release-sites: conforming=0 violation=2 suppressed=0 errors=0 parse_error_files=0 sites_in_functions_with_parse_errors=0
+exit=1
+== PEM_read_bio_ex @ post-fix
+files=1 release-sites: conforming=2 violation=0 suppressed=0 errors=0 parse_error_files=0 sites_in_functions_with_parse_errors=0
+exit=0
+== whole tree cve4450_pre
+files=1001 release-sites: conforming=99 violation=7 suppressed=2 errors=0 parse_error_files=393 sites_in_functions_with_parse_errors=7
+== whole tree cve4450_post
+files=1001 release-sites: conforming=101 violation=5 suppressed=2 errors=0 parse_error_files=393 sites_in_functions_with_parse_errors=7
+== whole tree kdf_pre
+files=1005 release-sites: conforming=93 violation=12 suppressed=2 errors=0 parse_error_files=393 sites_in_functions_with_parse_errors=7
+== whole tree kdf_post
+files=1005 release-sites: conforming=97 violation=8 suppressed=2 errors=0 parse_error_files=393 sites_in_functions_with_parse_errors=7
+== whole tree v3_0_0
+files=999 release-sites: conforming=92 violation=10 suppressed=2 errors=0 parse_error_files=390 sites_in_functions_with_parse_errors=7
+== whole tree master_2026_10_30
+files=1155 release-sites: conforming=132 violation=10 suppressed=2 errors=0 parse_error_files=478 sites_in_functions_with_parse_errors=8
+== diff_cve4450_pre_vs_cve4450_post
+pre : release-sites=108 violations=7
+post: release-sites=108 violations=5
+violations removed by the change: 2
+   - crypto/pem/pem_lib.c PEM_read_bio_ex *data
+   - crypto/pem/pem_lib.c PEM_read_bio_ex *header
+violations added by the change:   0
+== diff_kdf_pre_vs_kdf_post
+pre : release-sites=107 violations=12
+post: release-sites=107 violations=8
+violations removed by the change: 4
+   - providers/implementations/kdfs/pbkdf1.c kdf_pbkdf1_set_membuf *buffer
+   - providers/implementations/kdfs/pbkdf2.c pbkdf2_set_membuf *buffer
+   - providers/implementations/kdfs/pkcs12kdf.c pkcs12kdf_set_membuf *buffer
+   - providers/implementations/kdfs/scrypt.c scrypt_set_membuf *buffer
+violations added by the change:   0
+        Command being timed: "bash run_scan.sh"
+        User time (seconds): 27.17
+        System time (seconds): 20.34
+        Percent of CPU this job got: 14%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 5:30.66
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 57212
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 2877
+        Minor (reclaiming a frame) page faults: 225229
+        Voluntary context switches: 1260548
+        Involuntary context switches: 702
+        Swaps: 0
+        File system inputs: 0
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0

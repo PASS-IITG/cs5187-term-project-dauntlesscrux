@@ -1,0 +1,1 @@
+clang-18 --analyze -std=c11 -I research/13_integrated_experiments_20261106/03_clang_api_model/synthetic -Xclang -analyzer-checker=core,unix.Malloc,unix.MismatchedDeallocator -Xclang -analyzer-config -Xclang unix.DynamicMemoryModeling:Optimistic=true -Xclang -analyzer-output=text ownership_controls.c

@@ -1,0 +1,10 @@
+# Tool scope and limitations in this comparison
+
+- This is a six-revision, three-CVE source regression comparison. It is not a representative corpus and cannot support accuracy, precision, recall, or tool-superiority claims.
+- The Python checker is intentionally specific to the audited helper/function spellings and checks local source patterns. It does not establish general typestate analysis, formal soundness, or runtime exploitability.
+- Clang Static Analyzer analyzed only the affected translation unit from each pinned revision with OpenSSL-generated Linux x86-64 flags. It did not build/analyze all OpenSSL TUs or model a runtime path across the broader application. A clean analyzer run means only that no relevant diagnostic was emitted for this TU/configuration.
+- Coccinelle used only the pre-existing completed optimized rules 01, 02, 03, 04a and 04b. These rules target different broad patterns; they do not encode PEM output reset, BIO_push/BIO_pop cleanup, or SSL packet-state reset. Generic event lines are not CVE detections.
+- Cppcheck ran on each affected file, not the whole project, with C11/unix64 and generated headers plus the recorded include roots. No compilation database was available, and `configdata.pm` compiler flags are not fully translated into Cppcheck options. Results are limited to these file/configuration invocations.
+- Clang and Cppcheck parser/analyzer output may omit warnings that require interprocedural state, aliases, external call behavior, or a whole-program context. Coccinelle likewise does not infer the selected ownership invariants from an unrelated syntactic match.
+- No runtime exploit/reproducer was run in this phase. The source evidence establishes the intended vulnerable/fixed mechanism; analyzer output classifications describe detection, not independent validation of vulnerability impact.
+- The three vulnerable/fixed pairs were selected in advance and already used to shape the Python checker. Its successful distinction is a regression result, not an unbiased evaluation.

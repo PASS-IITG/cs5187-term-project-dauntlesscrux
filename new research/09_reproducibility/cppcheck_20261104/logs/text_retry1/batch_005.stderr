@@ -1,0 +1,2085 @@
+crypto/ec/ecdh_ossl.c:28:43: style: inconclusive: Function 'ossl_ecdh_compute_key' argument 1 names different: declaration 'pout' definition 'psec'. [funcArgNamesDifferent]
+int ossl_ecdh_compute_key(unsigned char **psec, size_t *pseclen,
+                                          ^
+crypto/ec/ec_local.h:696:43: note: Function 'ossl_ecdh_compute_key' argument 1 names different: declaration 'pout' definition 'psec'.
+int ossl_ecdh_compute_key(unsigned char **pout, size_t *poutlen,
+                                          ^
+crypto/ec/ecdh_ossl.c:28:43: note: Function 'ossl_ecdh_compute_key' argument 1 names different: declaration 'pout' definition 'psec'.
+int ossl_ecdh_compute_key(unsigned char **psec, size_t *pseclen,
+                                          ^
+crypto/ec/ecdh_ossl.c:28:57: style: inconclusive: Function 'ossl_ecdh_compute_key' argument 2 names different: declaration 'poutlen' definition 'pseclen'. [funcArgNamesDifferent]
+int ossl_ecdh_compute_key(unsigned char **psec, size_t *pseclen,
+                                                        ^
+crypto/ec/ec_local.h:696:57: note: Function 'ossl_ecdh_compute_key' argument 2 names different: declaration 'poutlen' definition 'pseclen'.
+int ossl_ecdh_compute_key(unsigned char **pout, size_t *poutlen,
+                                                        ^
+crypto/ec/ecdh_ossl.c:28:57: note: Function 'ossl_ecdh_compute_key' argument 2 names different: declaration 'poutlen' definition 'pseclen'.
+int ossl_ecdh_compute_key(unsigned char **psec, size_t *pseclen,
+                                                        ^
+crypto/ec/ecdsa_sign.c:20:57: style: inconclusive: Function 'ECDSA_do_sign' argument 2 names different: declaration 'dgst_len' definition 'dlen'. [funcArgNamesDifferent]
+ECDSA_SIG *ECDSA_do_sign(const unsigned char *dgst, int dlen, EC_KEY *eckey)
+                                                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1377:9: note: Function 'ECDSA_do_sign' argument 2 names different: declaration 'dgst_len' definition 'dlen'.
+    int dgst_len, EC_KEY *eckey);
+        ^
+crypto/ec/ecdsa_sign.c:20:57: note: Function 'ECDSA_do_sign' argument 2 names different: declaration 'dgst_len' definition 'dlen'.
+ECDSA_SIG *ECDSA_do_sign(const unsigned char *dgst, int dlen, EC_KEY *eckey)
+                                                        ^
+crypto/ec/ecdsa_sign.c:25:60: style: inconclusive: Function 'ECDSA_do_sign_ex' argument 2 names different: declaration 'dgstlen' definition 'dlen'. [funcArgNamesDifferent]
+ECDSA_SIG *ECDSA_do_sign_ex(const unsigned char *dgst, int dlen,
+                                                           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1390:9: note: Function 'ECDSA_do_sign_ex' argument 2 names different: declaration 'dgstlen' definition 'dlen'.
+    int dgstlen, const BIGNUM *kinv,
+        ^
+crypto/ec/ecdsa_sign.c:25:60: note: Function 'ECDSA_do_sign_ex' argument 2 names different: declaration 'dgstlen' definition 'dlen'.
+ECDSA_SIG *ECDSA_do_sign_ex(const unsigned char *dgst, int dlen,
+                                                           ^
+crypto/ec/ecdsa_sign.c:35:57: style: inconclusive: Function 'ECDSA_sign' argument 3 names different: declaration 'dgstlen' definition 'dlen'. [funcArgNamesDifferent]
+int ECDSA_sign(int type, const unsigned char *dgst, int dlen, unsigned char *sig, unsigned int *siglen, EC_KEY *eckey)
+                                                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1426:9: note: Function 'ECDSA_sign' argument 3 names different: declaration 'dgstlen' definition 'dlen'.
+    int dgstlen, unsigned char *sig,
+        ^
+crypto/ec/ecdsa_sign.c:35:57: note: Function 'ECDSA_sign' argument 3 names different: declaration 'dgstlen' definition 'dlen'.
+int ECDSA_sign(int type, const unsigned char *dgst, int dlen, unsigned char *sig, unsigned int *siglen, EC_KEY *eckey)
+                                                        ^
+crypto/ec/ecdsa_sign.c:40:60: style: inconclusive: Function 'ECDSA_sign_ex' argument 3 names different: declaration 'dgstlen' definition 'dlen'. [funcArgNamesDifferent]
+int ECDSA_sign_ex(int type, const unsigned char *dgst, int dlen,
+                                                           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1443:9: note: Function 'ECDSA_sign_ex' argument 3 names different: declaration 'dgstlen' definition 'dlen'.
+    int dgstlen, unsigned char *sig,
+        ^
+crypto/ec/ecdsa_sign.c:40:60: note: Function 'ECDSA_sign_ex' argument 3 names different: declaration 'dgstlen' definition 'dlen'.
+int ECDSA_sign_ex(int type, const unsigned char *dgst, int dlen,
+                                                           ^
+crypto/ec/ecdsa_sign.c:42:19: style: inconclusive: Function 'ECDSA_sign_ex' argument 7 names different: declaration 'rp' definition 'r'. [funcArgNamesDifferent]
+    const BIGNUM *r, EC_KEY *eckey)
+                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1445:19: note: Function 'ECDSA_sign_ex' argument 7 names different: declaration 'rp' definition 'r'.
+    const BIGNUM *rp, EC_KEY *eckey);
+                  ^
+crypto/ec/ecdsa_sign.c:42:19: note: Function 'ECDSA_sign_ex' argument 7 names different: declaration 'rp' definition 'r'.
+    const BIGNUM *r, EC_KEY *eckey)
+                  ^
+crypto/ec/ecdsa_sign.c:50:45: style: inconclusive: Function 'ECDSA_sign_setup' argument 2 names different: declaration 'ctx' definition 'ctx_in'. [funcArgNamesDifferent]
+int ECDSA_sign_setup(EC_KEY *eckey, BN_CTX *ctx_in, BIGNUM **kinvp,
+                                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1412:67: note: Function 'ECDSA_sign_setup' argument 2 names different: declaration 'ctx' definition 'ctx_in'.
+OSSL_DEPRECATEDIN_3_0 int ECDSA_sign_setup(EC_KEY *eckey, BN_CTX *ctx,
+                                                                  ^
+crypto/ec/ecdsa_sign.c:50:45: note: Function 'ECDSA_sign_setup' argument 2 names different: declaration 'ctx' definition 'ctx_in'.
+int ECDSA_sign_setup(EC_KEY *eckey, BN_CTX *ctx_in, BIGNUM **kinvp,
+                                            ^
+crypto/ec/ecdsa_sign.c:50:62: style: inconclusive: Function 'ECDSA_sign_setup' argument 3 names different: declaration 'kinv' definition 'kinvp'. [funcArgNamesDifferent]
+int ECDSA_sign_setup(EC_KEY *eckey, BN_CTX *ctx_in, BIGNUM **kinvp,
+                                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1413:14: note: Function 'ECDSA_sign_setup' argument 3 names different: declaration 'kinv' definition 'kinvp'.
+    BIGNUM **kinv, BIGNUM **rp);
+             ^
+crypto/ec/ecdsa_sign.c:50:62: note: Function 'ECDSA_sign_setup' argument 3 names different: declaration 'kinv' definition 'kinvp'.
+int ECDSA_sign_setup(EC_KEY *eckey, BN_CTX *ctx_in, BIGNUM **kinvp,
+                                                             ^
+crypto/ec/ecdsa_vrf.c:41:59: style: inconclusive: Function 'ECDSA_verify' argument 3 names different: declaration 'dgstlen' definition 'dgst_len'. [funcArgNamesDifferent]
+int ECDSA_verify(int type, const unsigned char *dgst, int dgst_len,
+                                                          ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1459:9: note: Function 'ECDSA_verify' argument 3 names different: declaration 'dgstlen' definition 'dgst_len'.
+    int dgstlen, const unsigned char *sig,
+        ^
+crypto/ec/ecdsa_vrf.c:41:59: note: Function 'ECDSA_verify' argument 3 names different: declaration 'dgstlen' definition 'dgst_len'.
+int ECDSA_verify(int type, const unsigned char *dgst, int dgst_len,
+                                                          ^
+crypto/ec/ecdsa_vrf.c:42:26: style: inconclusive: Function 'ECDSA_verify' argument 4 names different: declaration 'sig' definition 'sigbuf'. [funcArgNamesDifferent]
+    const unsigned char *sigbuf, int sig_len, EC_KEY *eckey)
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1459:39: note: Function 'ECDSA_verify' argument 4 names different: declaration 'sig' definition 'sigbuf'.
+    int dgstlen, const unsigned char *sig,
+                                      ^
+crypto/ec/ecdsa_vrf.c:42:26: note: Function 'ECDSA_verify' argument 4 names different: declaration 'sig' definition 'sigbuf'.
+    const unsigned char *sigbuf, int sig_len, EC_KEY *eckey)
+                         ^
+crypto/ec/ecdsa_vrf.c:42:38: style: inconclusive: Function 'ECDSA_verify' argument 5 names different: declaration 'siglen' definition 'sig_len'. [funcArgNamesDifferent]
+    const unsigned char *sigbuf, int sig_len, EC_KEY *eckey)
+                                     ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1460:9: note: Function 'ECDSA_verify' argument 5 names different: declaration 'siglen' definition 'sig_len'.
+    int siglen, EC_KEY *eckey);
+        ^
+crypto/ec/ecdsa_vrf.c:42:38: note: Function 'ECDSA_verify' argument 5 names different: declaration 'siglen' definition 'sig_len'.
+    const unsigned char *sigbuf, int sig_len, EC_KEY *eckey)
+                                     ^
+crypto/ec/eck_prn.c:36:45: style: inconclusive: Function 'EC_KEY_print_fp' argument 2 names different: declaration 'key' definition 'x'. [funcArgNamesDifferent]
+int EC_KEY_print_fp(FILE *fp, const EC_KEY *x, int off)
+                                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1287:67: note: Function 'EC_KEY_print_fp' argument 2 names different: declaration 'key' definition 'x'.
+OSSL_DEPRECATEDIN_3_0 int EC_KEY_print_fp(FILE *fp, const EC_KEY *key, int off);
+                                                                  ^
+crypto/ec/eck_prn.c:36:45: note: Function 'EC_KEY_print_fp' argument 2 names different: declaration 'key' definition 'x'.
+int EC_KEY_print_fp(FILE *fp, const EC_KEY *x, int off)
+                                            ^
+crypto/ec/eck_prn.c:51:51: style: inconclusive: Function 'ECParameters_print_fp' argument 2 names different: declaration 'key' definition 'x'. [funcArgNamesDifferent]
+int ECParameters_print_fp(FILE *fp, const EC_KEY *x)
+                                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:1279:73: note: Function 'ECParameters_print_fp' argument 2 names different: declaration 'key' definition 'x'.
+OSSL_DEPRECATEDIN_3_0 int ECParameters_print_fp(FILE *fp, const EC_KEY *key);
+                                                                        ^
+crypto/ec/eck_prn.c:51:51: note: Function 'ECParameters_print_fp' argument 2 names different: declaration 'key' definition 'x'.
+int ECParameters_print_fp(FILE *fp, const EC_KEY *x)
+                                                  ^
+crypto/ec/eck_prn.c:223:43: style: inconclusive: Function 'print_bin' argument 2 names different: declaration 'str' definition 'name'. [funcArgNamesDifferent]
+static int print_bin(BIO *fp, const char *name, const unsigned char *buf,
+                                          ^
+crypto/ec/eck_prn.c:67:43: note: Function 'print_bin' argument 2 names different: declaration 'str' definition 'name'.
+static int print_bin(BIO *fp, const char *str, const unsigned char *num,
+                                          ^
+crypto/ec/eck_prn.c:223:43: note: Function 'print_bin' argument 2 names different: declaration 'str' definition 'name'.
+static int print_bin(BIO *fp, const char *name, const unsigned char *buf,
+                                          ^
+crypto/ec/eck_prn.c:223:70: style: inconclusive: Function 'print_bin' argument 3 names different: declaration 'num' definition 'buf'. [funcArgNamesDifferent]
+static int print_bin(BIO *fp, const char *name, const unsigned char *buf,
+                                                                     ^
+crypto/ec/eck_prn.c:67:69: note: Function 'print_bin' argument 3 names different: declaration 'num' definition 'buf'.
+static int print_bin(BIO *fp, const char *str, const unsigned char *num,
+                                                                    ^
+crypto/ec/eck_prn.c:223:70: note: Function 'print_bin' argument 3 names different: declaration 'num' definition 'buf'.
+static int print_bin(BIO *fp, const char *name, const unsigned char *buf,
+                                                                     ^
+crypto/ec/ecp_nistp224.c:49:0: error: #error "Your compiler doesn't appear to support 128-bit integer types" [preprocessorErrorDirective]
+#error "Your compiler doesn't appear to support 128-bit integer types"
+^
+crypto/ec/ecp_nistp256.c:50:0: error: #error "Your compiler doesn't appear to support 128-bit integer types" [preprocessorErrorDirective]
+#error "Your compiler doesn't appear to support 128-bit integer types"
+^
+crypto/ec/ecp_nistp521.c:49:0: error: #error "Your compiler doesn't appear to support 128-bit integer types" [preprocessorErrorDirective]
+#error "Your compiler doesn't appear to support 128-bit integer types"
+^
+crypto/ec/ecp_nistp384.c:41:0: error: #error "Your compiler doesn't appear to support 128-bit integer types" [preprocessorErrorDirective]
+#error "Your compiler doesn't appear to support 128-bit integer types"
+^
+crypto/ec/ecp_oct.c:24:19: style: inconclusive: Function 'ossl_ec_GFp_simple_set_compressed_coordinates' argument 3 names different: declaration 'x' definition 'x_'. [funcArgNamesDifferent]
+    const BIGNUM *x_, int y_bit,
+                  ^
+crypto/ec/ec_local.h:402:19: note: Function 'ossl_ec_GFp_simple_set_compressed_coordinates' argument 3 names different: declaration 'x' definition 'x_'.
+    const BIGNUM *x, int y_bit,
+                  ^
+crypto/ec/ecp_oct.c:24:19: note: Function 'ossl_ec_GFp_simple_set_compressed_coordinates' argument 3 names different: declaration 'x' definition 'x_'.
+    const BIGNUM *x_, int y_bit,
+                  ^
+crypto/ec/ecp_nistz256.c:176:12: error: Array 'dst[4]' accessed at index 4, which is out of bounds. [arrayIndexOutOfBounds]
+        dst[4] = (src[4] & mask1) ^ (dst[4] & mask2);
+           ^
+crypto/ec/ecp_nistz256.c:176:22: error: Array 'src[4]' accessed at index 4, which is out of bounds. [arrayIndexOutOfBounds]
+        dst[4] = (src[4] & mask1) ^ (dst[4] & mask2);
+                     ^
+crypto/ec/ecp_nistz256.c:177:12: error: Array 'dst[4]' accessed at index 5, which is out of bounds. [arrayIndexOutOfBounds]
+        dst[5] = (src[5] & mask1) ^ (dst[5] & mask2);
+           ^
+crypto/ec/ecp_nistz256.c:177:22: error: Array 'src[4]' accessed at index 5, which is out of bounds. [arrayIndexOutOfBounds]
+        dst[5] = (src[5] & mask1) ^ (dst[5] & mask2);
+                     ^
+crypto/ec/ecp_nistz256.c:178:12: error: Array 'dst[4]' accessed at index 6, which is out of bounds. [arrayIndexOutOfBounds]
+        dst[6] = (src[6] & mask1) ^ (dst[6] & mask2);
+           ^
+crypto/ec/ecp_nistz256.c:178:22: error: Array 'src[4]' accessed at index 6, which is out of bounds. [arrayIndexOutOfBounds]
+        dst[6] = (src[6] & mask1) ^ (dst[6] & mask2);
+                     ^
+crypto/ec/ecp_nistz256.c:179:12: error: Array 'dst[4]' accessed at index 7, which is out of bounds. [arrayIndexOutOfBounds]
+        dst[7] = (src[7] & mask1) ^ (dst[7] & mask2);
+           ^
+crypto/ec/ecp_nistz256.c:179:22: error: Array 'src[4]' accessed at index 7, which is out of bounds. [arrayIndexOutOfBounds]
+        dst[7] = (src[7] & mask1) ^ (dst[7] & mask2);
+                     ^
+crypto/ec/ecp_nistz256.c:201:17: error: Array 'a[4]' accessed at index 4, which is out of bounds. [arrayIndexOutOfBounds]
+        res |= a[4] ^ b[4];
+                ^
+crypto/ec/ecp_nistz256.c:201:24: error: Array 'b[4]' accessed at index 4, which is out of bounds. [arrayIndexOutOfBounds]
+        res |= a[4] ^ b[4];
+                       ^
+crypto/ec/ecp_nistz256.c:202:17: error: Array 'a[4]' accessed at index 5, which is out of bounds. [arrayIndexOutOfBounds]
+        res |= a[5] ^ b[5];
+                ^
+crypto/ec/ecp_nistz256.c:202:24: error: Array 'b[4]' accessed at index 5, which is out of bounds. [arrayIndexOutOfBounds]
+        res |= a[5] ^ b[5];
+                       ^
+crypto/ec/ecp_nistz256.c:203:17: error: Array 'a[4]' accessed at index 6, which is out of bounds. [arrayIndexOutOfBounds]
+        res |= a[6] ^ b[6];
+                ^
+crypto/ec/ecp_nistz256.c:203:24: error: Array 'b[4]' accessed at index 6, which is out of bounds. [arrayIndexOutOfBounds]
+        res |= a[6] ^ b[6];
+                       ^
+crypto/ec/ecp_nistz256.c:204:17: error: Array 'a[4]' accessed at index 7, which is out of bounds. [arrayIndexOutOfBounds]
+        res |= a[7] ^ b[7];
+                ^
+crypto/ec/ecp_nistz256.c:204:24: error: Array 'b[4]' accessed at index 7, which is out of bounds. [arrayIndexOutOfBounds]
+        res |= a[7] ^ b[7];
+                       ^
+crypto/ec/ecp_nistz256.c:221:30: error: Array 'ONE[4]' accessed at index 4, which is out of bounds. [arrayIndexOutOfBounds]
+            res |= a[4] ^ ONE[4];
+                             ^
+crypto/ec/ecp_nistz256.c:222:30: error: Array 'ONE[4]' accessed at index 5, which is out of bounds. [arrayIndexOutOfBounds]
+            res |= a[5] ^ ONE[5];
+                             ^
+crypto/ec/ecp_nistz256.c:223:30: error: Array 'ONE[4]' accessed at index 6, which is out of bounds. [arrayIndexOutOfBounds]
+            res |= a[6] ^ ONE[6];
+                             ^
+crypto/ec/ecp_nistz256.c:1055:32: error: Array 'p.p.X[4]' accessed at index 4, which is out of bounds. [arrayIndexOutOfBounds]
+                infty |= (p.p.X[4] | p.p.X[5] | p.p.X[6] | p.p.X[7] | p.p.Y[4] | p.p.Y[5] | p.p.Y[6] | p.p.Y[7]);
+                               ^
+crypto/ec/ecp_nistz256.c:1055:43: error: Array 'p.p.X[4]' accessed at index 5, which is out of bounds. [arrayIndexOutOfBounds]
+                infty |= (p.p.X[4] | p.p.X[5] | p.p.X[6] | p.p.X[7] | p.p.Y[4] | p.p.Y[5] | p.p.Y[6] | p.p.Y[7]);
+                                          ^
+crypto/ec/ecp_nistz256.c:1055:54: error: Array 'p.p.X[4]' accessed at index 6, which is out of bounds. [arrayIndexOutOfBounds]
+                infty |= (p.p.X[4] | p.p.X[5] | p.p.X[6] | p.p.X[7] | p.p.Y[4] | p.p.Y[5] | p.p.Y[6] | p.p.Y[7]);
+                                                     ^
+crypto/ec/ecp_nistz256.c:1055:65: error: Array 'p.p.X[4]' accessed at index 7, which is out of bounds. [arrayIndexOutOfBounds]
+                infty |= (p.p.X[4] | p.p.X[5] | p.p.X[6] | p.p.X[7] | p.p.Y[4] | p.p.Y[5] | p.p.Y[6] | p.p.Y[7]);
+                                                                ^
+crypto/ec/ecp_nistz256.c:1055:76: error: Array 'p.p.Y[4]' accessed at index 4, which is out of bounds. [arrayIndexOutOfBounds]
+                infty |= (p.p.X[4] | p.p.X[5] | p.p.X[6] | p.p.X[7] | p.p.Y[4] | p.p.Y[5] | p.p.Y[6] | p.p.Y[7]);
+                                                                           ^
+crypto/ec/ecp_nistz256.c:1055:87: error: Array 'p.p.Y[4]' accessed at index 5, which is out of bounds. [arrayIndexOutOfBounds]
+                infty |= (p.p.X[4] | p.p.X[5] | p.p.X[6] | p.p.X[7] | p.p.Y[4] | p.p.Y[5] | p.p.Y[6] | p.p.Y[7]);
+                                                                                      ^
+crypto/ec/ecp_nistz256.c:1055:98: error: Array 'p.p.Y[4]' accessed at index 6, which is out of bounds. [arrayIndexOutOfBounds]
+                infty |= (p.p.X[4] | p.p.X[5] | p.p.X[6] | p.p.X[7] | p.p.Y[4] | p.p.Y[5] | p.p.Y[6] | p.p.Y[7]);
+                                                                                                 ^
+crypto/ec/ecp_nistz256.c:1055:109: error: Array 'p.p.Y[4]' accessed at index 7, which is out of bounds. [arrayIndexOutOfBounds]
+                infty |= (p.p.X[4] | p.p.X[5] | p.p.X[6] | p.p.X[7] | p.p.Y[4] | p.p.Y[5] | p.p.Y[6] | p.p.Y[7]);
+                                                                                                            ^
+crypto/ec/ecp_nistz256.c:1065:22: error: Array 'p.p.Z[4]' accessed at index 4, which is out of bounds. [arrayIndexOutOfBounds]
+                p.p.Z[4] = ONE[4] & infty;
+                     ^
+crypto/ec/ecp_nistz256.c:1065:31: error: Array 'ONE[4]' accessed at index 4, which is out of bounds. [arrayIndexOutOfBounds]
+                p.p.Z[4] = ONE[4] & infty;
+                              ^
+crypto/ec/ecp_nistz256.c:1066:22: error: Array 'p.p.Z[4]' accessed at index 5, which is out of bounds. [arrayIndexOutOfBounds]
+                p.p.Z[5] = ONE[5] & infty;
+                     ^
+crypto/ec/ecp_nistz256.c:1066:31: error: Array 'ONE[4]' accessed at index 5, which is out of bounds. [arrayIndexOutOfBounds]
+                p.p.Z[5] = ONE[5] & infty;
+                              ^
+crypto/ec/ecp_nistz256.c:1067:22: error: Array 'p.p.Z[4]' accessed at index 6, which is out of bounds. [arrayIndexOutOfBounds]
+                p.p.Z[6] = ONE[6] & infty;
+                     ^
+crypto/ec/ecp_nistz256.c:1067:31: error: Array 'ONE[4]' accessed at index 6, which is out of bounds. [arrayIndexOutOfBounds]
+                p.p.Z[6] = ONE[6] & infty;
+                              ^
+crypto/ec/ecp_nistz256.c:1068:22: error: Array 'p.p.Z[4]' accessed at index 7, which is out of bounds. [arrayIndexOutOfBounds]
+                p.p.Z[7] = ONE[7] & infty;
+                     ^
+crypto/ec/ecp_nistz256.c:1068:31: error: Array 'ONE[4]' accessed at index 7, which is out of bounds. [arrayIndexOutOfBounds]
+                p.p.Z[7] = ONE[7] & infty;
+                              ^
+crypto/ec/ecp_nistz256.c:952:19: style: Condition '(num+1)==0' is always false [knownConditionTrueFalse]
+    if ((num + 1) == 0 || (num + 1) > OPENSSL_MALLOC_MAX_NELEMS(void *)) {
+                  ^
+crypto/ec/ecp_nistz256.c:1151:14: style: The scope of the variable 'y_aff' can be reduced. [variableScope]
+    BN_ULONG y_aff[P256_LIMBS];
+             ^
+crypto/ec/ecp_nistz256.c:1153:14: style: The scope of the variable 'x_ret' can be reduced. [variableScope]
+    BN_ULONG x_ret[P256_LIMBS], y_ret[P256_LIMBS];
+             ^
+crypto/ec/ecp_nistz256.c:1153:33: style: The scope of the variable 'y_ret' can be reduced. [variableScope]
+    BN_ULONG x_ret[P256_LIMBS], y_ret[P256_LIMBS];
+                                ^
+crypto/ec/ecp_nistz256.c:213:15: style: Variable 'a' can be declared as pointer to const [constVariablePointer]
+    BN_ULONG *a = bn_get_words(z);
+              ^
+crypto/ec/ecp_smpl.c:254:21: style: Variable 'order' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *a, *b, *order, *tmp_1, *tmp_2;
+                    ^
+crypto/ec/ecp_sm2p256.c:602:19: style: Condition '(num+1)==0' is always false [knownConditionTrueFalse]
+    if ((num + 1) == 0 || (num + 1) > OPENSSL_MALLOC_MAX_NELEMS(void *)) {
+                  ^
+crypto/ec/ecp_sm2p256.c:509:24: warning: Either the condition 'new_generator[0]!=NULL' is redundant or there is possible null pointer dereference: generator. [nullPointerRedundantCheck]
+    return (bn_get_top(generator->X) == P256_LIMBS)
+                       ^
+crypto/ec/ecp_sm2p256.c:641:39: note: Assuming that condition 'new_generator[0]!=NULL' is not redundant
+                    (new_generator[0] != NULL
+                                      ^
+crypto/ec/ecp_sm2p256.c:637:32: note: Assignment to 'new_generator[0]=generator'
+            new_generator[0] = generator;
+                               ^
+crypto/ec/ecp_sm2p256.c:628:37: note: Calling function 'ecp_sm2p256_is_affine_G', 1st argument 'generator' value is 0
+        if (ecp_sm2p256_is_affine_G(generator)) {
+                                    ^
+crypto/ec/ecp_sm2p256.c:509:24: note: Null pointer dereference
+    return (bn_get_top(generator->X) == P256_LIMBS)
+                       ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/constant_time.h:438:19: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+    unsigned char tmp;
+                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/constant_time.h:462:19: style: The scope of the variable 'mask' can be reduced. [variableScope]
+    unsigned char mask;
+                  ^
+crypto/ec/ecp_sm2p256.c:390:24: style: The scope of the variable 'index' can be reduced. [variableScope]
+    unsigned int i, j, index;
+                       ^
+crypto/ec/ecp_sm2p256.c:452:18: style: The scope of the variable 'index' can be reduced. [variableScope]
+    unsigned int index, mask = 0x0f;
+                 ^
+crypto/ec/ecp_sm2p256.c:348:18: error: Uninitialized variable: &sum [uninitvar]
+    memcpy(&res, &sum, sizeof(res));
+                 ^
+crypto/ec/ecp_sm2p256.c:599:27: style: union member 'Anonymous5::a' is never used. [unusedStructMember]
+        P256_POINT_AFFINE a;
+                          ^
+crypto/ec/ecx_backend.c:150:9: style: inconclusive: Function 'ossl_ecx_key_op' argument 4 names different: declaration 'pkey_id' definition 'id'. [funcArgNamesDifferent]
+    int id, ecx_key_op_t op,
+        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/ecx.h:137:9: note: Function 'ossl_ecx_key_op' argument 4 names different: declaration 'pkey_id' definition 'id'.
+    int pkey_id, ecx_key_op_t op,
+        ^
+crypto/ec/ecx_backend.c:150:9: note: Function 'ossl_ecx_key_op' argument 4 names different: declaration 'pkey_id' definition 'id'.
+    int id, ecx_key_op_t op,
+        ^
+crypto/ec/ecx_s390x.c:87:28: style: union member 'Anonymous4::buff' is never used. [unusedStructMember]
+        unsigned long long buff[512];
+                           ^
+crypto/ec/ecx_s390x.c:120:28: style: union member 'Anonymous6::buff' is never used. [unusedStructMember]
+        unsigned long long buff[512];
+                           ^
+crypto/ec/ecx_s390x.c:160:28: style: union member 'Anonymous8::buff' is never used. [unusedStructMember]
+        unsigned long long buff[512];
+                           ^
+crypto/ec/ecx_s390x.c:194:28: style: union member 'Anonymous10::buff' is never used. [unusedStructMember]
+        unsigned long long buff[512];
+                           ^
+crypto/ec/ecx_meth.c:409:14: style: Variable 'ecx' can be declared as pointer to const [constVariablePointer]
+    ECX_KEY *ecx = from->pkey.ecx, *dupkey = NULL;
+             ^
+crypto/encode_decode/decoder_lib.c:467:9: style: The scope of the variable 'j' can be reduced. [variableScope]
+    int j;
+        ^
+crypto/encode_decode/decoder_lib.c:654:32: style: The scope of the variable 'di' can be reduced. [variableScope]
+        OSSL_DECODER_INSTANCE *di;
+                               ^
+crypto/encode_decode/decoder_lib.c:134:55: style: inconclusive: Function 'OSSL_DECODER_from_fp' argument 2 names different: declaration 'in' definition 'fp'. [funcArgNamesDifferent]
+int OSSL_DECODER_from_fp(OSSL_DECODER_CTX *ctx, FILE *fp)
+                                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h:114:55: note: Function 'OSSL_DECODER_from_fp' argument 2 names different: declaration 'in' definition 'fp'.
+int OSSL_DECODER_from_fp(OSSL_DECODER_CTX *ctx, FILE *in);
+                                                      ^
+crypto/encode_decode/decoder_lib.c:134:55: note: Function 'OSSL_DECODER_from_fp' argument 2 names different: declaration 'in' definition 'fp'.
+int OSSL_DECODER_from_fp(OSSL_DECODER_CTX *ctx, FILE *fp)
+                                                      ^
+crypto/encode_decode/decoder_lib.c:493:36: style: Variable 'check_inst' can be declared as pointer to const [constVariablePointer]
+            OSSL_DECODER_INSTANCE *check_inst = sk_OSSL_DECODER_INSTANCE_value(data->ctx->decoder_insts, j);
+                                   ^
+crypto/encode_decode/decoder_lib.c:711:57: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+int OSSL_DECODER_CTX_get_num_decoders(OSSL_DECODER_CTX *ctx)
+                                                        ^
+crypto/encode_decode/decoder_lib.c:770:50: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+OSSL_DECODER_CTX_get_construct(OSSL_DECODER_CTX *ctx)
+                                                 ^
+crypto/encode_decode/decoder_lib.c:777:61: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+void *OSSL_DECODER_CTX_get_construct_data(OSSL_DECODER_CTX *ctx)
+                                                            ^
+crypto/encode_decode/decoder_lib.c:785:48: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+OSSL_DECODER_CTX_get_cleanup(OSSL_DECODER_CTX *ctx)
+                                               ^
+crypto/encode_decode/decoder_lib.c:812:58: style: Parameter 'decoder_inst' can be declared as pointer to const [constParameterPointer]
+OSSL_DECODER_INSTANCE_get_decoder(OSSL_DECODER_INSTANCE *decoder_inst)
+                                                         ^
+crypto/encode_decode/decoder_lib.c:820:62: style: Parameter 'decoder_inst' can be declared as pointer to const [constParameterPointer]
+OSSL_DECODER_INSTANCE_get_decoder_ctx(OSSL_DECODER_INSTANCE *decoder_inst)
+                                                             ^
+crypto/encode_decode/decoder_lib.c:828:61: style: Parameter 'decoder_inst' can be declared as pointer to const [constParameterPointer]
+OSSL_DECODER_INSTANCE_get_input_type(OSSL_DECODER_INSTANCE *decoder_inst)
+                                                            ^
+crypto/encode_decode/decoder_lib.c:836:66: style: Parameter 'decoder_inst' can be declared as pointer to const [constParameterPointer]
+OSSL_DECODER_INSTANCE_get_input_structure(OSSL_DECODER_INSTANCE *decoder_inst,
+                                                                 ^
+crypto/encode_decode/decoder_meth.c:68:39: style: inconclusive: Function 'OSSL_DECODER_up_ref' argument 1 names different: declaration 'encoder' definition 'decoder'. [funcArgNamesDifferent]
+int OSSL_DECODER_up_ref(OSSL_DECODER *decoder)
+                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h:31:39: note: Function 'OSSL_DECODER_up_ref' argument 1 names different: declaration 'encoder' definition 'decoder'.
+int OSSL_DECODER_up_ref(OSSL_DECODER *encoder);
+                                      ^
+crypto/encode_decode/decoder_meth.c:68:39: note: Function 'OSSL_DECODER_up_ref' argument 1 names different: declaration 'encoder' definition 'decoder'.
+int OSSL_DECODER_up_ref(OSSL_DECODER *decoder)
+                                      ^
+crypto/encode_decode/decoder_meth.c:87:38: style: inconclusive: Function 'OSSL_DECODER_free' argument 1 names different: declaration 'encoder' definition 'decoder'. [funcArgNamesDifferent]
+void OSSL_DECODER_free(OSSL_DECODER *decoder)
+                                     ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h:32:38: note: Function 'OSSL_DECODER_free' argument 1 names different: declaration 'encoder' definition 'decoder'.
+void OSSL_DECODER_free(OSSL_DECODER *encoder);
+                                     ^
+crypto/encode_decode/decoder_meth.c:87:38: note: Function 'OSSL_DECODER_free' argument 1 names different: declaration 'encoder' definition 'decoder'.
+void OSSL_DECODER_free(OSSL_DECODER *decoder)
+                                     ^
+crypto/encode_decode/decoder_meth.c:484:69: style: inconclusive: Function 'OSSL_DECODER_get0_provider' argument 1 names different: declaration 'encoder' definition 'decoder'. [funcArgNamesDifferent]
+const OSSL_PROVIDER *OSSL_DECODER_get0_provider(const OSSL_DECODER *decoder)
+                                                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h:34:69: note: Function 'OSSL_DECODER_get0_provider' argument 1 names different: declaration 'encoder' definition 'decoder'.
+const OSSL_PROVIDER *OSSL_DECODER_get0_provider(const OSSL_DECODER *encoder);
+                                                                    ^
+crypto/encode_decode/decoder_meth.c:484:69: note: Function 'OSSL_DECODER_get0_provider' argument 1 names different: declaration 'encoder' definition 'decoder'.
+const OSSL_PROVIDER *OSSL_DECODER_get0_provider(const OSSL_DECODER *decoder)
+                                                                    ^
+crypto/encode_decode/decoder_meth.c:494:62: style: inconclusive: Function 'OSSL_DECODER_get0_properties' argument 1 names different: declaration 'encoder' definition 'decoder'. [funcArgNamesDifferent]
+const char *OSSL_DECODER_get0_properties(const OSSL_DECODER *decoder)
+                                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h:35:62: note: Function 'OSSL_DECODER_get0_properties' argument 1 names different: declaration 'encoder' definition 'decoder'.
+const char *OSSL_DECODER_get0_properties(const OSSL_DECODER *encoder);
+                                                             ^
+crypto/encode_decode/decoder_meth.c:494:62: note: Function 'OSSL_DECODER_get0_properties' argument 1 names different: declaration 'encoder' definition 'decoder'.
+const char *OSSL_DECODER_get0_properties(const OSSL_DECODER *decoder)
+                                                             ^
+crypto/encode_decode/decoder_meth.c:515:49: style: inconclusive: Function 'ossl_decoder_get_number' argument 1 names different: declaration 'encoder' definition 'decoder'. [funcArgNamesDifferent]
+int ossl_decoder_get_number(const OSSL_DECODER *decoder)
+                                                ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/decoder.h:37:49: note: Function 'ossl_decoder_get_number' argument 1 names different: declaration 'encoder' definition 'decoder'.
+int ossl_decoder_get_number(const OSSL_DECODER *encoder);
+                                                ^
+crypto/encode_decode/decoder_meth.c:515:49: note: Function 'ossl_decoder_get_number' argument 1 names different: declaration 'encoder' definition 'decoder'.
+int ossl_decoder_get_number(const OSSL_DECODER *decoder)
+                                                ^
+crypto/encode_decode/decoder_meth.c:535:43: style: inconclusive: Function 'OSSL_DECODER_is_a' argument 1 names different: declaration 'encoder' definition 'decoder'. [funcArgNamesDifferent]
+int OSSL_DECODER_is_a(const OSSL_DECODER *decoder, const char *name)
+                                          ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h:38:43: note: Function 'OSSL_DECODER_is_a' argument 1 names different: declaration 'encoder' definition 'decoder'.
+int OSSL_DECODER_is_a(const OSSL_DECODER *encoder, const char *name);
+                                          ^
+crypto/encode_decode/decoder_meth.c:535:43: note: Function 'OSSL_DECODER_is_a' argument 1 names different: declaration 'encoder' definition 'decoder'.
+int OSSL_DECODER_is_a(const OSSL_DECODER *decoder, const char *name)
+                                          ^
+crypto/encode_decode/decoder_meth.c:579:11: style: inconclusive: Function 'OSSL_DECODER_do_all_provided' argument 3 names different: declaration 'arg' definition 'user_arg'. [funcArgNamesDifferent]
+    void *user_arg)
+          ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h:42:11: note: Function 'OSSL_DECODER_do_all_provided' argument 3 names different: declaration 'arg' definition 'user_arg'.
+    void *arg);
+          ^
+crypto/encode_decode/decoder_meth.c:579:11: note: Function 'OSSL_DECODER_do_all_provided' argument 3 names different: declaration 'arg' definition 'user_arg'.
+    void *user_arg)
+          ^
+crypto/encode_decode/decoder_meth.c:596:51: style: inconclusive: Function 'OSSL_DECODER_names_do_all' argument 1 names different: declaration 'encoder' definition 'decoder'. [funcArgNamesDifferent]
+int OSSL_DECODER_names_do_all(const OSSL_DECODER *decoder,
+                                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h:43:51: note: Function 'OSSL_DECODER_names_do_all' argument 1 names different: declaration 'encoder' definition 'decoder'.
+int OSSL_DECODER_names_do_all(const OSSL_DECODER *encoder,
+                                                  ^
+crypto/encode_decode/decoder_meth.c:596:51: note: Function 'OSSL_DECODER_names_do_all' argument 1 names different: declaration 'encoder' definition 'decoder'.
+int OSSL_DECODER_names_do_all(const OSSL_DECODER *decoder,
+                                                  ^
+crypto/encode_decode/decoder_meth.c:632:48: style: inconclusive: Function 'OSSL_DECODER_settable_ctx_params' argument 1 names different: declaration 'encoder' definition 'decoder'. [funcArgNamesDifferent]
+OSSL_DECODER_settable_ctx_params(OSSL_DECODER *decoder)
+                                               ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h:49:66: note: Function 'OSSL_DECODER_settable_ctx_params' argument 1 names different: declaration 'encoder' definition 'decoder'.
+const OSSL_PARAM *OSSL_DECODER_settable_ctx_params(OSSL_DECODER *encoder);
+                                                                 ^
+crypto/encode_decode/decoder_meth.c:632:48: note: Function 'OSSL_DECODER_settable_ctx_params' argument 1 names different: declaration 'encoder' definition 'decoder'.
+OSSL_DECODER_settable_ctx_params(OSSL_DECODER *decoder)
+                                               ^
+crypto/encode_decode/decoder_meth.c:172:23: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+        OSSL_NAMEMAP *namemap = ossl_namemap_stored(methdata->libctx);
+                      ^
+crypto/encode_decode/decoder_meth.c:200:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap;
+                  ^
+crypto/encode_decode/decoder_meth.c:361:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap = ossl_namemap_stored(methdata->libctx);
+                  ^
+crypto/encode_decode/decoder_meth.c:539:23: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+        OSSL_NAMEMAP *namemap = ossl_namemap_stored(libctx);
+                      ^
+crypto/encode_decode/decoder_meth.c:546:39: style: Parameter 'decoder' can be declared as pointer to const [constParameterPointer]
+static int resolve_name(OSSL_DECODER *decoder, const char *name)
+                                      ^
+crypto/encode_decode/decoder_meth.c:549:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap = ossl_namemap_stored(libctx);
+                  ^
+crypto/encode_decode/decoder_meth.c:605:23: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+        OSSL_NAMEMAP *namemap = ossl_namemap_stored(libctx);
+                      ^
+crypto/encode_decode/decoder_pkey.c:319:18: style: The scope of the variable 'keymgmt' can be reduced. [variableScope]
+    EVP_KEYMGMT *keymgmt;
+                 ^
+crypto/encode_decode/encoder_meth.c:521:56: style: inconclusive: Function 'OSSL_ENCODER_get0_name' argument 1 names different: declaration 'kdf' definition 'encoder'. [funcArgNamesDifferent]
+const char *OSSL_ENCODER_get0_name(const OSSL_ENCODER *encoder)
+                                                       ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/encoder.h:36:56: note: Function 'OSSL_ENCODER_get0_name' argument 1 names different: declaration 'kdf' definition 'encoder'.
+const char *OSSL_ENCODER_get0_name(const OSSL_ENCODER *kdf);
+                                                       ^
+crypto/encode_decode/encoder_meth.c:521:56: note: Function 'OSSL_ENCODER_get0_name' argument 1 names different: declaration 'kdf' definition 'encoder'.
+const char *OSSL_ENCODER_get0_name(const OSSL_ENCODER *encoder)
+                                                       ^
+crypto/encode_decode/encoder_meth.c:526:63: style: inconclusive: Function 'OSSL_ENCODER_get0_description' argument 1 names different: declaration 'kdf' definition 'encoder'. [funcArgNamesDifferent]
+const char *OSSL_ENCODER_get0_description(const OSSL_ENCODER *encoder)
+                                                              ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/encoder.h:37:63: note: Function 'OSSL_ENCODER_get0_description' argument 1 names different: declaration 'kdf' definition 'encoder'.
+const char *OSSL_ENCODER_get0_description(const OSSL_ENCODER *kdf);
+                                                              ^
+crypto/encode_decode/encoder_meth.c:526:63: note: Function 'OSSL_ENCODER_get0_description' argument 1 names different: declaration 'kdf' definition 'encoder'.
+const char *OSSL_ENCODER_get0_description(const OSSL_ENCODER *encoder)
+                                                              ^
+crypto/encode_decode/encoder_meth.c:557:11: style: inconclusive: Function 'OSSL_ENCODER_do_all_provided' argument 3 names different: declaration 'arg' definition 'user_arg'. [funcArgNamesDifferent]
+    void *user_arg)
+          ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/encoder.h:42:11: note: Function 'OSSL_ENCODER_do_all_provided' argument 3 names different: declaration 'arg' definition 'user_arg'.
+    void *arg);
+          ^
+crypto/encode_decode/encoder_meth.c:557:11: note: Function 'OSSL_ENCODER_do_all_provided' argument 3 names different: declaration 'arg' definition 'user_arg'.
+    void *user_arg)
+          ^
+crypto/encode_decode/encoder_meth.c:661:35: style: inconclusive: Function 'OSSL_ENCODER_CTX_ctrl_string' argument 3 names different: declaration 'val' definition 'value'. [funcArgNamesDifferent]
+    const char *name, const char *value)
+                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/encoder.h:54:35: note: Function 'OSSL_ENCODER_CTX_ctrl_string' argument 3 names different: declaration 'val' definition 'value'.
+    const char *name, const char *val);
+                                  ^
+crypto/encode_decode/encoder_meth.c:661:35: note: Function 'OSSL_ENCODER_CTX_ctrl_string' argument 3 names different: declaration 'val' definition 'value'.
+    const char *name, const char *value)
+                                  ^
+crypto/encode_decode/encoder_meth.c:165:23: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+        OSSL_NAMEMAP *namemap = ossl_namemap_stored(methdata->libctx);
+                      ^
+crypto/encode_decode/encoder_meth.c:193:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap;
+                  ^
+crypto/encode_decode/encoder_meth.c:360:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap = ossl_namemap_stored(methdata->libctx);
+                  ^
+crypto/encode_decode/encoder_meth.c:535:23: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+        OSSL_NAMEMAP *namemap = ossl_namemap_stored(libctx);
+                      ^
+crypto/encode_decode/encoder_meth.c:583:23: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+        OSSL_NAMEMAP *namemap = ossl_namemap_stored(libctx);
+                      ^
+crypto/encode_decode/decoder_pkey.c:833:17: style: inconclusive: Function 'OSSL_DECODER_CTX_new_for_pkey' argument 3 names different: declaration 'input_struct' definition 'input_structure'. [funcArgNamesDifferent]
+    const char *input_structure,
+                ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/decoder.h:126:17: note: Function 'OSSL_DECODER_CTX_new_for_pkey' argument 3 names different: declaration 'input_struct' definition 'input_structure'.
+    const char *input_struct,
+                ^
+crypto/encode_decode/decoder_pkey.c:833:17: note: Function 'OSSL_DECODER_CTX_new_for_pkey' argument 3 names different: declaration 'input_struct' definition 'input_structure'.
+    const char *input_structure,
+                ^
+crypto/encode_decode/decoder_pkey.c:235:49: style: Parameter 'keymgmt' can be declared as pointer to const [constParameterPointer]
+static int collect_decoder_keymgmt(EVP_KEYMGMT *keymgmt, OSSL_DECODER *decoder,
+                                                ^
+crypto/encode_decode/decoder_pkey.c:317:28: style: Variable 'keymgmts' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(EVP_KEYMGMT) *keymgmts = data->keymgmts;
+                           ^
+crypto/encode_decode/decoder_pkey.c:374:23: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+        OSSL_NAMEMAP *namemap = ossl_namemap_stored(data->libctx);
+                      ^
+crypto/encode_decode/decoder_pkey.c:366:39: style: Parameter 'keymgmt' can be declared as pointer to const [constParameterPointer]
+static int check_keymgmt(EVP_KEYMGMT *keymgmt, struct collect_data_st *data)
+                                      ^
+crypto/err/err.c:803:17: style: The scope of the variable 'arg' can be reduced. [variableScope]
+    char *str, *arg;
+                ^
+crypto/err/err.c:195:37: style: inconclusive: Function 'OSSL_ERR_STATE_free' argument 1 names different: declaration 'es' definition 'state'. [funcArgNamesDifferent]
+void OSSL_ERR_STATE_free(ERR_STATE *state)
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/err.h:455:37: note: Function 'OSSL_ERR_STATE_free' argument 1 names different: declaration 'es' definition 'state'.
+void OSSL_ERR_STATE_free(ERR_STATE *es);
+                                    ^
+crypto/err/err.c:195:37: note: Function 'OSSL_ERR_STATE_free' argument 1 names different: declaration 'es' definition 'state'.
+void OSSL_ERR_STATE_free(ERR_STATE *state)
+                                    ^
+crypto/err/err.c:571:47: style: inconclusive: Function 'ERR_error_string' argument 2 names different: declaration 'buf' definition 'ret'. [funcArgNamesDifferent]
+char *ERR_error_string(unsigned long e, char *ret)
+                                              ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/err.h:411:47: note: Function 'ERR_error_string' argument 2 names different: declaration 'buf' definition 'ret'.
+char *ERR_error_string(unsigned long e, char *buf);
+                                              ^
+crypto/err/err.c:571:47: note: Function 'ERR_error_string' argument 2 names different: declaration 'buf' definition 'ret'.
+char *ERR_error_string(unsigned long e, char *ret)
+                                              ^
+crypto/err/err.c:803:17: style: Variable 'arg' can be declared as pointer to const [constVariablePointer]
+    char *str, *arg;
+                ^
+crypto/encode_decode/encoder_lib.c:360:50: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+int OSSL_ENCODER_CTX_add_extra(OSSL_ENCODER_CTX *ctx,
+                                                 ^
+crypto/encode_decode/encoder_lib.c:376:57: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+int OSSL_ENCODER_CTX_get_num_encoders(OSSL_ENCODER_CTX *ctx)
+                                                        ^
+crypto/encode_decode/encoder_lib.c:435:58: style: Parameter 'encoder_inst' can be declared as pointer to const [constParameterPointer]
+OSSL_ENCODER_INSTANCE_get_encoder(OSSL_ENCODER_INSTANCE *encoder_inst)
+                                                         ^
+crypto/encode_decode/encoder_lib.c:443:62: style: Parameter 'encoder_inst' can be declared as pointer to const [constParameterPointer]
+OSSL_ENCODER_INSTANCE_get_encoder_ctx(OSSL_ENCODER_INSTANCE *encoder_inst)
+                                                             ^
+crypto/encode_decode/encoder_lib.c:451:62: style: Parameter 'encoder_inst' can be declared as pointer to const [constParameterPointer]
+OSSL_ENCODER_INSTANCE_get_output_type(OSSL_ENCODER_INSTANCE *encoder_inst)
+                                                             ^
+crypto/encode_decode/encoder_lib.c:459:67: style: Parameter 'encoder_inst' can be declared as pointer to const [constParameterPointer]
+OSSL_ENCODER_INSTANCE_get_output_structure(OSSL_ENCODER_INSTANCE *encoder_inst)
+                                                                  ^
+crypto/encode_decode/encoder_pkey.c:182:23: style: Variable 'encoder' can be declared as pointer to const [constVariablePointer]
+        OSSL_ENCODER *encoder = OSSL_ENCODER_INSTANCE_get_encoder(encoder_inst);
+                      ^
+crypto/encode_decode/encoder_pkey.c:236:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap;
+                  ^
+crypto/err/err_mark.c:62:16: style: Variable 'es' can be declared as pointer to const [constVariablePointer]
+    ERR_STATE *es;
+               ^
+crypto/err/err_prn.c:58:36: style: inconclusive: Function 'ERR_add_error_txt' argument 1 names different: declaration 'sepr' definition 'separator'. [funcArgNamesDifferent]
+void ERR_add_error_txt(const char *separator, const char *txt)
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/err.h:428:36: note: Function 'ERR_add_error_txt' argument 1 names different: declaration 'sepr' definition 'separator'.
+void ERR_add_error_txt(const char *sepr, const char *txt);
+                                   ^
+crypto/err/err_prn.c:58:36: note: Function 'ERR_add_error_txt' argument 1 names different: declaration 'sepr' definition 'separator'.
+void ERR_add_error_txt(const char *separator, const char *txt)
+                                   ^
+crypto/err/err_prn.c:145:40: style: inconclusive: Function 'ERR_add_error_mem_bio' argument 1 names different: declaration 'sep' definition 'separator'. [funcArgNamesDifferent]
+void ERR_add_error_mem_bio(const char *separator, BIO *bio)
+                                       ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/err.h:429:40: note: Function 'ERR_add_error_mem_bio' argument 1 names different: declaration 'sep' definition 'separator'.
+void ERR_add_error_mem_bio(const char *sep, BIO *bio);
+                                       ^
+crypto/err/err_prn.c:145:40: note: Function 'ERR_add_error_mem_bio' argument 1 names different: declaration 'sep' definition 'separator'.
+void ERR_add_error_mem_bio(const char *separator, BIO *bio)
+                                       ^
+crypto/evp/bio_md.c:135:20: style: The scope of the variable 'ppmd' can be reduced. [variableScope]
+    const EVP_MD **ppmd;
+                   ^
+crypto/evp/bio_md.c:48:24: style: inconclusive: Function 'md_new' argument 1 names different: declaration 'h' definition 'bi'. [funcArgNamesDifferent]
+static int md_new(BIO *bi)
+                       ^
+crypto/evp/bio_md.c:24:24: note: Function 'md_new' argument 1 names different: declaration 'h' definition 'bi'.
+static int md_new(BIO *h);
+                       ^
+crypto/evp/bio_md.c:48:24: note: Function 'md_new' argument 1 names different: declaration 'h' definition 'bi'.
+static int md_new(BIO *bi)
+                       ^
+crypto/evp/bio_md.c:62:25: style: inconclusive: Function 'md_free' argument 1 names different: declaration 'data' definition 'a'. [funcArgNamesDifferent]
+static int md_free(BIO *a)
+                        ^
+crypto/evp/bio_md.c:25:25: note: Function 'md_free' argument 1 names different: declaration 'data' definition 'a'.
+static int md_free(BIO *data);
+                        ^
+crypto/evp/bio_md.c:62:25: note: Function 'md_free' argument 1 names different: declaration 'data' definition 'a'.
+static int md_free(BIO *a)
+                        ^
+crypto/evp/bio_md.c:73:25: style: inconclusive: Function 'md_read' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static int md_read(BIO *b, char *out, int outl)
+                        ^
+crypto/evp/bio_md.c:21:25: note: Function 'md_read' argument 1 names different: declaration 'h' definition 'b'.
+static int md_read(BIO *h, char *buf, int size);
+                        ^
+crypto/evp/bio_md.c:73:25: note: Function 'md_read' argument 1 names different: declaration 'h' definition 'b'.
+static int md_read(BIO *b, char *out, int outl)
+                        ^
+crypto/evp/bio_md.c:73:34: style: inconclusive: Function 'md_read' argument 2 names different: declaration 'buf' definition 'out'. [funcArgNamesDifferent]
+static int md_read(BIO *b, char *out, int outl)
+                                 ^
+crypto/evp/bio_md.c:21:34: note: Function 'md_read' argument 2 names different: declaration 'buf' definition 'out'.
+static int md_read(BIO *h, char *buf, int size);
+                                 ^
+crypto/evp/bio_md.c:73:34: note: Function 'md_read' argument 2 names different: declaration 'buf' definition 'out'.
+static int md_read(BIO *b, char *out, int outl)
+                                 ^
+crypto/evp/bio_md.c:73:43: style: inconclusive: Function 'md_read' argument 3 names different: declaration 'size' definition 'outl'. [funcArgNamesDifferent]
+static int md_read(BIO *b, char *out, int outl)
+                                          ^
+crypto/evp/bio_md.c:21:43: note: Function 'md_read' argument 3 names different: declaration 'size' definition 'outl'.
+static int md_read(BIO *h, char *buf, int size);
+                                          ^
+crypto/evp/bio_md.c:73:43: note: Function 'md_read' argument 3 names different: declaration 'size' definition 'outl'.
+static int md_read(BIO *b, char *out, int outl)
+                                          ^
+crypto/evp/bio_md.c:102:26: style: inconclusive: Function 'md_write' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static int md_write(BIO *b, const char *in, int inl)
+                         ^
+crypto/evp/bio_md.c:20:26: note: Function 'md_write' argument 1 names different: declaration 'h' definition 'b'.
+static int md_write(BIO *h, char const *buf, int num);
+                         ^
+crypto/evp/bio_md.c:102:26: note: Function 'md_write' argument 1 names different: declaration 'h' definition 'b'.
+static int md_write(BIO *b, const char *in, int inl)
+                         ^
+crypto/evp/bio_md.c:102:41: style: inconclusive: Function 'md_write' argument 2 names different: declaration 'buf' definition 'in'. [funcArgNamesDifferent]
+static int md_write(BIO *b, const char *in, int inl)
+                                        ^
+crypto/evp/bio_md.c:20:41: note: Function 'md_write' argument 2 names different: declaration 'buf' definition 'in'.
+static int md_write(BIO *h, char const *buf, int num);
+                                        ^
+crypto/evp/bio_md.c:102:41: note: Function 'md_write' argument 2 names different: declaration 'buf' definition 'in'.
+static int md_write(BIO *b, const char *in, int inl)
+                                        ^
+crypto/evp/bio_md.c:102:49: style: inconclusive: Function 'md_write' argument 3 names different: declaration 'num' definition 'inl'. [funcArgNamesDifferent]
+static int md_write(BIO *b, const char *in, int inl)
+                                                ^
+crypto/evp/bio_md.c:20:50: note: Function 'md_write' argument 3 names different: declaration 'num' definition 'inl'.
+static int md_write(BIO *h, char const *buf, int num);
+                                                 ^
+crypto/evp/bio_md.c:102:49: note: Function 'md_write' argument 3 names different: declaration 'num' definition 'inl'.
+static int md_write(BIO *b, const char *in, int inl)
+                                                ^
+crypto/evp/bio_md.c:132:26: style: inconclusive: Function 'md_ctrl' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static long md_ctrl(BIO *b, int cmd, long num, void *ptr)
+                         ^
+crypto/evp/bio_md.c:23:26: note: Function 'md_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long md_ctrl(BIO *h, int cmd, long arg1, void *arg2);
+                         ^
+crypto/evp/bio_md.c:132:26: note: Function 'md_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long md_ctrl(BIO *b, int cmd, long num, void *ptr)
+                         ^
+crypto/evp/bio_md.c:132:43: style: inconclusive: Function 'md_ctrl' argument 3 names different: declaration 'arg1' definition 'num'. [funcArgNamesDifferent]
+static long md_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                          ^
+crypto/evp/bio_md.c:23:43: note: Function 'md_ctrl' argument 3 names different: declaration 'arg1' definition 'num'.
+static long md_ctrl(BIO *h, int cmd, long arg1, void *arg2);
+                                          ^
+crypto/evp/bio_md.c:132:43: note: Function 'md_ctrl' argument 3 names different: declaration 'arg1' definition 'num'.
+static long md_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                          ^
+crypto/evp/bio_md.c:132:54: style: inconclusive: Function 'md_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'. [funcArgNamesDifferent]
+static long md_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                                     ^
+crypto/evp/bio_md.c:23:55: note: Function 'md_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'.
+static long md_ctrl(BIO *h, int cmd, long arg1, void *arg2);
+                                                      ^
+crypto/evp/bio_md.c:132:54: note: Function 'md_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'.
+static long md_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                                     ^
+crypto/evp/bio_md.c:206:35: style: inconclusive: Function 'md_callback_ctrl' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static long md_callback_ctrl(BIO *b, int cmd, BIO_info_cb *fp)
+                                  ^
+crypto/evp/bio_md.c:26:35: note: Function 'md_callback_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long md_callback_ctrl(BIO *h, int cmd, BIO_info_cb *fp);
+                                  ^
+crypto/evp/bio_md.c:206:35: note: Function 'md_callback_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long md_callback_ctrl(BIO *b, int cmd, BIO_info_cb *fp)
+                                  ^
+crypto/evp/bio_md.c:218:25: style: inconclusive: Function 'md_gets' argument 1 names different: declaration 'h' definition 'bp'. [funcArgNamesDifferent]
+static int md_gets(BIO *bp, char *buf, int size)
+                        ^
+crypto/evp/bio_md.c:22:25: note: Function 'md_gets' argument 1 names different: declaration 'h' definition 'bp'.
+static int md_gets(BIO *h, char *str, int size);
+                        ^
+crypto/evp/bio_md.c:218:25: note: Function 'md_gets' argument 1 names different: declaration 'h' definition 'bp'.
+static int md_gets(BIO *bp, char *buf, int size)
+                        ^
+crypto/evp/bio_md.c:218:35: style: inconclusive: Function 'md_gets' argument 2 names different: declaration 'str' definition 'buf'. [funcArgNamesDifferent]
+static int md_gets(BIO *bp, char *buf, int size)
+                                  ^
+crypto/evp/bio_md.c:22:34: note: Function 'md_gets' argument 2 names different: declaration 'str' definition 'buf'.
+static int md_gets(BIO *h, char *str, int size);
+                                 ^
+crypto/evp/bio_md.c:218:35: note: Function 'md_gets' argument 2 names different: declaration 'str' definition 'buf'.
+static int md_gets(BIO *bp, char *buf, int size)
+                                  ^
+crypto/evp/bio_md.c:136:13: style: Variable 'md' can be declared as pointer to const [constVariablePointer]
+    EVP_MD *md;
+            ^
+crypto/evp/bio_enc.c:361:56: style: Condition '(ctx->buf_len-ctx->buf_off)==pend' is always true [knownConditionTrueFalse]
+            if (i < 0 || (ctx->buf_len - ctx->buf_off) == pend)
+                                                       ^
+crypto/evp/bio_enc.c:354:18: note: pend is assigned 'ctx->buf_len-ctx->buf_off' here.
+            pend = ctx->buf_len - ctx->buf_off;
+                 ^
+crypto/evp/bio_enc.c:361:56: note: Condition '(ctx->buf_len-ctx->buf_off)==pend' is always true
+            if (i < 0 || (ctx->buf_len - ctx->buf_off) == pend)
+                                                       ^
+crypto/evp/bio_enc.c:69:25: style: inconclusive: Function 'enc_new' argument 1 names different: declaration 'h' definition 'bi'. [funcArgNamesDifferent]
+static int enc_new(BIO *bi)
+                        ^
+crypto/evp/bio_enc.c:22:25: note: Function 'enc_new' argument 1 names different: declaration 'h' definition 'bi'.
+static int enc_new(BIO *h);
+                        ^
+crypto/evp/bio_enc.c:69:25: note: Function 'enc_new' argument 1 names different: declaration 'h' definition 'bi'.
+static int enc_new(BIO *bi)
+                        ^
+crypto/evp/bio_enc.c:90:26: style: inconclusive: Function 'enc_free' argument 1 names different: declaration 'data' definition 'a'. [funcArgNamesDifferent]
+static int enc_free(BIO *a)
+                         ^
+crypto/evp/bio_enc.c:23:26: note: Function 'enc_free' argument 1 names different: declaration 'data' definition 'a'.
+static int enc_free(BIO *data);
+                         ^
+crypto/evp/bio_enc.c:90:26: note: Function 'enc_free' argument 1 names different: declaration 'data' definition 'a'.
+static int enc_free(BIO *a)
+                         ^
+crypto/evp/bio_enc.c:109:26: style: inconclusive: Function 'enc_read' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static int enc_read(BIO *b, char *out, int outl)
+                         ^
+crypto/evp/bio_enc.c:20:26: note: Function 'enc_read' argument 1 names different: declaration 'h' definition 'b'.
+static int enc_read(BIO *h, char *buf, int size);
+                         ^
+crypto/evp/bio_enc.c:109:26: note: Function 'enc_read' argument 1 names different: declaration 'h' definition 'b'.
+static int enc_read(BIO *b, char *out, int outl)
+                         ^
+crypto/evp/bio_enc.c:109:35: style: inconclusive: Function 'enc_read' argument 2 names different: declaration 'buf' definition 'out'. [funcArgNamesDifferent]
+static int enc_read(BIO *b, char *out, int outl)
+                                  ^
+crypto/evp/bio_enc.c:20:35: note: Function 'enc_read' argument 2 names different: declaration 'buf' definition 'out'.
+static int enc_read(BIO *h, char *buf, int size);
+                                  ^
+crypto/evp/bio_enc.c:109:35: note: Function 'enc_read' argument 2 names different: declaration 'buf' definition 'out'.
+static int enc_read(BIO *b, char *out, int outl)
+                                  ^
+crypto/evp/bio_enc.c:109:44: style: inconclusive: Function 'enc_read' argument 3 names different: declaration 'size' definition 'outl'. [funcArgNamesDifferent]
+static int enc_read(BIO *b, char *out, int outl)
+                                           ^
+crypto/evp/bio_enc.c:20:44: note: Function 'enc_read' argument 3 names different: declaration 'size' definition 'outl'.
+static int enc_read(BIO *h, char *buf, int size);
+                                           ^
+crypto/evp/bio_enc.c:109:44: note: Function 'enc_read' argument 3 names different: declaration 'size' definition 'outl'.
+static int enc_read(BIO *b, char *out, int outl)
+                                           ^
+crypto/evp/bio_enc.c:242:27: style: inconclusive: Function 'enc_write' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static int enc_write(BIO *b, const char *in, int inl)
+                          ^
+crypto/evp/bio_enc.c:19:27: note: Function 'enc_write' argument 1 names different: declaration 'h' definition 'b'.
+static int enc_write(BIO *h, const char *buf, int num);
+                          ^
+crypto/evp/bio_enc.c:242:27: note: Function 'enc_write' argument 1 names different: declaration 'h' definition 'b'.
+static int enc_write(BIO *b, const char *in, int inl)
+                          ^
+crypto/evp/bio_enc.c:242:42: style: inconclusive: Function 'enc_write' argument 2 names different: declaration 'buf' definition 'in'. [funcArgNamesDifferent]
+static int enc_write(BIO *b, const char *in, int inl)
+                                         ^
+crypto/evp/bio_enc.c:19:42: note: Function 'enc_write' argument 2 names different: declaration 'buf' definition 'in'.
+static int enc_write(BIO *h, const char *buf, int num);
+                                         ^
+crypto/evp/bio_enc.c:242:42: note: Function 'enc_write' argument 2 names different: declaration 'buf' definition 'in'.
+static int enc_write(BIO *b, const char *in, int inl)
+                                         ^
+crypto/evp/bio_enc.c:242:50: style: inconclusive: Function 'enc_write' argument 3 names different: declaration 'num' definition 'inl'. [funcArgNamesDifferent]
+static int enc_write(BIO *b, const char *in, int inl)
+                                                 ^
+crypto/evp/bio_enc.c:19:51: note: Function 'enc_write' argument 3 names different: declaration 'num' definition 'inl'.
+static int enc_write(BIO *h, const char *buf, int num);
+                                                  ^
+crypto/evp/bio_enc.c:242:50: note: Function 'enc_write' argument 3 names different: declaration 'num' definition 'inl'.
+static int enc_write(BIO *b, const char *in, int inl)
+                                                 ^
+crypto/evp/bio_enc.c:302:27: style: inconclusive: Function 'enc_ctrl' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static long enc_ctrl(BIO *b, int cmd, long num, void *ptr)
+                          ^
+crypto/evp/bio_enc.c:21:27: note: Function 'enc_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long enc_ctrl(BIO *h, int cmd, long arg1, void *arg2);
+                          ^
+crypto/evp/bio_enc.c:302:27: note: Function 'enc_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long enc_ctrl(BIO *b, int cmd, long num, void *ptr)
+                          ^
+crypto/evp/bio_enc.c:302:44: style: inconclusive: Function 'enc_ctrl' argument 3 names different: declaration 'arg1' definition 'num'. [funcArgNamesDifferent]
+static long enc_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                           ^
+crypto/evp/bio_enc.c:21:44: note: Function 'enc_ctrl' argument 3 names different: declaration 'arg1' definition 'num'.
+static long enc_ctrl(BIO *h, int cmd, long arg1, void *arg2);
+                                           ^
+crypto/evp/bio_enc.c:302:44: note: Function 'enc_ctrl' argument 3 names different: declaration 'arg1' definition 'num'.
+static long enc_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                           ^
+crypto/evp/bio_enc.c:302:55: style: inconclusive: Function 'enc_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'. [funcArgNamesDifferent]
+static long enc_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                                      ^
+crypto/evp/bio_enc.c:21:56: note: Function 'enc_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'.
+static long enc_ctrl(BIO *h, int cmd, long arg1, void *arg2);
+                                                       ^
+crypto/evp/bio_enc.c:302:55: note: Function 'enc_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'.
+static long enc_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                                      ^
+crypto/evp/bio_enc.c:410:36: style: inconclusive: Function 'enc_callback_ctrl' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static long enc_callback_ctrl(BIO *b, int cmd, BIO_info_cb *fp)
+                                   ^
+crypto/evp/bio_enc.c:24:36: note: Function 'enc_callback_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long enc_callback_ctrl(BIO *h, int cmd, BIO_info_cb *fps);
+                                   ^
+crypto/evp/bio_enc.c:410:36: note: Function 'enc_callback_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long enc_callback_ctrl(BIO *b, int cmd, BIO_info_cb *fp)
+                                   ^
+crypto/evp/bio_enc.c:421:33: style: inconclusive: Function 'BIO_set_cipher' argument 5 names different: declaration 'enc' definition 'e'. [funcArgNamesDifferent]
+    const unsigned char *i, int e)
+                                ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:931:33: note: Function 'BIO_set_cipher' argument 5 names different: declaration 'enc' definition 'e'.
+    const unsigned char *i, int enc);
+                                ^
+crypto/evp/bio_enc.c:421:33: note: Function 'BIO_set_cipher' argument 5 names different: declaration 'enc' definition 'e'.
+    const unsigned char *i, int e)
+                                ^
+crypto/evp/bio_b64.c:120:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i, dlen;
+        ^
+crypto/evp/asymcipher.c:496:17: style: inconclusive: Function 'evp_asym_cipher_fetch_from_prov' argument 2 names different: declaration 'name' definition 'algorithm'. [funcArgNamesDifferent]
+    const char *algorithm,
+                ^
+crypto/evp/evp_local.h:347:17: note: Function 'evp_asym_cipher_fetch_from_prov' argument 2 names different: declaration 'name' definition 'algorithm'.
+    const char *name,
+                ^
+crypto/evp/asymcipher.c:496:17: note: Function 'evp_asym_cipher_fetch_from_prov' argument 2 names different: declaration 'name' definition 'algorithm'.
+    const char *algorithm,
+                ^
+crypto/ess/ess_asn1.c:25:1: style: inconclusive: Function 'ESS_ISSUER_SERIAL_dup' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+IMPLEMENT_ASN1_DUP_FUNCTION(ESS_ISSUER_SERIAL)
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ess.h:176:1: note: Function 'ESS_ISSUER_SERIAL_dup' argument 1 names different: declaration 'a' definition 'x'.
+DECLARE_ASN1_DUP_FUNCTION(ESS_ISSUER_SERIAL)
+^
+crypto/ess/ess_asn1.c:25:1: note: Function 'ESS_ISSUER_SERIAL_dup' argument 1 names different: declaration 'a' definition 'x'.
+IMPLEMENT_ASN1_DUP_FUNCTION(ESS_ISSUER_SERIAL)
+^
+crypto/evp/asymcipher.c:552:78: style: inconclusive: Function 'EVP_ASYM_CIPHER_gettable_ctx_params' argument 1 names different: declaration 'ciph' definition 'cip'. [funcArgNamesDifferent]
+const OSSL_PARAM *EVP_ASYM_CIPHER_gettable_ctx_params(const EVP_ASYM_CIPHER *cip)
+                                                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1827:78: note: Function 'EVP_ASYM_CIPHER_gettable_ctx_params' argument 1 names different: declaration 'ciph' definition 'cip'.
+const OSSL_PARAM *EVP_ASYM_CIPHER_gettable_ctx_params(const EVP_ASYM_CIPHER *ciph);
+                                                                             ^
+crypto/evp/asymcipher.c:552:78: note: Function 'EVP_ASYM_CIPHER_gettable_ctx_params' argument 1 names different: declaration 'ciph' definition 'cip'.
+const OSSL_PARAM *EVP_ASYM_CIPHER_gettable_ctx_params(const EVP_ASYM_CIPHER *cip)
+                                                                             ^
+crypto/ess/ess_asn1.c:33:1: style: inconclusive: Function 'ESS_CERT_ID_dup' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+IMPLEMENT_ASN1_DUP_FUNCTION(ESS_CERT_ID)
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ess.h:180:1: note: Function 'ESS_CERT_ID_dup' argument 1 names different: declaration 'a' definition 'x'.
+DECLARE_ASN1_DUP_FUNCTION(ESS_CERT_ID)
+^
+crypto/ess/ess_asn1.c:33:1: note: Function 'ESS_CERT_ID_dup' argument 1 names different: declaration 'a' definition 'x'.
+IMPLEMENT_ASN1_DUP_FUNCTION(ESS_CERT_ID)
+^
+crypto/evp/asymcipher.c:563:78: style: inconclusive: Function 'EVP_ASYM_CIPHER_settable_ctx_params' argument 1 names different: declaration 'ciph' definition 'cip'. [funcArgNamesDifferent]
+const OSSL_PARAM *EVP_ASYM_CIPHER_settable_ctx_params(const EVP_ASYM_CIPHER *cip)
+                                                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1828:78: note: Function 'EVP_ASYM_CIPHER_settable_ctx_params' argument 1 names different: declaration 'ciph' definition 'cip'.
+const OSSL_PARAM *EVP_ASYM_CIPHER_settable_ctx_params(const EVP_ASYM_CIPHER *ciph);
+                                                                             ^
+crypto/evp/asymcipher.c:563:78: note: Function 'EVP_ASYM_CIPHER_settable_ctx_params' argument 1 names different: declaration 'ciph' definition 'cip'.
+const OSSL_PARAM *EVP_ASYM_CIPHER_settable_ctx_params(const EVP_ASYM_CIPHER *cip)
+                                                                             ^
+crypto/ess/ess_asn1.c:41:1: style: inconclusive: Function 'ESS_SIGNING_CERT_dup' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+IMPLEMENT_ASN1_DUP_FUNCTION(ESS_SIGNING_CERT)
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ess.h:183:1: note: Function 'ESS_SIGNING_CERT_dup' argument 1 names different: declaration 'a' definition 'x'.
+DECLARE_ASN1_DUP_FUNCTION(ESS_SIGNING_CERT)
+^
+crypto/ess/ess_asn1.c:41:1: note: Function 'ESS_SIGNING_CERT_dup' argument 1 names different: declaration 'a' definition 'x'.
+IMPLEMENT_ASN1_DUP_FUNCTION(ESS_SIGNING_CERT)
+^
+crypto/ess/ess_asn1.c:50:1: style: inconclusive: Function 'ESS_CERT_ID_V2_dup' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+IMPLEMENT_ASN1_DUP_FUNCTION(ESS_CERT_ID_V2)
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ess.h:187:1: note: Function 'ESS_CERT_ID_V2_dup' argument 1 names different: declaration 'a' definition 'x'.
+DECLARE_ASN1_DUP_FUNCTION(ESS_CERT_ID_V2)
+^
+crypto/ess/ess_asn1.c:50:1: note: Function 'ESS_CERT_ID_V2_dup' argument 1 names different: declaration 'a' definition 'x'.
+IMPLEMENT_ASN1_DUP_FUNCTION(ESS_CERT_ID_V2)
+^
+crypto/ess/ess_asn1.c:58:1: style: inconclusive: Function 'ESS_SIGNING_CERT_V2_dup' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+IMPLEMENT_ASN1_DUP_FUNCTION(ESS_SIGNING_CERT_V2)
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ess.h:190:1: note: Function 'ESS_SIGNING_CERT_V2_dup' argument 1 names different: declaration 'a' definition 'x'.
+DECLARE_ASN1_DUP_FUNCTION(ESS_SIGNING_CERT_V2)
+^
+crypto/ess/ess_asn1.c:58:1: note: Function 'ESS_SIGNING_CERT_V2_dup' argument 1 names different: declaration 'a' definition 'x'.
+IMPLEMENT_ASN1_DUP_FUNCTION(ESS_SIGNING_CERT_V2)
+^
+crypto/evp/bio_b64.c:71:25: style: inconclusive: Function 'b64_new' argument 1 names different: declaration 'h' definition 'bi'. [funcArgNamesDifferent]
+static int b64_new(BIO *bi)
+                        ^
+crypto/evp/bio_b64.c:22:25: note: Function 'b64_new' argument 1 names different: declaration 'h' definition 'bi'.
+static int b64_new(BIO *h);
+                        ^
+crypto/evp/bio_b64.c:71:25: note: Function 'b64_new' argument 1 names different: declaration 'h' definition 'bi'.
+static int b64_new(BIO *bi)
+                        ^
+crypto/evp/bio_b64.c:94:26: style: inconclusive: Function 'b64_free' argument 1 names different: declaration 'data' definition 'a'. [funcArgNamesDifferent]
+static int b64_free(BIO *a)
+                         ^
+crypto/evp/bio_b64.c:23:26: note: Function 'b64_free' argument 1 names different: declaration 'data' definition 'a'.
+static int b64_free(BIO *data);
+                         ^
+crypto/evp/bio_b64.c:94:26: note: Function 'b64_free' argument 1 names different: declaration 'data' definition 'a'.
+static int b64_free(BIO *a)
+                         ^
+crypto/evp/bio_b64.c:190:26: style: inconclusive: Function 'b64_read' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static int b64_read(BIO *b, char *out, int outl)
+                         ^
+crypto/evp/bio_b64.c:19:26: note: Function 'b64_read' argument 1 names different: declaration 'h' definition 'b'.
+static int b64_read(BIO *h, char *buf, int size);
+                         ^
+crypto/evp/bio_b64.c:190:26: note: Function 'b64_read' argument 1 names different: declaration 'h' definition 'b'.
+static int b64_read(BIO *b, char *out, int outl)
+                         ^
+crypto/evp/bio_b64.c:190:35: style: inconclusive: Function 'b64_read' argument 2 names different: declaration 'buf' definition 'out'. [funcArgNamesDifferent]
+static int b64_read(BIO *b, char *out, int outl)
+                                  ^
+crypto/evp/bio_b64.c:19:35: note: Function 'b64_read' argument 2 names different: declaration 'buf' definition 'out'.
+static int b64_read(BIO *h, char *buf, int size);
+                                  ^
+crypto/evp/bio_b64.c:190:35: note: Function 'b64_read' argument 2 names different: declaration 'buf' definition 'out'.
+static int b64_read(BIO *b, char *out, int outl)
+                                  ^
+crypto/evp/bio_b64.c:190:44: style: inconclusive: Function 'b64_read' argument 3 names different: declaration 'size' definition 'outl'. [funcArgNamesDifferent]
+static int b64_read(BIO *b, char *out, int outl)
+                                           ^
+crypto/evp/bio_b64.c:19:44: note: Function 'b64_read' argument 3 names different: declaration 'size' definition 'outl'.
+static int b64_read(BIO *h, char *buf, int size);
+                                           ^
+crypto/evp/bio_b64.c:190:44: note: Function 'b64_read' argument 3 names different: declaration 'size' definition 'outl'.
+static int b64_read(BIO *b, char *out, int outl)
+                                           ^
+crypto/evp/bio_b64.c:400:27: style: inconclusive: Function 'b64_write' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static int b64_write(BIO *b, const char *in, int inl)
+                          ^
+crypto/evp/bio_b64.c:18:27: note: Function 'b64_write' argument 1 names different: declaration 'h' definition 'b'.
+static int b64_write(BIO *h, const char *buf, int num);
+                          ^
+crypto/evp/bio_b64.c:400:27: note: Function 'b64_write' argument 1 names different: declaration 'h' definition 'b'.
+static int b64_write(BIO *b, const char *in, int inl)
+                          ^
+crypto/evp/bio_b64.c:400:42: style: inconclusive: Function 'b64_write' argument 2 names different: declaration 'buf' definition 'in'. [funcArgNamesDifferent]
+static int b64_write(BIO *b, const char *in, int inl)
+                                         ^
+crypto/evp/bio_b64.c:18:42: note: Function 'b64_write' argument 2 names different: declaration 'buf' definition 'in'.
+static int b64_write(BIO *h, const char *buf, int num);
+                                         ^
+crypto/evp/bio_b64.c:400:42: note: Function 'b64_write' argument 2 names different: declaration 'buf' definition 'in'.
+static int b64_write(BIO *b, const char *in, int inl)
+                                         ^
+crypto/evp/bio_b64.c:400:50: style: inconclusive: Function 'b64_write' argument 3 names different: declaration 'num' definition 'inl'. [funcArgNamesDifferent]
+static int b64_write(BIO *b, const char *in, int inl)
+                                                 ^
+crypto/evp/bio_b64.c:18:51: note: Function 'b64_write' argument 3 names different: declaration 'num' definition 'inl'.
+static int b64_write(BIO *h, const char *buf, int num);
+                                                  ^
+crypto/evp/bio_b64.c:400:50: note: Function 'b64_write' argument 3 names different: declaration 'num' definition 'inl'.
+static int b64_write(BIO *b, const char *in, int inl)
+                                                 ^
+crypto/evp/bio_b64.c:510:27: style: inconclusive: Function 'b64_ctrl' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static long b64_ctrl(BIO *b, int cmd, long num, void *ptr)
+                          ^
+crypto/evp/bio_b64.c:21:27: note: Function 'b64_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long b64_ctrl(BIO *h, int cmd, long arg1, void *arg2);
+                          ^
+crypto/evp/bio_b64.c:510:27: note: Function 'b64_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long b64_ctrl(BIO *b, int cmd, long num, void *ptr)
+                          ^
+crypto/evp/bio_b64.c:510:44: style: inconclusive: Function 'b64_ctrl' argument 3 names different: declaration 'arg1' definition 'num'. [funcArgNamesDifferent]
+static long b64_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                           ^
+crypto/evp/bio_b64.c:21:44: note: Function 'b64_ctrl' argument 3 names different: declaration 'arg1' definition 'num'.
+static long b64_ctrl(BIO *h, int cmd, long arg1, void *arg2);
+                                           ^
+crypto/evp/bio_b64.c:510:44: note: Function 'b64_ctrl' argument 3 names different: declaration 'arg1' definition 'num'.
+static long b64_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                           ^
+crypto/evp/bio_b64.c:510:55: style: inconclusive: Function 'b64_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'. [funcArgNamesDifferent]
+static long b64_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                                      ^
+crypto/evp/bio_b64.c:21:56: note: Function 'b64_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'.
+static long b64_ctrl(BIO *h, int cmd, long arg1, void *arg2);
+                                                       ^
+crypto/evp/bio_b64.c:510:55: note: Function 'b64_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'.
+static long b64_ctrl(BIO *b, int cmd, long num, void *ptr)
+                                                      ^
+crypto/evp/bio_b64.c:607:36: style: inconclusive: Function 'b64_callback_ctrl' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static long b64_callback_ctrl(BIO *b, int cmd, BIO_info_cb *fp)
+                                   ^
+crypto/evp/bio_b64.c:24:36: note: Function 'b64_callback_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long b64_callback_ctrl(BIO *h, int cmd, BIO_info_cb *fp);
+                                   ^
+crypto/evp/bio_b64.c:607:36: note: Function 'b64_callback_ctrl' argument 1 names different: declaration 'h' definition 'b'.
+static long b64_callback_ctrl(BIO *b, int cmd, BIO_info_cb *fp)
+                                   ^
+crypto/evp/bio_b64.c:617:26: style: inconclusive: Function 'b64_puts' argument 1 names different: declaration 'h' definition 'b'. [funcArgNamesDifferent]
+static int b64_puts(BIO *b, const char *str)
+                         ^
+crypto/evp/bio_b64.c:20:26: note: Function 'b64_puts' argument 1 names different: declaration 'h' definition 'b'.
+static int b64_puts(BIO *h, const char *str);
+                         ^
+crypto/evp/bio_b64.c:617:26: note: Function 'b64_puts' argument 1 names different: declaration 'h' definition 'b'.
+static int b64_puts(BIO *b, const char *str)
+                         ^
+crypto/evp/bio_b64.c:176:43: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+static int b64_write_pending(BIO_B64_CTX *ctx)
+                                          ^
+crypto/evp/bio_b64.c:194:20: style: Variable 'p' can be declared as pointer to const [constVariablePointer]
+    unsigned char *p, *q;
+                   ^
+crypto/ess/ess_lib.c:48:15: style: Variable 'cert' can be declared as pointer to const [constVariablePointer]
+        X509 *cert = sk_X509_value(certs, i);
+              ^
+crypto/ess/ess_lib.c:150:15: style: Variable 'cert' can be declared as pointer to const [constVariablePointer]
+        X509 *cert = sk_X509_value(certs, i);
+              ^
+crypto/ess/ess_lib.c:247:19: style: Variable 'issuer' can be declared as pointer to const [constVariablePointer]
+    GENERAL_NAME *issuer;
+                  ^
+crypto/evp/dh_ctrl.c:104:70: style: inconclusive: Function 'EVP_PKEY_CTX_set_dh_paramgen_subprime_len' argument 2 names different: declaration 'qlen' definition 'qbits'. [funcArgNamesDifferent]
+int EVP_PKEY_CTX_set_dh_paramgen_subprime_len(EVP_PKEY_CTX *ctx, int qbits)
+                                                                     ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/dh.h:44:70: note: Function 'EVP_PKEY_CTX_set_dh_paramgen_subprime_len' argument 2 names different: declaration 'qlen' definition 'qbits'.
+int EVP_PKEY_CTX_set_dh_paramgen_subprime_len(EVP_PKEY_CTX *ctx, int qlen);
+                                                                     ^
+crypto/evp/dh_ctrl.c:104:70: note: Function 'EVP_PKEY_CTX_set_dh_paramgen_subprime_len' argument 2 names different: declaration 'qlen' definition 'qbits'.
+int EVP_PKEY_CTX_set_dh_paramgen_subprime_len(EVP_PKEY_CTX *ctx, int qbits)
+                                                                     ^
+crypto/evp/dh_ctrl.c:230:66: style: inconclusive: Function 'EVP_PKEY_CTX_get_dh_kdf_md' argument 2 names different: declaration 'md' definition 'pmd'. [funcArgNamesDifferent]
+int EVP_PKEY_CTX_get_dh_kdf_md(EVP_PKEY_CTX *ctx, const EVP_MD **pmd)
+                                                                 ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/dh.h:56:66: note: Function 'EVP_PKEY_CTX_get_dh_kdf_md' argument 2 names different: declaration 'md' definition 'pmd'.
+int EVP_PKEY_CTX_get_dh_kdf_md(EVP_PKEY_CTX *ctx, const EVP_MD **md);
+                                                                 ^
+crypto/evp/dh_ctrl.c:230:66: note: Function 'EVP_PKEY_CTX_get_dh_kdf_md' argument 2 names different: declaration 'md' definition 'pmd'.
+int EVP_PKEY_CTX_get_dh_kdf_md(EVP_PKEY_CTX *ctx, const EVP_MD **pmd)
+                                                                 ^
+crypto/evp/dh_ctrl.c:236:59: style: inconclusive: Function 'EVP_PKEY_CTX_set_dh_kdf_outlen' argument 2 names different: declaration 'len' definition 'outlen'. [funcArgNamesDifferent]
+int EVP_PKEY_CTX_set_dh_kdf_outlen(EVP_PKEY_CTX *ctx, int outlen)
+                                                          ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/dh.h:57:59: note: Function 'EVP_PKEY_CTX_set_dh_kdf_outlen' argument 2 names different: declaration 'len' definition 'outlen'.
+int EVP_PKEY_CTX_set_dh_kdf_outlen(EVP_PKEY_CTX *ctx, int len);
+                                                          ^
+crypto/evp/dh_ctrl.c:236:59: note: Function 'EVP_PKEY_CTX_set_dh_kdf_outlen' argument 2 names different: declaration 'len' definition 'outlen'.
+int EVP_PKEY_CTX_set_dh_kdf_outlen(EVP_PKEY_CTX *ctx, int outlen)
+                                                          ^
+crypto/evp/dh_ctrl.c:265:60: style: inconclusive: Function 'EVP_PKEY_CTX_get_dh_kdf_outlen' argument 2 names different: declaration 'len' definition 'plen'. [funcArgNamesDifferent]
+int EVP_PKEY_CTX_get_dh_kdf_outlen(EVP_PKEY_CTX *ctx, int *plen)
+                                                           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/dh.h:58:60: note: Function 'EVP_PKEY_CTX_get_dh_kdf_outlen' argument 2 names different: declaration 'len' definition 'plen'.
+int EVP_PKEY_CTX_get_dh_kdf_outlen(EVP_PKEY_CTX *ctx, int *len);
+                                                           ^
+crypto/evp/dh_ctrl.c:265:60: note: Function 'EVP_PKEY_CTX_get_dh_kdf_outlen' argument 2 names different: declaration 'len' definition 'plen'.
+int EVP_PKEY_CTX_get_dh_kdf_outlen(EVP_PKEY_CTX *ctx, int *plen)
+                                                           ^
+crypto/evp/dh_ctrl.c:320:69: style: inconclusive: Function 'EVP_PKEY_CTX_get0_dh_kdf_ukm' argument 2 names different: declaration 'ukm' definition 'pukm'. [funcArgNamesDifferent]
+int EVP_PKEY_CTX_get0_dh_kdf_ukm(EVP_PKEY_CTX *ctx, unsigned char **pukm)
+                                                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/dh.h:62:69: note: Function 'EVP_PKEY_CTX_get0_dh_kdf_ukm' argument 2 names different: declaration 'ukm' definition 'pukm'.
+int EVP_PKEY_CTX_get0_dh_kdf_ukm(EVP_PKEY_CTX *ctx, unsigned char **ukm);
+                                                                    ^
+crypto/evp/dh_ctrl.c:320:69: note: Function 'EVP_PKEY_CTX_get0_dh_kdf_ukm' argument 2 names different: declaration 'ukm' definition 'pukm'.
+int EVP_PKEY_CTX_get0_dh_kdf_ukm(EVP_PKEY_CTX *ctx, unsigned char **pukm)
+                                                                    ^
+crypto/evp/dh_ctrl.c:19:44: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+static int dh_paramgen_check(EVP_PKEY_CTX *ctx)
+                                           ^
+crypto/evp/dh_ctrl.c:34:48: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+static int dh_param_derive_check(EVP_PKEY_CTX *ctx)
+                                               ^
+crypto/evp/ctrl_params_translate.c:1183:9: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+        ctx->p2 = &p2;
+        ^
+crypto/evp/ctrl_params_translate.c:2750:46: style: inconclusive: Function 'evp_pkey_ctx_ctrl_to_param' argument 1 names different: declaration 'ctx' definition 'pctx'. [funcArgNamesDifferent]
+int evp_pkey_ctx_ctrl_to_param(EVP_PKEY_CTX *pctx,
+                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h:685:46: note: Function 'evp_pkey_ctx_ctrl_to_param' argument 1 names different: declaration 'ctx' definition 'pctx'.
+int evp_pkey_ctx_ctrl_to_param(EVP_PKEY_CTX *ctx,
+                                             ^
+crypto/evp/ctrl_params_translate.c:2750:46: note: Function 'evp_pkey_ctx_ctrl_to_param' argument 1 names different: declaration 'ctx' definition 'pctx'.
+int evp_pkey_ctx_ctrl_to_param(EVP_PKEY_CTX *pctx,
+                                             ^
+crypto/evp/ctrl_params_translate.c:2818:50: style: inconclusive: Function 'evp_pkey_ctx_ctrl_str_to_param' argument 1 names different: declaration 'ctx' definition 'pctx'. [funcArgNamesDifferent]
+int evp_pkey_ctx_ctrl_str_to_param(EVP_PKEY_CTX *pctx,
+                                                 ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h:688:50: note: Function 'evp_pkey_ctx_ctrl_str_to_param' argument 1 names different: declaration 'ctx' definition 'pctx'.
+int evp_pkey_ctx_ctrl_str_to_param(EVP_PKEY_CTX *ctx,
+                                                 ^
+crypto/evp/ctrl_params_translate.c:2818:50: note: Function 'evp_pkey_ctx_ctrl_str_to_param' argument 1 names different: declaration 'ctx' definition 'pctx'.
+int evp_pkey_ctx_ctrl_str_to_param(EVP_PKEY_CTX *pctx,
+                                                 ^
+crypto/evp/ctrl_params_translate.c:729:42: style: Parameter 'cipher' can be declared as pointer to const. However it seems that 'get_cipher_name' is a callback function, if 'cipher' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static const char *get_cipher_name(void *cipher)
+                                         ^
+crypto/evp/ctrl_params_translate.c:810:9: note: You might need to cast the function pointer here
+        get_cipher_name, get_cipher_by_name);
+        ^
+crypto/evp/ctrl_params_translate.c:729:42: note: Parameter 'cipher' can be declared as pointer to const
+static const char *get_cipher_name(void *cipher)
+                                         ^
+crypto/evp/ctrl_params_translate.c:734:38: style: Parameter 'md' can be declared as pointer to const. However it seems that 'get_md_name' is a callback function, if 'md' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static const char *get_md_name(void *md)
+                                     ^
+crypto/evp/ctrl_params_translate.c:818:9: note: You might need to cast the function pointer here
+        get_md_name, get_md_by_name);
+        ^
+crypto/evp/ctrl_params_translate.c:734:38: note: Parameter 'md' can be declared as pointer to const
+static const char *get_md_name(void *md)
+                                     ^
+crypto/evp/ctrl_params_translate.c:1542:15: style: Variable 'pkey' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *pkey = ctx->p2;
+              ^
+crypto/evp/ctrl_params_translate.c:1589:15: style: Variable 'pkey' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *pkey = ctx->p2;
+              ^
+crypto/evp/ctrl_params_translate.c:1622:15: style: Variable 'pkey' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *pkey = ctx->p2;
+              ^
+crypto/evp/ctrl_params_translate.c:1686:15: style: Variable 'pkey' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *pkey = ctx->p2;
+              ^
+crypto/evp/ctrl_params_translate.c:1757:15: style: Variable 'pkey' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *pkey = ctx->p2;
+              ^
+crypto/evp/ctrl_params_translate.c:1839:15: style: Variable 'pkey' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *pkey = ctx->p2;
+              ^
+crypto/evp/ctrl_params_translate.c:1867:15: style: Variable 'pkey' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *pkey = ctx->p2;
+              ^
+crypto/evp/ctrl_params_translate.c:1519:17: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+            ret = str_value_map[i].id;
+                ^
+crypto/evp/dsa_ctrl.c:17:45: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+static int dsa_paramgen_check(EVP_PKEY_CTX *ctx)
+                                            ^
+crypto/evp/digest.c:621:11: style: The scope of the variable 'provctx' can be reduced. [variableScope]
+    void *provctx;
+          ^
+crypto/evp/digest.c:633:11: style: The scope of the variable 'alg' can be reduced. [variableScope]
+    void *alg;
+          ^
+crypto/evp/digest.c:677:11: style: The scope of the variable 'provctx' can be reduced. [variableScope]
+    void *provctx;
+          ^
+crypto/evp/digest.c:689:11: style: The scope of the variable 'provctx' can be reduced. [variableScope]
+    void *provctx;
+          ^
+crypto/evp/digest.c:28:62: style: inconclusive: Function 'evp_md_ctx_clear_digest' argument 3 names different: declaration 'keep_digest' definition 'keep_fetched'. [funcArgNamesDifferent]
+void evp_md_ctx_clear_digest(EVP_MD_CTX *ctx, int force, int keep_fetched)
+                                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h:674:62: note: Function 'evp_md_ctx_clear_digest' argument 3 names different: declaration 'keep_digest' definition 'keep_fetched'.
+void evp_md_ctx_clear_digest(EVP_MD_CTX *ctx, int force, int keep_digest);
+                                                             ^
+crypto/evp/digest.c:28:62: note: Function 'evp_md_ctx_clear_digest' argument 3 names different: declaration 'keep_digest' definition 'keep_fetched'.
+void evp_md_ctx_clear_digest(EVP_MD_CTX *ctx, int force, int keep_fetched)
+                                                             ^
+crypto/evp/digest.c:245:51: style: inconclusive: Function 'EVP_DigestUpdate' argument 2 names different: declaration 'd' definition 'data'. [funcArgNamesDifferent]
+int EVP_DigestUpdate(EVP_MD_CTX *ctx, const void *data, size_t count)
+                                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:714:58: note: Function 'EVP_DigestUpdate' argument 2 names different: declaration 'd' definition 'data'.
+__owur int EVP_DigestUpdate(EVP_MD_CTX *ctx, const void *d,
+                                                         ^
+crypto/evp/digest.c:245:51: note: Function 'EVP_DigestUpdate' argument 2 names different: declaration 'd' definition 'data'.
+int EVP_DigestUpdate(EVP_MD_CTX *ctx, const void *data, size_t count)
+                                                  ^
+crypto/evp/digest.c:245:64: style: inconclusive: Function 'EVP_DigestUpdate' argument 3 names different: declaration 'cnt' definition 'count'. [funcArgNamesDifferent]
+int EVP_DigestUpdate(EVP_MD_CTX *ctx, const void *data, size_t count)
+                                                               ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:715:12: note: Function 'EVP_DigestUpdate' argument 3 names different: declaration 'cnt' definition 'count'.
+    size_t cnt);
+           ^
+crypto/evp/digest.c:245:64: note: Function 'EVP_DigestUpdate' argument 3 names different: declaration 'cnt' definition 'count'.
+int EVP_DigestUpdate(EVP_MD_CTX *ctx, const void *data, size_t count)
+                                                               ^
+crypto/evp/digest.c:289:71: style: inconclusive: Function 'EVP_DigestFinal' argument 3 names different: declaration 's' definition 'size'. [funcArgNamesDifferent]
+int EVP_DigestFinal(EVP_MD_CTX *ctx, unsigned char *md, unsigned int *size)
+                                                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:728:19: note: Function 'EVP_DigestFinal' argument 3 names different: declaration 's' definition 'size'.
+    unsigned int *s);
+                  ^
+crypto/evp/digest.c:289:71: note: Function 'EVP_DigestFinal' argument 3 names different: declaration 's' definition 'size'.
+int EVP_DigestFinal(EVP_MD_CTX *ctx, unsigned char *md, unsigned int *size)
+                                                                      ^
+crypto/evp/digest.c:298:74: style: inconclusive: Function 'EVP_DigestFinal_ex' argument 3 names different: declaration 's' definition 'isize'. [funcArgNamesDifferent]
+int EVP_DigestFinal_ex(EVP_MD_CTX *ctx, unsigned char *md, unsigned int *isize)
+                                                                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:717:19: note: Function 'EVP_DigestFinal_ex' argument 3 names different: declaration 's' definition 'isize'.
+    unsigned int *s);
+                  ^
+crypto/evp/digest.c:298:74: note: Function 'EVP_DigestFinal_ex' argument 3 names different: declaration 's' definition 'isize'.
+int EVP_DigestFinal_ex(EVP_MD_CTX *ctx, unsigned char *md, unsigned int *isize)
+                                                                         ^
+crypto/evp/digest.c:343:56: style: inconclusive: Function 'EVP_DigestFinalXOF' argument 2 names different: declaration 'out' definition 'md'. [funcArgNamesDifferent]
+int EVP_DigestFinalXOF(EVP_MD_CTX *ctx, unsigned char *md, size_t size)
+                                                       ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:729:63: note: Function 'EVP_DigestFinalXOF' argument 2 names different: declaration 'out' definition 'md'.
+__owur int EVP_DigestFinalXOF(EVP_MD_CTX *ctx, unsigned char *out,
+                                                              ^
+crypto/evp/digest.c:343:56: note: Function 'EVP_DigestFinalXOF' argument 2 names different: declaration 'out' definition 'md'.
+int EVP_DigestFinalXOF(EVP_MD_CTX *ctx, unsigned char *md, size_t size)
+                                                       ^
+crypto/evp/digest.c:343:67: style: inconclusive: Function 'EVP_DigestFinalXOF' argument 3 names different: declaration 'outlen' definition 'size'. [funcArgNamesDifferent]
+int EVP_DigestFinalXOF(EVP_MD_CTX *ctx, unsigned char *md, size_t size)
+                                                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:730:12: note: Function 'EVP_DigestFinalXOF' argument 3 names different: declaration 'outlen' definition 'size'.
+    size_t outlen);
+           ^
+crypto/evp/digest.c:343:67: note: Function 'EVP_DigestFinalXOF' argument 3 names different: declaration 'outlen' definition 'size'.
+int EVP_DigestFinalXOF(EVP_MD_CTX *ctx, unsigned char *md, size_t size)
+                                                                  ^
+crypto/evp/digest.c:386:55: style: inconclusive: Function 'EVP_DigestSqueeze' argument 2 names different: declaration 'out' definition 'md'. [funcArgNamesDifferent]
+int EVP_DigestSqueeze(EVP_MD_CTX *ctx, unsigned char *md, size_t size)
+                                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:731:62: note: Function 'EVP_DigestSqueeze' argument 2 names different: declaration 'out' definition 'md'.
+__owur int EVP_DigestSqueeze(EVP_MD_CTX *ctx, unsigned char *out,
+                                                             ^
+crypto/evp/digest.c:386:55: note: Function 'EVP_DigestSqueeze' argument 2 names different: declaration 'out' definition 'md'.
+int EVP_DigestSqueeze(EVP_MD_CTX *ctx, unsigned char *md, size_t size)
+                                                      ^
+crypto/evp/digest.c:386:66: style: inconclusive: Function 'EVP_DigestSqueeze' argument 3 names different: declaration 'outlen' definition 'size'. [funcArgNamesDifferent]
+int EVP_DigestSqueeze(EVP_MD_CTX *ctx, unsigned char *md, size_t size)
+                                                                 ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:732:12: note: Function 'EVP_DigestSqueeze' argument 3 names different: declaration 'outlen' definition 'size'.
+    size_t outlen);
+           ^
+crypto/evp/digest.c:386:66: note: Function 'EVP_DigestSqueeze' argument 3 names different: declaration 'outlen' definition 'size'.
+int EVP_DigestSqueeze(EVP_MD_CTX *ctx, unsigned char *md, size_t size)
+                                                                 ^
+crypto/evp/digest.c:1099:25: style: inconclusive: Function 'ossl_md2hmacnid' argument 1 names different: declaration 'mdnid' definition 'md_nid'. [funcArgNamesDifferent]
+int ossl_md2hmacnid(int md_nid)
+                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h:730:25: note: Function 'ossl_md2hmacnid' argument 1 names different: declaration 'mdnid' definition 'md_nid'.
+int ossl_md2hmacnid(int mdnid);
+                        ^
+crypto/evp/digest.c:1099:25: note: Function 'ossl_md2hmacnid' argument 1 names different: declaration 'mdnid' definition 'md_nid'.
+int ossl_md2hmacnid(int md_nid)
+                        ^
+crypto/evp/digest.c:238:68: style: Parameter 'impl' can be declared as pointer to const [constParameterPointer]
+int EVP_DigestInit_ex(EVP_MD_CTX *ctx, const EVP_MD *type, ENGINE *impl)
+                                                                   ^
+crypto/evp/digest.c:548:13: style: Parameter 'impl' can be declared as pointer to const [constParameterPointer]
+    ENGINE *impl)
+            ^
+crypto/evp/ec_support.c:135:12: style: The scope of the variable 'i' can be reduced. [variableScope]
+    size_t i;
+           ^
+crypto/evp/ec_support.c:136:9: style: The scope of the variable 'nid' can be reduced. [variableScope]
+    int nid;
+        ^
+crypto/evp/ec_ctrl.c:140:68: style: inconclusive: Function 'EVP_PKEY_CTX_get_ecdh_kdf_md' argument 2 names different: declaration 'md' definition 'pmd'. [funcArgNamesDifferent]
+int EVP_PKEY_CTX_get_ecdh_kdf_md(EVP_PKEY_CTX *ctx, const EVP_MD **pmd)
+                                                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:40:68: note: Function 'EVP_PKEY_CTX_get_ecdh_kdf_md' argument 2 names different: declaration 'md' definition 'pmd'.
+int EVP_PKEY_CTX_get_ecdh_kdf_md(EVP_PKEY_CTX *ctx, const EVP_MD **md);
+                                                                   ^
+crypto/evp/ec_ctrl.c:140:68: note: Function 'EVP_PKEY_CTX_get_ecdh_kdf_md' argument 2 names different: declaration 'md' definition 'pmd'.
+int EVP_PKEY_CTX_get_ecdh_kdf_md(EVP_PKEY_CTX *ctx, const EVP_MD **pmd)
+                                                                   ^
+crypto/evp/ec_ctrl.c:146:61: style: inconclusive: Function 'EVP_PKEY_CTX_set_ecdh_kdf_outlen' argument 2 names different: declaration 'len' definition 'outlen'. [funcArgNamesDifferent]
+int EVP_PKEY_CTX_set_ecdh_kdf_outlen(EVP_PKEY_CTX *ctx, int outlen)
+                                                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:42:61: note: Function 'EVP_PKEY_CTX_set_ecdh_kdf_outlen' argument 2 names different: declaration 'len' definition 'outlen'.
+int EVP_PKEY_CTX_set_ecdh_kdf_outlen(EVP_PKEY_CTX *ctx, int len);
+                                                            ^
+crypto/evp/ec_ctrl.c:146:61: note: Function 'EVP_PKEY_CTX_set_ecdh_kdf_outlen' argument 2 names different: declaration 'len' definition 'outlen'.
+int EVP_PKEY_CTX_set_ecdh_kdf_outlen(EVP_PKEY_CTX *ctx, int outlen)
+                                                            ^
+crypto/evp/ec_ctrl.c:175:62: style: inconclusive: Function 'EVP_PKEY_CTX_get_ecdh_kdf_outlen' argument 2 names different: declaration 'len' definition 'plen'. [funcArgNamesDifferent]
+int EVP_PKEY_CTX_get_ecdh_kdf_outlen(EVP_PKEY_CTX *ctx, int *plen)
+                                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:43:62: note: Function 'EVP_PKEY_CTX_get_ecdh_kdf_outlen' argument 2 names different: declaration 'len' definition 'plen'.
+int EVP_PKEY_CTX_get_ecdh_kdf_outlen(EVP_PKEY_CTX *ctx, int *len);
+                                                             ^
+crypto/evp/ec_ctrl.c:175:62: note: Function 'EVP_PKEY_CTX_get_ecdh_kdf_outlen' argument 2 names different: declaration 'len' definition 'plen'.
+int EVP_PKEY_CTX_get_ecdh_kdf_outlen(EVP_PKEY_CTX *ctx, int *plen)
+                                                             ^
+crypto/evp/ec_ctrl.c:242:71: style: inconclusive: Function 'EVP_PKEY_CTX_get0_ecdh_kdf_ukm' argument 2 names different: declaration 'ukm' definition 'pukm'. [funcArgNamesDifferent]
+int EVP_PKEY_CTX_get0_ecdh_kdf_ukm(EVP_PKEY_CTX *ctx, unsigned char **pukm)
+                                                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ec.h:49:71: note: Function 'EVP_PKEY_CTX_get0_ecdh_kdf_ukm' argument 2 names different: declaration 'ukm' definition 'pukm'.
+int EVP_PKEY_CTX_get0_ecdh_kdf_ukm(EVP_PKEY_CTX *ctx, unsigned char **ukm);
+                                                                      ^
+crypto/evp/ec_ctrl.c:242:71: note: Function 'EVP_PKEY_CTX_get0_ecdh_kdf_ukm' argument 2 names different: declaration 'ukm' definition 'pukm'.
+int EVP_PKEY_CTX_get0_ecdh_kdf_ukm(EVP_PKEY_CTX *ctx, unsigned char **pukm)
+                                                                      ^
+crypto/evp/enc_b64_scalar.c:127:44: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+size_t evp_encodeblock_int(EVP_ENCODE_CTX *ctx, unsigned char *t,
+                                           ^
+crypto/evp/enc_b64_scalar.c:128:44: style: Parameter 'wrap_cnt' can be declared as pointer to const [constParameterPointer]
+    const unsigned char *f, int dlen, int *wrap_cnt)
+                                           ^
+crypto/evp/encode.c:526:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+crypto/evp/encode.c:228:67: style: inconclusive: Function 'EVP_EncodeBlock' argument 3 names different: declaration 'n' definition 'dlen'. [funcArgNamesDifferent]
+int EVP_EncodeBlock(unsigned char *t, const unsigned char *f, int dlen)
+                                                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:895:67: note: Function 'EVP_EncodeBlock' argument 3 names different: declaration 'n' definition 'dlen'.
+int EVP_EncodeBlock(unsigned char *t, const unsigned char *f, int n);
+                                                                  ^
+crypto/evp/encode.c:228:67: note: Function 'EVP_EncodeBlock' argument 3 names different: declaration 'n' definition 'dlen'.
+int EVP_EncodeBlock(unsigned char *t, const unsigned char *f, int dlen)
+                                                                  ^
+crypto/evp/encode.c:122:40: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+int EVP_ENCODE_CTX_num(EVP_ENCODE_CTX *ctx)
+                                       ^
+crypto/evp/encode.c:416:48: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+static int evp_decodeblock_int(EVP_ENCODE_CTX *ctx, unsigned char *t,
+                                               ^
+crypto/evp/evp_enc.c:647:32: style: inconclusive: Boolean expression 'len>0' is used in bitwise operation. Did you mean '&&'? [bitwiseOnBoolean]
+    int overlapped = (len > 0) & (diff != 0) & ((diff < (PTRDIFF_T)len) | (diff > (0 - (PTRDIFF_T)len)));
+                               ^
+crypto/evp/evp_enc.c:647:73: style: inconclusive: Boolean expression 'diff<(unsigned long)len' is used in bitwise operation. Did you mean '||'? [bitwiseOnBoolean]
+    int overlapped = (len > 0) & (diff != 0) & ((diff < (PTRDIFF_T)len) | (diff > (0 - (PTRDIFF_T)len)));
+                                                                        ^
+crypto/evp/evp_enc.c:1147:23: style: The scope of the variable 'p' can be reduced. [variableScope]
+    const OSSL_PARAM *p;
+                      ^
+crypto/evp/evp_enc.c:1186:11: style: The scope of the variable 'provctx' can be reduced. [variableScope]
+    void *provctx;
+          ^
+crypto/evp/evp_enc.c:1197:11: style: The scope of the variable 'provctx' can be reduced. [variableScope]
+    void *provctx;
+          ^
+crypto/evp/evp_enc.c:1208:11: style: The scope of the variable 'alg' can be reduced. [variableScope]
+    void *alg;
+          ^
+crypto/evp/evp_enc.c:1219:11: style: The scope of the variable 'provctx' can be reduced. [variableScope]
+    void *provctx;
+          ^
+crypto/evp/evp_enc.c:26:1: warning: Either the condition 'b<0' is redundant or there is division by zero at line 26. [zerodivcond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Assuming that condition 'b<0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Assignment 'y=b<0?-b:b', assigned value is 0
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Division by zero
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:28:42: style: inconclusive: Function 'EVP_CIPHER_CTX_reset' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+int EVP_CIPHER_CTX_reset(EVP_CIPHER_CTX *ctx)
+                                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:908:42: note: Function 'EVP_CIPHER_CTX_reset' argument 1 names different: declaration 'c' definition 'ctx'.
+int EVP_CIPHER_CTX_reset(EVP_CIPHER_CTX *c);
+                                         ^
+crypto/evp/evp_enc.c:28:42: note: Function 'EVP_CIPHER_CTX_reset' argument 1 names different: declaration 'c' definition 'ctx'.
+int EVP_CIPHER_CTX_reset(EVP_CIPHER_CTX *ctx)
+                                         ^
+crypto/evp/evp_enc.c:61:42: style: inconclusive: Function 'EVP_CIPHER_CTX_free' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+void EVP_CIPHER_CTX_free(EVP_CIPHER_CTX *ctx)
+                                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:909:42: note: Function 'EVP_CIPHER_CTX_free' argument 1 names different: declaration 'c' definition 'ctx'.
+void EVP_CIPHER_CTX_free(EVP_CIPHER_CTX *c);
+                                         ^
+crypto/evp/evp_enc.c:61:42: note: Function 'EVP_CIPHER_CTX_free' argument 1 names different: declaration 'c' definition 'ctx'.
+void EVP_CIPHER_CTX_free(EVP_CIPHER_CTX *ctx)
+                                         ^
+crypto/evp/evp_enc.c:523:60: style: inconclusive: Function 'EVP_CipherFinal_ex' argument 2 names different: declaration 'outm' definition 'out'. [funcArgNamesDifferent]
+int EVP_CipherFinal_ex(EVP_CIPHER_CTX *ctx, unsigned char *out, int *outl)
+                                                           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:830:67: note: Function 'EVP_CipherFinal_ex' argument 2 names different: declaration 'outm' definition 'out'.
+__owur int EVP_CipherFinal_ex(EVP_CIPHER_CTX *ctx, unsigned char *outm,
+                                                                  ^
+crypto/evp/evp_enc.c:523:60: note: Function 'EVP_CipherFinal_ex' argument 2 names different: declaration 'outm' definition 'out'.
+int EVP_CipherFinal_ex(EVP_CIPHER_CTX *ctx, unsigned char *out, int *outl)
+                                                           ^
+crypto/evp/evp_enc.c:531:57: style: inconclusive: Function 'EVP_CipherFinal' argument 2 names different: declaration 'outm' definition 'out'. [funcArgNamesDifferent]
+int EVP_CipherFinal(EVP_CIPHER_CTX *ctx, unsigned char *out, int *outl)
+                                                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:811:64: note: Function 'EVP_CipherFinal' argument 2 names different: declaration 'outm' definition 'out'.
+__owur int EVP_CipherFinal(EVP_CIPHER_CTX *ctx, unsigned char *outm,
+                                                               ^
+crypto/evp/evp_enc.c:531:57: note: Function 'EVP_CipherFinal' argument 2 names different: declaration 'outm' definition 'out'.
+int EVP_CipherFinal(EVP_CIPHER_CTX *ctx, unsigned char *out, int *outl)
+                                                        ^
+crypto/evp/evp_enc.c:540:21: style: inconclusive: Function 'EVP_CipherPipelineFinal' argument 2 names different: declaration 'outm' definition 'out'. [funcArgNamesDifferent]
+    unsigned char **out, size_t *outl,
+                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:828:21: note: Function 'EVP_CipherPipelineFinal' argument 2 names different: declaration 'outm' definition 'out'.
+    unsigned char **outm, size_t *outl,
+                    ^
+crypto/evp/evp_enc.c:540:21: note: Function 'EVP_CipherPipelineFinal' argument 2 names different: declaration 'outm' definition 'out'.
+    unsigned char **out, size_t *outl,
+                    ^
+crypto/evp/evp_enc.c:818:58: style: inconclusive: Function 'EVP_DecryptFinal' argument 2 names different: declaration 'outm' definition 'out'. [funcArgNamesDifferent]
+int EVP_DecryptFinal(EVP_CIPHER_CTX *ctx, unsigned char *out, int *outl)
+                                                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:790:65: note: Function 'EVP_DecryptFinal' argument 2 names different: declaration 'outm' definition 'out'.
+__owur int EVP_DecryptFinal(EVP_CIPHER_CTX *ctx, unsigned char *outm,
+                                                                ^
+crypto/evp/evp_enc.c:818:58: note: Function 'EVP_DecryptFinal' argument 2 names different: declaration 'outm' definition 'out'.
+int EVP_DecryptFinal(EVP_CIPHER_CTX *ctx, unsigned char *out, int *outl)
+                                                         ^
+crypto/evp/evp_enc.c:825:61: style: inconclusive: Function 'EVP_DecryptFinal_ex' argument 2 names different: declaration 'outm' definition 'out'. [funcArgNamesDifferent]
+int EVP_DecryptFinal_ex(EVP_CIPHER_CTX *ctx, unsigned char *out, int *outl)
+                                                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:792:68: note: Function 'EVP_DecryptFinal_ex' argument 2 names different: declaration 'outm' definition 'out'.
+__owur int EVP_DecryptFinal_ex(EVP_CIPHER_CTX *ctx, unsigned char *outm,
+                                                                   ^
+crypto/evp/evp_enc.c:825:61: note: Function 'EVP_DecryptFinal_ex' argument 2 names different: declaration 'outm' definition 'out'.
+int EVP_DecryptFinal_ex(EVP_CIPHER_CTX *ctx, unsigned char *out, int *outl)
+                                                            ^
+crypto/evp/evp_enc.c:875:51: style: inconclusive: Function 'EVP_CIPHER_CTX_set_key_length' argument 1 names different: declaration 'x' definition 'c'. [funcArgNamesDifferent]
+int EVP_CIPHER_CTX_set_key_length(EVP_CIPHER_CTX *c, int keylen)
+                                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:910:51: note: Function 'EVP_CIPHER_CTX_set_key_length' argument 1 names different: declaration 'x' definition 'c'.
+int EVP_CIPHER_CTX_set_key_length(EVP_CIPHER_CTX *x, int keylen);
+                                                  ^
+crypto/evp/evp_enc.c:875:51: note: Function 'EVP_CIPHER_CTX_set_key_length' argument 1 names different: declaration 'x' definition 'c'.
+int EVP_CIPHER_CTX_set_key_length(EVP_CIPHER_CTX *c, int keylen)
+                                                  ^
+crypto/evp/evp_enc.c:907:48: style: inconclusive: Function 'EVP_CIPHER_CTX_set_padding' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+int EVP_CIPHER_CTX_set_padding(EVP_CIPHER_CTX *ctx, int pad)
+                                               ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:911:48: note: Function 'EVP_CIPHER_CTX_set_padding' argument 1 names different: declaration 'c' definition 'ctx'.
+int EVP_CIPHER_CTX_set_padding(EVP_CIPHER_CTX *c, int pad);
+                                               ^
+crypto/evp/evp_enc.c:907:48: note: Function 'EVP_CIPHER_CTX_set_padding' argument 1 names different: declaration 'c' definition 'ctx'.
+int EVP_CIPHER_CTX_set_padding(EVP_CIPHER_CTX *ctx, int pad)
+                                               ^
+crypto/evp/evp_enc.c:1206:66: style: inconclusive: Function 'EVP_CIPHER_CTX_settable_params' argument 1 names different: declaration 'ctx' definition 'cctx'. [funcArgNamesDifferent]
+const OSSL_PARAM *EVP_CIPHER_CTX_settable_params(EVP_CIPHER_CTX *cctx)
+                                                                 ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:920:66: note: Function 'EVP_CIPHER_CTX_settable_params' argument 1 names different: declaration 'ctx' definition 'cctx'.
+const OSSL_PARAM *EVP_CIPHER_CTX_settable_params(EVP_CIPHER_CTX *ctx);
+                                                                 ^
+crypto/evp/evp_enc.c:1206:66: note: Function 'EVP_CIPHER_CTX_settable_params' argument 1 names different: declaration 'ctx' definition 'cctx'.
+const OSSL_PARAM *EVP_CIPHER_CTX_settable_params(EVP_CIPHER_CTX *cctx)
+                                                                 ^
+crypto/evp/evp_enc.c:1217:66: style: inconclusive: Function 'EVP_CIPHER_CTX_gettable_params' argument 1 names different: declaration 'ctx' definition 'cctx'. [funcArgNamesDifferent]
+const OSSL_PARAM *EVP_CIPHER_CTX_gettable_params(EVP_CIPHER_CTX *cctx)
+                                                                 ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:921:66: note: Function 'EVP_CIPHER_CTX_gettable_params' argument 1 names different: declaration 'ctx' definition 'cctx'.
+const OSSL_PARAM *EVP_CIPHER_CTX_gettable_params(EVP_CIPHER_CTX *ctx);
+                                                                 ^
+crypto/evp/evp_enc.c:1217:66: note: Function 'EVP_CIPHER_CTX_gettable_params' argument 1 names different: declaration 'ctx' definition 'cctx'.
+const OSSL_PARAM *EVP_CIPHER_CTX_gettable_params(EVP_CIPHER_CTX *cctx)
+                                                                 ^
+crypto/evp/evp_enc.c:1594:38: style: inconclusive: Function 'evp_cipher_free_int' argument 1 names different: declaration 'md' definition 'cipher'. [funcArgNamesDifferent]
+void evp_cipher_free_int(EVP_CIPHER *cipher)
+                                     ^
+crypto/evp/evp_local.h:401:38: note: Function 'evp_cipher_free_int' argument 1 names different: declaration 'md' definition 'cipher'.
+void evp_cipher_free_int(EVP_CIPHER *md);
+                                     ^
+crypto/evp/evp_enc.c:1594:38: note: Function 'evp_cipher_free_int' argument 1 names different: declaration 'md' definition 'cipher'.
+void evp_cipher_free_int(EVP_CIPHER *cipher)
+                                     ^
+crypto/evp/evp_enc.c:26:1: style: Clarify calculation precedence for '^' and '?'. [clarifyCalculation]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:388:15: style: Parameter 'skey' can be declared as pointer to const [constParameterPointer]
+    EVP_SKEY *skey, const unsigned char *iv, size_t iv_len,
+              ^
+crypto/evp/evp_enc.c:411:13: style: Parameter 'impl' can be declared as pointer to const [constParameterPointer]
+    ENGINE *impl, const unsigned char *key,
+            ^
+crypto/evp/evp_enc.c:579:13: style: Parameter 'impl' can be declared as pointer to const [constParameterPointer]
+    ENGINE *impl, const unsigned char *key,
+            ^
+crypto/evp/evp_enc.c:601:13: style: Parameter 'impl' can be declared as pointer to const [constParameterPointer]
+    ENGINE *impl, const unsigned char *key,
+            ^
+crypto/evp/evp_enc.c:26:1: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: warning: Either the condition 'a>0' is redundant or there is signed integer overflow for expression '(~((int)1<<(sizeof(int)*8-1)))-a'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Assuming that condition 'a>0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: warning: Either the condition 'a<0' is redundant or there is signed integer overflow for expression '((int)1<<(sizeof(int)*8-1))-a'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Assuming that condition 'a<0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: warning: Either the condition 'b>0' is redundant or there is signed integer overflow for expression '((int)1<<(sizeof(int)*8-1))+b'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Assuming that condition 'b>0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: warning: Either the condition 'b<0' is redundant or there is signed integer overflow for expression '(~((int)1<<(sizeof(int)*8-1)))+b'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Assuming that condition 'b<0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: warning: Either the condition 'b>0' is redundant or there is signed integer overflow for expression '(~((int)1<<(sizeof(int)*8-1)))-b'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Assuming that condition 'b>0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_enc.c:26:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/evp/evp_cnf.c:26:17: style: The scope of the variable 'oval' can be reduced. [variableScope]
+    CONF_VALUE *oval;
+                ^
+crypto/evp/evp_cnf.c:21:42: style: Parameter 'md' can be declared as pointer to const. However it seems that 'alg_module_init' is a callback function, if 'md' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int alg_module_init(CONF_IMODULE *md, const CONF *cnf)
+                                         ^
+crypto/evp/evp_cnf.c:72:36: note: You might need to cast the function pointer here
+    CONF_module_add("alg_section", alg_module_init, 0);
+                                   ^
+crypto/evp/evp_cnf.c:21:42: note: Parameter 'md' can be declared as pointer to const
+static int alg_module_init(CONF_IMODULE *md, const CONF *cnf)
+                                         ^
+crypto/evp/evp_cnf.c:25:27: style: Variable 'sktmp' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(CONF_VALUE) *sktmp;
+                          ^
+crypto/evp/evp_fetch.c:491:39: style: inconclusive: Function 'evp_generic_fetch' argument 1 names different: declaration 'ctx' definition 'libctx'. [funcArgNamesDifferent]
+void *evp_generic_fetch(OSSL_LIB_CTX *libctx, int operation_id,
+                                      ^
+crypto/evp/evp_local.h:314:39: note: Function 'evp_generic_fetch' argument 1 names different: declaration 'ctx' definition 'libctx'.
+void *evp_generic_fetch(OSSL_LIB_CTX *ctx, int operation_id,
+                                      ^
+crypto/evp/evp_fetch.c:491:39: note: Function 'evp_generic_fetch' argument 1 names different: declaration 'ctx' definition 'libctx'.
+void *evp_generic_fetch(OSSL_LIB_CTX *libctx, int operation_id,
+                                      ^
+crypto/evp/evp_fetch.c:141:23: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+        OSSL_NAMEMAP *namemap = ossl_namemap_stored(methdata->libctx);
+                      ^
+crypto/evp/evp_fetch.c:171:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap;
+                  ^
+crypto/evp/evp_fetch.c:262:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap = ossl_namemap_stored(methdata->libctx);
+                  ^
+crypto/evp/evp_fetch.c:758:29: style: Parameter 'prov' can be declared as pointer to const [constParameterPointer]
+int evp_is_a(OSSL_PROVIDER *prov, int number,
+                            ^
+crypto/evp/evp_fetch.c:765:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap = ossl_namemap_stored(libctx);
+                  ^
+crypto/evp/evp_fetch.c:772:37: style: Parameter 'prov' can be declared as pointer to const [constParameterPointer]
+int evp_names_do_all(OSSL_PROVIDER *prov, int number,
+                                    ^
+crypto/evp/evp_fetch.c:777:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap = ossl_namemap_stored(libctx);
+                  ^
+crypto/evp/evp_key.c:47:39: style: inconclusive: Function 'EVP_read_pw_string' argument 2 names different: declaration 'length' definition 'len'. [funcArgNamesDifferent]
+int EVP_read_pw_string(char *buf, int len, const char *prompt, int verify)
+                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:744:39: note: Function 'EVP_read_pw_string' argument 2 names different: declaration 'length' definition 'len'.
+int EVP_read_pw_string(char *buf, int length, const char *prompt, int verify);
+                                      ^
+crypto/evp/evp_key.c:47:39: note: Function 'EVP_read_pw_string' argument 2 names different: declaration 'length' definition 'len'.
+int EVP_read_pw_string(char *buf, int len, const char *prompt, int verify)
+                                      ^
+crypto/evp/evp_key.c:52:43: style: inconclusive: Function 'EVP_read_pw_string_min' argument 2 names different: declaration 'minlen' definition 'min'. [funcArgNamesDifferent]
+int EVP_read_pw_string_min(char *buf, int min, int len, const char *prompt,
+                                          ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:745:43: note: Function 'EVP_read_pw_string_min' argument 2 names different: declaration 'minlen' definition 'min'.
+int EVP_read_pw_string_min(char *buf, int minlen, int maxlen,
+                                          ^
+crypto/evp/evp_key.c:52:43: note: Function 'EVP_read_pw_string_min' argument 2 names different: declaration 'minlen' definition 'min'.
+int EVP_read_pw_string_min(char *buf, int min, int len, const char *prompt,
+                                          ^
+crypto/evp/evp_key.c:52:52: style: inconclusive: Function 'EVP_read_pw_string_min' argument 3 names different: declaration 'maxlen' definition 'len'. [funcArgNamesDifferent]
+int EVP_read_pw_string_min(char *buf, int min, int len, const char *prompt,
+                                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:745:55: note: Function 'EVP_read_pw_string_min' argument 3 names different: declaration 'maxlen' definition 'len'.
+int EVP_read_pw_string_min(char *buf, int minlen, int maxlen,
+                                                      ^
+crypto/evp/evp_key.c:52:52: note: Function 'EVP_read_pw_string_min' argument 3 names different: declaration 'maxlen' definition 'len'.
+int EVP_read_pw_string_min(char *buf, int min, int len, const char *prompt,
+                                                   ^
+crypto/evp/evp_lib.c:48:18: style: The scope of the variable 'l' can be reduced. [variableScope]
+    unsigned int l;
+                 ^
+crypto/evp/evp_lib.c:69:18: style: The scope of the variable 'j' can be reduced. [variableScope]
+    unsigned int j;
+                 ^
+crypto/evp/evp_lib.c:488:20: style: The scope of the variable 'params' can be reduced. [variableScope]
+        OSSL_PARAM params[2] = { OSSL_PARAM_END, OSSL_PARAM_END };
+                   ^
+crypto/evp/evp_lib.c:45:44: style: inconclusive: Function 'EVP_CIPHER_get_asn1_iv' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+int EVP_CIPHER_get_asn1_iv(EVP_CIPHER_CTX *ctx, ASN1_TYPE *type)
+                                           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1509:44: note: Function 'EVP_CIPHER_get_asn1_iv' argument 1 names different: declaration 'c' definition 'ctx'.
+int EVP_CIPHER_get_asn1_iv(EVP_CIPHER_CTX *c, ASN1_TYPE *type);
+                                           ^
+crypto/evp/evp_lib.c:45:44: note: Function 'EVP_CIPHER_get_asn1_iv' argument 1 names different: declaration 'c' definition 'ctx'.
+int EVP_CIPHER_get_asn1_iv(EVP_CIPHER_CTX *ctx, ASN1_TYPE *type)
+                                           ^
+crypto/evp/evp_lib.c:82:34: style: inconclusive: Function 'evp_cipher_param_to_asn1_ex' argument 3 names different: declaration 'params' definition 'asn1_params'. [funcArgNamesDifferent]
+    evp_cipher_aead_asn1_params *asn1_params)
+                                 ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h:323:34: note: Function 'evp_cipher_param_to_asn1_ex' argument 3 names different: declaration 'params' definition 'asn1_params'.
+    evp_cipher_aead_asn1_params *params);
+                                 ^
+crypto/evp/evp_lib.c:82:34: note: Function 'evp_cipher_param_to_asn1_ex' argument 3 names different: declaration 'params' definition 'asn1_params'.
+    evp_cipher_aead_asn1_params *asn1_params)
+                                 ^
+crypto/evp/evp_lib.c:146:34: style: inconclusive: Function 'evp_cipher_asn1_to_param_ex' argument 3 names different: declaration 'params' definition 'asn1_params'. [funcArgNamesDifferent]
+    evp_cipher_aead_asn1_params *asn1_params)
+                                 ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h:326:34: note: Function 'evp_cipher_asn1_to_param_ex' argument 3 names different: declaration 'params' definition 'asn1_params'.
+    evp_cipher_aead_asn1_params *params);
+                                 ^
+crypto/evp/evp_lib.c:146:34: note: Function 'evp_cipher_asn1_to_param_ex' argument 3 names different: declaration 'params' definition 'asn1_params'.
+    evp_cipher_aead_asn1_params *asn1_params)
+                                 ^
+crypto/evp/evp_lib.c:370:48: style: inconclusive: Function 'EVP_CIPHER_impl_ctx_size' argument 1 names different: declaration 'cipher' definition 'e'. [funcArgNamesDifferent]
+int EVP_CIPHER_impl_ctx_size(const EVP_CIPHER *e)
+                                               ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:589:48: note: Function 'EVP_CIPHER_impl_ctx_size' argument 1 names different: declaration 'cipher' definition 'e'.
+int EVP_CIPHER_impl_ctx_size(const EVP_CIPHER *cipher);
+                                               ^
+crypto/evp/evp_lib.c:370:48: note: Function 'EVP_CIPHER_impl_ctx_size' argument 1 names different: declaration 'cipher' definition 'e'.
+int EVP_CIPHER_impl_ctx_size(const EVP_CIPHER *e)
+                                               ^
+crypto/evp/evp_lib.c:375:32: style: inconclusive: Function 'EVP_Cipher' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+int EVP_Cipher(EVP_CIPHER_CTX *ctx, unsigned char *out,
+                               ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:677:39: note: Function 'EVP_Cipher' argument 1 names different: declaration 'c' definition 'ctx'.
+__owur int EVP_Cipher(EVP_CIPHER_CTX *c,
+                                      ^
+crypto/evp/evp_lib.c:375:32: note: Function 'EVP_Cipher' argument 1 names different: declaration 'c' definition 'ctx'.
+int EVP_Cipher(EVP_CIPHER_CTX *ctx, unsigned char *out,
+                               ^
+crypto/evp/evp_lib.c:45:60: style: Parameter 'type' can be declared as pointer to const [constParameterPointer]
+int EVP_CIPHER_get_asn1_iv(EVP_CIPHER_CTX *ctx, ASN1_TYPE *type)
+                                                           ^
+crypto/evp/evp_lib.c:66:44: style: Parameter 'c' can be declared as pointer to const [constParameterPointer]
+int EVP_CIPHER_set_asn1_iv(EVP_CIPHER_CTX *c, ASN1_TYPE *type)
+                                           ^
+crypto/evp/evp_lib.c:209:67: style: Parameter 'type' can be declared as pointer to const [constParameterPointer]
+int evp_cipher_get_asn1_aead_params(EVP_CIPHER_CTX *c, ASN1_TYPE *type,
+                                                                  ^
+crypto/evp/evp_lib.c:591:59: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+unsigned char *EVP_CIPHER_CTX_buf_noconst(EVP_CIPHER_CTX *ctx)
+                                                          ^
+crypto/evp/evp_pbe.c:240:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+crypto/evp/evp_pbe.c:96:40: style: Parameter 'pbe_obj' can be declared as pointer to const [constParameterPointer]
+int EVP_PBE_CipherInit_ex(ASN1_OBJECT *pbe_obj, const char *pass, int passlen,
+                                       ^
+crypto/evp/evp_pbe.c:172:1: style: Parameter 'key' can be declared as pointer to const [constParameterPointer]
+IMPLEMENT_OBJ_BSEARCH_CMP_FN(EVP_PBE_CTL, EVP_PBE_CTL, pbe2);
+^
+crypto/evp/evp_utils.c:73:1: style: inconclusive: Function 'evp_do_ciph_getparams' argument 1 names different: declaration 'ciph' definition 'obj'. [funcArgNamesDifferent]
+PARAM_FUNCTIONS(EVP_CIPHER,
+^
+crypto/evp/evp_local.h:387:45: note: Function 'evp_do_ciph_getparams' argument 1 names different: declaration 'ciph' definition 'obj'.
+int evp_do_ciph_getparams(const EVP_CIPHER *ciph, OSSL_PARAM params[]);
+                                            ^
+crypto/evp/evp_utils.c:73:1: note: Function 'evp_do_ciph_getparams' argument 1 names different: declaration 'ciph' definition 'obj'.
+PARAM_FUNCTIONS(EVP_CIPHER,
+^
+crypto/evp/evp_utils.c:73:1: style: inconclusive: Function 'evp_do_ciph_ctx_getparams' argument 1 names different: declaration 'ciph' definition 'obj'. [funcArgNamesDifferent]
+PARAM_FUNCTIONS(EVP_CIPHER,
+^
+crypto/evp/evp_local.h:388:49: note: Function 'evp_do_ciph_ctx_getparams' argument 1 names different: declaration 'ciph' definition 'obj'.
+int evp_do_ciph_ctx_getparams(const EVP_CIPHER *ciph, void *provctx,
+                                                ^
+crypto/evp/evp_utils.c:73:1: note: Function 'evp_do_ciph_ctx_getparams' argument 1 names different: declaration 'ciph' definition 'obj'.
+PARAM_FUNCTIONS(EVP_CIPHER,
+^
+crypto/evp/evp_utils.c:73:1: style: inconclusive: Function 'evp_do_ciph_ctx_getparams' argument 2 names different: declaration 'provctx' definition 'algctx'. [funcArgNamesDifferent]
+PARAM_FUNCTIONS(EVP_CIPHER,
+^
+crypto/evp/evp_local.h:388:61: note: Function 'evp_do_ciph_ctx_getparams' argument 2 names different: declaration 'provctx' definition 'algctx'.
+int evp_do_ciph_ctx_getparams(const EVP_CIPHER *ciph, void *provctx,
+                                                            ^
+crypto/evp/evp_utils.c:73:1: note: Function 'evp_do_ciph_ctx_getparams' argument 2 names different: declaration 'provctx' definition 'algctx'.
+PARAM_FUNCTIONS(EVP_CIPHER,
+^
+crypto/evp/evp_utils.c:73:1: style: inconclusive: Function 'evp_do_ciph_ctx_setparams' argument 1 names different: declaration 'ciph' definition 'obj'. [funcArgNamesDifferent]
+PARAM_FUNCTIONS(EVP_CIPHER,
+^
+crypto/evp/evp_local.h:390:49: note: Function 'evp_do_ciph_ctx_setparams' argument 1 names different: declaration 'ciph' definition 'obj'.
+int evp_do_ciph_ctx_setparams(const EVP_CIPHER *ciph, void *provctx,
+                                                ^
+crypto/evp/evp_utils.c:73:1: note: Function 'evp_do_ciph_ctx_setparams' argument 1 names different: declaration 'ciph' definition 'obj'.
+PARAM_FUNCTIONS(EVP_CIPHER,
+^
+crypto/evp/evp_utils.c:73:1: style: inconclusive: Function 'evp_do_ciph_ctx_setparams' argument 2 names different: declaration 'provctx' definition 'algctx'. [funcArgNamesDifferent]
+PARAM_FUNCTIONS(EVP_CIPHER,
+^
+crypto/evp/evp_local.h:390:61: note: Function 'evp_do_ciph_ctx_setparams' argument 2 names different: declaration 'provctx' definition 'algctx'.
+int evp_do_ciph_ctx_setparams(const EVP_CIPHER *ciph, void *provctx,
+                                                            ^
+crypto/evp/evp_utils.c:73:1: note: Function 'evp_do_ciph_ctx_setparams' argument 2 names different: declaration 'provctx' definition 'algctx'.
+PARAM_FUNCTIONS(EVP_CIPHER,
+^
+crypto/evp/evp_utils.c:78:1: style: inconclusive: Function 'evp_do_md_getparams' argument 1 names different: declaration 'md' definition 'obj'. [funcArgNamesDifferent]
+PARAM_FUNCTIONS(EVP_MD,
+^
+crypto/evp/evp_local.h:392:39: note: Function 'evp_do_md_getparams' argument 1 names different: declaration 'md' definition 'obj'.
+int evp_do_md_getparams(const EVP_MD *md, OSSL_PARAM params[]);
+                                      ^
+crypto/evp/evp_utils.c:78:1: note: Function 'evp_do_md_getparams' argument 1 names different: declaration 'md' definition 'obj'.
+PARAM_FUNCTIONS(EVP_MD,
+^
+crypto/evp/evp_utils.c:78:1: style: inconclusive: Function 'evp_do_md_ctx_getparams' argument 1 names different: declaration 'md' definition 'obj'. [funcArgNamesDifferent]
+PARAM_FUNCTIONS(EVP_MD,
+^
+crypto/evp/evp_local.h:393:43: note: Function 'evp_do_md_ctx_getparams' argument 1 names different: declaration 'md' definition 'obj'.
+int evp_do_md_ctx_getparams(const EVP_MD *md, void *provctx,
+                                          ^
+crypto/evp/evp_utils.c:78:1: note: Function 'evp_do_md_ctx_getparams' argument 1 names different: declaration 'md' definition 'obj'.
+PARAM_FUNCTIONS(EVP_MD,
+^
+crypto/evp/evp_utils.c:78:1: style: inconclusive: Function 'evp_do_md_ctx_getparams' argument 2 names different: declaration 'provctx' definition 'algctx'. [funcArgNamesDifferent]
+PARAM_FUNCTIONS(EVP_MD,
+^
+crypto/evp/evp_local.h:393:53: note: Function 'evp_do_md_ctx_getparams' argument 2 names different: declaration 'provctx' definition 'algctx'.
+int evp_do_md_ctx_getparams(const EVP_MD *md, void *provctx,
+                                                    ^
+crypto/evp/evp_utils.c:78:1: note: Function 'evp_do_md_ctx_getparams' argument 2 names different: declaration 'provctx' definition 'algctx'.
+PARAM_FUNCTIONS(EVP_MD,
+^
+crypto/evp/evp_utils.c:78:1: style: inconclusive: Function 'evp_do_md_ctx_setparams' argument 1 names different: declaration 'md' definition 'obj'. [funcArgNamesDifferent]
+PARAM_FUNCTIONS(EVP_MD,
+^
+crypto/evp/evp_local.h:395:43: note: Function 'evp_do_md_ctx_setparams' argument 1 names different: declaration 'md' definition 'obj'.
+int evp_do_md_ctx_setparams(const EVP_MD *md, void *provctx,
+                                          ^
+crypto/evp/evp_utils.c:78:1: note: Function 'evp_do_md_ctx_setparams' argument 1 names different: declaration 'md' definition 'obj'.
+PARAM_FUNCTIONS(EVP_MD,
+^
+crypto/evp/evp_utils.c:78:1: style: inconclusive: Function 'evp_do_md_ctx_setparams' argument 2 names different: declaration 'provctx' definition 'algctx'. [funcArgNamesDifferent]
+PARAM_FUNCTIONS(EVP_MD,
+^
+crypto/evp/evp_local.h:395:53: note: Function 'evp_do_md_ctx_setparams' argument 2 names different: declaration 'provctx' definition 'algctx'.
+int evp_do_md_ctx_setparams(const EVP_MD *md, void *provctx,
+                                                    ^
+crypto/evp/evp_utils.c:78:1: note: Function 'evp_do_md_ctx_setparams' argument 2 names different: declaration 'provctx' definition 'algctx'.
+PARAM_FUNCTIONS(EVP_MD,
+^
+crypto/evp/evp_pkey.c:25:60: style: inconclusive: Function 'evp_pkcs82pkey_legacy' argument 1 names different: declaration 'p8inf' definition 'p8'. [funcArgNamesDifferent]
+EVP_PKEY *evp_pkcs82pkey_legacy(const PKCS8_PRIV_KEY_INFO *p8, OSSL_LIB_CTX *libctx,
+                                                           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h:510:60: note: Function 'evp_pkcs82pkey_legacy' argument 1 names different: declaration 'p8inf' definition 'p8'.
+EVP_PKEY *evp_pkcs82pkey_legacy(const PKCS8_PRIV_KEY_INFO *p8inf,
+                                                           ^
+crypto/evp/evp_pkey.c:25:60: note: Function 'evp_pkcs82pkey_legacy' argument 1 names different: declaration 'p8inf' definition 'p8'.
+EVP_PKEY *evp_pkcs82pkey_legacy(const PKCS8_PRIV_KEY_INFO *p8, OSSL_LIB_CTX *libctx,
+                                                           ^
+crypto/evp/evp_rand.c:95:43: style: inconclusive: Function 'EVP_RAND_enable_locking' argument 1 names different: declaration 'ctx' definition 'rand'. [funcArgNamesDifferent]
+int EVP_RAND_enable_locking(EVP_RAND_CTX *rand)
+                                          ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1324:50: note: Function 'EVP_RAND_enable_locking' argument 1 names different: declaration 'ctx' definition 'rand'.
+__owur int EVP_RAND_enable_locking(EVP_RAND_CTX *ctx);
+                                                 ^
+crypto/evp/evp_rand.c:95:43: note: Function 'EVP_RAND_enable_locking' argument 1 names different: declaration 'ctx' definition 'rand'.
+int EVP_RAND_enable_locking(EVP_RAND_CTX *rand)
+                                          ^
+crypto/evp/evp_rand.c:323:55: style: inconclusive: Function 'EVP_RAND_get0_description' argument 1 names different: declaration 'md' definition 'rand'. [funcArgNamesDifferent]
+const char *EVP_RAND_get0_description(const EVP_RAND *rand)
+                                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1287:55: note: Function 'EVP_RAND_get0_description' argument 1 names different: declaration 'md' definition 'rand'.
+const char *EVP_RAND_get0_description(const EVP_RAND *md);
+                                                      ^
+crypto/evp/evp_rand.c:323:55: note: Function 'EVP_RAND_get0_description' argument 1 names different: declaration 'md' definition 'rand'.
+const char *EVP_RAND_get0_description(const EVP_RAND *rand)
+                                                      ^
+crypto/evp/evp_rand.c:416:48: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+EVP_RAND *EVP_RAND_CTX_get0_rand(EVP_RAND_CTX *ctx)
+                                               ^
+crypto/evp/exchange.c:388:18: style: The scope of the variable 'check' can be reduced. [variableScope]
+    int ret = 0, check;
+                 ^
+crypto/evp/exchange.c:212:17: style: inconclusive: Function 'evp_keyexch_fetch_from_prov' argument 2 names different: declaration 'name' definition 'algorithm'. [funcArgNamesDifferent]
+    const char *algorithm,
+                ^
+crypto/evp/evp_local.h:350:17: note: Function 'evp_keyexch_fetch_from_prov' argument 2 names different: declaration 'name' definition 'algorithm'.
+    const char *name,
+                ^
+crypto/evp/exchange.c:212:17: note: Function 'evp_keyexch_fetch_from_prov' argument 2 names different: declaration 'name' definition 'algorithm'.
+    const char *algorithm,
+                ^
+crypto/evp/exchange.c:463:68: style: inconclusive: Function 'EVP_PKEY_derive' argument 3 names different: declaration 'keylen' definition 'pkeylen'. [funcArgNamesDifferent]
+int EVP_PKEY_derive(EVP_PKEY_CTX *ctx, unsigned char *key, size_t *pkeylen)
+                                                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1895:68: note: Function 'EVP_PKEY_derive' argument 3 names different: declaration 'keylen' definition 'pkeylen'.
+int EVP_PKEY_derive(EVP_PKEY_CTX *ctx, unsigned char *key, size_t *keylen);
+                                                                   ^
+crypto/evp/exchange.c:463:68: note: Function 'EVP_PKEY_derive' argument 3 names different: declaration 'keylen' definition 'pkeylen'.
+int EVP_PKEY_derive(EVP_PKEY_CTX *ctx, unsigned char *key, size_t *pkeylen)
+                                                                   ^
+crypto/evp/exchange.c:609:11: style: inconclusive: Function 'EVP_KEYEXCH_do_all_provided' argument 3 names different: declaration 'data' definition 'arg'. [funcArgNamesDifferent]
+    void *arg)
+          ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1986:11: note: Function 'EVP_KEYEXCH_do_all_provided' argument 3 names different: declaration 'data' definition 'arg'.
+    void *data);
+          ^
+crypto/evp/exchange.c:609:11: note: Function 'EVP_KEYEXCH_do_all_provided' argument 3 names different: declaration 'data' definition 'arg'.
+    void *arg)
+          ^
+crypto/evp/kem.c:242:20: style: inconclusive: Function 'EVP_PKEY_encapsulate' argument 2 names different: declaration 'wrappedkey' definition 'out'. [funcArgNamesDifferent]
+    unsigned char *out, size_t *outlen,
+                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1904:20: note: Function 'EVP_PKEY_encapsulate' argument 2 names different: declaration 'wrappedkey' definition 'out'.
+    unsigned char *wrappedkey, size_t *wrappedkeylen,
+                   ^
+crypto/evp/kem.c:242:20: note: Function 'EVP_PKEY_encapsulate' argument 2 names different: declaration 'wrappedkey' definition 'out'.
+    unsigned char *out, size_t *outlen,
+                   ^
+crypto/evp/kem.c:242:33: style: inconclusive: Function 'EVP_PKEY_encapsulate' argument 3 names different: declaration 'wrappedkeylen' definition 'outlen'. [funcArgNamesDifferent]
+    unsigned char *out, size_t *outlen,
+                                ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1904:40: note: Function 'EVP_PKEY_encapsulate' argument 3 names different: declaration 'wrappedkeylen' definition 'outlen'.
+    unsigned char *wrappedkey, size_t *wrappedkeylen,
+                                       ^
+crypto/evp/kem.c:242:33: note: Function 'EVP_PKEY_encapsulate' argument 3 names different: declaration 'wrappedkeylen' definition 'outlen'.
+    unsigned char *out, size_t *outlen,
+                                ^
+crypto/evp/kem.c:243:20: style: inconclusive: Function 'EVP_PKEY_encapsulate' argument 4 names different: declaration 'genkey' definition 'secret'. [funcArgNamesDifferent]
+    unsigned char *secret, size_t *secretlen)
+                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1905:20: note: Function 'EVP_PKEY_encapsulate' argument 4 names different: declaration 'genkey' definition 'secret'.
+    unsigned char *genkey, size_t *genkeylen);
+                   ^
+crypto/evp/kem.c:243:20: note: Function 'EVP_PKEY_encapsulate' argument 4 names different: declaration 'genkey' definition 'secret'.
+    unsigned char *secret, size_t *secretlen)
+                   ^
+crypto/evp/kem.c:243:36: style: inconclusive: Function 'EVP_PKEY_encapsulate' argument 5 names different: declaration 'genkeylen' definition 'secretlen'. [funcArgNamesDifferent]
+    unsigned char *secret, size_t *secretlen)
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1905:36: note: Function 'EVP_PKEY_encapsulate' argument 5 names different: declaration 'genkeylen' definition 'secretlen'.
+    unsigned char *genkey, size_t *genkeylen);
+                                   ^
+crypto/evp/kem.c:243:36: note: Function 'EVP_PKEY_encapsulate' argument 5 names different: declaration 'genkeylen' definition 'secretlen'.
+    unsigned char *secret, size_t *secretlen)
+                                   ^
+crypto/evp/kem.c:279:20: style: inconclusive: Function 'EVP_PKEY_decapsulate' argument 2 names different: declaration 'unwrapped' definition 'secret'. [funcArgNamesDifferent]
+    unsigned char *secret, size_t *secretlen,
+                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1910:20: note: Function 'EVP_PKEY_decapsulate' argument 2 names different: declaration 'unwrapped' definition 'secret'.
+    unsigned char *unwrapped, size_t *unwrappedlen,
+                   ^
+crypto/evp/kem.c:279:20: note: Function 'EVP_PKEY_decapsulate' argument 2 names different: declaration 'unwrapped' definition 'secret'.
+    unsigned char *secret, size_t *secretlen,
+                   ^
+crypto/evp/kem.c:279:36: style: inconclusive: Function 'EVP_PKEY_decapsulate' argument 3 names different: declaration 'unwrappedlen' definition 'secretlen'. [funcArgNamesDifferent]
+    unsigned char *secret, size_t *secretlen,
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1910:39: note: Function 'EVP_PKEY_decapsulate' argument 3 names different: declaration 'unwrappedlen' definition 'secretlen'.
+    unsigned char *unwrapped, size_t *unwrappedlen,
+                                      ^
+crypto/evp/kem.c:279:36: note: Function 'EVP_PKEY_decapsulate' argument 3 names different: declaration 'unwrappedlen' definition 'secretlen'.
+    unsigned char *secret, size_t *secretlen,
+                                   ^
+crypto/evp/kem.c:280:26: style: inconclusive: Function 'EVP_PKEY_decapsulate' argument 4 names different: declaration 'wrapped' definition 'in'. [funcArgNamesDifferent]
+    const unsigned char *in, size_t inlen)
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1911:26: note: Function 'EVP_PKEY_decapsulate' argument 4 names different: declaration 'wrapped' definition 'in'.
+    const unsigned char *wrapped, size_t wrappedlen);
+                         ^
+crypto/evp/kem.c:280:26: note: Function 'EVP_PKEY_decapsulate' argument 4 names different: declaration 'wrapped' definition 'in'.
+    const unsigned char *in, size_t inlen)
+                         ^
+crypto/evp/kem.c:280:37: style: inconclusive: Function 'EVP_PKEY_decapsulate' argument 5 names different: declaration 'wrappedlen' definition 'inlen'. [funcArgNamesDifferent]
+    const unsigned char *in, size_t inlen)
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1911:42: note: Function 'EVP_PKEY_decapsulate' argument 5 names different: declaration 'wrappedlen' definition 'inlen'.
+    const unsigned char *wrapped, size_t wrappedlen);
+                                         ^
+crypto/evp/kem.c:280:37: note: Function 'EVP_PKEY_decapsulate' argument 5 names different: declaration 'wrappedlen' definition 'inlen'.
+    const unsigned char *in, size_t inlen)
+                                    ^
+crypto/evp/kem.c:450:28: style: inconclusive: Function 'EVP_KEM_free' argument 1 names different: declaration 'wrap' definition 'kem'. [funcArgNamesDifferent]
+void EVP_KEM_free(EVP_KEM *kem)
+                           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1830:28: note: Function 'EVP_KEM_free' argument 1 names different: declaration 'wrap' definition 'kem'.
+void EVP_KEM_free(EVP_KEM *wrap);
+                           ^
+crypto/evp/kem.c:450:28: note: Function 'EVP_KEM_free' argument 1 names different: declaration 'wrap' definition 'kem'.
+void EVP_KEM_free(EVP_KEM *kem)
+                           ^
+crypto/evp/kem.c:460:29: style: inconclusive: Function 'EVP_KEM_up_ref' argument 1 names different: declaration 'wrap' definition 'kem'. [funcArgNamesDifferent]
+int EVP_KEM_up_ref(EVP_KEM *kem)
+                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1831:29: note: Function 'EVP_KEM_up_ref' argument 1 names different: declaration 'wrap' definition 'kem'.
+int EVP_KEM_up_ref(EVP_KEM *wrap);
+                            ^
+crypto/evp/kem.c:460:29: note: Function 'EVP_KEM_up_ref' argument 1 names different: declaration 'wrap' definition 'kem'.
+int EVP_KEM_up_ref(EVP_KEM *kem)
+                            ^
+crypto/evp/kem.c:471:53: style: inconclusive: Function 'EVP_KEM_get0_provider' argument 1 names different: declaration 'wrap' definition 'kem'. [funcArgNamesDifferent]
+OSSL_PROVIDER *EVP_KEM_get0_provider(const EVP_KEM *kem)
+                                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1832:53: note: Function 'EVP_KEM_get0_provider' argument 1 names different: declaration 'wrap' definition 'kem'.
+OSSL_PROVIDER *EVP_KEM_get0_provider(const EVP_KEM *wrap);
+                                                    ^
+crypto/evp/kem.c:471:53: note: Function 'EVP_KEM_get0_provider' argument 1 names different: declaration 'wrap' definition 'kem'.
+OSSL_PROVIDER *EVP_KEM_get0_provider(const EVP_KEM *kem)
+                                                    ^
+crypto/evp/kem.c:485:67: style: inconclusive: Function 'evp_kem_fetch_from_prov' argument 2 names different: declaration 'name' definition 'algorithm'. [funcArgNamesDifferent]
+EVP_KEM *evp_kem_fetch_from_prov(OSSL_PROVIDER *prov, const char *algorithm,
+                                                                  ^
+crypto/evp/evp_local.h:353:17: note: Function 'evp_kem_fetch_from_prov' argument 2 names different: declaration 'name' definition 'algorithm'.
+    const char *name,
+                ^
+crypto/evp/kem.c:485:67: note: Function 'evp_kem_fetch_from_prov' argument 2 names different: declaration 'name' definition 'algorithm'.
+EVP_KEM *evp_kem_fetch_from_prov(OSSL_PROVIDER *prov, const char *algorithm,
+                                                                  ^
+crypto/evp/kem.c:494:33: style: inconclusive: Function 'EVP_KEM_is_a' argument 1 names different: declaration 'wrap' definition 'kem'. [funcArgNamesDifferent]
+int EVP_KEM_is_a(const EVP_KEM *kem, const char *name)
+                                ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1835:33: note: Function 'EVP_KEM_is_a' argument 1 names different: declaration 'wrap' definition 'kem'.
+int EVP_KEM_is_a(const EVP_KEM *wrap, const char *name);
+                                ^
+crypto/evp/kem.c:494:33: note: Function 'EVP_KEM_is_a' argument 1 names different: declaration 'wrap' definition 'kem'.
+int EVP_KEM_is_a(const EVP_KEM *kem, const char *name)
+                                ^
+crypto/evp/kem.c:499:39: style: inconclusive: Function 'evp_kem_get_number' argument 1 names different: declaration 'wrap' definition 'kem'. [funcArgNamesDifferent]
+int evp_kem_get_number(const EVP_KEM *kem)
+                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h:709:39: note: Function 'evp_kem_get_number' argument 1 names different: declaration 'wrap' definition 'kem'.
+int evp_kem_get_number(const EVP_KEM *wrap);
+                                      ^
+crypto/evp/kem.c:499:39: note: Function 'evp_kem_get_number' argument 1 names different: declaration 'wrap' definition 'kem'.
+int evp_kem_get_number(const EVP_KEM *kem)
+                                      ^
+crypto/evp/kem.c:504:46: style: inconclusive: Function 'EVP_KEM_get0_name' argument 1 names different: declaration 'wrap' definition 'kem'. [funcArgNamesDifferent]
+const char *EVP_KEM_get0_name(const EVP_KEM *kem)
+                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1836:46: note: Function 'EVP_KEM_get0_name' argument 1 names different: declaration 'wrap' definition 'kem'.
+const char *EVP_KEM_get0_name(const EVP_KEM *wrap);
+                                             ^
+crypto/evp/kem.c:504:46: note: Function 'EVP_KEM_get0_name' argument 1 names different: declaration 'wrap' definition 'kem'.
+const char *EVP_KEM_get0_name(const EVP_KEM *kem)
+                                             ^
+crypto/evp/kem.c:509:53: style: inconclusive: Function 'EVP_KEM_get0_description' argument 1 names different: declaration 'wrap' definition 'kem'. [funcArgNamesDifferent]
+const char *EVP_KEM_get0_description(const EVP_KEM *kem)
+                                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1837:53: note: Function 'EVP_KEM_get0_description' argument 1 names different: declaration 'wrap' definition 'kem'.
+const char *EVP_KEM_get0_description(const EVP_KEM *wrap);
+                                                    ^
+crypto/evp/kem.c:509:53: note: Function 'EVP_KEM_get0_description' argument 1 names different: declaration 'wrap' definition 'kem'.
+const char *EVP_KEM_get0_description(const EVP_KEM *kem)
+                                                    ^
+crypto/evp/kem.c:528:41: style: inconclusive: Function 'EVP_KEM_names_do_all' argument 1 names different: declaration 'wrap' definition 'kem'. [funcArgNamesDifferent]
+int EVP_KEM_names_do_all(const EVP_KEM *kem,
+                                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h:1840:41: note: Function 'EVP_KEM_names_do_all' argument 1 names different: declaration 'wrap' definition 'kem'.
+int EVP_KEM_names_do_all(const EVP_KEM *wrap,
+                                        ^
+crypto/evp/kem.c:528:41: note: Function 'EVP_KEM_names_do_all' argument 1 names different: declaration 'wrap' definition 'kem'.
+int EVP_KEM_names_do_all(const EVP_KEM *kem,
+                                        ^
+crypto/evp/keymgmt_meth.c:407:61: style: inconclusive: Function 'evp_keymgmt_freedata' argument 2 names different: declaration 'keyddata' definition 'keydata'. [funcArgNamesDifferent]
+void evp_keymgmt_freedata(const EVP_KEYMGMT *keymgmt, void *keydata)
+                                                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h:560:61: note: Function 'evp_keymgmt_freedata' argument 2 names different: declaration 'keyddata' definition 'keydata'.
+void evp_keymgmt_freedata(const EVP_KEYMGMT *keymgmt, void *keyddata);
+                                                            ^
+crypto/evp/keymgmt_meth.c:407:61: note: Function 'evp_keymgmt_freedata' argument 2 names different: declaration 'keyddata' definition 'keydata'.
+void evp_keymgmt_freedata(const EVP_KEYMGMT *keymgmt, void *keydata)
+                                                            ^
+crypto/evp/keymgmt_meth.c:545:55: style: inconclusive: Function 'evp_keymgmt_has' argument 2 names different: declaration 'keyddata' definition 'keydata'. [funcArgNamesDifferent]
+int evp_keymgmt_has(const EVP_KEYMGMT *keymgmt, void *keydata, int selection)
+                                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h:581:55: note: Function 'evp_keymgmt_has' argument 2 names different: declaration 'keyddata' definition 'keydata'.
+int evp_keymgmt_has(const EVP_KEYMGMT *keymgmt, void *keyddata, int selection);
+                                                      ^
+crypto/evp/keymgmt_meth.c:545:55: note: Function 'evp_keymgmt_has' argument 2 names different: declaration 'keyddata' definition 'keydata'.
+int evp_keymgmt_has(const EVP_KEYMGMT *keymgmt, void *keydata, int selection)
+                                                      ^
+crypto/evp/keymgmt_lib.c:236:20: style: The scope of the variable 'p' can be reduced. [variableScope]
+    OP_CACHE_ELEM *p;
+                   ^
+crypto/evp/keymgmt_lib.c:231:64: style: Parameter 'pk' can be declared as pointer to const [constParameterPointer]
+OP_CACHE_ELEM *evp_keymgmt_util_find_operation_cache(EVP_PKEY *pk,
+                                                               ^
+crypto/evp/keymgmt_lib.c:232:18: style: Parameter 'keymgmt' can be declared as pointer to const [constParameterPointer]
+    EVP_KEYMGMT *keymgmt,
+                 ^
+crypto/evp/keymgmt_lib.c:357:11: style: Variable 'keydata1' can be declared as pointer to const [constVariablePointer]
+    void *keydata1 = NULL, *keydata2 = NULL;
+          ^
+crypto/evp/keymgmt_lib.c:357:29: style: Variable 'keydata2' can be declared as pointer to const [constVariablePointer]
+    void *keydata1 = NULL, *keydata2 = NULL;
+                            ^
+crypto/evp/keymgmt_lib.c:541:11: style: Variable 'result' can be declared as pointer to const [constVariablePointer]
+    char *result = NULL;
+          ^
+crypto/evp/keymgmt_lib.c:534:57: style: Parameter 'keymgmt' can be declared as pointer to const [constParameterPointer]
+int evp_keymgmt_util_get_deflt_digest_name(EVP_KEYMGMT *keymgmt,
+                                                        ^

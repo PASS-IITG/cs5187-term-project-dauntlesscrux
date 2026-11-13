@@ -1,0 +1,10 @@
+# Known limitations after the CVE rule audit
+
+- `typestate_check.py` remains a source-pattern checker for three pinned OpenSSL functions, not general typestate analysis, a C parser, a CFG engine, or a soundness proof.
+- Function extraction uses a signature substring and brace counting. It can fail on unusual formatting, macros, conditional compilation, or literal/braces constructs outside the limited literal-aware statement check.
+- The new statement helper recognizes only top-level direct statements and obvious unbraced `if`/loop/switch prefixes. It does not evaluate arbitrary conditions, `goto` reachability, `#if` configuration, macro expansion, callbacks, or alias/points-to state. Where the audited pattern is conditional, reordered, duplicated, or nested, the affected rules prefer UNKNOWN.
+- CVE-2022-4450 checking is scoped to `PEM_read_bio_ex`'s `out_free` cleanup and direct output-pointer operations. It does not cover other PEM readers or prove caller behavior after a failure.
+- CVE-2023-0215 checking is scoped to `BIO_new_NDEF` and a limited direct BIO alias. It does not model arbitrary BIO chain mutations by callbacks. The fixed implementation documents the assumption that the ASN.1 callback does not mutate `asn_bio` on error.
+- CVE-2024-4741 checking covers the local read-buffer release/reset pattern only. It does not prove the `SSL_free_buffers` no-pending-data preconditions or analyze every record-layer caller and API state.
+- Source regression fixtures establish that the checker distinguishes these source patterns; they are not runtime vulnerability reproductions. Previously recorded runtime evidence for CVE-2023-0215 is separate historical evidence and was not rerun in this audit.
+- Six vulnerable/fixed source worktrees have a pre-existing unstaged modification to `test/smime-eml/SignedInvalidMappingFromanyPolicyTest7.eml`; none was changed by this audit. The main project had pre-existing staged and unstaged changes. See `baseline_git_state.txt` and `worktree_status_final.txt`.

@@ -1,0 +1,5 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/evp/ec_support.c:217:10-24: alloc_event|buf
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/evp/kdf_lib.c:63:10-24: alloc_event|dst
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/evp/keymgmt_lib.c:267:12-26: alloc_event|p
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/evp/evp_fetch.c:700:14-28: alloc_event|propstr
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/evp/evp_fetch.c:583:22-36: alloc_event|propstr

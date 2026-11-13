@@ -1,0 +1,10 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/demos/dtlslistenerecho/main.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/ssl/ssl_lib.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/dtlsssllistenertest.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/dtlstest.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/dtlsv1listentest.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/quic_client_test.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/quic_multistream_test.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/quic_tserver_test.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/radix/quic_ops.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/sslapitest.c

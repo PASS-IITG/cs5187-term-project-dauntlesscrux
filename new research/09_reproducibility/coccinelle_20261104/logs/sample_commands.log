@@ -1,0 +1,9 @@
+Sample validation commands and exit codes (Coccinelle 1.1.1)
+spatch --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/01_use_after_release.cocci /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/use_after_release.c
+exit=0
+spatch --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/02_repeated_release.cocci /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/repeated_release.c
+exit=0
+spatch --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/03_release_after_transfer.cocci /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/transfer.c
+exit=0
+spatch --sp-file /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/rules/04_acquire_early_return.cocci /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/acquire_return.c
+exit=0

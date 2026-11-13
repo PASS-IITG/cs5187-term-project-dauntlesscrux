@@ -1,0 +1,2 @@
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/use_after_release.c:8:4-16: possible use-after-release of p in reset_before_use; later member access at line 10
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/use_after_release.c:4:4-16: possible use-after-release of p in suspect; later member access at line 5

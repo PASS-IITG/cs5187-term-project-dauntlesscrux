@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.13.0"/>
+    <errors>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;sd_load&apos; argument 2 names different: declaration &apos;sd&apos; definition &apos;lib&apos;." verbose="Function &apos;sd_load&apos; argument 2 names different: declaration &apos;sd&apos; definition &apos;lib&apos;." cwe="628" inconclusive="true" file0="test/simpledynamic.c">
+            <location file="test/simpledynamic.c" line="18" column="39"/>
+            <location file="test/simpledynamic.h" line="45" column="39"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;sd_sym&apos; argument 1 names different: declaration &apos;sd&apos; definition &apos;lib&apos;." verbose="Function &apos;sd_sym&apos; argument 1 names different: declaration &apos;sd&apos; definition &apos;lib&apos;." cwe="628" inconclusive="true" file0="test/simpledynamic.c">
+            <location file="test/simpledynamic.c" line="29" column="15"/>
+            <location file="test/simpledynamic.h" line="46" column="15"/>
+        </error>
+        <error id="zerodivcond" severity="warning" msg="Either the condition &apos;b&lt;0&apos; is redundant or there is division by zero at line 24." verbose="Either the condition &apos;b&lt;0&apos; is redundant or there is division by zero at line 24." cwe="369" file0="test/safe_math_test.c">
+            <location file="test/safe_math_test.c" line="24" column="1" info="Division by zero"/>
+            <location file="test/safe_math_test.c" line="24" column="1" info="Assignment &apos;y=b&lt;0?-b:b&apos;, assigned value is 0"/>
+            <location file="test/safe_math_test.c" line="24" column="1" info="Assuming that condition &apos;b&lt;0&apos; is not redundant"/>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;^&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a^b?c:d&apos;&apos; should be written as either &apos;&apos;(a^b)?c:d&apos;&apos; or &apos;&apos;a^(b?c:d)&apos;&apos;." cwe="783" file0="test/safe_math_test.c">
+            <location file="test/safe_math_test.c" line="24" column="1"/>
+        </error>
+        <error id="shiftTooManyBitsSigned" severity="portability" msg="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" verbose="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" cwe="758" file0="test/safe_math_test.c">
+            <location file="test/safe_math_test.c" line="24" column="1" info="Shift"/>
+        </error>
+        <error id="integerOverflowCond" severity="warning" msg="Either the condition &apos;a&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))-a&apos;." verbose="Either the condition &apos;a&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))-a&apos;." cwe="190" file0="test/safe_math_test.c">
+            <location file="test/safe_math_test.c" line="24" column="1" info="Integer overflow"/>
+            <location file="test/safe_math_test.c" line="24" column="1" info="Assuming that condition &apos;a&gt;0&apos; is not redundant"/>
+        </error>
+        <error id="integerOverflowCond" severity="warning" msg="Either the condition &apos;a&lt;0&apos; is redundant or there is signed integer overflow for expression &apos;((int)1&lt;&lt;(sizeof(int)*8-1))-a&apos;." verbose="Either the condition &apos;a&lt;0&apos; is redundant or there is signed integer overflow for expression &apos;((int)1&lt;&lt;(sizeof(int)*8-1))-a&apos;." cwe="190" file0="test/safe_math_test.c">
+            <location file="test/safe_math_test.c" line="24" column="1" info="Integer overflow"/>
+            <location file="test/safe_math_test.c" line="24" column="1" info="Assuming that condition &apos;a&lt;0&apos; is not redundant"/>
+        </error>
+        <error id="integerOverflowCond" severity="warning" msg="Either the condition &apos;b&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;((int)1&lt;&lt;(sizeof(int)*8-1))+b&apos;." verbose="Either the condition &apos;b&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;((int)1&lt;&lt;(sizeof(int)*8-1))+b&apos;." cwe="190" file0="test/safe_math_test.c">
+            <location file="test/safe_math_test.c" line="24" column="1" info="Integer overflow"/>
+            <location file="test/safe_math_test.c" line="24" column="1" info="Assuming that condition &apos;b&gt;0&apos; is not redundant"/>
+        </error>
+        <error id="integerOverflowCond" severity="warning" msg="Either the condition &apos;b&lt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))+b&apos;." verbose="Either the condition &apos;b&lt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))+b&apos;." cwe="190" file0="test/safe_math_test.c">
+            <location file="test/safe_math_test.c" line="24" column="1" info="Integer overflow"/>
+            <location file="test/safe_math_test.c" line="24" column="1" info="Assuming that condition &apos;b&lt;0&apos; is not redundant"/>
+        </error>
+        <error id="integerOverflowCond" severity="warning" msg="Either the condition &apos;b&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))-b&apos;." verbose="Either the condition &apos;b&gt;0&apos; is redundant or there is signed integer overflow for expression &apos;(~((int)1&lt;&lt;(sizeof(int)*8-1)))-b&apos;." cwe="190" file0="test/safe_math_test.c">
+            <location file="test/safe_math_test.c" line="24" column="1" info="Integer overflow"/>
+            <location file="test/safe_math_test.c" line="24" column="1" info="Assuming that condition &apos;b&gt;0&apos; is not redundant"/>
+        </error>
+        <error id="duplicateBreak" severity="style" msg="Consecutive return, break, continue, goto or throw statements are unnecessary." verbose="Consecutive return, break, continue, goto or throw statements are unnecessary. The second statement can never be executed, and so should be removed." cwe="561" inconclusive="true" file0="test/sha3_x4_internal_test.c">
+            <location file="test/sha3_x4_internal_test.c" line="429" column="5"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;argv&apos; can be declared as const array" verbose="Parameter &apos;argv&apos; can be declared as const array" cwe="398" file0="test/shlibloadtest.c">
+            <location file="test/shlibloadtest.c" line="194" column="26" info="Parameter &apos;argv&apos; can be declared as const array"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sbuf&apos; can be declared as pointer to const" verbose="Variable &apos;sbuf&apos; can be declared as pointer to const" cwe="398" file0="test/sha_test.c">
+            <location file="test/sha_test.c" line="20" column="42" info="Variable &apos;sbuf&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;expected&apos; can be declared as pointer to const" verbose="Variable &apos;expected&apos; can be declared as pointer to const" cwe="398" file0="test/siphash_internal_test.c">
+            <location file="test/siphash_internal_test.c" line="178" column="20" info="Variable &apos;expected&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;get_faked_bytes&apos; argument 1 names different: declaration &apos;out&apos; definition &apos;buf&apos;." verbose="Function &apos;get_faked_bytes&apos; argument 1 names different: declaration &apos;out&apos; definition &apos;buf&apos;." cwe="628" inconclusive="true" file0="test/sm2_internal_test.c">
+            <location file="test/sm2_internal_test.c" line="38" column="43"/>
+            <location file="test/sm2_internal_test.c" line="31" column="32"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;get_faked_bytes&apos; argument 2 names different: declaration &apos;outlen&apos; definition &apos;num&apos;." verbose="Function &apos;get_faked_bytes&apos; argument 2 names different: declaration &apos;outlen&apos; definition &apos;num&apos;." cwe="628" inconclusive="true" file0="test/sm2_internal_test.c">
+            <location file="test/sm2_internal_test.c" line="38" column="55"/>
+            <location file="test/sm2_internal_test.c" line="31" column="32"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;td1&apos; can be declared as pointer to const" verbose="Variable &apos;td1&apos; can be declared as pointer to const" cwe="398" file0="test/slh_dsa_test.c">
+            <location file="test/slh_dsa_test.c" line="124" column="28" info="Variable &apos;td1&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;td2&apos; can be declared as pointer to const" verbose="Variable &apos;td2&apos; can be declared as pointer to const" cwe="398" file0="test/slh_dsa_test.c">
+            <location file="test/slh_dsa_test.c" line="125" column="28" info="Variable &apos;td2&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;td&apos; can be declared as pointer to const" verbose="Variable &apos;td&apos; can be declared as pointer to const" cwe="398" file0="test/slh_dsa_test.c">
+            <location file="test/slh_dsa_test.c" line="158" column="28" info="Variable &apos;td&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;sig&apos; can be declared as pointer to const" verbose="Parameter &apos;sig&apos; can be declared as pointer to const" cwe="398" file0="test/slh_dsa_test.c">
+            <location file="test/slh_dsa_test.c" line="212" column="14" info="Parameter &apos;sig&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;config_file&apos; can be declared as pointer to const" verbose="Variable &apos;config_file&apos; can be declared as pointer to const" cwe="398" file0="test/slh_dsa_test.c">
+            <location file="test/slh_dsa_test.c" line="647" column="11" info="Variable &apos;config_file&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="34" column="43" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="34" column="65" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="45" column="43" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="45" column="65" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="103" column="45" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="103" column="67" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="124" column="47" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="124" column="69" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="135" column="73" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="135" column="51" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="149" column="69" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="149" column="47" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="162" column="48" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="162" column="70" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="169" column="40" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="169" column="62" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="182" column="41" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="182" column="63" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="194" column="60" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="195" column="19" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="215" column="47" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="215" column="69" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;names&apos; can be declared as pointer to const" verbose="Parameter &apos;names&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="234" column="49" info="Parameter &apos;names&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="281" column="66" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="281" column="44" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="288" column="19" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="287" column="53" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="295" column="19" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="294" column="53" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="302" column="19" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="301" column="53" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="317" column="19" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="316" column="53" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="324" column="19" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="323" column="53" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="331" column="19" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="330" column="53" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;test_ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;test_ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="345" column="65" info="Parameter &apos;test_ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;result&apos; can be declared as pointer to const" verbose="Parameter &apos;result&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test.c">
+            <location file="test/ssl_test.c" line="345" column="43" info="Parameter &apos;result&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;lh-&gt;omega&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;lh-&gt;omega&apos; is reassigned a value before the old one has been used." cwe="563" file0="test/ssl_cert_table_internal_test.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/dgram_demux.h" line="119" column="1" info="lh-&gt;omega is overwritten"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/dgram_demux.h" line="119" column="1" info="lh-&gt;omega is assigned"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;lh-&gt;omega&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;lh-&gt;omega&apos; is reassigned a value before the old one has been used." cwe="563" file0="test/ssl_cert_table_internal_test.c">
+            <location file="ssl/ssl_local.h" line="2208" column="1" info="lh-&gt;omega is overwritten"/>
+            <location file="ssl/ssl_local.h" line="2208" column="1" info="lh-&gt;omega is assigned"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;nfy&apos; can be declared as pointer to const" verbose="Parameter &apos;nfy&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_cert_table_internal_test.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/rio_notifier.h" line="64" column="74" info="Parameter &apos;nfy&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;conf1&apos; can be declared as pointer to const" verbose="Parameter &apos;conf1&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test_ctx_test.c">
+            <location file="test/ssl_test_ctx_test.c" line="35" column="48" info="Parameter &apos;conf1&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;conf2&apos; can be declared as pointer to const" verbose="Parameter &apos;conf2&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test_ctx_test.c">
+            <location file="test/ssl_test_ctx_test.c" line="36" column="27" info="Parameter &apos;conf2&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;serv&apos; can be declared as pointer to const" verbose="Parameter &apos;serv&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test_ctx_test.c">
+            <location file="test/ssl_test_ctx_test.c" line="49" column="48" info="Parameter &apos;serv&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;serv2&apos; can be declared as pointer to const" verbose="Parameter &apos;serv2&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_test_ctx_test.c">
+            <location file="test/ssl_test_ctx_test.c" line="50" column="27" info="Parameter &apos;serv2&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;sn_server2!=NULL&apos; is always true" verbose="Condition &apos;sn_server2!=NULL&apos; is always true" cwe="571" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="217" column="42" info="Condition &apos;sn_server2!=NULL&apos; is always true"/>
+            <location file="test/ssl_old_test.c" line="211" column="20" info="Assuming condition &apos;sn_server2==NULL&apos; is false"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;doit_localhost&apos; argument 4 names different: declaration &apos;bytes&apos; definition &apos;count&apos;." verbose="Function &apos;doit_localhost&apos; argument 4 names different: declaration &apos;bytes&apos; definition &apos;count&apos;." cwe="628" inconclusive="true" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="1928" column="61"/>
+            <location file="test/ssl_old_test.c" line="624" column="10"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;doit_biopair&apos; argument 3 names different: declaration &apos;bytes&apos; definition &apos;count&apos;." verbose="Function &apos;doit_biopair&apos; argument 3 names different: declaration &apos;bytes&apos; definition &apos;count&apos;." cwe="628" inconclusive="true" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="2224" column="47"/>
+            <location file="test/ssl_old_test.c" line="625" column="47"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;doit&apos; argument 3 names different: declaration &apos;bytes&apos; definition &apos;count&apos;." verbose="Function &apos;doit&apos; argument 3 names different: declaration &apos;bytes&apos; definition &apos;count&apos;." cwe="628" inconclusive="true" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="2597" column="39"/>
+            <location file="test/ssl_old_test.c" line="627" column="39"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;client&apos; can be declared as pointer to const" verbose="Parameter &apos;client&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="143" column="28" info="Parameter &apos;client&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;server&apos; can be declared as pointer to const" verbose="Parameter &apos;server&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="143" column="41" info="Parameter &apos;server&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ctx&apos; can be declared as pointer to const" verbose="Variable &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="227" column="14" info="Variable &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;server&apos; can be declared as pointer to const" verbose="Parameter &apos;server&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="224" column="48" info="Parameter &apos;server&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;alpn_str&apos; can be declared as pointer to const" verbose="Variable &apos;alpn_str&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="289" column="11" info="Variable &apos;alpn_str&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;client&apos; can be declared as pointer to const" verbose="Parameter &apos;client&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="323" column="29" info="Parameter &apos;client&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;server&apos; can be declared as pointer to const" verbose="Parameter &apos;server&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="323" column="42" info="Parameter &apos;server&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;key&apos; can be declared as pointer to const" verbose="Parameter &apos;key&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="740" column="51" info="Parameter &apos;key&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;cert&apos; can be declared as pointer to const" verbose="Variable &apos;cert&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="778" column="11" info="Variable &apos;cert&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;sess&apos; can be declared as pointer to const" verbose="Parameter &apos;sess&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="853" column="61" info="Parameter &apos;sess&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;s&apos; can be declared as pointer to const" verbose="Variable &apos;s&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="2881" column="11" info="Variable &apos;s&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const. However it seems that &apos;verify_callback&apos; is a callback function, if &apos;ctx&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;ctx&apos; can be declared as pointer to const. However it seems that &apos;verify_callback&apos; is a callback function, if &apos;ctx&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="2879" column="52" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+            <location file="test/ssl_old_test.c" line="1581" column="52" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;cb_arg&apos; can be declared as pointer to const" verbose="Variable &apos;cb_arg&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="2917" column="28" info="Variable &apos;cb_arg&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;s&apos; can be declared as pointer to const" verbose="Variable &apos;s&apos; can be declared as pointer to const" cwe="398" file0="test/ssl_old_test.c">
+            <location file="test/ssl_old_test.c" line="2920" column="15" info="Variable &apos;s&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;copy&apos; can be reduced." verbose="The scope of the variable &apos;copy&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/sslcorrupttest.c">
+            <location file="test/sslcorrupttest.c" line="41" column="11"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;next&apos; can be declared as pointer to const" verbose="Variable &apos;next&apos; can be declared as pointer to const" cwe="398" file0="test/sslcorrupttest.c">
+            <location file="test/sslcorrupttest.c" line="19" column="10" info="Variable &apos;next&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ciphers&apos; can be declared as pointer to const" verbose="Variable &apos;ciphers&apos; can be declared as pointer to const" cwe="398" file0="test/sslcorrupttest.c">
+            <location file="test/sslcorrupttest.c" line="189" column="27" info="Variable &apos;ciphers&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;src&apos; can be declared as pointer to const" verbose="Variable &apos;src&apos; can be declared as pointer to const" cwe="398" file0="test/stack_test.c">
+            <location file="test/stack_test.c" line="493" column="15" info="Variable &apos;src&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;dst&apos; can be declared as pointer to const" verbose="Variable &apos;dst&apos; can be declared as pointer to const" cwe="398" file0="test/stack_test.c">
+            <location file="test/stack_test.c" line="494" column="15" info="Variable &apos;dst&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="nullPointer" severity="warning" msg="Possible null pointer dereference: sc" verbose="Possible null pointer dereference: sc" cwe="476" file0="test/sslbuffertest.c">
+            <location file="test/sslbuffertest.c" line="46" column="30" info="Null pointer dereference"/>
+            <location file="test/sslbuffertest.c" line="45" column="26" info="Assignment &apos;sc=(s)==NULL?NULL:(s-&gt;type==0?(struct ssl_connection_st*)(s):NULL)&apos;, assigned value is 0"/>
+        </error>
+        <error id="nullPointer" severity="warning" msg="Possible null pointer dereference: sc" verbose="Possible null pointer dereference: sc" cwe="476" file0="test/sslbuffertest.c">
+            <location file="test/sslbuffertest.c" line="47" column="30" info="Null pointer dereference"/>
+            <location file="test/sslbuffertest.c" line="45" column="26" info="Assignment &apos;sc=(s)==NULL?NULL:(s-&gt;type==0?(struct ssl_connection_st*)(s):NULL)&apos;, assigned value is 0"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;async_ctrs::rctr&apos; is never used." verbose="struct member &apos;async_ctrs::rctr&apos; is never used." cwe="563" file0="test/sslbuffertest.c">
+            <location file="test/sslbuffertest.c" line="34" column="18"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;async_ctrs::wctr&apos; is never used." verbose="struct member &apos;async_ctrs::wctr&apos; is never used." cwe="563" file0="test/sslbuffertest.c">
+            <location file="test/sslbuffertest.c" line="35" column="18"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;test&apos; can be declared as pointer to const" verbose="Variable &apos;test&apos; can be declared as pointer to const" cwe="398" file0="test/strtoultest.c">
+            <location file="test/strtoultest.c" line="361" column="33" info="Variable &apos;test&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;buf&apos; can be declared as const array" verbose="Variable &apos;buf&apos; can be declared as const array" cwe="398" file0="test/test_test.c">
+            <location file="test/test_test.c" line="258" column="17" info="Variable &apos;buf&apos; can be declared as const array"/>
+        </error>
+        <error id="nullPointer" severity="warning" msg="Possible null pointer dereference: s" verbose="Possible null pointer dereference: s" cwe="476" file0="test/statem_clnt_construct_test.c">
+            <location file="test/statem_clnt_construct_test.c" line="714" column="5" info="Null pointer dereference"/>
+            <location file="test/statem_clnt_construct_test.c" line="713" column="9" info="Assignment &apos;s=(ssl)==NULL?NULL:(ssl-&gt;type==0?(struct ssl_connection_st*)(ssl):((((ssl-&gt;type)&amp;0x80)!=0)?(struct ssl_connection_st*)ossl_quic_obj_get0_handshake_layer((struct quic_obj_st*)(ssl)):NULL))&apos;, assigned value is 0"/>
+        </error>
+        <error id="nullPointer" severity="warning" msg="Possible null pointer dereference: s" verbose="Possible null pointer dereference: s" cwe="476" file0="test/statem_clnt_construct_test.c">
+            <location file="test/statem_clnt_construct_test.c" line="933" column="5" info="Null pointer dereference"/>
+            <location file="test/statem_clnt_construct_test.c" line="932" column="9" info="Assignment &apos;s=(ssl)==NULL?NULL:(ssl-&gt;type==0?(struct ssl_connection_st*)(ssl):((((ssl-&gt;type)&amp;0x80)!=0)?(struct ssl_connection_st*)ossl_quic_obj_get0_handshake_layer((struct quic_obj_st*)(ssl)):NULL))&apos;, assigned value is 0"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ciphers&apos; can be declared as pointer to const" verbose="Variable &apos;ciphers&apos; can be declared as pointer to const" cwe="398" file0="test/statem_clnt_construct_test.c">
+            <location file="test/statem_clnt_construct_test.c" line="1081" column="27" info="Variable &apos;ciphers&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;check_cke_rsa&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;check_cke_rsa&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/statem_clnt_construct_test.c">
+            <location file="test/statem_clnt_construct_test.c" line="1201" column="42" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+            <location file="test/statem_clnt_construct_test.c" line="1245" column="27" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;check_cke_ecdhe&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;check_cke_ecdhe&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/statem_clnt_construct_test.c">
+            <location file="test/statem_clnt_construct_test.c" line="1273" column="44" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+            <location file="test/statem_clnt_construct_test.c" line="1292" column="27" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;check_cke_dhe&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;check_cke_dhe&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/statem_clnt_construct_test.c">
+            <location file="test/statem_clnt_construct_test.c" line="1385" column="42" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+            <location file="test/statem_clnt_construct_test.c" line="1402" column="27" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;check_cke_psk&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;check_cke_psk&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/statem_clnt_construct_test.c">
+            <location file="test/statem_clnt_construct_test.c" line="1434" column="42" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+            <location file="test/statem_clnt_construct_test.c" line="1453" column="27" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;data&apos; can be declared as pointer to const" verbose="Variable &apos;data&apos; can be declared as pointer to const" cwe="398" file0="test/testutil/basic_output.c">
+            <location file="test/testutil/basic_output.c" line="240" column="22" info="Variable &apos;data&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;test_rand_order&apos; can be declared as pointer to const" verbose="Variable &apos;test_rand_order&apos; can be declared as pointer to const" cwe="398" file0="test/testutil/driver.c">
+            <location file="test/testutil/driver.c" line="138" column="11" info="Variable &apos;test_rand_order&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;test_rand_seed&apos; can be declared as pointer to const" verbose="Variable &apos;test_rand_seed&apos; can be declared as pointer to const" cwe="398" file0="test/testutil/driver.c">
+            <location file="test/testutil/driver.c" line="139" column="11" info="Variable &apos;test_rand_seed&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;TAP_levels&apos; can be declared as pointer to const" verbose="Variable &apos;TAP_levels&apos; can be declared as pointer to const" cwe="398" file0="test/testutil/driver.c">
+            <location file="test/testutil/driver.c" line="140" column="11" info="Variable &apos;TAP_levels&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;name&apos; can be declared as pointer to const" verbose="Parameter &apos;name&apos; can be declared as pointer to const" cwe="398" file0="test/testutil/driver.c">
+            <location file="test/testutil/driver.c" line="180" column="43" info="Parameter &apos;name&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;l&apos; can be reduced." verbose="The scope of the variable &apos;l&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/testutil/fake_random.c">
+            <location file="test/testutil/fake_random.c" line="75" column="12"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;fake_rand_newctx&apos; argument 3 names different: declaration &apos;parent_calls&apos; definition &apos;parent_dispatch&apos;." verbose="Function &apos;fake_rand_newctx&apos; argument 3 names different: declaration &apos;parent_calls&apos; definition &apos;parent_dispatch&apos;." cwe="628" inconclusive="true" file0="test/testutil/fake_random.c">
+            <location file="test/testutil/fake_random.c" line="36" column="26"/>
+            <location file="test/testutil/fake_random.c" line="26" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;fake_rand_gettable_ctx_params&apos; argument 1 names different: declaration &apos;vctx&apos; definition &apos;vrng&apos;." verbose="Function &apos;fake_rand_gettable_ctx_params&apos; argument 1 names different: declaration &apos;vctx&apos; definition &apos;vrng&apos;." cwe="628" inconclusive="true" file0="test/testutil/fake_random.c">
+            <location file="test/testutil/fake_random.c" line="115" column="74"/>
+            <location file="test/testutil/fake_random.c" line="31" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;fake_rand_set_callback&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;rng&apos;." verbose="Function &apos;fake_rand_set_callback&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;rng&apos;." cwe="628" inconclusive="true" file0="test/testutil/fake_random.c">
+            <location file="test/testutil/fake_random.c" line="214" column="43"/>
+            <location file="test/testutil.h" line="699" column="43"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;frng&apos; can be declared as pointer to const" verbose="Variable &apos;frng&apos; can be declared as pointer to const" cwe="398" file0="test/testutil/fake_random.c">
+            <location file="test/testutil/fake_random.c" line="98" column="16" info="Variable &apos;frng&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="redundantCondition" severity="style" msg="Redundant condition: nwbio==iwbio. &apos;nwbio!=iwbio || (nwbio==iwbio &amp;&amp; irbio==iwbio)&apos; is equivalent to &apos;nwbio!=iwbio || irbio==iwbio&apos;" verbose="The condition &apos;nwbio!=iwbio || nwbio==iwbio &amp;&amp; irbio==iwbio&apos; is equivalent to &apos;nwbio!=iwbio || irbio==iwbio&apos;." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="4968" column="28"/>
+        </error>
+        <error id="badBitmaskCheck" severity="style" msg="Operator &apos;|&apos; with one operand equal to zero is redundant." verbose="Operator &apos;|&apos; with one operand equal to zero is redundant." cwe="571" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="8817" column="9"/>
+        </error>
+        <error id="badBitmaskCheck" severity="style" msg="Operator &apos;|&apos; with one operand equal to zero is redundant." verbose="Operator &apos;|&apos; with one operand equal to zero is redundant." cwe="571" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="8821" column="9"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;nrbio!=nwbio&apos; is always true" verbose="Condition &apos;nrbio!=nwbio&apos; is always true" cwe="571" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="4971" column="45" info="Condition &apos;nrbio!=nwbio&apos; is always true"/>
+        </error>
+        <error id="redundantContinue" severity="style" msg="&apos;continue&apos; is redundant since it is the last statement in a loop." verbose="&apos;continue&apos; is redundant since it is the last statement in a loop." cwe="561" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="986" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;params&apos; can be reduced." verbose="The scope of the variable &apos;params&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="18718" column="20"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;n2&gt;n1&apos; is always false" verbose="Condition &apos;n2&gt;n1&apos; is always false" cwe="570" file0="test/testutil/format_output.c">
+            <location file="test/testutil/format_output.c" line="96" column="56" info="Condition &apos;n2&gt;n1&apos; is always false"/>
+            <location file="test/testutil/format_output.c" line="95" column="16" info="Assuming that condition &apos;n1==n2&apos; is not redundant"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;hostname_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;hostname_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="174" column="29" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="13612" column="14" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;expected&apos; can be declared as pointer to const" verbose="Parameter &apos;expected&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="239" column="35" info="Parameter &apos;expected&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const. However it seems that &apos;server_verify_retry_cb&apos; is a callback function, if &apos;ctx&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;ctx&apos; can be declared as pointer to const. However it seems that &apos;server_verify_retry_cb&apos; is a callback function, if &apos;ctx&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="701" column="51" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="846" column="44" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;candidate&apos; can be declared as pointer to const" verbose="Variable &apos;candidate&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="1254" column="15" info="Variable &apos;candidate&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;candidate&apos; can be declared as pointer to const" verbose="Variable &apos;candidate&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="1259" column="19" info="Variable &apos;candidate&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ssl&apos; can be declared as pointer to const" verbose="Parameter &apos;ssl&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="1352" column="41" info="Parameter &apos;ssl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;old_peer&apos; can be declared as pointer to const" verbose="Variable &apos;old_peer&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="1384" column="11" info="Variable &apos;old_peer&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;old_rpk&apos; can be declared as pointer to const" verbose="Variable &apos;old_rpk&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="1385" column="15" info="Variable &apos;old_rpk&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;old_chain&apos; can be declared as pointer to const" verbose="Variable &apos;old_chain&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="1383" column="21" info="Variable &apos;old_chain&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;servercon&apos; can be declared as pointer to const" verbose="Variable &apos;servercon&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="1381" column="21" info="Variable &apos;servercon&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sc&apos; can be declared as pointer to const" verbose="Variable &apos;sc&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="1554" column="21" info="Variable &apos;sc&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;old_chain&apos; can be declared as pointer to const" verbose="Variable &apos;old_chain&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="1578" column="21" info="Variable &apos;old_chain&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sesspre&apos; can be declared as pointer to const" verbose="Variable &apos;sesspre&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="2004" column="32" info="Variable &apos;sesspre&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sesspost&apos; can be declared as pointer to const" verbose="Variable &apos;sesspost&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="2004" column="42" info="Variable &apos;sesspost&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ssl_cert&apos; can be declared as pointer to const" verbose="Parameter &apos;ssl_cert&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="3177" column="46" info="Parameter &apos;ssl_cert&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;issuer&apos; can be declared as pointer to const" verbose="Parameter &apos;issuer&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="3177" column="62" info="Parameter &apos;issuer&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;argi&apos; can be declared as pointer to const" verbose="Variable &apos;argi&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="3224" column="10" info="Variable &apos;argi&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;argi&apos; can be declared as pointer to const" verbose="Variable &apos;argi&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="3270" column="10" info="Variable &apos;argi&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;x509_ctx&apos; can be declared as pointer to const. However it seems that &apos;verify_cb_capture_error&apos; is a callback function, if &apos;x509_ctx&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;x509_ctx&apos; can be declared as pointer to const. However it seems that &apos;verify_cb_capture_error&apos; is a callback function, if &apos;x509_ctx&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="3290" column="70" info="Parameter &apos;x509_ctx&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="3449" column="47" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;argi&apos; can be declared as pointer to const" verbose="Variable &apos;argi&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="3496" column="10" info="Variable &apos;argi&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;argi&apos; can be declared as pointer to const" verbose="Variable &apos;argi&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="3571" column="10" info="Variable &apos;argi&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;server_certs&apos; can be declared as pointer to const" verbose="Variable &apos;server_certs&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="3574" column="21" info="Variable &apos;server_certs&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ssl_cert&apos; can be declared as pointer to const" verbose="Variable &apos;ssl_cert&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="3575" column="11" info="Variable &apos;ssl_cert&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;issuer_cert&apos; can be declared as pointer to const" verbose="Variable &apos;issuer_cert&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="3575" column="29" info="Variable &apos;issuer_cert&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sr&apos; can be declared as pointer to const" verbose="Variable &apos;sr&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="3578" column="22" info="Variable &apos;sr&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;ed_gen_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;ed_gen_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="5384" column="27" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="5432" column="46" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;data&apos; can be declared as pointer to const" verbose="Variable &apos;data&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="5549" column="27" info="Variable &apos;data&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;ssl&apos; can be declared as pointer to const. However it seems that &apos;ticket_age_gen_cb&apos; is a callback function, if &apos;ssl&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;ssl&apos; can be declared as pointer to const. However it seems that &apos;ticket_age_gen_cb&apos; is a callback function, if &apos;ssl&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="5547" column="35" info="Parameter &apos;ssl&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="5593" column="13" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;usecb&apos; can be declared as pointer to const" verbose="Variable &apos;usecb&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="5964" column="10" info="Variable &apos;usecb&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;server&apos; can be declared as pointer to const" verbose="Variable &apos;server&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="9237" column="10" info="Variable &apos;server&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;old_add_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;old_add_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="9234" column="28" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="9463" column="10" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;server&apos; can be declared as pointer to const" verbose="Variable &apos;server&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="9264" column="10" info="Variable &apos;server&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;old_parse_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;old_parse_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="9261" column="30" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="9463" column="10" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;server&apos; can be declared as pointer to const" verbose="Variable &apos;server&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="9283" column="10" info="Variable &apos;server&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;new_add_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;new_add_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="9279" column="28" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="9467" column="13" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;server&apos; can be declared as pointer to const" verbose="Variable &apos;server&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="9311" column="10" info="Variable &apos;server&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;new_parse_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;new_parse_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="9307" column="30" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="9467" column="13" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;mess&apos; can be declared as pointer to const" verbose="Variable &apos;mess&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="10035" column="18" info="Variable &apos;mess&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;mess&apos; can be declared as pointer to const" verbose="Variable &apos;mess&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="10160" column="18" info="Variable &apos;mess&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;mess&apos; can be declared as pointer to const" verbose="Variable &apos;mess&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="10326" column="18" info="Variable &apos;mess&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;mess&apos; can be declared as pointer to const" verbose="Variable &apos;mess&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="10490" column="18" info="Variable &apos;mess&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;mess&apos; can be declared as pointer to const" verbose="Variable &apos;mess&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="10643" column="18" info="Variable &apos;mess&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;gNid&apos; can be declared as pointer to const" verbose="Variable &apos;gNid&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="11035" column="11" info="Variable &apos;gNid&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;userid&apos; can be declared as pointer to const" verbose="Parameter &apos;userid&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="11033" column="35" info="Parameter &apos;userid&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;password&apos; can be declared as pointer to const" verbose="Parameter &apos;password&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="11033" column="49" info="Parameter &apos;password&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;userid&apos; can be declared as pointer to const" verbose="Parameter &apos;userid&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="11091" column="35" info="Parameter &apos;userid&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;password&apos; can be declared as pointer to const" verbose="Parameter &apos;password&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="11091" column="49" info="Parameter &apos;password&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;state&apos; can be declared as pointer to const" verbose="Variable &apos;state&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="11513" column="31" info="Variable &apos;state&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;gen_tick_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;s&apos; can be declared as pointer to const. However it seems that &apos;gen_tick_cb&apos; is a callback function, if &apos;s&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="11954" column="29" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="12334" column="10" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sess&apos; can be declared as pointer to const" verbose="Variable &apos;sess&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="12436" column="18" info="Variable &apos;sess&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;ssl&apos; can be declared as pointer to const. However it seems that &apos;client_cert_cb&apos; is a callback function, if &apos;ssl&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;ssl&apos; can be declared as pointer to const. However it seems that &apos;client_cert_cb&apos; is a callback function, if &apos;ssl&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="12957" column="32" info="Parameter &apos;ssl&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="13020" column="38" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;privkeyfilename&apos; can be declared as pointer to const" verbose="Parameter &apos;privkeyfilename&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="14139" column="63" info="Parameter &apos;privkeyfilename&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;certfilename&apos; can be declared as pointer to const" verbose="Parameter &apos;certfilename&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="14139" column="43" info="Parameter &apos;certfilename&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sc&apos; can be declared as pointer to const" verbose="Variable &apos;sc&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="14437" column="21" info="Variable &apos;sc&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sc&apos; can be declared as pointer to const" verbose="Variable &apos;sc&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="14640" column="21" info="Variable &apos;sc&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;secret_len&apos; can be declared as pointer to const. However it seems that &apos;secret_cb&apos; is a callback function, if &apos;secret_len&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;secret_len&apos; can be declared as pointer to const. However it seems that &apos;secret_cb&apos; is a callback function, if &apos;secret_len&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="14860" column="51" info="Parameter &apos;secret_len&apos; can be declared as pointer to const"/>
+            <location file="test/sslapitest.c" line="14938" column="13" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ciphersuite&apos; can be declared as pointer to const" verbose="Variable &apos;ciphersuite&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="15329" column="53" info="Variable &apos;ciphersuite&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;sp&apos; can be declared as pointer to const" verbose="Variable &apos;sp&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="16057" column="24" info="Variable &apos;sp&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;msg&apos; can be declared as pointer to const" verbose="Variable &apos;msg&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="16137" column="11" info="Variable &apos;msg&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;msg&apos; can be declared as pointer to const" verbose="Variable &apos;msg&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="16240" column="11" info="Variable &apos;msg&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const" verbose="Parameter &apos;s&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="16404" column="38" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;client&apos; can be declared as pointer to const" verbose="Variable &apos;client&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="17116" column="26" info="Variable &apos;client&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;server&apos; can be declared as pointer to const" verbose="Variable &apos;server&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="17116" column="35" info="Variable &apos;server&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;idx&apos; can be declared as pointer to const" verbose="Variable &apos;idx&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="17160" column="10" info="Variable &apos;idx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;idx&apos; can be declared as pointer to const" verbose="Variable &apos;idx&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="17182" column="10" info="Variable &apos;idx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;idx&apos; can be declared as pointer to const" verbose="Variable &apos;idx&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="17281" column="10" info="Variable &apos;idx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;data&apos; can be declared as pointer to const" verbose="Variable &apos;data&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="17402" column="10" info="Variable &apos;data&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const" verbose="Parameter &apos;s&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="17400" column="32" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;comparedata&apos; can be declared as pointer to const" verbose="Variable &apos;comparedata&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="17402" column="17" info="Variable &apos;comparedata&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;modulename&apos; can be declared as pointer to const" verbose="Variable &apos;modulename&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="18672" column="11" info="Variable &apos;modulename&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;configfile&apos; can be declared as pointer to const" verbose="Variable &apos;configfile&apos; can be declared as pointer to const" cwe="398" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="18673" column="11" info="Variable &apos;configfile&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;client_random_size&apos; is assigned a value that is never used." verbose="Variable &apos;client_random_size&apos; is assigned a value that is never used." cwe="563" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="243" column="31"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;testresult&apos; is assigned a value that is never used." verbose="Variable &apos;testresult&apos; is assigned a value that is never used." cwe="563" file0="test/sslapitest.c">
+            <location file="test/sslapitest.c" line="7156" column="20"/>
+        </error>
+        <error id="redundantContinue" severity="style" msg="&apos;continue&apos; is redundant since it is the last statement in a loop." verbose="&apos;continue&apos; is redundant since it is the last statement in a loop." cwe="561" file0="test/testutil/provider.c">
+            <location file="test/testutil/provider.c" line="186" column="13"/>
+        </error>
+        <error id="redundantContinue" severity="style" msg="&apos;continue&apos; is redundant since it is the last statement in a loop." verbose="&apos;continue&apos; is redundant since it is the last statement in a loop." cwe="561" file0="test/testutil/provider.c">
+            <location file="test/testutil/provider.c" line="190" column="13"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;s&apos; can be reduced." verbose="The scope of the variable &apos;s&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/testutil/random.c">
+            <location file="test/testutil/random.c" line="32" column="13"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;*p&apos; is always true" verbose="Condition &apos;*p&apos; is always true" cwe="571" file0="test/testutil/stanza.c">
+            <location file="test/testutil/stanza.c" line="79" column="12" info="Condition &apos;*p&apos; is always true"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p&apos; can be reduced." verbose="The scope of the variable &apos;p&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/testutil/stanza.c">
+            <location file="test/testutil/stanza.c" line="88" column="11"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;key&apos; can be declared as pointer to const" verbose="Variable &apos;key&apos; can be declared as pointer to const" cwe="398" file0="test/testutil/stanza.c">
+            <location file="test/testutil/stanza.c" line="88" column="24" info="Variable &apos;key&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;test_note&apos; argument 1 names different: declaration &apos;desc&apos; definition &apos;fmt&apos;." verbose="Function &apos;test_note&apos; argument 1 names different: declaration &apos;desc&apos; definition &apos;fmt&apos;." cwe="628" inconclusive="true" file0="test/testutil/tests.c">
+            <location file="test/testutil/tests.c" line="152" column="28"/>
+            <location file="test/testutil.h" line="474" column="28"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;test_strn_eq&apos; argument 5 names different: declaration &apos;a&apos; definition &apos;s1&apos;." verbose="Function &apos;test_strn_eq&apos; argument 5 names different: declaration &apos;a&apos; definition &apos;s1&apos;." cwe="628" inconclusive="true" file0="test/testutil/tests.c">
+            <location file="test/testutil/tests.c" line="317" column="17"/>
+            <location file="test/testutil.h" line="402" column="17"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;test_strn_eq&apos; argument 6 names different: declaration &apos;b&apos; definition &apos;s2&apos;." verbose="Function &apos;test_strn_eq&apos; argument 6 names different: declaration &apos;b&apos; definition &apos;s2&apos;." cwe="628" inconclusive="true" file0="test/testutil/tests.c">
+            <location file="test/testutil/tests.c" line="317" column="33"/>
+            <location file="test/testutil.h" line="402" column="32"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;test_strn_ne&apos; argument 5 names different: declaration &apos;a&apos; definition &apos;s1&apos;." verbose="Function &apos;test_strn_ne&apos; argument 5 names different: declaration &apos;a&apos; definition &apos;s1&apos;." cwe="628" inconclusive="true" file0="test/testutil/tests.c">
+            <location file="test/testutil/tests.c" line="331" column="17"/>
+            <location file="test/testutil.h" line="404" column="17"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;test_strn_ne&apos; argument 6 names different: declaration &apos;b&apos; definition &apos;s2&apos;." verbose="Function &apos;test_strn_ne&apos; argument 6 names different: declaration &apos;b&apos; definition &apos;s2&apos;." cwe="628" inconclusive="true" file0="test/testutil/tests.c">
+            <location file="test/testutil/tests.c" line="331" column="33"/>
+            <location file="test/testutil.h" line="404" column="32"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;e&apos; can be declared as pointer to const" verbose="Parameter &apos;e&apos; can be declared as pointer to const" cwe="398" file0="test/testutil/tests.c">
+            <location file="test/testutil/tests.c" line="395" column="66" info="Parameter &apos;e&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;e&apos; can be declared as pointer to const" verbose="Parameter &apos;e&apos; can be declared as pointer to const" cwe="398" file0="test/testutil/tests.c">
+            <location file="test/testutil/tests.c" line="402" column="63" info="Parameter &apos;e&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;old&apos; can be reduced." verbose="The scope of the variable &apos;old&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="147" column="10"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;t2&apos; can be reduced." verbose="The scope of the variable &apos;t2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="149" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;t2&apos; can be reduced." verbose="The scope of the variable &apos;t2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="347" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;old&apos; can be reduced." verbose="The scope of the variable &apos;old&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="348" column="15"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;valp&apos; can be reduced." verbose="The scope of the variable &apos;valp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="406" column="15"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;val&apos; can be reduced." verbose="The scope of the variable &apos;val&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="407" column="14"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n&apos; can be reduced." verbose="The scope of the variable &apos;n&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="823" column="12"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;nid&apos; can be reduced." verbose="The scope of the variable &apos;nid&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="1479" column="12"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;nid2&apos; can be reduced." verbose="The scope of the variable &apos;nid2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="1479" column="17"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;now&apos; can be reduced." verbose="The scope of the variable &apos;now&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="1480" column="12"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;t2&apos; can be reduced." verbose="The scope of the variable &apos;t2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="1516" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;t2&apos; can be reduced." verbose="The scope of the variable &apos;t2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="1538" column="19"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ptr&apos; can be declared as pointer to const" verbose="Variable &apos;ptr&apos; can be declared as pointer to const" cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="592" column="11" info="Variable &apos;ptr&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ptr&apos; can be declared as pointer to const" verbose="Variable &apos;ptr&apos; can be declared as pointer to const" cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="610" column="11" info="Variable &apos;ptr&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;datadir&apos; can be declared as pointer to const" verbose="Variable &apos;datadir&apos; can be declared as pointer to const" cwe="398" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="1621" column="11" info="Variable &apos;datadir&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;r&apos; is assigned a value that is never used." verbose="Variable &apos;r&apos; is assigned a value that is never used." cwe="563" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="1259" column="11"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;r&apos; is assigned a value that is never used." verbose="Variable &apos;r&apos; is assigned a value that is never used." cwe="563" file0="test/threadstest.c">
+            <location file="test/threadstest.c" line="1262" column="11"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;strcmp(key1-&gt;tls_name,key2-&gt;tls_name)==0&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" verbose="Boolean expression &apos;strcmp(key1-&gt;tls_name,key2-&gt;tls_name)==0&apos; is used in bitwise operation. Did you mean &apos;&amp;&amp;&apos;?" cwe="398" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="899" column="17"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="403" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;key&apos; can be reduced." verbose="The scope of the variable &apos;key&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="808" column="13"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="996" column="12"/>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;ctx-&gt;aid_len&apos; is less than zero." verbose="The unsigned expression &apos;ctx-&gt;aid_len&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2696" column="22" info="Unsigned less than zero"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_dupctx&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpxorctx&apos;." verbose="Function &apos;xor_dupctx&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpxorctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="544" column="31"/>
+            <location file="test/tls-provider.c" line="112" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_dup&apos; argument 1 names different: declaration &apos;keydata_from&apos; definition &apos;vfromkey&apos;." verbose="Function &apos;xor_dup&apos; argument 1 names different: declaration &apos;keydata_from&apos; definition &apos;vfromkey&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="771" column="34"/>
+            <location file="test/tls-provider.c" line="90" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_import_types&apos; argument 1 names different: declaration &apos;selection&apos; definition &apos;select&apos;." verbose="Function &apos;xor_import_types&apos; argument 1 names different: declaration &apos;selection&apos; definition &apos;select&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="1081" column="47"/>
+            <location file="test/tls-provider.c" line="51" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_import_types_ex&apos; argument 2 names different: declaration &apos;selection&apos; definition &apos;select&apos;." verbose="Function &apos;xor_import_types_ex&apos; argument 2 names different: declaration &apos;selection&apos; definition &apos;select&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="1086" column="65"/>
+            <location file="test/tls-provider.c" line="52" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_export_types&apos; argument 1 names different: declaration &apos;selection&apos; definition &apos;select&apos;." verbose="Function &apos;xor_export_types&apos; argument 1 names different: declaration &apos;selection&apos; definition &apos;select&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="1094" column="47"/>
+            <location file="test/tls-provider.c" line="54" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_export_types_ex&apos; argument 2 names different: declaration &apos;selection&apos; definition &apos;select&apos;." verbose="Function &apos;xor_export_types_ex&apos; argument 2 names different: declaration &apos;selection&apos; definition &apos;select&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="1099" column="65"/>
+            <location file="test/tls-provider.c" line="55" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xorhmacsig_to_EncryptedPrivateKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xorhmacsig_to_EncryptedPrivateKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2039" column="1"/>
+            <location file="test/tls-provider.c" line="2039" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xorhmacsig_to_PrivateKeyInfo_der_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xorhmacsig_to_PrivateKeyInfo_der_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2040" column="1"/>
+            <location file="test/tls-provider.c" line="2040" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xorhmacsig_to_PrivateKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xorhmacsig_to_PrivateKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2041" column="1"/>
+            <location file="test/tls-provider.c" line="2041" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xorhmacsig_to_SubjectPublicKeyInfo_der_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xorhmacsig_to_SubjectPublicKeyInfo_der_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2042" column="1"/>
+            <location file="test/tls-provider.c" line="2042" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xorhmacsig_to_SubjectPublicKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xorhmacsig_to_SubjectPublicKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2043" column="1"/>
+            <location file="test/tls-provider.c" line="2043" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xorhmacsha2sig_to_EncryptedPrivateKeyInfo_der_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xorhmacsha2sig_to_EncryptedPrivateKeyInfo_der_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2044" column="1"/>
+            <location file="test/tls-provider.c" line="2044" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xorhmacsha2sig_to_EncryptedPrivateKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xorhmacsha2sig_to_EncryptedPrivateKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2045" column="1"/>
+            <location file="test/tls-provider.c" line="2045" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xorhmacsha2sig_to_PrivateKeyInfo_der_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xorhmacsha2sig_to_PrivateKeyInfo_der_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2046" column="1"/>
+            <location file="test/tls-provider.c" line="2046" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xorhmacsha2sig_to_PrivateKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xorhmacsha2sig_to_PrivateKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2047" column="1"/>
+            <location file="test/tls-provider.c" line="2047" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xorhmacsha2sig_to_SubjectPublicKeyInfo_der_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xorhmacsha2sig_to_SubjectPublicKeyInfo_der_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2048" column="1"/>
+            <location file="test/tls-provider.c" line="2048" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xorhmacsha2sig_to_SubjectPublicKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xorhmacsha2sig_to_SubjectPublicKeyInfo_pem_import_object&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2049" column="1"/>
+            <location file="test/tls-provider.c" line="2049" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_sig_dupctx&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpxor_sigctx&apos;." verbose="Function &apos;xor_sig_dupctx&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpxor_sigctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2933" column="35"/>
+            <location file="test/tls-provider.c" line="2602" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_sig_gettable_ctx_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpxor_sigctx&apos;." verbose="Function &apos;xor_sig_gettable_ctx_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpxor_sigctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2999" column="72"/>
+            <location file="test/tls-provider.c" line="2604" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_sig_gettable_ctx_params&apos; argument 2 names different: declaration &apos;provctx&apos; definition &apos;vctx&apos;." verbose="Function &apos;xor_sig_gettable_ctx_params&apos; argument 2 names different: declaration &apos;provctx&apos; definition &apos;vctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2999" column="104"/>
+            <location file="test/tls-provider.c" line="2604" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_sig_settable_ctx_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpsm2ctx&apos;." verbose="Function &apos;xor_sig_settable_ctx_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpsm2ctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="3040" column="72"/>
+            <location file="test/tls-provider.c" line="2606" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_sig_gettable_ctx_md_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpxor_sigctx&apos;." verbose="Function &apos;xor_sig_gettable_ctx_md_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpxor_sigctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="3056" column="63"/>
+            <location file="test/tls-provider.c" line="2608" column="0"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;xor_sig_settable_ctx_md_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpxor_sigctx&apos;." verbose="Function &apos;xor_sig_settable_ctx_md_params&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;vpxor_sigctx&apos;." cwe="628" inconclusive="true" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="3076" column="63"/>
+            <location file="test/tls-provider.c" line="2610" column="0"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;srcctx&apos; can be declared as pointer to const" verbose="Variable &apos;srcctx&apos; can be declared as pointer to const" cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="546" column="25" info="Variable &apos;srcctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;key&apos; can be declared as pointer to const" verbose="Variable &apos;key&apos; can be declared as pointer to const" cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="808" column="13" info="Variable &apos;key&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;gctx&apos; can be declared as pointer to const" verbose="Variable &apos;gctx&apos; can be declared as pointer to const" cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="965" column="25" info="Variable &apos;gctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;provctx&apos; can be declared as pointer to const" verbose="Parameter &apos;provctx&apos; can be declared as pointer to const" cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="1086" column="52" info="Parameter &apos;provctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;provctx&apos; can be declared as pointer to const" verbose="Parameter &apos;provctx&apos; can be declared as pointer to const" cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="1099" column="52" info="Parameter &apos;provctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;k&apos; can be declared as pointer to const" verbose="Variable &apos;k&apos; can be declared as pointer to const" cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="1644" column="13" info="Variable &apos;k&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;xorxkey&apos; can be declared as pointer to const" verbose="Variable &apos;xorxkey&apos; can be declared as pointer to const" cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="1692" column="13" info="Variable &apos;xorxkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;xorkey&apos; can be declared as pointer to const" verbose="Variable &apos;xorkey&apos; can be declared as pointer to const" cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2743" column="13" info="Variable &apos;xorkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;rmdname&apos; can be declared as pointer to const" verbose="Variable &apos;rmdname&apos; can be declared as pointer to const" cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2824" column="11" info="Variable &apos;rmdname&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pxor_sigctx&apos; can be declared as pointer to const" verbose="Variable &apos;pxor_sigctx&apos; can be declared as pointer to const" cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="3058" column="22" info="Variable &apos;pxor_sigctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pxor_sigctx&apos; can be declared as pointer to const" verbose="Variable &apos;pxor_sigctx&apos; can be declared as pointer to const" cwe="398" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="3078" column="22" info="Variable &apos;pxor_sigctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;keytype_desc_st::structure_name&apos; is never used." verbose="struct member &apos;keytype_desc_st::structure_name&apos; is never used." cwe="563" file0="test/tls-provider.c">
+            <location file="test/tls-provider.c" line="2129" column="17"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;c&apos; can be declared as pointer to const" verbose="Parameter &apos;c&apos; can be declared as pointer to const" cwe="398" file0="test/tls12psk.c">
+            <location file="test/tls12psk.c" line="190" column="32" info="Parameter &apos;c&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;s&apos; can be declared as pointer to const" verbose="Parameter &apos;s&apos; can be declared as pointer to const" cwe="398" file0="test/tls12psk.c">
+            <location file="test/tls12psk.c" line="190" column="40" info="Parameter &apos;s&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;expectedrecvers&apos; can be reduced." verbose="The scope of the variable &apos;expectedrecvers&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/tls13ccstest.c">
+            <location file="test/tls13ccstest.c" line="94" column="45"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;watchccs_new&apos; argument 1 names different: declaration &apos;bi&apos; definition &apos;bio&apos;." verbose="Function &apos;watchccs_new&apos; argument 1 names different: declaration &apos;bi&apos; definition &apos;bio&apos;." cwe="628" inconclusive="true" file0="test/tls13ccstest.c">
+            <location file="test/tls13ccstest.c" line="58" column="30"/>
+            <location file="test/tls13ccstest.c" line="27" column="30"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;watchccs_free&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;bio&apos;." verbose="Function &apos;watchccs_free&apos; argument 1 names different: declaration &apos;a&apos; definition &apos;bio&apos;." cwe="628" inconclusive="true" file0="test/tls13ccstest.c">
+            <location file="test/tls13ccstest.c" line="64" column="31"/>
+            <location file="test/tls13ccstest.c" line="28" column="31"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;watchccs_read&apos; argument 1 names different: declaration &apos;b&apos; definition &apos;bio&apos;." verbose="Function &apos;watchccs_read&apos; argument 1 names different: declaration &apos;b&apos; definition &apos;bio&apos;." cwe="628" inconclusive="true" file0="test/tls13ccstest.c">
+            <location file="test/tls13ccstest.c" line="70" column="31"/>
+            <location file="test/tls13ccstest.c" line="29" column="31"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;watchccs_write&apos; argument 1 names different: declaration &apos;b&apos; definition &apos;bio&apos;." verbose="Function &apos;watchccs_write&apos; argument 1 names different: declaration &apos;b&apos; definition &apos;bio&apos;." cwe="628" inconclusive="true" file0="test/tls13ccstest.c">
+            <location file="test/tls13ccstest.c" line="89" column="32"/>
+            <location file="test/tls13ccstest.c" line="30" column="32"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;watchccs_ctrl&apos; argument 1 names different: declaration &apos;b&apos; definition &apos;bio&apos;." verbose="Function &apos;watchccs_ctrl&apos; argument 1 names different: declaration &apos;b&apos; definition &apos;bio&apos;." cwe="628" inconclusive="true" file0="test/tls13ccstest.c">
+            <location file="test/tls13ccstest.c" line="215" column="32"/>
+            <location file="test/tls13ccstest.c" line="31" column="32"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;watchccs_gets&apos; argument 1 names different: declaration &apos;bp&apos; definition &apos;bio&apos;." verbose="Function &apos;watchccs_gets&apos; argument 1 names different: declaration &apos;bp&apos; definition &apos;bio&apos;." cwe="628" inconclusive="true" file0="test/tls13ccstest.c">
+            <location file="test/tls13ccstest.c" line="234" column="31"/>
+            <location file="test/tls13ccstest.c" line="32" column="31"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;watchccs_puts&apos; argument 1 names different: declaration &apos;bp&apos; definition &apos;bio&apos;." verbose="Function &apos;watchccs_puts&apos; argument 1 names different: declaration &apos;bp&apos; definition &apos;bio&apos;." cwe="628" inconclusive="true" file0="test/tls13ccstest.c">
+            <location file="test/tls13ccstest.c" line="240" column="31"/>
+            <location file="test/tls13ccstest.c" line="33" column="31"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;ssl&apos; can be declared as pointer to const. However it seems that &apos;sess_new_cb&apos; is a callback function, if &apos;ssl&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;ssl&apos; can be declared as pointer to const. However it seems that &apos;sess_new_cb&apos; is a callback function, if &apos;ssl&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/tls13tickettest.c">
+            <location file="test/tls13tickettest.c" line="81" column="29" info="Parameter &apos;ssl&apos; can be declared as pointer to const"/>
+            <location file="test/tls13tickettest.c" line="231" column="32" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constParameterCallback" severity="style" msg="Parameter &apos;ssl&apos; can be declared as pointer to const. However it seems that &apos;msg_cb&apos; is a callback function, if &apos;ssl&apos; is declared with const you might also need to cast function pointer(s)." verbose="Parameter &apos;ssl&apos; can be declared as pointer to const. However it seems that &apos;msg_cb&apos; is a callback function, if &apos;ssl&apos; is declared with const you might also need to cast function pointer(s)." cwe="398" file0="test/tls13tickettest.c">
+            <location file="test/tls13tickettest.c" line="210" column="39" info="Parameter &apos;ssl&apos; can be declared as pointer to const"/>
+            <location file="test/tls13tickettest.c" line="251" column="33" info="You might need to cast the function pointer here"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ssl&apos; can be declared as pointer to const" verbose="Parameter &apos;ssl&apos; can be declared as pointer to const" cwe="398" file0="test/tls13tickettest.c">
+            <location file="test/tls13tickettest.c" line="489" column="39" info="Parameter &apos;ssl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ssl&apos; can be declared as pointer to const" verbose="Parameter &apos;ssl&apos; can be declared as pointer to const" cwe="398" file0="test/tls13tickettest.c">
+            <location file="test/tls13tickettest.c" line="501" column="41" info="Parameter &apos;ssl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ssl&apos; can be declared as pointer to const" verbose="Parameter &apos;ssl&apos; can be declared as pointer to const" cwe="398" file0="test/tls13tickettest.c">
+            <location file="test/tls13tickettest.c" line="511" column="41" info="Parameter &apos;ssl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ssl&apos; can be declared as pointer to const" verbose="Parameter &apos;ssl&apos; can be declared as pointer to const" cwe="398" file0="test/tls13tickettest.c">
+            <location file="test/tls13tickettest.c" line="1345" column="30" info="Parameter &apos;ssl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;rec&apos; can be declared as pointer to const" verbose="Parameter &apos;rec&apos; can be declared as pointer to const" cwe="398" file0="test/tls13encryptiontest.c">
+            <location file="test/tls13encryptiontest.c" line="254" column="39" info="Parameter &apos;rec&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ssl_log_secret&apos; argument 1 names different: declaration &apos;s&apos; definition &apos;sc&apos;." verbose="Function &apos;ssl_log_secret&apos; argument 1 names different: declaration &apos;s&apos; definition &apos;sc&apos;." cwe="628" inconclusive="true" file0="test/tls13secretstest.c">
+            <location file="test/tls13secretstest.c" line="196" column="36"/>
+            <location file="ssl/ssl_local.h" line="3406" column="43"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;prk&apos; can be declared as pointer to const" verbose="Parameter &apos;prk&apos; can be declared as pointer to const" cwe="398" file0="test/tls13secretstest.c">
+            <location file="test/tls13secretstest.c" line="274" column="58" info="Parameter &apos;prk&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;data&apos; can be declared as const array" verbose="Variable &apos;data&apos; can be declared as const array" cwe="398" file0="test/unit/crypto/bio/test_bio_addr.c">
+            <location file="test/unit/crypto/bio/test_bio_addr.c" line="258" column="10" info="Variable &apos;data&apos; can be declared as const array"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;setup(state)!=0&apos; is always false" verbose="Condition &apos;setup(state)!=0&apos; is always false" cwe="570" file0="test/unit/crypto/bio/test_bss_dgram.c">
+            <location file="test/unit/crypto/bio/test_bss_dgram.c" line="277" column="22" info="Condition &apos;setup(state)!=0&apos; is always false"/>
+            <location file="test/unit/crypto/bio/test_bss_dgram.c" line="277" column="14" info="Calling function &apos;setup&apos; returns 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;setup(state)!=0&apos; is always false" verbose="Condition &apos;setup(state)!=0&apos; is always false" cwe="570" file0="test/unit/crypto/bio/test_bss_acpt.c">
+            <location file="test/unit/crypto/bio/test_bss_acpt.c" line="400" column="22" info="Condition &apos;setup(state)!=0&apos; is always false"/>
+            <location file="test/unit/crypto/bio/test_bss_acpt.c" line="400" column="14" info="Calling function &apos;setup&apos; returns 0"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;data&apos; can be declared as pointer to const" verbose="Variable &apos;data&apos; can be declared as pointer to const" cwe="398" file0="test/unit/crypto/bio/test_bss_acpt.c">
+            <location file="test/unit/crypto/bio/test_bss_acpt.c" line="804" column="17" info="Variable &apos;data&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;data&apos; can be declared as pointer to const" verbose="Variable &apos;data&apos; can be declared as pointer to const" cwe="398" file0="test/unit/crypto/bio/test_bss_acpt.c">
+            <location file="test/unit/crypto/bio/test_bss_acpt.c" line="838" column="17" info="Variable &apos;data&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;data&apos; can be declared as pointer to const" verbose="Variable &apos;data&apos; can be declared as pointer to const" cwe="398" file0="test/unit/crypto/bio/test_bss_acpt.c">
+            <location file="test/unit/crypto/bio/test_bss_acpt.c" line="851" column="17" info="Variable &apos;data&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;setup(state)!=0&apos; is always false" verbose="Condition &apos;setup(state)!=0&apos; is always false" cwe="570" file0="test/unit/crypto/bio/test_bss_conn.c">
+            <location file="test/unit/crypto/bio/test_bss_conn.c" line="415" column="22" info="Condition &apos;setup(state)!=0&apos; is always false"/>
+            <location file="test/unit/crypto/bio/test_bss_conn.c" line="415" column="14" info="Calling function &apos;setup&apos; returns 0"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;data&apos; can be declared as pointer to const" verbose="Variable &apos;data&apos; can be declared as pointer to const" cwe="398" file0="test/unit/crypto/bio/test_bss_conn.c">
+            <location file="test/unit/crypto/bio/test_bss_conn.c" line="1216" column="18" info="Variable &apos;data&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;stream&apos; can be declared as pointer to const" verbose="Parameter &apos;stream&apos; can be declared as pointer to const" cwe="398" file0="test/unit/crypto/bio/test_bss_file.c">
+            <location file="test/unit/crypto/bio/test_bss_file.c" line="69" column="31" info="Parameter &apos;stream&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="duplicateBreak" severity="style" msg="Consecutive return, break, continue, goto or throw statements are unnecessary." verbose="Consecutive return, break, continue, goto or throw statements are unnecessary. The second statement can never be executed, and so should be removed." cwe="561" file0="test/upcallstest.c">
+            <location file="test/upcallstest.c" line="65" column="13"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;testprov_query&apos; argument 3 names different: declaration &apos;no_store&apos; definition &apos;no_cache&apos;." verbose="Function &apos;testprov_query&apos; argument 3 names different: declaration &apos;no_store&apos; definition &apos;no_cache&apos;." cwe="628" inconclusive="true" file0="test/user_property_test.c">
+            <location file="test/user_property_test.c" line="58" column="10"/>
+            <location file="test/user_property_test.c" line="20" column="0"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;addr&apos; can be declared as pointer to const" verbose="Parameter &apos;addr&apos; can be declared as pointer to const" cwe="398" file0="test/v3ext.c">
+            <location file="test/v3ext.c" line="341" column="37" info="Parameter &apos;addr&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;fam&apos; can be declared as pointer to const" verbose="Variable &apos;fam&apos; can be declared as pointer to const" cwe="398" file0="test/v3ext.c">
+            <location file="test/v3ext.c" line="343" column="22" info="Variable &apos;fam&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;aorr&apos; can be declared as pointer to const" verbose="Variable &apos;aorr&apos; can be declared as pointer to const" cwe="398" file0="test/v3ext.c">
+            <location file="test/v3ext.c" line="344" column="23" info="Variable &apos;aorr&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;aor&apos; can be declared as pointer to const" verbose="Variable &apos;aor&apos; can be declared as pointer to const" cwe="398" file0="test/v3ext.c">
+            <location file="test/v3ext.c" line="661" column="22" info="Variable &apos;aor&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;aor&apos; can be declared as pointer to const" verbose="Variable &apos;aor&apos; can be declared as pointer to const" cwe="398" file0="test/v3ext.c">
+            <location file="test/v3ext.c" line="724" column="22" info="Variable &apos;aor&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;f&apos; can be declared as pointer to const" verbose="Variable &apos;f&apos; can be declared as pointer to const" cwe="398" file0="test/v3ext.c">
+            <location file="test/v3ext.c" line="783" column="26" info="Variable &apos;f&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;want_min&apos; can be declared as const array" verbose="Variable &apos;want_min&apos; can be declared as const array" cwe="398" file0="test/v3ext.c">
+            <location file="test/v3ext.c" line="787" column="23" info="Variable &apos;want_min&apos; can be declared as const array"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;aor&apos; can be declared as pointer to const" verbose="Variable &apos;aor&apos; can be declared as pointer to const" cwe="398" file0="test/v3ext.c">
+            <location file="test/v3ext.c" line="873" column="22" info="Variable &apos;aor&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;f&apos; can be declared as pointer to const" verbose="Variable &apos;f&apos; can be declared as pointer to const" cwe="398" file0="test/v3ext.c">
+            <location file="test/v3ext.c" line="925" column="26" info="Variable &apos;f&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;aor&apos; can be declared as pointer to const" verbose="Variable &apos;aor&apos; can be declared as pointer to const" cwe="398" file0="test/v3ext.c">
+            <location file="test/v3ext.c" line="1216" column="22" info="Variable &apos;aor&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;v2&apos; can be declared as pointer to const" verbose="Variable &apos;v2&apos; can be declared as pointer to const" cwe="398" file0="test/verify_extra_test.c">
+            <location file="test/verify_extra_test.c" line="148" column="35" info="Variable &apos;v2&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;crt&apos; can be reduced." verbose="The scope of the variable &apos;crt&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/v3nametest.c">
+            <location file="test/v3nametest.c" line="327" column="11"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;crt&apos; can be declared as pointer to const" verbose="Parameter &apos;crt&apos; can be declared as pointer to const" cwe="398" file0="test/v3nametest.c">
+            <location file="test/v3nametest.c" line="258" column="27" info="Parameter &apos;crt&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;it&apos; can be reduced." verbose="The scope of the variable &apos;it&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="test/x509_check_cert_pkey_test.c">
+            <location file="test/x509_check_cert_pkey_test.c" line="116" column="16"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;expected&apos; shadows outer variable" verbose="Local variable &apos;expected&apos; shadows outer variable" cwe="398" file0="test/x509_check_cert_pkey_test.c">
+            <location file="test/x509_check_cert_pkey_test.c" line="34" column="28" info="Shadow variable"/>
+            <location file="test/x509_check_cert_pkey_test.c" line="110" column="12" info="Shadowed declaration"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;it&apos; can be declared as pointer to const" verbose="Variable &apos;it&apos; can be declared as pointer to const" cwe="398" file0="test/x509_check_cert_pkey_test.c">
+            <location file="test/x509_check_cert_pkey_test.c" line="116" column="16" info="Variable &apos;it&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pkt&apos; can be declared as pointer to const" verbose="Parameter &apos;pkt&apos; can be declared as pointer to const" cwe="398" file0="test/wpackettest.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/packet_quic.h" line="46" column="65" info="Parameter &apos;pkt&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;objs&apos; can be declared as pointer to const" verbose="Variable &apos;objs&apos; can be declared as pointer to const" cwe="398" file0="test/x509_load_cert_file_test.c">
+            <location file="test/x509_load_cert_file_test.c" line="128" column="28" info="Variable &apos;objs&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;buf&apos; can be declared as const array" verbose="Variable &apos;buf&apos; can be declared as const array" cwe="398" file0="test/x509_internal_test.c">
+            <location file="test/x509_internal_test.c" line="301" column="19" info="Variable &apos;buf&apos; can be declared as const array"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;value&apos; can be declared as pointer to const" verbose="Parameter &apos;value&apos; can be declared as pointer to const" cwe="398" file0="test/x509_req_test.c">
+            <location file="test/x509_req_test.c" line="58" column="65" info="Parameter &apos;value&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;asn1_before&apos; can be declared as pointer to const" verbose="Parameter &apos;asn1_before&apos; can be declared as pointer to const" cwe="398" file0="test/x509_time_test.c">
+            <location file="test/x509_time_test.c" line="464" column="16" info="Parameter &apos;asn1_before&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;asn1_mid&apos; can be declared as pointer to const" verbose="Parameter &apos;asn1_mid&apos; can be declared as pointer to const" cwe="398" file0="test/x509_time_test.c">
+            <location file="test/x509_time_test.c" line="465" column="16" info="Parameter &apos;asn1_mid&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;asn1_after&apos; can be declared as pointer to const" verbose="Parameter &apos;asn1_after&apos; can be declared as pointer to const" cwe="398" file0="test/x509_time_test.c">
+            <location file="test/x509_time_test.c" line="466" column="16" info="Parameter &apos;asn1_after&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;obj&apos; can be declared as pointer to const" verbose="Variable &apos;obj&apos; can be declared as pointer to const" cwe="398" file0="test/x509_test.c">
+            <location file="test/x509_test.c" line="259" column="18" info="Variable &apos;obj&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;obj&apos; can be declared as pointer to const" verbose="Variable &apos;obj&apos; can be declared as pointer to const" cwe="398" file0="test/x509_test.c">
+            <location file="test/x509_test.c" line="294" column="18" info="Variable &apos;obj&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;obj&apos; can be declared as pointer to const" verbose="Variable &apos;obj&apos; can be declared as pointer to const" cwe="398" file0="test/x509_test.c">
+            <location file="test/x509_test.c" line="330" column="18" info="Variable &apos;obj&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="test/x509_test.c">
+            <location file="test/x509_test.c" line="564" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+    </errors>
+</results>

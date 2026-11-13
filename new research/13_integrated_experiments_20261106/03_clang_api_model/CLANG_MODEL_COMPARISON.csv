@@ -1,0 +1,17 @@
+CVE,Side,Source_File,Mode,Status,Exit_Code,Duration_s,Log,Warnings,Errors
+CVE-2022-4450,vulnerable,crypto/pem/pem_lib.c,baseline,COMPLETED,0,2.9,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2022-4450_vulnerable_pem_lib_baseline.log,0,0
+CVE-2022-4450,vulnerable,crypto/pem/pem_lib.c,model,COMPLETED,0,4.49,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2022-4450_vulnerable_pem_lib_model.log,0,0
+CVE-2022-4450,fixed,crypto/pem/pem_lib.c,baseline,COMPLETED,0,3.22,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2022-4450_fixed_pem_lib_baseline.log,0,0
+CVE-2022-4450,fixed,crypto/pem/pem_lib.c,model,COMPLETED,0,5.19,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2022-4450_fixed_pem_lib_model.log,0,0
+CVE-2023-0215,vulnerable,crypto/asn1/bio_ndef.c,baseline,COMPLETED,0,0.07,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2023-0215_vulnerable_bio_ndef_baseline.log,0,0
+CVE-2023-0215,vulnerable,crypto/asn1/bio_ndef.c,model,COMPLETED,0,0.13,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2023-0215_vulnerable_bio_ndef_model.log,0,0
+CVE-2023-0215,fixed,crypto/asn1/bio_ndef.c,baseline,COMPLETED,0,0.08,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2023-0215_fixed_bio_ndef_baseline.log,0,0
+CVE-2023-0215,fixed,crypto/asn1/bio_ndef.c,model,COMPLETED,0,0.12,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2023-0215_fixed_bio_ndef_model.log,0,0
+CVE-2024-4741,vulnerable,ssl/ssl_lib.c,baseline,COMPLETED,0,6.39,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2024-4741_vulnerable_ssl_lib_baseline.log,2,0
+CVE-2024-4741,vulnerable,ssl/ssl_lib.c,model,COMPLETED,0,7.62,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2024-4741_vulnerable_ssl_lib_model.log,4,0
+CVE-2024-4741,vulnerable,ssl/record/rec_layer_s3.c,baseline,COMPLETED,0,6.81,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2024-4741_vulnerable_rec_layer_s3_baseline.log,0,0
+CVE-2024-4741,vulnerable,ssl/record/rec_layer_s3.c,model,COMPLETED,0,5.92,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2024-4741_vulnerable_rec_layer_s3_model.log,0,0
+CVE-2024-4741,fixed,ssl/ssl_lib.c,baseline,COMPLETED,0,5.26,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2024-4741_fixed_ssl_lib_baseline.log,2,0
+CVE-2024-4741,fixed,ssl/ssl_lib.c,model,COMPLETED,0,5.07,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2024-4741_fixed_ssl_lib_model.log,4,0
+CVE-2024-4741,fixed,ssl/record/rec_layer_s3.c,baseline,COMPLETED,0,4.71,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2024-4741_fixed_rec_layer_s3_baseline.log,0,0
+CVE-2024-4741,fixed,ssl/record/rec_layer_s3.c,model,COMPLETED,0,4.89,/mnt/d/cve-typestate-project/research/13_integrated_experiments_20261106/03_clang_api_model/CVE-2024-4741_fixed_rec_layer_s3_model.log,0,0

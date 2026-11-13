@@ -1,0 +1,3 @@
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:23:8-22: allocation assigned to p in alloc_then_return precedes a return at line 24; review cleanup/ownership
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:17:8-22: allocation assigned to p in repeated_after_reacquire precedes a return at line 19; review cleanup/ownership
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:31:8-22: allocation assigned to p in transfer_to_caller precedes a return at line 32; review cleanup/ownership

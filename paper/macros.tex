@@ -11,11 +11,11 @@
 \usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds}
 \DeclareRobustCommand{\circled}[1]{\tikz[baseline=(c.base)]\node[circle,draw,inner sep=0.7pt,font=\tiny\bfseries] (c) {#1};}
 
-% ---- project name (anonymised for review) ----
-% Works for any CS-5187 project: a tool, a technique/method, or an empirical
-% study. With no tool (e.g. a study), read \tool as "our study" and reword
-% "We present \tool" -> "We study ...", "\tool records" -> "our method ...".
-\newcommand{\tool}{\textsc{YourTool}\xspace}   % TODO: final name (tool, method, or study)
+% ---- project name ----
+% TSCK: the checker's real name, taken directly from its own source
+% directory (src/tsck/). Change this one line to rename the tool
+% everywhere in the paper; nothing else needs editing.
+\newcommand{\tool}{\textsc{Tsck}\xspace}
 
 % ---- notation (one macro per symbol; comment says what it means) ----
 % \newcommand{\Seen}[1]{\ensuremath{\mathit{Seen}(#1)}} % example: lines the compiler sees

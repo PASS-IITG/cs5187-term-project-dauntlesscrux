@@ -1,0 +1,33 @@
+Commands used for isolated MSan experiment (all source/build outputs under /tmp/openssl-bn-modadd-msan)
+
+Source archive and extraction:
+  git archive --format=tar HEAD | tar -xf - -C "$TMPROOT/src"
+  Result: exit 0; extracted source at pinned revision ed57129cd43b77e077c68fd5f7ea951976766f38.
+
+Configure:
+  CC=clang-18 CFLAGS='-O1 -g -fsanitize=memory -fsanitize-memory-track-origins=2 -fno-omit-frame-pointer -fPIE' LDFLAGS='-fsanitize=memory -pie' ./Configure linux-x86_64 no-shared no-tests
+  Result: exit 0; output in configure.log.
+
+Build instrumented libraries:
+  make -j4 build_libs
+  Result: exit 0; output in build.log. crypto/bn/bn_mod.c compile command includes the MSan flags.
+
+Compile focused harness (from the isolated source root):
+  clang-18 -O1 -g -fsanitize=memory -fsanitize-memory-track-origins=2 -fno-omit-frame-pointer -fPIE -pie -Iinclude "$TMPROOT/bn_modadd_repro.c" libcrypto.a -ldl -pthread -o "$TMPROOT/bn_modadd_repro"
+  Result: exit 0.
+
+Compile negative control:
+  clang-18 -O1 -g -fsanitize=memory -fsanitize-memory-track-origins=2 -fno-omit-frame-pointer -fPIE -pie "$TMPROOT/msan_probe.c" -o "$TMPROOT/msan_probe"
+  Result: exit 0.
+
+Run negative control:
+  MSAN_OPTIONS=halt_on_error=1:exit_code=86 "$TMPROOT/msan_probe"
+  Result: exit 86 with use-of-uninitialized-value diagnostic; raw output in negative-control-msan.log.
+
+Run report-71c964-shaped case:
+  MSAN_OPTIONS=halt_on_error=1:exit_code=86 "$TMPROOT/bn_modadd_repro" a
+  Input a=0, b=0, m=17; result exit 0; output in bn-mod-add-zero-zero.out.
+
+Run report-3db729-shaped case:
+  MSAN_OPTIONS=halt_on_error=1:exit_code=86 "$TMPROOT/bn_modadd_repro" b
+  Input a=1, b=0, m=17; result exit 0; output in bn-mod-add-one-zero.out.

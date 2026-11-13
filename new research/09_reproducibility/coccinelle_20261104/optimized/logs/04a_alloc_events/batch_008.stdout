@@ -1,0 +1,3 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/x509/pcy_cache.c:94:12-26: alloc_event|cache
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/x509/x509spki.c:63:15-29: alloc_event|der_spki
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/x509/v3_addr.c:428:17-31: alloc_event|prefix

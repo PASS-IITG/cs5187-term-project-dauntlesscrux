@@ -1,0 +1,59 @@
+COMMAND: cppcheck --enable=warning,style,performance,portability --inline-suppr --suppress=missingIncludeSystem -Iinclude -I. --template={file}:{line}:{severity} [{id}] {message} ssl/ssl_lib.c
+EXIT: 0
+DURATION_S: 27.68
+Checking ssl/ssl_lib.c ...
+ssl/ssl_lib.c:1961:style [redundantCondition] Redundant condition: ret<=0. 'A || (!A && B)' is equivalent to 'A || B'
+ssl/ssl_lib.c:2818:style [knownConditionTrueFalse] Condition 'clntsk==NULL' is always false
+ssl/ssl_lib.c:220:style [variableScope] The scope of the variable 'i' can be reduced.
+ssl/ssl_lib.c:996:style [variableScope] The scope of the variable 'old_ip' can be reduced.
+ssl/ssl_lib.c:1581:style [variableScope] The scope of the variable 'rdata' can be reduced.
+ssl/ssl_lib.c:2748:style [variableScope] The scope of the variable 'c' can be reduced.
+ssl/ssl_lib.c:208:style [constVariablePointer] Variable 't' can be declared as pointer to const
+ssl/ssl_lib.c:428:style [constVariablePointer] Variable 'rec' can be declared as pointer to const
+ssl/ssl_lib.c:666:style [constVariablePointer] Variable 'sk' can be declared as pointer to const
+ssl/ssl_lib.c:943:style [constVariablePointer] Variable 'p' can be declared as pointer to const
+ssl/ssl_lib.c:1023:style [constParameterPointer] Parameter 's' can be declared as pointer to const
+ssl/ssl_lib.c:1162:style [constParameterPointer] Parameter 'vpm' can be declared as pointer to const
+ssl/ssl_lib.c:1167:style [constParameterPointer] Parameter 'vpm' can be declared as pointer to const
+ssl/ssl_lib.c:1172:style [constParameterPointer] Parameter 'ctx' can be declared as pointer to const
+ssl/ssl_lib.c:1177:style [constParameterPointer] Parameter 'ssl' can be declared as pointer to const
+ssl/ssl_lib.c:1581:style [constVariablePointer] Variable 'rdata' can be declared as pointer to const
+ssl/ssl_lib.c:1699:style [constParameterPointer] Parameter 's' can be declared as pointer to const
+ssl/ssl_lib.c:2486:style [constParameterPointer] Parameter 'ctx' can be declared as pointer to const
+ssl/ssl_lib.c:2491:style [constParameterPointer] Parameter 'ctx' can be declared as pointer to const
+ssl/ssl_lib.c:2491:style [constParameterPointer] Parameter 'stat' can be declared as pointer to const
+ssl/ssl_lib.c:2677:style [constVariablePointer] Variable 'ciphers' can be declared as pointer to const
+ssl/ssl_lib.c:2719:style [constVariablePointer] Variable 'sk' can be declared as pointer to const
+ssl/ssl_lib.c:2745:style [constParameterPointer] Parameter 'sk' can be declared as pointer to const
+ssl/ssl_lib.c:2806:style [constVariablePointer] Variable 'clntsk' can be declared as pointer to const
+ssl/ssl_lib.c:3543:style [constParameterPointer] Parameter 'ctx' can be declared as pointer to const
+ssl/ssl_lib.c:3548:style [constParameterPointer] Parameter 'ctx' can be declared as pointer to const
+ssl/ssl_lib.c:3563:style [constParameterPointer] Parameter 's' can be declared as pointer to const
+ssl/ssl_lib.c:3568:style [constParameterPointer] Parameter 's' can be declared as pointer to const
+ssl/ssl_lib.c:3606:style [constVariablePointer] Variable 'pvalid' can be declared as pointer to const
+ssl/ssl_lib.c:3707:style [constParameterPointer] Parameter 's' can be declared as pointer to const
+ssl/ssl_lib.c:3722:style [constVariablePointer] Variable 'cpk' can be declared as pointer to const
+ssl/ssl_lib.c:3822:style [constVariablePointer] Variable 'hf' can be declared as pointer to const
+ssl/ssl_lib.c:4042:style [constParameterPointer] Parameter 'src' can be declared as pointer to const
+ssl/ssl_lib.c:4743:style [constVariablePointer] Variable 'b' can be declared as pointer to const
+ssl/ssl_lib.c:4830:style [constVariablePointer] Variable 'hdgst' can be declared as pointer to const
+ssl/ssl_lib.c:4985:style [constParameterPointer] Parameter 'key' can be declared as pointer to const
+ssl/ssl_lib.c:5109:style [constVariablePointer] Variable 'cert' can be declared as pointer to const
+ssl/ssl_lib.c:5157:style [constVariablePointer] Variable 'sct' can be declared as pointer to const
+ssl/ssl_lib.c:5229:style [constVariablePointer] Variable 'dane' can be declared as pointer to const
+ssl/ssl_lib.c:5431:style [constVariablePointer] Variable 'ext' can be declared as pointer to const
+ssl/ssl_lib.c:5602:style [constParameterPointer] Parameter 'cipher_suites' can be declared as pointer to const
+ssl/ssl_lib.c:479:style [unreadVariable] Variable 'min_version' is assigned a value that is never used.
+ssl/ssl_lib.c:481:style [unreadVariable] Variable 'max_version' is assigned a value that is never used.
+Checking ssl/ssl_lib.c: ATOMIC_INT_LOCK_FREE;OPENSSL_DEV_NO_ATOMICS;OPENSSL_THREADS...
+Checking ssl/ssl_lib.c: ATOMIC_POINTER_LOCK_FREE;__STDC_NO_ATOMICS__;__STDC_VERSION__...
+Checking ssl/ssl_lib.c: BASETYPES;_WIN32;_WINDEF_H...
+Checking ssl/ssl_lib.c: BASETYPES;_WINDEF_H;CRYPTO_TDEBUG;_WIN32...
+Checking ssl/ssl_lib.c: BASETYPES;_WINDEF_H;_WIN32...
+Checking ssl/ssl_lib.c: BIGNUM...
+Checking ssl/ssl_lib.c: CHARSET_EBCDIC...
+Checking ssl/ssl_lib.c: CONST_STRICT...
+Checking ssl/ssl_lib.c: CRYPTO_TDEBUG...
+Checking ssl/ssl_lib.c: CRYPTO_TDEBUG;_SPT_MODEL_;__TANDEM...
+Checking ssl/ssl_lib.c: CRYPTO_TDEBUG;_WIN32...
+nofile:0:information [toomanyconfigs] Too many #ifdef configurations - cppcheck only checks 12 configurations. Use --force to check all configurations. For more details, use --enable=information.

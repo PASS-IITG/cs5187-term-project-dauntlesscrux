@@ -1,0 +1,20 @@
+{
+  "name": "Protocol A: BIO-chain detach-before-release (CVE-2023-0215)",
+  "description": "If a function links a local BIO variable V into a chain via BIO_push(V, ...), every path from that call to a release of V (or of a variable V was directly assigned into, such as `pop_bio = asn_bio;`) must first call BIO_pop() on V or that alias. This is a rule-as-data port of the manual derivation in BIO-2023-0215-rule-notes.md, checked by a real per-function control-flow graph instead of fixed strings.",
+  "establish": {
+    "call_name_regex": "^BIO_push$",
+    "arg_index": 0
+  },
+  "detach": {
+    "call_name_regex": "^BIO_pop$",
+    "arg_index": 0
+  },
+  "release": {
+    "call_name_regex": "^BIO_free(_all)?$",
+    "arg_index": 0
+  },
+  "alias": {
+    "max_passes": 5,
+    "note": "Whole-function syntactic alias set only: W joins V's group on any `W = V;` assignment found anywhere in the function text, not path-sensitively. This is weaker than real alias analysis and is documented as a limitation."
+  }
+}

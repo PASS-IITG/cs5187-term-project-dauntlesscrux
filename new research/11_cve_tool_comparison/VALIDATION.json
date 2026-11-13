@@ -1,0 +1,18 @@
+{
+  "worktrees_verified": 6,
+  "comparison_rows": 24,
+  "python_runs": 6,
+  "clang_runs": 6,
+  "coccinelle_rule_runs": 30,
+  "cppcheck_format_runs": 12,
+  "cppcheck_xml_diagnostics": {
+    "CVE-2022-4450 Vulnerable": 12,
+    "CVE-2022-4450 Fixed": 12,
+    "CVE-2023-0215 Vulnerable": 0,
+    "CVE-2023-0215 Fixed": 0,
+    "CVE-2024-4741 Vulnerable": 2,
+    "CVE-2024-4741 Fixed": 2
+  },
+  "csv_files_validated": 14,
+  "clang_positive_control": "passed; UAF diagnostic observed"
+}

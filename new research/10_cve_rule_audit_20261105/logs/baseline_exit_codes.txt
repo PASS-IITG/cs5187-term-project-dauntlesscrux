@@ -1,0 +1,4 @@
+test_all_cves=0
+bio_adversarial=0
+bio_alias=0
+unknown_state=0

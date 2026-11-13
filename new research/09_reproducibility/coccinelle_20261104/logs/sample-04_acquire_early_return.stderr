@@ -1,0 +1,2 @@
+init_defs_builtins: /usr/lib/coccinelle/standard.h
+HANDLING: /mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/acquire_return.c

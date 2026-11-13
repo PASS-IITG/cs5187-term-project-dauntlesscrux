@@ -1,0 +1,1941 @@
+crypto/rsa/rsa_depr.c:29:47: style: inconclusive: Function 'RSA_generate_key' argument 2 names different: declaration 'e' definition 'e_value'. [funcArgNamesDifferent]
+RSA *RSA_generate_key(int bits, unsigned long e_value,
+                                              ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:263:71: note: Function 'RSA_generate_key' argument 2 names different: declaration 'e' definition 'e_value'.
+OSSL_DEPRECATEDIN_0_9_8 RSA *RSA_generate_key(int bits, unsigned long e, void (*callback)(int, int, void *),
+                                                                      ^
+crypto/rsa/rsa_depr.c:29:47: note: Function 'RSA_generate_key' argument 2 names different: declaration 'e' definition 'e_value'.
+RSA *RSA_generate_key(int bits, unsigned long e_value,
+                                              ^
+crypto/rsa/rsa_meth.c:108:38: style: inconclusive: Function 'RSA_meth_set_pub_enc' argument 1 names different: declaration 'rsa' definition 'meth'. [funcArgNamesDifferent]
+int RSA_meth_set_pub_enc(RSA_METHOD *meth,
+                                     ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:499:38: note: Function 'RSA_meth_set_pub_enc' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_pub_enc(RSA_METHOD *rsa,
+                                     ^
+crypto/rsa/rsa_meth.c:108:38: note: Function 'RSA_meth_set_pub_enc' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_pub_enc(RSA_METHOD *meth,
+                                     ^
+crypto/rsa/rsa_meth.c:123:38: style: inconclusive: Function 'RSA_meth_set_pub_dec' argument 1 names different: declaration 'rsa' definition 'meth'. [funcArgNamesDifferent]
+int RSA_meth_set_pub_dec(RSA_METHOD *meth,
+                                     ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:509:38: note: Function 'RSA_meth_set_pub_dec' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_pub_dec(RSA_METHOD *rsa,
+                                     ^
+crypto/rsa/rsa_meth.c:123:38: note: Function 'RSA_meth_set_pub_dec' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_pub_dec(RSA_METHOD *meth,
+                                     ^
+crypto/rsa/rsa_meth.c:138:39: style: inconclusive: Function 'RSA_meth_set_priv_enc' argument 1 names different: declaration 'rsa' definition 'meth'. [funcArgNamesDifferent]
+int RSA_meth_set_priv_enc(RSA_METHOD *meth,
+                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:519:39: note: Function 'RSA_meth_set_priv_enc' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_priv_enc(RSA_METHOD *rsa,
+                                      ^
+crypto/rsa/rsa_meth.c:138:39: note: Function 'RSA_meth_set_priv_enc' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_priv_enc(RSA_METHOD *meth,
+                                      ^
+crypto/rsa/rsa_meth.c:153:39: style: inconclusive: Function 'RSA_meth_set_priv_dec' argument 1 names different: declaration 'rsa' definition 'meth'. [funcArgNamesDifferent]
+int RSA_meth_set_priv_dec(RSA_METHOD *meth,
+                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:529:39: note: Function 'RSA_meth_set_priv_dec' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_priv_dec(RSA_METHOD *rsa,
+                                      ^
+crypto/rsa/rsa_meth.c:153:39: note: Function 'RSA_meth_set_priv_dec' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_priv_dec(RSA_METHOD *meth,
+                                      ^
+crypto/rsa/rsa_meth.c:168:38: style: inconclusive: Function 'RSA_meth_set_mod_exp' argument 1 names different: declaration 'rsa' definition 'meth'. [funcArgNamesDifferent]
+int RSA_meth_set_mod_exp(RSA_METHOD *meth,
+                                     ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:538:38: note: Function 'RSA_meth_set_mod_exp' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_mod_exp(RSA_METHOD *rsa,
+                                     ^
+crypto/rsa/rsa_meth.c:168:38: note: Function 'RSA_meth_set_mod_exp' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_mod_exp(RSA_METHOD *meth,
+                                     ^
+crypto/rsa/rsa_meth.c:183:41: style: inconclusive: Function 'RSA_meth_set_bn_mod_exp' argument 1 names different: declaration 'rsa' definition 'meth'. [funcArgNamesDifferent]
+int RSA_meth_set_bn_mod_exp(RSA_METHOD *meth,
+                                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:549:41: note: Function 'RSA_meth_set_bn_mod_exp' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_bn_mod_exp(RSA_METHOD *rsa,
+                                        ^
+crypto/rsa/rsa_meth.c:183:41: note: Function 'RSA_meth_set_bn_mod_exp' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_bn_mod_exp(RSA_METHOD *meth,
+                                        ^
+crypto/rsa/rsa_meth.c:201:35: style: inconclusive: Function 'RSA_meth_set_init' argument 1 names different: declaration 'rsa' definition 'meth'. [funcArgNamesDifferent]
+int RSA_meth_set_init(RSA_METHOD *meth, int (*init)(RSA *rsa))
+                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:559:35: note: Function 'RSA_meth_set_init' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_init(RSA_METHOD *rsa, int (*init)(RSA *rsa));
+                                  ^
+crypto/rsa/rsa_meth.c:201:35: note: Function 'RSA_meth_set_init' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_init(RSA_METHOD *meth, int (*init)(RSA *rsa))
+                                  ^
+crypto/rsa/rsa_meth.c:213:37: style: inconclusive: Function 'RSA_meth_set_finish' argument 1 names different: declaration 'rsa' definition 'meth'. [funcArgNamesDifferent]
+int RSA_meth_set_finish(RSA_METHOD *meth, int (*finish)(RSA *rsa))
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:563:37: note: Function 'RSA_meth_set_finish' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_finish(RSA_METHOD *rsa, int (*finish)(RSA *rsa));
+                                    ^
+crypto/rsa/rsa_meth.c:213:37: note: Function 'RSA_meth_set_finish' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_finish(RSA_METHOD *meth, int (*finish)(RSA *rsa))
+                                    ^
+crypto/rsa/rsa_meth.c:227:35: style: inconclusive: Function 'RSA_meth_set_sign' argument 1 names different: declaration 'rsa' definition 'meth'. [funcArgNamesDifferent]
+int RSA_meth_set_sign(RSA_METHOD *meth,
+                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:572:35: note: Function 'RSA_meth_set_sign' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_sign(RSA_METHOD *rsa,
+                                  ^
+crypto/rsa/rsa_meth.c:227:35: note: Function 'RSA_meth_set_sign' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_sign(RSA_METHOD *meth,
+                                  ^
+crypto/rsa/rsa_meth.c:244:37: style: inconclusive: Function 'RSA_meth_set_verify' argument 1 names different: declaration 'rsa' definition 'meth'. [funcArgNamesDifferent]
+int RSA_meth_set_verify(RSA_METHOD *meth,
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:585:37: note: Function 'RSA_meth_set_verify' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_verify(RSA_METHOD *rsa,
+                                    ^
+crypto/rsa/rsa_meth.c:244:37: note: Function 'RSA_meth_set_verify' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_verify(RSA_METHOD *meth,
+                                    ^
+crypto/rsa/rsa_meth.c:259:37: style: inconclusive: Function 'RSA_meth_set_keygen' argument 1 names different: declaration 'rsa' definition 'meth'. [funcArgNamesDifferent]
+int RSA_meth_set_keygen(RSA_METHOD *meth,
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:594:37: note: Function 'RSA_meth_set_keygen' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_keygen(RSA_METHOD *rsa,
+                                    ^
+crypto/rsa/rsa_meth.c:259:37: note: Function 'RSA_meth_set_keygen' argument 1 names different: declaration 'rsa' definition 'meth'.
+int RSA_meth_set_keygen(RSA_METHOD *meth,
+                                    ^
+crypto/rsa/rsa_mp.c:62:13: style: Variable 'p1' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *p1 = NULL, *p2 = NULL;
+            ^
+crypto/rsa/rsa_mp.c:62:25: style: Variable 'p2' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *p1 = NULL, *p2 = NULL;
+                        ^
+crypto/rsa/rsa_gen.c:42:53: style: inconclusive: Function 'RSA_generate_key_ex' argument 3 names different: declaration 'e' definition 'e_value'. [funcArgNamesDifferent]
+int RSA_generate_key_ex(RSA *rsa, int bits, BIGNUM *e_value, BN_GENCB *cb)
+                                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:269:75: note: Function 'RSA_generate_key_ex' argument 3 names different: declaration 'e' definition 'e_value'.
+OSSL_DEPRECATEDIN_3_0 int RSA_generate_key_ex(RSA *rsa, int bits, BIGNUM *e,
+                                                                          ^
+crypto/rsa/rsa_gen.c:42:53: note: Function 'RSA_generate_key_ex' argument 3 names different: declaration 'e' definition 'e_value'.
+int RSA_generate_key_ex(RSA *rsa, int bits, BIGNUM *e_value, BN_GENCB *cb)
+                                                    ^
+crypto/rsa/rsa_gen.c:96:13: style: Variable 'factor' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *factor = NULL, *newpp = NULL, *newpd = NULL;
+            ^
+crypto/rsa/rsa_gen.c:96:29: style: Variable 'newpp' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *factor = NULL, *newpp = NULL, *newpd = NULL;
+                            ^
+crypto/rsa/rsa_gen.c:96:44: style: Variable 'newpd' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *factor = NULL, *newpp = NULL, *newpd = NULL;
+                                           ^
+crypto/rsa/rsa_gen.c:98:13: style: Variable 'p' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *p = NULL, *q = NULL;
+            ^
+crypto/rsa/rsa_gen.c:98:24: style: Variable 'q' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *p = NULL, *q = NULL;
+                       ^
+crypto/rsa/rsa_gen.c:91:23: style: Parameter 'factors' can be declared as pointer to const [constParameterPointer]
+    STACK_OF(BIGNUM) *factors,
+                      ^
+crypto/rsa/rsa_gen.c:273:13: style: Parameter 'e_value' can be declared as pointer to const [constParameterPointer]
+    BIGNUM *e_value, BN_GENCB *cb)
+            ^
+crypto/rsa/rsa_gen.c:406:29: style: Variable 'prev_prime' can be declared as pointer to const [constVariablePointer]
+                    BIGNUM *prev_prime;
+                            ^
+crypto/rsa/rsa_gen.c:275:55: style: Variable 'tmp2' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *r0 = NULL, *r1 = NULL, *r2 = NULL, *tmp, *tmp2, *prime;
+                                                      ^
+crypto/rsa/rsa_crpt.c:23:25: style: inconclusive: Function 'RSA_bits' argument 1 names different: declaration 'rsa' definition 'r'. [funcArgNamesDifferent]
+int RSA_bits(const RSA *r)
+                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:214:47: note: Function 'RSA_bits' argument 1 names different: declaration 'rsa' definition 'r'.
+OSSL_DEPRECATEDIN_3_0 int RSA_bits(const RSA *rsa);
+                                              ^
+crypto/rsa/rsa_crpt.c:23:25: note: Function 'RSA_bits' argument 1 names different: declaration 'rsa' definition 'r'.
+int RSA_bits(const RSA *r)
+                        ^
+crypto/rsa/rsa_crpt.c:28:25: style: inconclusive: Function 'RSA_size' argument 1 names different: declaration 'rsa' definition 'r'. [funcArgNamesDifferent]
+int RSA_size(const RSA *r)
+                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:215:47: note: Function 'RSA_size' argument 1 names different: declaration 'rsa' definition 'r'.
+OSSL_DEPRECATEDIN_3_0 int RSA_size(const RSA *rsa);
+                                              ^
+crypto/rsa/rsa_crpt.c:28:25: note: Function 'RSA_size' argument 1 names different: declaration 'rsa' definition 'r'.
+int RSA_size(const RSA *r)
+                        ^
+crypto/rsa/rsa_crpt.c:104:51: style: inconclusive: Function 'RSA_setup_blinding' argument 2 names different: declaration 'ctx' definition 'in_ctx'. [funcArgNamesDifferent]
+BN_BLINDING *RSA_setup_blinding(RSA *rsa, BN_CTX *in_ctx)
+                                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:382:73: note: Function 'RSA_setup_blinding' argument 2 names different: declaration 'ctx' definition 'in_ctx'.
+OSSL_DEPRECATEDIN_3_0 BN_BLINDING *RSA_setup_blinding(RSA *rsa, BN_CTX *ctx);
+                                                                        ^
+crypto/rsa/rsa_crpt.c:104:51: note: Function 'RSA_setup_blinding' argument 2 names different: declaration 'ctx' definition 'in_ctx'.
+BN_BLINDING *RSA_setup_blinding(RSA *rsa, BN_CTX *in_ctx)
+                                                  ^
+crypto/rsa/rsa_none.c:21:26: style: inconclusive: Function 'RSA_padding_add_none' argument 3 names different: declaration 'f' definition 'from'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen)
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:421:26: note: Function 'RSA_padding_add_none' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *f, int fl);
+                         ^
+crypto/rsa/rsa_none.c:21:26: note: Function 'RSA_padding_add_none' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *from, int flen)
+                         ^
+crypto/rsa/rsa_none.c:21:36: style: inconclusive: Function 'RSA_padding_add_none' argument 4 names different: declaration 'fl' definition 'flen'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen)
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:421:33: note: Function 'RSA_padding_add_none' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *f, int fl);
+                                ^
+crypto/rsa/rsa_none.c:21:36: note: Function 'RSA_padding_add_none' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *from, int flen)
+                                   ^
+crypto/rsa/rsa_none.c:38:26: style: inconclusive: Function 'RSA_padding_check_none' argument 3 names different: declaration 'f' definition 'from'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen, int num)
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:423:26: note: Function 'RSA_padding_check_none' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *f, int fl,
+                         ^
+crypto/rsa/rsa_none.c:38:26: note: Function 'RSA_padding_check_none' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *from, int flen, int num)
+                         ^
+crypto/rsa/rsa_none.c:38:36: style: inconclusive: Function 'RSA_padding_check_none' argument 4 names different: declaration 'fl' definition 'flen'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen, int num)
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:423:33: note: Function 'RSA_padding_check_none' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *f, int fl,
+                                ^
+crypto/rsa/rsa_none.c:38:36: note: Function 'RSA_padding_check_none' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *from, int flen, int num)
+                                   ^
+crypto/rsa/rsa_none.c:38:46: style: inconclusive: Function 'RSA_padding_check_none' argument 5 names different: declaration 'rsa_len' definition 'num'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen, int num)
+                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:424:9: note: Function 'RSA_padding_check_none' argument 5 names different: declaration 'rsa_len' definition 'num'.
+    int rsa_len);
+        ^
+crypto/rsa/rsa_none.c:38:46: note: Function 'RSA_padding_check_none' argument 5 names different: declaration 'rsa_len' definition 'num'.
+    const unsigned char *from, int flen, int num)
+                                             ^
+crypto/rsa/rsa_lib.c:231:14: style: The scope of the variable 'b' can be reduced. [variableScope]
+    uint64_t b;
+             ^
+crypto/rsa/rsa_lib.c:1143:17: style: The scope of the variable 'empty' can be reduced. [variableScope]
+    const char *empty = "";
+                ^
+crypto/rsa/rsa_lib.c:616:37: style: inconclusive: Function 'RSA_get0_n' argument 1 names different: declaration 'd' definition 'r'. [funcArgNamesDifferent]
+const BIGNUM *RSA_get0_n(const RSA *r)
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:243:59: note: Function 'RSA_get0_n' argument 1 names different: declaration 'd' definition 'r'.
+OSSL_DEPRECATEDIN_3_0 const BIGNUM *RSA_get0_n(const RSA *d);
+                                                          ^
+crypto/rsa/rsa_lib.c:616:37: note: Function 'RSA_get0_n' argument 1 names different: declaration 'd' definition 'r'.
+const BIGNUM *RSA_get0_n(const RSA *r)
+                                    ^
+crypto/rsa/rsa_lib.c:621:37: style: inconclusive: Function 'RSA_get0_e' argument 1 names different: declaration 'd' definition 'r'. [funcArgNamesDifferent]
+const BIGNUM *RSA_get0_e(const RSA *r)
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:244:59: note: Function 'RSA_get0_e' argument 1 names different: declaration 'd' definition 'r'.
+OSSL_DEPRECATEDIN_3_0 const BIGNUM *RSA_get0_e(const RSA *d);
+                                                          ^
+crypto/rsa/rsa_lib.c:621:37: note: Function 'RSA_get0_e' argument 1 names different: declaration 'd' definition 'r'.
+const BIGNUM *RSA_get0_e(const RSA *r)
+                                    ^
+crypto/rsa/rsa_lib.c:626:37: style: inconclusive: Function 'RSA_get0_d' argument 1 names different: declaration 'd' definition 'r'. [funcArgNamesDifferent]
+const BIGNUM *RSA_get0_d(const RSA *r)
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:245:59: note: Function 'RSA_get0_d' argument 1 names different: declaration 'd' definition 'r'.
+OSSL_DEPRECATEDIN_3_0 const BIGNUM *RSA_get0_d(const RSA *d);
+                                                          ^
+crypto/rsa/rsa_lib.c:626:37: note: Function 'RSA_get0_d' argument 1 names different: declaration 'd' definition 'r'.
+const BIGNUM *RSA_get0_d(const RSA *r)
+                                    ^
+crypto/rsa/rsa_lib.c:631:37: style: inconclusive: Function 'RSA_get0_p' argument 1 names different: declaration 'd' definition 'r'. [funcArgNamesDifferent]
+const BIGNUM *RSA_get0_p(const RSA *r)
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:246:59: note: Function 'RSA_get0_p' argument 1 names different: declaration 'd' definition 'r'.
+OSSL_DEPRECATEDIN_3_0 const BIGNUM *RSA_get0_p(const RSA *d);
+                                                          ^
+crypto/rsa/rsa_lib.c:631:37: note: Function 'RSA_get0_p' argument 1 names different: declaration 'd' definition 'r'.
+const BIGNUM *RSA_get0_p(const RSA *r)
+                                    ^
+crypto/rsa/rsa_lib.c:636:37: style: inconclusive: Function 'RSA_get0_q' argument 1 names different: declaration 'd' definition 'r'. [funcArgNamesDifferent]
+const BIGNUM *RSA_get0_q(const RSA *r)
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:247:59: note: Function 'RSA_get0_q' argument 1 names different: declaration 'd' definition 'r'.
+OSSL_DEPRECATEDIN_3_0 const BIGNUM *RSA_get0_q(const RSA *d);
+                                                          ^
+crypto/rsa/rsa_lib.c:636:37: note: Function 'RSA_get0_q' argument 1 names different: declaration 'd' definition 'r'.
+const BIGNUM *RSA_get0_q(const RSA *r)
+                                    ^
+crypto/rsa/rsa_lib.c:1064:12: style: inconclusive: Function 'EVP_PKEY_CTX_get_rsa_oaep_md_name' argument 3 names different: declaration 'namelen' definition 'namesize'. [funcArgNamesDifferent]
+    size_t namesize)
+           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:169:12: note: Function 'EVP_PKEY_CTX_get_rsa_oaep_md_name' argument 3 names different: declaration 'namelen' definition 'namesize'.
+    size_t namelen);
+           ^
+crypto/rsa/rsa_lib.c:1064:12: note: Function 'EVP_PKEY_CTX_get_rsa_oaep_md_name' argument 3 names different: declaration 'namelen' definition 'namesize'.
+    size_t namesize)
+           ^
+crypto/rsa/rsa_lib.c:1105:12: style: inconclusive: Function 'EVP_PKEY_CTX_get_rsa_mgf1_md_name' argument 3 names different: declaration 'namelen' definition 'namesize'. [funcArgNamesDifferent]
+    size_t namesize)
+           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:154:12: note: Function 'EVP_PKEY_CTX_get_rsa_mgf1_md_name' argument 3 names different: declaration 'namelen' definition 'namesize'.
+    size_t namelen);
+           ^
+crypto/rsa/rsa_lib.c:1105:12: note: Function 'EVP_PKEY_CTX_get_rsa_mgf1_md_name' argument 3 names different: declaration 'namelen' definition 'namesize'.
+    size_t namesize)
+           ^
+crypto/rsa/rsa_lib.c:60:29: style: Parameter 'engine' can be declared as pointer to const [constParameterPointer]
+RSA *RSA_new_method(ENGINE *engine)
+                            ^
+crypto/rsa/rsa_lib.c:174:41: style: Parameter 'r' can be declared as pointer to const [constParameterPointer]
+OSSL_LIB_CTX *ossl_rsa_get0_libctx(RSA *r)
+                                        ^
+crypto/rsa/rsa_lib.c:558:21: style: Variable 'pinfo' can be declared as pointer to const [constVariablePointer]
+    RSA_PRIME_INFO *pinfo;
+                    ^
+crypto/rsa/rsa_lib.c:599:25: style: Variable 'pinfo' can be declared as pointer to const [constVariablePointer]
+        RSA_PRIME_INFO *pinfo;
+                        ^
+crypto/rsa/rsa_lib.c:698:26: style: Parameter 'r' can be declared as pointer to const [constParameterPointer]
+int RSA_get_version(RSA *r)
+                         ^
+crypto/rsa/rsa_lib.c:840:35: style: Parameter 'r' can be declared as pointer to const [constParameterPointer]
+int ossl_rsa_get0_all_params(RSA *r, STACK_OF(BIGNUM_const) *primes,
+                                  ^
+crypto/rsa/rsa_lib.c:845:21: style: Variable 'pinfo' can be declared as pointer to const [constVariablePointer]
+    RSA_PRIME_INFO *pinfo;
+                    ^
+crypto/rsa/rsa_prn.c:22:39: style: inconclusive: Function 'RSA_print_fp' argument 2 names different: declaration 'r' definition 'x'. [funcArgNamesDifferent]
+int RSA_print_fp(FILE *fp, const RSA *x, int off)
+                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:348:61: note: Function 'RSA_print_fp' argument 2 names different: declaration 'r' definition 'x'.
+OSSL_DEPRECATEDIN_3_0 int RSA_print_fp(FILE *fp, const RSA *r, int offset);
+                                                            ^
+crypto/rsa/rsa_prn.c:22:39: note: Function 'RSA_print_fp' argument 2 names different: declaration 'r' definition 'x'.
+int RSA_print_fp(FILE *fp, const RSA *x, int off)
+                                      ^
+crypto/rsa/rsa_prn.c:22:46: style: inconclusive: Function 'RSA_print_fp' argument 3 names different: declaration 'offset' definition 'off'. [funcArgNamesDifferent]
+int RSA_print_fp(FILE *fp, const RSA *x, int off)
+                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:348:68: note: Function 'RSA_print_fp' argument 3 names different: declaration 'offset' definition 'off'.
+OSSL_DEPRECATEDIN_3_0 int RSA_print_fp(FILE *fp, const RSA *r, int offset);
+                                                                   ^
+crypto/rsa/rsa_prn.c:22:46: note: Function 'RSA_print_fp' argument 3 names different: declaration 'offset' definition 'off'.
+int RSA_print_fp(FILE *fp, const RSA *x, int off)
+                                             ^
+crypto/rsa/rsa_prn.c:38:35: style: inconclusive: Function 'RSA_print' argument 2 names different: declaration 'r' definition 'x'. [funcArgNamesDifferent]
+int RSA_print(BIO *bp, const RSA *x, int off)
+                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:351:57: note: Function 'RSA_print' argument 2 names different: declaration 'r' definition 'x'.
+OSSL_DEPRECATEDIN_3_0 int RSA_print(BIO *bp, const RSA *r, int offset);
+                                                        ^
+crypto/rsa/rsa_prn.c:38:35: note: Function 'RSA_print' argument 2 names different: declaration 'r' definition 'x'.
+int RSA_print(BIO *bp, const RSA *x, int off)
+                                  ^
+crypto/rsa/rsa_prn.c:38:42: style: inconclusive: Function 'RSA_print' argument 3 names different: declaration 'offset' definition 'off'. [funcArgNamesDifferent]
+int RSA_print(BIO *bp, const RSA *x, int off)
+                                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:351:64: note: Function 'RSA_print' argument 3 names different: declaration 'offset' definition 'off'.
+OSSL_DEPRECATEDIN_3_0 int RSA_print(BIO *bp, const RSA *r, int offset);
+                                                               ^
+crypto/rsa/rsa_prn.c:38:42: note: Function 'RSA_print' argument 3 names different: declaration 'offset' definition 'off'.
+int RSA_print(BIO *bp, const RSA *x, int off)
+                                         ^
+crypto/rsa/rsa_schemes.c:21:12: style: The scope of the variable 'i' can be reduced. [variableScope]
+    size_t i;
+           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/constant_time.h:438:19: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+    unsigned char tmp;
+                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/constant_time.h:462:19: style: The scope of the variable 'mask' can be reduced. [variableScope]
+    unsigned char mask;
+                  ^
+crypto/rsa/rsa_oaep.c:40:26: style: inconclusive: Function 'RSA_padding_add_PKCS1_OAEP' argument 3 names different: declaration 'f' definition 'from'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen,
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:403:26: note: Function 'RSA_padding_add_PKCS1_OAEP' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *f, int fl,
+                         ^
+crypto/rsa/rsa_oaep.c:40:26: note: Function 'RSA_padding_add_PKCS1_OAEP' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *from, int flen,
+                         ^
+crypto/rsa/rsa_oaep.c:40:36: style: inconclusive: Function 'RSA_padding_add_PKCS1_OAEP' argument 4 names different: declaration 'fl' definition 'flen'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen,
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:403:33: note: Function 'RSA_padding_add_PKCS1_OAEP' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *f, int fl,
+                                ^
+crypto/rsa/rsa_oaep.c:40:36: note: Function 'RSA_padding_add_PKCS1_OAEP' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *from, int flen,
+                                   ^
+crypto/rsa/rsa_oaep.c:41:26: style: inconclusive: Function 'RSA_padding_add_PKCS1_OAEP' argument 5 names different: declaration 'p' definition 'param'. [funcArgNamesDifferent]
+    const unsigned char *param, int plen)
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:404:26: note: Function 'RSA_padding_add_PKCS1_OAEP' argument 5 names different: declaration 'p' definition 'param'.
+    const unsigned char *p, int pl);
+                         ^
+crypto/rsa/rsa_oaep.c:41:26: note: Function 'RSA_padding_add_PKCS1_OAEP' argument 5 names different: declaration 'p' definition 'param'.
+    const unsigned char *param, int plen)
+                         ^
+crypto/rsa/rsa_oaep.c:41:37: style: inconclusive: Function 'RSA_padding_add_PKCS1_OAEP' argument 6 names different: declaration 'pl' definition 'plen'. [funcArgNamesDifferent]
+    const unsigned char *param, int plen)
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:404:33: note: Function 'RSA_padding_add_PKCS1_OAEP' argument 6 names different: declaration 'pl' definition 'plen'.
+    const unsigned char *p, int pl);
+                                ^
+crypto/rsa/rsa_oaep.c:41:37: note: Function 'RSA_padding_add_PKCS1_OAEP' argument 6 names different: declaration 'pl' definition 'plen'.
+    const unsigned char *param, int plen)
+                                    ^
+crypto/rsa/rsa_oaep.c:161:26: style: inconclusive: Function 'RSA_padding_check_PKCS1_OAEP' argument 3 names different: declaration 'f' definition 'from'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen, int num,
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:407:26: note: Function 'RSA_padding_check_PKCS1_OAEP' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *f, int fl, int rsa_len,
+                         ^
+crypto/rsa/rsa_oaep.c:161:26: note: Function 'RSA_padding_check_PKCS1_OAEP' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *from, int flen, int num,
+                         ^
+crypto/rsa/rsa_oaep.c:161:36: style: inconclusive: Function 'RSA_padding_check_PKCS1_OAEP' argument 4 names different: declaration 'fl' definition 'flen'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen, int num,
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:407:33: note: Function 'RSA_padding_check_PKCS1_OAEP' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *f, int fl, int rsa_len,
+                                ^
+crypto/rsa/rsa_oaep.c:161:36: note: Function 'RSA_padding_check_PKCS1_OAEP' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *from, int flen, int num,
+                                   ^
+crypto/rsa/rsa_oaep.c:161:46: style: inconclusive: Function 'RSA_padding_check_PKCS1_OAEP' argument 5 names different: declaration 'rsa_len' definition 'num'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen, int num,
+                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:407:41: note: Function 'RSA_padding_check_PKCS1_OAEP' argument 5 names different: declaration 'rsa_len' definition 'num'.
+    const unsigned char *f, int fl, int rsa_len,
+                                        ^
+crypto/rsa/rsa_oaep.c:161:46: note: Function 'RSA_padding_check_PKCS1_OAEP' argument 5 names different: declaration 'rsa_len' definition 'num'.
+    const unsigned char *from, int flen, int num,
+                                             ^
+crypto/rsa/rsa_oaep.c:162:26: style: inconclusive: Function 'RSA_padding_check_PKCS1_OAEP' argument 6 names different: declaration 'p' definition 'param'. [funcArgNamesDifferent]
+    const unsigned char *param, int plen)
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:408:26: note: Function 'RSA_padding_check_PKCS1_OAEP' argument 6 names different: declaration 'p' definition 'param'.
+    const unsigned char *p, int pl);
+                         ^
+crypto/rsa/rsa_oaep.c:162:26: note: Function 'RSA_padding_check_PKCS1_OAEP' argument 6 names different: declaration 'p' definition 'param'.
+    const unsigned char *param, int plen)
+                         ^
+crypto/rsa/rsa_oaep.c:162:37: style: inconclusive: Function 'RSA_padding_check_PKCS1_OAEP' argument 7 names different: declaration 'pl' definition 'plen'. [funcArgNamesDifferent]
+    const unsigned char *param, int plen)
+                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:408:33: note: Function 'RSA_padding_check_PKCS1_OAEP' argument 7 names different: declaration 'pl' definition 'plen'.
+    const unsigned char *p, int pl);
+                                ^
+crypto/rsa/rsa_oaep.c:162:37: note: Function 'RSA_padding_check_PKCS1_OAEP' argument 7 names different: declaration 'pl' definition 'plen'.
+    const unsigned char *param, int plen)
+                                    ^
+crypto/rsa/rsa_ossl.c:1183:21: style: The scope of the variable 'pinfo' can be reduced. [variableScope]
+    RSA_PRIME_INFO *pinfo;
+                    ^
+crypto/rsa/rsa_ossl.c:802:55: style: inconclusive: Function 'rsa_ossl_mod_exp' argument 2 names different: declaration 'i' definition 'I'. [funcArgNamesDifferent]
+static int rsa_ossl_mod_exp(BIGNUM *r0, const BIGNUM *I, RSA *rsa, BN_CTX *ctx)
+                                                      ^
+crypto/rsa/rsa_ossl.c:39:55: note: Function 'rsa_ossl_mod_exp' argument 2 names different: declaration 'i' definition 'I'.
+static int rsa_ossl_mod_exp(BIGNUM *r0, const BIGNUM *i, RSA *rsa,
+                                                      ^
+crypto/rsa/rsa_ossl.c:802:55: note: Function 'rsa_ossl_mod_exp' argument 2 names different: declaration 'i' definition 'I'.
+static int rsa_ossl_mod_exp(BIGNUM *r0, const BIGNUM *I, RSA *rsa, BN_CTX *ctx)
+                                                      ^
+crypto/rsa/rsa_ossl.c:265:35: style: Variable 'blindings' can be declared as pointer to const [constVariablePointer]
+    SPARSE_ARRAY_OF(BN_BLINDING) *blindings = rsa->blindings_sa;
+                                  ^
+crypto/rsa/rsa_ossl.c:332:23: style: Variable 'res' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *f, *ret, *res;
+                      ^
+crypto/rsa/rsa_pk1.c:32:26: style: inconclusive: Function 'RSA_padding_add_PKCS1_type_1' argument 3 names different: declaration 'f' definition 'from'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen)
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:386:26: note: Function 'RSA_padding_add_PKCS1_type_1' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *f, int fl);
+                         ^
+crypto/rsa/rsa_pk1.c:32:26: note: Function 'RSA_padding_add_PKCS1_type_1' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *from, int flen)
+                         ^
+crypto/rsa/rsa_pk1.c:32:36: style: inconclusive: Function 'RSA_padding_add_PKCS1_type_1' argument 4 names different: declaration 'fl' definition 'flen'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen)
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:386:33: note: Function 'RSA_padding_add_PKCS1_type_1' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *f, int fl);
+                                ^
+crypto/rsa/rsa_pk1.c:32:36: note: Function 'RSA_padding_add_PKCS1_type_1' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *from, int flen)
+                                   ^
+crypto/rsa/rsa_pk1.c:57:26: style: inconclusive: Function 'RSA_padding_check_PKCS1_type_1' argument 3 names different: declaration 'f' definition 'from'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen,
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:389:26: note: Function 'RSA_padding_check_PKCS1_type_1' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *f, int fl,
+                         ^
+crypto/rsa/rsa_pk1.c:57:26: note: Function 'RSA_padding_check_PKCS1_type_1' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *from, int flen,
+                         ^
+crypto/rsa/rsa_pk1.c:57:36: style: inconclusive: Function 'RSA_padding_check_PKCS1_type_1' argument 4 names different: declaration 'fl' definition 'flen'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen,
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:389:33: note: Function 'RSA_padding_check_PKCS1_type_1' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *f, int fl,
+                                ^
+crypto/rsa/rsa_pk1.c:57:36: note: Function 'RSA_padding_check_PKCS1_type_1' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *from, int flen,
+                                   ^
+crypto/rsa/rsa_pk1.c:58:9: style: inconclusive: Function 'RSA_padding_check_PKCS1_type_1' argument 5 names different: declaration 'rsa_len' definition 'num'. [funcArgNamesDifferent]
+    int num)
+        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:390:9: note: Function 'RSA_padding_check_PKCS1_type_1' argument 5 names different: declaration 'rsa_len' definition 'num'.
+    int rsa_len);
+        ^
+crypto/rsa/rsa_pk1.c:58:9: note: Function 'RSA_padding_check_PKCS1_type_1' argument 5 names different: declaration 'rsa_len' definition 'num'.
+    int num)
+        ^
+crypto/rsa/rsa_pk1.c:165:26: style: inconclusive: Function 'RSA_padding_add_PKCS1_type_2' argument 3 names different: declaration 'f' definition 'from'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen)
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:393:26: note: Function 'RSA_padding_add_PKCS1_type_2' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *f, int fl);
+                         ^
+crypto/rsa/rsa_pk1.c:165:26: note: Function 'RSA_padding_add_PKCS1_type_2' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *from, int flen)
+                         ^
+crypto/rsa/rsa_pk1.c:165:36: style: inconclusive: Function 'RSA_padding_add_PKCS1_type_2' argument 4 names different: declaration 'fl' definition 'flen'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen)
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:393:33: note: Function 'RSA_padding_add_PKCS1_type_2' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *f, int fl);
+                                ^
+crypto/rsa/rsa_pk1.c:165:36: note: Function 'RSA_padding_add_PKCS1_type_2' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *from, int flen)
+                                   ^
+crypto/rsa/rsa_pk1.c:171:26: style: inconclusive: Function 'RSA_padding_check_PKCS1_type_2' argument 3 names different: declaration 'f' definition 'from'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen,
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:396:26: note: Function 'RSA_padding_check_PKCS1_type_2' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *f, int fl,
+                         ^
+crypto/rsa/rsa_pk1.c:171:26: note: Function 'RSA_padding_check_PKCS1_type_2' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *from, int flen,
+                         ^
+crypto/rsa/rsa_pk1.c:171:36: style: inconclusive: Function 'RSA_padding_check_PKCS1_type_2' argument 4 names different: declaration 'fl' definition 'flen'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen,
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:396:33: note: Function 'RSA_padding_check_PKCS1_type_2' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *f, int fl,
+                                ^
+crypto/rsa/rsa_pk1.c:171:36: note: Function 'RSA_padding_check_PKCS1_type_2' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *from, int flen,
+                                   ^
+crypto/rsa/rsa_pk1.c:172:9: style: inconclusive: Function 'RSA_padding_check_PKCS1_type_2' argument 5 names different: declaration 'rsa_len' definition 'num'. [funcArgNamesDifferent]
+    int num)
+        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:397:9: note: Function 'RSA_padding_check_PKCS1_type_2' argument 5 names different: declaration 'rsa_len' definition 'num'.
+    int rsa_len);
+        ^
+crypto/rsa/rsa_pk1.c:172:9: note: Function 'RSA_padding_check_PKCS1_type_2' argument 5 names different: declaration 'rsa_len' definition 'num'.
+    int num)
+        ^
+crypto/rsa/rsa_pk1.c:546:59: style: inconclusive: Function 'ossl_rsa_padding_check_PKCS1_type_2_TLS' argument 1 names different: declaration 'ctx' definition 'libctx'. [funcArgNamesDifferent]
+int ossl_rsa_padding_check_PKCS1_type_2_TLS(OSSL_LIB_CTX *libctx,
+                                                          ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/rsa.h:154:59: note: Function 'ossl_rsa_padding_check_PKCS1_type_2_TLS' argument 1 names different: declaration 'ctx' definition 'libctx'.
+int ossl_rsa_padding_check_PKCS1_type_2_TLS(OSSL_LIB_CTX *ctx, unsigned char *to,
+                                                          ^
+crypto/rsa/rsa_pk1.c:546:59: note: Function 'ossl_rsa_padding_check_PKCS1_type_2_TLS' argument 1 names different: declaration 'ctx' definition 'libctx'.
+int ossl_rsa_padding_check_PKCS1_type_2_TLS(OSSL_LIB_CTX *libctx,
+                                                          ^
+crypto/rsa/rsa_pk1.c:390:29: style: Parameter 'kdk' can be declared as pointer to const [constParameterPointer]
+    int num, unsigned char *kdk)
+                            ^
+crypto/rsa/rsa_pss.c:117:19: style: Array index 'i' is used before limits check. [arrayIndexThenCheck]
+    for (i = 0; DB[i] == 0 && i < (maskedDBLen - 1); i++)
+                  ^
+crypto/rsa/rsa_pss.c:45:41: style: Parameter 'rsa' can be declared as pointer to const [constParameterPointer]
+int ossl_rsa_verify_PKCS1_PSS_mgf1(RSA *rsa, const unsigned char *mHash,
+                                        ^
+crypto/rsa/rsa_sp800_56b_check.c:136:41: style: Parameter 'p' can be declared as pointer to const [constParameterPointer]
+int ossl_rsa_check_prime_factor(BIGNUM *p, BIGNUM *e, int nbits, BN_CTX *ctx)
+                                        ^
+crypto/rsa/rsa_sp800_56b_check.c:136:52: style: Parameter 'e' can be declared as pointer to const [constParameterPointer]
+int ossl_rsa_check_prime_factor(BIGNUM *p, BIGNUM *e, int nbits, BN_CTX *ctx)
+                                                   ^
+crypto/rsa/rsa_sign.c:286:61: style: inconclusive: Function 'RSA_sign' argument 3 names different: declaration 'm_length' definition 'm_len'. [funcArgNamesDifferent]
+int RSA_sign(int type, const unsigned char *m, unsigned int m_len,
+                                                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:358:18: note: Function 'RSA_sign' argument 3 names different: declaration 'm_length' definition 'm_len'.
+    unsigned int m_length, unsigned char *sigret,
+                 ^
+crypto/rsa/rsa_sign.c:286:61: note: Function 'RSA_sign' argument 3 names different: declaration 'm_length' definition 'm_len'.
+int RSA_sign(int type, const unsigned char *m, unsigned int m_len,
+                                                            ^
+crypto/rsa/rsa_sign.c:344:25: style: inconclusive: Function 'ossl_rsa_verify' argument 1 names different: declaration 'dtype' definition 'type'. [funcArgNamesDifferent]
+int ossl_rsa_verify(int type, const unsigned char *m, unsigned int m_len,
+                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/rsa.h:170:25: note: Function 'ossl_rsa_verify' argument 1 names different: declaration 'dtype' definition 'type'.
+int ossl_rsa_verify(int dtype, const unsigned char *m,
+                        ^
+crypto/rsa/rsa_sign.c:344:25: note: Function 'ossl_rsa_verify' argument 1 names different: declaration 'dtype' definition 'type'.
+int ossl_rsa_verify(int type, const unsigned char *m, unsigned int m_len,
+                        ^
+crypto/rsa/rsa_sign.c:460:63: style: inconclusive: Function 'RSA_verify' argument 3 names different: declaration 'm_length' definition 'm_len'. [funcArgNamesDifferent]
+int RSA_verify(int type, const unsigned char *m, unsigned int m_len,
+                                                              ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:361:18: note: Function 'RSA_verify' argument 3 names different: declaration 'm_length' definition 'm_len'.
+    unsigned int m_length,
+                 ^
+crypto/rsa/rsa_sign.c:460:63: note: Function 'RSA_verify' argument 3 names different: declaration 'm_length' definition 'm_len'.
+int RSA_verify(int type, const unsigned char *m, unsigned int m_len,
+                                                              ^
+crypto/rsa/rsa_saos.c:25:42: style: inconclusive: Function 'RSA_sign_ASN1_OCTET_STRING' argument 3 names different: declaration 'm_length' definition 'm_len'. [funcArgNamesDifferent]
+    const unsigned char *m, unsigned int m_len,
+                                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:371:42: note: Function 'RSA_sign_ASN1_OCTET_STRING' argument 3 names different: declaration 'm_length' definition 'm_len'.
+    const unsigned char *m, unsigned int m_length,
+                                         ^
+crypto/rsa/rsa_saos.c:25:42: note: Function 'RSA_sign_ASN1_OCTET_STRING' argument 3 names different: declaration 'm_length' definition 'm_len'.
+    const unsigned char *m, unsigned int m_len,
+                                         ^
+crypto/rsa/rsa_saos.c:58:38: style: inconclusive: Function 'RSA_verify_ASN1_OCTET_STRING' argument 1 names different: declaration 'type' definition 'dtype'. [funcArgNamesDifferent]
+int RSA_verify_ASN1_OCTET_STRING(int dtype,
+                                     ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:375:38: note: Function 'RSA_verify_ASN1_OCTET_STRING' argument 1 names different: declaration 'type' definition 'dtype'.
+int RSA_verify_ASN1_OCTET_STRING(int type,
+                                     ^
+crypto/rsa/rsa_saos.c:58:38: note: Function 'RSA_verify_ASN1_OCTET_STRING' argument 1 names different: declaration 'type' definition 'dtype'.
+int RSA_verify_ASN1_OCTET_STRING(int dtype,
+                                     ^
+crypto/rsa/rsa_saos.c:60:18: style: inconclusive: Function 'RSA_verify_ASN1_OCTET_STRING' argument 3 names different: declaration 'm_length' definition 'm_len'. [funcArgNamesDifferent]
+    unsigned int m_len, unsigned char *sigbuf,
+                 ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:376:42: note: Function 'RSA_verify_ASN1_OCTET_STRING' argument 3 names different: declaration 'm_length' definition 'm_len'.
+    const unsigned char *m, unsigned int m_length,
+                                         ^
+crypto/rsa/rsa_saos.c:60:18: note: Function 'RSA_verify_ASN1_OCTET_STRING' argument 3 names different: declaration 'm_length' definition 'm_len'.
+    unsigned int m_len, unsigned char *sigbuf,
+                 ^
+crypto/rsa/rsa_saos.c:60:40: style: Parameter 'sigbuf' can be declared as pointer to const [constParameterPointer]
+    unsigned int m_len, unsigned char *sigbuf,
+                                       ^
+crypto/sha/keccak1600.c:1129:15: style: Variable 'A_flat' can be declared as pointer to const [constVariablePointer]
+    uint64_t *A_flat = (uint64_t *)A;
+              ^
+crypto/rsa/rsa_sp800_56b_gen.c:73:13: style: Variable 'Xp' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *Xp = NULL, *Xp1 = NULL, *Xp2 = NULL;
+            ^
+crypto/rsa/rsa_sp800_56b_gen.c:73:25: style: Variable 'Xp1' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *Xp = NULL, *Xp1 = NULL, *Xp2 = NULL;
+                        ^
+crypto/rsa/rsa_sp800_56b_gen.c:73:38: style: Variable 'Xp2' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *Xp = NULL, *Xp1 = NULL, *Xp2 = NULL;
+                                     ^
+crypto/rsa/rsa_sp800_56b_gen.c:74:13: style: Variable 'Xq' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *Xq = NULL, *Xq1 = NULL, *Xq2 = NULL;
+            ^
+crypto/rsa/rsa_sp800_56b_gen.c:74:25: style: Variable 'Xq1' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *Xq = NULL, *Xq1 = NULL, *Xq2 = NULL;
+                        ^
+crypto/rsa/rsa_sp800_56b_gen.c:74:38: style: Variable 'Xq2' can be declared as pointer to const [constVariablePointer]
+    BIGNUM *Xq = NULL, *Xq1 = NULL, *Xq2 = NULL;
+                                     ^
+crypto/rsa/rsa_sp800_56b_gen.c:205:52: style: Parameter 'rng' can be declared as pointer to const [constParameterPointer]
+static int rsa_validate_rng_strength(EVP_RAND_CTX *rng, int nbits)
+                                                   ^
+crypto/rsa/rsa_sp800_56b_gen.c:453:43: style: Parameter 'rsa' can be declared as pointer to const [constParameterPointer]
+int ossl_rsa_sp800_56b_pairwise_test(RSA *rsa, BN_CTX *ctx)
+                                          ^
+crypto/rsa/rsa_x931.c:82:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i = 0, j;
+        ^
+crypto/rsa/rsa_x931.c:44:26: style: inconclusive: Function 'RSA_padding_add_X931' argument 3 names different: declaration 'f' definition 'from'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen)
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:426:26: note: Function 'RSA_padding_add_X931' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *f, int fl);
+                         ^
+crypto/rsa/rsa_x931.c:44:26: note: Function 'RSA_padding_add_X931' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *from, int flen)
+                         ^
+crypto/rsa/rsa_x931.c:44:36: style: inconclusive: Function 'RSA_padding_add_X931' argument 4 names different: declaration 'fl' definition 'flen'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen)
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:426:33: note: Function 'RSA_padding_add_X931' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *f, int fl);
+                                ^
+crypto/rsa/rsa_x931.c:44:36: note: Function 'RSA_padding_add_X931' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *from, int flen)
+                                   ^
+crypto/rsa/rsa_x931.c:80:26: style: inconclusive: Function 'RSA_padding_check_X931' argument 3 names different: declaration 'f' definition 'from'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen, int num)
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:428:26: note: Function 'RSA_padding_check_X931' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *f, int fl,
+                         ^
+crypto/rsa/rsa_x931.c:80:26: note: Function 'RSA_padding_check_X931' argument 3 names different: declaration 'f' definition 'from'.
+    const unsigned char *from, int flen, int num)
+                         ^
+crypto/rsa/rsa_x931.c:80:36: style: inconclusive: Function 'RSA_padding_check_X931' argument 4 names different: declaration 'fl' definition 'flen'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen, int num)
+                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:428:33: note: Function 'RSA_padding_check_X931' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *f, int fl,
+                                ^
+crypto/rsa/rsa_x931.c:80:36: note: Function 'RSA_padding_check_X931' argument 4 names different: declaration 'fl' definition 'flen'.
+    const unsigned char *from, int flen, int num)
+                                   ^
+crypto/rsa/rsa_x931.c:80:46: style: inconclusive: Function 'RSA_padding_check_X931' argument 5 names different: declaration 'rsa_len' definition 'num'. [funcArgNamesDifferent]
+    const unsigned char *from, int flen, int num)
+                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/rsa.h:429:9: note: Function 'RSA_padding_check_X931' argument 5 names different: declaration 'rsa_len' definition 'num'.
+    int rsa_len);
+        ^
+crypto/rsa/rsa_x931.c:80:46: note: Function 'RSA_padding_check_X931' argument 5 names different: declaration 'rsa_len' definition 'num'.
+    const unsigned char *from, int flen, int num)
+                                             ^
+crypto/rsa/rsa_x931.c:82:11: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+    int i = 0, j;
+          ^
+crypto/sha/sha3.c:54:69: style: inconclusive: Function 'ossl_keccak_init' argument 3 names different: declaration 'typelen' definition 'bitlen'. [funcArgNamesDifferent]
+int ossl_keccak_init(KECCAK1600_CTX *ctx, unsigned char pad, size_t bitlen, size_t mdlen)
+                                                                    ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/sha3.h:55:12: note: Function 'ossl_keccak_init' argument 3 names different: declaration 'typelen' definition 'bitlen'.
+    size_t typelen, size_t mdlen);
+           ^
+crypto/sha/sha3.c:54:69: note: Function 'ossl_keccak_init' argument 3 names different: declaration 'typelen' definition 'bitlen'.
+int ossl_keccak_init(KECCAK1600_CTX *ctx, unsigned char pad, size_t bitlen, size_t mdlen)
+                                                                    ^
+crypto/sha/sha3.c:67:64: style: inconclusive: Function 'ossl_sha3_absorb' argument 2 names different: declaration 'in' definition 'inp'. [funcArgNamesDifferent]
+int ossl_sha3_absorb(KECCAK1600_CTX *ctx, const unsigned char *inp, size_t len)
+                                                               ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/sha3.h:57:64: note: Function 'ossl_sha3_absorb' argument 2 names different: declaration 'in' definition 'inp'.
+int ossl_sha3_absorb(KECCAK1600_CTX *ctx, const unsigned char *in, size_t len);
+                                                               ^
+crypto/sha/sha3.c:67:64: note: Function 'ossl_sha3_absorb' argument 2 names different: declaration 'in' definition 'inp'.
+int ossl_sha3_absorb(KECCAK1600_CTX *ctx, const unsigned char *inp, size_t len)
+                                                               ^
+crypto/sha/sha_ppc.c:22:37: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+    OPENSSL_ppccap_P &PPC_CRYPTO207 ? sha256_block_p8(ctx, inp, len) : sha256_block_ppc(ctx, inp, len);
+                                    ^
+crypto/sha/sha_ppc.c:30:37: style: Clarify calculation precedence for '&' and '?'. [clarifyCalculation]
+    OPENSSL_ppccap_P &PPC_CRYPTO207 ? sha512_block_p8(ctx, inp, len) : sha512_block_ppc(ctx, inp, len);
+                                    ^
+crypto/siphash/siphash.c:70:35: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+size_t SipHash_hash_size(SIPHASH *ctx)
+                                  ^
+crypto/sha/sha1dgst.c:47:38: style: Condition 'SHA1_Update(sha1,ms,mslen)<=0' is always false [knownConditionTrueFalse]
+    if (SHA1_Update(sha1, ms, mslen) <= 0)
+                                     ^
+crypto/sha/sha_local.h:62:29: note: Calling function 'SHA1_Update_thunk' returns 1
+    return SHA1_Update_thunk((void *)c, (const unsigned char *)data, len);
+                            ^
+crypto/sha/sha1dgst.c:47:20: note: Calling function 'SHA1_Update' returns 1
+    if (SHA1_Update(sha1, ms, mslen) <= 0)
+                   ^
+crypto/sha/sha1dgst.c:47:38: note: Condition 'SHA1_Update(sha1,ms,mslen)<=0' is always false
+    if (SHA1_Update(sha1, ms, mslen) <= 0)
+                                     ^
+crypto/sha/sha1dgst.c:53:9: style: Condition '!SHA1_Update(sha1,padtmp,sizeof(padtmp))' is always false [knownConditionTrueFalse]
+    if (!SHA1_Update(sha1, padtmp, sizeof(padtmp)))
+        ^
+crypto/sha/sha_local.h:62:29: note: Calling function 'SHA1_Update_thunk' returns 1
+    return SHA1_Update_thunk((void *)c, (const unsigned char *)data, len);
+                            ^
+crypto/sha/sha1dgst.c:53:21: note: Calling function 'SHA1_Update' returns 1
+    if (!SHA1_Update(sha1, padtmp, sizeof(padtmp)))
+                    ^
+crypto/sha/sha1dgst.c:53:9: note: Condition '!SHA1_Update(sha1,padtmp,sizeof(padtmp))' is always false
+    if (!SHA1_Update(sha1, padtmp, sizeof(padtmp)))
+        ^
+crypto/sha/sha1dgst.c:56:9: style: Condition '!SHA1_Final(sha1tmp,sha1)' is always false [knownConditionTrueFalse]
+    if (!SHA1_Final(sha1tmp, sha1))
+        ^
+crypto/sha/sha1dgst.c:56:20: note: Calling function 'SHA1_Final' returns 1
+    if (!SHA1_Final(sha1tmp, sha1))
+                   ^
+crypto/sha/sha1dgst.c:56:9: note: Condition '!SHA1_Final(sha1tmp,sha1)' is always false
+    if (!SHA1_Final(sha1tmp, sha1))
+        ^
+crypto/sha/sha1dgst.c:61:9: style: Condition '!SHA1_Init(sha1)' is always false [knownConditionTrueFalse]
+    if (!SHA1_Init(sha1))
+        ^
+crypto/sha/sha1dgst.c:61:19: note: Calling function 'SHA1_Init' returns 1
+    if (!SHA1_Init(sha1))
+                  ^
+crypto/sha/sha1dgst.c:61:9: note: Condition '!SHA1_Init(sha1)' is always false
+    if (!SHA1_Init(sha1))
+        ^
+crypto/sha/sha1dgst.c:64:38: style: Condition 'SHA1_Update(sha1,ms,mslen)<=0' is always false [knownConditionTrueFalse]
+    if (SHA1_Update(sha1, ms, mslen) <= 0)
+                                     ^
+crypto/sha/sha_local.h:62:29: note: Calling function 'SHA1_Update_thunk' returns 1
+    return SHA1_Update_thunk((void *)c, (const unsigned char *)data, len);
+                            ^
+crypto/sha/sha1dgst.c:64:20: note: Calling function 'SHA1_Update' returns 1
+    if (SHA1_Update(sha1, ms, mslen) <= 0)
+                   ^
+crypto/sha/sha1dgst.c:64:38: note: Condition 'SHA1_Update(sha1,ms,mslen)<=0' is always false
+    if (SHA1_Update(sha1, ms, mslen) <= 0)
+                                     ^
+crypto/sha/sha1dgst.c:70:9: style: Condition '!SHA1_Update(sha1,padtmp,sizeof(padtmp))' is always false [knownConditionTrueFalse]
+    if (!SHA1_Update(sha1, padtmp, sizeof(padtmp)))
+        ^
+crypto/sha/sha_local.h:62:29: note: Calling function 'SHA1_Update_thunk' returns 1
+    return SHA1_Update_thunk((void *)c, (const unsigned char *)data, len);
+                            ^
+crypto/sha/sha1dgst.c:70:21: note: Calling function 'SHA1_Update' returns 1
+    if (!SHA1_Update(sha1, padtmp, sizeof(padtmp)))
+                    ^
+crypto/sha/sha1dgst.c:70:9: note: Condition '!SHA1_Update(sha1,padtmp,sizeof(padtmp))' is always false
+    if (!SHA1_Update(sha1, padtmp, sizeof(padtmp)))
+        ^
+crypto/sha/sha1dgst.c:73:9: style: Condition '!SHA1_Update(sha1,sha1tmp,sizeof(sha1tmp))' is always false [knownConditionTrueFalse]
+    if (!SHA1_Update(sha1, sha1tmp, sizeof(sha1tmp)))
+        ^
+crypto/sha/sha_local.h:62:29: note: Calling function 'SHA1_Update_thunk' returns 1
+    return SHA1_Update_thunk((void *)c, (const unsigned char *)data, len);
+                            ^
+crypto/sha/sha1dgst.c:73:21: note: Calling function 'SHA1_Update' returns 1
+    if (!SHA1_Update(sha1, sha1tmp, sizeof(sha1tmp)))
+                    ^
+crypto/sha/sha1dgst.c:73:9: note: Condition '!SHA1_Update(sha1,sha1tmp,sizeof(sha1tmp))' is always false
+    if (!SHA1_Update(sha1, sha1tmp, sizeof(sha1tmp)))
+        ^
+crypto/sha/sha1dgst.c:28:29: style: inconclusive: Function 'ossl_sha1_ctrl' argument 1 names different: declaration 'ctx' definition 'sha1'. [funcArgNamesDifferent]
+int ossl_sha1_ctrl(SHA_CTX *sha1, int cmd, int mslen, void *ms)
+                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/sha.h:22:29: note: Function 'ossl_sha1_ctrl' argument 1 names different: declaration 'ctx' definition 'sha1'.
+int ossl_sha1_ctrl(SHA_CTX *ctx, int cmd, int mslen, void *ms);
+                            ^
+crypto/sha/sha1dgst.c:28:29: note: Function 'ossl_sha1_ctrl' argument 1 names different: declaration 'ctx' definition 'sha1'.
+int ossl_sha1_ctrl(SHA_CTX *sha1, int cmd, int mslen, void *ms)
+                            ^
+crypto/sha/sha1dgst.c:28:61: style: Parameter 'ms' can be declared as pointer to const [constParameterPointer]
+int ossl_sha1_ctrl(SHA_CTX *sha1, int cmd, int mslen, void *ms)
+                                                            ^
+crypto/sha/sha256.c:316:25: style: The scope of the variable 'a' can be reduced. [variableScope]
+    unsigned MD32_REG_T a, b, c, d, e, f, g, h, s0, s1, T1;
+                        ^
+crypto/sha/sha256.c:316:28: style: The scope of the variable 'b' can be reduced. [variableScope]
+    unsigned MD32_REG_T a, b, c, d, e, f, g, h, s0, s1, T1;
+                           ^
+crypto/sha/sha256.c:316:31: style: The scope of the variable 'c' can be reduced. [variableScope]
+    unsigned MD32_REG_T a, b, c, d, e, f, g, h, s0, s1, T1;
+                              ^
+crypto/sha/sha256.c:316:34: style: The scope of the variable 'd' can be reduced. [variableScope]
+    unsigned MD32_REG_T a, b, c, d, e, f, g, h, s0, s1, T1;
+                                 ^
+crypto/sha/sha256.c:316:37: style: The scope of the variable 'e' can be reduced. [variableScope]
+    unsigned MD32_REG_T a, b, c, d, e, f, g, h, s0, s1, T1;
+                                    ^
+crypto/sha/sha256.c:316:40: style: The scope of the variable 'f' can be reduced. [variableScope]
+    unsigned MD32_REG_T a, b, c, d, e, f, g, h, s0, s1, T1;
+                                       ^
+crypto/sha/sha256.c:316:43: style: The scope of the variable 'g' can be reduced. [variableScope]
+    unsigned MD32_REG_T a, b, c, d, e, f, g, h, s0, s1, T1;
+                                          ^
+crypto/sha/sha256.c:316:46: style: The scope of the variable 'h' can be reduced. [variableScope]
+    unsigned MD32_REG_T a, b, c, d, e, f, g, h, s0, s1, T1;
+                                             ^
+crypto/sha/sha256.c:141:31: style: inconclusive: Function 'SHA256_Update' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+int SHA256_Update(SHA256_CTX *ctx, const void *data, size_t sz)
+                              ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/sha.h:75:53: note: Function 'SHA256_Update' argument 1 names different: declaration 'c' definition 'ctx'.
+OSSL_DEPRECATEDIN_3_0 int SHA256_Update(SHA256_CTX *c,
+                                                    ^
+crypto/sha/sha256.c:141:31: note: Function 'SHA256_Update' argument 1 names different: declaration 'c' definition 'ctx'.
+int SHA256_Update(SHA256_CTX *ctx, const void *data, size_t sz)
+                              ^
+crypto/sha/sha256.c:141:61: style: inconclusive: Function 'SHA256_Update' argument 3 names different: declaration 'len' definition 'sz'. [funcArgNamesDifferent]
+int SHA256_Update(SHA256_CTX *ctx, const void *data, size_t sz)
+                                                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/sha.h:76:30: note: Function 'SHA256_Update' argument 3 names different: declaration 'len' definition 'sz'.
+    const void *data, size_t len);
+                             ^
+crypto/sha/sha256.c:141:61: note: Function 'SHA256_Update' argument 3 names different: declaration 'len' definition 'sz'.
+int SHA256_Update(SHA256_CTX *ctx, const void *data, size_t sz)
+                                                            ^
+crypto/slh_dsa/slh_fors.c:83:13: style: The scope of the variable 'sk' can be reduced. [variableScope]
+    uint8_t sk[SLH_MAX_N], lnode[SLH_MAX_N], rnode[SLH_MAX_N];
+            ^
+crypto/slh_dsa/slh_fors.c:83:28: style: The scope of the variable 'lnode' can be reduced. [variableScope]
+    uint8_t sk[SLH_MAX_N], lnode[SLH_MAX_N], rnode[SLH_MAX_N];
+                           ^
+crypto/slh_dsa/slh_fors.c:83:46: style: The scope of the variable 'rnode' can be reduced. [variableScope]
+    uint8_t sk[SLH_MAX_N], lnode[SLH_MAX_N], rnode[SLH_MAX_N];
+                                             ^
+crypto/slh_dsa/slh_fors.c:214:62: style: inconclusive: Function 'ossl_slh_fors_pk_from_sig' argument 2 names different: declaration 'sig_rpkt' definition 'fors_sig_rpkt'. [funcArgNamesDifferent]
+int ossl_slh_fors_pk_from_sig(SLH_DSA_HASH_CTX *ctx, PACKET *fors_sig_rpkt,
+                                                             ^
+crypto/slh_dsa/slh_dsa_local.h:105:69: note: Function 'ossl_slh_fors_pk_from_sig' argument 2 names different: declaration 'sig_rpkt' definition 'fors_sig_rpkt'.
+__owur int ossl_slh_fors_pk_from_sig(SLH_DSA_HASH_CTX *ctx, PACKET *sig_rpkt,
+                                                                    ^
+crypto/slh_dsa/slh_fors.c:214:62: note: Function 'ossl_slh_fors_pk_from_sig' argument 2 names different: declaration 'sig_rpkt' definition 'fors_sig_rpkt'.
+int ossl_slh_fors_pk_from_sig(SLH_DSA_HASH_CTX *ctx, PACKET *fors_sig_rpkt,
+                                                             ^
+crypto/sha/sha512.c:162:33: style: inconclusive: Function 'SHA512_Final' argument 1 names different: declaration 'md' definition 'out'. [funcArgNamesDifferent]
+int SHA512_Final(unsigned char *out, SHA512_CTX *c)
+                                ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/sha.h:128:55: note: Function 'SHA512_Final' argument 1 names different: declaration 'md' definition 'out'.
+OSSL_DEPRECATEDIN_3_0 int SHA512_Final(unsigned char *md, SHA512_CTX *c);
+                                                      ^
+crypto/sha/sha512.c:162:33: note: Function 'SHA512_Final' argument 1 names different: declaration 'md' definition 'out'.
+int SHA512_Final(unsigned char *out, SHA512_CTX *c)
+                                ^
+crypto/sha/sha512.c:282:46: style: inconclusive: Function 'SHA512_Update' argument 2 names different: declaration 'data' definition '_data'. [funcArgNamesDifferent]
+int SHA512_Update(SHA512_CTX *c, const void *_data, size_t len)
+                                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/sha.h:127:17: note: Function 'SHA512_Update' argument 2 names different: declaration 'data' definition '_data'.
+    const void *data, size_t len);
+                ^
+crypto/sha/sha512.c:282:46: note: Function 'SHA512_Update' argument 2 names different: declaration 'data' definition '_data'.
+int SHA512_Update(SHA512_CTX *c, const void *_data, size_t len)
+                                             ^
+crypto/slh_dsa/slh_dsa.c:202:9: style: Condition '!PACKET_buf_init(m_digest_rpkt,m_digest,sizeof(m_digest))' is always true [knownConditionTrueFalse]
+    if (!PACKET_buf_init(m_digest_rpkt, m_digest, sizeof(m_digest))
+        ^
+crypto/slh_dsa/slh_dsa.c:202:25: note: Calling function 'PACKET_buf_init' returns 0
+    if (!PACKET_buf_init(m_digest_rpkt, m_digest, sizeof(m_digest))
+                        ^
+crypto/slh_dsa/slh_dsa.c:202:9: note: Condition '!PACKET_buf_init(m_digest_rpkt,m_digest,sizeof(m_digest))' is always true
+    if (!PACKET_buf_init(m_digest_rpkt, m_digest, sizeof(m_digest))
+        ^
+crypto/slh_dsa/slh_dsa.c:366:33: style: inconclusive: Function 'get_tree_ids' argument 1 names different: declaration 'pkt' definition 'rpkt'. [funcArgNamesDifferent]
+static int get_tree_ids(PACKET *rpkt, const SLH_DSA_PARAMS *params,
+                                ^
+crypto/slh_dsa/slh_dsa.c:21:33: note: Function 'get_tree_ids' argument 1 names different: declaration 'pkt' definition 'rpkt'.
+static int get_tree_ids(PACKET *pkt, const SLH_DSA_PARAMS *params,
+                                ^
+crypto/slh_dsa/slh_dsa.c:366:33: note: Function 'get_tree_ids' argument 1 names different: declaration 'pkt' definition 'rpkt'.
+static int get_tree_ids(PACKET *rpkt, const SLH_DSA_PARAMS *params,
+                                ^
+crypto/slh_dsa/slh_dsa.c:57:18: style: Variable 'sig_fors' can be declared as pointer to const [constVariablePointer]
+    uint8_t *r, *sig_fors; /* Pointers into buffer inside |wpkt| */
+                 ^
+crypto/slh_dsa/slh_hypertree.c:112:75: style: inconclusive: Function 'ossl_slh_ht_verify' argument 3 names different: declaration 'sig_rpkt' definition 'sig_pkt'. [funcArgNamesDifferent]
+int ossl_slh_ht_verify(SLH_DSA_HASH_CTX *ctx, const uint8_t *msg, PACKET *sig_pkt,
+                                                                          ^
+crypto/slh_dsa/slh_dsa_local.h:98:13: note: Function 'ossl_slh_ht_verify' argument 3 names different: declaration 'sig_rpkt' definition 'sig_pkt'.
+    PACKET *sig_rpkt, const uint8_t *pk_seed,
+            ^
+crypto/slh_dsa/slh_hypertree.c:112:75: note: Function 'ossl_slh_ht_verify' argument 3 names different: declaration 'sig_rpkt' definition 'sig_pkt'.
+int ossl_slh_ht_verify(SLH_DSA_HASH_CTX *ctx, const uint8_t *msg, PACKET *sig_pkt,
+                                                                          ^
+crypto/slh_dsa/slh_hypertree.c:47:14: style: Variable 'psig' can be declared as pointer to const [constVariablePointer]
+    uint8_t *psig;
+             ^
+crypto/slh_dsa/slh_xmss.c:37:32: style: inconclusive: Function 'ossl_slh_xmss_node' argument 4 names different: declaration 'height' definition 'h'. [funcArgNamesDifferent]
+    uint32_t node_id, uint32_t h,
+                               ^
+crypto/slh_dsa/slh_dsa_local.h:80:32: note: Function 'ossl_slh_xmss_node' argument 4 names different: declaration 'height' definition 'h'.
+    uint32_t node_id, uint32_t height,
+                               ^
+crypto/slh_dsa/slh_xmss.c:37:32: note: Function 'ossl_slh_xmss_node' argument 4 names different: declaration 'height' definition 'h'.
+    uint32_t node_id, uint32_t h,
+                               ^
+crypto/slh_dsa/slh_dsa_key.c:187:9: style: The scope of the variable 'key_checked' can be reduced. [variableScope]
+    int key_checked = 0;
+        ^
+crypto/slh_dsa/slh_dsa_key.c:263:67: style: inconclusive: Function 'ossl_slh_dsa_key_fromdata' argument 2 names different: declaration 'pub' definition 'param_pub'. [funcArgNamesDifferent]
+int ossl_slh_dsa_key_fromdata(SLH_DSA_KEY *key, const OSSL_PARAM *param_pub,
+                                                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/slh_dsa.h:36:74: note: Function 'ossl_slh_dsa_key_fromdata' argument 2 names different: declaration 'pub' definition 'param_pub'.
+__owur int ossl_slh_dsa_key_fromdata(SLH_DSA_KEY *key, const OSSL_PARAM *pub,
+                                                                         ^
+crypto/slh_dsa/slh_dsa_key.c:263:67: note: Function 'ossl_slh_dsa_key_fromdata' argument 2 names different: declaration 'pub' definition 'param_pub'.
+int ossl_slh_dsa_key_fromdata(SLH_DSA_KEY *key, const OSSL_PARAM *param_pub,
+                                                                  ^
+crypto/slh_dsa/slh_dsa_key.c:332:9: style: inconclusive: Function 'slh_dsa_compute_pk_root' argument 3 names different: declaration 'verify' definition 'validate'. [funcArgNamesDifferent]
+    int validate)
+        ^
+crypto/slh_dsa/slh_dsa_key.c:21:81: note: Function 'slh_dsa_compute_pk_root' argument 3 names different: declaration 'verify' definition 'validate'.
+static int slh_dsa_compute_pk_root(SLH_DSA_HASH_CTX *ctx, SLH_DSA_KEY *out, int verify);
+                                                                                ^
+crypto/slh_dsa/slh_dsa_key.c:332:9: note: Function 'slh_dsa_compute_pk_root' argument 3 names different: declaration 'verify' definition 'validate'.
+    int validate)
+        ^
+crypto/slh_dsa/slh_dsa_key.c:367:19: style: inconclusive: Function 'ossl_slh_dsa_generate_key' argument 3 names different: declaration 'libctx' definition 'lib_ctx'. [funcArgNamesDifferent]
+    OSSL_LIB_CTX *lib_ctx,
+                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/slh_dsa.h:40:19: note: Function 'ossl_slh_dsa_generate_key' argument 3 names different: declaration 'libctx' definition 'lib_ctx'.
+    OSSL_LIB_CTX *libctx,
+                  ^
+crypto/slh_dsa/slh_dsa_key.c:367:19: note: Function 'ossl_slh_dsa_generate_key' argument 3 names different: declaration 'libctx' definition 'lib_ctx'.
+    OSSL_LIB_CTX *lib_ctx,
+                  ^
+crypto/slh_dsa/slh_dsa_key.c:424:5: style: int result is returned as long value. If the return value is long to avoid loss of information, then you have loss of information. [truncLongCastReturn]
+    return 2 * key->params->n;
+    ^
+crypto/slh_dsa/slh_dsa_key.c:440:5: style: int result is returned as long value. If the return value is long to avoid loss of information, then you have loss of information. [truncLongCastReturn]
+    return 4 * key->params->n;
+    ^
+crypto/slh_dsa/slh_hash.c:270:17: style: Variable 'sctx' can be declared as pointer to const [constVariablePointer]
+    SHA256_CTX *sctx = (SHA256_CTX *)(hctx->shactx_pkseed);
+                ^
+crypto/slh_dsa/slh_hash.c:319:21: style: Variable 'sctx' can be declared as pointer to const [constVariablePointer]
+    KECCAK1600_CTX *sctx = (KECCAK1600_CTX *)(hctx->shactx_pkseed);
+                    ^
+crypto/slh_dsa/slh_hash.c:268:17: style: Variable 'j' is assigned a value that is never used. [unreadVariable]
+    size_t i, j = 0, len = SLH_WOTS_LEN(n);
+                ^
+crypto/slh_dsa/slh_hash.c:313:17: style: Variable 'j' is assigned a value that is never used. [unreadVariable]
+    size_t i, j = 0, len = SLH_WOTS_LEN(n);
+                ^
+crypto/sparse_array.c:158:9: style: The scope of the variable 'level' can be reduced. [variableScope]
+    int level;
+        ^
+crypto/sparse_array.c:181:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i, level = 1;
+        ^
+crypto/sparse_array.c:179:48: style: inconclusive: Function 'ossl_sa_set' argument 2 names different: declaration 'n' definition 'posn'. [funcArgNamesDifferent]
+int ossl_sa_set(OPENSSL_SA *sa, ossl_uintmax_t posn, void *val)
+                                               ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/sparse_array.h:107:48: note: Function 'ossl_sa_set' argument 2 names different: declaration 'n' definition 'posn'.
+int ossl_sa_set(OPENSSL_SA *sa, ossl_uintmax_t n, void *val);
+                                               ^
+crypto/sparse_array.c:179:48: note: Function 'ossl_sa_set' argument 2 names different: declaration 'n' definition 'posn'.
+int ossl_sa_set(OPENSSL_SA *sa, ossl_uintmax_t posn, void *val)
+                                               ^
+crypto/sparse_array.c:129:57: style: Parameter 'arg' can be declared as pointer to const. However it seems that 'trampoline' is a callback function, if 'arg' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static void trampoline(ossl_uintmax_t n, void *l, void *arg)
+                                                        ^
+crypto/sparse_array.c:140:29: note: You might need to cast the function pointer here
+        sa_doall(sa, NULL, &trampoline, &tramp);
+                            ^
+crypto/sparse_array.c:129:57: note: Parameter 'arg' can be declared as pointer to const
+static void trampoline(ossl_uintmax_t n, void *l, void *arg)
+                                                        ^
+crypto/sm2/sm2_sign.c:504:22: style: inconclusive: Function 'ossl_sm2_do_verify' argument 3 names different: declaration 'signature' definition 'sig'. [funcArgNamesDifferent]
+    const ECDSA_SIG *sig,
+                     ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/sm2.h:42:22: note: Function 'ossl_sm2_do_verify' argument 3 names different: declaration 'signature' definition 'sig'.
+    const ECDSA_SIG *signature,
+                     ^
+crypto/sm2/sm2_sign.c:504:22: note: Function 'ossl_sm2_do_verify' argument 3 names different: declaration 'signature' definition 'sig'.
+    const ECDSA_SIG *sig,
+                     ^
+crypto/sm2/sm2_sign.c:567:35: style: inconclusive: Function 'ossl_sm2_internal_verify' argument 4 names different: declaration 'siglen' definition 'sig_len'. [funcArgNamesDifferent]
+    const unsigned char *sig, int sig_len,
+                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/sm2.h:58:35: note: Function 'ossl_sm2_internal_verify' argument 4 names different: declaration 'siglen' definition 'sig_len'.
+    const unsigned char *sig, int siglen,
+                                  ^
+crypto/sm2/sm2_sign.c:567:35: note: Function 'ossl_sm2_internal_verify' argument 4 names different: declaration 'siglen' definition 'sig_len'.
+    const unsigned char *sig, int sig_len,
+                                  ^
+crypto/sm2/sm2_sign.c:527:13: style: Parameter 'eckey' can be declared as pointer to const [constParameterPointer]
+    EC_KEY *eckey)
+            ^
+crypto/sm2/sm2_sign.c:568:13: style: Parameter 'eckey' can be declared as pointer to const [constParameterPointer]
+    EC_KEY *eckey)
+            ^
+crypto/sm3/sm3.c:32:46: style: The scope of the variable 'E' can be reduced. [variableScope]
+    register unsigned MD32_REG_T A, B, C, D, E, F, G, H;
+                                             ^
+crypto/sm3/sm3.c:32:49: style: The scope of the variable 'F' can be reduced. [variableScope]
+    register unsigned MD32_REG_T A, B, C, D, E, F, G, H;
+                                                ^
+crypto/sm3/sm3.c:32:52: style: The scope of the variable 'G' can be reduced. [variableScope]
+    register unsigned MD32_REG_T A, B, C, D, E, F, G, H;
+                                                   ^
+crypto/sm3/sm3.c:32:55: style: The scope of the variable 'H' can be reduced. [variableScope]
+    register unsigned MD32_REG_T A, B, C, D, E, F, G, H;
+                                                      ^
+crypto/sm3/sm3.c:34:25: style: The scope of the variable 'W00' can be reduced. [variableScope]
+    unsigned MD32_REG_T W00, W01, W02, W03, W04, W05, W06, W07,
+                        ^
+crypto/sm3/sm3.c:34:30: style: The scope of the variable 'W01' can be reduced. [variableScope]
+    unsigned MD32_REG_T W00, W01, W02, W03, W04, W05, W06, W07,
+                             ^
+crypto/sm3/sm3.c:34:35: style: The scope of the variable 'W02' can be reduced. [variableScope]
+    unsigned MD32_REG_T W00, W01, W02, W03, W04, W05, W06, W07,
+                                  ^
+crypto/sm3/sm3.c:34:40: style: The scope of the variable 'W03' can be reduced. [variableScope]
+    unsigned MD32_REG_T W00, W01, W02, W03, W04, W05, W06, W07,
+                                       ^
+crypto/sm3/sm3.c:34:45: style: The scope of the variable 'W04' can be reduced. [variableScope]
+    unsigned MD32_REG_T W00, W01, W02, W03, W04, W05, W06, W07,
+                                            ^
+crypto/sm3/sm3.c:34:50: style: The scope of the variable 'W05' can be reduced. [variableScope]
+    unsigned MD32_REG_T W00, W01, W02, W03, W04, W05, W06, W07,
+                                                 ^
+crypto/sm3/sm3.c:34:55: style: The scope of the variable 'W06' can be reduced. [variableScope]
+    unsigned MD32_REG_T W00, W01, W02, W03, W04, W05, W06, W07,
+                                                      ^
+crypto/sm3/sm3.c:34:60: style: The scope of the variable 'W07' can be reduced. [variableScope]
+    unsigned MD32_REG_T W00, W01, W02, W03, W04, W05, W06, W07,
+                                                           ^
+crypto/sm3/sm3.c:35:9: style: The scope of the variable 'W08' can be reduced. [variableScope]
+        W08, W09, W10, W11, W12, W13, W14, W15;
+        ^
+crypto/sm3/sm3.c:35:14: style: The scope of the variable 'W09' can be reduced. [variableScope]
+        W08, W09, W10, W11, W12, W13, W14, W15;
+             ^
+crypto/sm3/sm3.c:35:19: style: The scope of the variable 'W10' can be reduced. [variableScope]
+        W08, W09, W10, W11, W12, W13, W14, W15;
+                  ^
+crypto/sm3/sm3.c:35:24: style: The scope of the variable 'W11' can be reduced. [variableScope]
+        W08, W09, W10, W11, W12, W13, W14, W15;
+                       ^
+crypto/sm3/sm3.c:35:29: style: The scope of the variable 'W12' can be reduced. [variableScope]
+        W08, W09, W10, W11, W12, W13, W14, W15;
+                            ^
+crypto/sm3/sm3.c:35:34: style: The scope of the variable 'W13' can be reduced. [variableScope]
+        W08, W09, W10, W11, W12, W13, W14, W15;
+                                 ^
+crypto/sm3/sm3.c:35:39: style: The scope of the variable 'W14' can be reduced. [variableScope]
+        W08, W09, W10, W11, W12, W13, W14, W15;
+                                      ^
+crypto/sm3/sm3.c:35:44: style: The scope of the variable 'W15' can be reduced. [variableScope]
+        W08, W09, W10, W11, W12, W13, W14, W15;
+                                           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/md32_common.inc:166:42: style: inconclusive: Function 'ossl_sm3_update' argument 2 names different: declaration 'data' definition 'data_'. [funcArgNamesDifferent]
+int HASH_UPDATE(HASH_CTX *c, const void *data_, size_t len)
+                                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/sm3.h:38:45: note: Function 'ossl_sm3_update' argument 2 names different: declaration 'data' definition 'data_'.
+int ossl_sm3_update(SM3_CTX *c, const void *data, size_t len);
+                                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/md32_common.inc:166:42: note: Function 'ossl_sm3_update' argument 2 names different: declaration 'data' definition 'data_'.
+int HASH_UPDATE(HASH_CTX *c, const void *data_, size_t len)
+                                         ^
+crypto/sm3/sm3.c:29:41: style: inconclusive: Function 'ossl_sm3_block_data_order' argument 1 names different: declaration 'c' definition 'ctx'. [funcArgNamesDifferent]
+void ossl_sm3_block_data_order(SM3_CTX *ctx, const void *p, size_t num)
+                                        ^
+crypto/sm3/sm3_local.h:72:41: note: Function 'ossl_sm3_block_data_order' argument 1 names different: declaration 'c' definition 'ctx'.
+void ossl_sm3_block_data_order(SM3_CTX *c, const void *p, size_t num);
+                                        ^
+crypto/sm3/sm3.c:29:41: note: Function 'ossl_sm3_block_data_order' argument 1 names different: declaration 'c' definition 'ctx'.
+void ossl_sm3_block_data_order(SM3_CTX *ctx, const void *p, size_t num)
+                                        ^
+crypto/sparcv9cap.c:86:11: style: Variable 'e' can be declared as pointer to const [constVariablePointer]
+    char *e;
+          ^
+crypto/stack/stack.c:285:9: style: The scope of the variable 'cmp_ret' can be reduced. [variableScope]
+    int cmp_ret;
+        ^
+crypto/stack/stack.c:18:1: warning: Either the condition 'b<0' is redundant or there is division by zero at line 18. [zerodivcond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Assuming that condition 'b<0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Assignment 'y=b<0?-b:b', assigned value is 0
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Division by zero
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:120:52: style: inconclusive: Function 'OPENSSL_sk_dup' argument 1 names different: declaration 'st' definition 'sk'. [funcArgNamesDifferent]
+OPENSSL_STACK *OPENSSL_sk_dup(const OPENSSL_STACK *sk)
+                                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/stack.h:61:52: note: Function 'OPENSSL_sk_dup' argument 1 names different: declaration 'st' definition 'sk'.
+OPENSSL_STACK *OPENSSL_sk_dup(const OPENSSL_STACK *st);
+                                                   ^
+crypto/stack/stack.c:120:52: note: Function 'OPENSSL_sk_dup' argument 1 names different: declaration 'st' definition 'sk'.
+OPENSSL_STACK *OPENSSL_sk_dup(const OPENSSL_STACK *sk)
+                                                   ^
+crypto/stack/stack.c:283:38: style: inconclusive: Function 'OPENSSL_sk_insert' argument 1 names different: declaration 'sk' definition 'st'. [funcArgNamesDifferent]
+int OPENSSL_sk_insert(OPENSSL_STACK *st, const void *data, int loc)
+                                     ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/stack.h:48:38: note: Function 'OPENSSL_sk_insert' argument 1 names different: declaration 'sk' definition 'st'.
+int OPENSSL_sk_insert(OPENSSL_STACK *sk, const void *data, int where);
+                                     ^
+crypto/stack/stack.c:283:38: note: Function 'OPENSSL_sk_insert' argument 1 names different: declaration 'sk' definition 'st'.
+int OPENSSL_sk_insert(OPENSSL_STACK *st, const void *data, int loc)
+                                     ^
+crypto/stack/stack.c:283:64: style: inconclusive: Function 'OPENSSL_sk_insert' argument 3 names different: declaration 'where' definition 'loc'. [funcArgNamesDifferent]
+int OPENSSL_sk_insert(OPENSSL_STACK *st, const void *data, int loc)
+                                                               ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/stack.h:48:64: note: Function 'OPENSSL_sk_insert' argument 3 names different: declaration 'where' definition 'loc'.
+int OPENSSL_sk_insert(OPENSSL_STACK *sk, const void *data, int where);
+                                                               ^
+crypto/stack/stack.c:283:64: note: Function 'OPENSSL_sk_insert' argument 3 names different: declaration 'where' definition 'loc'.
+int OPENSSL_sk_insert(OPENSSL_STACK *st, const void *data, int loc)
+                                                               ^
+crypto/stack/stack.c:18:1: style: Clarify calculation precedence for '^' and '?'. [clarifyCalculation]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: warning: Either the condition 'a>0' is redundant or there is signed integer overflow for expression '(~((int)1<<(sizeof(int)*8-1)))-a'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Assuming that condition 'a>0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: warning: Either the condition 'a<0' is redundant or there is signed integer overflow for expression '((int)1<<(sizeof(int)*8-1))-a'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Assuming that condition 'a<0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: warning: Either the condition 'b>0' is redundant or there is signed integer overflow for expression '((int)1<<(sizeof(int)*8-1))+b'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Assuming that condition 'b>0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: warning: Either the condition 'b<0' is redundant or there is signed integer overflow for expression '(~((int)1<<(sizeof(int)*8-1)))+b'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Assuming that condition 'b<0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: warning: Either the condition 'b>0' is redundant or there is signed integer overflow for expression '(~((int)1<<(sizeof(int)*8-1)))-b'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Assuming that condition 'b>0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/stack/stack.c:18:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+crypto/srp/srp_vfy.c:347:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+crypto/srp/srp_vfy.c:349:13: style: The scope of the variable 'gN' can be reduced. [variableScope]
+    SRP_gN *gN;
+            ^
+crypto/srp/srp_vfy.c:515:19: style: The scope of the variable 'user' can be reduced. [variableScope]
+    SRP_user_pwd *user;
+                  ^
+crypto/srp/srp_vfy.c:204:40: style: inconclusive: Function 'SRP_user_pwd_set_gN' argument 1 names different: declaration 'user_pwd' definition 'vinfo'. [funcArgNamesDifferent]
+void SRP_user_pwd_set_gN(SRP_user_pwd *vinfo, const BIGNUM *g,
+                                       ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/srp.h:202:40: note: Function 'SRP_user_pwd_set_gN' argument 1 names different: declaration 'user_pwd' definition 'vinfo'.
+void SRP_user_pwd_set_gN(SRP_user_pwd *user_pwd, const BIGNUM *g,
+                                       ^
+crypto/srp/srp_vfy.c:204:40: note: Function 'SRP_user_pwd_set_gN' argument 1 names different: declaration 'user_pwd' definition 'vinfo'.
+void SRP_user_pwd_set_gN(SRP_user_pwd *vinfo, const BIGNUM *g,
+                                       ^
+crypto/srp/srp_vfy.c:211:41: style: inconclusive: Function 'SRP_user_pwd_set1_ids' argument 1 names different: declaration 'user_pwd' definition 'vinfo'. [funcArgNamesDifferent]
+int SRP_user_pwd_set1_ids(SRP_user_pwd *vinfo, const char *id,
+                                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/srp.h:205:41: note: Function 'SRP_user_pwd_set1_ids' argument 1 names different: declaration 'user_pwd' definition 'vinfo'.
+int SRP_user_pwd_set1_ids(SRP_user_pwd *user_pwd, const char *id,
+                                        ^
+crypto/srp/srp_vfy.c:211:41: note: Function 'SRP_user_pwd_set1_ids' argument 1 names different: declaration 'user_pwd' definition 'vinfo'.
+int SRP_user_pwd_set1_ids(SRP_user_pwd *vinfo, const char *id,
+                                        ^
+crypto/srp/srp_vfy.c:250:40: style: inconclusive: Function 'SRP_user_pwd_set0_sv' argument 1 names different: declaration 'user_pwd' definition 'vinfo'. [funcArgNamesDifferent]
+int SRP_user_pwd_set0_sv(SRP_user_pwd *vinfo, BIGNUM *s, BIGNUM *v)
+                                       ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/srp.h:208:40: note: Function 'SRP_user_pwd_set0_sv' argument 1 names different: declaration 'user_pwd' definition 'vinfo'.
+int SRP_user_pwd_set0_sv(SRP_user_pwd *user_pwd, BIGNUM *s, BIGNUM *v);
+                                       ^
+crypto/srp/srp_vfy.c:250:40: note: Function 'SRP_user_pwd_set0_sv' argument 1 names different: declaration 'user_pwd' definition 'vinfo'.
+int SRP_user_pwd_set0_sv(SRP_user_pwd *vinfo, BIGNUM *s, BIGNUM *v)
+                                       ^
+crypto/srp/srp_vfy.c:137:19: style: Variable 'pad' can be declared as const array [constVariable]
+    unsigned char pad[2] = { 0, 0 };
+                  ^
+crypto/srp/srp_vfy.c:259:53: style: Parameter 'src' can be declared as pointer to const [constParameterPointer]
+static SRP_user_pwd *srp_user_pwd_dup(SRP_user_pwd *src)
+                                                    ^
+crypto/srp/srp_vfy.c:277:32: style: Parameter 'seed_key' can be declared as pointer to const [constParameterPointer]
+SRP_VBASE *SRP_VBASE_new(char *seed_key)
+                               ^
+crypto/srp/srp_vfy.c:345:67: style: Parameter 'gN_tab' can be declared as pointer to const [constParameterPointer]
+static SRP_gN *SRP_get_gN_by_id(const char *id, STACK_OF(SRP_gN) *gN_tab)
+                                                                  ^
+crypto/srp/srp_vfy.c:361:72: style: Parameter 'ch' can be declared as pointer to const [constParameterPointer]
+static BIGNUM *SRP_gN_place_bn(STACK_OF(SRP_gN_cache) *gN_cache, char *ch)
+                                                                       ^
+crypto/srp/srp_vfy.c:398:11: style: Variable 'last_index' can be declared as pointer to const [constVariablePointer]
+    char *last_index = NULL;
+          ^
+crypto/srp/srp_vfy.c:512:43: style: Parameter 'vb' can be declared as pointer to const [constParameterPointer]
+static SRP_user_pwd *find_user(SRP_VBASE *vb, char *username)
+                                          ^
+crypto/srp/srp_vfy.c:512:53: style: Parameter 'username' can be declared as pointer to const [constParameterPointer]
+static SRP_user_pwd *find_user(SRP_VBASE *vb, char *username)
+                                                    ^
+crypto/thread/arch.c:106:52: style: inconclusive: Function 'ossl_crypto_thread_native_clean' argument 1 names different: declaration 'thread' definition 'handle'. [funcArgNamesDifferent]
+int ossl_crypto_thread_native_clean(CRYPTO_THREAD *handle)
+                                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/thread_arch.h:121:52: note: Function 'ossl_crypto_thread_native_clean' argument 1 names different: declaration 'thread' definition 'handle'.
+int ossl_crypto_thread_native_clean(CRYPTO_THREAD *thread);
+                                                   ^
+crypto/thread/arch.c:106:52: note: Function 'ossl_crypto_thread_native_clean' argument 1 names different: declaration 'thread' definition 'handle'.
+int ossl_crypto_thread_native_clean(CRYPTO_THREAD *handle)
+                                                   ^
+crypto/store/store_lib.c:340:21: style: The scope of the variable 'params' can be reduced. [variableScope]
+        OSSL_PARAM *params;
+                    ^
+crypto/store/store_lib.c:662:55: style: inconclusive: Function 'OSSL_STORE_INFO_new_PUBKEY' argument 1 names different: declaration 'pubkey' definition 'pkey'. [funcArgNamesDifferent]
+OSSL_STORE_INFO *OSSL_STORE_INFO_new_PUBKEY(EVP_PKEY *pkey)
+                                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/store.h:176:55: note: Function 'OSSL_STORE_INFO_new_PUBKEY' argument 1 names different: declaration 'pubkey' definition 'pkey'.
+OSSL_STORE_INFO *OSSL_STORE_INFO_new_PUBKEY(EVP_PKEY *pubkey);
+                                                      ^
+crypto/store/store_lib.c:662:55: note: Function 'OSSL_STORE_INFO_new_PUBKEY' argument 1 names different: declaration 'pubkey' definition 'pkey'.
+OSSL_STORE_INFO *OSSL_STORE_INFO_new_PUBKEY(EVP_PKEY *pkey)
+                                                      ^
+crypto/store/store_lib.c:1059:40: style: inconclusive: Function 'OSSL_STORE_attach' argument 1 names different: declaration 'bio' definition 'bp'. [funcArgNamesDifferent]
+OSSL_STORE_CTX *OSSL_STORE_attach(BIO *bp, const char *scheme,
+                                       ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/store.h:140:40: note: Function 'OSSL_STORE_attach' argument 1 names different: declaration 'bio' definition 'bp'.
+OSSL_STORE_CTX *OSSL_STORE_attach(BIO *bio, const char *scheme,
+                                       ^
+crypto/store/store_lib.c:1059:40: note: Function 'OSSL_STORE_attach' argument 1 names different: declaration 'bio' definition 'bp'.
+OSSL_STORE_CTX *OSSL_STORE_attach(BIO *bp, const char *scheme,
+                                       ^
+crypto/store/store_lib.c:77:60: style: Variable 'scheme' can be declared as pointer to const [constVariablePointer]
+    char scheme_copy[256], *p = scheme_copy, *schemes[2], *scheme = NULL;
+                                                           ^
+crypto/store/store_register.c:31:50: style: Parameter 'e' can be declared as pointer to const [constParameterPointer]
+OSSL_STORE_LOADER *OSSL_STORE_LOADER_new(ENGINE *e, const char *scheme)
+                                                 ^
+crypto/store/store_meth.c:471:73: style: inconclusive: Function 'OSSL_STORE_LOADER_is_a' argument 2 names different: declaration 'scheme' definition 'name'. [funcArgNamesDifferent]
+int OSSL_STORE_LOADER_is_a(const OSSL_STORE_LOADER *loader, const char *name)
+                                                                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/store.h:276:17: note: Function 'OSSL_STORE_LOADER_is_a' argument 2 names different: declaration 'scheme' definition 'name'.
+    const char *scheme);
+                ^
+crypto/store/store_meth.c:471:73: note: Function 'OSSL_STORE_LOADER_is_a' argument 2 names different: declaration 'scheme' definition 'name'.
+int OSSL_STORE_LOADER_is_a(const OSSL_STORE_LOADER *loader, const char *name)
+                                                                        ^
+crypto/store/store_meth.c:497:11: style: inconclusive: Function 'OSSL_STORE_LOADER_do_all_provided' argument 3 names different: declaration 'arg' definition 'user_arg'. [funcArgNamesDifferent]
+    void *user_arg)
+          ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/store.h:280:11: note: Function 'OSSL_STORE_LOADER_do_all_provided' argument 3 names different: declaration 'arg' definition 'user_arg'.
+    void *arg);
+          ^
+crypto/store/store_meth.c:497:11: note: Function 'OSSL_STORE_LOADER_do_all_provided' argument 3 names different: declaration 'arg' definition 'user_arg'.
+    void *user_arg)
+          ^
+crypto/store/store_meth.c:158:23: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+        OSSL_NAMEMAP *namemap = ossl_namemap_stored(methdata->libctx);
+                      ^
+crypto/store/store_meth.c:178:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap;
+                  ^
+crypto/store/store_meth.c:309:19: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+    OSSL_NAMEMAP *namemap = ossl_namemap_stored(methdata->libctx);
+                  ^
+crypto/store/store_meth.c:475:23: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+        OSSL_NAMEMAP *namemap = ossl_namemap_stored(libctx);
+                      ^
+crypto/store/store_meth.c:523:23: style: Variable 'namemap' can be declared as pointer to const [constVariablePointer]
+        OSSL_NAMEMAP *namemap = ossl_namemap_stored(libctx);
+                      ^
+crypto/store/store_result.c:148:23: style: Condition '!try_crl(&helper_data,v,libctx,propq)' is always false [knownConditionTrueFalse]
+    if (*v == NULL && !try_crl(&helper_data, v, libctx, propq))
+                      ^
+crypto/store/store_result.c:148:31: note: Calling function 'try_crl' returns 1
+    if (*v == NULL && !try_crl(&helper_data, v, libctx, propq))
+                              ^
+crypto/store/store_result.c:148:23: note: Condition '!try_crl(&helper_data,v,libctx,propq)' is always false
+    if (*v == NULL && !try_crl(&helper_data, v, libctx, propq))
+                      ^
+crypto/store/store_result.c:434:20: style: Condition 'pk==NULL' is always true [knownConditionTrueFalse]
+            if (pk == NULL)
+                   ^
+crypto/store/store_result.c:426:29: note: Calling function 'try_key_ref' returns 0
+            pk = try_key_ref(data, ctx, provider, libctx, propq);
+                            ^
+crypto/store/store_result.c:426:29: note: Assignment 'pk=try_key_ref(data,ctx,provider,libctx,propq)', assigned value is 0
+            pk = try_key_ref(data, ctx, provider, libctx, propq);
+                            ^
+crypto/store/store_result.c:434:20: note: Condition 'pk==NULL' is always true
+            if (pk == NULL)
+                   ^
+crypto/store/store_result.c:645:46: style: Condition '(pkey=NULL)==NULL' is always true [knownConditionTrueFalse]
+                            && (pkey = NULL) == NULL
+                                             ^
+crypto/store/store_result.c:654:46: style: Condition '(cert=NULL)==NULL' is always true [knownConditionTrueFalse]
+                            && (cert = NULL) == NULL
+                                             ^
+crypto/store/store_result.c:180:53: style: Parameter 'data' can be declared as pointer to const [constParameterPointer]
+static int try_name(struct extracted_param_data_st *data, OSSL_STORE_INFO **v)
+                                                    ^
+crypto/store/store_result.c:279:64: style: Parameter 'data' can be declared as pointer to const [constParameterPointer]
+static EVP_PKEY *try_key_value(struct extracted_param_data_st *data,
+                                                               ^
+crypto/store/store_result.c:280:21: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+    OSSL_STORE_CTX *ctx,
+                    ^
+crypto/store/store_result.c:713:20: style: Variable 'keysize' is assigned a value that is never used. [unreadVariable]
+    size_t keysize = 0;
+                   ^
+crypto/thread/internal.c:50:15: style: Condition 'tdata==NULL' is always false [knownConditionTrueFalse]
+    if (tdata == NULL || tdata->max_threads == 0) {
+              ^
+crypto/thread/internal.c:73:35: style: inconclusive: Function 'ossl_crypto_thread_join' argument 1 names different: declaration 'task' definition 'vhandle'. [funcArgNamesDifferent]
+int ossl_crypto_thread_join(void *vhandle, CRYPTO_THREAD_RETVAL *retval)
+                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/thread.h:21:35: note: Function 'ossl_crypto_thread_join' argument 1 names different: declaration 'task' definition 'vhandle'.
+int ossl_crypto_thread_join(void *task, CRYPTO_THREAD_RETVAL *retval);
+                                  ^
+crypto/thread/internal.c:73:35: note: Function 'ossl_crypto_thread_join' argument 1 names different: declaration 'task' definition 'vhandle'.
+int ossl_crypto_thread_join(void *vhandle, CRYPTO_THREAD_RETVAL *retval)
+                                  ^
+crypto/thread/internal.c:19:75: style: Parameter 'tdata' can be declared as pointer to const [constParameterPointer]
+static ossl_inline uint64_t _ossl_get_avail_threads(OSSL_LIB_CTX_THREADS *tdata)
+                                                                          ^
+crypto/threads_common.c:260:23: style: Variable 'mkey' can be declared as pointer to const [constVariablePointer]
+    MASTER_KEY_ENTRY *mkey;
+                      ^
+crypto/threads_pthread.c:485:36: style: The scope of the variable 'tmpcb' can be reduced. [variableScope]
+    struct rcu_cb_item *cb_items, *tmpcb;
+                                   ^
+crypto/threads_pthread.c:134:1: style: Parameter 'p' can be declared as pointer to const [constParameterPointer]
+IMPL_fallback_atomic_load_n(uint32_t)
+^
+crypto/threads_pthread.c:135:5: style: Parameter 'p' can be declared as pointer to const [constParameterPointer]
+    IMPL_fallback_atomic_load_n(uint64_t)
+    ^
+crypto/threads_pthread.c:1164:34: style: Parameter 'val' can be declared as pointer to const [constParameterPointer]
+int CRYPTO_atomic_load(uint64_t *val, uint64_t *ret, CRYPTO_RWLOCK *lock)
+                                 ^
+crypto/threads_pthread.c:1210:33: style: Parameter 'val' can be declared as pointer to const [constParameterPointer]
+int CRYPTO_atomic_load_int(int *val, int *ret, CRYPTO_RWLOCK *lock)
+                                ^
+crypto/trace.c:540:14: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int len, i;
+             ^
+crypto/ts/ts_asn1.c:21:1: style: inconclusive: Function 'TS_MSG_IMPRINT_dup' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_MSG_IMPRINT)
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:82:1: note: Function 'TS_MSG_IMPRINT_dup' argument 1 names different: declaration 'a' definition 'x'.
+DECLARE_ASN1_DUP_FUNCTION(TS_MSG_IMPRINT)
+^
+crypto/ts/ts_asn1.c:21:1: note: Function 'TS_MSG_IMPRINT_dup' argument 1 names different: declaration 'a' definition 'x'.
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_MSG_IMPRINT)
+^
+crypto/ts/ts_asn1.c:22:45: style: inconclusive: Function 'd2i_TS_MSG_IMPRINT_bio' argument 1 names different: declaration 'bio' definition 'bp'. [funcArgNamesDifferent]
+TS_MSG_IMPRINT *d2i_TS_MSG_IMPRINT_bio(BIO *bp, TS_MSG_IMPRINT **a)
+                                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:88:45: note: Function 'd2i_TS_MSG_IMPRINT_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+TS_MSG_IMPRINT *d2i_TS_MSG_IMPRINT_bio(BIO *bio, TS_MSG_IMPRINT **a);
+                                            ^
+crypto/ts/ts_asn1.c:22:45: note: Function 'd2i_TS_MSG_IMPRINT_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+TS_MSG_IMPRINT *d2i_TS_MSG_IMPRINT_bio(BIO *bp, TS_MSG_IMPRINT **a)
+                                            ^
+crypto/ts/ts_asn1.c:28:33: style: inconclusive: Function 'i2d_TS_MSG_IMPRINT_bio' argument 1 names different: declaration 'bio' definition 'bp'. [funcArgNamesDifferent]
+int i2d_TS_MSG_IMPRINT_bio(BIO *bp, const TS_MSG_IMPRINT *a)
+                                ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:89:33: note: Function 'i2d_TS_MSG_IMPRINT_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+int i2d_TS_MSG_IMPRINT_bio(BIO *bio, const TS_MSG_IMPRINT *a);
+                                ^
+crypto/ts/ts_asn1.c:28:33: note: Function 'i2d_TS_MSG_IMPRINT_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+int i2d_TS_MSG_IMPRINT_bio(BIO *bp, const TS_MSG_IMPRINT *a)
+                                ^
+crypto/ts/ts_asn1.c:55:1: style: inconclusive: Function 'TS_REQ_dup' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_REQ)
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:71:1: note: Function 'TS_REQ_dup' argument 1 names different: declaration 'a' definition 'x'.
+DECLARE_ASN1_DUP_FUNCTION(TS_REQ)
+^
+crypto/ts/ts_asn1.c:55:1: note: Function 'TS_REQ_dup' argument 1 names different: declaration 'a' definition 'x'.
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_REQ)
+^
+crypto/ts/ts_asn1.c:56:29: style: inconclusive: Function 'd2i_TS_REQ_bio' argument 1 names different: declaration 'fp' definition 'bp'. [funcArgNamesDifferent]
+TS_REQ *d2i_TS_REQ_bio(BIO *bp, TS_REQ **a)
+                            ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:77:29: note: Function 'd2i_TS_REQ_bio' argument 1 names different: declaration 'fp' definition 'bp'.
+TS_REQ *d2i_TS_REQ_bio(BIO *fp, TS_REQ **a);
+                            ^
+crypto/ts/ts_asn1.c:56:29: note: Function 'd2i_TS_REQ_bio' argument 1 names different: declaration 'fp' definition 'bp'.
+TS_REQ *d2i_TS_REQ_bio(BIO *bp, TS_REQ **a)
+                            ^
+crypto/ts/ts_asn1.c:61:25: style: inconclusive: Function 'i2d_TS_REQ_bio' argument 1 names different: declaration 'fp' definition 'bp'. [funcArgNamesDifferent]
+int i2d_TS_REQ_bio(BIO *bp, const TS_REQ *a)
+                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:78:25: note: Function 'i2d_TS_REQ_bio' argument 1 names different: declaration 'fp' definition 'bp'.
+int i2d_TS_REQ_bio(BIO *fp, const TS_REQ *a);
+                        ^
+crypto/ts/ts_asn1.c:61:25: note: Function 'i2d_TS_REQ_bio' argument 1 names different: declaration 'fp' definition 'bp'.
+int i2d_TS_REQ_bio(BIO *bp, const TS_REQ *a)
+                        ^
+crypto/ts/ts_asn1.c:84:1: style: inconclusive: Function 'TS_ACCURACY_dup' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_ACCURACY)
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:120:1: note: Function 'TS_ACCURACY_dup' argument 1 names different: declaration 'a' definition 'x'.
+DECLARE_ASN1_DUP_FUNCTION(TS_ACCURACY)
+^
+crypto/ts/ts_asn1.c:84:1: note: Function 'TS_ACCURACY_dup' argument 1 names different: declaration 'a' definition 'x'.
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_ACCURACY)
+^
+crypto/ts/ts_asn1.c:100:1: style: inconclusive: Function 'TS_TST_INFO_dup' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_TST_INFO)
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:108:1: note: Function 'TS_TST_INFO_dup' argument 1 names different: declaration 'a' definition 'x'.
+DECLARE_ASN1_DUP_FUNCTION(TS_TST_INFO)
+^
+crypto/ts/ts_asn1.c:100:1: note: Function 'TS_TST_INFO_dup' argument 1 names different: declaration 'a' definition 'x'.
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_TST_INFO)
+^
+crypto/ts/ts_asn1.c:101:39: style: inconclusive: Function 'd2i_TS_TST_INFO_bio' argument 1 names different: declaration 'bio' definition 'bp'. [funcArgNamesDifferent]
+TS_TST_INFO *d2i_TS_TST_INFO_bio(BIO *bp, TS_TST_INFO **a)
+                                      ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:115:39: note: Function 'd2i_TS_TST_INFO_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+TS_TST_INFO *d2i_TS_TST_INFO_bio(BIO *bio, TS_TST_INFO **a);
+                                      ^
+crypto/ts/ts_asn1.c:101:39: note: Function 'd2i_TS_TST_INFO_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+TS_TST_INFO *d2i_TS_TST_INFO_bio(BIO *bp, TS_TST_INFO **a)
+                                      ^
+crypto/ts/ts_asn1.c:107:30: style: inconclusive: Function 'i2d_TS_TST_INFO_bio' argument 1 names different: declaration 'bio' definition 'bp'. [funcArgNamesDifferent]
+int i2d_TS_TST_INFO_bio(BIO *bp, const TS_TST_INFO *a)
+                             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:116:30: note: Function 'i2d_TS_TST_INFO_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+int i2d_TS_TST_INFO_bio(BIO *bio, const TS_TST_INFO *a);
+                             ^
+crypto/ts/ts_asn1.c:107:30: note: Function 'i2d_TS_TST_INFO_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+int i2d_TS_TST_INFO_bio(BIO *bp, const TS_TST_INFO *a)
+                             ^
+crypto/ts/ts_asn1.c:131:1: style: inconclusive: Function 'TS_STATUS_INFO_dup' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_STATUS_INFO)
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:104:1: note: Function 'TS_STATUS_INFO_dup' argument 1 names different: declaration 'a' definition 'x'.
+DECLARE_ASN1_DUP_FUNCTION(TS_STATUS_INFO)
+^
+crypto/ts/ts_asn1.c:131:1: note: Function 'TS_STATUS_INFO_dup' argument 1 names different: declaration 'a' definition 'x'.
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_STATUS_INFO)
+^
+crypto/ts/ts_asn1.c:180:1: style: inconclusive: Function 'TS_RESP_dup' argument 1 names different: declaration 'a' definition 'x'. [funcArgNamesDifferent]
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_RESP)
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:93:1: note: Function 'TS_RESP_dup' argument 1 names different: declaration 'a' definition 'x'.
+DECLARE_ASN1_DUP_FUNCTION(TS_RESP)
+^
+crypto/ts/ts_asn1.c:180:1: note: Function 'TS_RESP_dup' argument 1 names different: declaration 'a' definition 'x'.
+IMPLEMENT_ASN1_DUP_FUNCTION(TS_RESP)
+^
+crypto/ts/ts_asn1.c:182:31: style: inconclusive: Function 'd2i_TS_RESP_bio' argument 1 names different: declaration 'bio' definition 'bp'. [funcArgNamesDifferent]
+TS_RESP *d2i_TS_RESP_bio(BIO *bp, TS_RESP **a)
+                              ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:99:31: note: Function 'd2i_TS_RESP_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+TS_RESP *d2i_TS_RESP_bio(BIO *bio, TS_RESP **a);
+                              ^
+crypto/ts/ts_asn1.c:182:31: note: Function 'd2i_TS_RESP_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+TS_RESP *d2i_TS_RESP_bio(BIO *bp, TS_RESP **a)
+                              ^
+crypto/ts/ts_asn1.c:187:26: style: inconclusive: Function 'i2d_TS_RESP_bio' argument 1 names different: declaration 'bio' definition 'bp'. [funcArgNamesDifferent]
+int i2d_TS_RESP_bio(BIO *bp, const TS_RESP *a)
+                         ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:100:26: note: Function 'i2d_TS_RESP_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+int i2d_TS_RESP_bio(BIO *bio, const TS_RESP *a);
+                         ^
+crypto/ts/ts_asn1.c:187:26: note: Function 'i2d_TS_RESP_bio' argument 1 names different: declaration 'bio' definition 'bp'.
+int i2d_TS_RESP_bio(BIO *bp, const TS_RESP *a)
+                         ^
+crypto/ts/ts_asn1.c:209:24: style: Variable 'tst_info_der' can be declared as pointer to const [constVariablePointer]
+    ASN1_OCTET_STRING *tst_info_der;
+                       ^
+crypto/ts/ts_lib.c:50:12: style: The scope of the variable 'critical' can be reduced. [variableScope]
+    int i, critical, n;
+           ^
+crypto/ts/ts_lib.c:52:24: style: The scope of the variable 'obj' can be reduced. [variableScope]
+    const ASN1_OBJECT *obj;
+                       ^
+crypto/ts/ts_req_print.c:21:18: style: Variable 'policy_id' can be declared as pointer to const [constVariablePointer]
+    ASN1_OBJECT *policy_id;
+                 ^
+crypto/ts/ts_lib.c:80:56: style: inconclusive: Function 'TS_MSG_IMPRINT_print_bio' argument 2 names different: declaration 'msg' definition 'a'. [funcArgNamesDifferent]
+int TS_MSG_IMPRINT_print_bio(BIO *bio, TS_MSG_IMPRINT *a)
+                                                       ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:476:56: note: Function 'TS_MSG_IMPRINT_print_bio' argument 2 names different: declaration 'msg' definition 'a'.
+int TS_MSG_IMPRINT_print_bio(BIO *bio, TS_MSG_IMPRINT *msg);
+                                                       ^
+crypto/ts/ts_lib.c:80:56: note: Function 'TS_MSG_IMPRINT_print_bio' argument 2 names different: declaration 'msg' definition 'a'.
+int TS_MSG_IMPRINT_print_bio(BIO *bio, TS_MSG_IMPRINT *a)
+                                                       ^
+crypto/ts/ts_lib.c:82:24: style: Variable 'msg' can be declared as pointer to const [constVariablePointer]
+    ASN1_OCTET_STRING *msg;
+                       ^
+crypto/ts/ts_conf.c:130:43: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+const char *TS_CONF_get_tsa_section(CONF *conf, const char *section)
+                                          ^
+crypto/ts/ts_conf.c:140:30: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+int TS_CONF_set_serial(CONF *conf, const char *section, TS_serial_cb cb,
+                             ^
+crypto/ts/ts_conf.c:156:35: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+int TS_CONF_set_signer_cert(CONF *conf, const char *section,
+                                  ^
+crypto/ts/ts_conf.c:180:29: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+int TS_CONF_set_certs(CONF *conf, const char *section, const char *certs,
+                            ^
+crypto/ts/ts_conf.c:202:34: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+int TS_CONF_set_signer_key(CONF *conf, const char *section,
+                                 ^
+crypto/ts/ts_conf.c:225:37: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+int TS_CONF_set_signer_digest(CONF *conf, const char *section,
+                                    ^
+crypto/ts/ts_conf.c:249:34: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+int TS_CONF_set_def_policy(CONF *conf, const char *section,
+                                 ^
+crypto/ts/ts_conf.c:279:11: style: Variable 'policies' can be declared as pointer to const [constVariablePointer]
+    char *policies = NCONF_get_string(conf, section, ENV_OTHER_POLICIES);
+          ^
+crypto/ts/ts_conf.c:274:32: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+int TS_CONF_set_policies(CONF *conf, const char *section, TS_RESP_CTX *ctx)
+                               ^
+crypto/ts/ts_conf.c:313:11: style: Variable 'digests' can be declared as pointer to const [constVariablePointer]
+    char *digests = NCONF_get_string(conf, section, ENV_DIGESTS);
+          ^
+crypto/ts/ts_conf.c:308:31: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+int TS_CONF_set_digests(CONF *conf, const char *section, TS_RESP_CTX *ctx)
+                              ^
+crypto/ts/ts_conf.c:352:11: style: Variable 'accuracy' can be declared as pointer to const [constVariablePointer]
+    char *accuracy = NCONF_get_string(conf, section, ENV_ACCURACY);
+          ^
+crypto/ts/ts_conf.c:346:32: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+int TS_CONF_set_accuracy(CONF *conf, const char *section, TS_RESP_CTX *ctx)
+                               ^
+crypto/ts/ts_conf.c:359:21: style: Variable 'val' can be declared as pointer to const [constVariablePointer]
+        CONF_VALUE *val = sk_CONF_VALUE_value(list, i);
+                    ^
+crypto/ts/ts_conf.c:418:35: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+static int ts_CONF_add_flag(CONF *conf, const char *section,
+                                  ^
+crypto/ts/ts_conf.c:452:42: style: Parameter 'conf' can be declared as pointer to const [constParameterPointer]
+int TS_CONF_set_ess_cert_id_digest(CONF *conf, const char *section,
+                                         ^
+crypto/ts/ts_req_utils.c:27:55: style: Parameter 'msg_imprint' can be declared as pointer to const [constParameterPointer]
+int TS_REQ_set_msg_imprint(TS_REQ *a, TS_MSG_IMPRINT *msg_imprint)
+                                                      ^
+crypto/ts/ts_req_utils.c:43:48: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+TS_MSG_IMPRINT *TS_REQ_get_msg_imprint(TS_REQ *a)
+                                               ^
+crypto/ts/ts_req_utils.c:48:60: style: Parameter 'alg' can be declared as pointer to const [constParameterPointer]
+int TS_MSG_IMPRINT_set_algo(TS_MSG_IMPRINT *a, X509_ALGOR *alg)
+                                                           ^
+crypto/ts/ts_req_utils.c:64:53: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+X509_ALGOR *TS_MSG_IMPRINT_get_algo(TS_MSG_IMPRINT *a)
+                                                    ^
+crypto/ts/ts_req_utils.c:69:62: style: Parameter 'd' can be declared as pointer to const [constParameterPointer]
+int TS_MSG_IMPRINT_set_msg(TS_MSG_IMPRINT *a, unsigned char *d, int len)
+                                                             ^
+crypto/ts/ts_req_utils.c:74:59: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+ASN1_OCTET_STRING *TS_MSG_IMPRINT_get_msg(TS_MSG_IMPRINT *a)
+                                                          ^
+crypto/ts/ts_req_utils.c:95:43: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+ASN1_OBJECT *TS_REQ_get_policy_id(TS_REQ *a)
+                                          ^
+crypto/ts/ts_req_utils.c:132:51: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+STACK_OF(X509_EXTENSION) *TS_REQ_get_exts(TS_REQ *a)
+                                                  ^
+crypto/ts/ts_req_utils.c:145:34: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+int TS_REQ_get_ext_count(TS_REQ *a)
+                                 ^
+crypto/ts/ts_req_utils.c:150:35: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+int TS_REQ_get_ext_by_NID(TS_REQ *a, int nid, int lastpos)
+                                  ^
+crypto/ts/ts_req_utils.c:155:35: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+int TS_REQ_get_ext_by_OBJ(TS_REQ *a, const ASN1_OBJECT *obj, int lastpos)
+                                  ^
+crypto/ts/ts_req_utils.c:160:40: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+int TS_REQ_get_ext_by_critical(TS_REQ *a, int crit, int lastpos)
+                                       ^
+crypto/ts/ts_req_utils.c:165:46: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+const X509_EXTENSION *TS_REQ_get_ext(TS_REQ *a, int loc)
+                                             ^
+crypto/ts/ts_req_utils.c:175:47: style: Parameter 'ex' can be declared as pointer to const [constParameterPointer]
+int TS_REQ_add_ext(TS_REQ *a, X509_EXTENSION *ex, int loc)
+                                              ^
+crypto/ts/ts_req_utils.c:180:34: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+void *TS_REQ_get_ext_d2i(TS_REQ *a, int nid, int *crit, int *idx)
+                                 ^
+crypto/ts/ts_rsp_print.c:175:63: style: inconclusive: Function 'ts_ACCURACY_print_bio' argument 2 names different: declaration 'accuracy' definition 'a'. [funcArgNamesDifferent]
+static int ts_ACCURACY_print_bio(BIO *bio, const TS_ACCURACY *a)
+                                                              ^
+crypto/ts/ts_rsp_print.c:25:63: note: Function 'ts_ACCURACY_print_bio' argument 2 names different: declaration 'accuracy' definition 'a'.
+static int ts_ACCURACY_print_bio(BIO *bio, const TS_ACCURACY *accuracy);
+                                                              ^
+crypto/ts/ts_rsp_print.c:175:63: note: Function 'ts_ACCURACY_print_bio' argument 2 names different: declaration 'accuracy' definition 'a'.
+static int ts_ACCURACY_print_bio(BIO *bio, const TS_ACCURACY *a)
+                                                              ^
+crypto/ts/ts_rsp_print.c:41:56: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+int TS_STATUS_INFO_print_bio(BIO *bio, TS_STATUS_INFO *a)
+                                                       ^
+crypto/ts/ts_rsp_sign.c:892:13: style: 'continue' is redundant since it is the last statement in a loop. [redundantContinue]
+            continue;
+            ^
+crypto/ts/ts_rsp_sign.c:167:67: style: inconclusive: Function 'TS_RESP_CTX_set_signer_digest' argument 2 names different: declaration 'signer_digest' definition 'md'. [funcArgNamesDifferent]
+int TS_RESP_CTX_set_signer_digest(TS_RESP_CTX *ctx, const EVP_MD *md)
+                                                                  ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:280:19: note: Function 'TS_RESP_CTX_set_signer_digest' argument 2 names different: declaration 'signer_digest' definition 'md'.
+    const EVP_MD *signer_digest);
+                  ^
+crypto/ts/ts_rsp_sign.c:167:67: note: Function 'TS_RESP_CTX_set_signer_digest' argument 2 names different: declaration 'signer_digest' definition 'md'.
+int TS_RESP_CTX_set_signer_digest(TS_RESP_CTX *ctx, const EVP_MD *md)
+                                                                  ^
+crypto/ts/ts_rsp_sign.c:367:14: style: inconclusive: Function 'TS_RESP_CTX_set_clock_precision_digits' argument 2 names different: declaration 'clock_precision_digits' definition 'precision'. [funcArgNamesDifferent]
+    unsigned precision)
+             ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:310:14: note: Function 'TS_RESP_CTX_set_clock_precision_digits' argument 2 names different: declaration 'clock_precision_digits' definition 'precision'.
+    unsigned clock_precision_digits);
+             ^
+crypto/ts/ts_rsp_sign.c:367:14: note: Function 'TS_RESP_CTX_set_clock_precision_digits' argument 2 names different: declaration 'clock_precision_digits' definition 'precision'.
+    unsigned precision)
+             ^
+crypto/ts/ts_rsp_sign.c:334:21: style: Variable 'si' can be declared as pointer to const [constVariablePointer]
+    TS_STATUS_INFO *si = ctx->response->status_info;
+                    ^
+crypto/ts/ts_rsp_sign.c:356:46: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+TS_REQ *TS_RESP_CTX_get_request(TS_RESP_CTX *ctx)
+                                             ^
+crypto/ts/ts_rsp_sign.c:361:52: style: Parameter 'ctx' can be declared as pointer to const [constParameterPointer]
+TS_TST_INFO *TS_RESP_CTX_get_tst_info(TS_RESP_CTX *ctx)
+                                                   ^
+crypto/ts/ts_rsp_sign.c:452:17: style: Variable 'md_alg' can be declared as pointer to const [constVariablePointer]
+    X509_ALGOR *md_alg;
+                ^
+crypto/ts/ts_rsp_sign.c:506:18: style: Variable 'requested' can be declared as pointer to const [constVariablePointer]
+    ASN1_OBJECT *requested = ctx->request->policy_id;
+                 ^
+crypto/ts/ts_rsp_sign.c:616:31: style: Variable 'exts' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(X509_EXTENSION) *exts = ctx->request->extensions;
+                              ^
+crypto/ts/ts_rsp_sign.c:702:21: style: Variable 'certs' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(X509) *certs; /* Certificates to include in sc. */
+                    ^
+crypto/ts/ts_rsp_sign.c:846:16: style: Variable 'tm' can be declared as pointer to const [constVariablePointer]
+    struct tm *tm = NULL, tm_result;
+               ^
+crypto/ts/ts_rsp_sign.c:849:11: style: Variable 'p_end' can be declared as pointer to const [constVariablePointer]
+    char *p_end = genTime_str + sizeof(genTime_str);
+          ^
+crypto/ts/ts_rsp_utils.c:17:57: style: inconclusive: Function 'TS_RESP_set_status_info' argument 2 names different: declaration 'info' definition 'status_info'. [funcArgNamesDifferent]
+int TS_RESP_set_status_info(TS_RESP *a, TS_STATUS_INFO *status_info)
+                                                        ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:169:57: note: Function 'TS_RESP_set_status_info' argument 2 names different: declaration 'info' definition 'status_info'.
+int TS_RESP_set_status_info(TS_RESP *a, TS_STATUS_INFO *info);
+                                                        ^
+crypto/ts/ts_rsp_utils.c:17:57: note: Function 'TS_RESP_set_status_info' argument 2 names different: declaration 'info' definition 'status_info'.
+int TS_RESP_set_status_info(TS_RESP *a, TS_STATUS_INFO *status_info)
+                                                        ^
+crypto/ts/ts_rsp_utils.c:68:60: style: inconclusive: Function 'TS_TST_INFO_set_policy_id' argument 2 names different: declaration 'policy_id' definition 'policy'. [funcArgNamesDifferent]
+int TS_TST_INFO_set_policy_id(TS_TST_INFO *a, ASN1_OBJECT *policy)
+                                                           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ts.h:180:60: note: Function 'TS_TST_INFO_set_policy_id' argument 2 names different: declaration 'policy_id' definition 'policy'.
+int TS_TST_INFO_set_policy_id(TS_TST_INFO *a, ASN1_OBJECT *policy_id);
+                                                           ^
+crypto/ts/ts_rsp_utils.c:68:60: note: Function 'TS_TST_INFO_set_policy_id' argument 2 names different: declaration 'policy_id' definition 'policy'.
+int TS_TST_INFO_set_policy_id(TS_TST_INFO *a, ASN1_OBJECT *policy)
+                                                           ^
+crypto/ts/ts_rsp_utils.c:17:57: style: Parameter 'status_info' can be declared as pointer to const [constParameterPointer]
+int TS_RESP_set_status_info(TS_RESP *a, TS_STATUS_INFO *status_info)
+                                                        ^
+crypto/ts/ts_rsp_utils.c:34:50: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+TS_STATUS_INFO *TS_RESP_get_status_info(TS_RESP *a)
+                                                 ^
+crypto/ts/ts_rsp_utils.c:48:35: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+PKCS7 *TS_RESP_get_token(TS_RESP *a)
+                                  ^
+crypto/ts/ts_rsp_utils.c:53:44: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+TS_TST_INFO *TS_RESP_get_tst_info(TS_RESP *a)
+                                           ^
+crypto/ts/ts_rsp_utils.c:68:60: style: Parameter 'policy' can be declared as pointer to const [constParameterPointer]
+int TS_TST_INFO_set_policy_id(TS_TST_INFO *a, ASN1_OBJECT *policy)
+                                                           ^
+crypto/ts/ts_rsp_utils.c:84:53: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+ASN1_OBJECT *TS_TST_INFO_get_policy_id(TS_TST_INFO *a)
+                                                    ^
+crypto/ts/ts_rsp_utils.c:89:65: style: Parameter 'msg_imprint' can be declared as pointer to const [constParameterPointer]
+int TS_TST_INFO_set_msg_imprint(TS_TST_INFO *a, TS_MSG_IMPRINT *msg_imprint)
+                                                                ^
+crypto/ts/ts_rsp_utils.c:105:58: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+TS_MSG_IMPRINT *TS_TST_INFO_get_msg_imprint(TS_TST_INFO *a)
+                                                         ^
+crypto/ts/ts_rsp_utils.c:152:59: style: Parameter 'accuracy' can be declared as pointer to const [constParameterPointer]
+int TS_TST_INFO_set_accuracy(TS_TST_INFO *a, TS_ACCURACY *accuracy)
+                                                          ^
+crypto/ts/ts_rsp_utils.c:168:52: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+TS_ACCURACY *TS_TST_INFO_get_accuracy(TS_TST_INFO *a)
+                                                   ^
+crypto/ts/ts_rsp_utils.c:272:55: style: Parameter 'tsa' can be declared as pointer to const [constParameterPointer]
+int TS_TST_INFO_set_tsa(TS_TST_INFO *a, GENERAL_NAME *tsa)
+                                                      ^
+crypto/ts/ts_rsp_utils.c:288:48: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+GENERAL_NAME *TS_TST_INFO_get_tsa(TS_TST_INFO *a)
+                                               ^
+crypto/ts/ts_rsp_utils.c:293:61: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+STACK_OF(X509_EXTENSION) *TS_TST_INFO_get_exts(TS_TST_INFO *a)
+                                                            ^
+crypto/ts/ts_rsp_utils.c:306:44: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+int TS_TST_INFO_get_ext_count(TS_TST_INFO *a)
+                                           ^
+crypto/ts/ts_rsp_utils.c:311:45: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+int TS_TST_INFO_get_ext_by_NID(TS_TST_INFO *a, int nid, int lastpos)
+                                            ^
+crypto/ts/ts_rsp_utils.c:316:45: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+int TS_TST_INFO_get_ext_by_OBJ(TS_TST_INFO *a, const ASN1_OBJECT *obj, int lastpos)
+                                            ^
+crypto/ts/ts_rsp_utils.c:321:50: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+int TS_TST_INFO_get_ext_by_critical(TS_TST_INFO *a, int crit, int lastpos)
+                                                 ^
+crypto/ts/ts_rsp_utils.c:326:56: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+const X509_EXTENSION *TS_TST_INFO_get_ext(TS_TST_INFO *a, int loc)
+                                                       ^
+crypto/ts/ts_rsp_utils.c:336:57: style: Parameter 'ex' can be declared as pointer to const [constParameterPointer]
+int TS_TST_INFO_add_ext(TS_TST_INFO *a, X509_EXTENSION *ex, int loc)
+                                                        ^
+crypto/ts/ts_rsp_utils.c:341:44: style: Parameter 'a' can be declared as pointer to const [constParameterPointer]
+void *TS_TST_INFO_get_ext_d2i(TS_TST_INFO *a, int nid, int *crit, int *idx)
+                                           ^
+crypto/txt_db/txt_db.c:281:12: style: The scope of the variable 'n' can be reduced. [variableScope]
+    int i, n;
+           ^
+crypto/txt_db/txt_db.c:282:16: style: The scope of the variable 'max' can be reduced. [variableScope]
+    char **p, *max;
+               ^
+crypto/txt_db/txt_db.c:234:47: style: inconclusive: Function 'TXT_DB_insert' argument 2 names different: declaration 'value' definition 'row'. [funcArgNamesDifferent]
+int TXT_DB_insert(TXT_DB *db, OPENSSL_STRING *row)
+                                              ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/txt_db.h:57:47: note: Function 'TXT_DB_insert' argument 2 names different: declaration 'value' definition 'row'.
+int TXT_DB_insert(TXT_DB *db, OPENSSL_STRING *value);
+                                              ^
+crypto/txt_db/txt_db.c:234:47: note: Function 'TXT_DB_insert' argument 2 names different: declaration 'value' definition 'row'.
+int TXT_DB_insert(TXT_DB *db, OPENSSL_STRING *row)
+                                              ^
+crypto/txt_db/txt_db.c:187:37: style: Parameter 'db' can be declared as pointer to const [constParameterPointer]
+long TXT_DB_write(BIO *out, TXT_DB *db)
+                                    ^
+crypto/txt_db/txt_db.c:190:21: style: Variable 'f' can be declared as pointer to const [constVariablePointer]
+    char *p, **pp, *f;
+                    ^
+crypto/txt_db/txt_db.c:282:16: style: Variable 'max' can be declared as pointer to const [constVariablePointer]
+    char **p, *max;
+               ^
+crypto/whrlpool/wp_dgst.c:71:52: style: inconclusive: Function 'WHIRLPOOL_Update' argument 2 names different: declaration 'inp' definition '_inp'. [funcArgNamesDifferent]
+int WHIRLPOOL_Update(WHIRLPOOL_CTX *c, const void *_inp, size_t bytes)
+                                                   ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/whrlpool.h:49:17: note: Function 'WHIRLPOOL_Update' argument 2 names different: declaration 'inp' definition '_inp'.
+    const void *inp, size_t bytes);
+                ^
+crypto/whrlpool/wp_dgst.c:71:52: note: Function 'WHIRLPOOL_Update' argument 2 names different: declaration 'inp' definition '_inp'.
+int WHIRLPOOL_Update(WHIRLPOOL_CTX *c, const void *_inp, size_t bytes)
+                                                   ^
+crypto/whrlpool/wp_dgst.c:92:56: style: inconclusive: Function 'WHIRLPOOL_BitUpdate' argument 2 names different: declaration 'inp' definition '_inp'. [funcArgNamesDifferent]
+void WHIRLPOOL_BitUpdate(WHIRLPOOL_CTX *c, const void *_inp, size_t bits)
+                                                       ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/whrlpool.h:51:17: note: Function 'WHIRLPOOL_BitUpdate' argument 2 names different: declaration 'inp' definition '_inp'.
+    const void *inp, size_t bits);
+                ^
+crypto/whrlpool/wp_dgst.c:92:56: note: Function 'WHIRLPOOL_BitUpdate' argument 2 names different: declaration 'inp' definition '_inp'.
+void WHIRLPOOL_BitUpdate(WHIRLPOOL_CTX *c, const void *_inp, size_t bits)
+                                                       ^
+crypto/ts/ts_rsp_verify.c:167:9: style: 'continue' is redundant since it is the last statement in a loop. [redundantContinue]
+        continue;
+        ^
+crypto/ts/ts_rsp_verify.c:74:50: style: Parameter 'bs' can be declared as pointer to const [constParameterPointer]
+static uint32_t ts_failure_mask(ASN1_BIT_STRING *bs)
+                                                 ^
+crypto/ts/ts_rsp_verify.c:115:34: style: Variable 'sinfos' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(PKCS7_SIGNER_INFO) *sinfos = NULL;
+                                 ^
+crypto/ts/ts_rsp_verify.c:197:11: style: Parameter 'signer' can be declared as pointer to const [constParameterPointer]
+    X509 *signer, STACK_OF(X509) **chain)
+          ^
+crypto/ts/ts_rsp_verify.c:457:17: style: Variable 'md_alg_resp' can be declared as pointer to const [constVariablePointer]
+    X509_ALGOR *md_alg_resp = msg_imprint->hash_algo;
+                ^
+crypto/ts/ts_rsp_verify.c:518:17: style: Variable 'algor_b' can be declared as pointer to const [constVariablePointer]
+    X509_ALGOR *algor_b = b->hash_algo;
+                ^
+crypto/ts/ts_rsp_verify.c:513:42: style: Parameter 'algor_a' can be declared as pointer to const [constParameterPointer]
+static int ts_check_imprints(X509_ALGOR *algor_a,
+                                         ^
+crypto/ts/ts_rsp_verify.c:567:63: style: Parameter 'signer' can be declared as pointer to const [constParameterPointer]
+static int ts_check_signer_name(GENERAL_NAME *tsa_name, X509 *signer)
+                                                              ^
+crypto/ts/ts_rsp_verify.c:594:49: style: Parameter 'gen_names' can be declared as pointer to const [constParameterPointer]
+static int ts_find_name(STACK_OF(GENERAL_NAME) *gen_names, GENERAL_NAME *name)
+                                                ^
+crypto/whrlpool/wp_block.c:216:13: style: union member 'Anonymous3::c' is never used. [unusedStructMember]
+    uint8_t c[(256 * N + ROUNDS) * sizeof(uint64_t)];
+            ^
+crypto/ui/ui_lib.c:363:31: style: inconclusive: Function 'UI_construct_prompt' argument 1 names different: declaration 'ui_method' definition 'ui'. [funcArgNamesDifferent]
+char *UI_construct_prompt(UI *ui, const char *phrase_desc,
+                              ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/ui.h:166:31: note: Function 'UI_construct_prompt' argument 1 names different: declaration 'ui_method' definition 'ui'.
+char *UI_construct_prompt(UI *ui_method,
+                              ^
+crypto/ui/ui_lib.c:363:31: note: Function 'UI_construct_prompt' argument 1 names different: declaration 'ui_method' definition 'ui'.
+char *UI_construct_prompt(UI *ui, const char *phrase_desc,
+                              ^
+crypto/ui/ui_lib.c:421:29: style: Parameter 'ui' can be declared as pointer to const [constParameterPointer]
+void *UI_get0_user_data(UI *ui)
+                            ^
+crypto/ui/ui_lib.c:426:32: style: Parameter 'ui' can be declared as pointer to const [constParameterPointer]
+const char *UI_get0_result(UI *ui, int i)
+                               ^
+crypto/ui/ui_lib.c:439:30: style: Parameter 'ui' can be declared as pointer to const [constParameterPointer]
+int UI_get_result_length(UI *ui, int i)
+                             ^
+crypto/ui/ui_lib.c:581:36: style: Parameter 'ui' can be declared as pointer to const [constParameterPointer]
+const UI_METHOD *UI_get_method(UI *ui)
+                                   ^
+crypto/ui/ui_lib.c:769:52: style: Parameter 'uis' can be declared as pointer to const [constParameterPointer]
+enum UI_string_types UI_get_string_type(UI_STRING *uis)
+                                                   ^
+crypto/ui/ui_lib.c:774:35: style: Parameter 'uis' can be declared as pointer to const [constParameterPointer]
+int UI_get_input_flags(UI_STRING *uis)
+                                  ^
+crypto/ui/ui_lib.c:779:46: style: Parameter 'uis' can be declared as pointer to const [constParameterPointer]
+const char *UI_get0_output_string(UI_STRING *uis)
+                                             ^
+crypto/ts/ts_verify_ctx.c:140:18: style: Variable 'policy' can be declared as pointer to const [constVariablePointer]
+    ASN1_OBJECT *policy;
+                 ^
+crypto/ts/ts_verify_ctx.c:142:17: style: Variable 'md_alg' can be declared as pointer to const [constVariablePointer]
+    X509_ALGOR *md_alg;
+                ^
+crypto/ts/ts_verify_ctx.c:143:24: style: Variable 'msg' can be declared as pointer to const [constVariablePointer]
+    ASN1_OCTET_STRING *msg;
+                       ^
+crypto/x509/by_dir.c:350:21: style: Condition 'res==0' is always false [knownConditionTrueFalse]
+            if (res == 0)
+                    ^
+crypto/x509/by_dir.c:348:19: note: Assignment 'res=1', assigned value is 1
+            res = 1;
+                  ^
+crypto/x509/by_dir.c:350:21: note: Condition 'res==0' is always false
+            if (res == 0)
+                    ^
+crypto/x509/by_dir.c:348:17: style: Variable 'res' is reassigned a value before the old one has been used. [redundantAssignment]
+            res = 1;
+                ^
+crypto/x509/by_dir.c:341:21: note: res is assigned
+                res = X509_load_cert_file_ex(xl, b->data, ent->dir_type, libctx, propq);
+                    ^
+crypto/x509/by_dir.c:348:17: note: res is overwritten
+            res = 1;
+                ^
+crypto/x509/by_dir.c:348:17: style: Variable 'res' is reassigned a value before the old one has been used. [redundantAssignment]
+            res = 1;
+                ^
+crypto/x509/by_dir.c:343:21: note: res is assigned
+                res = X509_load_crl_file(xl, b->data, ent->dir_type);
+                    ^
+crypto/x509/by_dir.c:348:17: note: res is overwritten
+            res = 1;
+                ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h:340:61: style: Parameter 'key' can be declared as pointer to const [constParameterPointer]
+static ossl_inline ossl_unused void ossl_ht_strcase(HT_KEY *key, char *tgt, const char *src, size_t len)
+                                                            ^
+crypto/x509/by_dir.c:235:24: style: Variable 'tmp' can be declared as pointer to const [constVariablePointer]
+    X509_OBJECT stmp, *tmp = NULL;
+                       ^

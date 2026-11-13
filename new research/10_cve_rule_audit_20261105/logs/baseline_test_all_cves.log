@@ -1,0 +1,30 @@
+
+=== Testing CVE-2023-0215 ===
+ALERT [CVE-2023-0215]: /mnt/d/cve-typestate-project/openssl-cve-2023-0215-vulnerable/crypto/asn1/bio_ndef.c
+  BIO chain is pushed, then freed in error cleanup
+  without an unconditional BIO_pop() of the tracked BIO
+  before BIO_free().
+  STATE: VIOLATION
+NO ALERT [CVE-2023-0215]: /mnt/d/cve-typestate-project/openssl-cve-2023-0215-fixed/crypto/asn1/bio_ndef.c
+  STATE: CONFORMING
+PASS: CVE-2023-0215
+
+=== Testing CVE-2022-4450 ===
+ALERT [CVE-2022-4450]: /mnt/d/cve-typestate-project/openssl-cve-2022-4450-vulnerable/crypto/pem/pem_lib.c
+  Failure cleanup frees output buffers but does not
+  clear both caller-visible output pointers.
+  STATE: VIOLATION
+NO ALERT [CVE-2022-4450]: /mnt/d/cve-typestate-project/openssl-cve-2022-4450-fixed/crypto/pem/pem_lib.c
+  STATE: CONFORMING
+PASS: CVE-2022-4450
+
+=== Testing CVE-2024-4741 ===
+ALERT [CVE-2024-4741]: /mnt/d/cve-typestate-project/openssl-cve-2024-4741-vulnerable/ssl/record/ssl3_buffer.c
+  Read buffer is released, but one or more
+  associated pointers or lengths are not reset.
+  STATE: VIOLATION
+NO ALERT [CVE-2024-4741]: /mnt/d/cve-typestate-project/openssl-cve-2024-4741-fixed/ssl/record/ssl3_buffer.c
+  STATE: CONFORMING
+PASS: CVE-2024-4741
+
+PASS: all three vulnerable/fixed pairs were distinguished.

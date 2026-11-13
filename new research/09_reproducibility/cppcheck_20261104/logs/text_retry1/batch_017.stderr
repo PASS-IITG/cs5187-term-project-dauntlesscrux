@@ -1,0 +1,1467 @@
+test/simpledynamic.c:18:39: style: inconclusive: Function 'sd_load' argument 2 names different: declaration 'sd' definition 'lib'. [funcArgNamesDifferent]
+int sd_load(const char *filename, SD *lib, int type)
+                                      ^
+test/simpledynamic.h:45:39: note: Function 'sd_load' argument 2 names different: declaration 'sd' definition 'lib'.
+int sd_load(const char *filename, SD *sd, int type);
+                                      ^
+test/simpledynamic.c:18:39: note: Function 'sd_load' argument 2 names different: declaration 'sd' definition 'lib'.
+int sd_load(const char *filename, SD *lib, int type)
+                                      ^
+test/simpledynamic.c:29:15: style: inconclusive: Function 'sd_sym' argument 1 names different: declaration 'sd' definition 'lib'. [funcArgNamesDifferent]
+int sd_sym(SD lib, const char *symname, SD_SYM *sym)
+              ^
+test/simpledynamic.h:46:15: note: Function 'sd_sym' argument 1 names different: declaration 'sd' definition 'lib'.
+int sd_sym(SD sd, const char *symname, SD_SYM *sym);
+              ^
+test/simpledynamic.c:29:15: note: Function 'sd_sym' argument 1 names different: declaration 'sd' definition 'lib'.
+int sd_sym(SD lib, const char *symname, SD_SYM *sym)
+              ^
+test/safe_math_test.c:24:1: warning: Either the condition 'b<0' is redundant or there is division by zero at line 24. [zerodivcond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Assuming that condition 'b<0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Assignment 'y=b<0?-b:b', assigned value is 0
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Division by zero
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: style: Clarify calculation precedence for '^' and '?'. [clarifyCalculation]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: portability: Shifting signed 32-bit value by 31 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: warning: Either the condition 'a>0' is redundant or there is signed integer overflow for expression '(~((int)1<<(sizeof(int)*8-1)))-a'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Assuming that condition 'a>0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: warning: Either the condition 'a<0' is redundant or there is signed integer overflow for expression '((int)1<<(sizeof(int)*8-1))-a'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Assuming that condition 'a<0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: warning: Either the condition 'b>0' is redundant or there is signed integer overflow for expression '((int)1<<(sizeof(int)*8-1))+b'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Assuming that condition 'b>0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: warning: Either the condition 'b<0' is redundant or there is signed integer overflow for expression '(~((int)1<<(sizeof(int)*8-1)))+b'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Assuming that condition 'b<0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: warning: Either the condition 'b>0' is redundant or there is signed integer overflow for expression '(~((int)1<<(sizeof(int)*8-1)))-b'. [integerOverflowCond]
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Assuming that condition 'b>0' is not redundant
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/safe_math_test.c:24:1: note: Integer overflow
+OSSL_SAFE_MATH_SIGNED(int, int)
+^
+test/sha3_x4_internal_test.c:429:5: style: inconclusive: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+    return 1;
+    ^
+test/sha_test.c:20:42: style: Variable 'sbuf' can be declared as pointer to const [constVariablePointer]
+    unsigned char buf[EVP_MAX_MD_SIZE], *sbuf;
+                                         ^
+test/shlibloadtest.c:194:26: style: Parameter 'argv' can be declared as const array [constParameter]
+int main(int argc, char *argv[])
+                         ^
+test/siphash_internal_test.c:178:20: style: Variable 'expected' can be declared as pointer to const [constVariablePointer]
+    unsigned char *expected = test.expected.data;
+                   ^
+test/slh_dsa_test.c:124:28: style: Variable 'td1' can be declared as pointer to const [constVariablePointer]
+    SLH_DSA_SIG_TEST_DATA *td1 = &slh_dsa_sig_testdata[0];
+                           ^
+test/slh_dsa_test.c:125:28: style: Variable 'td2' can be declared as pointer to const [constVariablePointer]
+    SLH_DSA_SIG_TEST_DATA *td2 = &slh_dsa_sig_testdata[1];
+                           ^
+test/slh_dsa_test.c:158:28: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    SLH_DSA_SIG_TEST_DATA *td = &slh_dsa_sig_testdata[0];
+                           ^
+test/slh_dsa_test.c:212:14: style: Parameter 'sig' can be declared as pointer to const [constParameterPointer]
+    uint8_t *sig, size_t sig_len)
+             ^
+test/slh_dsa_test.c:647:11: style: Variable 'config_file' can be declared as pointer to const [constVariablePointer]
+    char *config_file = NULL;
+          ^
+test/sm2_internal_test.c:38:43: style: inconclusive: Function 'get_faked_bytes' argument 1 names different: declaration 'out' definition 'buf'. [funcArgNamesDifferent]
+static int get_faked_bytes(unsigned char *buf, size_t num,
+                                          ^
+test/sm2_internal_test.c:31:32: note: Function 'get_faked_bytes' argument 1 names different: declaration 'out' definition 'buf'.
+static fake_random_generate_cb get_faked_bytes;
+                               ^
+test/sm2_internal_test.c:38:43: note: Function 'get_faked_bytes' argument 1 names different: declaration 'out' definition 'buf'.
+static int get_faked_bytes(unsigned char *buf, size_t num,
+                                          ^
+test/sm2_internal_test.c:38:55: style: inconclusive: Function 'get_faked_bytes' argument 2 names different: declaration 'outlen' definition 'num'. [funcArgNamesDifferent]
+static int get_faked_bytes(unsigned char *buf, size_t num,
+                                                      ^
+test/sm2_internal_test.c:31:32: note: Function 'get_faked_bytes' argument 2 names different: declaration 'outlen' definition 'num'.
+static fake_random_generate_cb get_faked_bytes;
+                               ^
+test/sm2_internal_test.c:38:55: note: Function 'get_faked_bytes' argument 2 names different: declaration 'outlen' definition 'num'.
+static int get_faked_bytes(unsigned char *buf, size_t num,
+                                                      ^
+test/ssl_test.c:34:43: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_result(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                          ^
+test/ssl_test.c:34:65: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_result(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                                ^
+test/ssl_test.c:45:43: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_alerts(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                          ^
+test/ssl_test.c:45:65: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_alerts(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                                ^
+test/ssl_test.c:103:45: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_protocol(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                            ^
+test/ssl_test.c:103:67: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_protocol(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                                  ^
+test/ssl_test.c:124:47: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_servername(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                              ^
+test/ssl_test.c:124:69: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_servername(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                                    ^
+test/ssl_test.c:135:73: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_session_ticket(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                                        ^
+test/ssl_test.c:135:51: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_session_ticket(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                  ^
+test/ssl_test.c:149:69: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_session_id(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                                    ^
+test/ssl_test.c:149:47: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_session_id(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                              ^
+test/ssl_test.c:162:48: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_compression(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                               ^
+test/ssl_test.c:162:70: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_compression(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                                     ^
+test/ssl_test.c:169:40: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_npn(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                       ^
+test/ssl_test.c:169:62: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_npn(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                             ^
+test/ssl_test.c:182:41: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_alpn(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                        ^
+test/ssl_test.c:182:63: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_alpn(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                              ^
+test/ssl_test.c:194:60: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_session_ticket_app_data(HANDSHAKE_RESULT *result,
+                                                           ^
+test/ssl_test.c:195:19: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+    SSL_TEST_CTX *test_ctx)
+                  ^
+test/ssl_test.c:215:47: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_resumption(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                              ^
+test/ssl_test.c:215:69: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_resumption(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                                    ^
+test/ssl_test.c:234:49: style: Parameter 'names' can be declared as pointer to const [constParameterPointer]
+static void print_ca_names(STACK_OF(X509_NAME) *names)
+                                                ^
+test/ssl_test.c:281:66: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_tmp_key(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                                 ^
+test/ssl_test.c:281:44: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_tmp_key(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                           ^
+test/ssl_test.c:288:19: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+    SSL_TEST_CTX *test_ctx)
+                  ^
+test/ssl_test.c:287:53: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_server_cert_type(HANDSHAKE_RESULT *result,
+                                                    ^
+test/ssl_test.c:295:19: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+    SSL_TEST_CTX *test_ctx)
+                  ^
+test/ssl_test.c:294:53: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_server_sign_hash(HANDSHAKE_RESULT *result,
+                                                    ^
+test/ssl_test.c:302:19: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+    SSL_TEST_CTX *test_ctx)
+                  ^
+test/ssl_test.c:301:53: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_server_sign_type(HANDSHAKE_RESULT *result,
+                                                    ^
+test/ssl_test.c:317:19: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+    SSL_TEST_CTX *test_ctx)
+                  ^
+test/ssl_test.c:316:53: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_client_cert_type(HANDSHAKE_RESULT *result,
+                                                    ^
+test/ssl_test.c:324:19: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+    SSL_TEST_CTX *test_ctx)
+                  ^
+test/ssl_test.c:323:53: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_client_sign_hash(HANDSHAKE_RESULT *result,
+                                                    ^
+test/ssl_test.c:331:19: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+    SSL_TEST_CTX *test_ctx)
+                  ^
+test/ssl_test.c:330:53: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_client_sign_type(HANDSHAKE_RESULT *result,
+                                                    ^
+test/ssl_test.c:345:65: style: Parameter 'test_ctx' can be declared as pointer to const [constParameterPointer]
+static int check_cipher(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                                                ^
+test/ssl_test.c:345:43: style: Parameter 'result' can be declared as pointer to const [constParameterPointer]
+static int check_cipher(HANDSHAKE_RESULT *result, SSL_TEST_CTX *test_ctx)
+                                          ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/dgram_demux.h:119:1: style: Variable 'lh->omega' is reassigned a value before the old one has been used. [redundantAssignment]
+DEFINE_LIST_OF(urxe, DGRAM_URXE);
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/dgram_demux.h:119:1: note: lh->omega is assigned
+DEFINE_LIST_OF(urxe, DGRAM_URXE);
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/dgram_demux.h:119:1: note: lh->omega is overwritten
+DEFINE_LIST_OF(urxe, DGRAM_URXE);
+^
+ssl/ssl_local.h:2208:1: style: Variable 'lh->omega' is reassigned a value before the old one has been used. [redundantAssignment]
+DEFINE_LIST_OF(record_number, DTLS1_RECORD_NUMBER);
+^
+ssl/ssl_local.h:2208:1: note: lh->omega is assigned
+DEFINE_LIST_OF(record_number, DTLS1_RECORD_NUMBER);
+^
+ssl/ssl_local.h:2208:1: note: lh->omega is overwritten
+DEFINE_LIST_OF(record_number, DTLS1_RECORD_NUMBER);
+^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/rio_notifier.h:64:74: style: Parameter 'nfy' can be declared as pointer to const [constParameterPointer]
+static ossl_inline ossl_unused int ossl_rio_notifier_as_fd(RIO_NOTIFIER *nfy)
+                                                                         ^
+test/ssl_test_ctx_test.c:35:48: style: Parameter 'conf1' can be declared as pointer to const [constParameterPointer]
+static int clientconf_eq(SSL_TEST_CLIENT_CONF *conf1,
+                                               ^
+test/ssl_test_ctx_test.c:36:27: style: Parameter 'conf2' can be declared as pointer to const [constParameterPointer]
+    SSL_TEST_CLIENT_CONF *conf2)
+                          ^
+test/ssl_test_ctx_test.c:49:48: style: Parameter 'serv' can be declared as pointer to const [constParameterPointer]
+static int serverconf_eq(SSL_TEST_SERVER_CONF *serv,
+                                               ^
+test/ssl_test_ctx_test.c:50:27: style: Parameter 'serv2' can be declared as pointer to const [constParameterPointer]
+    SSL_TEST_SERVER_CONF *serv2)
+                          ^
+test/ssl_old_test.c:217:42: style: Condition 'sn_server2!=NULL' is always true [knownConditionTrueFalse]
+        if (s_ctx2 != NULL && sn_server2 != NULL && !OPENSSL_strcasecmp(servername, sn_server2)) {
+                                         ^
+test/ssl_old_test.c:211:20: note: Assuming condition 'sn_server2==NULL' is false
+    if (sn_server2 == NULL) {
+                   ^
+test/ssl_old_test.c:217:42: note: Condition 'sn_server2!=NULL' is always true
+        if (s_ctx2 != NULL && sn_server2 != NULL && !OPENSSL_strcasecmp(servername, sn_server2)) {
+                                         ^
+test/ssl_old_test.c:1928:61: style: inconclusive: Function 'doit_localhost' argument 4 names different: declaration 'bytes' definition 'count'. [funcArgNamesDifferent]
+int doit_localhost(SSL *s_ssl, SSL *c_ssl, int family, long count,
+                                                            ^
+test/ssl_old_test.c:624:10: note: Function 'doit_localhost' argument 4 names different: declaration 'bytes' definition 'count'.
+    long bytes, clock_t *s_time, clock_t *c_time);
+         ^
+test/ssl_old_test.c:1928:61: note: Function 'doit_localhost' argument 4 names different: declaration 'bytes' definition 'count'.
+int doit_localhost(SSL *s_ssl, SSL *c_ssl, int family, long count,
+                                                            ^
+test/ssl_old_test.c:2224:47: style: inconclusive: Function 'doit_biopair' argument 3 names different: declaration 'bytes' definition 'count'. [funcArgNamesDifferent]
+int doit_biopair(SSL *s_ssl, SSL *c_ssl, long count,
+                                              ^
+test/ssl_old_test.c:625:47: note: Function 'doit_biopair' argument 3 names different: declaration 'bytes' definition 'count'.
+int doit_biopair(SSL *s_ssl, SSL *c_ssl, long bytes, clock_t *s_time,
+                                              ^
+test/ssl_old_test.c:2224:47: note: Function 'doit_biopair' argument 3 names different: declaration 'bytes' definition 'count'.
+int doit_biopair(SSL *s_ssl, SSL *c_ssl, long count,
+                                              ^
+test/ssl_old_test.c:2597:39: style: inconclusive: Function 'doit' argument 3 names different: declaration 'bytes' definition 'count'. [funcArgNamesDifferent]
+int doit(SSL *s_ssl, SSL *c_ssl, long count)
+                                      ^
+test/ssl_old_test.c:627:39: note: Function 'doit' argument 3 names different: declaration 'bytes' definition 'count'.
+int doit(SSL *s_ssl, SSL *c_ssl, long bytes);
+                                      ^
+test/ssl_old_test.c:2597:39: note: Function 'doit' argument 3 names different: declaration 'bytes' definition 'count'.
+int doit(SSL *s_ssl, SSL *c_ssl, long count)
+                                      ^
+test/ssl_old_test.c:143:28: style: Parameter 'client' can be declared as pointer to const [constParameterPointer]
+static int verify_npn(SSL *client, SSL *server)
+                           ^
+test/ssl_old_test.c:143:41: style: Parameter 'server' can be declared as pointer to const [constParameterPointer]
+static int verify_npn(SSL *client, SSL *server)
+                                        ^
+test/ssl_old_test.c:227:14: style: Variable 'ctx' can be declared as pointer to const [constVariablePointer]
+    SSL_CTX *ctx = SSL_get_SSL_CTX(server);
+             ^
+test/ssl_old_test.c:224:48: style: Parameter 'server' can be declared as pointer to const [constParameterPointer]
+static int verify_servername(SSL *client, SSL *server)
+                                               ^
+test/ssl_old_test.c:289:11: style: Variable 'alpn_str' can be declared as pointer to const [constVariablePointer]
+    char *alpn_str = arg;
+          ^
+test/ssl_old_test.c:323:29: style: Parameter 'client' can be declared as pointer to const [constParameterPointer]
+static int verify_alpn(SSL *client, SSL *server)
+                            ^
+test/ssl_old_test.c:323:42: style: Parameter 'server' can be declared as pointer to const [constParameterPointer]
+static int verify_alpn(SSL *client, SSL *server)
+                                         ^
+test/ssl_old_test.c:740:51: style: Parameter 'key' can be declared as pointer to const [constParameterPointer]
+static void print_key_details(BIO *out, EVP_PKEY *key)
+                                                  ^
+test/ssl_old_test.c:778:11: style: Variable 'cert' can be declared as pointer to const [constVariablePointer]
+    X509 *cert;
+          ^
+test/ssl_old_test.c:853:61: style: Parameter 'sess' can be declared as pointer to const [constParameterPointer]
+static int write_session(const char *filename, SSL_SESSION *sess)
+                                                            ^
+test/ssl_old_test.c:2881:11: style: Variable 's' can be declared as pointer to const [constVariablePointer]
+    char *s, buf[256];
+          ^
+test/ssl_old_test.c:2879:52: style: Parameter 'ctx' can be declared as pointer to const. However it seems that 'verify_callback' is a callback function, if 'ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int verify_callback(int ok, X509_STORE_CTX *ctx)
+                                                   ^
+test/ssl_old_test.c:1581:52: note: You might need to cast the function pointer here
+        SSL_CTX_set_verify(c_ctx, SSL_VERIFY_PEER, verify_callback);
+                                                   ^
+test/ssl_old_test.c:2879:52: note: Parameter 'ctx' can be declared as pointer to const
+static int verify_callback(int ok, X509_STORE_CTX *ctx)
+                                                   ^
+test/ssl_old_test.c:2917:28: style: Variable 'cb_arg' can be declared as pointer to const [constVariablePointer]
+    struct app_verify_arg *cb_arg = arg;
+                           ^
+test/ssl_old_test.c:2920:15: style: Variable 's' can be declared as pointer to const [constVariablePointer]
+        char *s = NULL, buf[256];
+              ^
+test/stack_test.c:493:15: style: Variable 'src' can be declared as pointer to const [constVariablePointer]
+        char *src = sk_OPENSSL_STRING_value(s, i);
+              ^
+test/stack_test.c:494:15: style: Variable 'dst' can be declared as pointer to const [constVariablePointer]
+        char *dst = sk_OPENSSL_STRING_value(r, i);
+              ^
+test/sslcorrupttest.c:41:11: style: The scope of the variable 'copy' can be reduced. [variableScope]
+    char *copy;
+          ^
+test/sslcorrupttest.c:19:10: style: Variable 'next' can be declared as pointer to const [constVariablePointer]
+    BIO *next = BIO_next(bio);
+         ^
+test/sslcorrupttest.c:189:27: style: Variable 'ciphers' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(SSL_CIPHER) *ciphers;
+                          ^
+test/sslbuffertest.c:46:30: warning: Possible null pointer dereference: sc [nullPointer]
+    OSSL_RECORD_LAYER *rrl = sc->rlayer.rrl;
+                             ^
+test/sslbuffertest.c:45:26: note: Assignment 'sc=(s)==NULL?NULL:(s->type==0?(struct ssl_connection_st*)(s):NULL)', assigned value is 0
+    SSL_CONNECTION *sc = SSL_CONNECTION_FROM_SSL(s);
+                         ^
+test/sslbuffertest.c:46:30: note: Null pointer dereference
+    OSSL_RECORD_LAYER *rrl = sc->rlayer.rrl;
+                             ^
+test/sslbuffertest.c:47:30: warning: Possible null pointer dereference: sc [nullPointer]
+    OSSL_RECORD_LAYER *wrl = sc->rlayer.wrl;
+                             ^
+test/sslbuffertest.c:45:26: note: Assignment 'sc=(s)==NULL?NULL:(s->type==0?(struct ssl_connection_st*)(s):NULL)', assigned value is 0
+    SSL_CONNECTION *sc = SSL_CONNECTION_FROM_SSL(s);
+                         ^
+test/sslbuffertest.c:47:30: note: Null pointer dereference
+    OSSL_RECORD_LAYER *wrl = sc->rlayer.wrl;
+                             ^
+test/sslbuffertest.c:34:18: style: struct member 'async_ctrs::rctr' is never used. [unusedStructMember]
+    unsigned int rctr;
+                 ^
+test/sslbuffertest.c:35:18: style: struct member 'async_ctrs::wctr' is never used. [unusedStructMember]
+    unsigned int wctr;
+                 ^
+test/strtoultest.c:361:33: style: Variable 'test' can be declared as pointer to const [constVariablePointer]
+    struct strtoint_util_entry *test = &util_strtoint_tests[idx];
+                                ^
+test/test_test.c:258:17: style: Variable 'buf' can be declared as const array [constVariable]
+    static char buf[] = "abc";
+                ^
+test/statem_clnt_construct_test.c:714:5: warning: Possible null pointer dereference: s [nullPointer]
+    s->early_data_state = state;
+    ^
+test/statem_clnt_construct_test.c:713:9: note: Assignment 's=(ssl)==NULL?NULL:(ssl->type==0?(struct ssl_connection_st*)(ssl):((((ssl->type)&0x80)!=0)?(struct ssl_connection_st*)ossl_quic_obj_get0_handshake_layer((struct quic_obj_st*)(ssl)):NULL))', assigned value is 0
+    s = SSL_CONNECTION_FROM_SSL(ssl);
+        ^
+test/statem_clnt_construct_test.c:714:5: note: Null pointer dereference
+    s->early_data_state = state;
+    ^
+test/statem_clnt_construct_test.c:933:5: warning: Possible null pointer dereference: s [nullPointer]
+    s->ext.client_cert_type = 0xff;
+    ^
+test/statem_clnt_construct_test.c:932:9: note: Assignment 's=(ssl)==NULL?NULL:(ssl->type==0?(struct ssl_connection_st*)(ssl):((((ssl->type)&0x80)!=0)?(struct ssl_connection_st*)ossl_quic_obj_get0_handshake_layer((struct quic_obj_st*)(ssl)):NULL))', assigned value is 0
+    s = SSL_CONNECTION_FROM_SSL(ssl);
+        ^
+test/statem_clnt_construct_test.c:933:5: note: Null pointer dereference
+    s->ext.client_cert_type = 0xff;
+    ^
+test/statem_clnt_construct_test.c:1081:27: style: Variable 'ciphers' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(SSL_CIPHER) *ciphers = SSL_get_ciphers(ssl);
+                          ^
+test/statem_clnt_construct_test.c:1201:42: style: Parameter 's' can be declared as pointer to const. However it seems that 'check_cke_rsa' is a callback function, if 's' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int check_cke_rsa(SSL_CONNECTION *s, const unsigned char *body,
+                                         ^
+test/statem_clnt_construct_test.c:1245:27: note: You might need to cast the function pointer here
+        CON_FUNC_SUCCESS, check_cke_rsa);
+                          ^
+test/statem_clnt_construct_test.c:1201:42: note: Parameter 's' can be declared as pointer to const
+static int check_cke_rsa(SSL_CONNECTION *s, const unsigned char *body,
+                                         ^
+test/statem_clnt_construct_test.c:1273:44: style: Parameter 's' can be declared as pointer to const. However it seems that 'check_cke_ecdhe' is a callback function, if 's' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int check_cke_ecdhe(SSL_CONNECTION *s, const unsigned char *body,
+                                           ^
+test/statem_clnt_construct_test.c:1292:27: note: You might need to cast the function pointer here
+        CON_FUNC_SUCCESS, check_cke_ecdhe);
+                          ^
+test/statem_clnt_construct_test.c:1273:44: note: Parameter 's' can be declared as pointer to const
+static int check_cke_ecdhe(SSL_CONNECTION *s, const unsigned char *body,
+                                           ^
+test/statem_clnt_construct_test.c:1385:42: style: Parameter 's' can be declared as pointer to const. However it seems that 'check_cke_dhe' is a callback function, if 's' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int check_cke_dhe(SSL_CONNECTION *s, const unsigned char *body,
+                                         ^
+test/statem_clnt_construct_test.c:1402:27: note: You might need to cast the function pointer here
+        CON_FUNC_SUCCESS, check_cke_dhe);
+                          ^
+test/statem_clnt_construct_test.c:1385:42: note: Parameter 's' can be declared as pointer to const
+static int check_cke_dhe(SSL_CONNECTION *s, const unsigned char *body,
+                                         ^
+test/statem_clnt_construct_test.c:1434:42: style: Parameter 's' can be declared as pointer to const. However it seems that 'check_cke_psk' is a callback function, if 's' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int check_cke_psk(SSL_CONNECTION *s, const unsigned char *body,
+                                         ^
+test/statem_clnt_construct_test.c:1453:27: note: You might need to cast the function pointer here
+        CON_FUNC_SUCCESS, check_cke_psk);
+                          ^
+test/statem_clnt_construct_test.c:1434:42: note: Parameter 's' can be declared as pointer to const
+static int check_cke_psk(SSL_CONNECTION *s, const unsigned char *body,
+                                         ^
+test/testutil/basic_output.c:240:22: style: Variable 'data' can be declared as pointer to const [constVariablePointer]
+    LOCAL_TEST_DATA *data = get_local_test_data();
+                     ^
+test/testutil/driver.c:138:11: style: Variable 'test_rand_order' can be declared as pointer to const [constVariablePointer]
+    char *test_rand_order = getenv("OPENSSL_TEST_RAND_ORDER");
+          ^
+test/testutil/driver.c:139:11: style: Variable 'test_rand_seed' can be declared as pointer to const [constVariablePointer]
+    char *test_rand_seed = getenv("OPENSSL_TEST_RAND_SEED");
+          ^
+test/testutil/driver.c:140:11: style: Variable 'TAP_levels' can be declared as pointer to const [constVariablePointer]
+    char *TAP_levels = getenv("HARNESS_OSSL_LEVEL");
+          ^
+test/testutil/driver.c:180:43: style: Parameter 'name' can be declared as pointer to const [constParameterPointer]
+static int check_single_test_params(char *name, char *testname, char *itname)
+                                          ^
+test/sslapitest.c:4968:28: style: Redundant condition: nwbio==iwbio. 'nwbio!=iwbio || (nwbio==iwbio && irbio==iwbio)' is equivalent to 'nwbio!=iwbio || irbio==iwbio' [redundantCondition]
+        && (nwbio != iwbio || (nwbio == iwbio && irbio == iwbio)))
+                           ^
+test/testutil/fake_random.c:75:12: style: The scope of the variable 'l' can be reduced. [variableScope]
+    size_t l;
+           ^
+test/sslapitest.c:8817:9: style: Operator '|' with one operand equal to zero is redundant. [badBitmaskCheck]
+        | (server_allow_no_dhe ? SSL_OP_ALLOW_NO_DHE_KEX : 0)
+        ^
+test/sslapitest.c:8821:9: style: Operator '|' with one operand equal to zero is redundant. [badBitmaskCheck]
+        | (client_allow_no_dhe ? SSL_OP_ALLOW_NO_DHE_KEX : 0);
+        ^
+test/testutil/fake_random.c:36:26: style: inconclusive: Function 'fake_rand_newctx' argument 3 names different: declaration 'parent_calls' definition 'parent_dispatch'. [funcArgNamesDifferent]
+    const OSSL_DISPATCH *parent_dispatch)
+                         ^
+test/testutil/fake_random.c:26:0: note: Function 'fake_rand_newctx' argument 3 names different: declaration 'parent_calls' definition 'parent_dispatch'.
+static OSSL_FUNC_rand_newctx_fn fake_rand_newctx;
+^
+test/testutil/fake_random.c:36:26: note: Function 'fake_rand_newctx' argument 3 names different: declaration 'parent_calls' definition 'parent_dispatch'.
+    const OSSL_DISPATCH *parent_dispatch)
+                         ^
+test/testutil/fake_random.c:115:74: style: inconclusive: Function 'fake_rand_gettable_ctx_params' argument 1 names different: declaration 'vctx' definition 'vrng'. [funcArgNamesDifferent]
+static const OSSL_PARAM *fake_rand_gettable_ctx_params(ossl_unused void *vrng,
+                                                                         ^
+test/testutil/fake_random.c:31:0: note: Function 'fake_rand_gettable_ctx_params' argument 1 names different: declaration 'vctx' definition 'vrng'.
+static OSSL_FUNC_rand_gettable_ctx_params_fn fake_rand_gettable_ctx_params;
+^
+test/testutil/fake_random.c:115:74: note: Function 'fake_rand_gettable_ctx_params' argument 1 names different: declaration 'vctx' definition 'vrng'.
+static const OSSL_PARAM *fake_rand_gettable_ctx_params(ossl_unused void *vrng,
+                                                                         ^
+test/testutil/fake_random.c:214:43: style: inconclusive: Function 'fake_rand_set_callback' argument 1 names different: declaration 'ctx' definition 'rng'. [funcArgNamesDifferent]
+void fake_rand_set_callback(EVP_RAND_CTX *rng,
+                                          ^
+test/testutil.h:699:43: note: Function 'fake_rand_set_callback' argument 1 names different: declaration 'ctx' definition 'rng'.
+void fake_rand_set_callback(EVP_RAND_CTX *ctx,
+                                          ^
+test/testutil/fake_random.c:214:43: note: Function 'fake_rand_set_callback' argument 1 names different: declaration 'ctx' definition 'rng'.
+void fake_rand_set_callback(EVP_RAND_CTX *rng,
+                                          ^
+test/sslapitest.c:4971:45: style: Condition 'nrbio!=nwbio' is always true [knownConditionTrueFalse]
+                && (nwbio != iwbio || nrbio != nwbio))
+                                            ^
+test/testutil/fake_random.c:98:16: style: Variable 'frng' can be declared as pointer to const [constVariablePointer]
+    FAKE_RAND *frng = (FAKE_RAND *)vrng;
+               ^
+test/sslapitest.c:986:9: style: 'continue' is redundant since it is the last statement in a loop. [redundantContinue]
+        continue;
+        ^
+test/sslapitest.c:18718:20: style: The scope of the variable 'params' can be reduced. [variableScope]
+        OSSL_PARAM params[2];
+                   ^
+test/sslapitest.c:174:29: style: Parameter 's' can be declared as pointer to const. However it seems that 'hostname_cb' is a callback function, if 's' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int hostname_cb(SSL *s, int *al, void *arg)
+                            ^
+test/sslapitest.c:13612:14: note: You might need to cast the function pointer here
+        if (!TEST_true(SSL_CTX_set_tlsext_servername_callback(sctx,
+             ^
+test/sslapitest.c:174:29: note: Parameter 's' can be declared as pointer to const
+static int hostname_cb(SSL *s, int *al, void *arg)
+                            ^
+test/sslapitest.c:239:35: style: Parameter 'expected' can be declared as pointer to const [constParameterPointer]
+    struct sslapitest_log_counts *expected)
+                                  ^
+test/sslapitest.c:701:51: style: Parameter 'ctx' can be declared as pointer to const. However it seems that 'server_verify_retry_cb' is a callback function, if 'ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int server_verify_retry_cb(X509_STORE_CTX *ctx, void *arg)
+                                                  ^
+test/sslapitest.c:846:44: note: You might need to cast the function pointer here
+    SSL_CTX_set_cert_verify_callback(sctx, server_verify_retry_cb, NULL);
+                                           ^
+test/sslapitest.c:701:51: note: Parameter 'ctx' can be declared as pointer to const
+static int server_verify_retry_cb(X509_STORE_CTX *ctx, void *arg)
+                                                  ^
+test/sslapitest.c:1254:15: style: Variable 'candidate' can be declared as pointer to const [constVariablePointer]
+        X509 *candidate = X509_STORE_CTX_get0_cert(ctx);
+              ^
+test/sslapitest.c:1259:19: style: Variable 'candidate' can be declared as pointer to const [constVariablePointer]
+        EVP_PKEY *candidate = X509_STORE_CTX_get0_rpk(ctx);
+                  ^
+test/sslapitest.c:1352:41: style: Parameter 'ssl' can be declared as pointer to const [constParameterPointer]
+static int check_pha_peer_identity(SSL *ssl, const PHA_VERIFY_DATA *data)
+                                        ^
+test/sslapitest.c:1384:11: style: Variable 'old_peer' can be declared as pointer to const [constVariablePointer]
+    X509 *old_peer;
+          ^
+test/sslapitest.c:1385:15: style: Variable 'old_rpk' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *old_rpk;
+              ^
+test/sslapitest.c:1383:21: style: Variable 'old_chain' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(X509) *old_chain;
+                    ^
+test/sslapitest.c:1381:21: style: Variable 'servercon' can be declared as pointer to const [constVariablePointer]
+    SSL_CONNECTION *servercon;
+                    ^
+test/sslapitest.c:1554:21: style: Variable 'sc' can be declared as pointer to const [constVariablePointer]
+    SSL_CONNECTION *sc = SSL_CONNECTION_FROM_SSL(ssl);
+                    ^
+test/sslapitest.c:1578:21: style: Variable 'old_chain' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(X509) *old_chain;
+                    ^
+test/sslapitest.c:2004:32: style: Variable 'sesspre' can be declared as pointer to const [constVariablePointer]
+    SSL_SESSION *sess = NULL, *sesspre, *sesspost;
+                               ^
+test/sslapitest.c:2004:42: style: Variable 'sesspost' can be declared as pointer to const [constVariablePointer]
+    SSL_SESSION *sess = NULL, *sesspre, *sesspost;
+                                         ^
+test/sslapitest.c:3177:46: style: Parameter 'ssl_cert' can be declared as pointer to const [constParameterPointer]
+static OCSP_RESPONSE *create_ocsp_resp(X509 *ssl_cert, X509 *issuer, int status,
+                                             ^
+test/sslapitest.c:3177:62: style: Parameter 'issuer' can be declared as pointer to const [constParameterPointer]
+static OCSP_RESPONSE *create_ocsp_resp(X509 *ssl_cert, X509 *issuer, int status,
+                                                             ^
+test/sslapitest.c:3224:10: style: Variable 'argi' can be declared as pointer to const [constVariablePointer]
+    int *argi = (int *)arg;
+         ^
+test/sslapitest.c:3270:10: style: Variable 'argi' can be declared as pointer to const [constVariablePointer]
+    int *argi = (int *)arg;
+         ^
+test/sslapitest.c:3290:70: style: Parameter 'x509_ctx' can be declared as pointer to const. However it seems that 'verify_cb_capture_error' is a callback function, if 'x509_ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int verify_cb_capture_error(int preverify_ok, X509_STORE_CTX *x509_ctx)
+                                                                     ^
+test/sslapitest.c:3449:47: note: You might need to cast the function pointer here
+    SSL_CTX_set_verify(cctx, SSL_VERIFY_PEER, verify_cb_capture_error);
+                                              ^
+test/sslapitest.c:3290:70: note: Parameter 'x509_ctx' can be declared as pointer to const
+static int verify_cb_capture_error(int preverify_ok, X509_STORE_CTX *x509_ctx)
+                                                                     ^
+test/sslapitest.c:3496:10: style: Variable 'argi' can be declared as pointer to const [constVariablePointer]
+    int *argi = (int *)arg;
+         ^
+test/sslapitest.c:3571:10: style: Variable 'argi' can be declared as pointer to const [constVariablePointer]
+    int *argi = (int *)arg;
+         ^
+test/sslapitest.c:3574:21: style: Variable 'server_certs' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(X509) *server_certs = NULL;
+                    ^
+test/sslapitest.c:3575:11: style: Variable 'ssl_cert' can be declared as pointer to const [constVariablePointer]
+    X509 *ssl_cert = NULL, *issuer_cert = NULL;
+          ^
+test/sslapitest.c:3575:29: style: Variable 'issuer_cert' can be declared as pointer to const [constVariablePointer]
+    X509 *ssl_cert = NULL, *issuer_cert = NULL;
+                            ^
+test/sslapitest.c:3578:22: style: Variable 'sr' can be declared as pointer to const [constVariablePointer]
+    OCSP_SINGLERESP *sr = NULL;
+                     ^
+test/sslapitest.c:5384:27: style: Parameter 's' can be declared as pointer to const. However it seems that 'ed_gen_cb' is a callback function, if 's' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int ed_gen_cb(SSL *s, void *arg)
+                          ^
+test/sslapitest.c:5432:46: note: You might need to cast the function pointer here
+        SSL_CTX_set_session_ticket_cb(*sctx, ed_gen_cb, NULL, NULL);
+                                             ^
+test/sslapitest.c:5384:27: note: Parameter 's' can be declared as pointer to const
+static int ed_gen_cb(SSL *s, void *arg)
+                          ^
+test/sslapitest.c:5549:27: style: Variable 'data' can be declared as pointer to const [constVariablePointer]
+    TICKET_AGE_TEST_DATA *data = arg;
+                          ^
+test/sslapitest.c:5547:35: style: Parameter 'ssl' can be declared as pointer to const. However it seems that 'ticket_age_gen_cb' is a callback function, if 'ssl' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int ticket_age_gen_cb(SSL *ssl, void *arg)
+                                  ^
+test/sslapitest.c:5593:13: note: You might need to cast the function pointer here
+        || !TEST_true(SSL_CTX_set_session_ticket_cb(sctx, ticket_age_gen_cb,
+            ^
+test/sslapitest.c:5547:35: note: Parameter 'ssl' can be declared as pointer to const
+static int ticket_age_gen_cb(SSL *ssl, void *arg)
+                                  ^
+test/sslapitest.c:5964:10: style: Variable 'usecb' can be declared as pointer to const [constVariablePointer]
+    int *usecb = (int *)arg;
+         ^
+test/sslapitest.c:9237:10: style: Variable 'server' can be declared as pointer to const [constVariablePointer]
+    int *server = (int *)add_arg;
+         ^
+test/sslapitest.c:9234:28: style: Parameter 's' can be declared as pointer to const. However it seems that 'old_add_cb' is a callback function, if 's' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int old_add_cb(SSL *s, unsigned int ext_type, const unsigned char **out,
+                           ^
+test/sslapitest.c:9463:10: note: You might need to cast the function pointer here
+    if (!TEST_false(SSL_CTX_add_server_custom_ext(sctx, TEST_EXT_TYPE1,
+         ^
+test/sslapitest.c:9234:28: note: Parameter 's' can be declared as pointer to const
+static int old_add_cb(SSL *s, unsigned int ext_type, const unsigned char **out,
+                           ^
+test/sslapitest.c:9264:10: style: Variable 'server' can be declared as pointer to const [constVariablePointer]
+    int *server = (int *)parse_arg;
+         ^
+test/sslapitest.c:9261:30: style: Parameter 's' can be declared as pointer to const. However it seems that 'old_parse_cb' is a callback function, if 's' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int old_parse_cb(SSL *s, unsigned int ext_type, const unsigned char *in,
+                             ^
+test/sslapitest.c:9463:10: note: You might need to cast the function pointer here
+    if (!TEST_false(SSL_CTX_add_server_custom_ext(sctx, TEST_EXT_TYPE1,
+         ^
+test/sslapitest.c:9261:30: note: Parameter 's' can be declared as pointer to const
+static int old_parse_cb(SSL *s, unsigned int ext_type, const unsigned char *in,
+                             ^
+test/sslapitest.c:9283:10: style: Variable 'server' can be declared as pointer to const [constVariablePointer]
+    int *server = (int *)add_arg;
+         ^
+test/sslapitest.c:9279:28: style: Parameter 's' can be declared as pointer to const. However it seems that 'new_add_cb' is a callback function, if 's' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int new_add_cb(SSL *s, unsigned int ext_type, unsigned int context,
+                           ^
+test/sslapitest.c:9467:13: note: You might need to cast the function pointer here
+        || !TEST_false(SSL_CTX_add_custom_ext(sctx, TEST_EXT_TYPE1,
+            ^
+test/sslapitest.c:9279:28: note: Parameter 's' can be declared as pointer to const
+static int new_add_cb(SSL *s, unsigned int ext_type, unsigned int context,
+                           ^
+test/sslapitest.c:9311:10: style: Variable 'server' can be declared as pointer to const [constVariablePointer]
+    int *server = (int *)parse_arg;
+         ^
+test/sslapitest.c:9307:30: style: Parameter 's' can be declared as pointer to const. However it seems that 'new_parse_cb' is a callback function, if 's' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int new_parse_cb(SSL *s, unsigned int ext_type, unsigned int context,
+                             ^
+test/sslapitest.c:9467:13: note: You might need to cast the function pointer here
+        || !TEST_false(SSL_CTX_add_custom_ext(sctx, TEST_EXT_TYPE1,
+            ^
+test/sslapitest.c:9307:30: note: Parameter 's' can be declared as pointer to const
+static int new_parse_cb(SSL *s, unsigned int ext_type, unsigned int context,
+                             ^
+test/sslapitest.c:10035:18: style: Variable 'mess' can be declared as pointer to const [constVariablePointer]
+    static char *mess = "A test message";
+                 ^
+test/sslapitest.c:10160:18: style: Variable 'mess' can be declared as pointer to const [constVariablePointer]
+    static char *mess = "A test message";
+                 ^
+test/sslapitest.c:10326:18: style: Variable 'mess' can be declared as pointer to const [constVariablePointer]
+    static char *mess = "A test message";
+                 ^
+test/sslapitest.c:10490:18: style: Variable 'mess' can be declared as pointer to const [constVariablePointer]
+    static char *mess = "A test message";
+                 ^
+test/sslapitest.c:10643:18: style: Variable 'mess' can be declared as pointer to const [constVariablePointer]
+    static char *mess = "A test message";
+                 ^
+test/sslapitest.c:11035:11: style: Variable 'gNid' can be declared as pointer to const [constVariablePointer]
+    char *gNid = NULL;
+          ^
+test/sslapitest.c:11033:35: style: Parameter 'userid' can be declared as pointer to const [constParameterPointer]
+static int create_new_vfile(char *userid, char *password, const char *filename)
+                                  ^
+test/sslapitest.c:11033:49: style: Parameter 'password' can be declared as pointer to const [constParameterPointer]
+static int create_new_vfile(char *userid, char *password, const char *filename)
+                                                ^
+test/sslapitest.c:11091:35: style: Parameter 'userid' can be declared as pointer to const [constParameterPointer]
+static int create_new_vbase(char *userid, char *password)
+                                  ^
+test/sslapitest.c:11091:49: style: Parameter 'password' can be declared as pointer to const [constParameterPointer]
+static int create_new_vbase(char *userid, char *password)
+                                                ^
+test/sslapitest.c:11513:31: style: Variable 'state' can be declared as pointer to const [constVariablePointer]
+    struct info_cb_states_st *state = info_cb_states[info_cb_offset];
+                              ^
+test/sslapitest.c:11954:29: style: Parameter 's' can be declared as pointer to const. However it seems that 'gen_tick_cb' is a callback function, if 's' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int gen_tick_cb(SSL *s, void *arg)
+                            ^
+test/sslapitest.c:12334:10: note: You might need to cast the function pointer here
+    if (!TEST_true(SSL_CTX_set_session_ticket_cb(sctx, gen_tick_cb,
+         ^
+test/sslapitest.c:11954:29: note: Parameter 's' can be declared as pointer to const
+static int gen_tick_cb(SSL *s, void *arg)
+                            ^
+test/sslapitest.c:12436:18: style: Variable 'sess' can be declared as pointer to const [constVariablePointer]
+    SSL_SESSION *sess;
+                 ^
+test/sslapitest.c:12957:32: style: Parameter 'ssl' can be declared as pointer to const. However it seems that 'client_cert_cb' is a callback function, if 'ssl' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int client_cert_cb(SSL *ssl, X509 **x509, EVP_PKEY **pkey)
+                               ^
+test/sslapitest.c:13020:38: note: You might need to cast the function pointer here
+    SSL_CTX_set_client_cert_cb(cctx, client_cert_cb);
+                                     ^
+test/sslapitest.c:12957:32: note: Parameter 'ssl' can be declared as pointer to const
+static int client_cert_cb(SSL *ssl, X509 **x509, EVP_PKEY **pkey)
+                               ^
+test/sslapitest.c:14139:63: style: Parameter 'privkeyfilename' can be declared as pointer to const [constParameterPointer]
+static int create_cert_key(int idx, char *certfilename, char *privkeyfilename)
+                                                              ^
+test/sslapitest.c:14139:43: style: Parameter 'certfilename' can be declared as pointer to const [constParameterPointer]
+static int create_cert_key(int idx, char *certfilename, char *privkeyfilename)
+                                          ^
+test/sslapitest.c:14437:21: style: Variable 'sc' can be declared as pointer to const [constVariablePointer]
+    SSL_CONNECTION *sc;
+                    ^
+test/sslapitest.c:14640:21: style: Variable 'sc' can be declared as pointer to const [constVariablePointer]
+    SSL_CONNECTION *sc;
+                    ^
+test/sslapitest.c:14860:51: style: Parameter 'secret_len' can be declared as pointer to const. However it seems that 'secret_cb' is a callback function, if 'secret_len' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int secret_cb(SSL *s, void *secretin, int *secret_len,
+                                                  ^
+test/sslapitest.c:14938:13: note: You might need to cast the function pointer here
+        || !TEST_true(SSL_set_session_secret_cb(clientssl, secret_cb,
+            ^
+test/sslapitest.c:14860:51: note: Parameter 'secret_len' can be declared as pointer to const
+static int secret_cb(SSL *s, void *secretin, int *secret_len,
+                                                  ^
+test/sslapitest.c:15329:53: style: Variable 'ciphersuite' can be declared as pointer to const [constVariablePointer]
+    char *clientgroup = NULL, *servergroup = NULL, *ciphersuite = NULL;
+                                                    ^
+test/sslapitest.c:16057:24: style: Variable 'sp' can be declared as pointer to const [constVariablePointer]
+    X509_VERIFY_PARAM *sp = NULL;
+                       ^
+test/sslapitest.c:16137:11: style: Variable 'msg' can be declared as pointer to const [constVariablePointer]
+    char *msg = "Hello World";
+          ^
+test/sslapitest.c:16240:11: style: Variable 'msg' can be declared as pointer to const [constVariablePointer]
+    char *msg = "Hello World";
+          ^
+test/sslapitest.c:16404:38: style: Parameter 's' can be declared as pointer to const [constParameterPointer]
+static int check_version_string(SSL *s, int version)
+                                     ^
+test/sslapitest.c:17116:26: style: Variable 'client' can be declared as pointer to const [constVariablePointer]
+    unsigned char *out, *client, *server;
+                         ^
+test/sslapitest.c:17116:35: style: Variable 'server' can be declared as pointer to const [constVariablePointer]
+    unsigned char *out, *client, *server;
+                                  ^
+test/sslapitest.c:17160:10: style: Variable 'idx' can be declared as pointer to const [constVariablePointer]
+    int *idx = (int *)arg;
+         ^
+test/sslapitest.c:17182:10: style: Variable 'idx' can be declared as pointer to const [constVariablePointer]
+    int *idx = (int *)arg;
+         ^
+test/sslapitest.c:17281:10: style: Variable 'idx' can be declared as pointer to const [constVariablePointer]
+    int *idx = (int *)arg;
+         ^
+test/sslapitest.c:17402:10: style: Variable 'data' can be declared as pointer to const [constVariablePointer]
+    int *data, *comparedata;
+         ^
+test/sslapitest.c:17400:32: style: Parameter 's' can be declared as pointer to const [constParameterPointer]
+static int check_app_data(SSL *s)
+                               ^
+test/sslapitest.c:17402:17: style: Variable 'comparedata' can be declared as pointer to const [constVariablePointer]
+    int *data, *comparedata;
+                ^
+test/sslapitest.c:18672:11: style: Variable 'modulename' can be declared as pointer to const [constVariablePointer]
+    char *modulename;
+          ^
+test/sslapitest.c:18673:11: style: Variable 'configfile' can be declared as pointer to const [constVariablePointer]
+    char *configfile;
+          ^
+test/testutil/format_output.c:96:56: style: Condition 'n2>n1' is always false [knownConditionTrueFalse]
+            test_printf_stderr("%4u:  '%s'\n", cnt, n2 > n1 ? b2 : b1);
+                                                       ^
+test/testutil/format_output.c:95:16: note: Assuming that condition 'n1==n2' is not redundant
+        if (n1 == n2 && !diff) {
+               ^
+test/testutil/format_output.c:96:56: note: Condition 'n2>n1' is always false
+            test_printf_stderr("%4u:  '%s'\n", cnt, n2 > n1 ? b2 : b1);
+                                                       ^
+test/sslapitest.c:243:31: style: Variable 'client_random_size' is assigned a value that is never used. [unreadVariable]
+    size_t client_random_size = SSL3_RANDOM_SIZE;
+                              ^
+test/sslapitest.c:7156:20: style: Variable 'testresult' is assigned a value that is never used. [unreadVariable]
+        testresult = TEST_skip("CHACHA is not supported in FIPS");
+                   ^
+test/testutil/provider.c:186:13: style: 'continue' is redundant since it is the last statement in a loop. [redundantContinue]
+            continue;
+            ^
+test/testutil/provider.c:190:13: style: 'continue' is redundant since it is the last statement in a loop. [redundantContinue]
+            continue;
+            ^
+test/testutil/random.c:32:13: style: The scope of the variable 's' can be reduced. [variableScope]
+    int32_t s;
+            ^
+test/testutil/stanza.c:79:12: style: Condition '*p' is always true [knownConditionTrueFalse]
+    return *p ? p : NULL;
+           ^
+test/testutil/stanza.c:88:11: style: The scope of the variable 'p' can be reduced. [variableScope]
+    char *p, *equals, *key;
+          ^
+test/testutil/stanza.c:88:24: style: Variable 'key' can be declared as pointer to const [constVariablePointer]
+    char *p, *equals, *key;
+                       ^
+test/testutil/tests.c:152:28: style: inconclusive: Function 'test_note' argument 1 names different: declaration 'desc' definition 'fmt'. [funcArgNamesDifferent]
+void test_note(const char *fmt, ...)
+                           ^
+test/testutil.h:474:28: note: Function 'test_note' argument 1 names different: declaration 'desc' definition 'fmt'.
+void test_note(const char *desc, ...) PRINTF_FORMAT(1, 2);
+                           ^
+test/testutil/tests.c:152:28: note: Function 'test_note' argument 1 names different: declaration 'desc' definition 'fmt'.
+void test_note(const char *fmt, ...)
+                           ^
+test/testutil/tests.c:317:17: style: inconclusive: Function 'test_strn_eq' argument 5 names different: declaration 'a' definition 's1'. [funcArgNamesDifferent]
+    const char *s1, const char *s2, size_t n)
+                ^
+test/testutil.h:402:17: note: Function 'test_strn_eq' argument 5 names different: declaration 'a' definition 's1'.
+    const char *a, const char *b, size_t n);
+                ^
+test/testutil/tests.c:317:17: note: Function 'test_strn_eq' argument 5 names different: declaration 'a' definition 's1'.
+    const char *s1, const char *s2, size_t n)
+                ^
+test/testutil/tests.c:317:33: style: inconclusive: Function 'test_strn_eq' argument 6 names different: declaration 'b' definition 's2'. [funcArgNamesDifferent]
+    const char *s1, const char *s2, size_t n)
+                                ^
+test/testutil.h:402:32: note: Function 'test_strn_eq' argument 6 names different: declaration 'b' definition 's2'.
+    const char *a, const char *b, size_t n);
+                               ^
+test/testutil/tests.c:317:33: note: Function 'test_strn_eq' argument 6 names different: declaration 'b' definition 's2'.
+    const char *s1, const char *s2, size_t n)
+                                ^
+test/testutil/tests.c:331:17: style: inconclusive: Function 'test_strn_ne' argument 5 names different: declaration 'a' definition 's1'. [funcArgNamesDifferent]
+    const char *s1, const char *s2, size_t n)
+                ^
+test/testutil.h:404:17: note: Function 'test_strn_ne' argument 5 names different: declaration 'a' definition 's1'.
+    const char *a, const char *b, size_t n);
+                ^
+test/testutil/tests.c:331:17: note: Function 'test_strn_ne' argument 5 names different: declaration 'a' definition 's1'.
+    const char *s1, const char *s2, size_t n)
+                ^
+test/testutil/tests.c:331:33: style: inconclusive: Function 'test_strn_ne' argument 6 names different: declaration 'b' definition 's2'. [funcArgNamesDifferent]
+    const char *s1, const char *s2, size_t n)
+                                ^
+test/testutil.h:404:32: note: Function 'test_strn_ne' argument 6 names different: declaration 'b' definition 's2'.
+    const char *a, const char *b, size_t n);
+                               ^
+test/testutil/tests.c:331:33: note: Function 'test_strn_ne' argument 6 names different: declaration 'b' definition 's2'.
+    const char *s1, const char *s2, size_t n)
+                                ^
+test/testutil/tests.c:395:66: style: Parameter 'e' can be declared as pointer to const [constParameterPointer]
+static int err_r_cb(int lib, int reason, struct test_err_expect *e)
+                                                                 ^
+test/testutil/tests.c:402:63: style: Parameter 'e' can be declared as pointer to const [constParameterPointer]
+static int err_s_cb(const char *data, struct test_err_expect *e)
+                                                              ^
+test/threadstest.c:147:10: style: The scope of the variable 'old' can be reduced. [variableScope]
+    int *old, *new;
+         ^
+test/threadstest.c:149:19: style: The scope of the variable 't2' can be reduced. [variableScope]
+    OSSL_TIME t1, t2;
+                  ^
+test/threadstest.c:347:19: style: The scope of the variable 't2' can be reduced. [variableScope]
+    OSSL_TIME t1, t2;
+                  ^
+test/threadstest.c:348:15: style: The scope of the variable 'old' can be reduced. [variableScope]
+    uint64_t *old, *new;
+              ^
+test/threadstest.c:406:15: style: The scope of the variable 'valp' can be reduced. [variableScope]
+    uint64_t *valp;
+              ^
+test/threadstest.c:407:14: style: The scope of the variable 'val' can be reduced. [variableScope]
+    uint64_t val;
+             ^
+test/threadstest.c:823:12: style: The scope of the variable 'n' can be reduced. [variableScope]
+    size_t n;
+           ^
+test/threadstest.c:1479:12: style: The scope of the variable 'nid' can be reduced. [variableScope]
+    int i, nid, nid2;
+           ^
+test/threadstest.c:1479:17: style: The scope of the variable 'nid2' can be reduced. [variableScope]
+    int i, nid, nid2;
+                ^
+test/threadstest.c:1480:12: style: The scope of the variable 'now' can be reduced. [variableScope]
+    time_t now;
+           ^
+test/threadstest.c:1516:19: style: The scope of the variable 't2' can be reduced. [variableScope]
+    OSSL_TIME t1, t2;
+                  ^
+test/threadstest.c:1538:19: style: The scope of the variable 't2' can be reduced. [variableScope]
+    OSSL_TIME t1, t2;
+                  ^
+test/threadstest.c:592:11: style: Variable 'ptr' can be declared as pointer to const [constVariablePointer]
+    void *ptr;
+          ^
+test/threadstest.c:610:11: style: Variable 'ptr' can be declared as pointer to const [constVariablePointer]
+    void *ptr = NULL;
+          ^
+test/threadstest.c:1621:11: style: Variable 'datadir' can be declared as pointer to const [constVariablePointer]
+    char *datadir;
+          ^
+test/threadstest.c:1259:11: style: Variable 'r' is assigned a value that is never used. [unreadVariable]
+        r = BIO_sendmmsg(ch & 1 ? multi_bio2 : multi_bio1, &msg,
+          ^
+test/threadstest.c:1262:11: style: Variable 'r' is assigned a value that is never used. [unreadVariable]
+        r = BIO_recvmmsg(ch & 1 ? multi_bio2 : multi_bio1, &msg,
+          ^
+test/tls-provider.c:899:17: style: inconclusive: Boolean expression 'strcmp(key1->tls_name,key2->tls_name)==0' is used in bitwise operation. Did you mean '&&'? [bitwiseOnBoolean]
+        ok = ok & (strcmp(key1->tls_name, key2->tls_name) == 0);
+                ^
+test/tls-provider.c:403:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+test/tls-provider.c:808:13: style: The scope of the variable 'key' can be reduced. [variableScope]
+    XORKEY *key = vkey;
+            ^
+test/tls-provider.c:996:12: style: The scope of the variable 'i' can be reduced. [variableScope]
+    size_t i;
+           ^
+test/tls-provider.c:2696:22: style: Checking if unsigned expression 'ctx->aid_len' is less than zero. [unsignedLessThanZero]
+    if (ctx->aid_len <= 0) {
+                     ^
+test/tls-provider.c:544:31: style: inconclusive: Function 'xor_dupctx' argument 1 names different: declaration 'ctx' definition 'vpxorctx'. [funcArgNamesDifferent]
+static void *xor_dupctx(void *vpxorctx)
+                              ^
+test/tls-provider.c:112:0: note: Function 'xor_dupctx' argument 1 names different: declaration 'ctx' definition 'vpxorctx'.
+static OSSL_FUNC_keyexch_dupctx_fn xor_dupctx;
+^
+test/tls-provider.c:544:31: note: Function 'xor_dupctx' argument 1 names different: declaration 'ctx' definition 'vpxorctx'.
+static void *xor_dupctx(void *vpxorctx)
+                              ^
+test/tls-provider.c:771:34: style: inconclusive: Function 'xor_dup' argument 1 names different: declaration 'keydata_from' definition 'vfromkey'. [funcArgNamesDifferent]
+static void *xor_dup(const void *vfromkey, int selection)
+                                 ^
+test/tls-provider.c:90:0: note: Function 'xor_dup' argument 1 names different: declaration 'keydata_from' definition 'vfromkey'.
+static OSSL_FUNC_keymgmt_dup_fn xor_dup;
+^
+test/tls-provider.c:771:34: note: Function 'xor_dup' argument 1 names different: declaration 'keydata_from' definition 'vfromkey'.
+static void *xor_dup(const void *vfromkey, int selection)
+                                 ^
+test/tls-provider.c:1081:47: style: inconclusive: Function 'xor_import_types' argument 1 names different: declaration 'selection' definition 'select'. [funcArgNamesDifferent]
+static const OSSL_PARAM *xor_import_types(int select)
+                                              ^
+test/tls-provider.c:51:0: note: Function 'xor_import_types' argument 1 names different: declaration 'selection' definition 'select'.
+static OSSL_FUNC_keymgmt_import_types_fn xor_import_types;
+^
+test/tls-provider.c:1081:47: note: Function 'xor_import_types' argument 1 names different: declaration 'selection' definition 'select'.
+static const OSSL_PARAM *xor_import_types(int select)
+                                              ^
+test/tls-provider.c:1086:65: style: inconclusive: Function 'xor_import_types_ex' argument 2 names different: declaration 'selection' definition 'select'. [funcArgNamesDifferent]
+static const OSSL_PARAM *xor_import_types_ex(void *provctx, int select)
+                                                                ^
+test/tls-provider.c:52:0: note: Function 'xor_import_types_ex' argument 2 names different: declaration 'selection' definition 'select'.
+static OSSL_FUNC_keymgmt_import_types_ex_fn xor_import_types_ex;
+^
+test/tls-provider.c:1086:65: note: Function 'xor_import_types_ex' argument 2 names different: declaration 'selection' definition 'select'.
+static const OSSL_PARAM *xor_import_types_ex(void *provctx, int select)
+                                                                ^
+test/tls-provider.c:1094:47: style: inconclusive: Function 'xor_export_types' argument 1 names different: declaration 'selection' definition 'select'. [funcArgNamesDifferent]
+static const OSSL_PARAM *xor_export_types(int select)
+                                              ^
+test/tls-provider.c:54:0: note: Function 'xor_export_types' argument 1 names different: declaration 'selection' definition 'select'.
+static OSSL_FUNC_keymgmt_export_types_fn xor_export_types;
+^
+test/tls-provider.c:1094:47: note: Function 'xor_export_types' argument 1 names different: declaration 'selection' definition 'select'.
+static const OSSL_PARAM *xor_export_types(int select)
+                                              ^
+test/tls-provider.c:1099:65: style: inconclusive: Function 'xor_export_types_ex' argument 2 names different: declaration 'selection' definition 'select'. [funcArgNamesDifferent]
+static const OSSL_PARAM *xor_export_types_ex(void *provctx, int select)
+                                                                ^
+test/tls-provider.c:55:0: note: Function 'xor_export_types_ex' argument 2 names different: declaration 'selection' definition 'select'.
+static OSSL_FUNC_keymgmt_export_types_ex_fn xor_export_types_ex;
+^
+test/tls-provider.c:1099:65: note: Function 'xor_export_types_ex' argument 2 names different: declaration 'selection' definition 'select'.
+static const OSSL_PARAM *xor_export_types_ex(void *provctx, int select)
+                                                                ^
+test/tls-provider.c:2039:1: style: inconclusive: Function 'xorhmacsig_to_EncryptedPrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'. [funcArgNamesDifferent]
+MAKE_ENCODER(xorhmacsig, xorx, EncryptedPrivateKeyInfo, pem);
+^
+test/tls-provider.c:2039:0: note: Function 'xorhmacsig_to_EncryptedPrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsig, xorx, EncryptedPrivateKeyInfo, pem);
+^
+test/tls-provider.c:2039:1: note: Function 'xorhmacsig_to_EncryptedPrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsig, xorx, EncryptedPrivateKeyInfo, pem);
+^
+test/tls-provider.c:2040:1: style: inconclusive: Function 'xorhmacsig_to_PrivateKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'. [funcArgNamesDifferent]
+MAKE_ENCODER(xorhmacsig, xorx, PrivateKeyInfo, der);
+^
+test/tls-provider.c:2040:0: note: Function 'xorhmacsig_to_PrivateKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsig, xorx, PrivateKeyInfo, der);
+^
+test/tls-provider.c:2040:1: note: Function 'xorhmacsig_to_PrivateKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsig, xorx, PrivateKeyInfo, der);
+^
+test/tls-provider.c:2041:1: style: inconclusive: Function 'xorhmacsig_to_PrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'. [funcArgNamesDifferent]
+MAKE_ENCODER(xorhmacsig, xorx, PrivateKeyInfo, pem);
+^
+test/tls-provider.c:2041:0: note: Function 'xorhmacsig_to_PrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsig, xorx, PrivateKeyInfo, pem);
+^
+test/tls-provider.c:2041:1: note: Function 'xorhmacsig_to_PrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsig, xorx, PrivateKeyInfo, pem);
+^
+test/tls-provider.c:2042:1: style: inconclusive: Function 'xorhmacsig_to_SubjectPublicKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'. [funcArgNamesDifferent]
+MAKE_ENCODER(xorhmacsig, xorx, SubjectPublicKeyInfo, der);
+^
+test/tls-provider.c:2042:0: note: Function 'xorhmacsig_to_SubjectPublicKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsig, xorx, SubjectPublicKeyInfo, der);
+^
+test/tls-provider.c:2042:1: note: Function 'xorhmacsig_to_SubjectPublicKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsig, xorx, SubjectPublicKeyInfo, der);
+^
+test/tls-provider.c:2043:1: style: inconclusive: Function 'xorhmacsig_to_SubjectPublicKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'. [funcArgNamesDifferent]
+MAKE_ENCODER(xorhmacsig, xorx, SubjectPublicKeyInfo, pem);
+^
+test/tls-provider.c:2043:0: note: Function 'xorhmacsig_to_SubjectPublicKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsig, xorx, SubjectPublicKeyInfo, pem);
+^
+test/tls-provider.c:2043:1: note: Function 'xorhmacsig_to_SubjectPublicKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsig, xorx, SubjectPublicKeyInfo, pem);
+^
+test/tls-provider.c:2044:1: style: inconclusive: Function 'xorhmacsha2sig_to_EncryptedPrivateKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'. [funcArgNamesDifferent]
+MAKE_ENCODER(xorhmacsha2sig, xorx, EncryptedPrivateKeyInfo, der);
+^
+test/tls-provider.c:2044:0: note: Function 'xorhmacsha2sig_to_EncryptedPrivateKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, EncryptedPrivateKeyInfo, der);
+^
+test/tls-provider.c:2044:1: note: Function 'xorhmacsha2sig_to_EncryptedPrivateKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, EncryptedPrivateKeyInfo, der);
+^
+test/tls-provider.c:2045:1: style: inconclusive: Function 'xorhmacsha2sig_to_EncryptedPrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'. [funcArgNamesDifferent]
+MAKE_ENCODER(xorhmacsha2sig, xorx, EncryptedPrivateKeyInfo, pem);
+^
+test/tls-provider.c:2045:0: note: Function 'xorhmacsha2sig_to_EncryptedPrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, EncryptedPrivateKeyInfo, pem);
+^
+test/tls-provider.c:2045:1: note: Function 'xorhmacsha2sig_to_EncryptedPrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, EncryptedPrivateKeyInfo, pem);
+^
+test/tls-provider.c:2046:1: style: inconclusive: Function 'xorhmacsha2sig_to_PrivateKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'. [funcArgNamesDifferent]
+MAKE_ENCODER(xorhmacsha2sig, xorx, PrivateKeyInfo, der);
+^
+test/tls-provider.c:2046:0: note: Function 'xorhmacsha2sig_to_PrivateKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, PrivateKeyInfo, der);
+^
+test/tls-provider.c:2046:1: note: Function 'xorhmacsha2sig_to_PrivateKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, PrivateKeyInfo, der);
+^
+test/tls-provider.c:2047:1: style: inconclusive: Function 'xorhmacsha2sig_to_PrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'. [funcArgNamesDifferent]
+MAKE_ENCODER(xorhmacsha2sig, xorx, PrivateKeyInfo, pem);
+^
+test/tls-provider.c:2047:0: note: Function 'xorhmacsha2sig_to_PrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, PrivateKeyInfo, pem);
+^
+test/tls-provider.c:2047:1: note: Function 'xorhmacsha2sig_to_PrivateKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, PrivateKeyInfo, pem);
+^
+test/tls-provider.c:2048:1: style: inconclusive: Function 'xorhmacsha2sig_to_SubjectPublicKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'. [funcArgNamesDifferent]
+MAKE_ENCODER(xorhmacsha2sig, xorx, SubjectPublicKeyInfo, der);
+^
+test/tls-provider.c:2048:0: note: Function 'xorhmacsha2sig_to_SubjectPublicKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, SubjectPublicKeyInfo, der);
+^
+test/tls-provider.c:2048:1: note: Function 'xorhmacsha2sig_to_SubjectPublicKeyInfo_der_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, SubjectPublicKeyInfo, der);
+^
+test/tls-provider.c:2049:1: style: inconclusive: Function 'xorhmacsha2sig_to_SubjectPublicKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'. [funcArgNamesDifferent]
+MAKE_ENCODER(xorhmacsha2sig, xorx, SubjectPublicKeyInfo, pem);
+^
+test/tls-provider.c:2049:0: note: Function 'xorhmacsha2sig_to_SubjectPublicKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, SubjectPublicKeyInfo, pem);
+^
+test/tls-provider.c:2049:1: note: Function 'xorhmacsha2sig_to_SubjectPublicKeyInfo_pem_import_object' argument 1 names different: declaration 'ctx' definition 'vctx'.
+MAKE_ENCODER(xorhmacsha2sig, xorx, SubjectPublicKeyInfo, pem);
+^
+test/tls-provider.c:2933:35: style: inconclusive: Function 'xor_sig_dupctx' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'. [funcArgNamesDifferent]
+static void *xor_sig_dupctx(void *vpxor_sigctx)
+                                  ^
+test/tls-provider.c:2602:0: note: Function 'xor_sig_dupctx' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'.
+static OSSL_FUNC_signature_dupctx_fn xor_sig_dupctx;
+^
+test/tls-provider.c:2933:35: note: Function 'xor_sig_dupctx' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'.
+static void *xor_sig_dupctx(void *vpxor_sigctx)
+                                  ^
+test/tls-provider.c:2999:72: style: inconclusive: Function 'xor_sig_gettable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'. [funcArgNamesDifferent]
+static const OSSL_PARAM *xor_sig_gettable_ctx_params(ossl_unused void *vpxor_sigctx, ossl_unused void *vctx)
+                                                                       ^
+test/tls-provider.c:2604:0: note: Function 'xor_sig_gettable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'.
+static OSSL_FUNC_signature_gettable_ctx_params_fn xor_sig_gettable_ctx_params;
+^
+test/tls-provider.c:2999:72: note: Function 'xor_sig_gettable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'.
+static const OSSL_PARAM *xor_sig_gettable_ctx_params(ossl_unused void *vpxor_sigctx, ossl_unused void *vctx)
+                                                                       ^
+test/tls-provider.c:2999:104: style: inconclusive: Function 'xor_sig_gettable_ctx_params' argument 2 names different: declaration 'provctx' definition 'vctx'. [funcArgNamesDifferent]
+static const OSSL_PARAM *xor_sig_gettable_ctx_params(ossl_unused void *vpxor_sigctx, ossl_unused void *vctx)
+                                                                                                       ^
+test/tls-provider.c:2604:0: note: Function 'xor_sig_gettable_ctx_params' argument 2 names different: declaration 'provctx' definition 'vctx'.
+static OSSL_FUNC_signature_gettable_ctx_params_fn xor_sig_gettable_ctx_params;
+^
+test/tls-provider.c:2999:104: note: Function 'xor_sig_gettable_ctx_params' argument 2 names different: declaration 'provctx' definition 'vctx'.
+static const OSSL_PARAM *xor_sig_gettable_ctx_params(ossl_unused void *vpxor_sigctx, ossl_unused void *vctx)
+                                                                                                       ^
+test/tls-provider.c:3040:72: style: inconclusive: Function 'xor_sig_settable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'. [funcArgNamesDifferent]
+static const OSSL_PARAM *xor_sig_settable_ctx_params(ossl_unused void *vpsm2ctx,
+                                                                       ^
+test/tls-provider.c:2606:0: note: Function 'xor_sig_settable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'.
+static OSSL_FUNC_signature_settable_ctx_params_fn xor_sig_settable_ctx_params;
+^
+test/tls-provider.c:3040:72: note: Function 'xor_sig_settable_ctx_params' argument 1 names different: declaration 'ctx' definition 'vpsm2ctx'.
+static const OSSL_PARAM *xor_sig_settable_ctx_params(ossl_unused void *vpsm2ctx,
+                                                                       ^
+test/tls-provider.c:3056:63: style: inconclusive: Function 'xor_sig_gettable_ctx_md_params' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'. [funcArgNamesDifferent]
+static const OSSL_PARAM *xor_sig_gettable_ctx_md_params(void *vpxor_sigctx)
+                                                              ^
+test/tls-provider.c:2608:0: note: Function 'xor_sig_gettable_ctx_md_params' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'.
+static OSSL_FUNC_signature_gettable_ctx_md_params_fn xor_sig_gettable_ctx_md_params;
+^
+test/tls-provider.c:3056:63: note: Function 'xor_sig_gettable_ctx_md_params' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'.
+static const OSSL_PARAM *xor_sig_gettable_ctx_md_params(void *vpxor_sigctx)
+                                                              ^
+test/tls-provider.c:3076:63: style: inconclusive: Function 'xor_sig_settable_ctx_md_params' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'. [funcArgNamesDifferent]
+static const OSSL_PARAM *xor_sig_settable_ctx_md_params(void *vpxor_sigctx)
+                                                              ^
+test/tls-provider.c:2610:0: note: Function 'xor_sig_settable_ctx_md_params' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'.
+static OSSL_FUNC_signature_settable_ctx_md_params_fn xor_sig_settable_ctx_md_params;
+^
+test/tls-provider.c:3076:63: note: Function 'xor_sig_settable_ctx_md_params' argument 1 names different: declaration 'ctx' definition 'vpxor_sigctx'.
+static const OSSL_PARAM *xor_sig_settable_ctx_md_params(void *vpxor_sigctx)
+                                                              ^
+test/tls-provider.c:546:25: style: Variable 'srcctx' can be declared as pointer to const [constVariablePointer]
+    PROV_XORKEMKEX_CTX *srcctx = (PROV_XORKEMKEX_CTX *)vpxorctx;
+                        ^
+test/tls-provider.c:808:13: style: Variable 'key' can be declared as pointer to const [constVariablePointer]
+    XORKEY *key = vkey;
+            ^
+test/tls-provider.c:965:25: style: Variable 'gctx' can be declared as pointer to const [constVariablePointer]
+    struct xor_gen_ctx *gctx = genctx;
+                        ^
+test/tls-provider.c:1086:52: style: Parameter 'provctx' can be declared as pointer to const [constParameterPointer]
+static const OSSL_PARAM *xor_import_types_ex(void *provctx, int select)
+                                                   ^
+test/tls-provider.c:1099:52: style: Parameter 'provctx' can be declared as pointer to const [constParameterPointer]
+static const OSSL_PARAM *xor_export_types_ex(void *provctx, int select)
+                                                   ^
+test/tls-provider.c:1644:13: style: Variable 'k' can be declared as pointer to const [constVariablePointer]
+    XORKEY *k = (XORKEY *)xorxkey;
+            ^
+test/tls-provider.c:1692:13: style: Variable 'xorxkey' can be declared as pointer to const [constVariablePointer]
+    XORKEY *xorxkey = (XORKEY *)vecxkey;
+            ^
+test/tls-provider.c:2743:13: style: Variable 'xorkey' can be declared as pointer to const [constVariablePointer]
+    XORKEY *xorkey = pxor_sigctx->sig;
+            ^
+test/tls-provider.c:2824:11: style: Variable 'rmdname' can be declared as pointer to const [constVariablePointer]
+    char *rmdname = (char *)mdname;
+          ^
+test/tls-provider.c:3058:22: style: Variable 'pxor_sigctx' can be declared as pointer to const [constVariablePointer]
+    PROV_XORSIG_CTX *pxor_sigctx = (PROV_XORSIG_CTX *)vpxor_sigctx;
+                     ^
+test/tls-provider.c:3078:22: style: Variable 'pxor_sigctx' can be declared as pointer to const [constVariablePointer]
+    PROV_XORSIG_CTX *pxor_sigctx = (PROV_XORSIG_CTX *)vpxor_sigctx;
+                     ^
+test/tls-provider.c:2129:17: style: struct member 'keytype_desc_st::structure_name' is never used. [unusedStructMember]
+    const char *structure_name;
+                ^
+test/tls12psk.c:190:32: style: Parameter 'c' can be declared as pointer to const [constParameterPointer]
+static int sessid_matches(SSL *c, SSL *s)
+                               ^
+test/tls12psk.c:190:40: style: Parameter 's' can be declared as pointer to const [constParameterPointer]
+static int sessid_matches(SSL *c, SSL *s)
+                                       ^
+test/tls13ccstest.c:94:45: style: The scope of the variable 'expectedrecvers' can be reduced. [variableScope]
+    unsigned int rectype, recvers, msgtype, expectedrecvers;
+                                            ^
+test/tls13ccstest.c:58:30: style: inconclusive: Function 'watchccs_new' argument 1 names different: declaration 'bi' definition 'bio'. [funcArgNamesDifferent]
+static int watchccs_new(BIO *bio)
+                             ^
+test/tls13ccstest.c:27:30: note: Function 'watchccs_new' argument 1 names different: declaration 'bi' definition 'bio'.
+static int watchccs_new(BIO *bi);
+                             ^
+test/tls13ccstest.c:58:30: note: Function 'watchccs_new' argument 1 names different: declaration 'bi' definition 'bio'.
+static int watchccs_new(BIO *bio)
+                             ^
+test/tls13ccstest.c:64:31: style: inconclusive: Function 'watchccs_free' argument 1 names different: declaration 'a' definition 'bio'. [funcArgNamesDifferent]
+static int watchccs_free(BIO *bio)
+                              ^
+test/tls13ccstest.c:28:31: note: Function 'watchccs_free' argument 1 names different: declaration 'a' definition 'bio'.
+static int watchccs_free(BIO *a);
+                              ^
+test/tls13ccstest.c:64:31: note: Function 'watchccs_free' argument 1 names different: declaration 'a' definition 'bio'.
+static int watchccs_free(BIO *bio)
+                              ^
+test/tls13ccstest.c:70:31: style: inconclusive: Function 'watchccs_read' argument 1 names different: declaration 'b' definition 'bio'. [funcArgNamesDifferent]
+static int watchccs_read(BIO *bio, char *out, int outl)
+                              ^
+test/tls13ccstest.c:29:31: note: Function 'watchccs_read' argument 1 names different: declaration 'b' definition 'bio'.
+static int watchccs_read(BIO *b, char *out, int outl);
+                              ^
+test/tls13ccstest.c:70:31: note: Function 'watchccs_read' argument 1 names different: declaration 'b' definition 'bio'.
+static int watchccs_read(BIO *bio, char *out, int outl)
+                              ^
+test/tls13ccstest.c:89:32: style: inconclusive: Function 'watchccs_write' argument 1 names different: declaration 'b' definition 'bio'. [funcArgNamesDifferent]
+static int watchccs_write(BIO *bio, const char *in, int inl)
+                               ^
+test/tls13ccstest.c:30:32: note: Function 'watchccs_write' argument 1 names different: declaration 'b' definition 'bio'.
+static int watchccs_write(BIO *b, const char *in, int inl);
+                               ^
+test/tls13ccstest.c:89:32: note: Function 'watchccs_write' argument 1 names different: declaration 'b' definition 'bio'.
+static int watchccs_write(BIO *bio, const char *in, int inl)
+                               ^
+test/tls13ccstest.c:215:32: style: inconclusive: Function 'watchccs_ctrl' argument 1 names different: declaration 'b' definition 'bio'. [funcArgNamesDifferent]
+static long watchccs_ctrl(BIO *bio, int cmd, long num, void *ptr)
+                               ^
+test/tls13ccstest.c:31:32: note: Function 'watchccs_ctrl' argument 1 names different: declaration 'b' definition 'bio'.
+static long watchccs_ctrl(BIO *b, int cmd, long num, void *ptr);
+                               ^
+test/tls13ccstest.c:215:32: note: Function 'watchccs_ctrl' argument 1 names different: declaration 'b' definition 'bio'.
+static long watchccs_ctrl(BIO *bio, int cmd, long num, void *ptr)
+                               ^
+test/tls13ccstest.c:234:31: style: inconclusive: Function 'watchccs_gets' argument 1 names different: declaration 'bp' definition 'bio'. [funcArgNamesDifferent]
+static int watchccs_gets(BIO *bio, char *buf, int size)
+                              ^
+test/tls13ccstest.c:32:31: note: Function 'watchccs_gets' argument 1 names different: declaration 'bp' definition 'bio'.
+static int watchccs_gets(BIO *bp, char *buf, int size);
+                              ^
+test/tls13ccstest.c:234:31: note: Function 'watchccs_gets' argument 1 names different: declaration 'bp' definition 'bio'.
+static int watchccs_gets(BIO *bio, char *buf, int size)
+                              ^
+test/tls13ccstest.c:240:31: style: inconclusive: Function 'watchccs_puts' argument 1 names different: declaration 'bp' definition 'bio'. [funcArgNamesDifferent]
+static int watchccs_puts(BIO *bio, const char *str)
+                              ^
+test/tls13ccstest.c:33:31: note: Function 'watchccs_puts' argument 1 names different: declaration 'bp' definition 'bio'.
+static int watchccs_puts(BIO *bp, const char *str);
+                              ^
+test/tls13ccstest.c:240:31: note: Function 'watchccs_puts' argument 1 names different: declaration 'bp' definition 'bio'.
+static int watchccs_puts(BIO *bio, const char *str)
+                              ^
+test/tls13tickettest.c:81:29: style: Parameter 'ssl' can be declared as pointer to const. However it seems that 'sess_new_cb' is a callback function, if 'ssl' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int sess_new_cb(SSL *ssl, SSL_SESSION *session)
+                            ^
+test/tls13tickettest.c:231:32: note: You might need to cast the function pointer here
+    SSL_CTX_sess_set_new_cb(c, sess_new_cb);
+                               ^
+test/tls13tickettest.c:81:29: note: Parameter 'ssl' can be declared as pointer to const
+static int sess_new_cb(SSL *ssl, SSL_SESSION *session)
+                            ^
+test/tls13tickettest.c:210:39: style: Parameter 'ssl' can be declared as pointer to const. However it seems that 'msg_cb' is a callback function, if 'ssl' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+    const void *buf, size_t len, SSL *ssl, void *arg)
+                                      ^
+test/tls13tickettest.c:251:33: note: You might need to cast the function pointer here
+        SSL_set_msg_callback(s, msg_cb);
+                                ^
+test/tls13tickettest.c:210:39: note: Parameter 'ssl' can be declared as pointer to const
+    const void *buf, size_t len, SSL *ssl, void *arg)
+                                      ^
+test/tls13tickettest.c:489:39: style: Parameter 'ssl' can be declared as pointer to const [constParameterPointer]
+static int alpn_conn_selected_is(SSL *ssl, const char *proto)
+                                      ^
+test/tls13tickettest.c:501:41: style: Parameter 'ssl' can be declared as pointer to const [constParameterPointer]
+static int alpn_conn_selected_none(SSL *ssl)
+                                        ^
+test/tls13tickettest.c:511:41: style: Parameter 'ssl' can be declared as pointer to const [constParameterPointer]
+static int alpn_sess_selected_none(SSL *ssl)
+                                        ^
+test/tls13tickettest.c:1345:30: style: Parameter 'ssl' can be declared as pointer to const [constParameterPointer]
+static int is_retryable(SSL *ssl, int ret)
+                             ^
+test/tls13encryptiontest.c:254:39: style: Parameter 'rec' can be declared as pointer to const [constParameterPointer]
+static int test_record(TLS_RL_RECORD *rec, RECORD_DATA *recd, int enc)
+                                      ^
+test/unit/crypto/bio/test_bio_addr.c:258:10: style: Variable 'data' can be declared as const array [constVariable]
+    char data[4] = { 0 };
+         ^
+test/tls13secretstest.c:196:36: style: inconclusive: Function 'ssl_log_secret' argument 1 names different: declaration 's' definition 'sc'. [funcArgNamesDifferent]
+int ssl_log_secret(SSL_CONNECTION *sc,
+                                   ^
+ssl/ssl_local.h:3406:43: note: Function 'ssl_log_secret' argument 1 names different: declaration 's' definition 'sc'.
+__owur int ssl_log_secret(SSL_CONNECTION *s, const char *label,
+                                          ^
+test/tls13secretstest.c:196:36: note: Function 'ssl_log_secret' argument 1 names different: declaration 's' definition 'sc'.
+int ssl_log_secret(SSL_CONNECTION *sc,
+                                   ^
+test/tls13secretstest.c:274:58: style: Parameter 'prk' can be declared as pointer to const [constParameterPointer]
+static int test_secret(SSL_CONNECTION *s, unsigned char *prk,
+                                                         ^
+test/unit/crypto/bio/test_bss_dgram.c:277:22: style: Condition 'setup(state)!=0' is always false [knownConditionTrueFalse]
+    if (setup(state) != 0)
+                     ^
+test/unit/crypto/bio/test_bss_dgram.c:277:14: note: Calling function 'setup' returns 0
+    if (setup(state) != 0)
+             ^
+test/unit/crypto/bio/test_bss_dgram.c:277:22: note: Condition 'setup(state)!=0' is always false
+    if (setup(state) != 0)
+                     ^
+test/unit/crypto/bio/test_bss_acpt.c:400:22: style: Condition 'setup(state)!=0' is always false [knownConditionTrueFalse]
+    if (setup(state) != 0)
+                     ^
+test/unit/crypto/bio/test_bss_acpt.c:400:14: note: Calling function 'setup' returns 0
+    if (setup(state) != 0)
+             ^
+test/unit/crypto/bio/test_bss_acpt.c:400:22: note: Condition 'setup(state)!=0' is always false
+    if (setup(state) != 0)
+                     ^
+test/unit/crypto/bio/test_bss_acpt.c:804:17: style: Variable 'data' can be declared as pointer to const [constVariablePointer]
+    BIO_ACCEPT *data = get_data(bio);
+                ^
+test/unit/crypto/bio/test_bss_acpt.c:838:17: style: Variable 'data' can be declared as pointer to const [constVariablePointer]
+    BIO_ACCEPT *data = get_data(bio);
+                ^
+test/unit/crypto/bio/test_bss_acpt.c:851:17: style: Variable 'data' can be declared as pointer to const [constVariablePointer]
+    BIO_ACCEPT *data = get_data(bio);
+                ^
+test/unit/crypto/bio/test_bss_conn.c:415:22: style: Condition 'setup(state)!=0' is always false [knownConditionTrueFalse]
+    if (setup(state) != 0)
+                     ^
+test/unit/crypto/bio/test_bss_conn.c:415:14: note: Calling function 'setup' returns 0
+    if (setup(state) != 0)
+             ^
+test/unit/crypto/bio/test_bss_conn.c:415:22: note: Condition 'setup(state)!=0' is always false
+    if (setup(state) != 0)
+                     ^
+test/unit/crypto/bio/test_bss_conn.c:1216:18: style: Variable 'data' can be declared as pointer to const [constVariablePointer]
+    BIO_CONNECT *data = get_data(bio);
+                 ^
+test/unit/crypto/bio/test_bss_file.c:69:31: style: Parameter 'stream' can be declared as pointer to const [constParameterPointer]
+static int is_mocked_fp(FILE *stream)
+                              ^
+test/upcallstest.c:65:13: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+            break;
+            ^
+test/user_property_test.c:58:10: style: inconclusive: Function 'testprov_query' argument 3 names different: declaration 'no_store' definition 'no_cache'. [funcArgNamesDifferent]
+    int *no_cache)
+         ^
+test/user_property_test.c:20:0: note: Function 'testprov_query' argument 3 names different: declaration 'no_store' definition 'no_cache'.
+static OSSL_FUNC_provider_query_operation_fn testprov_query;
+^
+test/user_property_test.c:58:10: note: Function 'testprov_query' argument 3 names different: declaration 'no_store' definition 'no_cache'.
+    int *no_cache)
+         ^
+test/v3nametest.c:327:11: style: The scope of the variable 'crt' can be reduced. [variableScope]
+    X509 *crt;
+          ^
+test/verify_extra_test.c:148:35: style: Variable 'v2' can be declared as pointer to const [constVariablePointer]
+    ASN1_OCTET_STRING *v = NULL, *v2 = NULL;
+                                  ^
+test/v3ext.c:341:37: style: Parameter 'addr' can be declared as pointer to const [constParameterPointer]
+static int check_addr(IPAddrBlocks *addr, int type)
+                                    ^
+test/v3ext.c:343:22: style: Variable 'fam' can be declared as pointer to const [constVariablePointer]
+    IPAddressFamily *fam;
+                     ^
+test/v3ext.c:344:23: style: Variable 'aorr' can be declared as pointer to const [constVariablePointer]
+    IPAddressOrRange *aorr;
+                      ^
+test/v3ext.c:661:22: style: Variable 'aor' can be declared as pointer to const [constVariablePointer]
+        ASIdOrRange *aor = sk_ASIdOrRange_value(asid->asnum->u.asIdsOrRanges,
+                     ^
+test/v3ext.c:724:22: style: Variable 'aor' can be declared as pointer to const [constVariablePointer]
+        ASIdOrRange *aor = sk_ASIdOrRange_value(asid->asnum->u.asIdsOrRanges,
+                     ^
+test/v3ext.c:783:26: style: Variable 'f' can be declared as pointer to const [constVariablePointer]
+        IPAddressFamily *f = sk_IPAddressFamily_value(addr, 0);
+                         ^
+test/v3ext.c:787:23: style: Variable 'want_min' can be declared as const array [constVariable]
+        unsigned char want_min[4] = { 0x01, 0x00, 0x00, 0x01 };
+                      ^
+test/v3ext.c:873:22: style: Variable 'aor' can be declared as pointer to const [constVariablePointer]
+        ASIdOrRange *aor = sk_ASIdOrRange_value(asid->asnum->u.asIdsOrRanges, i);
+                     ^
+test/v3ext.c:925:26: style: Variable 'f' can be declared as pointer to const [constVariablePointer]
+        IPAddressFamily *f = sk_IPAddressFamily_value(addr, 0);
+                         ^
+test/v3ext.c:1216:22: style: Variable 'aor' can be declared as pointer to const [constVariablePointer]
+        ASIdOrRange *aor = sk_ASIdOrRange_value(asid->asnum->u.asIdsOrRanges,
+                     ^
+test/v3nametest.c:258:27: style: Parameter 'crt' can be declared as pointer to const [constParameterPointer]
+static int run_cert(X509 *crt, const char *nameincert,
+                          ^
+test/x509_check_cert_pkey_test.c:116:16: style: The scope of the variable 'it' can be reduced. [variableScope]
+    X509_INFO *it;
+               ^
+test/x509_check_cert_pkey_test.c:34:28: style: Local variable 'expected' shadows outer variable [shadowVariable]
+    int ret = 0, type = 0, expected = 0, result = 0;
+                           ^
+test/x509_check_cert_pkey_test.c:110:12: note: Shadowed declaration
+static int expected; /* expected number of certs/CRLs/keys included */
+           ^
+test/x509_check_cert_pkey_test.c:34:28: note: Shadow variable
+    int ret = 0, type = 0, expected = 0, result = 0;
+                           ^
+test/x509_check_cert_pkey_test.c:116:16: style: Variable 'it' can be declared as pointer to const [constVariablePointer]
+    X509_INFO *it;
+               ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/packet_quic.h:46:65: style: Parameter 'pkt' can be declared as pointer to const [constParameterPointer]
+__owur static ossl_inline int PACKET_peek_quic_vlint_ex(PACKET *pkt,
+                                                                ^
+test/x509_internal_test.c:301:19: style: Variable 'buf' can be declared as const array [constVariable]
+    unsigned char buf[1] = { 0 };
+                  ^
+test/x509_load_cert_file_test.c:128:28: style: Variable 'objs' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(X509_OBJECT) *objs = NULL;
+                           ^
+test/x509_req_test.c:58:65: style: Parameter 'value' can be declared as pointer to const [constParameterPointer]
+static int add_ext(STACK_OF(X509_EXTENSION) *sk, int nid, char *value)
+                                                                ^
+test/x509_time_test.c:464:16: style: Parameter 'asn1_before' can be declared as pointer to const [constParameterPointer]
+    ASN1_TIME *asn1_before,
+               ^
+test/x509_time_test.c:465:16: style: Parameter 'asn1_mid' can be declared as pointer to const [constParameterPointer]
+    ASN1_TIME *asn1_mid,
+               ^
+test/x509_time_test.c:466:16: style: Parameter 'asn1_after' can be declared as pointer to const [constParameterPointer]
+    ASN1_TIME *asn1_after)
+               ^
+test/x509_test.c:259:18: style: Variable 'obj' can be declared as pointer to const [constVariablePointer]
+    ASN1_OBJECT *obj = NULL;
+                 ^
+test/x509_test.c:294:18: style: Variable 'obj' can be declared as pointer to const [constVariablePointer]
+    ASN1_OBJECT *obj = NULL;
+                 ^
+test/x509_test.c:330:18: style: Variable 'obj' can be declared as pointer to const [constVariablePointer]
+    ASN1_OBJECT *obj = NULL;
+                 ^
+test/x509_test.c:564:15: style: Variable 'pkey' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *pkey = NULL;
+              ^

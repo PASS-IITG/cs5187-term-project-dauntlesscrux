@@ -1,58 +1,59 @@
 %% FSE (CS-5187 Term Project) research paper. Requirements from the CFP (https://conf.researchr.org/home/fse-2026, checked 2026-09-30):
-%%   * \documentclass[acmsmall,screen,review,anonymous]{acmart}; single column
-%%   * 12 pages of text and figures + references limit \todo{check}
-%%   * double-anonymous: no names, no identifying URLs, third-person
-%%     self-citation, no acknowledgments at submission
-%%   * "Data Availability" section after the Conclusion (not counted)
-%%   * disclose AI tools; fabricated citations = desk reject
-%%   * deadline: TODO (see course page) AoE, TODO
+%%   * \documentclass[acmsmall,screen,review,nonacm]{acmart}; single column
+%%   * deadline: Fri 13 Nov 2026, 23:59 IST
 %% Used for e.g. FSE, ISSTA, OOPSLA/PACMPL, TOSEM.
-\documentclass[acmsmall,screen,review,anonymous]{acmart}
+\documentclass[acmsmall,screen,review,nonacm]{acmart}
 
 \input{macros}
 
 \setcopyright{none}
 \acmConference[FSE (CS-5187 Term Project)]{ACM International Conference on the Foundations of Software Engineering (Format Template)}{2026}{IIT Guwahati}
 \acmYear{2026}
+%% This is a course paper using the ACM layout, not an assigned ACM publication.
+%% Leave publication identifiers empty rather than printing acmart's dummy values.
+\acmISBN{}
+\acmDOI{}
 \citestyle{acmauthoryear}
 
 \begin{document}
 
-\title[Short Hook]{Short Hook: Plain Description of What Your Project Does and For Whom}
-%% Title pattern: "Short Hook: Plain Description of What and For Whom".
-%% Alternative titles (keep 2-3 here until submission):
-%%   "..."
+\title[CVE-Guided Typestate Analysis]{CVE-Guided Typestate Analysis for
+  Recurring Vulnerability Detection}
 
-\author{Anonymous Author(s)}
-\affiliation{\institution{Anonymous Institution}\country{Anonymous Country}}
+
+\author{Rutvij Wagh}
+\affiliation{\institution{Indian Institute of Technology Guwahati}\city{Guwahati}\country{India}}
+
+\author{Udayraj Choudhary}
+\affiliation{\institution{Indian Institute of Technology Guwahati}\city{Guwahati}\country{India}}
 
 \begin{abstract}
 \input{sections/abstract}
 \end{abstract}
 
-%% CCS concepts: pick the ones that fit YOUR project at https://dl.acm.org/ccs
-%% (500 = main, 300 = secondary). This template fits any software-engineering
-%% topic -- static analysis, dynamic analysis/testing, empirical studies,
-%% program repair, tools, human factors, etc. -- so replace the placeholder
-%% below with the concept for your own work. A few common top-level ids:
-%%   Software and its engineering~Software testing and debugging
-%%   Software and its engineering~Automated static analysis
-%%   Software and its engineering~Dynamic analysis
-%%   Software and its engineering~Software creation and management
-%%   General and reference~Empirical studies
+%% ACM CCS 2012 concepts: Automated static analysis (primary) and
+%% Software and application security (secondary). The identifiers follow
+%% the hierarchy in the ACM 2012 classification.
 \begin{CCSXML}
 <ccs2012>
   <concept>
-    <concept_id>10011007.10011074</concept_id>
-    <concept_desc>Software and its engineering</concept_desc>
+    <concept_id>10011007.10010940.10010992.10010998.10011000</concept_id>
+    <concept_desc>Software and its engineering~Software organization and properties~Software functional properties~Formal methods~Automated static analysis</concept_desc>
     <concept_significance>500</concept_significance>
+  </concept>
+  <concept>
+    <concept_id>10002978.10003022</concept_id>
+    <concept_desc>Security and privacy~Software and application security</concept_desc>
+    <concept_significance>300</concept_significance>
   </concept>
 </ccs2012>
 \end{CCSXML}
-\ccsdesc[500]{Software and its engineering}
+\ccsdesc[500]{Software and its engineering~Software organization and properties~Software functional properties~Formal methods~Automated static analysis}
+\ccsdesc[300]{Security and privacy~Software and application security}
 
-\keywords{\todo{5--8 keywords for your topic (e.g. static analysis, testing,
-  fuzzing, empirical study, program repair, refactoring, build systems)}}
+\keywords{static analysis, typestate analysis, control-flow graph,
+  recurring vulnerabilities, OpenSSL, memory safety, output parameters,
+  tree-sitter}
 
 \maketitle
 

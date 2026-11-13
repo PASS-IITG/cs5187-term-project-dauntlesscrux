@@ -1,0 +1,1041 @@
+{
+ "spec": "outparam_reset",
+ "files": 1005,
+ "counts": {
+  "conforming": 97,
+  "violation": 8,
+  "suppressed": 2
+ },
+ "errors": 0,
+ "parse_error_files": 393,
+ "sites": [
+  {
+   "file": "snap_kdf_post/crypto/LPdir_unix.c",
+   "function": "LP_find_file",
+   "param": "ctx",
+   "callee": "free",
+   "line": 115,
+   "function_has_parse_error": true,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/LPdir_unix.c",
+   "function": "LP_find_file_end",
+   "param": "ctx",
+   "callee": "free",
+   "line": 156,
+   "function_has_parse_error": false,
+   "witness": [
+    156,
+    157,
+    159
+   ],
+   "status": "violation"
+  },
+  {
+   "file": "snap_kdf_post/crypto/LPdir_vms.c",
+   "function": "LP_find_file_end",
+   "param": "ctx",
+   "callee": "free",
+   "line": 196,
+   "function_has_parse_error": false,
+   "witness": [
+    196,
+    198,
+    203
+   ],
+   "status": "violation"
+  },
+  {
+   "file": "snap_kdf_post/crypto/LPdir_win.c",
+   "function": "LP_find_file",
+   "param": "ctx",
+   "callee": "free",
+   "line": 126,
+   "function_has_parse_error": true,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/LPdir_win.c",
+   "function": "LP_find_file",
+   "param": "ctx",
+   "callee": "free",
+   "line": 170,
+   "function_has_parse_error": true,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/LPdir_win.c",
+   "function": "LP_find_file_end",
+   "param": "ctx",
+   "callee": "free",
+   "line": 208,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/asn1/a_object.c",
+   "function": "ossl_c2i_ASN1_OBJECT",
+   "param": "a",
+   "callee": "ASN1_OBJECT_free",
+   "line": 281,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/asn1/tasn_fre.c",
+   "function": "ossl_asn1_item_embed_free",
+   "param": "pval",
+   "callee": "OPENSSL_free",
+   "line": 75,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/asn1/tasn_fre.c",
+   "function": "ossl_asn1_item_embed_free",
+   "param": "pval",
+   "callee": "OPENSSL_free",
+   "line": 115,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/asn1/tasn_fre.c",
+   "function": "ossl_asn1_primitive_free",
+   "param": "pval",
+   "callee": "OPENSSL_free",
+   "line": 200,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/asn1/tasn_new.c",
+   "function": "asn1_item_embed_new",
+   "param": "pval",
+   "callee": "OPENSSL_free",
+   "line": 143,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/asn1/x_int64.c",
+   "function": "uint64_free",
+   "param": "pval",
+   "callee": "OPENSSL_free",
+   "line": 40,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/asn1/x_int64.c",
+   "function": "uint32_free",
+   "param": "pval",
+   "callee": "OPENSSL_free",
+   "line": 135,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/bio/bio_addr.c",
+   "function": "addrinfo_wrap",
+   "param": "bai",
+   "callee": "BIO_ADDRINFO_free",
+   "line": 610,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/cmp/cmp_asn.c",
+   "function": "OSSL_CMP_ITAV_push0_stack_item",
+   "param": "itav_sk_p",
+   "callee": "sk_OSSL_CMP_ITAV_free",
+   "line": 185,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/cmp/cmp_client.c",
+   "function": "cert_response",
+   "param": "resp",
+   "callee": "OSSL_CMP_MSG_free",
+   "line": 567,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/cmp/cmp_ctx.c",
+   "function": "cmp_ctx_set_md",
+   "param": "pmd",
+   "callee": "EVP_MD_free",
+   "line": 93,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/cmp/cmp_hdr.c",
+   "function": "set1_general_name",
+   "param": "tgt",
+   "callee": "GENERAL_NAME_free",
+   "line": 100,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/cmp/cmp_util.c",
+   "function": "ossl_cmp_asn1_octet_string_set1",
+   "param": "tgt",
+   "callee": "ASN1_OCTET_STRING_free",
+   "line": 260,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/cmp/cmp_util.c",
+   "function": "ossl_cmp_asn1_octet_string_set1_bytes",
+   "param": "tgt",
+   "callee": "ASN1_OCTET_STRING_free",
+   "line": 282,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/cms/cms_lib.c",
+   "function": "ossl_cms_set1_ias",
+   "param": "pias",
+   "callee": "M_ASN1_free_of",
+   "line": 702,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/cms/cms_lib.c",
+   "function": "ossl_cms_set1_keyid",
+   "param": "pkeyid",
+   "callee": "ASN1_OCTET_STRING_free",
+   "line": 725,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/conf/conf_def.c",
+   "function": "str_copy",
+   "param": "pto",
+   "callee": "OPENSSL_free",
+   "line": 783,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/ct/ct_oct.c",
+   "function": "o2i_SCT",
+   "param": "psct",
+   "callee": "SCT_free",
+   "line": 143,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/ct/ct_oct.c",
+   "function": "i2o_SCT_LIST",
+   "param": "pp",
+   "callee": "OPENSSL_free",
+   "line": 370,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/ct/ct_sct_ctx.c",
+   "function": "ct_public_key_hash",
+   "param": "hash",
+   "callee": "OPENSSL_free",
+   "line": 234,
+   "function_has_parse_error": true,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/dh/dh_asn1.c",
+   "function": "d2i_DHxparams",
+   "param": "a",
+   "callee": "DH_free",
+   "line": 109,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/dsa/dsa_ossl.c",
+   "function": "dsa_sign_setup",
+   "param": "kinvp",
+   "callee": "BN_clear_free",
+   "line": 304,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/ec/ec_asn1.c",
+   "function": "d2i_ECPKParameters",
+   "param": "a",
+   "callee": "EC_GROUP_free",
+   "line": 899,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/ec/ec_asn1.c",
+   "function": "i2o_ECPublicKey",
+   "param": "out",
+   "callee": "OPENSSL_free",
+   "line": 1177,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/ec/ecdsa_ossl.c",
+   "function": "ecdsa_sign_setup",
+   "param": "rp",
+   "callee": "BN_clear_free",
+   "line": 169,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/ec/ecdsa_ossl.c",
+   "function": "ecdsa_sign_setup",
+   "param": "kinvp",
+   "callee": "BN_clear_free",
+   "line": 170,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/evp/p_lib.c",
+   "function": "print_reset_indent",
+   "param": "out",
+   "callee": "BIO_free",
+   "line": 1112,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/evp/p_lib.c",
+   "function": "evp_pkey_copy_downgraded",
+   "param": "dest",
+   "callee": "evp_pkey_free_it",
+   "line": 2014,
+   "function_has_parse_error": false,
+   "witness": [
+    2014,
+    2017,
+    2057
+   ],
+   "status": "suppressed",
+   "reason": "deref-after-release at lines [2017, 2022, 2033, 2041, 2044]"
+  },
+  {
+   "file": "snap_kdf_post/crypto/evp/pmeth_gn.c",
+   "function": "EVP_PKEY_generate",
+   "param": "ppkey",
+   "callee": "evp_pkey_free_legacy",
+   "line": 199,
+   "function_has_parse_error": true,
+   "witness": [
+    199,
+    205,
+    207,
+    237,
+    242
+   ],
+   "status": "suppressed",
+   "reason": "deref-after-release at lines [205]"
+  },
+  {
+   "file": "snap_kdf_post/crypto/ffc/ffc_params.c",
+   "function": "ffc_bn_cpy",
+   "param": "dst",
+   "callee": "BN_clear_free",
+   "line": 173,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/http/http_lib.c",
+   "function": "free_pstring",
+   "param": "pstr",
+   "callee": "OPENSSL_free",
+   "line": 34,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pem/pem_all.c",
+   "function": "pkey_get_rsa",
+   "param": "rsa",
+   "callee": "RSA_free",
+   "line": 63,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pem/pem_all.c",
+   "function": "pkey_get_dsa",
+   "param": "dsa",
+   "callee": "DSA_free",
+   "line": 103,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pem/pem_all.c",
+   "function": "pkey_get_eckey",
+   "param": "eckey",
+   "callee": "EC_KEY_free",
+   "line": 144,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pem/pem_lib.c",
+   "function": "PEM_read_bio_ex",
+   "param": "header",
+   "callee": "pem_free",
+   "line": 975,
+   "function_has_parse_error": false,
+   "witness": [
+    975,
+    976,
+    977,
+    988,
+    989,
+    990,
+    991,
+    992
+   ],
+   "status": "violation"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pem/pem_lib.c",
+   "function": "PEM_read_bio_ex",
+   "param": "data",
+   "callee": "pem_free",
+   "line": 976,
+   "function_has_parse_error": false,
+   "witness": [
+    976,
+    977,
+    988,
+    989,
+    990,
+    991,
+    992
+   ],
+   "status": "violation"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pem/pem_pk8.c",
+   "function": "d2i_PKCS8PrivateKey_bio",
+   "param": "x",
+   "callee": "EVP_PKEY_free",
+   "line": 200,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pem/pem_pkey.c",
+   "function": "pem_read_bio_key_decoder",
+   "param": "x",
+   "callee": "EVP_PKEY_free",
+   "line": 86,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pem/pem_pkey.c",
+   "function": "pem_read_bio_key_legacy",
+   "param": "x",
+   "callee": "EVP_PKEY_free",
+   "line": 138,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pem/pem_pkey.c",
+   "function": "pem_read_bio_key_legacy",
+   "param": "x",
+   "callee": "EVP_PKEY_free",
+   "line": 166,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pem/pem_pkey.c",
+   "function": "pem_read_bio_key_legacy",
+   "param": "x",
+   "callee": "EVP_PKEY_free",
+   "line": 191,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pkcs12/p12_crt.c",
+   "function": "PKCS12_add_safe_ex",
+   "param": "psafes",
+   "callee": "sk_PKCS7_free",
+   "line": 275,
+   "function_has_parse_error": true,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pkcs12/p12_crt.c",
+   "function": "pkcs12_add_bag",
+   "param": "pbags",
+   "callee": "sk_PKCS12_SAFEBAG_free",
+   "line": 304,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pkcs12/p12_kiss.c",
+   "function": "PKCS12_parse",
+   "param": "pkey",
+   "callee": "EVP_PKEY_free",
+   "line": 120,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pkcs12/p12_kiss.c",
+   "function": "PKCS12_parse",
+   "param": "cert",
+   "callee": "X509_free",
+   "line": 124,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/pkcs7/pk7_doit.c",
+   "function": "pkcs7_decrypt_rinfo",
+   "param": "pek",
+   "callee": "OPENSSL_clear_free",
+   "line": 191,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/rand/rand_lib.c",
+   "function": "random_set_string",
+   "param": "p",
+   "callee": "OPENSSL_free",
+   "line": 741,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/rsa/rsa_acvp_test_params.c",
+   "function": "ossl_rsa_acvp_test_gen_params_new",
+   "param": "dst",
+   "callee": "ossl_rsa_acvp_test_gen_params_free",
+   "line": 60,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/ts/ts_rsp_verify.c",
+   "function": "ts_compute_imprint",
+   "param": "md_alg",
+   "callee": "X509_ALGOR_free",
+   "line": 480,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/ts/ts_rsp_verify.c",
+   "function": "ts_compute_imprint",
+   "param": "imprint",
+   "callee": "OPENSSL_free",
+   "line": 482,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/pcy_tree.c",
+   "function": "tree_calculate_authority_set",
+   "param": "pnodes",
+   "callee": "sk_X509_POLICY_NODE_free",
+   "line": 495,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/v3_pci.c",
+   "function": "process_pci_value",
+   "param": "policy",
+   "callee": "ASN1_OCTET_STRING_free",
+   "line": 234,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/v3_utl.c",
+   "function": "x509v3_add_len_value",
+   "param": "extlist",
+   "callee": "sk_CONF_VALUE_free",
+   "line": 70,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/v3_utl.c",
+   "function": "append_ia5",
+   "param": "sk",
+   "callee": "X509_email_free",
+   "line": 552,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x509_set.c",
+   "function": "ossl_x509_set1_time",
+   "param": "ptm",
+   "callee": "ASN1_TIME_free",
+   "line": 71,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x509_vfy.c",
+   "function": "get_crl_sk",
+   "param": "pcrl",
+   "callee": "X509_CRL_free",
+   "line": 1095,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x509_vfy.c",
+   "function": "get_crl_sk",
+   "param": "pdcrl",
+   "callee": "X509_CRL_free",
+   "line": 1101,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x509_vpm.c",
+   "function": "int_x509_param_set1",
+   "param": "pdest",
+   "callee": "OPENSSL_free",
+   "line": 256,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_name.c",
+   "function": "X509_NAME_set",
+   "param": "xn",
+   "callee": "X509_NAME_free",
+   "line": 494,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_pubkey.c",
+   "function": "X509_PUBKEY_set",
+   "param": "x",
+   "callee": "X509_PUBKEY_free",
+   "line": 363,
+   "function_has_parse_error": false,
+   "witness": [
+    363,
+    364,
+    365,
+    366,
+    387,
+    388
+   ],
+   "status": "violation"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_pubkey.c",
+   "function": "d2i_PUBKEY_int",
+   "param": "a",
+   "callee": "EVP_PKEY_free",
+   "line": 521,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_pubkey.c",
+   "function": "d2i_RSA_PUBKEY",
+   "param": "a",
+   "callee": "RSA_free",
+   "line": 617,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_pubkey.c",
+   "function": "ossl_d2i_DH_PUBKEY",
+   "param": "a",
+   "callee": "DH_free",
+   "line": 659,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_pubkey.c",
+   "function": "ossl_d2i_DHx_PUBKEY",
+   "param": "a",
+   "callee": "DH_free",
+   "line": 700,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_pubkey.c",
+   "function": "d2i_DSA_PUBKEY",
+   "param": "a",
+   "callee": "DSA_free",
+   "line": 742,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_pubkey.c",
+   "function": "d2i_EC_PUBKEY",
+   "param": "a",
+   "callee": "EC_KEY_free",
+   "line": 787,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_pubkey.c",
+   "function": "ossl_d2i_ED25519_PUBKEY",
+   "param": "a",
+   "callee": "ossl_ecx_key_free",
+   "line": 828,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_pubkey.c",
+   "function": "ossl_d2i_ED448_PUBKEY",
+   "param": "a",
+   "callee": "ossl_ecx_key_free",
+   "line": 870,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_pubkey.c",
+   "function": "ossl_d2i_X25519_PUBKEY",
+   "param": "a",
+   "callee": "ossl_ecx_key_free",
+   "line": 912,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_pubkey.c",
+   "function": "ossl_d2i_X448_PUBKEY",
+   "param": "a",
+   "callee": "ossl_ecx_key_free",
+   "line": 954,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/crypto/x509/x_x509.c",
+   "function": "i2d_X509_AUX",
+   "param": "pp",
+   "callee": "OPENSSL_free",
+   "line": 283,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/baseprov.c",
+   "function": "ossl_base_provider_init",
+   "param": "provctx",
+   "callee": "ossl_prov_ctx_free",
+   "line": 166,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/common/provider_util.c",
+   "function": "load_common",
+   "param": "engine",
+   "callee": "ENGINE_free",
+   "line": 80,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/common/provider_util.c",
+   "function": "load_common",
+   "param": "engine",
+   "callee": "ENGINE_free",
+   "line": 85,
+   "function_has_parse_error": false,
+   "witness": [
+    85,
+    88
+   ],
+   "status": "violation"
+  },
+  {
+   "file": "snap_kdf_post/providers/common/provider_util.c",
+   "function": "ossl_prov_macctx_load_from_params",
+   "param": "macctx",
+   "callee": "EVP_MAC_CTX_free",
+   "line": 317,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/common/provider_util.c",
+   "function": "ossl_prov_macctx_load_from_params",
+   "param": "macctx",
+   "callee": "EVP_MAC_CTX_free",
+   "line": 336,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/defltprov.c",
+   "function": "ossl_default_provider_init",
+   "param": "provctx",
+   "callee": "ossl_prov_ctx_free",
+   "line": 586,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/implementations/kdfs/kbkdf.c",
+   "function": "kbkdf_set_buffer",
+   "param": "out",
+   "callee": "OPENSSL_clear_free",
+   "line": 286,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/implementations/kdfs/krb5kdf.c",
+   "function": "krb5kdf_set_membuf",
+   "param": "dst",
+   "callee": "OPENSSL_clear_free",
+   "line": 99,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/implementations/kdfs/pbkdf1.c",
+   "function": "kdf_pbkdf1_set_membuf",
+   "param": "buffer",
+   "callee": "OPENSSL_clear_free",
+   "line": 136,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/implementations/kdfs/pbkdf2.c",
+   "function": "pbkdf2_set_membuf",
+   "param": "buffer",
+   "callee": "OPENSSL_clear_free",
+   "line": 128,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/implementations/kdfs/pkcs12kdf.c",
+   "function": "pkcs12kdf_set_membuf",
+   "param": "buffer",
+   "callee": "OPENSSL_clear_free",
+   "line": 184,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/implementations/kdfs/pvkkdf.c",
+   "function": "pvk_set_membuf",
+   "param": "buffer",
+   "callee": "OPENSSL_clear_free",
+   "line": 99,
+   "function_has_parse_error": false,
+   "witness": [
+    99,
+    100,
+    105,
+    110
+   ],
+   "status": "violation"
+  },
+  {
+   "file": "snap_kdf_post/providers/implementations/kdfs/scrypt.c",
+   "function": "scrypt_set_membuf",
+   "param": "buffer",
+   "callee": "OPENSSL_clear_free",
+   "line": 110,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/implementations/kdfs/sshkdf.c",
+   "function": "sshkdf_set_membuf",
+   "param": "dst",
+   "callee": "OPENSSL_clear_free",
+   "line": 92,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/implementations/kdfs/sskdf.c",
+   "function": "sskdf_set_buffer",
+   "param": "out",
+   "callee": "OPENSSL_free",
+   "line": 327,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/providers/implementations/kdfs/x942kdf.c",
+   "function": "x942kdf_set_buffer",
+   "param": "out",
+   "callee": "OPENSSL_free",
+   "line": 377,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/d1_srtp.c",
+   "function": "ssl_ctx_make_profiles",
+   "param": "out",
+   "callee": "sk_SRTP_PROTECTION_PROFILE_free",
+   "line": 98,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/ssl_asn1.c",
+   "function": "ssl_session_strndup",
+   "param": "pdst",
+   "callee": "OPENSSL_free",
+   "line": 217,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/ssl_cert.c",
+   "function": "set0_CA_list",
+   "param": "ca_list",
+   "callee": "sk_X509_NAME_pop_free",
+   "line": 453,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/ssl_ciph.c",
+   "function": "ssl_cipher_get_evp",
+   "param": "enc",
+   "callee": "ssl_evp_cipher_free",
+   "line": 559,
+   "function_has_parse_error": false,
+   "witness": [
+    559,
+    560
+   ],
+   "status": "violation"
+  },
+  {
+   "file": "snap_kdf_post/ssl/ssl_ciph.c",
+   "function": "ssl_cipher_get_evp",
+   "param": "enc",
+   "callee": "ssl_evp_cipher_free",
+   "line": 606,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/ssl_ciph.c",
+   "function": "ssl_cipher_get_evp",
+   "param": "md",
+   "callee": "ssl_evp_md_free",
+   "line": 607,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/ssl_ciph.c",
+   "function": "set_ciphersuites",
+   "param": "currciphers",
+   "callee": "sk_SSL_CIPHER_free",
+   "line": 1349,
+   "function_has_parse_error": true,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/ssl_ciph.c",
+   "function": "update_cipher_list_by_id",
+   "param": "cipher_list_by_id",
+   "callee": "sk_SSL_CIPHER_free",
+   "line": 1364,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/ssl_ciph.c",
+   "function": "update_cipher_list",
+   "param": "cipher_list",
+   "callee": "sk_SSL_CIPHER_free",
+   "line": 1411,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/ssl_ciph.c",
+   "function": "ssl_create_cipher_list",
+   "param": "cipher_list",
+   "callee": "sk_SSL_CIPHER_free",
+   "line": 1687,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/ssl_lib.c",
+   "function": "ssl_replace_hash",
+   "param": "hash",
+   "callee": "EVP_MD_CTX_free",
+   "line": 4749,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/ssl_lib.c",
+   "function": "ssl_clear_hash_ctx",
+   "param": "hash",
+   "callee": "EVP_MD_CTX_free",
+   "line": 4759,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/t1_lib.c",
+   "function": "tls1_set_groups",
+   "param": "pext",
+   "callee": "OPENSSL_free",
+   "line": 728,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "snap_kdf_post/ssl/t1_lib.c",
+   "function": "tls1_save_u16",
+   "param": "pdest",
+   "callee": "OPENSSL_free",
+   "line": 2327,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  }
+ ]
+}

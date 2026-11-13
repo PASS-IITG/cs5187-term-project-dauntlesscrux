@@ -1,0 +1,18 @@
+===== clang_analysis /mnt/d/CVE-Typestate-Project-clang-analysis rc=0 =====
+## HEAD (no branch)
+===== openssl-cve-2022-4450-vulnerable /mnt/d/cve-typestate-project/openssl-cve-2022-4450-vulnerable rc=124 =====
+STDERR: TIMEOUT after 60s
+===== main /mnt/d/cve-typestate-project rc=124 =====
+STDERR: TIMEOUT after 60s
+===== openssl-cve-2022-4450-fixed /mnt/d/cve-typestate-project/openssl-cve-2022-4450-fixed rc=124 =====
+STDERR: TIMEOUT after 60s
+===== openssl-cve-2023-0215-fixed /mnt/d/cve-typestate-project/openssl-cve-2023-0215-fixed rc=124 =====
+STDERR: TIMEOUT after 60s
+===== openssl-cve-2023-0215-vulnerable /mnt/d/cve-typestate-project/openssl-cve-2023-0215-vulnerable rc=124 =====
+STDERR: TIMEOUT after 60s
+===== openssl-cve-2024-4741-vulnerable /mnt/d/cve-typestate-project/openssl-cve-2024-4741-vulnerable rc=0 =====
+## HEAD (no branch)
+ M test/smime-eml/SignedInvalidMappingFromanyPolicyTest7.eml
+===== openssl-cve-2024-4741-fixed /mnt/d/cve-typestate-project/openssl-cve-2024-4741-fixed rc=0 =====
+## HEAD (no branch)
+ M test/smime-eml/SignedInvalidMappingFromanyPolicyTest7.eml

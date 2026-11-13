@@ -1,0 +1,1 @@
+COMMAND: clang-18 --analyze -std=c11 -I<SOURCE>/include -I<SOURCE> -include openssl_api_ownership_model.h -Xclang -analyzer-checker=core,unix.Malloc,unix.MismatchedDeallocator -Xclang -analyzer-config -Xclang unix.DynamicMemoryModeling:Optimistic=true -Xclang -analyzer-output=text openssl_api_model_probe.c

@@ -1,0 +1,3 @@
+Input files with any direct free-named calls: 679
+Files with candidate repeated same callee and identifier within inferred function body: 430
+Files whose function boundaries could not be inferred: 0; retained conservatively in the scan list.

@@ -1,0 +1,23 @@
+{
+  "name": "structfield_reset",
+  "protocol": "C",
+  "derived_from": "10 independent OpenSSL fixes found by historical commit search (results/historical_recurrence_search.md), e.g. dh_finish/dsa_finish (a32df28664/73f3bd8871), SRP_user_pwd_set1_ids (792b2c8da2), TLS1-PRF KDF (72029afd91)",
+  "invariant": "If a function releases the object a struct-field out-parameter points to (OBJ->FIELD, for OBJ one of the function's own pointer parameters), it must reset OBJ->FIELD on every path to function exit.",
+  "states": ["Valid", "Released", "Reset"],
+  "tracked": {
+    "kind": "struct_field_of_pointer_parameter"
+  },
+  "release": {
+    "call_name_regex": "(?i)free",
+    "argument": "OBJ->FIELD"
+  },
+  "reset": {
+    "assignment_to": "OBJ->FIELD"
+  },
+  "violation": "function exit reachable from a Released state without passing a Reset",
+  "suppress": {
+    "deref_after_release": true
+  },
+  "status": "exploratory, built and validated this session against 2 of the 10 historical motivating pairs; not as thoroughly unit-tested as Protocol A/B",
+  "notes": "No function or struct-field names appear in the rule. Conservative: only a one-level OBJ->FIELD/OBJ.FIELD off a bare parameter identifier is tracked; no multi-level chains, no array-indexed bases, no aliasing analysis."
+}

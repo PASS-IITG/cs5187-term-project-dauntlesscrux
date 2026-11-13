@@ -1,0 +1,14 @@
+VIOLATION snap_v3_0_0/crypto/LPdir_unix.c:156 LP_find_file_end() releases *ctx via free; exit reachable without reset (path lines [156, 157, 159])
+VIOLATION snap_v3_0_0/crypto/LPdir_vms.c:196 LP_find_file_end() releases *ctx via free; exit reachable without reset (path lines [196, 198, 203])
+VIOLATION snap_v3_0_0/crypto/pem/pem_lib.c:978 PEM_read_bio_ex() releases *header via pem_free; exit reachable without reset (path lines [978, 979, 980, 991, 992, 993, 994, 995])
+VIOLATION snap_v3_0_0/crypto/pem/pem_lib.c:979 PEM_read_bio_ex() releases *data via pem_free; exit reachable without reset (path lines [979, 980, 991, 992, 993, 994, 995])
+VIOLATION snap_v3_0_0/crypto/x509/x_pubkey.c:349 X509_PUBKEY_set() releases *x via X509_PUBKEY_free; exit reachable without reset (path lines [349, 350, 351, 352, 373, 374])
+VIOLATION snap_v3_0_0/providers/implementations/kdfs/pbkdf1.c:136 kdf_pbkdf1_set_membuf() releases *buffer via OPENSSL_clear_free; exit reachable without reset (path lines [136, 137, 142, 147])
+VIOLATION snap_v3_0_0/providers/implementations/kdfs/pbkdf2.c:128 pbkdf2_set_membuf() releases *buffer via OPENSSL_clear_free; exit reachable without reset (path lines [128, 129, 134, 139])
+VIOLATION snap_v3_0_0/providers/implementations/kdfs/pkcs12kdf.c:184 pkcs12kdf_set_membuf() releases *buffer via OPENSSL_clear_free; exit reachable without reset (path lines [184, 185, 190, 195])
+VIOLATION snap_v3_0_0/providers/implementations/kdfs/scrypt.c:110 scrypt_set_membuf() releases *buffer via OPENSSL_clear_free; exit reachable without reset (path lines [110, 111, 116, 121])
+VIOLATION snap_v3_0_0/ssl/ssl_ciph.c:559 ssl_cipher_get_evp() releases *enc via ssl_evp_cipher_free; exit reachable without reset (path lines [559, 560])
+SUPPRESSED snap_v3_0_0/crypto/evp/p_lib.c:2004 evp_pkey_copy_downgraded() releases *dest via evp_pkey_free_it; deref-after-release at lines [2007, 2012, 2023, 2031, 2034]
+SUPPRESSED snap_v3_0_0/crypto/evp/pmeth_gn.c:199 EVP_PKEY_generate() releases *ppkey via evp_pkey_free_legacy; deref-after-release at lines [205]
+files=999 release-sites: conforming=92 violation=10 suppressed=2 errors=0 parse_error_files=390 sites_in_functions_with_parse_errors=7
+exit=1

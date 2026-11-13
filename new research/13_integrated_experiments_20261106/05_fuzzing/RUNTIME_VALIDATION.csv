@@ -1,0 +1,4 @@
+CVE,Instrument,Result,Logs
+CVE-2022-4450,ASan,Confirmed vulnerable double-free at PEM error cleanup; corrected official fix clean,05_fuzzing/logs/cve2022_vulnerable_asan_run.log; 05_fuzzing/logs/cve2022_fixed_build_and_run.log
+CVE-2023-0215,ASan,Confirmed vulnerable heap-use-after-free during CMS streaming; fixed revision reached unsupported DES cipher error path without ASan diagnostic,05_fuzzing/logs/cve2023_vulnerable_noasm_retry.log; 05_fuzzing/logs/cve2023_fixed_build_and_run.log
+CVE-2024-4741,ASan,Confirmed vulnerable use-after-free after partial application read and SSL_free_buffers; official fixed revision declines buffer release and reads remainder cleanly,05_fuzzing/logs/cve2024_vulnerable_build_and_run.log; 05_fuzzing/logs/cve2024_fixed_build_and_run.log

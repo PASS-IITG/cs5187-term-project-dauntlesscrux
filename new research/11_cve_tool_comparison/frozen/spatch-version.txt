@@ -1,0 +1,5 @@
+spatch version 1.1.1 compiled with OCaml version 4.14.1
+Flags passed to the configure script: --prefix=/usr --sysconfdir=/etc --libdir=/usr/lib --enable-ocaml --enable-python --with-python=python3 --enable-opt
+OCaml scripting support: yes
+Python scripting support: yes
+Syntax of regular expressions: Str

@@ -1,0 +1,426 @@
+demos/bio/server-cmod.c:25:11: style: Variable 'port' can be declared as pointer to const [constVariablePointer]
+    char *port = "*:4433";
+          ^
+demos/bio/server-conf.c:26:11: style: Variable 'port' can be declared as pointer to const [constVariablePointer]
+    char *port = "*:4433";
+          ^
+demos/bio/server-conf.c:33:27: style: Variable 'sect' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(CONF_VALUE) *sect = NULL;
+                          ^
+demos/cms/cms_ver.c:28:12: style: The scope of the variable 'loc' can be reduced. [variableScope]
+    int i, loc;
+           ^
+demos/cms/cms_ver.c:21:31: style: Variable 'sis' can be declared as pointer to const [constVariablePointer]
+    STACK_OF(CMS_SignerInfo) *sis;
+                              ^
+demos/cms/cms_ver.c:22:21: style: Variable 'si' can be declared as pointer to const [constVariablePointer]
+    CMS_SignerInfo *si;
+                    ^
+demos/cms/cms_ver.c:23:21: style: Variable 'attr' can be declared as pointer to const [constVariablePointer]
+    X509_ATTRIBUTE *attr;
+                    ^
+demos/cms/cms_ver.c:25:19: style: Variable 'utctime' can be declared as pointer to const [constVariablePointer]
+    ASN1_UTCTIME *utctime;
+                  ^
+demos/cms/cms_ver.c:26:27: style: Variable 'gtime' can be declared as pointer to const [constVariablePointer]
+    ASN1_GENERALIZEDTIME *gtime;
+                          ^
+demos/digest/EVP_MD_stdin.c:67:23: style: Checking if unsigned expression 'digest_length' is less than zero. [unsignedLessThanZero]
+    if (digest_length <= 0) {
+                      ^
+demos/encode/ec_encode.c:102:32: style: Parameter 'pkey' can be declared as pointer to const [constParameterPointer]
+static int store_key(EVP_PKEY *pkey, FILE *f, const char *passphrase)
+                               ^
+demos/encode/rsa_encode.c:102:32: style: Parameter 'pkey' can be declared as pointer to const [constParameterPointer]
+static int store_key(EVP_PKEY *pkey, FILE *f, const char *passphrase)
+                               ^
+demos/dtlsecho/main.c:123:29: style: Parameter 'ssl' can be declared as pointer to const [constParameterPointer]
+static int peer_cookie(SSL *ssl, unsigned char *cookie, size_t *cookie_len)
+                            ^
+demos/dtlsecho/main.c:228:11: style: Variable 'rem_server_name' can be declared as pointer to const [constVariablePointer]
+    char *rem_server_name = NULL;
+          ^
+demos/dtlsecho/main.c:222:11: style: Variable 'txbuf' can be declared as pointer to const [constVariablePointer]
+    char *txbuf;
+          ^
+demos/dtlsecho/main.c:427:29: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+                if ((result = SSL_write(ssl, txbuf, (int)strlen(txbuf))) <= 0) {
+                            ^
+demos/dtlslistenerecho/main.c:737:14: style: The scope of the variable 'err' can be reduced. [variableScope]
+    int ret, err;
+             ^
+demos/dtlslistenerecho/main.c:430:65: style: Parameter 'threads' can be declared as pointer to const [constParameterPointer]
+static int find_free_thread_slot(struct connection_thread_args *threads)
+                                                                ^
+demos/dtlslistenerecho/main.c:810:30: style: Parameter 'rem_server_name' can be declared as pointer to const [constParameterPointer]
+static void run_client(char *rem_server_name, int dtls_version)
+                             ^
+demos/dtlslistenerecho/main.c:828:11: style: Variable 'nl' can be declared as pointer to const [constVariablePointer]
+    char *nl;
+          ^
+demos/guide/quic-client-block.c:130:22: style: Variable 'port' can be declared as pointer to const [constVariablePointer]
+    char *hostname, *port;
+                     ^
+demos/guide/quic-client-non-block.c:238:22: style: Variable 'port' can be declared as pointer to const [constVariablePointer]
+    char *hostname, *port;
+                     ^
+demos/guide/quic-multi-stream.c:148:22: style: Variable 'port' can be declared as pointer to const [constVariablePointer]
+    char *hostname, *port;
+                     ^
+demos/guide/quic-server-block.c:261:13: style: 'continue' is redundant since it is the last statement in a loop. [redundantContinue]
+            continue;
+            ^
+demos/guide/tls-client-block.c:111:22: style: Variable 'port' can be declared as pointer to const [constVariablePointer]
+    char *hostname, *port;
+                     ^
+demos/guide/tls-client-non-block.c:103:36: style: Parameter 'ssl' can be declared as pointer to const [constParameterPointer]
+static void wait_for_activity(SSL *ssl, int write)
+                                   ^
+demos/guide/tls-client-non-block.c:189:22: style: Variable 'port' can be declared as pointer to const [constVariablePointer]
+    char *hostname, *port;
+                     ^
+demos/http3/ossl-nghttp3-demo-server.c:586:13: warning: %lld in format string (no. 1) requires 'long long' but the argument type is 'unsigned long long'. [invalidPrintfArgType_sint]
+            printf("=> Received connection on %lld %d\n", (unsigned long long)new_id,
+            ^
+demos/http3/ossl-nghttp3-demo-server.c:739:13: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            printf("revent %llu (%d) on %llu NOT PROCESSED!\n",
+            ^
+demos/http3/ossl-nghttp3-demo-server.c:782:13: warning: %lld in format string (no. 2) requires 'long long' but the argument type is 'unsigned long long'. [invalidPrintfArgType_sint]
+            printf("get_file_length %s %lld\n", filename, (unsigned long long)st.st_size);
+            ^
+demos/http3/ossl-nghttp3-demo-server.c:756:13: style: Redundant initialization for 'ssl_ids'. The initialized value is overwritten before it is read. [redundantInitialization]
+    ssl_ids = h3ssl->ssl_ids;
+            ^
+demos/http3/ossl-nghttp3-demo-server.c:753:28: note: ssl_ids is initialized
+    struct ssl_id *ssl_ids = h3ssl->ssl_ids;
+                           ^
+demos/http3/ossl-nghttp3-demo-server.c:756:13: note: ssl_ids is overwritten
+    ssl_ids = h3ssl->ssl_ids;
+            ^
+demos/http3/ossl-nghttp3-demo-server.c:1324:22: style: Variable 'hassomething' is reassigned a value before the old one has been used. [redundantAssignment]
+        hassomething = 0;
+                     ^
+demos/http3/ossl-nghttp3-demo-server.c:1293:34: note: hassomething is assigned
+                    hassomething = 1;
+                                 ^
+demos/http3/ossl-nghttp3-demo-server.c:1324:22: note: hassomething is overwritten
+        hassomething = 0;
+                     ^
+demos/http3/ossl-nghttp3-demo-server.c:164:62: style: Parameter 'oldstream' can be declared as pointer to const [constParameterPointer]
+static void replace_ids_connection(struct h3ssl *h3ssl, SSL *oldstream, SSL *newstream)
+                                                             ^
+demos/http3/ossl-nghttp3-demo-server.c:765:45: style: Parameter 'h3ssl' can be declared as pointer to const [constParameterPointer]
+static size_t get_file_length(struct h3ssl *h3ssl)
+                                            ^
+demos/http3/ossl-nghttp3-demo-server.c:851:14: style: Parameter 'buff' can be declared as pointer to const [constParameterPointer]
+    uint8_t *buff, size_t len, uint64_t flags,
+             ^
+demos/http3/ossl-nghttp3-demo.c:90:9: portability: %lu in format string (no. 1) requires 'unsigned long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+        fprintf(stderr, "writing %lu bytes to %s\n", datalen, sdata->outpath);
+        ^
+demos/http3/ossl-nghttp3-demo.c:209:17: portability: %lu in format string (no. 1) requires 'unsigned long' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_uint]
+                fprintf(stderr, "Failed to read request file at index %lu\n", req_count);
+                ^
+demos/http3/ossl-nghttp3-demo.c:205:17: warning: fscanf() without field width limits can crash with huge input data. [invalidscanf]
+            if (fscanf(req_fp, "%s", buffer) != 1) {
+                ^
+demos/http3/ossl-nghttp3-demo.c:203:13: error: Common realloc mistake: 'req_array' nulled but not freed upon failure [memleakOnRealloc]
+            req_array = realloc(req_array, sizeof(char *) * req_count);
+            ^
+demos/http3/ossl-nghttp3-demo.c:73:12: style: The scope of the variable 'wr' can be reduced. [variableScope]
+    size_t wr;
+           ^
+demos/http3/ossl-nghttp3.c:62:68: style: inconclusive: Function 'OSSL_DEMO_H3_STREAM_get_user_data' argument 1 names different: declaration 'stream' definition 's'. [funcArgNamesDifferent]
+void *OSSL_DEMO_H3_STREAM_get_user_data(const OSSL_DEMO_H3_STREAM *s)
+                                                                   ^
+demos/http3/ossl-nghttp3.h:110:68: note: Function 'OSSL_DEMO_H3_STREAM_get_user_data' argument 1 names different: declaration 'stream' definition 's'.
+void *OSSL_DEMO_H3_STREAM_get_user_data(const OSSL_DEMO_H3_STREAM *stream);
+                                                                   ^
+demos/http3/ossl-nghttp3.c:62:68: note: Function 'OSSL_DEMO_H3_STREAM_get_user_data' argument 1 names different: declaration 'stream' definition 's'.
+void *OSSL_DEMO_H3_STREAM_get_user_data(const OSSL_DEMO_H3_STREAM *s)
+                                                                   ^
+demos/http3/ossl-nghttp3.c:398:85: style: inconclusive: Function 'OSSL_DEMO_H3_CONN_new_for_addr' argument 2 names different: declaration 'addr' definition 'bai'. [funcArgNamesDifferent]
+OSSL_DEMO_H3_CONN *OSSL_DEMO_H3_CONN_new_for_addr(SSL_CTX *ctx, const BIO_ADDRINFO *bai,
+                                                                                    ^
+demos/http3/ossl-nghttp3.h:64:25: note: Function 'OSSL_DEMO_H3_CONN_new_for_addr' argument 2 names different: declaration 'addr' definition 'bai'.
+    const BIO_ADDRINFO *addr,
+                        ^
+demos/http3/ossl-nghttp3.c:398:85: note: Function 'OSSL_DEMO_H3_CONN_new_for_addr' argument 2 names different: declaration 'addr' definition 'bai'.
+OSSL_DEMO_H3_CONN *OSSL_DEMO_H3_CONN_new_for_addr(SSL_CTX *ctx, const BIO_ADDRINFO *bai,
+                                                                                    ^
+demos/http3/ossl-nghttp3.c:745:23: style: inconclusive: Function 'OSSL_DEMO_H3_CONN_submit_request' argument 2 names different: declaration 'hdr' definition 'nva'. [funcArgNamesDifferent]
+    const nghttp3_nv *nva, size_t nvlen,
+                      ^
+demos/http3/ossl-nghttp3.h:102:23: note: Function 'OSSL_DEMO_H3_CONN_submit_request' argument 2 names different: declaration 'hdr' definition 'nva'.
+    const nghttp3_nv *hdr, size_t hdrlen,
+                      ^
+demos/http3/ossl-nghttp3.c:745:23: note: Function 'OSSL_DEMO_H3_CONN_submit_request' argument 2 names different: declaration 'hdr' definition 'nva'.
+    const nghttp3_nv *nva, size_t nvlen,
+                      ^
+demos/http3/ossl-nghttp3.c:745:35: style: inconclusive: Function 'OSSL_DEMO_H3_CONN_submit_request' argument 3 names different: declaration 'hdrlen' definition 'nvlen'. [funcArgNamesDifferent]
+    const nghttp3_nv *nva, size_t nvlen,
+                                  ^
+demos/http3/ossl-nghttp3.h:102:35: note: Function 'OSSL_DEMO_H3_CONN_submit_request' argument 3 names different: declaration 'hdrlen' definition 'nvlen'.
+    const nghttp3_nv *hdr, size_t hdrlen,
+                                  ^
+demos/http3/ossl-nghttp3.c:745:35: note: Function 'OSSL_DEMO_H3_CONN_submit_request' argument 3 names different: declaration 'hdrlen' definition 'nvlen'.
+    const nghttp3_nv *nva, size_t nvlen,
+                                  ^
+demos/http3/ossl-nghttp3.c:747:11: style: inconclusive: Function 'OSSL_DEMO_H3_CONN_submit_request' argument 5 names different: declaration 'stream_user_data' definition 'user_data'. [funcArgNamesDifferent]
+    void *user_data)
+          ^
+demos/http3/ossl-nghttp3.h:104:11: note: Function 'OSSL_DEMO_H3_CONN_submit_request' argument 5 names different: declaration 'stream_user_data' definition 'user_data'.
+    void *stream_user_data);
+          ^
+demos/http3/ossl-nghttp3.c:747:11: note: Function 'OSSL_DEMO_H3_CONN_submit_request' argument 5 names different: declaration 'stream_user_data' definition 'user_data'.
+    void *user_data)
+          ^
+demos/http3/ossl-nghttp3.c:586:10: style: Variable 'snew' can be declared as pointer to const [constVariablePointer]
+    SSL *snew;
+         ^
+demos/pkcs12/pkread.c:18:41: style: Parameter 'p12' can be declared as pointer to const [constParameterPointer]
+static char *find_friendly_name(PKCS12 *p12)
+                                        ^
+demos/pkey/EVP_PKEY_EC_keygen.c:114:25: style: Checking if unsigned expression 'out_privkey_len' is less than zero. [unsignedLessThanZero]
+    if (out_privkey_len <= 0 || out_privkey_len > sizeof(out_privkey)) {
+                        ^
+demos/pkey/EVP_PKEY_EC_keygen.c:85:37: style: Parameter 'pkey' can be declared as pointer to const [constParameterPointer]
+static int get_key_values(EVP_PKEY *pkey)
+                                    ^
+demos/pkey/dsa.inc:115:17: style: Local variable 'gindex' shadows outer variable [shadowVariable]
+    int rv = 0, gindex, counter;
+                ^
+demos/pkey/EVP_PKEY_DSA_paramvalidate.c:48:18: note: Shadowed declaration
+static const int gindex = 42;
+                 ^
+demos/pkey/dsa.inc:115:17: note: Shadow variable
+    int rv = 0, gindex, counter;
+                ^
+demos/pkey/EVP_PKEY_DSA_paramvalidate.c:56:50: style: Parameter 'dsaparams' can be declared as pointer to const [constParameterPointer]
+static EVP_PKEY_CTX *create_merged_key(EVP_PKEY *dsaparams, const OSSL_PARAM *newparams,
+                                                 ^
+demos/signature/EVP_DSA_Signature_demo.c:225:36: style: Parameter 'sig_value' can be declared as pointer to const [constParameterPointer]
+    size_t sig_len, unsigned char *sig_value,
+                                   ^
+demos/signature/EVP_EC_Signature_demo.c:117:17: style: Checking if unsigned expression 'sig_len' is less than zero. [unsignedLessThanZero]
+    if (sig_len <= 0) {
+                ^
+demos/signature/EVP_EC_Signature_demo.c:147:36: style: Parameter 'sig_value' can be declared as pointer to const [constParameterPointer]
+    size_t sig_len, unsigned char *sig_value)
+                                   ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:837:19: style: Condition 'rc==0' is always false [knownConditionTrueFalse]
+    } else if (rc == 0) {
+                  ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:821:12: note: Assuming that condition 'rc<=0' is not redundant
+    if (rc <= 0) {
+           ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:837:19: note: Condition 'rc==0' is always false
+    } else if (rc == 0) {
+                  ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:1471:12: warning: Either the condition 'qconn_pe!=NULL' is redundant or there is possible null pointer dereference: qconn_pe. [nullPointerRedundantCheck]
+    assert(qconn_pe->pe_poll_item.revents & SSL_POLL_EVENT_OS);
+           ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:1486:18: note: Assuming that condition 'qconn_pe!=NULL' is not redundant
+    if (qconn_pe != NULL) {
+                 ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:1471:12: note: Null pointer dereference
+    assert(qconn_pe->pe_poll_item.revents & SSL_POLL_EVENT_OS);
+           ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:1477:9: warning: Either the condition 'qconn_pe!=NULL' is redundant or there is possible null pointer dereference: qconn_pe. [nullPointerRedundantCheck]
+    if (qconn_pe->pe_poll_item.revents & SSL_POLL_EVENT_OSU)
+        ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:1486:18: note: Assuming that condition 'qconn_pe!=NULL' is not redundant
+    if (qconn_pe != NULL) {
+                 ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:1477:9: note: Null pointer dereference
+    if (qconn_pe->pe_poll_item.revents & SSL_POLL_EVENT_OSU)
+        ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:180:1: style: Variable 'lh->omega' is reassigned a value before the old one has been used. [redundantAssignment]
+DEFINE_LIST_OF(pe, struct poll_event);
+^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:180:1: note: lh->omega is assigned
+DEFINE_LIST_OF(pe, struct poll_event);
+^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:180:1: note: lh->omega is overwritten
+DEFINE_LIST_OF(pe, struct poll_event);
+^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:182:1: style: Variable 'lh->omega' is reassigned a value before the old one has been used. [redundantAssignment]
+DEFINE_LIST_OF(peccx, struct poll_event_context);
+^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:182:1: note: lh->omega is assigned
+DEFINE_LIST_OF(peccx, struct poll_event_context);
+^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:182:1: note: lh->omega is overwritten
+DEFINE_LIST_OF(peccx, struct poll_event_context);
+^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:1261:12: style: Variable 'rv' is reassigned a value before the old one has been used. [redundantAssignment]
+        rv = -1;
+           ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:1248:12: note: rv is assigned
+        rv = SSL_stream_conclude(get_ssl_from_pe(pe), 0);
+           ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:1261:12: note: rv is overwritten
+        rv = -1;
+           ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:436:33: style: Variable 'rts' can be declared as pointer to const [constVariablePointer]
+    struct response_txt_simple *rts = rb_to_txt_simple(rb);
+                                ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:481:33: style: Variable 'rts' can be declared as pointer to const [constVariablePointer]
+    struct response_txt_simple *rts = rb_to_txt_simple(rb);
+                                ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:521:31: style: Variable 'rtf' can be declared as pointer to const [constVariablePointer]
+    struct response_txt_full *rtf = rb_to_txt_full(rb);
+                              ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:573:31: style: Variable 'rtf' can be declared as pointer to const [constVariablePointer]
+    struct response_txt_full *rtf = rb_to_txt_full(rb);
+                              ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:813:10: style: Variable 'ssl' can be declared as pointer to const [constVariablePointer]
+    SSL *ssl = get_ssl_from_pe(pe);
+         ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:1328:11: style: Variable 'end' can be declared as pointer to const [constVariablePointer]
+    char *end = &file_name_buf[4096];
+          ^
+demos/quic/poll-server/quic-server-ssl-poll-http.c:1329:11: style: Variable 'file_name' can be declared as pointer to const [constVariablePointer]
+    char *file_name;
+          ^
+demos/sslecho/echecho.c:436:32: style: The comparison 'txcap > 0' is always false. [knownConditionTrueFalse]
+    if (txbuf != NULL && txcap > 0)
+                               ^
+demos/sslecho/echecho.c:200:20: note: 'txcap' is assigned value '0' here.
+    size_t txcap = 0;
+                   ^
+demos/sslecho/echecho.c:436:32: note: The comparison 'txcap > 0' is always false.
+    if (txbuf != NULL && txcap > 0)
+                               ^
+demos/sslecho/echecho.c:108:20: style: Parameter 'buf' can be declared as pointer to const [constParameterPointer]
+    unsigned char *buf, size_t len)
+                   ^
+demos/sslecho/echecho.c:397:29: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+                if ((result = SSL_write(ssl, txbuf, (int)strlen(txbuf))) <= 0) {
+                            ^
+demos/sslecho/main.c:155:11: style: Variable 'txbuf' can be declared as pointer to const [constVariablePointer]
+    char *txbuf;
+          ^
+demos/sslecho/main.c:338:29: style: Variable 'result' is assigned a value that is never used. [unreadVariable]
+                if ((result = SSL_write(ssl, txbuf, (int)strlen(txbuf))) <= 0) {
+                            ^
+doc/designs/ddd/ddd-04-fd-nonblocking.c:116:9: style: The scope of the variable 'rc' can be reduced. [variableScope]
+    int rc, l;
+        ^
+doc/designs/ddd/ddd-04-fd-nonblocking.c:145:9: style: The scope of the variable 'rc' can be reduced. [variableScope]
+    int rc, l;
+        ^
+doc/designs/ddd/ddd-04-fd-nonblocking.c:180:27: style: Parameter 'conn' can be declared as pointer to const [constParameterPointer]
+int get_conn_fd(APP_CONN *conn)
+                          ^
+doc/designs/ddd/ddd-05-mem-nonblocking.c:115:9: error: Memory leak: conn [memleak]
+        return NULL;
+        ^
+doc/designs/ddd/ddd-05-mem-nonblocking.c:141:9: style: The scope of the variable 'rc' can be reduced. [variableScope]
+    int rc, l;
+        ^
+doc/designs/ddd/ddd-05-mem-nonblocking.c:170:9: style: The scope of the variable 'rc' can be reduced. [variableScope]
+    int rc, l;
+        ^
+doc/designs/ddd/ddd-06-mem-uv.c:227:5: error: Address of local auto-variable assigned to a function parameter. [autoVariables]
+    conn->teardown_done = &teardown_done;
+    ^
+doc/designs/ddd/ddd-06-mem-uv.c:239:12: style: Condition '!teardown_done' is always true [knownConditionTrueFalse]
+    while (!teardown_done)
+           ^
+doc/designs/ddd/ddd-06-mem-uv.c:215:26: note: Assignment 'teardown_done=0', assigned value is 0
+    char teardown_done = 0;
+                         ^
+doc/designs/ddd/ddd-06-mem-uv.c:217:14: note: Assuming condition is false
+    if (conn == NULL)
+             ^
+doc/designs/ddd/ddd-06-mem-uv.c:239:12: note: Condition '!teardown_done' is always true
+    while (!teardown_done)
+           ^
+doc/designs/ddd/ddd-06-mem-uv.c:332:9: style: The scope of the variable 'rc' can be reduced. [variableScope]
+    int rc;
+        ^
+doc/designs/ddd/ddd-06-mem-uv.c:357:9: style: The scope of the variable 'rc' can be reduced. [variableScope]
+    int rc;
+        ^
+doc/designs/ddd/ddd-06-mem-uv.c:604:9: style: The scope of the variable 'rc' can be reduced. [variableScope]
+    int rc, rcx;
+        ^
+doc/designs/ddd/ddd-06-mem-uv.c:752:8: style: Variable 'rc' is assigned a value that is never used. [unreadVariable]
+    rc = 0;
+       ^
+fuzz/driver.c:53:0: error: #error "Unsupported fuzzer" [preprocessorErrorDirective]
+#error "Unsupported fuzzer"
+^
+fuzz/cmp.c:31:48: style: Parameter 'ctx' can be declared as pointer to const. However it seems that 'transfer_cb' is a callback function, if 'ctx' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static OSSL_CMP_MSG *transfer_cb(OSSL_CMP_CTX *ctx, const OSSL_CMP_MSG *req)
+                                               ^
+fuzz/cmp.c:67:45: note: You might need to cast the function pointer here
+    (void)OSSL_CMP_CTX_set_transfer_cb(ctx, transfer_cb);
+                                            ^
+fuzz/cmp.c:31:48: note: Parameter 'ctx' can be declared as pointer to const
+static OSSL_CMP_MSG *transfer_cb(OSSL_CMP_CTX *ctx, const OSSL_CMP_MSG *req)
+                                               ^
+fuzz/fuzz_rand.c:26:55: style: inconclusive: Function 'fuzz_rand_newctx' argument 3 names different: declaration 'parent_calls' definition 'parent_dispatch'. [funcArgNamesDifferent]
+    void *provctx, void *parent, const OSSL_DISPATCH *parent_dispatch)
+                                                      ^
+fuzz/fuzz_rand.c:16:0: note: Function 'fuzz_rand_newctx' argument 3 names different: declaration 'parent_calls' definition 'parent_dispatch'.
+static OSSL_FUNC_rand_newctx_fn fuzz_rand_newctx;
+^
+fuzz/fuzz_rand.c:26:55: note: Function 'fuzz_rand_newctx' argument 3 names different: declaration 'parent_calls' definition 'parent_dispatch'.
+    void *provctx, void *parent, const OSSL_DISPATCH *parent_dispatch)
+                                                      ^
+fuzz/fuzz_rand.c:95:74: style: inconclusive: Function 'fuzz_rand_gettable_ctx_params' argument 1 names different: declaration 'vctx' definition 'vrng'. [funcArgNamesDifferent]
+static const OSSL_PARAM *fuzz_rand_gettable_ctx_params(ossl_unused void *vrng,
+                                                                         ^
+fuzz/fuzz_rand.c:21:0: note: Function 'fuzz_rand_gettable_ctx_params' argument 1 names different: declaration 'vctx' definition 'vrng'.
+static OSSL_FUNC_rand_gettable_ctx_params_fn fuzz_rand_gettable_ctx_params;
+^
+fuzz/fuzz_rand.c:95:74: note: Function 'fuzz_rand_gettable_ctx_params' argument 1 names different: declaration 'vctx' definition 'vrng'.
+static const OSSL_PARAM *fuzz_rand_gettable_ctx_params(ossl_unused void *vrng,
+                                                                         ^
+fuzz/hashtable.c:125:12: style: The scope of the variable 'i' can be reduced. [variableScope]
+    size_t i;
+           ^
+/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h:340:61: style: Parameter 'key' can be declared as pointer to const [constParameterPointer]
+static ossl_inline ossl_unused void ossl_ht_strcase(HT_KEY *key, char *tgt, const char *src, size_t len)
+                                                            ^
+fuzz/hashtable.c:38:1: style: Variable 'expect_type' can be declared as pointer to const [constVariablePointer]
+IMPLEMENT_HT_VALUE_TYPE_FNS(FUZZER_VALUE, fz, static)
+^
+fuzz/hashtable.c:38:1: style: Parameter 'h' can be declared as pointer to const [constParameterPointer]
+IMPLEMENT_HT_VALUE_TYPE_FNS(FUZZER_VALUE, fz, static)
+^
+fuzz/hashtable.c:72:19: style: Variable 'f' can be declared as pointer to const [constVariablePointer]
+    FUZZER_VALUE *f = ossl_ht_fz_FUZZER_VALUE_from_value(v);
+                  ^
+fuzz/hashtable.c:85:19: style: Variable 'f' can be declared as pointer to const [constVariablePointer]
+    FUZZER_VALUE *f = ossl_ht_fz_FUZZER_VALUE_from_value(v);
+                  ^
+fuzz/hashtable.c:196:16: style: Variable 'valptr' is assigned a value that is never used. [unreadVariable]
+        valptr = &prediction_table[keyval];
+               ^
+fuzz/ml-dsa.c:511:15: style: Variable 'alice' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *alice = (EVP_PKEY *)key1;
+              ^
+fuzz/ml-dsa.c:512:15: style: Variable 'bob' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *bob = (EVP_PKEY *)key2;
+              ^
+fuzz/ml-dsa.c:552:11: style: struct member 'op_table_entry::name' is never used. [unusedStructMember]
+    char *name;
+          ^
+fuzz/ml-dsa.c:555:11: style: struct member 'op_table_entry::desc' is never used. [unusedStructMember]
+    char *desc;
+          ^
+fuzz/ml-kem.c:491:15: style: Variable 'alice' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *alice = (EVP_PKEY *)key1;
+              ^
+fuzz/ml-kem.c:492:15: style: Variable 'bob' can be declared as pointer to const [constVariablePointer]
+    EVP_PKEY *bob = (EVP_PKEY *)key2;
+              ^
+fuzz/ml-kem.c:533:11: style: struct member 'op_table_entry::name' is never used. [unusedStructMember]
+    char *name;
+          ^
+fuzz/ml-kem.c:536:11: style: struct member 'op_table_entry::desc' is never used. [unusedStructMember]
+    char *desc;
+          ^

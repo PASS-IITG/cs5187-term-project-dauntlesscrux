@@ -1,11 +1,25 @@
 \section{Problem Statement}
 \label{sec:problem}
-%% "We now state the problem precisely." Define every set/symbol (macros in
-%% macros.tex). \paragraph{Goal.} with the formula. Say why it is hard
-%% (cite the known complexity result). End with a question-paragraph that
-%% answers the obvious objection: \paragraph{Why not ...?}
-\todo{Definitions.}
 
-\paragraph{Goal.} \todo{Formula and the one or two things we look for.}
+We now state the problem precisely. Let $f$ be a C function with a
+parameter $P$ of pointer-to-pointer type or deeper. Let $r$ be a
+\emph{release site} inside $f$: a call that frees the object $*P$ points
+to (Section~\ref{sec:background}). A \emph{reset} of $*P$ is an assignment
+to $*P$, or, when the rule allows it, passing $P$ itself to a call that
+may reassign it. Let $\mathrm{paths}(r)$ be the set of control-flow paths
+from $r$ to the exit of $f$, built from $f$'s real parse tree
+(Section~\ref{sec:step1}).
 
-\paragraph{Why not \todo{the obvious alternative}?} \todo{Answer.}
+\paragraph{Goal.} $r$ is \emph{conforming} if every path in
+$\mathrm{paths}(r)$ passes a reset of $*P$ before reaching exit. $r$ is a
+\emph{violation} if some path in $\mathrm{paths}(r)$ reaches exit without
+passing a reset. Given a rule (Section~\ref{sec:rule}) and a C source
+tree, our goal is to compute this conforming/violation label, with a
+witness path, for every release site whose parameter matches the rule.
+
+\paragraph{Why not grep for the release/reset pair?} A regular expression,
+like the Part~1 baseline \texttt{typestate\_check.py}, can check that a
+function's text contains both a release and a reset. It cannot tell
+whether the reset lies on \emph{every} path from the release to exit or on
+only one branch, nor distinguish a reset in dead code; that needs a parse
+tree and a control-flow graph.

@@ -1,0 +1,14 @@
+tool,version_or_status,configuration,status,evidence_source
+Python 3,Python 3.12.3,N/A,AVAILABLE,current WSL environment
+Custom Python checker,9eed7cd1d5acb12f4961f8696429126f444cf3ba285b526289053c7602116758,"one source file per invocation; VIOLATION=exit1, CONFORMING=exit0, UNKNOWN=exit2",FROZEN_HASHED,source SHA-256
+Clang/Clang++,Ubuntu clang 18.1.3 (1ubuntu1),OpenSSL per-revision Configure; baseline plus validated experimental ownership attributes,AVAILABLE,current WSL environment
+Coccinelle,spatch 1.1.1,five pre-existing frozen rules in research/11_cve_tool_comparison/frozen/coccinelle_rules,AVAILABLE; hashes in prior TOOL_FREEZE.csv,current WSL environment
+Cppcheck,2.13.0,"warning,style,performance,portability; inconclusive; unix64; C11; D NDEBUG",AVAILABLE; hash in prior TOOL_FREEZE.csv,current WSL environment
+CodeQL CLI,NOT_INSTALLED,official latest bundle identified as v2.27.4; download attempt to github.com failed DNS resolution; no CLI/query packs,NOT_EVALUABLE,current WSL environment
+Infer,NOT_INSTALLED,not installed; no installation attempt per instruction,OPTIONAL_BLOCKED,current WSL environment
+AFL++,4.09c,fuzz engine availability only; campaign not yet completed,AVAILABLE,current WSL environment
+Clang ASan,18.1.3 runtime available,libclang_rt.asan-x86_64.a,AVAILABLE,current WSL environment
+Clang UBSan,18.1.3 runtime available,libclang_rt.ubsan_standalone-x86_64.a,AVAILABLE,current WSL environment
+Clang MSan,18.1.3 runtime available,libclang_rt.msan-x86_64.a,AVAILABLE,current WSL environment
+Valgrind Memcheck,NOT_INSTALLED,not required by planned ASan experiments,OPTIONAL_BLOCKED,current WSL environment
+LibFuzzer,Clang 18 runtime available,libclang_rt.fuzzer-x86_64.a,AVAILABLE,current WSL environment

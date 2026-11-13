@@ -1,0 +1,3 @@
+Rule/Pass,Status,Eligible Files,Scanned Files,Batches,Completed Batches,Duration Seconds Total,Evidence
+text,completed,1695,1695,17,17,3229.182,cppcheck_text_batch_status.csv; cppcheck_text_file_status.csv; logs/text_retry1/
+xml,completed,1695,1695,17,17,3311.163,cppcheck_xml_batch_status.csv; cppcheck_xml_file_status.csv; logs/xml_first/

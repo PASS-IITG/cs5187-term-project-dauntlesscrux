@@ -1,0 +1,2 @@
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/acquire_return.c:5:8-22: alloc_event|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/acquire_return.c:13:8-22: alloc_event|p

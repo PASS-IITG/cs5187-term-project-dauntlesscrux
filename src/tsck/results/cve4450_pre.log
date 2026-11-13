@@ -1,0 +1,11 @@
+VIOLATION snap_cve4450_pre/crypto/LPdir_unix.c:157 LP_find_file_end() releases *ctx via free; exit reachable without reset (path lines [157, 158, 160])
+VIOLATION snap_cve4450_pre/crypto/LPdir_vms.c:196 LP_find_file_end() releases *ctx via free; exit reachable without reset (path lines [196, 198, 203])
+VIOLATION snap_cve4450_pre/crypto/pem/pem_lib.c:991 PEM_read_bio_ex() releases *header via pem_free; exit reachable without reset (path lines [991, 992, 994, 995, 996, 997, 998])
+VIOLATION snap_cve4450_pre/crypto/pem/pem_lib.c:992 PEM_read_bio_ex() releases *data via pem_free; exit reachable without reset (path lines [992, 994, 995, 996, 997, 998])
+VIOLATION snap_cve4450_pre/crypto/x509/x_pubkey.c:363 X509_PUBKEY_set() releases *x via X509_PUBKEY_free; exit reachable without reset (path lines [363, 364, 365, 366, 387, 388])
+VIOLATION snap_cve4450_pre/providers/common/provider_util.c:85 load_common() releases *engine via ENGINE_free; exit reachable without reset (path lines [85, 88])
+VIOLATION snap_cve4450_pre/ssl/ssl_ciph.c:563 ssl_cipher_get_evp() releases *enc via ssl_evp_cipher_free; exit reachable without reset (path lines [563, 564])
+SUPPRESSED snap_cve4450_pre/crypto/evp/p_lib.c:2033 evp_pkey_copy_downgraded() releases *dest via evp_pkey_free_it; deref-after-release at lines [2036, 2041, 2052, 2060, 2063]
+SUPPRESSED snap_cve4450_pre/crypto/evp/pmeth_gn.c:198 EVP_PKEY_generate() releases *ppkey via evp_pkey_free_legacy; deref-after-release at lines [204]
+files=1001 release-sites: conforming=99 violation=7 suppressed=2 errors=0 parse_error_files=393 sites_in_functions_with_parse_errors=7
+exit=1

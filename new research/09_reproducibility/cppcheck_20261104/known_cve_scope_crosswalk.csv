@@ -1,0 +1,4 @@
+CVE,Source File,Function,Regression Test,Cppcheck exact file+function match
+CVE-2023-0215,crypto/asn1/bio_ndef.c,check_bio_ndef,tests/test_cve_2023_0215.sh,no
+CVE-2022-4450,crypto/pem/pem_lib.c,PEM_read_bio_ex,tests/test_cve_2022_4450.sh,no
+CVE-2024-4741,ssl/record/ssl3_buffer.c,ssl3_release_read_buffer,tests/test_all_cves.sh,no

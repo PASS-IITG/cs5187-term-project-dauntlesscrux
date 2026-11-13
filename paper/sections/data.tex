@@ -1,16 +1,59 @@
 \section*{Data Availability}
 \label{sec:data}
-%% Most SE venues require this (ISEC: "Artifact Availability"; FSE/ICSE:
-%% "Data Availability", after the Conclusion). While anonymous: export
-%% WITHOUT git history, scrub absolute paths (/Users/<name>/...) from JSON
-%% and logs, use an anonymous mirror (anonymous.4open.science).
-The replication package is available at \todo{anonymous URL}. It contains
-\todo{source of \tool with tests, subject list with exact commits, scripts,
-raw data, container definition}.
+This is a named submission (confirmed with the course instructor,
+2026-11-13), so the replication package below is the real, public
+repository, not an anonymized mirror:
+\url{https://github.com/PASS-IITG/cs5187-term-project-dauntlesscrux}.
+
+It contains \tool's source (\path{src/tsck/}) and 19 engine unit tests;
+both rules as data (\path{specs/outparam_reset.json},
+\path{specs/bio_chain_pop.json}) with Protocol~A's checker and regression
+tests; the pinned OpenSSL SHAs and scan scripts (\path{run_scan.sh},
+\path{run_protocol_a.sh}); and, under \path{src/tsck/results/}, the
+unedited logs, JSON results, tool versions, timing rerun, manual triage
+for both protocols, the reachability and caller re-checks, the
+commit-history search, and the tool-comparison evidence behind
+Table~\ref{tab:rq2-comparison}. \texttt{make check} reruns the offline
+checks; \texttt{make scan} reruns every OpenSSL scan from a clean checkout.
+
+\section*{Author Contributions}
+\textbf{Rutvij Wagh (230101113), Protocol B lead:} root-cause analysis of
+CVE-2022-4450; formulation of the output-pointer reset invariant;
+development of the Protocol B rule specification and checker
+(\texttt{outparam.py}); validation against the vulnerable and fixed
+OpenSSL revisions; evaluation of the unrelated KDF fixes and the Protocol
+B results; analysis of flagged sites and their false positives.
+\textbf{Udayraj Choudhary (230101107), Protocol A lead:} investigation of
+CVE-2023-0215 and the BIO-chain use-after-free; AddressSanitizer
+reproduction and vulnerable/fixed revision analysis; formulation of the
+BIO push/pop invariant; oversight and validation of the Protocol A
+specification, checker (\path{protocol_a.py}), and regression tests;
+investigation of the whole-tree results and its 11 false positives.
+\textbf{Joint:} selection of the project topic and OpenSSL as the
+research subject; design of the shared tree-sitter parsing and CFG
+architecture; selection of research questions and evaluation
+methodology; integration of both typestate protocols; comparison with
+general-purpose static-analysis tools; literature review and
+interpretation of results; paper preparation, proofreading, debugging,
+and final validation; preparation of the final presentation and
+demonstration. Both authors reviewed and take responsibility for the
+full paper and replication package, including the sections produced
+with generative-AI assistance disclosed below.
 
 \section*{Use of Generative AI}
-%% ACM/IEEE authorship policies require disclosure. Confirm every word.
-\todo{Confirm and finalise.} A generative AI assistant (\todo{name, version})
-was used to \todo{what}. The authors checked every statement, every citation
-and every number. All numbers reported here were produced by running the
-tool and scripts.
+For Protocol~B, the authors designed the rule and produced all OpenSSL
+builds and measurements; a generative AI assistant (Claude; model version
+not recorded) helped draft prose from those results. For Protocol~A, the
+assistant helped formulate and implement the checker from the authors'
+CVE-2023-0215 notes, ran it on an independently cloned OpenSSL tree, and
+produced the initial triage of its 11 whole-tree findings; the authors
+reproduced this run on a separate machine (Section~\ref{sec:setup}). The
+assistant also wrote the analyses in
+\path{results/reachability_rq1_candidates.md},
+\path{results/unclear_sites_recheck.md}, and
+\path{results/historical_recurrence_search.md}. In the final revision,
+ChatGPT (GPT-6) verified bibliographic metadata and ACM CCS identifiers and
+edited LaTeX/BibTeX files, and Claude condensed the text to fit the page
+limit without changing any result. No AI tool altered recorded
+experimental outputs. All source excerpts, logs, and reasoning are in the
+replication package, and the authors take responsibility for every claim.

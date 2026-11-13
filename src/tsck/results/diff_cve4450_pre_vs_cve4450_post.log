@@ -1,0 +1,6 @@
+pre : release-sites=108 violations=7
+post: release-sites=108 violations=5
+violations removed by the change: 2
+   - crypto/pem/pem_lib.c PEM_read_bio_ex *data
+   - crypto/pem/pem_lib.c PEM_read_bio_ex *header
+violations added by the change:   0

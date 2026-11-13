@@ -1,0 +1,4 @@
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:23:8-22: alloc_event|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:17:8-22: alloc_event|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:31:8-22: alloc_event|p
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/optimized/samples/resource_events.c:38:8-22: alloc_event|p

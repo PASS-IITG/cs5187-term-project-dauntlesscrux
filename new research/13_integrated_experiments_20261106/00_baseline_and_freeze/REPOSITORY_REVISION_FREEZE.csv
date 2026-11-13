@@ -1,0 +1,9 @@
+repository,path,git_root,branch,head,root_rc,branch_rc,head_rc
+main,/mnt/d/cve-typestate-project,/mnt/d/cve-typestate-project,main,74e8ea786ed133c1b845557259fb22020e35242f,0,0,0
+clang_analysis,/mnt/d/CVE-Typestate-Project-clang-analysis,/mnt/d/CVE-Typestate-Project-clang-analysis,DETACHED,ed57129cd43b77e077c68fd5f7ea951976766f38,0,1,0
+openssl-cve-2022-4450-vulnerable,/mnt/d/cve-typestate-project/openssl-cve-2022-4450-vulnerable,/mnt/d/cve-typestate-project/openssl-cve-2022-4450-vulnerable,DETACHED,8e257b86e5812c6e1cfa9e8e5f5660ac7bed899d,0,1,0
+openssl-cve-2022-4450-fixed,/mnt/d/cve-typestate-project/openssl-cve-2022-4450-fixed,/mnt/d/cve-typestate-project/openssl-cve-2022-4450-fixed,DETACHED,63bcf189be73a9cc1264059bed6f57974be74a83,0,1,0
+openssl-cve-2023-0215-vulnerable,/mnt/d/cve-typestate-project/openssl-cve-2023-0215-vulnerable,/mnt/d/cve-typestate-project/openssl-cve-2023-0215-vulnerable,DETACHED,cbafa34b5a057794c5c08cd4657038e1f643c1ac,0,1,0
+openssl-cve-2023-0215-fixed,/mnt/d/cve-typestate-project/openssl-cve-2023-0215-fixed,/mnt/d/cve-typestate-project/openssl-cve-2023-0215-fixed,DETACHED,8818064ce3c3c0f1b740a5aaba2a987e75bfbafd,0,1,0
+openssl-cve-2024-4741-vulnerable,/mnt/d/cve-typestate-project/openssl-cve-2024-4741-vulnerable,/mnt/d/cve-typestate-project/openssl-cve-2024-4741-vulnerable,DETACHED,b3f0eb0a295f58f16ba43ba99dad70d4ee5c437d,0,1,0
+openssl-cve-2024-4741-fixed,/mnt/d/cve-typestate-project/openssl-cve-2024-4741-fixed,/mnt/d/cve-typestate-project/openssl-cve-2024-4741-fixed,DETACHED,2d05959073c4bf8803401668b9df85931a08e020,0,1,0

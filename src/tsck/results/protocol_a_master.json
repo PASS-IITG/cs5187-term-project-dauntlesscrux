@@ -1,0 +1,287 @@
+{
+ "spec": "Protocol A: BIO-chain detach-before-release (CVE-2023-0215)",
+ "files": 1155,
+ "counts": {
+  "conforming": 10,
+  "violation": 11
+ },
+ "errors": 0,
+ "parse_error_files": 478,
+ "sites": [
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/asn1/asn1_parse.c",
+   "function": "asn1_print_info",
+   "var": "bio",
+   "callee": "BIO_free",
+   "line": 81,
+   "function_has_parse_error": false,
+   "status": "violation",
+   "witness": [
+    49,
+    51,
+    77,
+    79,
+    81
+   ]
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/asn1/asn_mime.c",
+   "function": "B64_write_ASN1",
+   "var": "b64",
+   "callee": "BIO_free",
+   "line": 122,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/asn1/asn_mime.c",
+   "function": "b64_read_asn1",
+   "var": "b64",
+   "callee": "BIO_free",
+   "line": 152,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/asn1/asn_mime.c",
+   "function": "SMIME_crlf_copy",
+   "var": "bf",
+   "callee": "BIO_free",
+   "line": 591,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/asn1/bio_ndef.c",
+   "function": "BIO_new_NDEF",
+   "var": "asn_bio",
+   "callee": "BIO_free",
+   "line": 133,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/bio/bio_lib.c",
+   "function": "BIO_dup_chain",
+   "var": "eoc",
+   "callee": "BIO_free_all",
+   "line": 932,
+   "function_has_parse_error": false,
+   "status": "violation",
+   "witness": [
+    926,
+    927,
+    895,
+    895,
+    896,
+    897,
+    932
+   ]
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/bio/bss_acpt.c",
+   "function": "acpt_state",
+   "var": "dbio",
+   "callee": "BIO_free",
+   "line": 331,
+   "function_has_parse_error": true,
+   "status": "violation",
+   "witness": [
+    301,
+    302,
+    330,
+    331
+   ]
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/cms/cms_sd.c",
+   "function": "ossl_cms_SignedData_init_bio",
+   "var": "chain",
+   "callee": "BIO_free_all",
+   "line": 1422,
+   "function_has_parse_error": false,
+   "status": "violation",
+   "witness": [
+    1416,
+    1406,
+    1406,
+    1407,
+    1408,
+    1410,
+    1411,
+    1413,
+    1414,
+    1422
+   ]
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/encode_decode/decoder_lib.c",
+   "function": "OSSL_DECODER_from_bio",
+   "var": "new_bio",
+   "callee": "BIO_free",
+   "line": 116,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/http/http_client.c",
+   "function": "OSSL_HTTP_proxy_connect",
+   "var": "fbio",
+   "callee": "BIO_free",
+   "line": 1600,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/pem/pem_pkey.c",
+   "function": "pem_read_bio_key",
+   "var": "new_bio",
+   "callee": "BIO_free",
+   "line": 259,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/pkcs7/pk7_doit.c",
+   "function": "PKCS7_dataInit",
+   "var": "out",
+   "callee": "BIO_free_all",
+   "line": 412,
+   "function_has_parse_error": false,
+   "status": "violation",
+   "witness": [
+    370,
+    371,
+    374,
+    375,
+    376,
+    398,
+    399,
+    410,
+    411,
+    412
+   ]
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/pkcs7/pk7_doit.c",
+   "function": "PKCS7_dataDecode",
+   "var": "out",
+   "callee": "BIO_free_all",
+   "line": 685,
+   "function_has_parse_error": false,
+   "status": "violation",
+   "witness": [
+    655,
+    656,
+    658,
+    661,
+    662,
+    663,
+    682,
+    683,
+    684,
+    685
+   ]
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/pkcs7/pk7_smime.c",
+   "function": "PKCS7_decrypt",
+   "var": "tmpbuf",
+   "callee": "BIO_free_all",
+   "line": 533,
+   "function_has_parse_error": false,
+   "status": "violation",
+   "witness": [
+    531,
+    532,
+    533
+   ]
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/crypto/pkcs7/pk7_smime.c",
+   "function": "PKCS7_decrypt",
+   "var": "tmpbuf",
+   "callee": "BIO_free_all",
+   "line": 542,
+   "function_has_parse_error": false,
+   "status": "violation",
+   "witness": [
+    531,
+    537,
+    538,
+    542
+   ]
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/ssl/bio_ssl.c",
+   "function": "BIO_new_buffer_ssl_connect",
+   "var": "buf",
+   "callee": "BIO_free",
+   "line": 478,
+   "function_has_parse_error": false,
+   "status": "violation",
+   "witness": [
+    474,
+    475,
+    478
+   ]
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/ssl/bio_ssl.c",
+   "function": "BIO_new_ssl_connect",
+   "var": "ssl",
+   "callee": "BIO_free",
+   "line": 504,
+   "function_has_parse_error": false,
+   "status": "violation",
+   "witness": [
+    500,
+    501,
+    504
+   ]
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/ssl/ech/ech_store.c",
+   "function": "ech_read_priv_echconfiglist",
+   "var": "btmp1",
+   "callee": "BIO_free_all",
+   "line": 644,
+   "function_has_parse_error": false,
+   "status": "violation",
+   "witness": [
+    624,
+    626,
+    627,
+    628,
+    644
+   ]
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/ssl/ech/ech_store.c",
+   "function": "OSSL_ECHSTORE_read_pem",
+   "var": "fbio",
+   "callee": "BIO_free_all",
+   "line": 1111,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/ssl/ech/ech_store.c",
+   "function": "OSSL_ECHSTORE_read_pem",
+   "var": "fbio",
+   "callee": "BIO_free_all",
+   "line": 1130,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  },
+  {
+   "file": "ossl/snap_master_2026_10_30/ssl/ssl_lib.c",
+   "function": "ssl_init_wbio_buffer",
+   "var": "bbio",
+   "callee": "BIO_free",
+   "line": 5934,
+   "function_has_parse_error": false,
+   "status": "conforming"
+  }
+ ]
+}

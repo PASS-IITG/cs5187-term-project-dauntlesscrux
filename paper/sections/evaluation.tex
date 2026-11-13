@@ -1,54 +1,241 @@
 \section{Evaluation}
 \label{sec:eval}
-%% Structure (keep): RQ list -> Subjects -> Baselines -> Measurements
-%% -> Setup -> one \subsection per RQ with Observations.
-%% Each RQ is a plain question a practitioner would ask.
 
-\focus{\textbf{Research questions.} State 2--4 questions a practitioner would
-  actually ask. Each is a plain yes/no or how-much question you can answer
-  with a measurement --- not ``Is our tool good?''. Cover: does it work
-  (\rqref{1}), is it better than a simpler baseline (\rqref{2}), does it
-  change the outcome for a user (\rqref{3}), and what does it cost
-  (\rqref{4}). Every RQ must be answered later by an \texttt{observation}
-  box backed by a number. This is graded.}
-
-We ask \todo{n} questions.
+We ask five questions.
 \begin{itemize}
-  \item[\rqref{1}] \todo{Question?}
-  \item[\rqref{2}] \todo{Question, compared with simpler baselines?}
-  \item[\rqref{3}] \todo{Does it change what tools/users get?}
-  \item[\rqref{4}] What does \tool cost in time \todo{and resources}?
+  \item[\rqref{1}] Does \tool (the invariant-based Protocol B engine) detect
+    the motivating CVE on real OpenSSL source, distinguish the fix from the
+    bug, and generalize to a fix it was not derived from?
+  \item[\rqref{2}] Do general-purpose open-source static-analysis tools
+    already catch the bugs a source-pattern baseline catches, on the same
+    three CVEs?
+  \item[\rqref{3}] Does a rule written from one CVE flag a site that
+    OpenSSL fixed only later, without the rule being changed after the
+    fact?
+  \item[\rqref{4}] What does \tool cost in time?
+  \item[\rqref{5}] Does \tool's rule-as-data design extend to a second,
+    differently-shaped invariant (Protocol A, CVE-2023-0215), and does that
+    second rule generalize the same way Protocol B's did?
 \end{itemize}
 
 \subsection{Subjects}
 \label{sec:subjects}
-%% Selection criteria as an enumerate; exact versions/commits; why these.
-We select \todo{n} subjects with the following criteria:
-\begin{enumerate}
-  \item \todo{criterion, with the reason};
-\end{enumerate}
+We select three historical OpenSSL CVEs and one non-CVE fix, each a pinned
+vulnerable/fixed commit pair with a publicly documented root cause (so the
+label is not our judgment), source at both revisions in the same file, and
+at least one case not used to derive the rule (\rqref{3}).
+CVE-2022-4450 (\texttt{PEM\_read\_bio\_ex}, fix \texttt{63bcf189be}) is the
+source of Protocol~B. CVE-2023-0215 (\texttt{BIO\_new\_NDEF}, fix
+\texttt{8818064ce3}) is the second baseline CVE (\rqref{2}) and the source
+of Protocol~A (\rqref{5}). CVE-2024-4741 (\texttt{SSL\_free\_buffers}, fix
+\texttt{b3f0eb0a29}) is in the baseline comparison only: it needs a state
+guard neither rule can express, and we report that scope rather than drop
+the case. The \texttt{d2217c88df} KDF fix (not a CVE, a different author, a
+year before CVE-2022-4450) is the out-of-sample case.
 
 \subsection{Baselines}
 \label{sec:baselines}
-%% description list; each baseline: what it is, why it is a fair comparison.
-\begin{description}
-  \item[Default.] \todo{}
-\end{description}
-
-\subsection{Measurements}
-\begin{description}
-  \item[\rqref{1}.] \todo{What exactly is measured.}
-\end{description}
+The \emph{Part~1 pattern baseline} is \texttt{typestate\_check.py}, the
+project's own string/regex patch matcher, included as the simplest thing
+that could work. \emph{Clang Static Analyzer~18} ran via
+\texttt{scan-build-18} on each revision's affected translation unit with its
+generated build flags. \emph{Coccinelle~1.1.1} ran five pre-existing
+semantic patches (not written for these CVEs) for release/use, repeated
+release, release-after-transfer, and allocate-then-return.
+\emph{Cppcheck~2.13.0} ran with \texttt{--enable=warning,style,performance,
+portability --inconclusive} (C11/unix64). None was tuned toward these
+CVEs. Because Protocol~B has no rule for two of the three CVEs, this
+compares general tools against the baseline, not against \tool. For each
+tool and revision we manually read whether the output distinguishes
+vulnerable from fixed.
 
 \subsection{Setup}
-%% Machine, OS, compiler/tool versions, time limits, repetitions.
-\todo{Machine, versions, repetitions.}
+\label{sec:setup}
+\tool (Protocol~B) ran on Python~3.13, \texttt{tree-sitter}~0.26.0,
+\texttt{tree-sitter-c}~0.24.2 (Linux, WSL2). The \rqref{2} baselines ran on
+a separate machine (Python~3.12.3, Clang~18.1.3, Coccinelle~1.1.1 on
+OCaml~4.14.1, Cppcheck~2.13.0); executable hashes and frozen rule files are
+recorded with the data, and no measurement mixes the two environments. For
+\rqref{4}, a second author reran \texttt{run\_scan.sh} on a third machine
+(Python~3.11.6, same \texttt{tree-sitter} versions) under
+\texttt{/usr/bin/time -v}. Protocol~A's runs (\rqref{5}) were reproduced on
+a fourth environment (\texttt{tree-sitter}~0.26.1) with identical counts.
 
-\subsection{\rqref{1}: \todo{Short question}}
+\subsection{\rqref{1}: Does \tool detect and generalize the motivating CVE?}
 \label{sec:rq1}
-\todo{Table/figure first, then text that reads it.}
+
+\begin{table}[t]
+  \centering
+  \caption{\tool (Protocol B) on six pinned OpenSSL snapshots
+    (\texttt{crypto/}, \texttt{ssl/}, \texttt{providers/}). A
+    \emph{release site} is a call that frees \texttt{*P} for a
+    pointer-to-pointer parameter \texttt{P}. The two fixes each remove
+    exactly their own violations and add none.}
+  \label{tab:rq1-wholetree}
+  \begin{tabular}{lrrrr}
+    \toprule
+    Snapshot & C files & Conforming & Violation & Suppressed \\
+    \midrule
+    CVE-2022-4450 pre-fix (\texttt{8e257b86e5})  & 1001 & 99  & 7  & 2 \\
+    CVE-2022-4450 fix (\texttt{63bcf189be})      & 1001 & 101 & 5  & 2 \\
+    KDF fix parent (\texttt{29a27cb2c5})         & 1005 & 93  & 12 & 2 \\
+    KDF fix (\texttt{d2217c88df}, not a CVE)     & 1005 & 97  & 8  & 2 \\
+    OpenSSL 3.0.0 (\texttt{89cd17a031})          & 999  & 92  & 10 & 2 \\
+    master (\texttt{949fe8b5f4}, 2026-10-30)     & 1155 & 132 & 10 & 2 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Table~\ref{tab:rq1-wholetree} shows \tool on the motivating function and on
+the whole tree. At the vulnerable revision, \tool flags
+\texttt{PEM\_read\_bio\_ex}'s \texttt{*header} and \texttt{*data} as
+violations (witness lines 991--998); at the fix, both sites are
+conforming. The same fix removes exactly these two violations from the
+whole-tree count (99~$\to$~101 conforming, 7~$\to$~5 violation) and adds
+none.
 
 \begin{observation}
-\label{obs:first}
-\todo{One claim, with the number that supports it.}
+\label{obs:rq1-conformance}
+\tool is not limited to the function it was derived from: the unrelated,
+non-CVE \texttt{d2217c88df} KDF fix removes exactly the four violations
+its own commit changes (\texttt{pbkdf1}, \texttt{pbkdf2}, \texttt{pkcs12kdf},
+\texttt{scrypt}, each \texttt{*buffer}) and adds none, with the rule
+unchanged from the CVE-2022-4450 derivation.
 \end{observation}
+
+\begin{observation}
+\label{obs:rq1-mastertriage}
+On current master, \tool flags 10 sites; manual triage against each site's
+callers found 2 potential recurrences whose failure branch is not
+reachable in normal builds, 8 convention deviations with no caller impact,
+and 0 confirmed new vulnerabilities. (Two of the eight were initially
+labelled "unclear" pending a caller read; Section~\ref{sec:threats}
+reports that re-check.) We report this plainly: the contribution here is
+a bounded rule that reproduces two real fixes without retuning, not a new
+bug.
+\end{observation}
+
+\subsection{\rqref{2}: Do general-purpose tools already catch these bugs?}
+\label{sec:rq2}
+
+\begin{table}[t]
+  \centering
+  \caption{Detection on the vulnerable/fixed pair for each CVE: whether
+    the tool's output distinguishes the two revisions for the
+    CVE's own mechanism. \cmark{} = distinguishes vulnerable from fixed;
+    \xmark{} = does not. The Part 1 pattern baseline is not \tool; see
+    Section~\ref{sec:baselines}.}
+  \label{tab:rq2-comparison}
+  \begin{tabular}{@{}lccc@{}}
+    \toprule
+    Tool & \shortstack{2022\\4450} & \shortstack{2023\\0215} & \shortstack{2024\\4741} \\
+    \midrule
+    Part 1 pattern baseline & \cmark & \cmark & \xmark$^{a}$ \\
+    Clang Static Analyzer~18 & \xmark & \xmark & \xmark \\
+    Coccinelle~1.1.1 & \xmark & \xmark & \xmark \\
+    Cppcheck~2.13.0 & \xmark & \xmark & \xmark \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The columns correspond to CVE-2022-4450~\cite{nvd2022cve4450},
+CVE-2023-0215~\cite{nvd2023cve0215}, and
+CVE-2024-4741~\cite{nvd2024cve4741}, respectively. $^{a}$On the
+corrected CVE-2024-4741 pair (\texttt{ec559c2a6c}/\texttt{b3f0eb0a29}) the
+Part~1 baseline alerts on both sides; it is quiet only on the later hardening
+commit \texttt{2d05959073}, so it matches that pattern, not the advisory's
+state-guard fix.
+Table~\ref{tab:rq2-comparison} compares four tools on six pinned revisions
+(three CVEs, vulnerable and fixed side). A Clang positive control, run on a
+synthetic use-after-free, produced the expected diagnostic with the same
+configuration, confirming the analyzer was active for the clean runs.
+
+\begin{observation}
+\label{obs:rq2-generic-miss}
+None of three general-purpose open-source tools, run with their stock
+rules and no CVE-specific tuning, distinguishes the vulnerable revision
+from the fixed revision for any of the three mechanisms. Coccinelle's
+generic release-event rule fires near \texttt{BIO\_new\_NDEF} in both
+revisions, but does not inspect \texttt{BIO\_pop} or the linked-BIO state,
+so it does not change between versions; Cppcheck's output on the three
+files is unrelated style diagnostics, identical in count before and after
+each fix; Clang emits no diagnostic in any of the six runs.
+\end{observation}
+
+This does not show \tool beats these tools: Protocol B (\tool itself) does
+not implement a rule for two of these three mechanisms
+(Section~\ref{sec:subjects}). It shows that a source check specific to one
+ownership or reset convention is needed at all, because the general-purpose
+tools' stock configuration does not substitute for it.
+
+\subsection{\rqref{3}: Does the rule generalize to an unseen later fix?}
+\label{sec:rq3}
+
+The tree at \texttt{d2217c88df} still flags \texttt{pvk\_set\_membuf} in
+\texttt{pvkkdf.c}. OpenSSL fixed it one day later, in \texttt{a632bfaa4e},
+a direct child of \texttt{d2217c88df}, with the same \texttt{*buffer =
+NULL} change as the other four KDF sites.
+
+\begin{observation}
+\label{obs:rq3-timetravel}
+\tool, run unchanged from its CVE-2022-4450 derivation, flags a site that a
+different, later commit by OpenSSL went on to fix. This is one site, not a
+rate, and we report it as a single encouraging case, not as a time-travel
+precision or recall figure: a systematic time-travel evaluation over more
+sites is future work.
+\end{observation}
+
+\subsection{\rqref{4}: What does \tool cost in time?}
+\label{sec:rq4}
+
+\begin{observation}
+\label{obs:rq4-cost}
+The independent rerun (Section~\ref{sec:setup}) reproduced every count in
+Table~\ref{tab:rq1-wholetree} exactly. Across five full-tree scans of
+999--1{,}155 files plus two single-function checks, CPU time was under 48
+seconds (27.17\,s user, 20.34\,s system) of 5~min 31~s wall-clock; the rest
+is one-time network latency from a partial clone of OpenSSL. The CPU figure
+still includes \texttt{git} sparse-checkout cost, which we did not
+instrument separately.
+\end{observation}
+
+\subsection{\rqref{5}: Does a second, differently-shaped rule generalize the same way?}
+\label{sec:rq5}
+
+Protocol A checks a different invariant shape than Protocol B:
+establish-then-required-detach-before-release on a local variable rather
+than release-then-required-reset on a parameter, with a syntactic alias
+rule for the common \texttt{x~=~BIO\_push(v,~\ldots{})} idiom
+(Section~\ref{sec:subjects}). It reuses Protocol B's \texttt{tree-sitter}
+parser and CFG; only the event rule and path search are new. We ran it
+two ways, both independently reproduced on a separate machine
+(Section~\ref{sec:setup}).
+
+\begin{observation}
+\label{obs:rq5-protocola-motivating}
+On \texttt{BIO\_new\_NDEF}, Protocol A flags \texttt{asn\_bio} as a
+violation before the CVE-2023-0215 fix and as conforming after it, the
+same pre/post-fix distinction Protocol B makes for CVE-2022-4450. The
+rule-as-data design extends to a second invariant shape without changing
+the parser or the CFG builder.
+\end{observation}
+
+On the same master snapshot, Protocol~A flags 11 sites; we checked every
+one against the pinned source (\path{results/protocol_a_triage.md}).
+
+\begin{observation}
+\label{obs:rq5-protocola-master}
+0 of the 11 whole-tree violations are confirmed or plausible recurrences.
+One is a tool limitation: a real \texttt{BIO\_pop} is guarded by a boolean
+flag the path search cannot correlate with the branch that set it. The
+other 10 release a chain built entirely from freshly-allocated local
+objects (two behind a push whose failure branch is unreachable once its
+first argument is proven non-\texttt{NULL}). None splices in an
+externally-owned BIO -- the shape that makes CVE-2023-0215 dangerous -- and
+the rule has no notion of ownership to tell them apart.
+\end{observation}
+
+This confirms the gap named in Section~\ref{sec:related}: without ownership
+or escape tracking, a single-object rule cannot generalize a BIO-chain
+invariant across a codebase, even though the same architecture generalized
+a release/reset invariant in \rqref{1}.

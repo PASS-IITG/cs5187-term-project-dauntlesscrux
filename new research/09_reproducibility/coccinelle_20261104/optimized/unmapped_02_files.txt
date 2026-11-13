@@ -1,0 +1,6 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/dh/dh_rfc5114.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/rsa/rsa_sp800_56b_check.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/doc/designs/ddd/ddd-05-mem-nonblocking.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/fuzz/asn1.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/providers/implementations/signature/ecdsa_sig.c
+/mnt/d/CVE-Typestate-Project-clang-analysis/test/testutil/tests.c

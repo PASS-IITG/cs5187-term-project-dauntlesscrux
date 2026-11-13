@@ -1,0 +1,1 @@
+COMMAND: spatch --jobs 2 --very-quiet --sp-file research/11_cve_tool_comparison/frozen/coccinelle_rules/04b_return_events.cocci /tmp/openssl-integrated-validation/cve2024_fixed/ssl/record/rec_layer_s3.c

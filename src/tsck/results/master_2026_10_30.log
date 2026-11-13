@@ -1,0 +1,14 @@
+VIOLATION snap_master_2026_10_30/crypto/LPdir_unix.c:158 LP_find_file_end() releases *ctx via free; exit reachable without reset (path lines [158, 159, 161])
+VIOLATION snap_master_2026_10_30/crypto/LPdir_vms.c:196 LP_find_file_end() releases *ctx via free; exit reachable without reset (path lines [196, 198, 203])
+VIOLATION snap_master_2026_10_30/crypto/cmp/cmp_genm.c:361 OSSL_CMP_get1_rootCaKeyUpdate() releases *newWithOld via X509_free; exit reachable without reset (path lines [361, 363, 366, 367, 368])
+VIOLATION snap_master_2026_10_30/crypto/cmp/cmp_genm.c:363 OSSL_CMP_get1_rootCaKeyUpdate() releases *newWithNew via X509_free; exit reachable without reset (path lines [363, 366, 367, 368])
+VIOLATION snap_master_2026_10_30/crypto/x509/x_pubkey.c:383 X509_PUBKEY_set() releases *x via X509_PUBKEY_free; exit reachable without reset (path lines [383, 384, 385, 386, 407, 408])
+VIOLATION snap_master_2026_10_30/providers/implementations/encode_decode/ml_kem_codecs.c:297 ossl_ml_kem_i2d_pubkey() releases *out via OPENSSL_free; exit reachable without reset (path lines [297, 298])
+VIOLATION snap_master_2026_10_30/ssl/ssl_ciph.c:522 ssl_cipher_get_evp() releases *enc via ssl_evp_cipher_free; exit reachable without reset (path lines [522, 524, 527])
+VIOLATION snap_master_2026_10_30/ssl/ssl_ciph.c:525 ssl_cipher_get_evp() releases *snenc via ssl_evp_cipher_free; exit reachable without reset (path lines [525, 527])
+VIOLATION snap_master_2026_10_30/ssl/statem/extensions_srvr.c:755 extract_keyshares() releases *keyshares_arr via OPENSSL_free; exit reachable without reset (path lines [755, 756, 757])
+VIOLATION snap_master_2026_10_30/ssl/statem/extensions_srvr.c:756 extract_keyshares() releases *encoded_pubkey_arr via OPENSSL_free; exit reachable without reset (path lines [756, 757])
+SUPPRESSED snap_master_2026_10_30/crypto/evp/p_lib.c:2009 evp_pkey_copy_downgraded() releases *dest via evp_pkey_free_it; deref-after-release at lines [2012, 2017, 2026, 2034, 2037]
+SUPPRESSED snap_master_2026_10_30/crypto/evp/pmeth_gn.c:172 EVP_PKEY_generate() releases *ppkey via evp_pkey_free_legacy; deref-after-release at lines [178]
+files=1155 release-sites: conforming=132 violation=10 suppressed=2 errors=0 parse_error_files=478 sites_in_functions_with_parse_errors=8
+exit=1

@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.13.0"/>
+    <errors>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;ctx-&gt;meth-&gt;init_skey==NULL&apos; is always false" verbose="Condition &apos;ctx-&gt;meth-&gt;init_skey==NULL&apos; is always false" cwe="570" file0="crypto/evp/mac_lib.c">
+            <location file="crypto/evp/mac_lib.c" line="129" column="33" info="Condition &apos;ctx-&gt;meth-&gt;init_skey==NULL&apos; is always false"/>
+        </error>
+        <error id="duplicateExpression" severity="style" msg="Same expression &apos;ctx-&gt;meth-&gt;init_skey==NULL&apos; found multiple times in chain of &apos;||&apos; operators." verbose="Finding the same expression more than once in a condition is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398" file0="crypto/evp/mac_lib.c">
+            <location file="crypto/evp/mac_lib.c" line="129" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;params&apos; can be reduced." verbose="The scope of the variable &apos;params&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/mac_lib.c">
+            <location file="crypto/evp/mac_lib.c" line="146" column="16"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/mac_lib.c">
+            <location file="crypto/evp/mac_lib.c" line="77" column="44" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;ctx-&gt;digest==NULL&apos; is always false" verbose="Condition &apos;ctx-&gt;digest==NULL&apos; is always false" cwe="570" file0="crypto/evp/m_sigver.c">
+            <location file="crypto/evp/m_sigver.c" line="232" column="33" info="Condition &apos;ctx-&gt;digest==NULL&apos; is always false"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/m_sigver.c">
+            <location file="crypto/evp/m_sigver.c" line="456" column="9"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;e&apos; can be declared as pointer to const" verbose="Parameter &apos;e&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/m_sigver.c">
+            <location file="crypto/evp/m_sigver.c" line="302" column="33" info="Parameter &apos;e&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;e&apos; can be declared as pointer to const" verbose="Parameter &apos;e&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/m_sigver.c">
+            <location file="crypto/evp/m_sigver.c" line="320" column="33" info="Parameter &apos;e&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_add_cipher&apos; argument 1 names different: declaration &apos;cipher&apos; definition &apos;c&apos;." verbose="Function &apos;EVP_add_cipher&apos; argument 1 names different: declaration &apos;cipher&apos; definition &apos;c&apos;." cwe="628" inconclusive="true" file0="crypto/evp/names.c">
+            <location file="crypto/evp/names.c" line="19" column="38"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1209" column="38"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_add_digest&apos; argument 1 names different: declaration &apos;digest&apos; definition &apos;md&apos;." verbose="Function &apos;EVP_add_digest&apos; argument 1 names different: declaration &apos;digest&apos; definition &apos;md&apos;." cwe="628" inconclusive="true" file0="crypto/evp/names.c">
+            <location file="crypto/evp/names.c" line="35" column="34"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1210" column="34"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/names.c">
+            <location file="crypto/evp/names.c" line="79" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/names.c">
+            <location file="crypto/evp/names.c" line="138" column="19" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;PKCS5_PBE_keyivgen&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;cctx&apos;." verbose="Function &apos;PKCS5_PBE_keyivgen&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;cctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p5_crpt.c">
+            <location file="crypto/evp/p5_crpt.c" line="114" column="40"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1512" column="40"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;param&apos; can be declared as pointer to const" verbose="Parameter &apos;param&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p5_crpt.c">
+            <location file="crypto/evp/p5_crpt.c" line="29" column="16" info="Parameter &apos;param&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;PKCS5_v2_PBE_keyivgen_ex&apos; argument 5 names different: declaration &apos;cipher&apos; definition &apos;c&apos;." verbose="Function &apos;PKCS5_v2_PBE_keyivgen_ex&apos; argument 5 names different: declaration &apos;cipher&apos; definition &apos;c&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p5_crpt2.c">
+            <location file="crypto/evp/p5_crpt2.c" line="115" column="41"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1529" column="41"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;PKCS5_v2_PBE_keyivgen&apos; argument 5 names different: declaration &apos;cipher&apos; definition &apos;c&apos;." verbose="Function &apos;PKCS5_v2_PBE_keyivgen&apos; argument 5 names different: declaration &apos;cipher&apos; definition &apos;c&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p5_crpt2.c">
+            <location file="crypto/evp/p5_crpt2.c" line="171" column="41"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1526" column="41"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;param&apos; can be declared as pointer to const" verbose="Parameter &apos;param&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p5_crpt2.c">
+            <location file="crypto/evp/p5_crpt2.c" line="115" column="16" info="Parameter &apos;param&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;param&apos; can be declared as pointer to const" verbose="Parameter &apos;param&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p5_crpt2.c">
+            <location file="crypto/evp/p5_crpt2.c" line="178" column="29" info="Parameter &apos;param&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;salt&apos; can be declared as pointer to const" verbose="Variable &apos;salt&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p5_crpt2.c">
+            <location file="crypto/evp/p5_crpt2.c" line="182" column="20" info="Variable &apos;salt&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_decrypt_old&apos; argument 1 names different: declaration &apos;dec_key&apos; definition &apos;key&apos;." verbose="Function &apos;EVP_PKEY_decrypt_old&apos; argument 1 names different: declaration &apos;dec_key&apos; definition &apos;key&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_dec.c">
+            <location file="crypto/evp/p_dec.c" line="21" column="41"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1336" column="63"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_decrypt_old&apos; argument 2 names different: declaration &apos;enc_key&apos; definition &apos;ek&apos;." verbose="Function &apos;EVP_PKEY_decrypt_old&apos; argument 2 names different: declaration &apos;enc_key&apos; definition &apos;ek&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_dec.c">
+            <location file="crypto/evp/p_dec.c" line="21" column="67"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1337" column="26"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_decrypt_old&apos; argument 3 names different: declaration &apos;enc_key_len&apos; definition &apos;ekl&apos;." verbose="Function &apos;EVP_PKEY_decrypt_old&apos; argument 3 names different: declaration &apos;enc_key_len&apos; definition &apos;ekl&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_dec.c">
+            <location file="crypto/evp/p_dec.c" line="21" column="75"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1338" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_decrypt_old&apos; argument 4 names different: declaration &apos;private_key&apos; definition &apos;priv&apos;." verbose="Function &apos;EVP_PKEY_decrypt_old&apos; argument 4 names different: declaration &apos;private_key&apos; definition &apos;priv&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_dec.c">
+            <location file="crypto/evp/p_dec.c" line="22" column="15"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1339" column="15"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;priv&apos; can be declared as pointer to const" verbose="Parameter &apos;priv&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_dec.c">
+            <location file="crypto/evp/p_dec.c" line="22" column="15" info="Parameter &apos;priv&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pkey&apos; can be declared as pointer to const" verbose="Parameter &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_legacy.c">
+            <location file="crypto/evp/p_legacy.c" line="54" column="34" info="Parameter &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pkey&apos; can be declared as pointer to const" verbose="Parameter &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_legacy.c">
+            <location file="crypto/evp/p_legacy.c" line="90" column="40" info="Parameter &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_encrypt_old&apos; argument 1 names different: declaration &apos;enc_key&apos; definition &apos;ek&apos;." verbose="Function &apos;EVP_PKEY_encrypt_old&apos; argument 1 names different: declaration &apos;enc_key&apos; definition &apos;ek&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_enc.c">
+            <location file="crypto/evp/p_enc.c" line="21" column="41"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1340" column="63"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_encrypt_old&apos; argument 4 names different: declaration &apos;pub_key&apos; definition &apos;pubk&apos;." verbose="Function &apos;EVP_PKEY_encrypt_old&apos; argument 4 names different: declaration &apos;pub_key&apos; definition &apos;pubk&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_enc.c">
+            <location file="crypto/evp/p_enc.c" line="22" column="28"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1342" column="28"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pubk&apos; can be declared as pointer to const" verbose="Parameter &apos;pubk&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_enc.c">
+            <location file="crypto/evp/p_enc.c" line="22" column="28" info="Parameter &apos;pubk&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="398" column="13"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;str&apos; can be reduced." verbose="The scope of the variable &apos;str&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="1545" column="18"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_set1_DH&apos; argument 2 names different: declaration &apos;key&apos; definition &apos;dhkey&apos;." verbose="Function &apos;EVP_PKEY_set1_DH&apos; argument 2 names different: declaration &apos;key&apos; definition &apos;dhkey&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="870" column="42"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1400" column="74"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_get_group_name&apos; argument 2 names different: declaration &apos;name&apos; definition &apos;gname&apos;." verbose="Function &apos;EVP_PKEY_get_group_name&apos; argument 2 names different: declaration &apos;name&apos; definition &apos;gname&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="1302" column="57"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1997" column="57"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_get_group_name&apos; argument 3 names different: declaration &apos;name_sz&apos; definition &apos;gname_sz&apos;." verbose="Function &apos;EVP_PKEY_get_group_name&apos; argument 3 names different: declaration &apos;name_sz&apos; definition &apos;gname_sz&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="1302" column="71"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1997" column="70"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_pkey_free_it&apos; argument 1 names different: declaration &apos;key&apos; definition &apos;x&apos;." verbose="Function &apos;evp_pkey_free_it&apos; argument 1 names different: declaration &apos;key&apos; definition &apos;x&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="1696" column="40"/>
+            <location file="crypto/evp/p_lib.c" line="54" column="40"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_free&apos; argument 1 names different: declaration &apos;pkey&apos; definition &apos;x&apos;." verbose="Function &apos;EVP_PKEY_free&apos; argument 1 names different: declaration &apos;pkey&apos; definition &apos;x&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="1713" column="30"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1419" column="30"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_get_octet_string_param&apos; argument 5 names different: declaration &apos;out_sz&apos; definition &apos;out_len&apos;." verbose="Function &apos;EVP_PKEY_get_octet_string_param&apos; argument 5 names different: declaration &apos;out_sz&apos; definition &apos;out_len&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="2162" column="13"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1935" column="13"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_get_utf8_string_param&apos; argument 5 names different: declaration &apos;out_sz&apos; definition &apos;out_len&apos;." verbose="Function &apos;EVP_PKEY_get_utf8_string_param&apos; argument 5 names different: declaration &apos;out_sz&apos; definition &apos;out_len&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="2181" column="13"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1932" column="43"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;from_keydata&apos; can be declared as pointer to const" verbose="Variable &apos;from_keydata&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="214" column="15" info="Variable &apos;from_keydata&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;keydata1&apos; can be declared as pointer to const" verbose="Variable &apos;keydata1&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="267" column="11" info="Variable &apos;keydata1&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;keydata2&apos; can be declared as pointer to const" verbose="Variable &apos;keydata2&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="267" column="29" info="Variable &apos;keydata2&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;e&apos; can be declared as pointer to const" verbose="Parameter &apos;e&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="513" column="58" info="Parameter &apos;e&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;e&apos; can be declared as pointer to const" verbose="Parameter &apos;e&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="530" column="57" info="Parameter &apos;e&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;e&apos; can be declared as pointer to const" verbose="Parameter &apos;e&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="684" column="41" info="Parameter &apos;e&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pkey&apos; can be declared as pointer to const" verbose="Parameter &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="826" column="34" info="Parameter &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pkey&apos; can be declared as pointer to const" verbose="Parameter &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="847" column="49" info="Parameter &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pkey&apos; can be declared as pointer to const" verbose="Parameter &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="923" column="32" info="Parameter &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;namemap&apos; can be declared as pointer to const" verbose="Variable &apos;namemap&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="1235" column="27" info="Variable &apos;namemap&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;keymgmt&apos; can be declared as pointer to const" verbose="Variable &apos;keymgmt&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/p_lib.c">
+            <location file="crypto/evp/p_lib.c" line="1977" column="22" info="Variable &apos;keymgmt&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_check.c">
+            <location file="crypto/evp/pmeth_check.c" line="49" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_check.c">
+            <location file="crypto/evp/pmeth_check.c" line="78" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_check.c">
+            <location file="crypto/evp/pmeth_check.c" line="108" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;pkey&apos; can be declared as pointer to const" verbose="Variable &apos;pkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_check.c">
+            <location file="crypto/evp/pmeth_check.c" line="133" column="15" info="Variable &apos;pkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SignFinal_ex&apos; argument 2 names different: declaration &apos;md&apos; definition &apos;sigret&apos;." verbose="Function &apos;EVP_SignFinal_ex&apos; argument 2 names different: declaration &apos;md&apos; definition &apos;sigret&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_sign.c">
+            <location file="crypto/evp/p_sign.c" line="17" column="54"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="835" column="61"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SignFinal_ex&apos; argument 3 names different: declaration &apos;s&apos; definition &apos;siglen&apos;." verbose="Function &apos;EVP_SignFinal_ex&apos; argument 3 names different: declaration &apos;s&apos; definition &apos;siglen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_sign.c">
+            <location file="crypto/evp/p_sign.c" line="18" column="19"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="835" column="79"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SignFinal&apos; argument 2 names different: declaration &apos;md&apos; definition &apos;sigret&apos;." verbose="Function &apos;EVP_SignFinal&apos; argument 2 names different: declaration &apos;md&apos; definition &apos;sigret&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_sign.c">
+            <location file="crypto/evp/p_sign.c" line="67" column="51"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="833" column="58"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SignFinal&apos; argument 3 names different: declaration &apos;s&apos; definition &apos;siglen&apos;." verbose="Function &apos;EVP_SignFinal&apos; argument 3 names different: declaration &apos;s&apos; definition &apos;siglen&apos;." cwe="628" inconclusive="true" file0="crypto/evp/p_sign.c">
+            <location file="crypto/evp/p_sign.c" line="68" column="19"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="833" column="76"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_fromdata&apos; argument 4 names different: declaration &apos;param&apos; definition &apos;params&apos;." verbose="Function &apos;EVP_PKEY_fromdata&apos; argument 4 names different: declaration &apos;param&apos; definition &apos;params&apos;." cwe="628" inconclusive="true" file0="crypto/evp/pmeth_gn.c">
+            <location file="crypto/evp/pmeth_gn.c" line="308" column="16"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1916" column="16"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_gn.c">
+            <location file="crypto/evp/pmeth_gn.c" line="223" column="52" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;e&apos; can be declared as pointer to const" verbose="Parameter &apos;e&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_gn.c">
+            <location file="crypto/evp/pmeth_gn.c" line="257" column="50" info="Parameter &apos;e&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;keydata&apos; can be declared as pointer to const" verbose="Variable &apos;keydata&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_gn.c">
+            <location file="crypto/evp/pmeth_gn.c" line="310" column="11" info="Variable &apos;keydata&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ip&apos; can be declared as pointer to const" verbose="Variable &apos;ip&apos; can be declared as pointer to const" cwe="398" file0="crypto/ex_data.c">
+            <location file="crypto/ex_data.c" line="114" column="19" info="Variable &apos;ip&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ip&apos; can be declared as pointer to const" verbose="Variable &apos;ip&apos; can be declared as pointer to const" cwe="398" file0="crypto/ex_data.c">
+            <location file="crypto/ex_data.c" line="225" column="19" info="Variable &apos;ip&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ip&apos; can be declared as pointer to const" verbose="Variable &apos;ip&apos; can be declared as pointer to const" cwe="398" file0="crypto/ex_data.c">
+            <location file="crypto/ex_data.c" line="279" column="19" info="Variable &apos;ip&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ip&apos; can be declared as pointer to const" verbose="Variable &apos;ip&apos; can be declared as pointer to const" cwe="398" file0="crypto/ex_data.c">
+            <location file="crypto/ex_data.c" line="369" column="19" info="Variable &apos;ip&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;curval&apos; can be declared as pointer to const" verbose="Variable &apos;curval&apos; can be declared as pointer to const" cwe="398" file0="crypto/ex_data.c">
+            <location file="crypto/ex_data.c" line="425" column="11" info="Variable &apos;curval&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;ip&apos; can be declared as pointer to const" verbose="Variable &apos;ip&apos; can be declared as pointer to const" cwe="398" file0="crypto/ex_data.c">
+            <location file="crypto/ex_data.c" line="439" column="19" info="Variable &apos;ip&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;keymgmt!=NULL&apos; is always true" verbose="Condition &apos;keymgmt!=NULL&apos; is always true" cwe="571" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="133" column="21" info="Condition &apos;keymgmt!=NULL&apos; is always true"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;ret&apos; is always true" verbose="Condition &apos;ret&apos; is always true" cwe="571" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="1254" column="9" info="Condition &apos;ret&apos; is always true"/>
+            <location file="crypto/evp/pmeth_lib.c" line="1252" column="15" info="Assignment &apos;ret=1&apos;, assigned value is 1"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_dup&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;pctx&apos;." verbose="Function &apos;EVP_PKEY_CTX_dup&apos; argument 1 names different: declaration &apos;ctx&apos; definition &apos;pctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="269" column="52"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1726" column="52"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_set1_tls1_prf_secret&apos; argument 1 names different: declaration &apos;pctx&apos; definition &apos;ctx&apos;." verbose="Function &apos;EVP_PKEY_CTX_set1_tls1_prf_secret&apos; argument 1 names different: declaration &apos;pctx&apos; definition &apos;ctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="845" column="53"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/kdf.h" line="113" column="53"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_add1_tls1_prf_seed&apos; argument 1 names different: declaration &apos;pctx&apos; definition &apos;ctx&apos;." verbose="Function &apos;EVP_PKEY_CTX_add1_tls1_prf_seed&apos; argument 1 names different: declaration &apos;pctx&apos; definition &apos;ctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="855" column="51"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/kdf.h" line="116" column="51"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_ctrl_str&apos; argument 2 names different: declaration &apos;type&apos; definition &apos;name&apos;." verbose="Function &apos;EVP_PKEY_CTX_ctrl_str&apos; argument 2 names different: declaration &apos;type&apos; definition &apos;name&apos;." cwe="628" inconclusive="true" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="1129" column="17"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1741" column="58"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;e&apos; can be declared as pointer to const" verbose="Parameter &apos;e&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="255" column="56" info="Parameter &apos;e&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;e&apos; can be declared as pointer to const" verbose="Parameter &apos;e&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="262" column="51" info="Parameter &apos;e&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;provkey&apos; can be declared as pointer to const" verbose="Variable &apos;provkey&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="394" column="15" info="Variable &apos;provkey&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="415" column="37" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="1270" column="54" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="1341" column="46" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="1362" column="48" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="1367" column="51" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/evp/pmeth_lib.c">
+            <location file="crypto/evp/pmeth_lib.c" line="1377" column="47" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;dh_named_group_st::nbits&apos; is never used." verbose="struct member &apos;dh_named_group_st::nbits&apos; is never used." cwe="563" file0="crypto/ffc/ffc_dh.c">
+            <location file="crypto/ffc/ffc_dh.c" line="54" column="13"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_skeymgmt_freedata&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." verbose="Function &apos;evp_skeymgmt_freedata&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." cwe="628" inconclusive="true" file0="crypto/evp/skeymgmt_meth.c">
+            <location file="crypto/evp/skeymgmt_meth.c" line="44" column="48"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="606" column="48"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_skeymgmt_freedata&apos; argument 2 names different: declaration &apos;keyddata&apos; definition &apos;keydata&apos;." verbose="Function &apos;evp_skeymgmt_freedata&apos; argument 2 names different: declaration &apos;keyddata&apos; definition &apos;keydata&apos;." cwe="628" inconclusive="true" file0="crypto/evp/skeymgmt_meth.c">
+            <location file="crypto/evp/skeymgmt_meth.c" line="44" column="64"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/evp.h" line="606" column="63"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SKEYMGMT_up_ref&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." verbose="Function &apos;EVP_SKEYMGMT_up_ref&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." cwe="628" inconclusive="true" file0="crypto/evp/skeymgmt_meth.c">
+            <location file="crypto/evp/skeymgmt_meth.c" line="187" column="39"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1704" column="39"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SKEYMGMT_free&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." verbose="Function &apos;EVP_SKEYMGMT_free&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." cwe="628" inconclusive="true" file0="crypto/evp/skeymgmt_meth.c">
+            <location file="crypto/evp/skeymgmt_meth.c" line="198" column="38"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1705" column="38"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SKEYMGMT_get0_provider&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." verbose="Function &apos;EVP_SKEYMGMT_get0_provider&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." cwe="628" inconclusive="true" file0="crypto/evp/skeymgmt_meth.c">
+            <location file="crypto/evp/skeymgmt_meth.c" line="208" column="69"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1706" column="69"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SKEYMGMT_get0_description&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." verbose="Function &apos;EVP_SKEYMGMT_get0_description&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." cwe="628" inconclusive="true" file0="crypto/evp/skeymgmt_meth.c">
+            <location file="crypto/evp/skeymgmt_meth.c" line="213" column="63"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1708" column="63"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SKEYMGMT_get0_name&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." verbose="Function &apos;EVP_SKEYMGMT_get0_name&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." cwe="628" inconclusive="true" file0="crypto/evp/skeymgmt_meth.c">
+            <location file="crypto/evp/skeymgmt_meth.c" line="218" column="56"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1707" column="56"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SKEYMGMT_is_a&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." verbose="Function &apos;EVP_SKEYMGMT_is_a&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." cwe="628" inconclusive="true" file0="crypto/evp/skeymgmt_meth.c">
+            <location file="crypto/evp/skeymgmt_meth.c" line="223" column="43"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1709" column="43"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SKEYMGMT_names_do_all&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." verbose="Function &apos;EVP_SKEYMGMT_names_do_all&apos; argument 1 names different: declaration &apos;keymgmt&apos; definition &apos;skeymgmt&apos;." cwe="628" inconclusive="true" file0="crypto/evp/skeymgmt_meth.c">
+            <location file="crypto/evp/skeymgmt_meth.c" line="244" column="51"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1713" column="51"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;m&apos; can be declared as pointer to const" verbose="Variable &apos;m&apos; can be declared as pointer to const" cwe="398" file0="crypto/ffc/ffc_key_generate.c">
+            <location file="crypto/ffc/ffc_key_generate.c" line="26" column="13" info="Variable &apos;m&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;key&apos; can be declared as pointer to const" verbose="Parameter &apos;key&apos; can be declared as pointer to const" cwe="398" file0="crypto/hashtable/hashfunc.c">
+            <location file="crypto/hashtable/hashfunc.c" line="13" column="47" info="Parameter &apos;key&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;evp_signature_fetch_from_prov&apos; argument 2 names different: declaration &apos;name&apos; definition &apos;algorithm&apos;." verbose="Function &apos;evp_signature_fetch_from_prov&apos; argument 2 names different: declaration &apos;name&apos; definition &apos;algorithm&apos;." cwe="628" inconclusive="true" file0="crypto/evp/signature.c">
+            <location file="crypto/evp/signature.c" line="506" column="17"/>
+            <location file="crypto/evp/evp_local.h" line="344" column="17"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SIGNATURE_has_message_update&apos; argument 1 names different: declaration &apos;sig&apos; definition &apos;signature&apos;." verbose="Function &apos;EVP_SIGNATURE_has_message_update&apos; argument 1 names different: declaration &apos;sig&apos; definition &apos;signature&apos;." cwe="628" inconclusive="true" file0="crypto/evp/signature.c">
+            <location file="crypto/evp/signature.c" line="522" column="59"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1810" column="59"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_SIGNATURE_do_all_provided&apos; argument 3 names different: declaration &apos;data&apos; definition &apos;arg&apos;." verbose="Function &apos;EVP_SIGNATURE_do_all_provided&apos; argument 3 names different: declaration &apos;data&apos; definition &apos;arg&apos;." cwe="628" inconclusive="true" file0="crypto/evp/signature.c">
+            <location file="crypto/evp/signature.c" line="546" column="11"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1804" column="11"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;EVP_PKEY_CTX_set_signature&apos; argument 1 names different: declaration &apos;pctx&apos; definition &apos;ctx&apos;." verbose="Function &apos;EVP_PKEY_CTX_set_signature&apos; argument 1 names different: declaration &apos;pctx&apos; definition &apos;ctx&apos;." cwe="628" inconclusive="true" file0="crypto/evp/signature.c">
+            <location file="crypto/evp/signature.c" line="1047" column="46"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/evp.h" line="1790" column="46"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ffc_validate_private_key&apos; argument 2 names different: declaration &apos;priv_key&apos; definition &apos;priv&apos;." verbose="Function &apos;ossl_ffc_validate_private_key&apos; argument 2 names different: declaration &apos;priv_key&apos; definition &apos;priv&apos;." cwe="628" inconclusive="true" file0="crypto/ffc/ffc_key_validate.c">
+            <location file="crypto/ffc/ffc_key_validate.c" line="102" column="70"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/ffc.h" line="214" column="70"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;seed&apos; can be declared as pointer to const" verbose="Parameter &apos;seed&apos; can be declared as pointer to const" cwe="398" file0="crypto/ffc/ffc_params_generate.c">
+            <location file="crypto/ffc/ffc_params_generate.c" line="150" column="32" info="Parameter &apos;seed&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;seed_in&apos; can be declared as pointer to const" verbose="Variable &apos;seed_in&apos; can be declared as pointer to const" cwe="398" file0="crypto/ffc/ffc_params_generate.c">
+            <location file="crypto/ffc/ffc_params_generate.c" line="842" column="20" info="Variable &apos;seed_in&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;flush_ok&apos; can be reduced." verbose="The scope of the variable &apos;flush_ok&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="366" column="9"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ht_flush&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." verbose="Function &apos;ossl_ht_flush&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." cwe="628" inconclusive="true" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="359" column="23"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h" line="397" column="23"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ht_free&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." verbose="Function &apos;ossl_ht_free&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." cwe="628" inconclusive="true" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="364" column="23"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h" line="372" column="23"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ht_count&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." verbose="Function &apos;ossl_ht_count&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." cwe="628" inconclusive="true" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="390" column="26"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h" line="418" column="26"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ht_foreach_until&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." verbose="Function &apos;ossl_ht_foreach_until&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." cwe="628" inconclusive="true" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="398" column="32"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h" line="428" column="32"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ht_filter&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." verbose="Function &apos;ossl_ht_filter&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." cwe="628" inconclusive="true" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="418" column="35"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h" line="437" column="35"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ht_insert&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." verbose="Function &apos;ossl_ht_insert&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." cwe="628" inconclusive="true" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="719" column="24"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h" line="406" column="24"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ht_get&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." verbose="Function &apos;ossl_ht_get&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." cwe="628" inconclusive="true" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="759" column="27"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h" line="449" column="27"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ht_delete&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." verbose="Function &apos;ossl_ht_delete&apos; argument 1 names different: declaration &apos;htable&apos; definition &apos;h&apos;." cwe="628" inconclusive="true" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="820" column="24"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h" line="413" column="24"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ht_deref_value&apos; argument 1 names different: declaration &apos;p&apos; definition &apos;h&apos;." verbose="Function &apos;ossl_ht_deref_value&apos; argument 1 names different: declaration &apos;p&apos; definition &apos;h&apos;." cwe="628" inconclusive="true" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="871" column="35"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h" line="471" column="35"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;key&apos; can be declared as pointer to const" verbose="Parameter &apos;key&apos; can be declared as pointer to const" cwe="398" file0="crypto/hashtable/hashtable.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/hashtable.h" line="340" column="61" info="Parameter &apos;key&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;a&apos; can be declared as pointer to const" verbose="Parameter &apos;a&apos; can be declared as pointer to const" cwe="398" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="585" column="42" info="Parameter &apos;a&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;b&apos; can be declared as pointer to const" verbose="Parameter &apos;b&apos; can be declared as pointer to const" cwe="398" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="585" column="53" info="Parameter &apos;b&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;key&apos; can be declared as pointer to const" verbose="Parameter &apos;key&apos; can be declared as pointer to const" cwe="398" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="686" column="68" info="Parameter &apos;key&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;h&apos; can be declared as pointer to const" verbose="Parameter &apos;h&apos; can be declared as pointer to const" cwe="398" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="871" column="35" info="Parameter &apos;h&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;h&apos; can be declared as pointer to const" verbose="Parameter &apos;h&apos; can be declared as pointer to const" cwe="398" file0="crypto/hashtable/hashtable.c">
+            <location file="crypto/hashtable/hashtable.c" line="883" column="31" info="Parameter &apos;h&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ffc_params_set0_pqg&apos; argument 1 names different: declaration &apos;params&apos; definition &apos;d&apos;." verbose="Function &apos;ossl_ffc_params_set0_pqg&apos; argument 1 names different: declaration &apos;params&apos; definition &apos;d&apos;." cwe="628" inconclusive="true" file0="crypto/ffc/ffc_params.c">
+            <location file="crypto/ffc/ffc_params.c" line="40" column="43"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/ffc.h" line="144" column="43"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ffc_params_get0_pqg&apos; argument 1 names different: declaration &apos;params&apos; definition &apos;d&apos;." verbose="Function &apos;ossl_ffc_params_get0_pqg&apos; argument 1 names different: declaration &apos;params&apos; definition &apos;d&apos;." cwe="628" inconclusive="true" file0="crypto/ffc/ffc_params.c">
+            <location file="crypto/ffc/ffc_params.c" line="56" column="49"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/ffc.h" line="146" column="49"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ffc_params_todata&apos; argument 2 names different: declaration &apos;tmpl&apos; definition &apos;bld&apos;." verbose="Function &apos;ossl_ffc_params_todata&apos; argument 2 names different: declaration &apos;tmpl&apos; definition &apos;bld&apos;." cwe="628" inconclusive="true" file0="crypto/ffc/ffc_params.c">
+            <location file="crypto/ffc/ffc_params.c" line="213" column="67"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/ffc.h" line="217" column="67"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;HMAC_size&apos; argument 1 names different: declaration &apos;e&apos; definition &apos;ctx&apos;." verbose="Function &apos;HMAC_size&apos; argument 1 names different: declaration &apos;e&apos; definition &apos;ctx&apos;." cwe="628" inconclusive="true" file0="crypto/hmac/hmac.c">
+            <location file="crypto/hmac/hmac.c" line="160" column="34"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/hmac.h" line="32" column="56"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;impl&apos; can be declared as pointer to const" verbose="Parameter &apos;impl&apos; can be declared as pointer to const" cwe="398" file0="crypto/hmac/hmac.c">
+            <location file="crypto/hmac/hmac.c" line="26" column="31" info="Parameter &apos;impl&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;sctx&apos; can be declared as pointer to const" verbose="Parameter &apos;sctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/hmac/hmac.c">
+            <location file="crypto/hmac/hmac.c" line="230" column="45" info="Parameter &apos;sctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;IDEA_cbc_encrypt&apos; argument 6 names different: declaration &apos;enc&apos; definition &apos;encrypt&apos;." verbose="Function &apos;IDEA_cbc_encrypt&apos; argument 6 names different: declaration &apos;enc&apos; definition &apos;encrypt&apos;." cwe="628" inconclusive="true" file0="crypto/idea/i_cbc.c">
+            <location file="crypto/idea/i_cbc.c" line="22" column="9"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/idea.h" line="52" column="28"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;IDEA_encrypt&apos; argument 1 names different: declaration &apos;in&apos; definition &apos;d&apos;." verbose="Function &apos;IDEA_encrypt&apos; argument 1 names different: declaration &apos;in&apos; definition &apos;d&apos;." cwe="628" inconclusive="true" file0="crypto/idea/i_cbc.c">
+            <location file="crypto/idea/i_cbc.c" line="96" column="34"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/idea.h" line="62" column="56"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;IDEA_encrypt&apos; argument 2 names different: declaration &apos;ks&apos; definition &apos;key&apos;." verbose="Function &apos;IDEA_encrypt&apos; argument 2 names different: declaration &apos;ks&apos; definition &apos;key&apos;." cwe="628" inconclusive="true" file0="crypto/idea/i_cbc.c">
+            <location file="crypto/idea/i_cbc.c" line="96" column="56"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/idea.h" line="63" column="24"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tin0&apos; is assigned a value that is never used." verbose="Variable &apos;tin0&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cbc.c">
+            <location file="crypto/idea/i_cbc.c" line="92" column="10"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tin1&apos; is assigned a value that is never used." verbose="Variable &apos;tin1&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cbc.c">
+            <location file="crypto/idea/i_cbc.c" line="92" column="17"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tout0&apos; is assigned a value that is never used." verbose="Variable &apos;tout0&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cbc.c">
+            <location file="crypto/idea/i_cbc.c" line="92" column="25"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tout1&apos; is assigned a value that is never used." verbose="Variable &apos;tout1&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cbc.c">
+            <location file="crypto/idea/i_cbc.c" line="92" column="33"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;xor0&apos; is assigned a value that is never used." verbose="Variable &apos;xor0&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cbc.c">
+            <location file="crypto/idea/i_cbc.c" line="92" column="40"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;xor1&apos; is assigned a value that is never used." verbose="Variable &apos;xor1&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cbc.c">
+            <location file="crypto/idea/i_cbc.c" line="92" column="47"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tin[0]&apos; is assigned a value that is never used." verbose="Variable &apos;tin[0]&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cbc.c">
+            <location file="crypto/idea/i_cbc.c" line="93" column="12"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tin[1]&apos; is assigned a value that is never used." verbose="Variable &apos;tin[1]&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cbc.c">
+            <location file="crypto/idea/i_cbc.c" line="93" column="21"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;IDEA_cfb64_encrypt&apos; argument 4 names different: declaration &apos;ks&apos; definition &apos;schedule&apos;." verbose="Function &apos;IDEA_cfb64_encrypt&apos; argument 4 names different: declaration &apos;ks&apos; definition &apos;schedule&apos;." cwe="628" inconclusive="true" file0="crypto/idea/i_cfb64.c">
+            <location file="crypto/idea/i_cfb64.c" line="27" column="37"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/idea.h" line="55" column="24"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;IDEA_cfb64_encrypt&apos; argument 5 names different: declaration &apos;iv&apos; definition &apos;ivec&apos;." verbose="Function &apos;IDEA_cfb64_encrypt&apos; argument 5 names different: declaration &apos;iv&apos; definition &apos;ivec&apos;." cwe="628" inconclusive="true" file0="crypto/idea/i_cfb64.c">
+            <location file="crypto/idea/i_cfb64.c" line="28" column="20"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/idea.h" line="56" column="20"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;IDEA_cfb64_encrypt&apos; argument 7 names different: declaration &apos;enc&apos; definition &apos;encrypt&apos;." verbose="Function &apos;IDEA_cfb64_encrypt&apos; argument 7 names different: declaration &apos;enc&apos; definition &apos;encrypt&apos;." cwe="628" inconclusive="true" file0="crypto/idea/i_cfb64.c">
+            <location file="crypto/idea/i_cfb64.c" line="28" column="40"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/idea.h" line="57" column="9"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;v0&apos; is assigned a value that is never used." verbose="Variable &apos;v0&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cfb64.c">
+            <location file="crypto/idea/i_cfb64.c" line="85" column="8"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;v1&apos; is assigned a value that is never used." verbose="Variable &apos;v1&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cfb64.c">
+            <location file="crypto/idea/i_cfb64.c" line="85" column="13"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ti[0]&apos; is assigned a value that is never used." verbose="Variable &apos;ti[0]&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cfb64.c">
+            <location file="crypto/idea/i_cfb64.c" line="85" column="21"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ti[1]&apos; is assigned a value that is never used." verbose="Variable &apos;ti[1]&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cfb64.c">
+            <location file="crypto/idea/i_cfb64.c" line="85" column="29"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;t&apos; is assigned a value that is never used." verbose="Variable &apos;t&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cfb64.c">
+            <location file="crypto/idea/i_cfb64.c" line="85" column="33"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;c&apos; is assigned a value that is never used." verbose="Variable &apos;c&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cfb64.c">
+            <location file="crypto/idea/i_cfb64.c" line="85" column="37"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;cc&apos; is assigned a value that is never used." verbose="Variable &apos;cc&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_cfb64.c">
+            <location file="crypto/idea/i_cfb64.c" line="85" column="42"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;l0&apos; is assigned a value that is never used." verbose="Variable &apos;l0&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_ecb.c">
+            <location file="crypto/idea/i_ecb.c" line="40" column="8"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;l1&apos; is assigned a value that is never used." verbose="Variable &apos;l1&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_ecb.c">
+            <location file="crypto/idea/i_ecb.c" line="40" column="13"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;d[0]&apos; is assigned a value that is never used." verbose="Variable &apos;d[0]&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_ecb.c">
+            <location file="crypto/idea/i_ecb.c" line="40" column="20"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;d[1]&apos; is assigned a value that is never used." verbose="Variable &apos;d[1]&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_ecb.c">
+            <location file="crypto/idea/i_ecb.c" line="40" column="27"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;IDEA_ofb64_encrypt&apos; argument 4 names different: declaration &apos;ks&apos; definition &apos;schedule&apos;." verbose="Function &apos;IDEA_ofb64_encrypt&apos; argument 4 names different: declaration &apos;ks&apos; definition &apos;schedule&apos;." cwe="628" inconclusive="true" file0="crypto/idea/i_ofb64.c">
+            <location file="crypto/idea/i_ofb64.c" line="26" column="37"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/idea.h" line="60" column="24"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;IDEA_ofb64_encrypt&apos; argument 5 names different: declaration &apos;iv&apos; definition &apos;ivec&apos;." verbose="Function &apos;IDEA_ofb64_encrypt&apos; argument 5 names different: declaration &apos;iv&apos; definition &apos;ivec&apos;." cwe="628" inconclusive="true" file0="crypto/idea/i_ofb64.c">
+            <location file="crypto/idea/i_ofb64.c" line="27" column="20"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/idea.h" line="61" column="20"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;t&apos; is assigned a value that is never used." verbose="Variable &apos;t&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_ofb64.c">
+            <location file="crypto/idea/i_ofb64.c" line="72" column="7"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;v0&apos; is assigned a value that is never used." verbose="Variable &apos;v0&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_ofb64.c">
+            <location file="crypto/idea/i_ofb64.c" line="72" column="12"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;v1&apos; is assigned a value that is never used." verbose="Variable &apos;v1&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_ofb64.c">
+            <location file="crypto/idea/i_ofb64.c" line="72" column="17"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ti[0]&apos; is assigned a value that is never used." verbose="Variable &apos;ti[0]&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_ofb64.c">
+            <location file="crypto/idea/i_ofb64.c" line="72" column="25"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ti[1]&apos; is assigned a value that is never used." verbose="Variable &apos;ti[1]&apos; is assigned a value that is never used." cwe="563" file0="crypto/idea/i_ofb64.c">
+            <location file="crypto/idea/i_ofb64.c" line="72" column="33"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;(ctx-&gt;seq+1)==0&apos; is always false" verbose="Condition &apos;(ctx-&gt;seq+1)==0&apos; is always false" cwe="570" file0="crypto/hpke/hpke.c">
+            <location file="crypto/hpke/hpke.c" line="1182" column="24" info="Condition &apos;(ctx-&gt;seq+1)==0&apos; is always false"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;(ctx-&gt;seq+1)==0&apos; is always false" verbose="Condition &apos;(ctx-&gt;seq+1)==0&apos; is always false" cwe="570" file0="crypto/hpke/hpke.c">
+            <location file="crypto/hpke/hpke.c" line="1224" column="24" info="Condition &apos;(ctx-&gt;seq+1)==0&apos; is always false"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/hpke/hpke.c">
+            <location file="crypto/hpke/hpke.c" line="1040" column="42" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;r0&apos; can be reduced." verbose="The scope of the variable &apos;r0&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/idea/i_skey.c">
+            <location file="crypto/idea/i_skey.c" line="24" column="33"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;r1&apos; can be reduced." verbose="The scope of the variable &apos;r1&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/idea/i_skey.c">
+            <location file="crypto/idea/i_skey.c" line="24" column="37"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;r2&apos; can be reduced." verbose="The scope of the variable &apos;r2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/idea/i_skey.c">
+            <location file="crypto/idea/i_skey.c" line="24" column="41"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n1&apos; can be reduced." verbose="The scope of the variable &apos;n1&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/idea/i_skey.c">
+            <location file="crypto/idea/i_skey.c" line="93" column="10"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n2&apos; can be reduced." verbose="The scope of the variable &apos;n2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/idea/i_skey.c">
+            <location file="crypto/idea/i_skey.c" line="93" column="14"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;q&apos; can be reduced." verbose="The scope of the variable &apos;q&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/idea/i_skey.c">
+            <location file="crypto/idea/i_skey.c" line="93" column="18"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;r&apos; can be reduced." verbose="The scope of the variable &apos;r&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/idea/i_skey.c">
+            <location file="crypto/idea/i_skey.c" line="93" column="21"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;b1&apos; can be reduced." verbose="The scope of the variable &apos;b1&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/idea/i_skey.c">
+            <location file="crypto/idea/i_skey.c" line="93" column="24"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;t&apos; can be reduced." verbose="The scope of the variable &apos;t&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/idea/i_skey.c">
+            <location file="crypto/idea/i_skey.c" line="93" column="32"/>
+        </error>
+        <error id="redundantContinue" severity="style" msg="&apos;continue&apos; is redundant since it is the last statement in a loop." verbose="&apos;continue&apos; is redundant since it is the last statement in a loop." cwe="561" file0="crypto/http/http_client.c">
+            <location file="crypto/http/http_client.c" line="463" column="9"/>
+        </error>
+        <error id="redundantContinue" severity="style" msg="&apos;continue&apos; is redundant since it is the last statement in a loop." verbose="&apos;continue&apos; is redundant since it is the last statement in a loop." cwe="561" file0="crypto/http/http_client.c">
+            <location file="crypto/http/http_client.c" line="475" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;hdr&apos; can be reduced." verbose="The scope of the variable &apos;hdr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/http/http_client.c">
+            <location file="crypto/http/http_client.c" line="397" column="17"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;time_diff&apos; can be reduced." verbose="The scope of the variable &apos;time_diff&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/http/http_client.c">
+            <location file="crypto/http/http_client.c" line="552" column="12"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_HTTP_get&apos; argument 10 names different: declaration &apos;expected_content_type&apos; definition &apos;expected_ct&apos;." verbose="Function &apos;OSSL_HTTP_get&apos; argument 10 names different: declaration &apos;expected_content_type&apos; definition &apos;expected_ct&apos;." cwe="628" inconclusive="true" file0="crypto/http/http_client.c">
+            <location file="crypto/http/http_client.c" line="1288" column="17"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/http.h" line="92" column="17"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OSSL_HTTP_transfer&apos; argument 16 names different: declaration &apos;expected_content_type&apos; definition &apos;expected_ct&apos;." verbose="Function &apos;OSSL_HTTP_transfer&apos; argument 16 names different: declaration &apos;expected_content_type&apos; definition &apos;expected_ct&apos;." cwe="628" inconclusive="true" file0="crypto/http/http_client.c">
+            <location file="crypto/http/http_client.c" line="1381" column="17"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/http.h" line="102" column="17"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;hdr&apos; can be declared as pointer to const" verbose="Variable &apos;hdr&apos; can be declared as pointer to const" cwe="398" file0="crypto/http/http_client.c">
+            <location file="crypto/http/http_client.c" line="397" column="17" info="Variable &apos;hdr&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;key&apos; can be declared as pointer to const" verbose="Variable &apos;key&apos; can be declared as pointer to const" cwe="398" file0="crypto/http/http_client.c">
+            <location file="crypto/http/http_client.c" line="577" column="17" info="Variable &apos;key&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="duplicateConditionalAssign" severity="style" msg="The statement &apos;if (lh-&gt;error!=0) lh-&gt;error=0&apos; is logically equivalent to &apos;lh-&gt;error=0&apos;." verbose="The statement &apos;if (lh-&gt;error!=0) lh-&gt;error=0&apos; is logically equivalent to &apos;lh-&gt;error=0&apos;." cwe="398" file0="crypto/lhash/lhash.c">
+            <location file="crypto/lhash/lhash.c" line="177" column="19" info="Condition &apos;lh-&gt;error!=0&apos; is redundant"/>
+            <location file="crypto/lhash/lhash.c" line="178" column="19" info="Assignment &apos;lh-&gt;error=0&apos;"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/lhash/lhash.c">
+            <location file="crypto/lhash/lhash.c" line="245" column="32"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;hash&apos; can be reduced." verbose="The scope of the variable &apos;hash&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/lhash/lhash.c">
+            <location file="crypto/lhash/lhash.c" line="246" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;v&apos; can be reduced." verbose="The scope of the variable &apos;v&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/lhash/lhash.c">
+            <location file="crypto/lhash/lhash.c" line="363" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;r&apos; can be reduced." verbose="The scope of the variable &apos;r&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/lhash/lhash.c">
+            <location file="crypto/lhash/lhash.c" line="364" column="9"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;lh&apos; can be declared as pointer to const" verbose="Parameter &apos;lh&apos; can be declared as pointer to const" cwe="398" file0="crypto/lhash/lhash.c">
+            <location file="crypto/lhash/lhash.c" line="439" column="37" info="Parameter &apos;lh&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;init_thread_deregister&apos; argument 1 names different: declaration &apos;arg&apos; definition &apos;index&apos;." verbose="Function &apos;init_thread_deregister&apos; argument 1 names different: declaration &apos;arg&apos; definition &apos;index&apos;." cwe="628" inconclusive="true" file0="crypto/initthread.c">
+            <location file="crypto/initthread.c" line="439" column="41"/>
+            <location file="crypto/initthread.c" line="109" column="41"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;arg&apos; can be declared as pointer to const" verbose="Parameter &apos;arg&apos; can be declared as pointer to const" cwe="398" file0="crypto/initthread.c">
+            <location file="crypto/initthread.c" line="347" column="36" info="Parameter &apos;arg&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;index&apos; can be declared as pointer to const" verbose="Parameter &apos;index&apos; can be declared as pointer to const" cwe="398" file0="crypto/initthread.c">
+            <location file="crypto/initthread.c" line="439" column="41" info="Parameter &apos;index&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;OPENSSL_info&apos; argument 1 names different: declaration &apos;type&apos; definition &apos;t&apos;." verbose="Function &apos;OPENSSL_info&apos; argument 1 names different: declaration &apos;type&apos; definition &apos;t&apos;." cwe="628" inconclusive="true" file0="crypto/info.c">
+            <location file="crypto/info.c" line="253" column="30"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/crypto.h" line="200" column="30"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctxIq&apos; can be declared as pointer to const" verbose="Parameter &apos;ctxIq&apos; can be declared as pointer to const" cwe="398" file0="crypto/lms/lm_ots_verify.c">
+            <location file="crypto/lms/lm_ots_verify.c" line="86" column="69" info="Parameter &apos;ctxIq&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;p1&apos; can be declared as pointer to const" verbose="Variable &apos;p1&apos; can be declared as pointer to const" cwe="398" file0="crypto/md2/md2_dgst.c">
+            <location file="crypto/md2/md2_dgst.c" line="154" column="23" info="Variable &apos;p1&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;pub&apos; can be declared as pointer to const" verbose="Parameter &apos;pub&apos; can be declared as pointer to const" cwe="398" file0="crypto/lms/lms_sig_decoder.c">
+            <location file="crypto/lms/lms_sig_decoder.c" line="81" column="49" info="Parameter &apos;pub&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX0&apos; can be reduced." verbose="The scope of the variable &apos;XX0&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="49" column="25"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX1&apos; can be reduced." verbose="The scope of the variable &apos;XX1&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="49" column="30"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX2&apos; can be reduced." verbose="The scope of the variable &apos;XX2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="49" column="35"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX3&apos; can be reduced." verbose="The scope of the variable &apos;XX3&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="49" column="40"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX4&apos; can be reduced." verbose="The scope of the variable &apos;XX4&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="49" column="45"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX5&apos; can be reduced." verbose="The scope of the variable &apos;XX5&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="49" column="50"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX6&apos; can be reduced." verbose="The scope of the variable &apos;XX6&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="49" column="55"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX7&apos; can be reduced." verbose="The scope of the variable &apos;XX7&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="49" column="60"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX8&apos; can be reduced." verbose="The scope of the variable &apos;XX8&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="50" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX9&apos; can be reduced." verbose="The scope of the variable &apos;XX9&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="50" column="14"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX10&apos; can be reduced." verbose="The scope of the variable &apos;XX10&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="50" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX11&apos; can be reduced." verbose="The scope of the variable &apos;XX11&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="50" column="25"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX12&apos; can be reduced." verbose="The scope of the variable &apos;XX12&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="50" column="31"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX13&apos; can be reduced." verbose="The scope of the variable &apos;XX13&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="50" column="37"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX14&apos; can be reduced." verbose="The scope of the variable &apos;XX14&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="50" column="43"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX15&apos; can be reduced." verbose="The scope of the variable &apos;XX15&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="50" column="49"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;MD4_Update&apos; argument 2 names different: declaration &apos;data&apos; definition &apos;data_&apos;." verbose="Function &apos;MD4_Update&apos; argument 2 names different: declaration &apos;data&apos; definition &apos;data_&apos;." cwe="628" inconclusive="true" file0="crypto/md4/md4_dgst.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/md32_common.inc" line="166" column="42"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/md4.h" line="51" column="62"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;MD4_Transform&apos; argument 2 names different: declaration &apos;b&apos; definition &apos;data&apos;." verbose="Function &apos;MD4_Transform&apos; argument 2 names different: declaration &apos;b&apos; definition &apos;data&apos;." cwe="628" inconclusive="true" file0="crypto/md4/md4_dgst.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/md32_common.inc" line="235" column="55"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/md4.h" line="55" column="75"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md4_block_data_order&apos; argument 2 names different: declaration &apos;p&apos; definition &apos;data_&apos;." verbose="Function &apos;md4_block_data_order&apos; argument 2 names different: declaration &apos;p&apos; definition &apos;data_&apos;." cwe="628" inconclusive="true" file0="crypto/md4/md4_dgst.c">
+            <location file="crypto/md4/md4_dgst.c" line="43" column="51"/>
+            <location file="crypto/md4/md4_local.h" line="18" column="51"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctxI&apos; can be declared as pointer to const" verbose="Parameter &apos;ctxI&apos; can be declared as pointer to const" cwe="398" file0="crypto/lms/lms_verify.c">
+            <location file="crypto/lms/lms_verify.c" line="41" column="34" info="Parameter &apos;ctxI&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX0&apos; can be reduced." verbose="The scope of the variable &apos;XX0&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="49" column="25"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX1&apos; can be reduced." verbose="The scope of the variable &apos;XX1&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="49" column="30"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX2&apos; can be reduced." verbose="The scope of the variable &apos;XX2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="49" column="35"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX3&apos; can be reduced." verbose="The scope of the variable &apos;XX3&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="49" column="40"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX4&apos; can be reduced." verbose="The scope of the variable &apos;XX4&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="49" column="45"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX5&apos; can be reduced." verbose="The scope of the variable &apos;XX5&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="49" column="50"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX6&apos; can be reduced." verbose="The scope of the variable &apos;XX6&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="49" column="55"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX7&apos; can be reduced." verbose="The scope of the variable &apos;XX7&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="49" column="60"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX8&apos; can be reduced." verbose="The scope of the variable &apos;XX8&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="50" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX9&apos; can be reduced." verbose="The scope of the variable &apos;XX9&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="50" column="14"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX10&apos; can be reduced." verbose="The scope of the variable &apos;XX10&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="50" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX11&apos; can be reduced." verbose="The scope of the variable &apos;XX11&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="50" column="25"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX12&apos; can be reduced." verbose="The scope of the variable &apos;XX12&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="50" column="31"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX13&apos; can be reduced." verbose="The scope of the variable &apos;XX13&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="50" column="37"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX14&apos; can be reduced." verbose="The scope of the variable &apos;XX14&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="50" column="43"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;XX15&apos; can be reduced." verbose="The scope of the variable &apos;XX15&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="50" column="49"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;MD5_Update&apos; argument 2 names different: declaration &apos;data&apos; definition &apos;data_&apos;." verbose="Function &apos;MD5_Update&apos; argument 2 names different: declaration &apos;data&apos; definition &apos;data_&apos;." cwe="628" inconclusive="true" file0="crypto/md5/md5_dgst.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/md32_common.inc" line="166" column="42"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/md5.h" line="50" column="62"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;MD5_Transform&apos; argument 2 names different: declaration &apos;b&apos; definition &apos;data&apos;." verbose="Function &apos;MD5_Transform&apos; argument 2 names different: declaration &apos;b&apos; definition &apos;data&apos;." cwe="628" inconclusive="true" file0="crypto/md5/md5_dgst.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/md32_common.inc" line="235" column="55"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/md5.h" line="54" column="75"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;md5_block_data_order&apos; argument 2 names different: declaration &apos;p&apos; definition &apos;data_&apos;." verbose="Function &apos;md5_block_data_order&apos; argument 2 names different: declaration &apos;p&apos; definition &apos;data_&apos;." cwe="628" inconclusive="true" file0="crypto/md5/md5_dgst.c">
+            <location file="crypto/md5/md5_dgst.c" line="43" column="51"/>
+            <location file="crypto/md5/md5_local.h" line="28" column="51"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;tin0&apos; can be reduced." verbose="The scope of the variable &apos;tin0&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/mdc2/mdc2dgst.c">
+            <location file="crypto/mdc2/mdc2dgst.c" line="68" column="23"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;tin1&apos; can be reduced." verbose="The scope of the variable &apos;tin1&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/mdc2/mdc2dgst.c">
+            <location file="crypto/mdc2/mdc2dgst.c" line="68" column="29"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ttin0&apos; can be reduced." verbose="The scope of the variable &apos;ttin0&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/mdc2/mdc2dgst.c">
+            <location file="crypto/mdc2/mdc2dgst.c" line="69" column="23"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ttin1&apos; can be reduced." verbose="The scope of the variable &apos;ttin1&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/mdc2/mdc2dgst.c">
+            <location file="crypto/mdc2/mdc2dgst.c" line="69" column="30"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p&apos; can be reduced." verbose="The scope of the variable &apos;p&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/mdc2/mdc2dgst.c">
+            <location file="crypto/mdc2/mdc2dgst.c" line="72" column="20"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;MDC2_Update&apos; argument 2 names different: declaration &apos;data&apos; definition &apos;in&apos;." verbose="Function &apos;MDC2_Update&apos; argument 2 names different: declaration &apos;data&apos; definition &apos;in&apos;." cwe="628" inconclusive="true" file0="crypto/mdc2/mdc2dgst.c">
+            <location file="crypto/mdc2/mdc2dgst.c" line="34" column="51"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/mdc2.h" line="43" column="73"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ms&apos; can be declared as pointer to const" verbose="Parameter &apos;ms&apos; can be declared as pointer to const" cwe="398" file0="crypto/md5/md5_sha1.c">
+            <location file="crypto/md5/md5_sha1.c" line="41" column="70" info="Parameter &apos;ms&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;CRYPTO_secure_malloc_init&apos; argument 1 names different: declaration &apos;sz&apos; definition &apos;size&apos;." verbose="Function &apos;CRYPTO_secure_malloc_init&apos; argument 1 names different: declaration &apos;sz&apos; definition &apos;size&apos;." cwe="628" inconclusive="true" file0="crypto/mem_sec.c">
+            <location file="crypto/mem_sec.c" line="109" column="38"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/crypto.h" line="447" column="38"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;tmp&apos; can be reduced." verbose="The scope of the variable &apos;tmp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_dsa/ml_dsa_key_compress.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/constant_time.h" line="438" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;mask&apos; can be reduced." verbose="The scope of the variable &apos;mask&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_dsa/ml_dsa_key_compress.c">
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/internal/constant_time.h" line="462" column="19"/>
+        </error>
+        <error id="shiftTooManyBitsSigned" severity="portability" msg="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" verbose="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" cwe="758" file0="crypto/ml_dsa/ml_dsa_key_compress.c">
+            <location file="crypto/ml_dsa/ml_dsa_key_compress.c" line="72" column="26" info="Shift"/>
+        </error>
+        <error id="shiftTooManyBitsSigned" severity="portability" msg="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" verbose="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" cwe="758" file0="crypto/ml_dsa/ml_dsa_key_compress.c">
+            <location file="crypto/ml_dsa/ml_dsa_key_compress.c" line="92" column="51" info="Shift"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;CRYPTO_aligned_alloc&apos; argument 2 names different: declaration &apos;align&apos; definition &apos;alignment&apos;." verbose="Function &apos;CRYPTO_aligned_alloc&apos; argument 2 names different: declaration &apos;align&apos; definition &apos;alignment&apos;." cwe="628" inconclusive="true" file0="crypto/mem.c">
+            <location file="crypto/mem.c" line="252" column="47"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/crypto.h" line="428" column="65"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;CRYPTO_realloc&apos; argument 1 names different: declaration &apos;addr&apos; definition &apos;str&apos;." verbose="Function &apos;CRYPTO_realloc&apos; argument 1 names different: declaration &apos;addr&apos; definition &apos;str&apos;." cwe="628" inconclusive="true" file0="crypto/mem.c">
+            <location file="crypto/mem.c" line="283" column="28"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/crypto.h" line="439" column="28"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;CRYPTO_clear_realloc&apos; argument 1 names different: declaration &apos;addr&apos; definition &apos;str&apos;." verbose="Function &apos;CRYPTO_clear_realloc&apos; argument 1 names different: declaration &apos;addr&apos; definition &apos;str&apos;." cwe="628" inconclusive="true" file0="crypto/mem.c">
+            <location file="crypto/mem.c" line="315" column="34"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/crypto.h" line="440" column="34"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;CRYPTO_clear_realloc&apos; argument 2 names different: declaration &apos;old_num&apos; definition &apos;old_len&apos;." verbose="Function &apos;CRYPTO_clear_realloc&apos; argument 2 names different: declaration &apos;old_num&apos; definition &apos;old_len&apos;." cwe="628" inconclusive="true" file0="crypto/mem.c">
+            <location file="crypto/mem.c" line="315" column="46"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/crypto.h" line="440" column="47"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;CRYPTO_free&apos; argument 1 names different: declaration &apos;ptr&apos; definition &apos;str&apos;." verbose="Function &apos;CRYPTO_free&apos; argument 1 names different: declaration &apos;ptr&apos; definition &apos;str&apos;." cwe="628" inconclusive="true" file0="crypto/mem.c">
+            <location file="crypto/mem.c" line="342" column="24"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/crypto.h" line="437" column="24"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;CRYPTO_clear_free&apos; argument 1 names different: declaration &apos;ptr&apos; definition &apos;str&apos;." verbose="Function &apos;CRYPTO_clear_free&apos; argument 1 names different: declaration &apos;ptr&apos; definition &apos;str&apos;." cwe="628" inconclusive="true" file0="crypto/mem.c">
+            <location file="crypto/mem.c" line="353" column="30"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/openssl/crypto.h" line="438" column="30"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ml_dsa_matrix_mult_vector&apos; argument 1 names different: declaration &apos;matrix_kl&apos; definition &apos;a&apos;." verbose="Function &apos;ossl_ml_dsa_matrix_mult_vector&apos; argument 1 names different: declaration &apos;matrix_kl&apos; definition &apos;a&apos;." cwe="628" inconclusive="true" file0="crypto/ml_dsa/ml_dsa_matrix.c">
+            <location file="crypto/ml_dsa/ml_dsa_matrix.c" line="24" column="51"/>
+            <location file="crypto/ml_dsa/ml_dsa_local.h" line="77" column="51"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ml_dsa_matrix_mult_vector&apos; argument 2 names different: declaration &apos;vl&apos; definition &apos;s&apos;." verbose="Function &apos;ossl_ml_dsa_matrix_mult_vector&apos; argument 2 names different: declaration &apos;vl&apos; definition &apos;s&apos;." cwe="628" inconclusive="true" file0="crypto/ml_dsa/ml_dsa_matrix.c">
+            <location file="crypto/ml_dsa/ml_dsa_matrix.c" line="24" column="68"/>
+            <location file="crypto/ml_dsa/ml_dsa_local.h" line="77" column="76"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ml_dsa_matrix_mult_vector&apos; argument 3 names different: declaration &apos;vk&apos; definition &apos;t&apos;." verbose="Function &apos;ossl_ml_dsa_matrix_mult_vector&apos; argument 3 names different: declaration &apos;vk&apos; definition &apos;t&apos;." cwe="628" inconclusive="true" file0="crypto/ml_dsa/ml_dsa_matrix.c">
+            <location file="crypto/ml_dsa/ml_dsa_matrix.c" line="25" column="13"/>
+            <location file="crypto/ml_dsa/ml_dsa_local.h" line="78" column="13"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;poly&apos; can be declared as pointer to const" verbose="Variable &apos;poly&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_dsa/ml_dsa_matrix.c">
+            <location file="crypto/ml_dsa/ml_dsa_matrix.c" line="28" column="11" info="Variable &apos;poly&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;k&apos; can be reduced." verbose="The scope of the variable &apos;k&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_dsa/ml_dsa_ntt.c">
+            <location file="crypto/ml_dsa/ml_dsa_ntt.c" line="150" column="15"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;k&apos; can be reduced." verbose="The scope of the variable &apos;k&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_dsa/ml_dsa_ntt.c">
+            <location file="crypto/ml_dsa/ml_dsa_ntt.c" line="180" column="15"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ml_dsa_poly_ntt&apos; argument 1 names different: declaration &apos;s&apos; definition &apos;p&apos;." verbose="Function &apos;ossl_ml_dsa_poly_ntt&apos; argument 1 names different: declaration &apos;s&apos; definition &apos;p&apos;." cwe="628" inconclusive="true" file0="crypto/ml_dsa/ml_dsa_ntt.c">
+            <location file="crypto/ml_dsa/ml_dsa_ntt.c" line="321" column="33"/>
+            <location file="crypto/ml_dsa/ml_dsa_local.h" line="86" column="33"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ml_dsa_poly_ntt_inverse&apos; argument 1 names different: declaration &apos;s&apos; definition &apos;p&apos;." verbose="Function &apos;ossl_ml_dsa_poly_ntt_inverse&apos; argument 1 names different: declaration &apos;s&apos; definition &apos;p&apos;." cwe="628" inconclusive="true" file0="crypto/ml_dsa/ml_dsa_ntt.c">
+            <location file="crypto/ml_dsa/ml_dsa_ntt.c" line="334" column="41"/>
+            <location file="crypto/ml_dsa/ml_dsa_local.h" line="87" column="41"/>
+        </error>
+        <error id="truncLongCastAssignment" severity="style" msg="int result is assigned to long variable. If the variable is long to avoid loss of information, then you have loss of information." verbose="int result is assigned to long variable. If the variable is long to avoid loss of information, then there is loss of information. To avoid loss of information you must cast a calculation operand to long, for example &apos;l = a * b;&apos; =&gt; &apos;l = (long)a * b;&apos;." cwe="197" file0="crypto/ml_dsa/ml_dsa_ntt.c">
+            <location file="crypto/ml_dsa/ml_dsa_ntt.c" line="128" column="16"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;w&apos; can be reduced." verbose="The scope of the variable &apos;w&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_dsa/ml_dsa_encoders.c">
+            <location file="crypto/ml_dsa/ml_dsa_encoders.c" line="165" column="17"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_dsa/ml_dsa_encoders.c">
+            <location file="crypto/ml_dsa/ml_dsa_encoders.c" line="166" column="32" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_dsa/ml_dsa_encoders.c">
+            <location file="crypto/ml_dsa/ml_dsa_encoders.c" line="871" column="28" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;key_checked&apos; can be reduced." verbose="The scope of the variable &apos;key_checked&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_dsa/ml_dsa_key.c">
+            <location file="crypto/ml_dsa/ml_dsa_key.c" line="278" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;seed_len&apos; can be reduced." verbose="The scope of the variable &apos;seed_len&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_dsa/ml_dsa_key.c">
+            <location file="crypto/ml_dsa/ml_dsa_key.c" line="531" column="12"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/cbc128.c">
+            <location file="crypto/modes/cbc128.c" line="133" column="24"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/cbc128.c">
+            <location file="crypto/modes/cbc128.c" line="152" column="23"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;iv_t&apos; can be declared as pointer to const" verbose="Variable &apos;iv_t&apos; can be declared as pointer to const" cwe="398" file0="crypto/modes/cbc128.c">
+            <location file="crypto/modes/cbc128.c" line="104" column="28" info="Variable &apos;iv_t&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;c&apos; is always true" verbose="Condition &apos;c&apos; is always true" cwe="571" file0="crypto/modes/ccm128.c">
+            <location file="crypto/modes/ccm128.c" line="132" column="13" info="Condition &apos;c&apos; is always true"/>
+            <location file="crypto/modes/ccm128.c" line="130" column="11" info="c is incremented&apos;, new value is 0"/>
+            <location file="crypto/modes/ccm128.c" line="129" column="20" info="Assignment &apos;c=counter[n]&apos;, assigned value is greater than -1"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/ccm128.c">
+            <location file="crypto/modes/ccm128.c" line="124" column="13"/>
+        </error>
+        <error id="arrayIndexOutOfBoundsCond" severity="warning" msg="Either the condition &apos;offset==sizeof(block)&apos; is redundant or the array &apos;block[136]&apos; is accessed at index 136, which is out of bounds." verbose="Either the condition &apos;offset==sizeof(block)&apos; is redundant or the array &apos;block[136]&apos; is accessed at index 136, which is out of bounds." cwe="788" file0="crypto/ml_dsa/ml_dsa_sample.c">
+            <location file="crypto/ml_dsa/ml_dsa_sample.c" line="386" column="26" info="Array index out of bounds"/>
+            <location file="crypto/ml_dsa/ml_dsa_sample.c" line="377" column="24" info="Assuming that condition &apos;offset==sizeof(block)&apos; is not redundant"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_dsa/ml_dsa_sample.c">
+            <location file="crypto/ml_dsa/ml_dsa_sample.c" line="126" column="46" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_dsa/ml_dsa_sample.c">
+            <location file="crypto/ml_dsa/ml_dsa_sample.c" line="171" column="46" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;d&apos; can be reduced." verbose="The scope of the variable &apos;d&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/ctr128.c">
+            <location file="crypto/modes/ctr128.c" line="42" column="22"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ml_dsa_sign&apos; argument 11 names different: declaration &apos;siglen&apos; definition &apos;sig_len&apos;." verbose="Function &apos;ossl_ml_dsa_sign&apos; argument 11 names different: declaration &apos;siglen&apos; definition &apos;sig_len&apos;." cwe="628" inconclusive="true" file0="crypto/ml_dsa/ml_dsa_sign.c">
+            <location file="crypto/ml_dsa/ml_dsa_sign.c" line="505" column="33"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/ml_dsa.h" line="126" column="33"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ossl_ml_dsa_sign&apos; argument 12 names different: declaration &apos;sigsize&apos; definition &apos;sig_size&apos;." verbose="Function &apos;ossl_ml_dsa_sign&apos; argument 12 names different: declaration &apos;sigsize&apos; definition &apos;sig_size&apos;." cwe="628" inconclusive="true" file0="crypto/ml_dsa/ml_dsa_sign.c">
+            <location file="crypto/ml_dsa/ml_dsa_sign.c" line="505" column="49"/>
+            <location file="/mnt/d/CVE-Typestate-Project-clang-analysis/include/crypto/ml_dsa.h" line="126" column="48"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;shake256_md&apos; can be declared as pointer to const" verbose="Parameter &apos;shake256_md&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_dsa/ml_dsa_sign.c">
+            <location file="crypto/ml_dsa/ml_dsa_sign.c" line="69" column="45" info="Parameter &apos;shake256_md&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous3::align&apos; is never used." verbose="union member &apos;Anonymous3::align&apos; is never used." cwe="563" file0="crypto/modes/cts128.c">
+            <location file="crypto/modes/cts128.c" line="93" column="16"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous4::align&apos; is never used." verbose="union member &apos;Anonymous4::align&apos; is never used." cwe="563" file0="crypto/modes/cts128.c">
+            <location file="crypto/modes/cts128.c" line="129" column="16"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous5::align&apos; is never used." verbose="union member &apos;Anonymous5::align&apos; is never used." cwe="563" file0="crypto/modes/cts128.c">
+            <location file="crypto/modes/cts128.c" line="165" column="16"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous6::align&apos; is never used." verbose="union member &apos;Anonymous6::align&apos; is never used." cwe="563" file0="crypto/modes/cts128.c">
+            <location file="crypto/modes/cts128.c" line="208" column="16"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous7::align&apos; is never used." verbose="union member &apos;Anonymous7::align&apos; is never used." cwe="563" file0="crypto/modes/cts128.c">
+            <location file="crypto/modes/cts128.c" line="254" column="16"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous8::align&apos; is never used." verbose="union member &apos;Anonymous8::align&apos; is never used." cwe="563" file0="crypto/modes/cts128.c">
+            <location file="crypto/modes/cts128.c" line="294" column="16"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;carry_next&apos; can be reduced." verbose="The scope of the variable &apos;carry_next&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/ocb128.c">
+            <location file="crypto/modes/ocb128.c" line="46" column="30"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/ocb128.c">
+            <location file="crypto/modes/ocb128.c" line="135" column="9"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/ocb128.c">
+            <location file="crypto/modes/ocb128.c" line="328" column="14"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/ocb128.c">
+            <location file="crypto/modes/ocb128.c" line="423" column="14"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;src&apos; can be declared as pointer to const" verbose="Parameter &apos;src&apos; can be declared as pointer to const" cwe="398" file0="crypto/modes/ocb128.c">
+            <location file="crypto/modes/ocb128.c" line="194" column="66" info="Parameter &apos;src&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="shiftTooManyBitsSigned" severity="portability" msg="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" verbose="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" cwe="758" file0="crypto/modes/xts128.c">
+            <location file="crypto/modes/xts128.c" line="74" column="45" info="Shift"/>
+        </error>
+        <error id="shiftTooManyBitsSigned" severity="portability" msg="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" verbose="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" cwe="758" file0="crypto/modes/xts128.c">
+            <location file="crypto/modes/xts128.c" line="113" column="45" info="Shift"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;in&apos; can be reduced." verbose="The scope of the variable &apos;in&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="403" column="44"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;tmp&apos; can be reduced." verbose="The scope of the variable &apos;tmp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="667" column="50"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;even&apos; can be reduced." verbose="The scope of the variable &apos;even&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="694" column="46"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;odd&apos; can be reduced." verbose="The scope of the variable &apos;odd&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="694" column="52"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;even&apos; can be reduced." verbose="The scope of the variable &apos;even&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="726" column="46"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;odd&apos; can be reduced." verbose="The scope of the variable &apos;odd&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="726" column="52"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;element&apos; can be reduced." verbose="The scope of the variable &apos;element&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="815" column="25"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;out_byte&apos; can be reduced." verbose="The scope of the variable &apos;out_byte&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="841" column="13"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;mask&apos; can be reduced." verbose="The scope of the variable &apos;mask&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="940" column="14"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;b&apos; can be reduced." verbose="The scope of the variable &apos;b&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="941" column="13"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ar&apos; can be reduced." verbose="The scope of the variable &apos;ar&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1123" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;mr&apos; can be reduced." verbose="The scope of the variable &apos;mr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1138" column="28"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ar&apos; can be reduced." verbose="The scope of the variable &apos;ar&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1138" column="33"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;value&apos; can be reduced." verbose="The scope of the variable &apos;value&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1195" column="14"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;b&apos; can be reduced." verbose="The scope of the variable &apos;b&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1196" column="13"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;b1&apos; can be reduced." verbose="The scope of the variable &apos;b1&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1239" column="13"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;b2&apos; can be reduced." verbose="The scope of the variable &apos;b2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1239" column="17"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;b3&apos; can be reduced." verbose="The scope of the variable &apos;b3&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1239" column="21"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;value&apos; can be reduced." verbose="The scope of the variable &apos;value&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1240" column="14"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;endout&apos; can be declared as pointer to const" verbose="Variable &apos;endout&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="402" column="31" info="Variable &apos;endout&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;endin&apos; can be declared as pointer to const" verbose="Variable &apos;endin&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="404" column="14" info="Variable &apos;endin&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;in&apos; can be declared as pointer to const" verbose="Variable &apos;in&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="403" column="44" info="Variable &apos;in&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="667" column="29" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="687" column="15" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="719" column="15" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="774" column="31" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="792" column="31" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="862" column="31" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="939" column="31" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1193" column="31" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;end&apos; can be declared as pointer to const" verbose="Variable &apos;end&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1237" column="31" info="Variable &apos;end&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;in&apos; can be declared as pointer to const" verbose="Parameter &apos;in&apos; can be declared as pointer to const" cwe="398" file0="crypto/ml_kem/ml_kem.c">
+            <location file="crypto/ml_kem/ml_kem.c" line="1664" column="43" info="Parameter &apos;in&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="union member &apos;Anonymous4::d&apos; is never used." verbose="union member &apos;Anonymous4::d&apos; is never used." cwe="563" file0="crypto/modes/xts128gb.c">
+            <location file="crypto/modes/xts128gb.c" line="31" column="18"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;tmp&apos; can be reduced." verbose="The scope of the variable &apos;tmp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/gcm128.c">
+            <location file="crypto/modes/gcm128.c" line="594" column="14"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/gcm128.c">
+            <location file="crypto/modes/gcm128.c" line="595" column="12"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;c&apos; is assigned a value that is never used." verbose="Variable &apos;c&apos; is assigned a value that is never used." cwe="563" file0="crypto/modes/gcm128.c">
+            <location file="crypto/modes/gcm128.c" line="1225" column="39"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/siv128.c">
+            <location file="crypto/modes/siv128.c" line="151" column="9"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;icv&apos; can be declared as pointer to const" verbose="Parameter &apos;icv&apos; can be declared as pointer to const" cwe="398" file0="crypto/modes/siv128.c">
+            <location file="crypto/modes/siv128.c" line="134" column="16" info="Parameter &apos;icv&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;cbc&apos; can be declared as pointer to const" verbose="Parameter &apos;cbc&apos; can be declared as pointer to const" cwe="398" file0="crypto/modes/siv128.c">
+            <location file="crypto/modes/siv128.c" line="147" column="17" info="Parameter &apos;cbc&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctr&apos; can be declared as pointer to const" verbose="Parameter &apos;ctr&apos; can be declared as pointer to const" cwe="398" file0="crypto/modes/siv128.c">
+            <location file="crypto/modes/siv128.c" line="147" column="34" info="Parameter &apos;ctr&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;p&apos; can be declared as pointer to const" verbose="Variable &apos;p&apos; can be declared as pointer to const" cwe="398" file0="crypto/modes/siv128.c">
+            <location file="crypto/modes/siv128.c" line="315" column="20" info="Variable &apos;p&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/modes/siv128.c">
+            <location file="crypto/modes/siv128.c" line="352" column="40" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &apos;ctx&apos; can be declared as pointer to const" verbose="Parameter &apos;ctx&apos; can be declared as pointer to const" cwe="398" file0="crypto/modes/siv128.c">
+            <location file="crypto/modes/siv128.c" line="373" column="41" info="Parameter &apos;ctx&apos; can be declared as pointer to const"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;R&apos; can be reduced." verbose="The scope of the variable &apos;R&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/wrap128.c">
+            <location file="crypto/modes/wrap128.c" line="53" column="31"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;R&apos; can be reduced." verbose="The scope of the variable &apos;R&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/wrap128.c">
+            <location file="crypto/modes/wrap128.c" line="104" column="31"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="crypto/modes/wrap128.c">
+            <location file="crypto/modes/wrap128.c" line="266" column="12"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;zeros&apos; can be declared as const array" verbose="Variable &apos;zeros&apos; can be declared as const array" cwe="398" file0="crypto/modes/wrap128.c">
+            <location file="crypto/modes/wrap128.c" line="265" column="26" info="Variable &apos;zeros&apos; can be declared as const array"/>
+        </error>
+    </errors>
+</results>

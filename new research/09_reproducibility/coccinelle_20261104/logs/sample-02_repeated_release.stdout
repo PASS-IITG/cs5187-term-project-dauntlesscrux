@@ -1,0 +1,1 @@
+/mnt/d/CVE-Typestate-Project/research/09_reproducibility/coccinelle_20261104/samples/repeated_release.c:3:4-16: possible repeated OPENSSL_free release of p in suspect; another call at line 4

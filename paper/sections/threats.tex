@@ -1,16 +1,40 @@
 \section{Threats to Validity}
 \label{sec:threats}
-%% Internal / External / Construct. For each threat: what it is, what we did
-%% about it (itemize if several guards), what remains. Report non-determinism
-%% and LLM run-to-run variation with numbers.
-\focus{\textbf{Threats to validity.} Be honest about what could make your
-  conclusions wrong. Cover all three kinds below. For each: name the threat,
-  say what you did to reduce it (itemise the guards), and what still remains.
-  Report any non-determinism or run-to-run variation with numbers. Graded on
-  honesty, not on having zero threats.}
 
-\paragraph{Internal threats.} \todo{}
+\paragraph{Internal.} \emph{Tuning on seen data:} the deref-after-release
+suppression and \texttt{NULL}-guard pruning (Section~\ref{sec:step2}) were
+added after reading OpenSSL output, so the master numbers in
+Table~\ref{tab:rq1-wholetree} are not a blind test of them; the rule itself
+(Section~\ref{sec:rule}) was not changed after the KDF result.
+\emph{Name-based release detection:} \texttt{(?i)free} cannot see reference
+counts, which produced the \texttt{load\_common} false positive.
+\emph{Parser coverage:} about 39\% of files have a \texttt{tree-sitter}
+parse error, almost always an unexpanded macro; only 7--8 release sites per
+snapshot sit in such functions and no reported violation is among them, but
+a site in an unparseable function is invisible to \tool. \emph{Our own
+triage:} the master labels (Observation~\ref{obs:rq1-mastertriage}) were
+assigned by the tool's builders. A generative AI assistant not involved in
+building the rule re-derived the reachability of the 2 potential-recurrence
+sites (correcting one error in our note) and re-checked the 2 formerly
+``unclear'' sites, which reclassify as convention deviation once their one
+in-tree caller, \texttt{apps/cmp.c}, is read. An independent human second
+labeller remains future work.
 
-\paragraph{External threats.} \todo{Subjects, platform, versions.}
+\paragraph{External.} Protocol~B's generalization rests on two data points,
+not a detection rate; Protocol~A's whole-tree run is 0 for 11
+(Observation~\ref{obs:rq5-protocola-master}), a real negative result showing
+that a single-object detach rule without ownership tracking does not
+generalize the way Protocol~B did. The six snapshots share most long-lived
+functions, so the effective sample is closer to 20 distinct release sites
+than to 20~$\times$~6. All subjects are OpenSSL, and \tool tracks only
+pointer-to-pointer parameters, not struct-member out-parameters such as
+\texttt{ctx->buf}. More historical pairs, a second project, and an
+ownership/escape analysis are future work.
 
-\paragraph{Construct threats.} \todo{Does the metric measure what we claim?}
+\paragraph{Construct.} A violation is a source-pattern property, not a
+proven vulnerability: both potential-recurrence sites need a data race no
+in-tree caller creates (Section~\ref{sec:discussion}). A \xmark{} in
+Table~\ref{tab:rq2-comparison} means no diagnostic for that translation
+unit and configuration (Clang analyzed only the affected unit), not absence
+of a bug. And RQ2's baseline is the Part~1 pattern matcher, not
+Protocol~B; we do not credit \tool with that result.

@@ -1,0 +1,2 @@
+clang-18 --analyze -Xanalyzer -analyzer-output=text -fno-color-diagnostics /tmp/openssl-cve-tool-comparison/controls/clang_uaf_control.c
+exit=0

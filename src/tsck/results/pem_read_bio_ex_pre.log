@@ -1,0 +1,4 @@
+VIOLATION snap_cve4450_pre/crypto/pem/pem_lib.c:991 PEM_read_bio_ex() releases *header via pem_free; exit reachable without reset (path lines [991, 992, 994, 995, 996, 997, 998])
+VIOLATION snap_cve4450_pre/crypto/pem/pem_lib.c:992 PEM_read_bio_ex() releases *data via pem_free; exit reachable without reset (path lines [992, 994, 995, 996, 997, 998])
+files=1 release-sites: conforming=0 violation=2 suppressed=0 errors=0 parse_error_files=0 sites_in_functions_with_parse_errors=0
+exit=1

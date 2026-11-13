@@ -1,0 +1,55 @@
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:3:97: warning: Attempt to free released memory [unix.Malloc]
+    3 | int double_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); OPENSSL_free(p); return 0; }
+      |                                                                                                 ^~~~~~~~~~~~~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:3:43: note: Memory is allocated
+    3 | int double_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); OPENSSL_free(p); return 0; }
+      |                                           ^~~~~~~~~~~~~~~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:3:66: note: Assuming 'p' is non-null
+    3 | int double_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); OPENSSL_free(p); return 0; }
+      |                                                                  ^~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:3:62: note: Taking false branch
+    3 | int double_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); OPENSSL_free(p); return 0; }
+      |                                                              ^
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:3:80: note: Memory is released
+    3 | int double_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); OPENSSL_free(p); return 0; }
+      |                                                                                ^~~~~~~~~~~~~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:3:97: note: Attempt to free released memory
+    3 | int double_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); OPENSSL_free(p); return 0; }
+      |                                                                                                 ^~~~~~~~~~~~~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:4:107: warning: Use of memory after it is freed [unix.Malloc]
+    4 | int use_after_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); return p[0]; }
+      |                                                                                                           ^~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:4:46: note: Memory is allocated
+    4 | int use_after_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); return p[0]; }
+      |                                              ^~~~~~~~~~~~~~~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:4:69: note: Assuming 'p' is non-null
+    4 | int use_after_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); return p[0]; }
+      |                                                                     ^~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:4:65: note: Taking false branch
+    4 | int use_after_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); return p[0]; }
+      |                                                                 ^
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:4:83: note: Memory is released
+    4 | int use_after_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); return p[0]; }
+      |                                                                                   ^~~~~~~~~~~~~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:4:107: note: Use of memory after it is freed
+    4 | int use_after_free_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; OPENSSL_free(p); return p[0]; }
+      |                                                                                                           ^~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:5:115: warning: Use of memory after it is freed [unix.Malloc]
+    5 | int ownership_transfer_taken_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; model_take(p); return p[0]; }
+      |                                                                                                                   ^~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:5:56: note: Memory is allocated
+    5 | int ownership_transfer_taken_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; model_take(p); return p[0]; }
+      |                                                        ^~~~~~~~~~~~~~~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:5:79: note: Assuming 'p' is non-null
+    5 | int ownership_transfer_taken_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; model_take(p); return p[0]; }
+      |                                                                               ^~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:5:75: note: Taking false branch
+    5 | int ownership_transfer_taken_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; model_take(p); return p[0]; }
+      |                                                                           ^
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:5:93: note: Memory is released
+    5 | int ownership_transfer_taken_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; model_take(p); return p[0]; }
+      |                                                                                             ^~~~~~~~~~~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/synthetic/ownership_controls.c:5:115: note: Use of memory after it is freed
+    5 | int ownership_transfer_taken_control(void) { char *p = OPENSSL_malloc(8); if (!p) return 0; model_take(p); return p[0]; }
+      |                                                                                                                   ^~~~
+3 warnings generated.

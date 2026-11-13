@@ -1,8 +1,24 @@
 \section{Conclusion}
 \label{sec:conclusion}
-%% Two short paragraphs. (1) The problem again in 2-3 sentences with the key
-%% number. (2) "We presented \tool, which ..." + the main results with the
-%% same numbers as the abstract. No new claims, no new numbers, no hype.
-\todo{Problem and key number.}
 
-We presented \tool, which \todo{}.
+A vulnerability fix is evidence of a convention a project expects its own
+code to follow, not just a patch to one function. CVE-2022-4450 shows
+this concretely: \texttt{PEM\_read\_bio\_ex} frees two output buffers on
+a failure path and leaves the caller-visible pointers dangling, and the
+same release-without-reset shape recurs, unrelated to that fix, in four
+KDF functions a year earlier. General-purpose static analyzers, run with
+their stock rule sets, catch none of the three historical CVEs we
+checked.
+
+We presented \tool, which checks a lifecycle rule stored as data against
+a real \texttt{tree-sitter} control-flow graph. Protocol~B separates
+CVE-2022-4450 from its fix, reproduces the unrelated KDF fix, and flags a
+sibling site OpenSSL later fixed. On OpenSSL's current 1{,}155-file tree it flags 10 sites,
+of which manual triage confirms 0 new vulnerabilities, 2 potential
+recurrences needing reachability review, and 8 harmless deviations.
+Protocol~A, for CVE-2023-0215's BIO-chain invariant, reuses the same
+parser and CFG and separates its own fix, but its whole-tree run is 0 for
+11, for want of ownership tracking: the architecture generalizes across
+invariant shapes even where one rule's detection does not. We make no claim beyond this: two rules, one project, with the
+threats in Section~\ref{sec:threats}. An ownership/escape analysis for
+Protocol A, and a broader historical evaluation, are future work.

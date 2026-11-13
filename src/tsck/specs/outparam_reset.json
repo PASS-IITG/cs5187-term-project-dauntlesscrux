@@ -1,0 +1,25 @@
+{
+  "name": "outparam_reset",
+  "protocol": "B",
+  "derived_from": "CVE-2022-4450 (fix commit 63bcf189be, crypto/pem/pem_lib.c)",
+  "invariant": "If a function releases the object an output parameter points to (*P), it must reset *P on every path to function exit.",
+  "states": ["Valid", "Released", "Reset"],
+  "tracked": {
+    "kind": "pointer_to_pointer_parameter",
+    "min_pointer_depth": 2
+  },
+  "release": {
+    "call_name_regex": "(?i)free",
+    "argument": "*P"
+  },
+  "reset": {
+    "assignment_to": "*P",
+    "passing_P_to_a_call_counts_as_reset": true
+  },
+  "violation": "function exit reachable from a Released state without passing a Reset",
+  "suppress": {
+    "deref_after_release": true,
+    "partial_release_functions": []
+  },
+  "notes": "No function names appear in the rule except the generic regex for release calls. partial_release_functions is empty on purpose: add an entry only with a code-reading justification recorded in triage.md."
+}

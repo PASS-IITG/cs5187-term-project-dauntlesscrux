@@ -1,0 +1,9 @@
+clang=Ubuntu clang version 18.1.3 (1ubuntu1)
+afl-fuzz=afl-fuzz++4.09c
+libfuzzer=/usr/lib/llvm-18/lib/clang/18/lib/linux/libclang_rt.fuzzer-x86_64.a
+asan=/usr/lib/llvm-18/lib/clang/18/lib/linux/libclang_rt.asan-x86_64.a
+ubsan=/usr/lib/llvm-18/lib/clang/18/lib/linux/libclang_rt.ubsan_standalone-x86_64.a
+msan=/usr/lib/llvm-18/lib/clang/18/lib/linux/libclang_rt.msan-x86_64.a
+valgrind=NOT_INSTALLED
+codeql=NOT_INSTALLED
+infer=NOT_INSTALLED

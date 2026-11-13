@@ -1,0 +1,19 @@
+research/13_integrated_experiments_20261106/03_clang_api_model/openssl_api_model_probe.c:3:124: warning: Potential leak of memory pointed to by 'p' [unix.Malloc]
+    3 | void open_ssl_alloc_wrong_free(void) { void *p = OPENSSL_malloc(8); if (p != 0) CRYPTO_secure_free(p, __FILE__, __LINE__); }
+      |                                                                                                                            ^
+research/13_integrated_experiments_20261106/03_clang_api_model/openssl_api_model_probe.c:3:50: note: Memory is allocated
+    3 | void open_ssl_alloc_wrong_free(void) { void *p = OPENSSL_malloc(8); if (p != 0) CRYPTO_secure_free(p, __FILE__, __LINE__); }
+      |                                                  ^~~~~~~~~~~~~~~~~
+/tmp/openssl-integrated-validation/cve2022_fixed/include/openssl/crypto.h:96:9: note: expanded from macro 'OPENSSL_malloc'
+   96 |         CRYPTO_malloc(num, OPENSSL_FILE, OPENSSL_LINE)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/openssl_api_model_probe.c:3:73: note: Assuming 'p' is not equal to null
+    3 | void open_ssl_alloc_wrong_free(void) { void *p = OPENSSL_malloc(8); if (p != 0) CRYPTO_secure_free(p, __FILE__, __LINE__); }
+      |                                                                         ^~~~~~
+research/13_integrated_experiments_20261106/03_clang_api_model/openssl_api_model_probe.c:3:69: note: Taking true branch
+    3 | void open_ssl_alloc_wrong_free(void) { void *p = OPENSSL_malloc(8); if (p != 0) CRYPTO_secure_free(p, __FILE__, __LINE__); }
+      |                                                                     ^
+research/13_integrated_experiments_20261106/03_clang_api_model/openssl_api_model_probe.c:3:124: note: Potential leak of memory pointed to by 'p'
+    3 | void open_ssl_alloc_wrong_free(void) { void *p = OPENSSL_malloc(8); if (p != 0) CRYPTO_secure_free(p, __FILE__, __LINE__); }
+      |                                                                                                                            ^
+1 warning generated.

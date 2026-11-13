@@ -1,0 +1,5 @@
+# Independent evaluation status and proposed protocol
+
+No independent positive set or blinded adjudication was completed in this experiment. Existing selected CVEs and historical fix register candidates were used in development or prior reviews and are excluded from a holdout. No precision, recall or accuracy is reported.
+
+A future independent evaluation should: (1) freeze a complete function-level source frame at a revision before sampling; (2) hash and retain the frame and sampling script; (3) stratify by production/test scope and tool-alert overlap; (4) draw and record a fixed-seed random sample with inclusion probabilities; (5) create packets containing function, callers/callees and ownership context with tool identity and alert annotations removed; (6) retain a separate mapping from packet IDs to source and tool alerts; (7) obtain independent human labels and adjudicate disagreements; (8) only then unblind and calculate descriptive, uncertainty-qualified measurements. The present artifacts do not contain a completed sampling frame or labels.

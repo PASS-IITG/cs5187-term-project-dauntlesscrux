@@ -1,0 +1,3 @@
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/asn1/a_dup.c:30:8-22: alloc_event|b
+/mnt/d/CVE-Typestate-Project-clang-analysis/apps/s_client.c:3657:16-30: alloc_event|curve
+/mnt/d/CVE-Typestate-Project-clang-analysis/crypto/asn1/a_bitstr.c:99:12-26: alloc_event|s

@@ -1,0 +1,11 @@
+Final evidence integrity validation (2026-11-06)
+- CSV parseability and uniform row widths: passed for every CSV under this research directory.
+- Four-tool comparison matrix: 24 data rows, exactly 4 tools × 3 CVEs × 2 pair sides.
+- Clang API model matrix: 16 completed rows (default/overlay × 2 sides × 4 affected translation units); zero analyzer setup errors after adding the required platform feature macro.
+- Corrected CVE-2024 Coccinelle: 30 recorded commands; all were exit 0 per run ledger.
+- Corrected CVE-2024 Cppcheck: ssl/ssl_lib.c completed on both corrected pair sides with exit 0. No CVE-specific mechanism reported. No claim is made for other files in this corrected pair.
+- Runtime ASan logs: vulnerable cases show the reported sanitizer errors; fixed case logs show no corresponding sanitizer error for tested input. CVE-2023 fixed command terminates at unsupported cipher setup as separately documented. Exact files are listed in `05_fuzzing/RUNTIME_VALIDATION.csv`.
+- Bounded LibFuzzer runs: CMS and X.509 completed with exit 0, approximately 9 seconds each, with no sanitizer crash.
+- Empty output logs are intentional for compiler/analyzer successful no-output streams and Coccinelle stdout/stderr splits; they are preserved as raw evidence.
+- CodeQL/Infer NOT_EVALUABLE states are explicit; no empty scan output is treated as a clean result.
+- No source/test/analyzer files were edited by this experiment; only research artifacts were added under this directory. No Git mutations were run.

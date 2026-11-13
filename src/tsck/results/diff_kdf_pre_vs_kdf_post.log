@@ -1,0 +1,8 @@
+pre : release-sites=107 violations=12
+post: release-sites=107 violations=8
+violations removed by the change: 4
+   - providers/implementations/kdfs/pbkdf1.c kdf_pbkdf1_set_membuf *buffer
+   - providers/implementations/kdfs/pbkdf2.c pbkdf2_set_membuf *buffer
+   - providers/implementations/kdfs/pkcs12kdf.c pkcs12kdf_set_membuf *buffer
+   - providers/implementations/kdfs/scrypt.c scrypt_set_membuf *buffer
+violations added by the change:   0
