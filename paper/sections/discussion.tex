@@ -33,9 +33,9 @@ because their rule sets do not encode this project's conventions.
 \paragraph{False positives and scope.} Across all six snapshots, 1 of 18
 flagged Protocol~B sites is a confirmed false positive (\texttt{load\_common},
 which releases only a structural reference); two more are correctly
-suppressed. For CVE-2023-0215 and CVE-2024-4741, the
-Table~\ref{tab:rq2-comparison} distinction comes from the Part~1 baseline,
-not \tool. Protocol~A covers CVE-2023-0215's own pair but its whole-tree
+suppressed. For CVE-2023-0215, the Table~\ref{tab:rq2-comparison} distinction comes
+from the Part~1 baseline, not \tool; for CVE-2024-4741 no tool, including
+the baseline, distinguishes the corrected pair. Protocol~A covers CVE-2023-0215's own pair but its whole-tree
 run is 0 for 11 (Section~\ref{sec:rq5}); CVE-2024-4741 needs a state-guard
 rule neither shape expresses. Finally, the 91.7\% master conformance rate
 is not a precision number: it holds only under the name-based release
