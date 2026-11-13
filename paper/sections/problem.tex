@@ -17,20 +17,9 @@ passing a reset. Given a rule (Section~\ref{sec:rule}) and a C source
 tree, our goal is to compute this conforming/violation label, with a
 witness path, for every release site whose parameter matches the rule.
 
-This is hard for two reasons that a string-matching checker, such as the
-Part~1 baseline in this project, sidesteps by only looking at one named
-function. First, $\mathrm{paths}(r)$ can branch and loop arbitrarily, so
-checking every path by hand does not scale past a handful of functions.
-Second, a reset on one branch and none on a sibling branch is
-indistinguishable from a reset in comments or dead code to a tool that
-only searches for a matching substring; only a parse tree and a
-control-flow graph can tell them apart.
-
-\paragraph{Why not just grep for the release/reset pair?} A regular
-expression can check whether a function's text contains both a release
-call and a reset assignment, which is what \texttt{typestate\_check.py}
-does for three named functions. It cannot tell whether the reset lies on
-every path from the release to exit, or only on one branch that a bug
-report's own failure path never takes; Section~\ref{sec:eval} needs that
-distinction to call a site conforming or a violation, so we build the
-control-flow graph instead of matching text.
+\paragraph{Why not grep for the release/reset pair?} A regular expression,
+like the Part~1 baseline \texttt{typestate\_check.py}, can check that a
+function's text contains both a release and a reset. It cannot tell
+whether the reset lies on \emph{every} path from the release to exit or on
+only one branch, nor distinguish a reset in dead code; that needs a parse
+tree and a control-flow graph.

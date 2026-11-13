@@ -1,18 +1,21 @@
-%% Table style: caption ABOVE, caption explains every column and unit,
-%% booktabs rules only (no vertical lines), numbers right-aligned,
-%% thousands as 12{,}563, percentages with one decimal, a total row after
-%% \midrule. \num{} (blue) for anything not yet measured by the final tool.
-\begin{table}[t]
-  \caption{\todo{What the table shows.} \emph{Column}: meaning and unit.}
-  \label{tab:example}
-  \footnotesize
-  \begin{tabular}{lrr}
-    \toprule
-    Subject & Lines & Share \\
-    \midrule
-    example & 12{,}563 & 55.5\% \\
-    \midrule
-    total   & \num{--} & \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+%% Unused table template; not included by main.tex.
+%% Keep the caption above the table, use booktabs rules only, right-align
+%% numeric columns, include units in the caption, and add a total row when
+%% the reported measurement has a meaningful total.
+%%
+%% Example structure (replace all sample data before including):
+%% \begin{table}[t]
+%%   \centering
+%%   \caption{Measured values for each subject; columns give the subject,
+%%     line count, and share of the measured total.}
+%%   \label{tab:example}
+%%   \begin{tabular}{lrr}
+%%     \toprule
+%%     Subject & Lines & Share \\
+%%     \midrule
+%%     example & 12{,}563 & 55.5\% \\
+%%     \midrule
+%%     total   & 22{,}636 & 100.0\% \\
+%%     \bottomrule
+%%   \end{tabular}
+%% \end{table}

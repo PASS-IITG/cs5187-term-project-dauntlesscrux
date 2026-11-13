@@ -7,9 +7,7 @@ CVE-2022-4450 is a real case: \texttt{PEM\_read\_bio\_ex} in OpenSSL frees
 two output buffers on one failure path without clearing the
 caller-visible pointers to them, letting a caller double-free. We present
 \tool, which reads such a rule from a data file and checks it against a
-\texttt{tree-sitter} control-flow graph. It flags every release site with
-no path-complete reset, each with a witness path a human can check by
-hand. On OpenSSL, \tool flags \texttt{PEM\_read\_bio\_ex}'s two outputs
+\texttt{tree-sitter} control-flow graph. On OpenSSL, \tool flags \texttt{PEM\_read\_bio\_ex}'s two outputs
 before the fix and clears both after it. It also reproduces an unrelated
 non-CVE fix the rule was never shown, and flags one site a later OpenSSL
 commit went on to fix independently.
@@ -24,6 +22,4 @@ A second, differently-shaped rule for the detach-before-release BIO-chain
 invariant behind CVE-2023-0215 reuses the same parser and control-flow
 graph and also distinguishes its own motivating fix. Its whole-tree run,
 though, flags 11 sites that are all false positives, because the rule has
-no notion of which released object is externally owned. That is a
-concrete limit on how far a single-object rule generalizes, even under
-the same architecture that generalized cleanly for the first rule.
+no notion of which released object is externally owned. 

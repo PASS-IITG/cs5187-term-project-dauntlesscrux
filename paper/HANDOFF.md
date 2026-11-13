@@ -75,32 +75,39 @@ Always read the actual numbers from the cited file before writing them into the 
 ## 5. Open decisions -- status as of 2026-11-13
 
 1. ~~Who owns the engine, triage and paper~~ -- not formally resolved, but moot given both authors are now named on the paper and jointly accountable.
-2. **Anonymous vs named: RESOLVED. Named**, confirmed directly with the professor. `main.tex`'s `anonymous` class option has been removed (it suppresses author info regardless of `\author{}` contents) and both real authors/affiliation are in. The `Author Contributions` section in `data.tex` is a template -- authors must fill in the `[fill in]` blanks truthfully before submission.
+2. **Anonymous vs named: RESOLVED. Named**, confirmed directly with the professor. `main.tex` has no `anonymous` class option, both authors and the affiliation are present, and `data.tex` contains a task-level Author Contributions section. Both authors must confirm that the allocation accurately describes their work before submission.
 3. **Candidate list vs confirmed bug: RESOLVED, and this is the hard one.** The professor confirmed he wants a **confirmed upstream bug** for full marks on the 50% implementation component, not a triaged candidate list. As of this writing: zero bugs are confirmed, zero are reported to OpenSSL, let alone accepted. The `rsa_ossl_finish` candidate (§4, `rsa_finish_candidate.md`) is the only concrete lead, and it is unconfirmed: no compiled reproducer, no observed crash, no report filed. Getting an upstream *acceptance* by the deadline is not realistically achievable (maintainer review isn't on an hours-long SLA); the only thing achievable in the remaining time is building the reproducer and filing a report, which gives something concrete to show even if unresolved by submission. This is a real, acknowledged shortfall against the grading bar, not something to paper over in the writeup.
 4. Final presentation date -- confirm the Calendly booking actually happened; the rubric text as of 13 Nov still said the link was "coming soon."
 
-## 6. Paper TODOs (current count: 5 real, not 8)
+## 6. Paper TODOs and citation status (updated 2026-11-13)
 
-`grep -n '\\todo{' sections/*.tex main.tex` finds 8, but 3 are in
-`implementation.tex`/`pilot.tex`, which are not `\input` by `main.tex` and
-don't affect the compiled paper. The 5 that matter:
-1. `background.tex` -- citation for the foundational typestate paper.
-   Partially resolved: venue/volume/pages/DOI confirmed (IEEE TSE,
-   SE-12(1):157-171, 1986, DOI 10.1109/tse.1986.6312929), but the author
-   list is genuinely disputed across IBM's own mirror pages (Strom &
-   Yemini vs. Yellin & Strom vs. Yemini & Berry depending on which page
-   you hit) -- resolve via IEEE Xplore directly (campus access), not
-   another mirror.
-2. `data.tex` -- Generative AI disclosure needs both authors to confirm,
-   as fact not assumption, that they independently re-checked the
-   Protocol A triage, all 4 reachability/formerly-unclear sites, and a
-   sample of the 10 historical commits.
-3. `data.tex` -- Author Contributions section needs real content (see
-   §5.2).
-4. `main.tex` -- CCS concept IDs are a best guess; regenerate from
-   https://dl.acm.org/ccs and paste the real output.
-5. `main.tex` -- `\email{}` is blank for both authors; fill in if you
-   want addresses printed.
+The active paper build no longer contains `\todo{...}` or unmeasured
+`\num{...}` placeholders. The optional `implementation.tex` and `pilot.tex`
+files are not included by `main.tex`; their former TODO markers were replaced
+with comments explaining their exclusion. The foundational typestate citation
+is now Strom and Yemini (1986), DOI 10.1109/TSE.1986.6312929. NVD records are
+cited for CVE-2022-4450, CVE-2023-0215, and CVE-2024-4741. The related-work
+bibliography includes VulPA, recurring-vulnerability detection, similar-but-
+patched code, vulnerability-introducing commit identification, and Mystique.
+
+The ACM CCS identifiers in `main.tex` have been changed to the taxonomy paths
+for Automated static analysis and Software and application security. The
+BibTeX recipe no longer ignores a failed bibliography run. A clean build has
+been completed in the current environment and the rendered PDF was inspected.
+
+Still requires author action before submission:
+1. Both authors must independently review the AI-assisted source triage,
+   reachability arguments, and historical commit examples. The disclosure
+   states explicitly that independent human re-verification is not yet
+   established by the available project records.
+2. Both authors must confirm that the Author Contributions and AI-use
+   disclosures are factually accurate.
+3. The configured page limit is 12; the current build is 15 pages, with
+   references beginning on page 15. Reduce the main text with author approval.
+4. Inspect the final PDF after page reduction, including fonts, grayscale
+   legibility, and all remaining layout warnings.
+5. Fill in an author email only if the course format requires it; there is no
+   longer an active placeholder requiring an invented email address.
 
 ## 7. Lessons / pitfalls
 

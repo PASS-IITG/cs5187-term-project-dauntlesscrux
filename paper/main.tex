@@ -1,14 +1,18 @@
 %% FSE (CS-5187 Term Project) research paper. Requirements from the CFP (https://conf.researchr.org/home/fse-2026, checked 2026-09-30):
-%%   * \documentclass[acmsmall,screen,review]{acmart}; single column
+%%   * \documentclass[acmsmall,screen,review,nonacm]{acmart}; single column
 %%   * deadline: Fri 13 Nov 2026, 23:59 IST
 %% Used for e.g. FSE, ISSTA, OOPSLA/PACMPL, TOSEM.
-\documentclass[acmsmall,screen,review]{acmart}
+\documentclass[acmsmall,screen,review,nonacm]{acmart}
 
 \input{macros}
 
 \setcopyright{none}
 \acmConference[FSE (CS-5187 Term Project)]{ACM International Conference on the Foundations of Software Engineering (Format Template)}{2026}{IIT Guwahati}
 \acmYear{2026}
+%% This is a course paper using the ACM layout, not an assigned ACM publication.
+%% Leave publication identifiers empty rather than printing acmart's dummy values.
+\acmISBN{}
+\acmDOI{}
 \citestyle{acmauthoryear}
 
 \begin{document}
@@ -18,47 +22,33 @@
 
 
 \author{Rutvij Wagh}
-\affiliation{\institution{Indian Institute of Technology Guwahati}\country{India}}
+\affiliation{\institution{Indian Institute of Technology Guwahati}\city{Guwahati}\country{India}}
 
 \author{Udayraj Choudhary}
-\affiliation{\institution{Indian Institute of Technology Guwahati}\country{India}}
+\affiliation{\institution{Indian Institute of Technology Guwahati}\city{Guwahati}\country{India}}
 
 \begin{abstract}
 \input{sections/abstract}
 \end{abstract}
 
-%% CCS concepts: pick the ones that fit YOUR project at https://dl.acm.org/ccs
-%% (500 = main, 300 = secondary). This template fits any software-engineering
-%% topic -- static analysis, dynamic analysis/testing, empirical studies,
-%% program repair, tools, human factors, etc. -- so replace the placeholder
-%% below with the concept for your own work. A few common top-level ids:
-%%   Software and its engineering~Software testing and debugging
-%%   Software and its engineering~Automated static analysis
-%%   Software and its engineering~Dynamic analysis
-%%   Software and its engineering~Software creation and management
-%%   General and reference~Empirical studies
-%% TODO (authors, not Claude): the concept_id digits below are a best guess,
-%% not independently verified against the live generator -- it is only
-%% reachable at https://dl.acm.org/ccs, not fetchable from this session.
-%% Before submission, regenerate this exact block from that tool by
-%% selecting "Software and its engineering > Automated static analysis" and
-%% "Security and privacy > Software and application security" (or whichever
-%% leaf concepts best fit) and paste its output here verbatim.
+%% ACM CCS 2012 concepts: Automated static analysis (primary) and
+%% Software and application security (secondary). The identifiers follow
+%% the hierarchy in the ACM 2012 classification.
 \begin{CCSXML}
 <ccs2012>
   <concept>
-    <concept_id>10011007.10011074.10011099</concept_id>
-    <concept_desc>Software and its engineering~Automated static analysis</concept_desc>
+    <concept_id>10011007.10010940.10010992.10010998.10011000</concept_id>
+    <concept_desc>Software and its engineering~Software organization and properties~Software functional properties~Formal methods~Automated static analysis</concept_desc>
     <concept_significance>500</concept_significance>
   </concept>
   <concept>
-    <concept_id>10002978.10002991</concept_id>
+    <concept_id>10002978.10003022</concept_id>
     <concept_desc>Security and privacy~Software and application security</concept_desc>
     <concept_significance>300</concept_significance>
   </concept>
 </ccs2012>
 \end{CCSXML}
-\ccsdesc[500]{Software and its engineering~Automated static analysis}
+\ccsdesc[500]{Software and its engineering~Software organization and properties~Software functional properties~Formal methods~Automated static analysis}
 \ccsdesc[300]{Security and privacy~Software and application security}
 
 \keywords{static analysis, typestate analysis, control-flow graph,

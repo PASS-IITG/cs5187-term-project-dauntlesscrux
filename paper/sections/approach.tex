@@ -4,13 +4,8 @@
 Figure~\ref{fig:overview} shows the steps of \tool. The main idea is to
 read a lifecycle rule from a data file, rather than hard-coding it. \tool
 checks that rule against a per-function control-flow graph built from the
-real parse tree of each C source file. This paper implements two such
-rules against the same parser and CFG builder: Protocol B
-(Section~\ref{sec:step2}), a release/reset rule derived from
-CVE-2022-4450, and Protocol A (Section~\ref{sec:rq5}), a differently-shaped
-establish/detach-before-release rule for the BIO-chain invariant behind
-CVE-2023-0215. We return to what each rule does and does not generalize
-to in Section~\ref{sec:threats}.
+real parse tree of each C source file. We describe Protocol~B here; Protocol~A reuses the same parser and CFG
+(Section~\ref{sec:rq5}).
 
 \begin{figure}[t]
   \centering
@@ -23,6 +18,7 @@ to in Section~\ref{sec:threats}.
     this per pinned OpenSSL snapshot; nothing loops within one file's
     analysis.}
   \label{fig:overview}
+\Description{Flow diagram: C source and a JSON rule are parsed into a control-flow graph; release sites are found and paths to exit are searched; each site is classified and a witness path is extracted. The outer dashed loop repeats the process for each pinned snapshot.}
 \end{figure}
 
 \subsection{The rule, as data}
@@ -68,26 +64,21 @@ branch that is live only when \texttt{P == NULL} is dead code and is not
 explored. If the search reaches function exit without crossing a reset,
 the site is a candidate violation and the path taken becomes its witness.
 
-Two refinements narrow this candidate set. We disclose both as chosen
-after reading real output, not derived from the rule alone. \emph{Deref-
-after-release suppression} drops a site where \texttt{*P} is read again
-before any reset. This signals a partial release and reuse, not a
-dangling pointer: for example, a function that frees only part of a
-struct's contents and then reinitializes it. The second refinement is the
-\texttt{NULL}-guard pruning described above, added after it produced one
-infeasible-path false positive on a whole-tree scan. Both are unit-tested
-(Section~\ref{sec:eval}) and are listed, not hidden, in each result.
+Two refinements, both chosen after reading real output, narrow the
+candidates: \emph{deref-after-release suppression} drops a site where
+\texttt{*P} is read again before any reset (a partial release and reuse,
+not a dangling pointer), and the \texttt{NULL}-guard pruning above was
+added after one infeasible-path false positive. Both are unit-tested and
+listed in each result.
 
 \subsection{Step 3: Classification and witness extraction}
 \label{sec:step3}
 Each release site is labeled \emph{conforming} if every path from it to
 function exit passes a reset; \emph{violation} if some path reaches exit
 without one; or \emph{suppressed} if the path rule would flag it but one
-of the two refinements in Step~2 applies. A suppressed site is reported,
-with its reason, alongside conforming and violation sites; it is never
-dropped silently. For a violation, \tool records the source lines on the
-witness path. A reader can then check the finding against the source
-without re-running the tool. \texttt{compare.py} diffs two runs of the
+of the two refinements in Step~2 applies. Suppressed sites are reported with their reason, never dropped. For a
+violation, \tool records the witness path's source lines so a reader can
+check it without re-running the tool. \texttt{compare.py} diffs two runs of the
 same files at different revisions and reports exactly which sites a given
 commit removed or added. Section~\ref{sec:eval} uses this to measure
 whether a real fix changes only the sites its own diff touches.

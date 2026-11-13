@@ -57,7 +57,12 @@ if [ -f main.pdf ]; then
 fi
 
 # 7. anonymity
-a=$(grep -nE '/Users/|/home/|github\.com/[A-Za-z]' sections/*.tex main.tex | grep -vE '^[^:]+:[0-9]+:[[:space:]]*%' | grep -v anonymous)
+if [ "${ANONYMOUS_SUBMISSION:-0}" = 1 ]; then
+  a=$(grep -nE '/Users/|/home/|github\.com/[A-Za-z]' sections/*.tex main.tex | grep -vE '^[^:]+:[0-9]+:[[:space:]]*%' | grep -v anonymous)
+else
+  # Named submissions may identify their public replication repository.
+  a=$(grep -nE '/Users/|/home/' sections/*.tex main.tex | grep -vE '^[^:]+:[0-9]+:[[:space:]]*%' | grep -v anonymous)
+fi
 [ -n "$a" ] && { say "identifying paths/URLs:" ""; echo "$a"; fail=1; } || say "identifying paths/URLs:" 0
 
 [ $fail = 0 ] && echo "ALL CHECKS PASSED" || echo "SOME CHECKS FAILED"

@@ -1,8 +1,8 @@
 main.pdf: main.tex macros.tex references.bib sections/*.tex figures/*.tex
-	pdflatex -interaction=nonstopmode main
-	-bibtex main   # "-": no \cite yet must not stop the build
-	pdflatex -interaction=nonstopmode main
-	pdflatex -interaction=nonstopmode main
+	pdflatex -interaction=nonstopmode -halt-on-error main
+	bibtex main
+	pdflatex -interaction=nonstopmode -halt-on-error main
+	pdflatex -interaction=nonstopmode -halt-on-error main
 
 check: main.pdf
 	sh scripts/check.sh

@@ -1,6 +1,25 @@
+% Optional section. It is excluded from main.tex to preserve the current
+% paper structure and page budget. The content below is a concise record of
+% the implementation and can be included if the authors need this detail.
 \section{Implementation}
 \label{sec:impl}
-%% Optional. Language, size (lines of code, number of modules), what it
-%% depends on (versions), how it is tested (unit tests, a hand-counted
-%% fixture). Pitfalls met while building it are worth a short paragraph each.
-\todo{Implementation.}
+
+The prototype is written in Python. It uses the Tree-sitter C grammar to
+parse source files and builds a control-flow graph for each function that
+contains a parameter matching the selected rule. The graph represents
+branching and loop structure so that the checker can search paths from a
+lifecycle event to function exit.
+
+Protocol~B is implemented in \texttt{outparam.py} and configured by
+\texttt{specs/outparam\_reset.json}. It tracks release and reset events
+for pointer-to-pointer parameters. Protocol~A is implemented in
+\texttt{protocol\_a.py} and configured by
+\texttt{specs/bio\_chain\_pop.json}. It tracks BIO-chain establishment,
+detachment, and release events. Both rules reuse the parser and CFG
+builder; their event specifications and path checks differ.
+
+The repository includes unit and regression tests for the analysis
+engine and the two protocols. The shell scripts in \texttt{src/tsck/}
+run the pinned OpenSSL scans and preserve their logs and machine-readable
+results. The final paper does not include this optional section; the
+reproducibility details are summarized in Section~\ref{sec:data}.

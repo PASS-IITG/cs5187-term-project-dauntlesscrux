@@ -9,15 +9,10 @@ can bind several correlated variables at once, for example checking that
 the same object reached both a permission check and a sensitive call; an
 IFDS-based interprocedural analysis then walks the whole program. VulPA
 targets Java and reports 90 confirmed new findings across 26 applications
-and 34 source CVEs. Our Protocol~B rule tracks one output parameter's release/reset state, is
-intraprocedural with no alias analysis, and is evaluated on one rule
-family and six OpenSSL snapshots, several orders of magnitude smaller. We
-share their goal of a rule with no hard-coded function names, but our
-Protocol~A, the BIO-chain invariant for CVE-2023-0215
-(Section~\ref{sec:rq5}), is direct evidence for this gap rather than a
-prediction of it: its whole-tree run is 0 for 11 confirmed recurrences
-precisely because it lacks the multi-object, ownership-aware correlation
-VulPA already has and we do not.
+and 34 source CVEs. Our rules are intraprocedural, with no alias analysis,
+and evaluated on far smaller scale. Protocol~A (Section~\ref{sec:rq5}) is
+direct evidence of this gap: its whole-tree run is 0 for 11 precisely
+because it lacks the multi-object, ownership-aware correlation VulPA has.
 
 \paragraph{Clone-based recurring vulnerability detection.} Cao et
 al.~\cite{cao2025issta} study how well existing recurring-vulnerability
@@ -26,33 +21,21 @@ a known-vulnerable function. They show these detectors do much worse on
 syntactically or semantically modified clones than on exact or renamed
 ones. Their notion of \emph{recurring} is a vulnerable function's code
 reappearing, by reuse, elsewhere; ours is a different function
-independently repeating the same ownership or reset mistake, with no
-code-clone relationship at all between, for example, \texttt{PEM\_read\_\allowbreak
-bio\_ex} and the four KDF functions in
-Observation~\ref{obs:rq1-conformance}. Tan et al.~\cite{tan2025icse}
+independently repeating the same mistake, with no clone relationship (e.g.,
+the four KDF functions in Observation~\ref{obs:rq1-conformance}). Tan et al.~\cite{tan2025icse}
 address a failure mode specific to clone-based detectors: code that is
 similar to a vulnerable function but has itself already been patched, and
-which clone-based tools then misflag. Because \tool checks a lifecycle
-rule against control flow rather than matching code similarity, it is not
-exposed to this particular false-positive source, though
-Section~\ref{sec:threats} reports others it is exposed to instead.
+which clone-based tools then misflag. \tool checks control flow, not similarity, so it avoids this false-positive
+source (though not those in Section~\ref{sec:threats}).
 
 \paragraph{Locating when a vulnerability was introduced.} Guo and
 He~\cite{guo2026ndssvic} identify the commit that first introduced a
 known vulnerability, by extracting the vulnerable/patched diff's
 statement-level patching pattern and matching it backward through commit
-history. This answers a different question from ours: which commit
-introduced a known bug, not which other functions share its pattern now.
-We use a single pinned vulnerable/fixed pair per CVE
-(Section~\ref{sec:subjects}) rather than search history for one, and take
-the fix commit as already identified.
+history. That asks which commit introduced a known bug, not which other functions
+share its pattern now; we take each fix commit as given.
 
 \paragraph{Patch porting.} Wu et al.~\cite{wu2025mystique} port an
 existing, known patch to other versions or branches of the same project,
-combining semantic and syntactic matching with an LLM. This assumes the
-target location is already known to need the same fix; our problem is
-the opposite, finding target locations whose need for the same kind of
-fix is not yet known. \tool and Mystique could be complementary: a site
-\tool flags as a violation is a candidate location Mystique's porting
-step could then patch, though we have not built or evaluated that
-combination.
+combining semantic and syntactic matching with an LLM. This assumes the target location is known; we find locations not yet known
+to need the fix, so the two could be complementary (not evaluated).

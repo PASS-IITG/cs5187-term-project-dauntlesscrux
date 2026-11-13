@@ -26,40 +26,27 @@ unrelated fix nobody built the rule from; and (iii)~say, for every site it
 flags on the project's current source, whether that site is conforming, a
 real violation, or explainable, with a witness a human can check by hand.
 
-CVE-2022-4450 is a real case. \texttt{PEM\_read\_bio\_ex} in OpenSSL's
+CVE-2022-4450~\cite{nvd2022cve4450} is a real case. \texttt{PEM\_read\_bio\_ex} in OpenSSL's
 \texttt{crypto/pem/pem\_lib.c} frees two output buffers on one failure
 path (Figure~\ref{fig:motivating}) without clearing the caller-visible
 pointers to them; a caller that frees these outputs again after failure
 can double-free. The fix, commit \texttt{63bcf189be}, adds exactly two
-assignments. This is not a single case: applying the same rule, unchanged,
-to OpenSSL's current source tree (1{,}155 C files across
-\texttt{crypto/}, \texttt{ssl/}, and \texttt{providers/}) flags 10
-release sites with the same shape (Section~\ref{sec:eval}).
+assignments.
 
 Closest to our rule-as-data approach is VulPA~\cite{cao2025vulpa}, which
 also derives a checkable rule from a known bug, but compiles it to an
 automaton checked by an interprocedural analysis with aliasing, on Java.
-Our rule is intraprocedural, has no alias analysis, and is checked on one
-rule family; Section~\ref{sec:related} states this gap, and three others,
-in full.
+Ours is intraprocedural, with no alias analysis (Section~\ref{sec:related}).
 
 We present \tool, a checker that reads a lifecycle rule from a data file
 and applies it to real C source through a parser and a per-function
-control-flow graph, rather than matching one patch's text.
-\begin{enumerate}
-  \item It builds a control-flow graph for every function with
-    \texttt{tree-sitter} (Section~\ref{sec:step1}).
-  \item For every output parameter a function releases, it searches the
-    graph for a path to function exit that never resets it
-    (Section~\ref{sec:step2}).
-  \item It classifies each release site as conforming, a violation, or
-    suppressed, with a witness path for every flagged site
-    (Section~\ref{sec:step3}).
-\end{enumerate}
-This paper implements two such rules against the same parser and CFG
+control-flow graph built with \texttt{tree-sitter}, searches for a path
+from each release of an output parameter to function exit that never
+resets it, and classifies each site with a witness path
+(Section~\ref{sec:approach}). This paper implements two such rules against the same parser and CFG
 builder: Protocol~B, for the output-pointer reset convention behind
 CVE-2022-4450, and Protocol~A, for the detach-before-release BIO-chain
-convention behind CVE-2023-0215 (\rqref{5}, Section~\ref{sec:rq5}).
+convention behind CVE-2023-0215~\cite{nvd2023cve0215} (\rqref{5}, Section~\ref{sec:rq5}).
 
 On OpenSSL, \tool flags \texttt{PEM\_read\_bio\_ex}'s two output
 parameters before the fix and clears both after it. It also reproduces an
@@ -80,23 +67,15 @@ architecture generalizes across invariant shapes even where a given
 rule's detection does not generalize across a whole codebase
 (Section~\ref{sec:rq5}).
 
-\paragraph{Contributions.}
-\begin{itemize}
-  \item We define a rule-as-data lifecycle invariant for output-pointer
-    reset after release, independent of any function name
-    (Section~\ref{sec:problem}).
-  \item We present \tool, which checks this rule against a real
-    \texttt{tree-sitter} control-flow graph instead of patch text
-    (Section~\ref{sec:approach}).
-  \item We evaluate \tool on six pinned OpenSSL snapshots and compare
-    four tools, including \tool's own Part~1 baseline, against three
-    historical CVEs (Section~\ref{sec:eval}).
-  \item We implement a second, differently-shaped rule, Protocol~A, for
-    the BIO-chain invariant behind CVE-2023-0215, and show where a
-    single-object rule's generalization breaks down even under the same
-    rule-as-data architecture (Section~\ref{sec:rq5}).
-  \item We release the tool and all data (Section~\ref{sec:data}).
-\end{itemize}
+\paragraph{Contributions.} (1)~A rule-as-data lifecycle invariant for
+output-pointer reset after release, independent of any function name
+(Section~\ref{sec:problem}); (2)~\tool, which checks it on a real
+\texttt{tree-sitter} control-flow graph (Section~\ref{sec:approach});
+(3)~an evaluation on six pinned OpenSSL snapshots and a four-tool
+comparison on three historical CVEs (Section~\ref{sec:eval}); (4)~a second,
+differently-shaped rule, Protocol~A, showing where single-object
+generalization breaks down (Section~\ref{sec:rq5}); and (5)~the released
+tool and data (Section~\ref{sec:data}).
 
 \begin{figure}[t]
 \begin{lstlisting}[numbers=none,escapechar=@]
@@ -117,9 +96,7 @@ end:
   (\texttt{crypto/pem/pem\_lib.c}, trimmed). The \texttt{out\_free} path
   frees \texttt{*header} and \texttt{*data} but never resets either
   pointer before \texttt{return}. The fix, commit \texttt{63bcf189be},
-  adds \texttt{*header = NULL;} and \texttt{*data = NULL;} to this path;
-  the same rule, applied unchanged to OpenSSL's current 1{,}155-file
-  \texttt{crypto/ssl/providers} tree, flags 10 sites with this shape
-  (Section~\ref{sec:eval}).}
+  adds \texttt{*header = NULL;} and \texttt{*data = NULL;} to this path.}
 \label{fig:motivating}
+\Description{Code excerpt from OpenSSL showing two output pointers freed on an error path without being reset to null before the function returns.}
 \end{figure}
