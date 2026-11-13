@@ -1,0 +1,116 @@
+\section{Threats to Validity}
+\label{sec:threats}
+
+\paragraph{Internal threats.} These threaten whether \tool's own results
+are correct.
+\begin{itemize}
+  \item \emph{Tuning on seen data.} The deref-after-release suppression and
+    the \texttt{NULL}-guard pruning (Section~\ref{sec:step2}) were both
+    added after reading real output on OpenSSL. The second was added
+    specifically after it produced one infeasible-path false positive on
+    the master scan. The master-snapshot numbers in
+    Table~\ref{tab:rq1-wholetree} are therefore not a blind test of those
+    two refinements, though the rule itself (Section~\ref{sec:rule}) was
+    not changed after seeing the KDF result in
+    Observation~\ref{obs:rq1-conformance}.
+  \item \emph{Release detection is name-based.} A release site is any call
+    matching \texttt{(?i)free}. This cannot see reference counts: one site
+    in an earlier snapshot, \texttt{load\_common}, frees only a structural
+    \texttt{ENGINE} reference and is a confirmed false positive under
+    manual review.
+  \item \emph{Parser coverage.} About 39\% of scanned files have a
+    \texttt{tree-sitter} parse error somewhere, almost always from an
+    unexpanded macro. Only 7 to 8 release sites per snapshot sit inside a
+    function with a parse error, and no flagged violation in
+    Section~\ref{sec:eval} is among them. A site inside an unparseable
+    function is invisible to \tool, though, and would not appear in any
+    count we report.
+  \item \emph{Our own triage.} The labels behind
+    Observation~\ref{obs:rq1-mastertriage} (2 potential recurrence, 8
+    convention deviation) were assigned by the people who built
+    \tool. We had one independent party re-derive the reachability
+    argument for the 2 potential-recurrence sites from scratch against
+    real source. (The party was a generative AI assistant, not involved
+    in building the rule or running the original scan; see
+    \texttt{results/reachability\_rq1\_candidates.md}.) It found and
+    corrected a factual error in our original note (Section~\ref{sec:threats}
+    construct threats, below). The same party also re-checked the 2
+    sites we had labelled "unclear" pending a caller read
+    (\texttt{results/unclear\_sites\_recheck.md}). Both reclassify as
+    convention deviation once the one real in-tree caller
+    (\texttt{apps/cmp.c}) is read, since it discards the dangling output
+    on every failure path rather than acting on it; the failure
+    branch itself needs the same unreachable-without-a-race precondition
+    as the two potential-recurrence sites. Every one of the 10
+    whole-tree flags now has an independently re-derived reason, not
+    just our own. That one re-check already changed a conclusion, which
+    is itself evidence for, not against, this threat: a human second
+    labeller without knowledge of the rule's derivation remains undone
+    and could still disagree with any of these 10 labels.
+\end{itemize}
+What remains: a human independent second labeller on a sample of the
+triaged sites, and a parser with macro expansion, are both future work.
+
+\paragraph{External threats.} These threaten whether the results
+generalize past our six snapshots and three CVEs.
+\begin{itemize}
+  \item \emph{One rule family generalizes within itself, not across
+    invariant shapes.} Protocol B, derived from CVE-2022-4450
+    (Observation~\ref{obs:rq1-conformance},
+    Observation~\ref{obs:rq3-timetravel}), also reproduces an unrelated
+    fix and flags a site a later commit fixed. That is two data points,
+    though, not a sample large enough for a detection rate. Protocol A, a
+    differently-shaped rule for CVE-2023-0215 (Section~\ref{sec:rq5}),
+    distinguishes its own motivating fix, but its whole-tree run
+    (Observation~\ref{obs:rq5-protocola-master}) is 0 for 11. Every
+    flagged site is a false positive, because the rule has no notion of
+    which released object is externally owned. That is a real negative
+    result, not a bug to patch away: a single-object release/detach rule
+    does not, by itself, generalize the way Protocol B's did.
+  \item \emph{Non-independent snapshots.} The six snapshots in
+    Table~\ref{tab:rq1-wholetree} share most of their long-lived
+    functions across revisions, so the effective sample is closer to 20
+    distinct release sites than to 20~$\times$~6.
+  \item \emph{One project.} All subjects (Section~\ref{sec:subjects}) are
+    OpenSSL. We make no claim about another C codebase with different
+    allocation and ownership conventions.
+  \item \emph{Scope of what is tracked.} \tool only examines parameters of
+    pointer-to-pointer type or deeper. An out-parameter hidden behind a
+    struct member, such as \texttt{ctx->buf}, is invisible to it, however
+    it is released or reset.
+\end{itemize}
+What remains: more historical pairs, a second project, tracking
+struct-member out-parameters, and an ownership/escape analysis that could
+make Protocol A's whole-tree run precise, are future work.
+
+\paragraph{Construct threats.} These threaten whether what we measure is
+what we claim.
+\begin{itemize}
+  \item \emph{A violation is a source-pattern property, not a proven
+    vulnerability.} \tool reports that some path reaches function exit
+    with \texttt{*P} still released; it does not establish that the path
+    is reachable at runtime. Of the 2 potential-recurrence sites in
+    Observation~\ref{obs:rq1-mastertriage}, both need the same precondition
+    once independently re-derived against real source
+    (\texttt{results/reachability\_rq1\_candidates.md}): the tracked
+    object's state must change between two reads a single-threaded call
+    proves equal, which only an unsynchronized second thread racing the
+    same object can cause. No in-tree caller creates this precondition. We
+    also found and corrected one factual error in our own earlier note
+    (a claimed lock/atomic-op failure that is dead code on every platform
+    this codebase builds for). We report both as candidates needing a
+    multithreaded fault-injection test, not as bugs.
+  \item \emph{A clean run on a general tool means absence of a diagnostic,
+    not absence of a bug.} Table~\ref{tab:rq2-comparison}'s \xmark{} cells
+    mean the tool emitted nothing for that translation unit under that
+    configuration (Section~\ref{sec:baselines}). Clang Static Analyzer, in
+    particular, analyzed only the one affected translation unit per
+    revision, not the whole build. A clean run is therefore a property of
+    that unit and configuration, not a property of the tool in general.
+  \item \emph{RQ2's baseline is not \tool.} Table~\ref{tab:rq2-comparison}
+    compares Clang, Coccinelle, and Cppcheck against the Part 1 pattern
+    matcher, not against Protocol B. A reader who conflates the two would
+    credit Protocol B with a result it did not produce; we repeat this
+    distinction at the point it matters (Section~\ref{sec:rq2}) to avoid
+    that.
+\end{itemize}
